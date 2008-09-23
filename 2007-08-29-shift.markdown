@@ -1,0 +1,63 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.dev/pilgrim/shift/
+Post: 133
+Title: shift
+Slug: shift
+Status: publish
+Date: 2007-08-29 17:00:00 -0700
+Pings: On
+Comments: On
+Category: pilgrim
+
+### Whistle while you work
+
+Flip back to July, when our organization came together in Whistler for our
+annual week-long [Staff Conference][1]. It was somewhat like any other
+Christian conference, with a worship band and guest speakers. Most impacting
+was [Mark Driscoll’s][2] discussion of idolatry and religion as enemies of the
+gospel. It was the Thursday morning session, if you want to have a
+[listen][1].
+
+I roomed with [Vaxevanis][3], and had a chance to meet new people, as well as
+some alone time hiking to Lost Lake (just follow the signs!). Since I was
+carrying my [new camera][4] the whole time, I became somewhat of the “official
+photographer.” It was great fun, and a nice break from the usual grind.
+
+### Another season in sight
+
+Meanwhile, my American cohort made significant visible progress on our
+project. I got back and jumped right in, implementing another side of the
+cube. There is still a tonne to do, but thankfully my contract has been
+extended up until **April**. IT offered a paid position (no fund raising
+necessary), permitting me to finish this HR project, with the aim of becoming
+acquainted with the IT team and their projects.
+
+Since I had only arranged to stay for the summer, I needed to find a new
+place. A room became available with a friend of a friend in **Mission, BC**.
+Last week I made the move, which left me sad about changing churches and
+leaving a great small group. But keeping with the same denomination, I
+attended the [Evangelical Free Church][5] here in Mission. The sermon on the
+armor of God was insightful, but I still need to make some friends.
+
+There are some neat things in Mission, like one of the two Benedictine
+[Abbey’s][6] in Canada. A [commuter train][7] goes between Mission and
+Vancouver, and a _gorgeous_ view of the mountains. I am looking forward to
+spending the winter here, and planning to bring my things from Edmonton to
+make my stay more permanent.
+
+   [1]: http://dev10.robinhoodtech.com/staffconference/myweb.php?hls=10000
+
+   [2]: http://www.marshillchurch.org/
+
+   [3]: http://www.vaxevanis.com/wordpress
+
+   [4]: /gadgeteer/dslr
+
+   [5]: http://www.efcc.ca/
+
+   [6]: http://www.sck.ca/pages/home.htm
+
+   [7]: http://www.westcoastexpress.com/
+
+  *[IT]: Information Technology

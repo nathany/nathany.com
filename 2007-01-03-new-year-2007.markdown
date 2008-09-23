@@ -1,0 +1,75 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.dev/pilgrim/new-year-2007/
+Post: 115
+Title: A new year in the making
+Slug: new-year-2007
+Status: publish
+Date: 2007-01-03 17:00:00 -0700
+Pings: On
+Comments: On
+Category: pilgrim
+
+This past year has been quite unique in all that has happened. I feel
+extremely blessed to have had the opportunity to attend school for the summer,
+and to volunteer for Wycliffe for a few months, especially to remain free of
+financial debt through it all.
+
+Besides learning plenty lots, I’ve also met many new people and walked in
+relationships that have been both stretching and very encouraging. Along the
+way, God has been trying to teach me to rely fully on Him, not looking to
+stuff or even people for my sufficiency. It’s a hard lesson to learn, but a
+worthwhile one. When I read _[The Blessedness of Possessing Nothing][1],_ I
+realized this lesson’s echo in my own life, and again a month or so later.
+
+### Putting up my tent
+
+Ever since I left for Bible school in September of 2005, I’ve felt a little
+like a _vagabond._ I have always had shelter, food, and clothing… but I
+haven’t had a place to call my own. Lately I’ve been hoping to get settled,
+with a “normal” job and an apartment, with the intention of buying a house
+this year. But I’m not certain if that’s what God has for me…
+
+Following the tradition of the _Moravian_ church, I was given a scripture
+verse for this new year:
+
+> But as it is, they desire a better country, that is, a heavenly one.
+Therefore God is not ashamed to be called their God; for He has prepared a
+city for them.[^1]
+
+And so I have been challenged, to set my sights _not_ on the future of this
+life, but on the _next._ God can take care of such things as shelter, in
+whichever way He determines.
+
+### The work of my hands
+
+Presently, I find myself doing a freelance project for [Royer Homes][2], as
+well as studying towards my Zend PHP 5 certification exam.
+
+I am also excited about a side project I began designing nearly two years ago,
+which I will not say much about, other than there are some people and
+organizations that would be interested. It’s _not_ the sort of thing that will
+make me a lot of money (if any), but something I could do on the side.
+
+### The treasure that is family
+
+This Christmas I spent _mostly_ with my Dad and my younger brother. My brother
+was and _is_ teaching English in South Korea, but he was here for 3 weeks. He
+originally left for Korea after I left for Europe in 2005, so it had been
+about 16 months since I last saw him.
+
+We mostly played board games, like _Axis & Allies_, and _Settlers of Catan_…
+but I also got to see some of Terry’s videos from Korea, and enjoy some
+positively non-Korean food with him (like tacos!).
+
+Us guys, along with my two younger sisters, also went for a photo shoot one
+night, followed by early-bird turkey dinner. Fun times.
+
+Well, until next time…
+
+   [1]: http://www.theboc.com/freestuff/awtozer/books/the_pursuit_of_god/bless_possess_nothing.html
+
+   [2]: http://royerhomes.com/
+
+
+  [^1]: Hebrews 11:16

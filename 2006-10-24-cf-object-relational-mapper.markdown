@@ -1,0 +1,233 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.dev/developer/cf-object-relational-mapper/
+Post: 102
+Title: The joys and perils of writing an ORM (a postmortem)
+Slug: cf-object-relational-mapper
+Keywords: coldfusion
+Status: publish
+Date: 2006-10-24 17:00:00 -0700
+Pings: On
+Comments: On
+Category: developer
+
+For a good part of January to May I worked on an ORM for ColdFusion MX 7. I
+had gone through a the depot application in [Agile Web Development with
+Rails][1] at home and was quite impressed. At work I was developing an
+administrative site in CFML. Since I was focusing on new technology, it didn't
+take much convincing to begin developing a solution for all the repetitive
+CRUD.
+
+### Schemas and data
+
+I wrote routines to read the schema of MS SQL Server 2000 tables. Going along
+with the active record pattern, each table would have a class which had
+methods to associate it to the database, somewhat like Rails. Each table row
+would create a new object, and data would be loaded into properties of that
+object. I made it so the foreign key references were automatically followed,
+something like the `:include` clause in Rails or `select_related()` in Django
+- but as the default case. You ended up with a nice object which itself
+contained objects. Any property could be changed, and issuing a save() command
+would either INSERT or UPDATE the appropriate tables, updating any ids
+(primary keys) as necessary. It was all very smart and convenient.
+
+### Forms on the front
+
+I built form handling routines which could automatically populate and update
+the database objects, as well as being useful as stand alone form widgets.
+When tied to the database, the form rendering would utilize my own
+`hasFunction()` routine to look for an accessor such as `getPassword()` and
+run it instead of accessing the `password` property directly. This allowed
+encryption/decryption of passwords behind the scenes, while the template would
+only contain `<form:input name="password" />`. Naturally I built a
+cryptography module on top of ColdFusion's `encrypt()` routines, which are
+built on top of Java. What I added was key management and rotation.
+
+Taglibs make for a nice templating language of sorts - _jsp-style._ I found
+that CF7 can even do loops with tags, such as:
+
+  <pre lang="cfm">
+  <iterator:loop over="dataObject" as="row">...</iterator:loop>
+  </pre>
+  
+This made the templates a lot cleaner than it would've been with scripting.
+
+Using a layer to handle forms had many benefits. For example, checkboxes had a
+hidden field of the same name to carry the "unchecked value" (like Rails). The
+routines to merge URL and FORM variables into a single request.params
+structure worked with the widgets to return more usable data, even converting
+Month-Day-Year type drop downs into a single time stamp.
+
+The date picker I developed took a mask similar to `DateFormat()`. This
+allowed a variety of options for the display of the date and time pickers.
+Just month and year? Long month or short? 12 hour or 24 hour time? It then
+utilized object-oriented javascript to limit the day-of-the-month to
+reasonable days (Feb 28th, not 31st) and even have min/max date/times.
+
+Speaking of JavaScript, a module for helping with scripting had methods such
+as `onLoad()` and `include()` to place JavaScript code on your pages. It was
+smart enough to not include JS files more than once. In this way, the
+datepicker and other widgets could return HTML to be output directly into the
+stream, while at the same time setting up JavaScript includes for future
+inclusion via `<CFHEAD>`.
+
+I used application.cfc to rig up a basic MVC arrangement, but my concentration
+was more on the ORM, so I never implemented routing or any of that fancy
+stuff.
+
+### Oh. oh. performance
+
+When I threw a lot of rows of data at the ORM, it would choke. :-( Time to
+optimize? It came down to two things, creating objects and populating them
+with query data.
+
+It may be that CF7 just takes some time to create objects, or it could be that
+I had a fairly substantial class hierarchy going. Yes, having a handful of
+methods like `hasFunction()` or `typeof()` on the base object is not exactly
+the best idea, but it was very convenient.
+
+On the other hand, copying data from a perfectly good query result set into
+properties of an object could also be considered wasteful. Ideally this would
+be done in a lazy way, where the accessor is a method that pulls data from the
+query result. However, ColdFusion doesn't have a facility to dynamically add
+new methods. You can pass function pointers around, but I couldn't find a way
+to have each function pointer grab a different chunk of data, as dynamically
+determined based on the database schema.
+
+About half way through my project I discovered [Reactor for ColdFusion][2]. It
+generates code, with get/set accessors (Bean-style) for every property. This
+gets around my issue, but my system was much cleaner, not having XML
+configuration or having to generate several code files.
+
+I dropped some functionality, such as storing some database fields privately
+and others publicly. Instead everything became public, and I optimized the
+inner property copying loop a few times. Still I had problems, so I ended up
+writing a whole bunch more code for iterators. These would cache and load
+objects from a query set as needed, so if you only paged through 10 records it
+wouldn't grab all the objects (yes, LIMIT/OFFSET would be a simpler solution,
+but I was using MS SQL Server after all - it only has TOP).
+
+That helped, but didn't resolve every situation.
+
+### Really cool select()
+
+In the process of reworking things, I revised my `select()` routine. Basically
+this routine would take a SQL conditions statement (WHERE clause) and use
+named attributes as parameters for the query. Not only did it substitute the
+parameters in, it looked back through the SQL to find the associated column
+name, and then referred to the schema information. It could then drop in
+`<CFQUERYPARAM>` tags for each parameter with the appropriate type and length,
+all determined automatically from the database.
+
+This routine was designed to read in multiple JOINed tables, keeping all the
+data straight for populating objects with it. What I revised later was the way
+fields were aliased, by using backticks in SQL Server it was possible to
+include dots in the field names.
+
+The result was a query result that felt _almost like an object._ You could
+reference `personnel.business.address.zipcode` or `personnel.address.city` and
+it actually worked. But in truth it wasn't an object, so it was to be treated
+read-only and couldn't have accessors methods to override behavior, like
+`getPassword()` or even a standard `save()` routine.
+
+That said, after this revision, I felt like I could probably do away with all
+that iterator code I wrote, thus simplifying the system. This query result set
+behaved a lot like an object, and could be used to quickly output big lists
+(e.g. of countries or what-not). In fact I made my `<iterator:loop>` tag so it
+could loop over queries just as easily, with no difference in the template
+code (but faster performance). I imagine some sort of routine could pull the
+data into an object for editing and saving an individual record as well.
+
+### Too much magic
+
+One problem with the framework I was developing was the tight coupling of
+classes and somewhat ugly internal code. A major contributor to this was that
+I had a little too much magic going on in the background in order to present a
+nice API up front. Unlike Rails, which uses conventions such as "id" for the
+primary key, I took the route of examining the database schema for everything.
+Even when I made assumptions, such as the name of a foreign key, I based it on
+the name of a related primary key and checked the schema to see if it existed.
+This was great for legacy databases, but made for some ugly code. And to be
+honest, how much work is it to specify a few field names if they don't follow
+convention?
+
+I had made the schema and data row in the same class initially, and then
+pulled the schema out into another class using composition. But there was
+still a lot of things flying back and forth between the two. I ran into
+problems with ColdFusion's protected methods because the objects being created
+were in an application specific package, which made it so other parts of the
+framework couldn't access them (even though the base class was in the same
+package). I ended up with more things public than I would've liked. In
+general, the code outside was extremely simple and nice, but inside the
+framework it was somewhat of a mess.
+
+### Pushing the limits of ColdFusion
+
+I don't think I did anything too revolutionary compared to other web
+frameworks, and I made a lot of mistakes in my development, but I also learned
+a lot. Some things like looping with tags absolutely blew me away with how
+cool CF is. On the other hand, I was constantly running up against CF's
+“simplified” implementation of object orientated programming and it's
+inability to be as dynamic as I would have liked. I also found myself
+preferring to use the `<CFSCRIPT>` syntax but finding it restrictive.
+
+Both DHH (Rails) and Adrian Holovaty (Django) found PHP too restrictive to
+write the frameworks they did - they couldn't do things _the way_ they wanted
+to without moving to another language. Both Ruby and Python are much more
+dynamic than PHP or ColdFusion.
+
+That said, if I were making a second attempt at a ColdFusion ORM, I would do
+things somewhat differently. Hopefully resulting in a simpler, smarter
+solution.
+
+### Is ColdFusion past its' time?
+
+ColdFusion makes templates and programming easy for HTML coders. It was
+especially nice being able to `CFQUERY` without needing to escape things. But
+now there are all these new ways of doing things... is it losing ground?
+
+To be honest, your end users don't care if you are using an ORM or writing
+queries by hand. While working with a limited knowledge of Django, I have
+found it to be a struggle because I have 7 years experience with SQL and know
+what queries to write, but I'm having to learn the nuances of their ORM
+implementation, and trust my database work to them. Still, I do see the
+benefits of writing less code, simpler code that is also database agnostic and
+easier to maintain.
+
+### The next ColdFusion?
+
+Solutions like ColdFusion, Lasso and PHP are inherently different from other
+languages in that they are specifically for web development. Ruby and Python
+are not so focused, but have frameworks that bring them there. Java and .NET
+are similar in that way.
+
+There is something to be said for being finely tuned for a single purpose,
+especially when it comes to education and deployment. But on the flip side,
+languages like Python and Java have huge libraries providing all sorts of
+functionality that your web site can use.
+
+In some ways ColdFusion 7 is a disappointment. Macromedia has added all sorts
+of PDF things and such, but they still don't bundle tools for test-driven
+development or to otherwise improve the development process. You can get add
+ons, but it just doesn't feel like a “real” language. It makes me curious as
+to what Adobe is up to now that they acquired Macromedia, and therefore
+ColdFusion.
+
+But it also makes me wonder what the future landscape of web development will
+look like. Will someone take all these things, like model-view-controller,
+object-relational-mapping, behavior-driven-development, AJAX/JSON and create a
+new language just for web development that does all this? Or do all those
+things best reside in a framework? While a built-in library eases deployment,
+I'm not sure if these things will make it to the language level. Mind you,
+Perl and Ruby make regular expressions a language feature, whereas other
+languages still use libraries. So who's to say? I suppose only time will tell.
+
+   [1]: http://www.pragmaticprogrammer.com/titles/rails1/
+
+   [2]: http://www.doughughes.net/index.cfm?filter=category&categoryId=30
+
+  *[ORM]: object-relational mapper
+
+  *[CRUD]: create, read, update, delete
+
+  *[DHH]: David Heinemeier Hansson

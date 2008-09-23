@@ -1,0 +1,87 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.com/pilgrim/imagery/
+Post: 195
+Title: imagery
+Slug: imagery
+Status: publish
+Date: 2008-08-23 15:43:00 -0700
+Pings: On
+Comments: On
+Category: pilgrim
+
+### stepping out of the ßoat
+
+The [newsletter][][^1] I sent out in January provides a good summary of the [project][join] I was developing for Human Resources at Power to Change. Launched last December, the **Online Application Tool** was quite polished by the end of March, when my contract ended. For the technically savvy, I wrote/ranted of my love/hate [experiences with Ruby on Rails][rails] back on Valentines day.
+
+Having received an inheritance from my [Grandpa's death][grandpa], I was in no hurry to work. Rather, I attended the Open Web Conference, did some housesitting, and dreamt up ways to become self-employed, if only I could find the motivation.
+
+### to write with light
+
+Trinity Western University runs two **photography** courses over the summer. It's something I have wanted to do, but whenever I checked online, it was full. 
+
+On May 19th I sent in an inquiry for the one-week program in Kelowna, it begins this Labour Day weekend.
+
+The morning of May 20th, I was invited to attend the classes that began **that evening.** The 6-week program in Langley still had room!
+
+Arranging to stay the night in Fort Langley (thanks Jason), I packed a bag, and hopped on transit from Mission.
+
+That evening took us from the Camera Obscura through to modern DSLRs, plus some practical advice on composing with the viewfinder.  
+
+Mike Rathjen is the kind of instructor who practices what he teaches, so naturally he shares all sorts of great tips beyond the curriculum. That night I finally learned what the "big deal" was about full frame sensors.
+
+Accommodations were "interesting", definitely living a little on the edge, and just trusting God to provide.  
+
+But it worked out, I had fun, and learned a lot. Casual photography doesn't require  much thought or planning. Our [assignments][art230] were a different story, and that's a good thing.
+
+### GAiNfully employed 
+
+Having depleted my savings on classes, new camera lenses, and Photoshop, it was time to go back to work.
+
+After attending my Dad's wedding, I accepted a 2-month contract with [Global Aid Network][gain]. With the help of [designer Bill][vax], we are revamping our website (which is now live - 28.08.08).
+
+### code is Vogon poetry
+
+I've "discovered" [WordPress][], and it's actually pretty good. No, I haven't been hiding under a rock for the past 5 years. I was there during the initial buzz of the "semantic publishing platform," I just was never that interested.
+
+Then last November, I setup a [Lua][luanova] blog on WordPress.com. In March, I designed a custom theme for [uikit][], and no, I'm not making any iPhone apps right now. Then in May I retooled the [MacSword][] site to use WordPress, using a multi-lingual plugin, and interestingly, still hosted on [SourceForge][sf].
+
+In the past, **nathany.com** has always been some custom concoction, written with whatever technology I was playing with at the time. Last week I finally moved nathany.com to WordPress. For now my custom template matches my old site and doesn't add any WordPress specific features - like commenting and such. 
+
+It does make it a little easier for me to maintain my content, and if you are so inclined, **you can subscribe** to my [feeds][].
+
+The [GAiN website][gain] also uses WordPress as the underlying CMS, with quite a bit of customization to suit its' *unbloglike* nature.
+
+### crossroads in the distance
+
+A consequence of working on a short-term basis is that my mind never stops wondering what to do next.
+
+For awhile now, I have been debating if I should continue in this career of computer programming, or go back to school to take up something else. Time will tell...
+
+
+[gain]: http://www.globalaid.net/
+
+[newsletter]: /pdf/january-2008-newsletter.pdf
+[pdf]: http://www.adobe.com/products/acrobat/readstep2.html
+[join]: https://join.powertochange.org/
+[rails]: /developer/rails-magic/ 
+
+
+[grandpa]: /pilgrim/precious-life/
+
+[art230]: http://flickr.com/photos/nyoungman/collections/72157606455941200/
+
+[GAiN]: http://www.globalaid.net
+[vax]: http://www.vaxevanis.com/wordpress/
+
+[luanova]: http://luanova.org/
+[WordPress]: http://wordpress.org/
+[uikit]: http://uikit.com/
+[MacSword]: http://macsword.com/
+[sf]: http://sourceforge.net/projects/macsword/
+[feeds]: http://feeds.nathany.com/nathany
+
+*[Camera Obscura]: dark chamber
+*[CMS]: content management system
+
+[^1]: [Adobe Acrobat][pdf] is required.

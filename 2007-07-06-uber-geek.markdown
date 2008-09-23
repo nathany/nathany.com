@@ -1,0 +1,187 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.dev/pilgrim/uber-geek/
+Post: 127
+Title: &uuml;ber-geek
+Slug: uber-geek
+Keywords: rails
+Status: publish
+Date: 2007-07-06 17:00:00 -0700
+Pings: On
+Comments: On
+Category: pilgrim
+
+### cocoon
+
+After the post I made last month, you’d think I was a social butterfly.
+Lately, I’ve been knee-deep in technology and focusing my time on learning all
+sorts of things. Yes, I played Settlers of Catan, watched the occasional
+movie, and caught the fireworks for Canada Day. I’m not a complete hermit, but
+close. :-P
+
+### tabula rasa
+
+I’ve been working on an “Online Application Tool” for Campus Crusade for
+Christ, Canada. It’s a web-based tool for people applying for staff and
+internships and such. I like to call it **BOAT** with the tag-line _come on
+board._
+
+After a month of grasping at how the existing Campus Ministries tool
+functioned, I concluded that it wasn’t the foundation I wanted to build off. I
+don’t want to just tack on more functionality for Human Resources, I want to
+prune the unnecessary things and don a friendlier user interface. I could
+adopt the code-base and modify it as needed, but it seemed best to call it
+“[the pilot system][1]” and start with **a clean slate.** Here’s why:
+
+Software is intangible, features can go on forever, but development time
+does not. It’s a [challenging business][2] to work in. Add to that the
+learning curve with a new platform like [Ruby on Rails][3], and it’s not too
+surprising that things can go awry.
+
+
+Often quality is sacrificed to meet deadlines, but “[broken windows][4]”
+start to create a code debt that weighs heavily on the project. This is the
+second large Ruby on Rails project to _practically scare me away._ Not that my
+code is perfect either. My first significant Rails project is somewhat
+smaller, and has proportionally less unfixed bugs… but it still has them, and
+_it’s annoying._
+
+What remedy is there?
+
+### taking it for a test drive
+
+A programmer can write code to check that his code is working the way he
+expects. The benefit compared to manual testing is that these tests can be run
+again and again. When adding functionality or making major changes, the
+programmer is assured that what was previously working is still working, or
+more importantly, what has stopped working so it can be fixed. Unit testing
+effectively reveals the “broken windows” right away, and by repairing them
+immediately, the programmer can be much more confident in his code.
+
+Unit testing and **test-driven development** (TDD) are nothing new. It was a
+number of years ago that I heard of jUnit, but I never have worked in the Java
+space. Last year Dave Astels introduced me to [RSpec][5] at the [Canada on
+Rails][6] conference. RSpec adds a number of features beyond _x_Unit, but what
+it really does is change the nomenclature. Rather than words to indicate how
+to test your code after the fact, it describes how your code should behave
+_before you write it,_
+
+Unfortunately I haven’t had the combination of knowledge and self-discipline
+to build a project with these principles. So I spent a few days reading
+through [Pragmatic Unit Testing][7], which offers advice on what needs to be
+tested and what makes a good test. The book is written in for Java developers,
+but I ported the [largest number class][8] to Ruby and RSpec.
+
+Having surpassed the 1.0 release, RSpec appears to be gaining ground with
+Rails developers, more of which have been sharing their findings. It will take
+more experience to get this right, but I’m sure it’s worth the effort.
+
+### team.should have(2).developers
+
+A week ago I found out that Campus Crusade for Christ in the U.S. is rewriting
+their Online Application Tool for [STINT][9]. After chatting with [Lance][10],
+all parties agreed to team up on the development of the project. Lance will
+take the high road, with an emphasis on user interaction, while I take the low
+road of working primarily on the underlying system.
+
+Working with someone has really helped me to get my ideas on paper, because
+now I must! To that end, I’ve spent a lot of time using [Basecamp’s][11]
+Writeboard facility and modeling some [UML class diagrams][12]. Lance has been
+wireframing what the interface would look like.
+
+We don’t want to reinvent the wheel, but we do want to build a new one. Our
+major inspiration for the new BOAT is the existing tool, but also the Wycliffe
+Skills Questionnaire and the publicly available [wufoo][13] form builder. Our
+requirements also dictate features that aren’t present in any of these.
+
+Long-distance collaboration may have its challenges, but I’ve already seen the
+project benefit thanks to Lance’s work on user interface design.
+
+### other-tech
+
+If all that weren’t enough, I’ve spent an undue amount of time investigating
+several other technologies.
+
+I’ve had my eye on **Flash**, Flex, and AIR (Apollo) for a while now.
+Applications like [Saffron][14] are just plain seductive, at least to a
+developer. But then, isn’t the grass _always greener_ on the other side? I
+read a [sobering article][15], and a reminder to pick the appropriate tool for
+the job. Still, I wouldn’t mind learning some [animation][16] techniques if I
+had the time and head-space.
+
+[Erlang][17] is a functional language developed by Ericsson for
+telecommunications, but it is also used for chat servers, game servers, etc.
+It is designed for running _many concurrent processes_, which can be
+distributed across computers. This is done by giving each process it’s own
+memory space and passing messages between them. So much simpler than multi-
+threading with the typical C++ model which uses shared memory, volatile
+variables, semaphores and a several other words which mean nothing to me. For
+fault-tolerance Erlang also supports hot-swapping of code changes while the
+system is still running. Otherwise, the language reminds me a little of Python
+(the data structures at least), but I haven’t completely grasped the syntax
+yet.
+
+[Seaside][18] is a web framework written in [Smalltalk][19] that aims to hide
+much of the nitty gritty of developing web applications. My interest
+originates from Objective-C, which combines Smalltalk like syntax with C. I
+quite like the message passing syntax of Smalltalk, plus Seaside is just a
+nice name.
+
+### next
+
+I have completed my application for [TruthMedia][20], and should be having an
+interview within the next two weeks.
+
+There is a chance that my project with Human Resources will be extended a few
+months. That would be superb, as covering all the necessary features with the
+quality I would like to see, and in the timeframe allotted is pretty much…
+impossible. Something needs to give, and I sure don’t want it to be quality.
+
+Recently I signed up for [Internet Ministry Conference][21] in Michigan over a
+week in mid-September. It’s not a technical conference, but should give good
+insight into how the Internet can help with evangelism and discipleship. There
+is a CentOS Linux bootcamp happening beforehand that I registered for as well.
+
+Until that time, I will continue building this BOAT.
+
+   [1]: http://en.wikipedia.org/wiki/The_Mythical_Man-Month
+
+   [2]: http://biznik.com/forums/community-wide-general-discussion/topics/if-architects-had-to-work-like-web-designers
+
+   [3]: http://www.rubyonrails.com/
+
+   [4]: http://www.artima.com/intv/fixit2.html
+
+   [5]: http://rspec.rubyforge.org/
+
+   [6]: /developer/canada-on-rails
+
+   [7]: http://www.pragmaticprogrammer.com/starter_kit/utj/
+
+   [8]: http://pastie.caboo.se/76450
+
+   [9]: http://campuscrusadeforchrist.com/wsn/stint.html
+
+   [10]: http://solarfrog.com/
+
+   [11]: http://basecamphq.com/
+
+   [12]: http://dn.codegear.com/article/31863
+
+   [13]: http://wufoo.com/
+
+   [14]: http://www.levelofindustry.com/display/ShowJournal?moduleId=676235&categoryId=114963
+
+   [15]: http://onrails.org/articles/2007/06/29/from-flex-to-spry-to-rails
+
+   [16]: http://www.friendsofed.com/book.html?isbn=1590597915
+
+   [17]: http://www.erlang.org/
+
+   [18]: http://seaside.st/
+
+   [19]: http://www.squeak.org/Smalltalk/
+
+   [20]: http://truthmedia.com/
+
+   [21]: http://www.internetministryconference.org/

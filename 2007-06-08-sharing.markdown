@@ -1,0 +1,132 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.dev/pilgrim/sharing/
+Post: 126
+Title: sharing
+Slug: sharing
+Keywords: missionary
+Status: publish
+Date: 2007-06-08 17:00:00 -0700
+Pings: On
+Comments: On
+Category: pilgrim
+
+### gathering together
+
+Yippee! After watching countless people zip along, I was the last man down the
+zip-line. Exhilarating. Freeing.
+
+The setting: RockRidge Canyon, a getaway resort hosting the **Alpha course**
+for a weekend. But there was another kind of freedom we were seeking. That is,
+freedom in Christ. Young and old alike danced unashamedly into the evening as
+the worship band played. Something was stirring. It was decided to offer water
+baptisms, symbolizing the freedom of new life in Christ. Six people stepped up
+that night, and got very wet and very cold. In a way, that is more appropriate
+than a warm bath. One of the quotes that stuck in my mind went like:
+
+> “God doesn’t make life easy, He makes people great.” - unknown
+
+Last October I expressed an interest in volunteering some time towards the
+[Alpha Canada web site][1]. Now that I’m in B.C., Lyndell invited me out to an
+Alpha course and has spent a few hours beforehand showing me around the site
+and administration tools. Mid-way through the course, they do this weekend on
+the topic of the Holy Spirit. I didn’t sleep much that weekend, but it was a
+good chance to get closer to God and get to know some people.
+
+Another community I am involved with is the young adults group from
+[FLEFC][2]. With the Vancouver-appropriate name **RAIN**, we have begun
+meeting to discuss the [NOOMA][3] video series by Rob Bell. We watched “Dust”
+this week, the one about what it _really_ means to be a rabbi’s disciple. The
+conversation that ensued was great, some really deep people.
+
+Finally, this week I took part in an **online chat** hosted by TruthMedia.
+I’ve been invited to become a co-leader. It’s like any small group, except
+without the opportunity to put people in so many boxes. All you have is a
+person’s nick name, so you usually don’t know age or gender or if you find
+them attractive or not. Everyone is just a human being, no barriers. Plus,
+that kind of _anonymity_ gives a sense of security that encourages openness
+and vulnerability.
+
+There are a lot of hurting people in this world, but there is a Heavenly
+Father who loves us dearly. Donald Miller’s writing really grabs me at times:
+
+> “The God of the Bible seemed to be brokenhearted over the separation in our
+relationship and downright obsessed with mending the tear.” - Searching for
+God Knows What
+
+### human resources
+
+The last four weeks with [Campus Crusade for Christ][4] have involved a lot of
+learning and planning. I am working with the fun bunch from Human Resources,
+but located on the second floor with IT. There is already a system for
+accepting application forms, which was developed for Campus Ministries
+projects by Andrew and a few others. He has been showing me the ins and outs
+of the system, and teaching me a few things about Ruby on Rails too. I’m still
+pretty young to this technology, but I have helped with a few changes.
+
+Andrew is returning to Ontario in a week, leaving lonely me to adapt the
+system for HR’s needs. That will involve both additions and simplifications.
+With only 9 weeks of implementation time, I have my work cut out for me!
+
+### open arms to open source
+
+We are making an effort to share components between the two similar systems,
+but hope to step beyond our walls. One cool aspect of working with non-profits
+is the willingness to embrace open source. Since there is one Master over all,
+we are all on the same team.
+
+The _very day_ I mailed the newsletter announcing my intention to join Campus
+Crusade for Christ, I received an email from [JAARS][5]:
+
+> “We currently have one project that uses Ruby on Rails (when you filled out
+your Skills Questionnaire with us, you used it). We may be needing some help
+with that so I will keep your skills in mind!”
+
+That is a pretty cool “coincidence”, given what I’m working on: _a similar
+tool, same technology._ Now I am in touch with the developer, so we shall see
+if there is anything we can share.
+
+Volunteering with [Wycliffe][6] and attending [SVM2][7] before staring here
+has given me a better grasp of the common technical needs of ministries.
+
+### the plan
+
+After September, I am thinking of joining Campus Crusade for Christ full time
+to work with [TruthMedia][8]. Some of my own web application ideas seem to fit
+with their vision. Coming on staff will involve raising monthly support, which
+is daunting, but not as daunting now that I’ve experienced support raising on
+a smaller scale.
+
+For education, I have signed up for a few public lectures at Trinity Western
+University, and I may begin an online course in the fall. But after
+investigating the options, I don’t expect to be doing full-time studies this
+year. I noticed **iTunes U** has some podcasts on Hebrew language and study…
+very cool!
+
+Besides planning for the fall, I’m also planning for the web work being done
+in human resources now. I heard this quote recently, and I quite like what it
+says:
+
+> “In preparing for battle, I have always found that plans are useless but
+planning is indispensable.” - Dwight D. Eisenhower
+
+Plans may fail or go off track, but planning helps prepare us for what may
+come.
+
+   [1]: http://alphacanada.org/
+
+   [2]: http://flefc.org
+
+   [3]: http://nooma.com/
+
+   [4]: http://crusade.org/
+
+   [5]: http://www.jaars.org/
+
+   [6]: http://www.wycliffe.ca/
+
+   [7]: http://www.svm2.net
+
+   [8]: http://truthmedia.com/
+
+  *[IT]: Information Technology

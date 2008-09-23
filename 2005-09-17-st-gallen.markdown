@@ -1,0 +1,57 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.dev/pilgrim/st-gallen/
+Post: 65
+Title: Journey to St. Gallen
+Slug: st-gallen
+Keywords: switzerland
+Status: publish
+Date: 2005-09-17 17:00:00 -0700
+Pings: On
+Comments: On
+Category: pilgrim
+
+Heading off to Altnau today, near Lake Constance (Bodensee) and Romanshorn.
+There are orchards with apple and pear trees, so that's something a little
+different I'd like to see. It was really cold, walking down from the hostel in
+Lenzerheide-Vabella.
+
+When I arrived, I found out that the room I was planning to stay at was
+already booked, but seeing my email, Cornelia made other arrangements. She
+drove me to another [bed & breakfast][1] in the same town. There I met
+Wolfgang (of Germany) and Alice, an elderly couple with a lovely garden and
+many plants in their cozy home.
+
+After reorienting as to where I was, and how to get to the bahnhof, I went on
+a quest for lunch. Today there was a “Herbstmarkt” in Altnau, but I didn't
+know where. I stumbled upon it while looking for a restaurant, and decided to
+buy my food there instead.
+
+Starting with a bratwurst, I then bought some dark honey (homemade from forest
+bees) — I never seem to have honey for my tea, so now I do.
+
+Fruit, fruit and more fruit — some [pepinos][2] which are small like an pear
+but taste like melons (Kachuma). What I think were boysenberries, as well as
+raspberries, pears, and grapes. I never knew there were so many kinds of
+grapes — I tried some Lilla and some Muscat bleu. The man I talked to is one
+of eight grape growers in an organization named [Thurgauer Tafeltrauben][3].
+Also some [Apfelbrot][4] and some cards by “Fanny Schmid-Wettstein” and “Hedi
+Mischler-Brühwiler” to send my Grandpa and Grandma respectively.
+
+I need to be up much to early in order to go to Lucerne for church — so I'm
+skipping breakfast. I was invited for dinner (fish from the lake, garden
+potatoes with a cream sauce, and a garden salad) with tea and dessert.
+Wolfgang works with handicapped kids, and Alice runs the bed & breakfast and
+creates artwork. There is a garage out front, but they rent it out to a car
+mechanic. Enough chit-chat, after dessert I had to go prepare everything for
+my early departure.
+
+   [1]: http://www.wunderchaschte.ch
+
+   [2]: http://www.mypepino.ch
+
+   [3]: http://www.thurgauer-tafeltrauben.ch
+
+   [4]: http://www.feierlenhof.ch
+
+  *[bahnhof]: train station

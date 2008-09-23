@@ -1,0 +1,164 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.com/pilgrim/imc/
+Post: 22
+Title: ministry.conf
+Slug: imc
+Status: publish
+Date: 2007-11-05 20:42:14 -0700
+Pings: On
+Comments: On
+Category: pilgrim
+
+### gospel.com
+
+September 14th was my last day with Campus Crusade for Christ, Canada. The co-
+op with Human Resources was over, even though the project I was working on
+wasn’t done. After stopping by my Dad’s place in Edmonton, I headed out to
+Grand Rapids, Michigan for Gospel Communications’ **Internet Ministry
+Conference**.
+
+When I registered, I was mainly thinking about my 3-year-old project idea,
+_intercessory.net…_ and all the non-programming things necessary for a startup
+such as this. But that was less on my mind by the time I arrived.
+
+A few of the interesting **people** I met include larger-than-life movie
+reviewer [David Bruce][1], writer Paula Hendrickson, budding web entrepreneur
+[Jon Swift][2], videography guy [Evan Davis][3], and recording artist [Wayburn
+Dean][4] of Acappella fame.
+
+### boot camp
+
+Before the conference, I took a course on **CentOS Linux** with [Peter
+Green][5]. It was good to round out my knowledge by learning a little more
+about the server side of web applications. It certainly left me with a lot
+more to learn, including a thousand-page Linux book.
+
+### see no evil
+
+The most powerful talk was given by Richard B. Maring on the state of Internet
+pornography, and how it’s [influencing our children][6]. The age kids are
+exposed and even addicted just makes me sad. :-( Particularly alarming were
+the statistics of usage among church-going men, women and clergy. But facts
+and stats only reach our intellect.
+
+There is a real need for honest confession, and tolerance of **confession**.
+Otherwise we’re just a bunch of religious hypocrites shouting about the
+immorality of the world, while hiding in our own shame.
+
+God is all-too-familiar with our screw ups, yet He embraces us with grace. We
+as the church of Christ are called to reflect God’s love, even if it would be
+easier to avoid the uncleanly reality around us… and within.
+
+### missionary.local
+
+David Bruce gave a talk on being missionaries to our own culture. “Go into all
+the world”[^1] may be better translated “as you are going…”
+
+The folks at [Hollywood Jesus][1] don’t review a movie just to warn other
+Christians not to go. Rather than concentrating on morality, they look for
+redemptive analogies that connect our world to Jesus.
+
+This meshes well with the Mark Driscoll talk I mentioned briefly in [my last
+post][7]. To summarize: we all have a concept of hell, and a dream of heaven.
+We all look to someone/something to save us, to bring us to that heaven.
+Problem is: new toys, fame, fortune, girlfriends or boyfriends, they all let
+us down. While they may be good in themselves, they aren’t able to satisfy our
+soul, because God made us for Himself. Everyone is looking for a savior, not
+everyone realizes His name is Jesus…
+
+### web logging
+
+A few sessions on blogging seemed relevant. Some good tips, like writing with
+a reverse pyramid (important stuff first). You can see I’m not really
+following along… this is more of a 7 week brain dump.
+
+[Rich Tatum][8] talked about _relationship blogging_. Unlike articles, blogs
+are often raw, emotional, and unedited. It’s more like a letter to friends
+than a formal publication. Taking this analysis further, he compared blogs to
+the letters of Apostle Paul, which seems fitting. Paul wrote his letters to
+the Church as a group, they were read to the congregation and quite likely
+sent on to the Church in other cities. Blogs are more like that then the
+letters of today (yesterday?).
+
+Write about what you’re passionate about, and from your experiences. But keep
+your **readers in mind**… it may take me a while to get a hang of that advice.
+
+### reflection
+
+In the final talk I attended, [Rich Tatum][8] reflected on how technology and
+the Internet are shaping our culture. Things like: “I don’t have to remember,
+I can look it up.”
+
+There is so much information available, that we may not even skim it. Instead
+we will bookmark or tag something to read later. There is a shallowness to our
+consumption of information, there is always another hyperlink to follow, but
+when does all this information become knowledge?
+
+Furthermore, how does the Internet seep into our day-to-day lives. Do we take
+Sabbath rest to reflect? Do we memorize scripture and meditate on it? How does
+one flip mindsets from quick skimming to deep reflection?
+
+I’ll be first to admit that I lack discipline when it comes to the Internet.
+With 280+ friends and acquaintances on Facebook and near-200 news feeds in
+NetNewsWire, it’s easy to spend an enormous amount of time wandering about the
+Internet without any meaningful conversation or real learning.
+
+This talk seemed like an appropriate conclusion to the usual information-
+overload associated with conferences. There are other sessions I attended, but
+haven’t noted, and many others I missed. For more coverage, check out the
+[Internet Ministry Conference blog][9].
+
+After lunch and listening to Paula rehearse some wedding songs on the Grande
+Piano, I went for a short walk among the fall colors. Before I knew it, it was
+time to catch my flight back to Edmonton for a week of visiting with my Dad
+and sisters.
+
+### back to b.c.
+
+While I was away, the organization I worked for changed its name! Once
+settled, I began working in IT with the newly named [Power to Change][10]
+Ministries. I’m still working on the same project, trying to get it done. I
+finally wrote the necessary scripts to deploy it to our internal servers so
+that Human Resources can began working with the tool and giving me feedback.
+
+Since my Dad drove me back to British Columbia, I was able to pack the van up
+with all my stuff. The desk I haven’t used in two years is now setup in my own
+little home office. Matthew was kind enough to take me to Ikea, where I got a
+ shelf to hold all my books and a good desk chair. It’s very nice!
+
+### a little moonlighting
+
+I have been doing a fair amount of technical reading lately. Of
+particular interest is _“Programming in Lua,”_ a very good book on the **Lua**
+programming language. I intend to explore it further, and have started up a
+[separate blog][11] to share my findings.
+
+-n.joy
+
+   [1]: http://hollywoodjesus.com/
+
+   [2]: http://SaltMill.org/
+
+   [3]: http://www.evandavis.name/
+
+   [4]: http://www.wayburndean.com/
+
+   [5]: http://www.agathongroup.com/about/
+
+   [6]: http://seenoevil.com/
+
+   [7]: /pilgrim/shift
+
+   [8]: http://tatumweb.com/blog/
+
+   [9]: http://www.internetministryconference.org/blog/
+
+   [10]: http://powertochange.org
+
+   [11]: http://luanova.org
+
+  *[IT]: Information Technology
+
+
+  [^1]: Mark 16:15

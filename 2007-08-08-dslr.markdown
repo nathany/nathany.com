@@ -1,0 +1,40 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.dev/gadgeteer/dslr/
+Post: 131
+Title: digital SLR
+Slug: dslr
+Status: publish
+Date: 2007-08-08 17:00:00 -0700
+Pings: On
+Comments: On
+Category: gadgeteer
+
+Digital photography is fun! In 2001 I purchased my first camera, a Canon
+Powershot ELPH S100. Three years later, I handed it off to my Mom and upgraded
+to an SD110. My new camera met an untimely demise, and wasn’t worth repairing.
+Before I headed off to Europe in 2005, I purchased a new SD200 which has been
+a great camera. Eminently pocketable, easy to use, it has provided me with
+many great images of God’s glorious creation in the Swiss Alps.
+
+But it is time to step it up a notch. Point-and-shoot is great, but to be
+really creative, a digital SLR is the ticket. I looked at several cameras and
+[reviews][1] before settling on the **Nikon D40**.
+
+It’s an entry level SLR, with plenty of onboard help to assist the new
+photographer. It has a great feel and speedy performance, and very little
+noise at high ISO levels. I’ve stuck with the base level, but of course the
+lenses are exchangeable and filters can be added.
+
+So far I have spent most my time in the auto modes. I now have books on
+“Understanding Exposure” and “Landscape Photography” - so it’s just a matter
+of getting into the nitty gritty of apertures, shutter-speeds/f-stops, and all
+that jazz.
+
+To go alongside my new camera, I purchased [Lightroom][2] to manage photos. It
+is faster and more capable than iPhoto’07, and with the built in photo-editing
+features I can do a lot without the need to launch Photoshop.
+
+   [1]: http://www.dpreview.com/reviews/nikond40/
+
+   [2]: http://www.adobe.com/products/photoshoplightroom/

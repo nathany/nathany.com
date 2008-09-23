@@ -1,0 +1,150 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.com/gadgeteer/eread/
+Post: 132
+Title: e-reading
+Slug: eread
+Keywords: e-book
+Status: publish
+Date: 2007-08-29 17:00:00 -0700
+Pings: On
+Comments: On
+Category: gadgeteer
+
+### backstory
+
+At the turn of the century I stumbled upon [E Ink][1], an intriguing type of
+ink that can be reoriented to refresh a page with new information. “Minority
+Report” exemplified the concept with a future world where cereal boxes play
+short animations. At the time, I was contently using my Palm IIIe as both
+a PIM and “e-book reader” with [MyBible][2].
+
+Fast forward. My 4-year old Tungsten T has a case of Alzheimer’s disease,
+possibly related to the busted power button. Palm has not updated their PDAs
+for nearly 2 years, which only makes their prices feel steeper yet. I don’t
+consider myself enough of the business type for a Treo.
+
+I do a lot of reading, primarily non-fiction books, including e-books such as
+those from [Pragmatic Programmer][3]. If a book is less than 300 pages, I’ll
+just buy the PDF. In other cases I have the PDF as a reference in addition to
+a paper copy for the first time through.
+
+A PDA can function as a pocketable tool to read books, but at home there is no
+advantage over a laptop. I’m unlikely to load a 300 page PDF onto the small
+screen, much less a larger book. An E Ink display changes the dynamics… not
+only would I want all my e-books on the device, I would be willing to purchase
+larger e-books than I have in the past.
+
+### readers
+
+The [iLiad][4] is a geeks dream with an E Ink screen, WiFi and a Wacom stylus.
+But best of all, the software is entirely Open Source and there is a developer
+community growing up around the device. If I was familiar with Linux
+programming and GTK, I’d jump on the chance to port [Sword][5]. While
+expensive and already a year old, there is a feel-good sense to supporting
+some of the Electronic Paper Display innovators from Philips.
+
+September is to bring [Bookeen’s Cybook 3][6] e-book reader, which addresses
+many issues with the Sony Reader. It will be available outside of the US, work
+on a Mac, and support open formats in addition to Mobipocket. It utilizes a
+second generation E Ink “Vizplex” display with a faster refresh rate and
+better contrast than existing devices. The Paris-based company appears to be
+custom writing a lot of software with an eye for usability. The proof is in
+the pudding, as they say, which leaves me waiting for the initial reviews.
+
+The novel size and nine-button interface is suitable for casual readers of
+fiction, and will most certainly lack searching, highlighting and annotation.
+I can relegate reference use and studying to my laptop, so putting those aside
+my main concerns would be:
+
+  * An accessible and efficient Table of Contents for large books like The
+Bible.
+  * The ability to view letter/A4 sized PDFs in landscape, fit to width (minus
+some margin). This should result in a reasonable zoom level for readability,
+and simply paging a half-page at a time. (Ideally pages would be reflowed with
+Adobe Digital Editions, but that’s not available yet).
+
+### related gadgetry
+
+Being an Apple user, I am certainly not oblivious to the iPhone. It just isn’t
+available in Canada yet, so I’ve been ignoring it somewhat. I did read up on
+the [Developer Guidelines][7] and have been especially active on [Laridian’s
+discussion][8] of iPocketBible for the iPhone. But that doesn’t mean I’ll get
+one.
+
+The [Palm Foleo][9] has been met with disdain, but I actually find it quite
+interesting, though not as a mobile companion per say. Like a PDA, your data
+is always saved, and with only one application up at a time, the OS breathes a
+certain simplicity that a full-blown laptop lacks. Considering the form
+factor, rubberized casing, and battery life, it seems like a great little
+device for the avid traveller.
+
+Palm OS has in it’s favour the Palm-owned [eReader][10], Amazon’s
+[Mobipocket][11], Adobe Acrobat as well as [PalmPDF][12]. Toss in dedicated
+Bible and [dictionary software][13] and I begin to wonder why Palm hasn’t
+jumped on E Ink. Maybe it’s still to immature a technology? I have never seen
+it in person. But if Palm is just too busy with phones, perhaps the iLiad
+developer community will take the torch, they’ve already ported a [PIM][14].
+
+### a new paradigm
+
+In thinking about applications for ePaper, I realized we need a whole new way
+of handling the UI. Readability and power efficiency are paramount. Rather
+than scrolling, we should stick to page flipping. Windows and dialogs feel out
+of place.
+
+For data input, I envision filling in a circle with a stylus like those
+multiple choice tests in school. Forms with either lines or one-letter per
+box. Freeform handwriting would be preferable to an onscreen keyboard, but
+takes a lot of processing power unless there is a standard form as with
+Graffiti.
+
+Take a page from [Circus Ponies’ Notebook][15], which uses a dynamically
+generated index as an alternative to the built in search feature. A Bible
+application could have a good old concordance at the back.
+
+A device with a paper display needs software that bridges the gap, creating an
+interface that feels like paper, but still has the dynamic abilities of an
+application.
+
+I really have a passionate interest in E Ink devices, which is amusing
+considering I’ve never actually held or even seen one in real life. The
+technology is still relatively young, which makes me wonder if my interest
+would hold, or if all this just looks good on paper (pun fully intended).
+
+
+   [1]: http://eink.com/
+
+   [2]: http://www.laridian.com/palm/
+
+   [3]: http://pragmaticprogrammer.com/
+
+   [4]: http://www.irextechnologies.com/products/iliad
+
+   [5]: http://crosswire.org/sword/index.jsp
+
+   [6]: http://bookeen.com/ebook/ebook-reading-device.aspx
+
+   [7]: http://developer.apple.com/iphone/
+
+   [8]: http://blog.laridian.com/?p=74
+
+   [9]: http://www.palm.com/ca/products/mobilecompanion/foleo/
+
+   [10]: http://ereader.com/product/detail/15003?software=eReader_Pro_for_Palm_OS
+
+   [11]: http://mobipocket.com/
+
+   [12]: http://www.metaviewsoft.de/en/Software/PalmOS/Freeware/PalmPDF/index.html
+
+   [13]: http://noahpro.org/
+
+   [14]: http://www.mobileread.com/forums/showthread.php?t=12861
+
+   [15]: http://www.circusponies.com/
+
+  *[UI]: User Interface
+
+  *[OS]: Operating System
+
+  *[PIM]: Personal Information Manager
