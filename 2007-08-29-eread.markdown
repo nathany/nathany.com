@@ -4,9 +4,9 @@ Link: http://nathany.com/gadgeteer/eread/
 Post: 132
 Title: e-reading
 Slug: eread
-Keywords: e-book
+Keywords: Cybook, Digital Reader, DRM, E Ink, e-book, e-paper, e-reader, iLiad, iRex
 Status: publish
-Date: 2007-08-29 17:00:00 -0700
+Date: 2008-09-22 17:00:00 -0700
 Pings: On
 Comments: On
 Category: gadgeteer
@@ -14,116 +14,73 @@ Category: gadgeteer
 ### backstory
 
 At the turn of the century I stumbled upon [E Ink][1], an intriguing type of
-ink that can be reoriented to refresh a page with new information. “Minority
-Report” exemplified the concept with a future world where cereal boxes play
-short animations. At the time, I was contently using my Palm IIIe as both
-a PIM and “e-book reader” with [MyBible][2].
+ink that can be reoriented to refresh a page with new information. “[Minority
+Report][imdb]” exemplified the concept with a future world where cereal boxes
+play short animations.
 
-Fast forward. My 4-year old Tungsten T has a case of Alzheimer’s disease,
-possibly related to the busted power button. Palm has not updated their PDAs
-for nearly 2 years, which only makes their prices feel steeper yet. I don’t
-consider myself enough of the business type for a Treo.
+It wasn't until 08.05.08 that I saw E Ink in person. The Sony Reader (PRS-505) had come to Canada. I walked away *impressed*.
 
-I do a lot of reading, primarily non-fiction books, including e-books such as
-those from [Pragmatic Programmer][3]. If a book is less than 300 pages, I’ll
-just buy the PDF. In other cases I have the PDF as a reference in addition to
-a paper copy for the first time through.
+By that time, I was aware of the [Bookeen’s Cybook 3][6], with better Mac support than Sony. And of course there is the [iLiad][4]. With WiFi, a Wacom stylus, and an SDK, the iLiad is a geek's dream. A *very expensive* dream.
 
-A PDA can function as a pocketable tool to read books, but at home there is no
-advantage over a laptop. I’m unlikely to load a 300 page PDF onto the small
-screen, much less a larger book. An E Ink display changes the dynamics… not
-only would I want all my e-books on the device, I would be willing to purchase
-larger e-books than I have in the past.
+### library
 
-### readers
+The majority of my reading is on computer programming, web development, and design. Lately, I have been trying to buy **PDF e-books** more often, though I still have many paper books.
 
-The [iLiad][4] is a geeks dream with an E Ink screen, WiFi and a Wacom stylus.
-But best of all, the software is entirely Open Source and there is a developer
-community growing up around the device. If I was familiar with Linux
-programming and GTK, I’d jump on the chance to port [Sword][5]. While
-expensive and already a year old, there is a feel-good sense to supporting
-some of the Electronic Paper Display innovators from Philips.
+Up until this point, I refuse to purchase DRM *infested* books. Publishers that I **approve** of include [The Pragmatic Programmers][pragprog], [O'Reilly][oreilly], [Manning][manning], [No Starch Press][nostarch], [SitePoint][sitepoint]. Password protected PDFs annoy, but I still buy books from [Apress][] (including [friends of ED][friendsofed]) and [Packt Publishing][packtpub]. The InformIT imprints use DRM, but their books can usually be read on [O'Reilly Safari][safari] instead.
 
-September is to bring [Bookeen’s Cybook 3][6] e-book reader, which addresses
-many issues with the Sony Reader. It will be available outside of the US, work
-on a Mac, and support open formats in addition to Mobipocket. It utilizes a
-second generation E Ink “Vizplex” display with a faster refresh rate and
-better contrast than existing devices. The Paris-based company appears to be
-custom writing a lot of software with an eye for usability. The proof is in
-the pudding, as they say, which leaves me waiting for the initial reviews.
+Don't ask me how many of the 50-some e-books I've actually finished! Some of that is due to swaying interests, but eye strain certainly contributes.
 
-The novel size and nine-button interface is suitable for casual readers of
-fiction, and will most certainly lack searching, highlighting and annotation.
-I can relegate reference use and studying to my laptop, so putting those aside
-my main concerns would be:
+### digital reader for pdf
 
-  * An accessible and efficient Table of Contents for large books like The
-Bible.
-  * The ability to view letter/A4 sized PDFs in landscape, fit to width (minus
-some margin). This should result in a reasonable zoom level for readability,
-and simply paging a half-page at a time. (Ideally pages would be reflowed with
-Adobe Digital Editions, but that’s not available yet).
+Today, 22.09.08, iRex announced a new Digital Reader series targeted at the business sector. The device features a 10.2" E Ink display suitable for viewing PDF documents. Perfect!
 
-### related gadgetry
+An article in the [EETimes][] suggests that this update is more significant than a larger screen. Thanks to new performance characteristics of the device, the interface should be much more interactive than prior E Ink devices.
 
-Being an Apple user, I am certainly not oblivious to the iPhone. It just isn’t
-available in Canada yet, so I’ve been ignoring it somewhat. I did read up on
-the [Developer Guidelines][7] and have been especially active on [Laridian’s
-discussion][8] of iPocketBible for the iPhone. But that doesn’t mean I’ll get
-one.
+Before spending all that cash, I'd like to see some more reviews, learn about Mac support, WiFi uses, and the SDK. 
 
-The [Palm Foleo][9] has been met with disdain, but I actually find it quite
-interesting, though not as a mobile companion per say. Like a PDA, your data
-is always saved, and with only one application up at a time, the OS breathes a
-certain simplicity that a full-blown laptop lacks. Considering the form
-factor, rubberized casing, and battery life, it seems like a great little
-device for the avid traveller.
-
-Palm OS has in it’s favour the Palm-owned [eReader][10], Amazon’s
-[Mobipocket][11], Adobe Acrobat as well as [PalmPDF][12]. Toss in dedicated
-Bible and [dictionary software][13] and I begin to wonder why Palm hasn’t
-jumped on E Ink. Maybe it’s still to immature a technology? I have never seen
-it in person. But if Palm is just too busy with phones, perhaps the iLiad
-developer community will take the torch, they’ve already ported a [PIM][14].
 
 ### a new paradigm
 
-In thinking about applications for ePaper, I realized we need a whole new way
-of handling the UI. Readability and power efficiency are paramount. Rather
-than scrolling, we should stick to page flipping. Windows and dialogs feel out
-of place.
+Like the iPhone, these devices force software developers to think in new ways. While iPhone interfaces need to be "finger compatible", E Ink interfaces need to suit the paper motif.
 
-For data input, I envision filling in a circle with a stylus like those
-multiple choice tests in school. Forms with either lines or one-letter per
-box. Freeform handwriting would be preferable to an onscreen keyboard, but
-takes a lot of processing power unless there is a standard form as with
-Graffiti.
+Windows, dialogs and scroll bars all feel out of place. I can't help but want to use the stylus like an HB pencil, to scribble in a radio button. 
 
-Take a page from [Circus Ponies’ Notebook][15], which uses a dynamically
-generated index as an alternative to the built in search feature. A Bible
-application could have a good old concordance at the back.
+Books and journals could contain an index at the back, as with [Circus Ponies’ Notebook][15]. Which isn't to say that we shouldn't have searching too.
 
-A device with a paper display needs software that bridges the gap, creating an
-interface that feels like paper, but still has the dynamic abilities of an
-application.
+While I may never learn enough Linux and GTK to become a developer, at least it opens the door to third-party software. For the iLiad, [Adam B.][adamb] has already ported a [PIM][14] and is working on a web browser he calls Midori. Hopefully the Digital Reader will receive similar treatment.
 
-I really have a passionate interest in E Ink devices, which is amusing
-considering I’ve never actually held or even seen one in real life. The
-technology is still relatively young, which makes me wonder if my interest
-would hold, or if all this just looks good on paper (pun fully intended).
+If I end up ordering a Digital Reader, I'll let you know...
+
+**Update:** This article was originally written on 29.08.07. I have condensed it significantly, and updated it to reflect the release of the new iRex Digital Reader series.
 
 
    [1]: http://eink.com/
 
-   [2]: http://www.laridian.com/palm/
-
-   [3]: http://pragmaticprogrammer.com/
-
+   [6]: http://bookeen.com/
+   
    [4]: http://www.irextechnologies.com/products/iliad
+   
+   [dr1000]: http://irextechnologies.com/irexdr1000
+   [EETimes]: http://www.eetimes.com/rss/showArticle.jhtml?articleID=210602952
+   
+
+   [pragprog]: http://www.pragprog.com/
+   [sitepoint]: http://www.sitepoint.com/books/
+   [Apress]: http://www.apress.com/
+   [friendsofed]: http://www.friendsofed.com/
+   [packtpub]: https://www.packtpub.com/
+   [oreilly]: http://oreilly.com/store/
+   [manning]: http://www.manning.com/
+   [nostarch]: http://nostarch.com/
+
+
+[adamb]: http://blog.adamrb.com/
+
+   [2]: http://www.laridian.com/palm/
 
    [5]: http://crosswire.org/sword/index.jsp
 
-   [6]: http://bookeen.com/ebook/ebook-reading-device.aspx
+
 
    [7]: http://developer.apple.com/iphone/
 
@@ -148,3 +105,12 @@ would hold, or if all this just looks good on paper (pun fully intended).
   *[OS]: Operating System
 
   *[PIM]: Personal Information Manager
+  
+  *[08.05.08]: Thursday, May 8, 2008
+  *[22.09.08]: Monday, September 22, 2008
+  *[29.08.07]: Wednesday, August 29, 2007
+  
+  *[SDK]: Software Development Kit
+  
+  [imdb]: http://www.imdb.com/title/tt0181689/
+  [safari]: http://safari.oreilly.com
