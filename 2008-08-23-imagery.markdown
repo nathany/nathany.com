@@ -4,6 +4,7 @@ Link: http://nathany.com/pilgrim/imagery/
 Post: 195
 Title: imagery
 Slug: imagery
+Keywords: humanitarian, photography, WordPress
 Status: publish
 Date: 2008-08-23 15:43:00 -0700
 Pings: On

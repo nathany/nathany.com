@@ -15,43 +15,41 @@ Category: gadgeteer
 
 At the turn of the century I stumbled upon [E Ink][1], an intriguing type of
 ink that can be reoriented to refresh a page with new information. “[Minority
-Report][imdb]” exemplified the concept with a future world where cereal boxes
+Report][imdb]” exemplified this in a future  where cereal boxes
 play short animations.
 
 It wasn't until 08.05.08 that I saw E Ink in person. The Sony Reader (PRS-505) had come to Canada. I walked away *impressed*.
 
-By that time, I was aware of the [Bookeen’s Cybook 3][6], with better Mac support than Sony. And of course there is the [iLiad][4]. With WiFi, a Wacom stylus, and an SDK, the iLiad is a geek's dream. A *very expensive* dream.
+By that time, I was aware of the [Bookeen’s Cybook 3][6], with better Mac support and the [iLiad][4], with WiFi, a Wacom stylus, and an SDK. The iLiad is a geek's dream. A *very expensive* dream.
 
 ### library
 
 The majority of my reading is on computer programming, web development, and design. Lately, I have been trying to buy **PDF e-books** more often, though I still have many paper books.
 
-Up until this point, I refuse to purchase DRM *infested* books. Publishers that I **approve** of include [The Pragmatic Programmers][pragprog], [O'Reilly][oreilly], [Manning][manning], [No Starch Press][nostarch], [SitePoint][sitepoint]. Password protected PDFs annoy, but I still buy books from [Apress][] (including [friends of ED][friendsofed]) and [Packt Publishing][packtpub]. The InformIT imprints use DRM, but their books can usually be read on [O'Reilly Safari][safari] instead.
+Naturally I refuse to purchase DRM *infested* books. Publishers that I **approve** of include [The Pragmatic Programmers][pragprog], [O'Reilly][oreilly], [Manning][manning], [No Starch Press][nostarch], [SitePoint][sitepoint]. Password protected PDFs annoy, but I still buy books from [Apress][] (including [friends of ED][friendsofed]) and [Packt Publishing][packtpub]. The InformIT imprints use DRM, but their books can usually be read on O'Reilly [Safari][] instead.
 
 Don't ask me how many of the 50-some e-books I've actually finished! Some of that is due to swaying interests, but eye strain certainly contributes.
 
-### digital reader for pdf
+### e-pdf
 
-Today, 22.09.08, iRex announced a new Digital Reader series targeted at the business sector. The device features a 10.2" E Ink display suitable for viewing PDF documents. Perfect!
+On 22.09.08, iRex announced a new Digital Reader series targeted at the business sector. The device features a 10.2" E Ink display suitable for viewing PDF documents. Perfect!
 
-An article in the [EETimes][] suggests that this update is more significant than a larger screen. Thanks to new performance characteristics of the device, the interface should be much more interactive than prior E Ink devices.
+Unfortunately some reviews indicate the software being rough around the edges, and being geared towards business, it's predictably quite expensive (the iLiad remains equally expensive).
 
-Before spending all that cash, I'd like to see some more reviews, learn about Mac support, WiFi uses, and the SDK. 
+So far I haven't heard much about the SDK, except that there will be one. While I may never learn enough Linux and GTK to become a developer, at least it opens the door to third-party software. For the iLiad, [Adam B.][adamb] has already ported a [PIM][14] and is working on a web browser he calls Midori. Hopefully the Digital Reader will receive similar treatment.
+
+### epub
+
+On 02.10.08 Sony announced the PRS-700 Digital Reader. Besides side lighting, it's outfitted with a touch screen for navigation, searching and annotation. Those features make it quite suitable for reference material, the only problem is that PDFs don't fit so well onto the 6" display.
+
+[O'Reilly][oreilly] has begun making books available in reflowable .epub format. That doesn't really help with all my existing e-books, though perhaps [Calibre][] can help?
+
+The PRS-700 is coming to [Canada][prs700] in mid-November, at half the asking price of the iRex Digital Reader.
+
+I'll let you know how it goes...
 
 
-### a new paradigm
-
-Like the iPhone, these devices force software developers to think in new ways. While iPhone interfaces need to be "finger compatible", E Ink interfaces need to suit the paper motif.
-
-Windows, dialogs and scroll bars all feel out of place. I can't help but want to use the stylus like an HB pencil, to scribble in a radio button. 
-
-Books and journals could contain an index at the back, as with [Circus Ponies’ Notebook][15]. Which isn't to say that we shouldn't have searching too.
-
-While I may never learn enough Linux and GTK to become a developer, at least it opens the door to third-party software. For the iLiad, [Adam B.][adamb] has already ported a [PIM][14] and is working on a web browser he calls Midori. Hopefully the Digital Reader will receive similar treatment.
-
-If I end up ordering a Digital Reader, I'll let you know...
-
-**Update:** This article was originally written on 29.08.07. I have condensed it significantly, and updated it to reflect the release of the new iRex Digital Reader series.
+**Update:** This article was originally written on 29.08.07. I have condensed it significantly, and updated it to reflect the release of the new iRex Digital Reader and Sony PRS-700.
 
 
    [1]: http://eink.com/
@@ -69,7 +67,7 @@ If I end up ordering a Digital Reader, I'll let you know...
    [Apress]: http://www.apress.com/
    [friendsofed]: http://www.friendsofed.com/
    [packtpub]: https://www.packtpub.com/
-   [oreilly]: http://oreilly.com/store/
+   [oreilly]: http://oreilly.com/ebooks/
    [manning]: http://www.manning.com/
    [nostarch]: http://nostarch.com/
 
@@ -109,8 +107,11 @@ If I end up ordering a Digital Reader, I'll let you know...
   *[08.05.08]: Thursday, May 8, 2008
   *[22.09.08]: Monday, September 22, 2008
   *[29.08.07]: Wednesday, August 29, 2007
+  *[02.10.08]: Thursday, October 2, 2008
   
   *[SDK]: Software Development Kit
   
   [imdb]: http://www.imdb.com/title/tt0181689/
-  [safari]: http://safari.oreilly.com
+  [Safari]: http://safari.oreilly.com
+[prs700]: http://www.sonystyle.ca/commerce/servlet/ProductDetailDisplay?storeId=10001&langId=-1&catalogId=10001&productId=1005736
+[Calibre]: http://calibre.kovidgoyal.net/
