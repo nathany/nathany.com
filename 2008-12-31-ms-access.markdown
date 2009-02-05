@@ -1,0 +1,63 @@
+Type: Blog Post (Markdown)
+Blog: nathany
+Link: http://nathany.com/developer/ms-access/
+Post: 238
+Title: Access in the Enterprise
+Slug: ms-access
+Keywords: database, Microsoft Access, Microsoft SQL Server
+Status: publish
+Date: 2008-12-31 12:00:00 -0700
+Pings: On
+Comments: On
+Category: developer
+
+### water for life
+
+For the final three months of 2008, I developed a database to track GAiN's water well drilling projects in Africa. When you sponsor a well, [GAiN][] sends you a plaque and a personalized video recorded in the field. All this needs to be tracked.
+
+With near 100 wells in Benin, a few dozen in Sudan, and progress being made in Tanzania, the amount of data was making Excel quite cumbersome to use. 
+
+### a windows world
+
+In a meeting with IT, we picked Microsoft Access to rapidly build a user interface. All the data is kept alongside [DonorDirect][] in Microsoft SQL Server, allowing easy access to donor/donation information. 
+
+Initially I was *less than happy.* For one, I switched to Mac six years ago, and half the GAiN user-base have Macs. For another, I saw little value in learning VBA and Microsoft Access.
+
+But I bit the bullet. Fired up [VMware Fusion 2.0][VMware] (thanks for the free upgrade, you guys rock!) and got to work. When thinking through complicated queries, I turned to [SQL Grinder][SQLGrinder] for some much needed respite.
+
+### lessons learned
+
+At one point I was finding it impossible to design a particular user interface. It was time to step back and talk to my manager. I am grateful to have worked with a manager who is technically minded.
+
+It seemed that I was trying to write a giant macro with all the smarts and minimal user interaction. We reevaluated things, and came up with solutions that required a little more manual work, but provided more flexibility.
+
+It reminds me of [Lua's][lua] mandate of providing simple mechanisms.
+
+### happiness found
+
+Aesthetics are important to me, the art of elegant code and well designed user interfaces. *This wasn't that.*
+
+The programming language could be more elegant, the interface more intuitive, and several bizarre bugs would not be missed. Yet the best tools would mean nothing if I couldn't see the value in my efforts.
+
+Things did come together, and when progress was made, my manager was happy. The sense of making something worthwhile, something that would be used, that was enough to make me happy.
+
+I found that in work, my need for *purpose* overrides by desire for *beauty.*
+
+### slides
+
+After all was said and done, I gave IT a 1.5 hour presentation on what I had accomplished. If interested, you may download and page through the slides:
+
+"[Using Microsoft Access with SQL Server 2005][presentation][^1]"
+
+[DonorDirect]: http://www.donordirect.com/
+[Dennis]: http://fierbach.com/
+[GAiN]: http://www.globalaid.net/
+[VMware]: http://www.vmware.com/products/fusion/
+[SQLGrinder]: http://www.sqlgrinder.com/
+[lua]: http://www.lua.org/about.html
+[pdf]: http://get.adobe.com/reader/
+[presentation]: /pdf/Using_Microsoft_Access_with_SQL_Server_2005.pdf
+
+[^1]: [Adobe Acrobat][pdf] is required.
+
+*[VBA]: Visual Basic for Applications

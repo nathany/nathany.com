@@ -63,7 +63,7 @@ For awhile now, I have been debating if I should continue in this career of comp
 [gain]: http://www.globalaid.net/
 
 [newsletter]: /pdf/january-2008-newsletter.pdf
-[pdf]: http://www.adobe.com/products/acrobat/readstep2.html
+[pdf]: http://get.adobe.com/reader/
 [join]: https://join.powertochange.org/
 [rails]: /developer/rails-magic/ 
 
