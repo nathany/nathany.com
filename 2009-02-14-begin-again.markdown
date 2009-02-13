@@ -6,14 +6,14 @@ Title: to begin again
 Slug: begin-again
 Keywords: ***********************************************
 Status: publish
-Date: 2009-02-12 00:54:50 -0800
+Date: 2009-02-14 00:54:50 -0800
 Pings: On
 Comments: On
 Category: pilgrim
 
 ### putting down roots
 
-It's been 3.5 years since my brother and I parted ways, leaving behind our apartment in Edmonton. While Terry began his career as an English teacher to South Korea, I took a short sabbatical in Europe.
+It has been 3.5 years since my brother and I parted ways, leaving behind our apartment in Edmonton. While Terry began his career as an English teacher to South Korea, I took a short sabbatical in Europe.
 
 Since my return, I have made my home in my father's house or by renting out a room. Those have been good times, but I am glad to be starting 2009 with *a place to call my own.*
 
@@ -27,10 +27,18 @@ Back in May 2007, I came to BC to work with HR in [Power to Change][PTC] for 4 m
 
 Working short-term has kept "what's next?" at the forefront of my mind. In a way, moving was me fighting that sense of insecurity, operating as though I am here to stay.
 
-And why not? Things have worked out thus far. Call it *faith?*
+Hopefully so, this was my fifth move since coming to BC, which hasn't always been the best for my sense of belonging. *How does one befriend the wind?*
 
-Let's hope that I won't be moving for a while. This was my fifth move since coming to BC, which hasn't been the best for my sense of belonging. *How does one befriend the wind?*
+### poison ivy
 
+Thirty-one, single, disillusioned.
+
+In today's society, it is very difficult to believe that a relationship can endure. My upbringing was marked by divorce, my parents have both gone through separations since. Might be why I never dated all through school.
+
+This week marks the two-year anniversary of my last relationship *ending.* 
+Left detached, the shell came down full force. I was unwilling to risk my heart again, while growing more and more envious of the young couples who had.
+
+Envy kills. When another's happiness fuels our discontentment, we isolate ourselves for "our own protection." It's no way to live.
 
 ### slow death
 
@@ -58,60 +66,42 @@ We live in an unpredictable world. Tragedy befalls people every day, a tsunami s
 
 It was not long before we returned to chaos. 
 
-God is clearly outraged with the injustices of the world. But instead of imposing perfect order, God *joins us* in the storms of life. He feels our sorrow, he knows our pain[^1], and carries us through.
+God *is* outraged with the injustices of the world, but instead of imposing perfect order, God *joins us* in the storms of life. He feels our sorrow, He knows our pain[^1], and He carries us through.
 
-### poison ivy??
+### rain
 
+Consider Joseph, betrayed by his brothers, enslaved, imprisoned. Hardly seems fair. Yet "the LORD was *with* Joseph and gave him success in whatever he did." [^2]
 
-Single, thirty-one, sour.
+When reunited with the brothers, his eyes would not allow him to hold his grudge:
 
-disillusion divorce broken relationships family longevity
+>"[Joseph's] tears removed the callousness from his heart. They gave him the capacity to forgive, to feel, to love, to be affectionate once more." Naomi Levy
 
+Love is always worthwhile, even if it doesn't turn out the way we hope.
 
-emotional
-attachment
-detached
-hardened
+There is something to learn, something of how God loves, of how God aches. Once you've felt someone walk away from your love, it's not hard to imagine how God feels when we grow distant. 
 
-difficulty trusting
+When I picture God, He seems sad. So often shunned by the life His very hands formed.
 
-fester
+### resolve
 
-envy kills
-happiness of others, untouchables, angry
-shallow, quickest cure?: what's real
+*To Begin Again* has stirred up buried emotions, helping me come to terms with the hardships of my past, and recognize that I'm not the only one.
 
-
-something to be learned, how God loves, how God aches for us
-
-Have you ever had intense feelings and wondered if God has felt that way too?
-love
-distant
-
-
-"tears have the power to soften our hardened hearts"
-"[Joseph's] tears removed the callousness from his heart. They gave him the capacity to forgive, to feel, to love, to be affectionate once more."
-
-
-"heroic tales of suffering and triumph"
-highly recommended
-  
-  
+If this resonates with you, I hope you will join me in resolving *To Begin Again* this year. Not only physically, but soulfully as well.
+    
 ### power to change
 
+This week
 
-quick GAiN summary
+quick GAiN summary?
+technical [][access]
 
 
 transition to marketing/Advancement
-This week
+
 
 heroic, Jesus,
 
 
-never really about the money
-far less
-amused
 making a living (חי)
 
 
@@ -140,3 +130,5 @@ Soul Cravings by Erwin McManus
 *[IT]: Information Technology
 
   [^1]: Isaiah 63:9
+  
+  [^2]: Genesis 39:23 NIV
