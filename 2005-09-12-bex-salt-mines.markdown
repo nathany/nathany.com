@@ -1,12 +1,12 @@
 Type: Blog Post (Markdown)
 Blog: nathany
-Link: http://nathany.dev/pilgrim/bex-salt-mines/
+Link: http://nathany.com/pilgrim/bex-salt-mines/
 Post: 60
 Title: salt
 Slug: bex-salt-mines
 Keywords: switzerland
 Status: publish
-Date: 2005-09-12 17:00:00 -0700
+Date: 2005-09-12 16:00:00 -0800
 Pings: On
 Comments: On
 Category: pilgrim
@@ -20,9 +20,9 @@ in Bochs, with a Bible study on Friday 23 night, and perhaps a quick trip to
 Vaduz the day before.
 
 After packing and checking out, I spent the afternoon in the [Salt Mines][1]
-of Bex. The _taxi_ people didn't speak a word of French, and my hand actions
+of Bex. The _taxi_ people didn't speak a word of English, and my hand actions
 didn't get far. But it all worked out in the end. It's good for me to see the
-language barrier in person — reminds me of Wycliffe's plays utilizing kazoos.
+language barrier in person — reminds me of Wycliffe Theatre with their kazoos.
 
 It felt like the seven dwarfs, “hi ho, hi ho” as we travelled deep into the
 mine in a little train. Left free to explore all the old-fashioned technology,
@@ -42,15 +42,15 @@ interesting visit, and far less _touristy._
 
 While I didn't buy any salt at the booth on my way out, I did come away with a
 thought. When the Bible talks about “We are the Salt of the earth” the
-connotations could've be quite different than at first glance — salt was less
-common and more precious in those times.
+connotations could have be quite different than at first glance — salt was
+less common and more precious in those times.
 
 From Bex there is a bus up to Gryon, where I heard of a nice [hostel][2] to
 stay at. Still a bit weary of hostels and the mixed dorm, I went along in
 hopes of staying near Montreux a little longer, and because of the good price
 (42 CHF for 2 nights).
 
-It turned out really well... I stayed with Ria & David, a nice couple from New
+It turned out really well... I stayed with Ria  David, a nice couple from New
 Zealand, as well as Jonathan from South Africa.
 
 Besides getting all my laundry done (hooray!), I stopped by the grocery store

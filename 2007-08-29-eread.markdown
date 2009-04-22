@@ -6,7 +6,7 @@ Title: e-reading
 Slug: eread
 Keywords: Cybook, Digital Reader, DRM, E Ink, e-book, e-paper, e-reader, iLiad, iRex
 Status: publish
-Date: 2008-09-22 17:00:00 -0700
+Date: 2008-09-22 16:00:00 -0800
 Pings: On
 Comments: On
 Category: gadgeteer
@@ -26,9 +26,9 @@ By that time, I was aware of the [Bookeen’s Cybook 3][6], with better Mac supp
 
 The majority of my reading is on computer programming, web development, and design. Lately, I have been trying to buy **PDF e-books** more often, though I still have many paper books.
 
-Naturally I refuse to purchase DRM *infested* books. Publishers that I **approve** of include [The Pragmatic Programmers][pragprog], [O'Reilly][oreilly], [Manning][manning], [No Starch Press][nostarch], [SitePoint][sitepoint]. Password protected PDFs annoy, but I still buy books from [Apress][] (including [friends of ED][friendsofed]) and [Packt Publishing][packtpub]. The InformIT imprints use DRM, but their books can usually be read on O'Reilly [Safari][] instead.
+Naturally I refuse to purchase DRM *infested* books. Publishers that I **approve** of include [The Pragmatic Programmers][pragprog], [O'Reilly][oreilly], [Manning][manning], [No Starch Press][nostarch], [SitePoint][sitepoint] and  [Packt Publishing][packtpub]. Password protected PDFs annoy, but I still buy books from [Apress][] (including [friends of ED][friendsofed]). The InformIT imprints use DRM, but their books can usually be read on O'Reilly [Safari][] instead.
 
-Don't ask me how many of the 50-some e-books I've actually finished! Some of that is due to swaying interests, but eye strain certainly contributes.
+Don't ask me how many of the 60-some e-books I've actually finished! Some of that is due to swaying interests, but eye strain certainly contributes.
 
 ### e-pdf
 
@@ -113,5 +113,5 @@ I'll let you know how it goes...
   
   [imdb]: http://www.imdb.com/title/tt0181689/
   [Safari]: http://safari.oreilly.com
-[prs700]: http://www.sonystyle.ca/commerce/servlet/ProductDetailDisplay?storeId=10001&langId=-1&catalogId=10001&productId=1005736
+[prs700]: http://www.sonystyle.ca/commerce/servlet/ProductDetailDisplay?storeId=10001langId=-1catalogId=10001productId=1005736
 [Calibre]: http://calibre.kovidgoyal.net/
