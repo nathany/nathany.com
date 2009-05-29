@@ -235,8 +235,7 @@ is the simple, elegant syntax required to drive all its’ power.
 
 #### migrations gone south
 
-To create database tables for Rails, you write a migration in database-
-agnostic Ruby code. To make changes you write additional migrations, each
+To create database tables for Rails, you write a migration in database-agnostic Ruby code. To make changes you write additional migrations, each
 prefixed with an incrementing number. These migrations can be run in your
 production environment without having to manually write SQL scripts or
 remember what to modify.
@@ -278,9 +277,8 @@ verbs.
 
 For my latest project, we have a multi-page _form_ where each page loads and
 saves via Ajax. As the user pages around, it loads partials with GET requests
-as needed. Anything the user changes is auto-saved regularly and when paging
-with a PUT request. These requests map nicely to the stock `show` and `update`
-methods in the Rails controller. My PageHandler class is fairly intelligent
+as needed. Anything the user changes is saved when paging and auto-saved on a timer using PUT requests. These requests map nicely to the stock `show` and `update`
+methods in the Rails controller. My PageHandler JavaScript class is fairly intelligent
 about minimizing requests, but in the usual case, users move from page to page
 in order, taking _two_ Ajax requests each time.
 
@@ -293,10 +291,10 @@ that could do a load and/or save. Certainly it would be more efficient in
 terms of number of requests.
 
 Maybe there is another way to implement REST that would work better than the
-Rails approach? Other REST implementations I’ve seen generally use JSON and
+default Rails approach? Other REST implementations I’ve seen generally use JSON and
 have a _fatter_ client where the client maintains its own state. Purists will
 be quick to indicate that REST should be stateless, with each request being
-entirely self-contained. That means no server-side sessions. True REST has
+entirely self-contained. That means no server-side sessions. This has
 benefits with regards to back-button handling, bookmarks and error recovery.
 
 The multi-page forms in my application are user-created by Human Resources,
@@ -305,8 +303,8 @@ work in this case, even a custom validator because I need to auto-save data
 that may be incomplete or invalid. Instead I use JavaScript to validate dates,
 email addresses, phone numbers and such. When the entire form is done and
 submitted, it then needs to be checked for validity. No framework can handle
-every case, so I don’t fault Rails, but its’ validation mechanism is a little
-1.0.
+every case, so I don’t fault Rails, but its validation mechanism is a bit
+Web 1.0.
 
 ### obtrusive javascript
 
@@ -353,7 +351,7 @@ I would expect the Rails APIs to become a lot simpler and more consistent.
 ### a community, not a product
 
 One adjustment coming from products like ColdFusion is to recognize Ruby, and
-Rails as open-source communities. Rather than complain about the _dreaded
+Rails, as open-source communities. Rather than complain about the _dreaded
 **wontfix** tickets,_ we can get involved by submitting and testing patches,
 and bringing them to the core teams’ attention through the mailing list.
 Become a collaborator.
@@ -378,10 +376,20 @@ Ruby on Rails ships with the mindset of putting your development on tracks,  giv
 
 My complaints are less Earth-shattering when I decide to *code into* the environment. Not limiting my solutions to the constraints, instead augmenting the environment with my own libraries and conventions as needed.
 
-### elsewhere
+### a year later
 
-A friend asked if I am planning to switch to **Django**. I've definitely taken a greater interest in it, and Python in general. Whether I adopt it for a major project is yet to be seen, but I am definitely looking forward to working with the [Django 1.0][dj1] release, and contrasting it with my Rails experience.
+This article was written more than a year ago, and quite a lot has changed or is changing in Rails. For learning, the documentation fund has produced several free [Rails Guides][railsguides]. For modularity, much of Rails Engines is incorporated into 2.3, and there is even talk of mountable Rails apps in the future. Time stamped migrations came out in 2.1 to help resolve conflicts between multiple developers. And in David Heinemeier Hansson's  [RailsConf'09 keynote][rails3dhh], he discussed unobtrusive JavaScript in the forthcoming Rails 3.0, including the ability to use different JavaScript libraries. The opportunity to use different ORMs and non-relational databases is also on the way.
 
+So it looks like by the time Rails 3 hits, the concerns I voiced will be addressed for the most part. There is also quite a bit of refactoring going on, which will hopefully make it easier to understand what goes on beneath the [abstractions][]. It's certainly worth keeping tabs on.
+
+
+
+
+[abstractions]: http://www.joelonsoftware.com/articles/LeakyAbstractions.html
+
+[railsguides]: http://guides.rubyonrails.org/
+
+[rails3dhh]: http://railsconf.blip.tv/file/2081411/
 
 
 
