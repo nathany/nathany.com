@@ -11,7 +11,7 @@ Pings: On
 Comments: On
 Category: developer
 
-Tomorrow, May 29th, at 10:00 PM PDT begins the [Django Dash][djangodash] programming competition. Having not used Django or Python significantly since 2006, I intend to use it as a learning experience.
+Today, May 29th, at 10:00 PM PDT begins the [Django Dash][djangodash] programming competition. Having not used Django or Python significantly since 2006, I intend to use it as a learning experience.
 
 ### port 43
 
