@@ -17,7 +17,7 @@ On May 29th, at 10:00 PM PDT began the [Django Dash][djangodash] 48-hour program
 
 My [project][] is to build a **whois** web application using the Python socket library. Shelling to a command line `whois` would pick the right server and do the recursive thing when necessary, but I want to try writing it by hand.
 
-This part was actually pretty easy, it's the layers on top that are more challenging.
+This part was actually pretty easy.
 
 ### parsing
 
@@ -52,14 +52,9 @@ if 'runserver' in sys.argv:
 
 Python is great.
 
-When I was looking into supporting Unicode characters in domains, such as used by [tinyarro.ws][], I found Python has had built-in support for IRDA and Punycode encodings forever (well, since 2.3).
+When I was looking into supporting Unicode characters in domains, such as used by [tinyarro.ws][], I found built-in support for IRDA and Punycode encodings.
 
-My only rant is that I'm impatient to be using Python 3.x. At this point it makes little sense to write any significant amount of 2.x code, but it's either wait for the frameworks/platforms to update, or blaze a new frontier from scratch.
-
-
-
-
-*You can follow my progress on [Twitter][], and I will update this post once the competition is over.*
+My only rant is that I'm impatient to be using Python 3.x. At this point it makes little sense to write any significant amount of 2.x code, but it's either wait for the frameworks/platforms, or blaze a new frontier from scratch.
 
 [tinyarro.ws]: http://tinyarro.ws/
 [PyYAML]: http://pyyaml.org/
