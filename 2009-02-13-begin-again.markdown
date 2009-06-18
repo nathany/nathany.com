@@ -1,11 +1,12 @@
 Type: Blog Post (Markdown)
 Blog: nathany
+Link: http://nathany.com/pilgrim/begin-again/
+Post: 242
 Title: to begin again
 Slug: begin-again
-Post: 242
 Keywords: death, envy, God, guilt, Naomi Levy, Power to Change, To Begin Again
 Status: publish
-Date: 2009-02-13 00:21:30 -0800
+Date: 2009-02-13 01:21:30 -0700
 Pings: On
 Comments: On
 Category: pilgrim
@@ -94,12 +95,6 @@ Our [Campus ministry][campus] has handed out Erwin McManus' [Soul Cravings][soul
 As God changes our own hearts this year, let's not shy away from sharing that change with others. So much is ever-changing, but not all change is beneficial.
 
 This week I signed a contract to build an updated [powertochange.org][PTC] web site by Mother's Day. We have a great little marketing team working on the messaging of an organization in flux. 
-
-I'm not sure if my peculiar affinity for words is appreciated, but I enjoy it never-the-less:
-
->"Together Sharing the Love of Jesus in the [Census Metropolitan Areas][CMA] of Canada."
-
-For this to be a good change, I should leave the messaging to the writers. :) We need to find the right words to explain what our now-sixteen ministries do, as we continue to unify our efforts and strengthen one another. My duty of communicating with the computer (programming) is trivial by comparison. 
 
 Our team and our organization appreciate your prayers.
 
