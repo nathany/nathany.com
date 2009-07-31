@@ -6,7 +6,7 @@ Title: a year of rails magic
 Slug: rails-magic
 Keywords: rails
 Status: publish
-Date: 2008-02-14 19:07:35 -0700
+Date: 2008-02-14 20:07:35 -0600
 Pings: On
 Comments: On
 Category: developer
@@ -370,7 +370,7 @@ Ruby on Rails has been a great framework to learn and work with. It isn’t the 
 
 ### addendum
 
-Shortly after publishing this article, I was struck with something in Code Complete[^2]. It was about *coding into* a language/environment as opposed to simply *coding in.*
+Shortly after publishing this article, I was hit by something in Code Complete[^2]. It was about *coding into* a language/environment as opposed to simply *coding in.*
 
 Ruby on Rails ships with the mindset of putting your development on tracks,  giving helpful guidance to your web application development. Strict adherence to this mindset is very much *coding in*, where you work within the constraints of what is provided, and end up frustrated.
 
@@ -378,7 +378,7 @@ My complaints are less Earth-shattering when I decide to *code into* the environ
 
 ### a year later
 
-This article was written more than a year ago, and quite a lot has changed or is changing in Rails. For learning, the documentation fund has produced several free [Rails Guides][railsguides]. For modularity, much of Rails Engines is incorporated into 2.3, and there is even talk of mountable Rails apps in the future. Time stamped migrations came out in 2.1 to help resolve conflicts between multiple developers. And in David Heinemeier Hansson's  [RailsConf'09 keynote][rails3dhh], he discussed unobtrusive JavaScript in the forthcoming Rails 3.0, including the ability to use different JavaScript libraries. The opportunity to use different ORMs and non-relational databases is also on the way.
+This article was written more than a year ago, and quite a lot has changed or is changing in Rails. For learning, the documentation fund has produced several free [Rails Guides][railsguides]. For modularity, much of Rails Engines is incorporated into 2.3, and there is even talk of mountable Rails apps in the future. Time-stamped migrations came out in 2.1 to help resolve conflicts between multiple developers. And in David Heinemeier Hansson's  [RailsConf'09 keynote][rails3dhh], he discussed unobtrusive JavaScript in the forthcoming Rails 3.0, including the ability to use different JavaScript libraries. Yehuda Katz has shared how loose coupling will allow validations to be reused outside ActiveRecord, and the ability to use different ORMs and non-relational databases. 
 
 So it looks like by the time Rails 3 hits, the concerns I voiced will be addressed for the most part. There is also quite a bit of refactoring going on, which will hopefully make it easier to understand what goes on beneath the [abstractions][]. It's certainly worth keeping tabs on.
 

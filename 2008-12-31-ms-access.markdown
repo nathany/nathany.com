@@ -6,7 +6,7 @@ Title: Access in the Enterprise
 Slug: ms-access
 Keywords: database, Microsoft Access, Microsoft SQL Server
 Status: publish
-Date: 2008-12-31 12:00:00 -0700
+Date: 2008-12-31 13:00:00 -0600
 Pings: On
 Comments: On
 Category: developer
@@ -41,7 +41,7 @@ The programming language could be more elegant, the interface more intuitive, an
 
 Things did come together, and when progress was made, my manager was happy. The sense of making something worthwhile, something that would be used, that was enough to make me happy.
 
-I found that in work, my need for *purpose* overrides by desire for *beauty.*
+I found that in work, my need for *purpose* overrides my desire for *beauty.*
 
 ### slides
 

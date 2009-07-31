@@ -1,12 +1,12 @@
 Type: Blog Post (Markdown)
 Blog: nathany
-Link: http://nathany.dev/developer/cf-object-relational-mapper/
+Link: http://nathany.com/developer/cf-object-relational-mapper/
 Post: 102
 Title: The joys and perils of writing an ORM (a postmortem)
 Slug: cf-object-relational-mapper
 Keywords: coldfusion
 Status: publish
-Date: 2006-10-24 17:00:00 -0700
+Date: 2006-10-24 18:00:00 -0600
 Pings: On
 Comments: On
 Category: developer
@@ -215,7 +215,7 @@ ColdFusion.
 
 But it also makes me wonder what the future landscape of web development will
 look like. Will someone take all these things, like model-view-controller,
-object-relational-mapping, behavior-driven-development, AJAX/JSON and create a
+object-relational-mapping, behavior-driven-development, Ajax/JSON and create a
 new language just for web development that does all this? Or do all those
 things best reside in a framework? While a built-in library eases deployment,
 I'm not sure if these things will make it to the language level. Mind you,

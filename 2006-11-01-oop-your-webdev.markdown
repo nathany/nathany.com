@@ -1,11 +1,11 @@
 Type: Blog Post (Markdown)
 Blog: nathany
-Link: http://nathany.dev/developer/oop-your-webdev/
+Link: http://nathany.com/developer/oop-your-webdev/
 Post: 106
 Title: object oriented approaches to web development
 Slug: oop-your-webdev
 Status: publish
-Date: 2006-11-01 17:00:00 -0700
+Date: 2006-11-01 18:00:00 -0600
 Pings: On
 Comments: On
 Category: developer
@@ -84,7 +84,7 @@ developed in Japan.
 
 [Rails][6] is all the hype these days. Not only does it provide a good
 skeleton to get started, it allows you to avoid writing SQL (for the most
-part), and ties into prototype and script.acul.us for all the AJAX and Web 2.0
+part), and ties into prototype and script.acul.us for all the Ajax and Web 2.0
 goodness you could want.
 
 I am quite happy with the direction that Rails is taking. Matter-of-factly, I
@@ -114,7 +114,7 @@ thing to drop on someone else’s lap.
 
 Ruby has more going for it than Rails, not that I’ve tried out the other
 frameworks ([Nitro+Og][11], etc.). There are tools like [Capistrano][12] to
-help with deployment, and [rSpec][13] is very intriguing for applying “test-
+help with deployment, and [RSpec][13] is very intriguing for applying “test-
 first” practices to application design. Both employ _“domain specific
 languages”_, that is, they hijack Ruby into providing an English like syntax
 to achieve their ends. Ruby already is very readable, and it is also very
@@ -305,7 +305,7 @@ language support for [TextMate][16], and also to learn TextMate better.
 
 If I do find employment using ColdFusion, it is quite likely that I will focus
 on CF somewhat exclusively. I may give my ORM a second go, and perhaps look
-into porting [routes][31] and [rSpec][13] to the CF side. I’d likely spend
+into porting [routes][31] and [RSpec][13] to the CF side. I’d likely spend
 some time looking at [XmlHttpRequest][32] object, JSON and the many Web 2.0
 pushing frameworks. Basically, I would spend my extra hours working to bring
 cool stuff to ColdFusion.

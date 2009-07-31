@@ -1,12 +1,12 @@
 Type: Blog Post (Markdown)
 Blog: nathany
-Link: http://nathany.dev/developer/canada-on-rails/
+Link: http://nathany.com/developer/canada-on-rails/
 Post: 98
 Title: Canada on Rails
 Slug: canada-on-rails
 Keywords: rails
 Status: publish
-Date: 2006-04-14 17:00:00 -0700
+Date: 2006-04-14 18:00:00 -0600
 Pings: On
 Comments: On
 Category: developer
@@ -50,11 +50,11 @@ application.
 ### Best behavior
 
 Possibly one of the most interesting talk for me was Behavior Driven
-Development by Dave Astles. He went through rSpec, a framework which
+Development by Dave Astles. He went through RSpec, a framework which
 essentially provides different lingo for unit testing. Writing specifications
 makes test-first feel more natural. Additionally, it was neat to see the use
 of extra dummy methods to make for more English like syntax. In a statement
-like should.be 5, the preposition .be is optional, but improves readability.
+like `should.be 5`, the preposition .be is optional, but improves readability.
 
 Steven Baker also covered testing, and mentioned many useful tools: FlexMocks,
 RCoverage, Insurance, Water, and Selenium.
@@ -92,14 +92,14 @@ it means keeping a Terminal session open.
 
 ### Snappier web
 
-Amy Hoy gave us an introduction to AJAX, and all the easy to use methods in
+Amy Hoy gave us an introduction to Ajax, and all the easy to use methods in
 Ruby to handle JavaScript things. She talked briefly about prototype and
 script.aculo.us, and Thomas Fuchs the creator of script.aculo.us took over
 from there with a more in-depth discussion of RJS, which is a Ruby template
 that generates JavaScript.
 
 One of the most useful things mentioned was [FireBug][4], a Firefox plugin for
-debugging JavaScript and AJAX requests. A list of other tools included
+debugging JavaScript and Ajax requests. A list of other tools included
 Tamperdata, Safari Web Inspector and Microsoft Script Debugger.
 
 While some of the visual effects are mostly eye-candy, these things help
@@ -111,7 +111,7 @@ DHH had also demoed pushing changes to the browser (vs. polling) by placing an
 Adobe Flash pixel as a listener on an open socket to your server. This allowed
 an interface to update as itself as other users made changes that affect it.
 
-Michael Buffington gave a humorous presentation on his game [unroll][5] which
+Michael Buffington gave a humorous presentation on his game Unroll which
 uses the capabilities of script.aculo.us to make a multiplayer web-based game
 with no Flash or Shockwave plugins required.
 
@@ -155,7 +155,7 @@ was able to meet a few Rails peeps, including some of the speakers.
 
    [5]: http://llor.nu
 
-   [6]: http://www.planetargon.com
+   [6]: http://planetargon.com/
 
   *[luthiers]: makers of stringed instruments
 

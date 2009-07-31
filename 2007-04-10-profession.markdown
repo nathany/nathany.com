@@ -1,12 +1,12 @@
 Type: Blog Post (Markdown)
 Blog: nathany
-Link: http://nathany.dev/pilgrim/profession/
+Link: http://nathany.com/pilgrim/profession/
 Post: 117
 Title: profession
 Slug: profession
 Keywords: missionary
 Status: publish
-Date: 2007-04-10 17:00:00 -0700
+Date: 2007-04-10 18:00:00 -0600
 Pings: On
 Comments: On
 Category: pilgrim
@@ -29,7 +29,7 @@ costs of their housing projects. I had used Ruby on Rails for my personal web
 site, but this is my first major project with the technology. In many ways it
 has been a learning experience, logging about 100 hours but spending far more
 time overall. It is also my first project to utilize the Prototype library for
-all sorts of AJAX goodness. Kudos to the the [Prototype][4] team for great
+all sorts of Ajax goodness. Kudos to the the [Prototype][4] team for great
 _offline_ API documentation!
 
 Last month I took on a second Ruby on Rails project, which was well underway
