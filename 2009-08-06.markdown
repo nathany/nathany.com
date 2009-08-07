@@ -1,0 +1,48 @@
+Type: Blog Post (Markdown)
+Blog: nathany.dev
+Title: 
+Slug: 
+Keywords: 
+Status: publish
+Pings: On
+Comments: On
+Category: pilgrim
+
+### 
+
+facebook status
+
+yardstick
+
+Ruby on Rails, Haml, jQuery, Git
+
+
+database migration
+
+
+tech focus
+
+spin off
+niche blogs
+
+
+
+
+
+
+
+[gitbook]: http://www.pragprog.com/titles/tsgit/pragmatic-version-control-using-git
+
+[rubyist]: http://dablog.rubypal.com/2009/6/10/my-new-ruby-book-is-out
+
+
+
+
+[Jekyll]: http://jekyllrb.com/
+
+[Sphinx]: http://sphinx.pocoo.org/
+
+[FatCloud]: http://netlife.com.au/tag/fatcloud/
+
+[souders]: http://stevesouders.com/
+
