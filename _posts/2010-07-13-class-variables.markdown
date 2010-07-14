@@ -102,7 +102,9 @@ In Java you can't have an instance variable and class variable with the same nam
   p1.sides = 4; // in Java this is equivalent to Polygon.sides = 4;
   {% endhighlight %}
 
-This is not the same as Python, where `p1.sides = 4` would create a new instance variable with no affect on the value of Polygon.sides or any other object. In Python it is necessary to specify
+This is not the same as Python, where `p1.sides = 4` would create a new instance variable with no affect on the value of Polygon.sides or any other object. 
+
+So Python behaves a little differently due to its nature as a dynamic language where variables aren't declared upfront, but it still makes sense, in my mind.
 
 ## End thoughts
 
