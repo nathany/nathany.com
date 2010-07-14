@@ -1,3 +1,8 @@
+---
+title: a year of rails magic
+category: developer
+---
+
 Type: Blog Post (Markdown)
 Blog: nathany
 Link: http://nathany.com/developer/rails-magic/
@@ -9,7 +14,7 @@ Status: publish
 Date: 2008-02-14 20:07:35 -0600
 Pings: On
 Comments: On
-Category: developer
+
 
 Two years ago I came across a [certain][1] full-stack web development
 framework. I bought the books, took in the [propaganda][2] and ported my

@@ -1,0 +1,7 @@
+markdown: rdiscount
+pygments: true
+lsi: false
+permalink: /:categories/:title
+auto: false
+
+  
