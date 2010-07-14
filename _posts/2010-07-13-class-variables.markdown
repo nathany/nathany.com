@@ -17,7 +17,51 @@ All of this seemed quite bizarre. It didn't seem like any other language I had e
 
 >"This is a strong argument for the use of class instance variables instead of class variables."
 
-To confirm my suspicion that these oddities were specific to Ruby, I decided to dust off the Java compiler. Finding Java fairly straight-forward, I tried to level the playing field by experimenting with a sibling dynamic language. This is what I found in Python.
+To confirm my suspicion that these oddities were specific to Ruby and not just something I had overlooked, I decided to dust off the Java compiler.
+
+## Java
+
+Java class variables are defined with the `static` keyword:
+
+  {% highlight java %}
+  class Polygon {
+    static int sides = 8;
+  }
+
+  Polygon p1 = new Polygon();
+  {% endhighlight %}
+    
+In Java, accessing the (static) class variable through the object is equivalent to accessing it through the class. You can't have an instance variable and class variable with the same name. 
+
+  {% highlight java %}
+  // in Java these are equivalent:
+  Polygon.sides = 4;
+  p1.sides = 4;
+  {% endhighlight %}
+
+If a static class variable exists on a subclass, it is a separate value that *shadows* the base class.
+
+  {% highlight java %}
+  class Triangle extends Polygon {
+    static int sides = 3;
+  }
+  
+  System.out.println(Triangle.sides);   // 3
+  Triangle t1 = new Triangle();
+  {% endhighlight %}
+  
+Much different from Ruby @@class variables, where one value is shared between Polygon, Triangle, and all their instances.
+
+If a Java subclass doesn't define the static instance variable, we will instead access the value defined in the base class.
+
+  {% highlight java %}
+  class Octogon extends Polygon {
+  }
+  
+  System.out.println(Octogon.sides);   // same as Polygon.sides
+  {% endhighlight %}
+
+Java seems fairly straight-forward, but it is a static language where variables must be declared upfront. To level the playing field, I experimented with Python, a sibling dynamic language.
 
 ## Python
 
@@ -34,7 +78,7 @@ Access the class variable using the class name:
   print(Polygon.sides) # 8
   {% endhighlight %}
 
-If you create an instance, the class variable is accessible from it as well:
+If you create an instance, the class variable is visible from it as well:
 
   {% highlight python %}
   p1 = Polygon()
@@ -88,23 +132,8 @@ Until, as you might expect, you set a class variable for the subclass.
   Polygon.sides = 7
   print(Octogon.sides)  # 8
   {% endhighlight %}
-
-## Python vs. Java
-
-In Java you can't have an instance variable and class variable with the same name. Accessing the class variable through the object is equivalent to accessing it through the class.
-
-  {% highlight java %}
-  class Polygon {
-    static int sides = 8;
-  }
-
-  Polygon p1 = new Polygon();
-  p1.sides = 4; // in Java this is equivalent to Polygon.sides = 4;
-  {% endhighlight %}
-
-This is not the same as Python, where `p1.sides = 4` would create a new instance variable with no affect on the value of Polygon.sides or any other object. 
-
-So Python behaves a little differently due to its nature as a dynamic language where variables aren't declared upfront, but it still makes sense, in my mind.
+  
+So Python behaves a little differently than Java due to being a dynamic language where you can create variables on the fly. Instance variables shadow class variables of the same name, so it's best to always refer to class variables as `ClassName.variable`. Makes good sense.
 
 ## End thoughts
 
@@ -112,9 +141,9 @@ I can't say I really understand the ~230 lines of [inheritable_attributes.rb][in
 
 So it seems, **Ruby is weirdly designed, but flexible enough that we can patch it ourselves.**
 
-While doing a [language comparison][gist] last year, I found that Python strings can be treated as a collection of characters. This is not the case in Ruby, but when asked to improve upon my script, @wycats simply tweaked String for the purposes of the script.
+While doing a language comparison last year, I found that Python strings can be treated as a collection of characters. This is not the case in Ruby, but when asked to improve upon my script, @wycats simply tweaked String for the purposes of [the script][gist].
 
-Hm.
+Hm. Seeing a trend?
 
 [nunemaker]: http://railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/
 [inherit]: http://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/class/inheritable_attributes.rb
