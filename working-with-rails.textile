@@ -1,0 +1,5 @@
+I began dabbling with Ruby on Rails in January 2006, attended **Canada on Rails** that April, but didn't do any paid work with it until February 2007. Then in May I began a 10 month full-time project for the Human Resources department at Power to Change. The Rails 1.2.x web app is used to create, capture and review staff application forms and references. After March 2008, my Rails related work subsided to occasional bug fixes.
+
+In July 2009 I joined **Yardstick**, an online training and testing company, where we are currently developing a new platform using Ruby on Rails. I'm intending to become more involved in the community on my own time as well.
+
+At Canada on Rails I found myself appreciating the **direction** with RESTful interfaces and what belongs in core. Likewise, I appreciate the infusion of Merb developers bringing loose coupling and cleaner code to Rails 3.0, plus the support for unobtrusive JavaScript. Rails may not be perfect, but it's always moving, always getting better.
