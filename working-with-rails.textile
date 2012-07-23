@@ -2,6 +2,6 @@ In late 2005, I picked up a copy of "Agile Web Development with Rails":http://pr
 
 It wasn't until February 2007 that I began paid work in Rails, and in May I landed a 10 month full-time contract with "Power to Change":http://powertochange.org. The Rails 1.2.x project was live for 4 years before being taken down due to "software rot":http://en.wikipedia.org/wiki/Software_rot.
 
-In July 2009, I joined "Yardstick":http://getyardstick.com/, to continue "building":https://vimeo.com/35538422 out a Ruby on Rails 2.x app, while also maintaining their _legacy_ ColdFusion app. During these three years, I've was also been involved with "@yegrb":http://yegrb.com/ from the start, and competing in Rails Rumble and other hackathons.
+In July 2009, I joined "Yardstick":http://getyardstick.com/, to continue "building":https://vimeo.com/35538422 out a Ruby on Rails 2.x app, while also maintaining their _legacy_ ColdFusion app. During these three years, I've also been involved with "@yegrb":http://yegrb.com/ from the start, and competing in Rails Rumble and other hackathons.
 
 At Canada on Rails I found myself appreciating the **direction** Rails was headed, with RESTful interfaces and decisions around what belongs in core. Likewise, I appreciate the infusion of Merbists who brought loose coupling and cleaner code to Rails 3.0, along with the support for unobtrusive JavaScript. The direction, community and ecosystem continue to be a strong point for _working with Rails._
