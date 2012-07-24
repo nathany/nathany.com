@@ -27,7 +27,7 @@ Tools:
 
 ### Power to Change Ministries (May 2007 - May 2009; Langley, BC)
 
-In April 2007, I was able to _raise funds_ for a summer internship that piqued my interest. The project enabled **human resources** to create forms that applicants could complete online. What became a ten month project was primarily a solo-developer effort, with some assistance from Campus Crusade for Christ U.S.
+In April 2007, I was able to _raise funds_ for a summer internship that piqued my interest. The [project](https://github.com/nathany/boat) enabled **human resources** to create forms that applicants could complete online. What became a ten month project was primarily a solo-developer effort, with some assistance from Campus Crusade for Christ U.S.
 
 Gloabl Aid Network (GAiN) is the humanitarian arm of Power to Change. For a start, we launched a [new web site](http://globalaid.net/), with the help of a graphics designer from the marketing team.
 
@@ -41,7 +41,7 @@ Tools:
 
 ### Freelancing (February - March 2007; Edmonton, AB)
 
-Much to my delight, I landed my first two contracts with Ruby on Rails in 2007: a new app for Royer Homes and fixing up Econolution. While looking for work, I also attained [certification in PHP 5](http://yng.mn/zendcert).
+While looking for work, I attained [certification in PHP 5](http://yng.mn/zendcert). Much to my delight, I landed my first two contracts with Ruby on Rails in 2007: a new [app for Royer Homes](https://github.com/nathany/royerhomes) and fixing up Econolution.
 
 Tools:
 
