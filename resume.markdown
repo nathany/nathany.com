@@ -18,7 +18,7 @@ I served as a **software developer** in the following positions, with additional
 
 ### Yardstick, Testing and Training Experts  (July 2009 - May 2012; Edmonton, AB)
 
-Yardstick Measure is a multi-tenant **learning management system** (LMS) focused on creating and delivering proctored exams. Our core team fluctuated from 2-4 developers. We collaborated on architecture, through code reviews, and occasional pair programming. I was responsible for creating a booking system, adding e-commerce support (including taxation), company management (CRM), as well as multiple data migrations from third-party systems. In 2011, I accepted additional **project management** responsibilities, managing the tasks of our core team and several external contractors. I also served as the primary contact for a significant client, with offices in Montreal and Geneva. Still, I kept on coding, as visible in this [code_swarm](https://vimeo.com/35538422) of the project.
+Yardstick Measure is a multi-tenant **learning management system** (LMS) focused on creating and delivering proctored exams. Our core team fluctuated from 2-4 developers. We collaborated on architecture, through code reviews, and occasional pair programming. I was responsible for creating a booking system and adding e-commerce support (including taxation). I also scripted multiple data migrations from third-party systems. In 2011, I accepted additional **project management** responsibilities, managing the tasks of our core team and several external contractors. I also served as the primary contact for a significant client, with offices in Montreal and Geneva. Still, I kept on coding, as visible in this [code_swarm](https://vimeo.com/35538422) of the project.
 
 Tools:
 
