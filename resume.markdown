@@ -91,6 +91,6 @@ Tools:
 
 ## Hobbies
 
-Outside of work, my interests include reading e-books (often technical), watching tech talks, and participating in local meetups like @yegrb. I walk or take transit almost everywhere, and enjoy hiking and photowalks, as well as soccer, board games and cooking.
+Outside of work, my interests include reading e-books (often technical), watching tech talks, and participating in local meetups like [@yegrb](http://yegrb.com/). I walk or take transit almost everywhere, and enjoy hiking and photowalks, as well as soccer, board games and cooking.
 
 _References available upon request._
