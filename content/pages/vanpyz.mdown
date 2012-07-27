@@ -1,29 +1,21 @@
-Type: Blog Post (Markdown)
-Blog: nathany
-Link: http://nathany.com/developer/vanpyz-from-future/
-Post: 209
-Title: py on the horizon
-Slug: vanpyz-from-future
 Keywords: python, user group, vancouver
-Status: publish
 Date: 2008-09-03 22:11:23 -0700
-Pings: On
-Comments: On
-Category: developer
+Summary: Notes on the changes in Python 2.6 and 3.0.
+
+# Py on the Horizon
 
 ### from __future__ import coder_who_says_py
 
-Python core developer, [Brett Cannon][Cannon], gave a talk last night at [VanPyz][] on the changes coming in Python 2.6 and 3.0. While anyone can read "what's new" in [2.6][new26] and [3.0][new30], his talk brought some clarity to the benefits of these changes. 
+Python core developer, [Brett Cannon][Cannon], gave a talk last night at [VanPyz][] on the changes coming in Python 2.6 and 3.0. While anyone can read "what's new" in [2.6][new26] and [3.0][new30], his talk brought some clarity to the benefits of these changes.
 
 Using my notes, I'll do my best to summarize what we learned. Please keep in mind that I'm still a Python amateur, and some things were way over my head.
 
 Brett started with what's **new in 2.6**, like the `format()` method with a nicer, more flexible syntax than print %. For example, positional arguments can be in any order, and can be repeated:
 
-  <pre lang="python">
-  >>>"{1} {1} {0} {1} {1}".format('future', 'under')    
-  under under future under under
-  </pre>
-  
+~~~python
+"{1} {1} {0} {1} {1}".format('future', 'under')  # => under under future under under
+~~~
+
 Now any object can support splicing by defining the `__index__` method. **Abstract Base Classes** (ABC) can be used to register what a class implements. **Class @decorators** add function @decorator like post-processing to classes, providing a simpler mechanism than MetaClasses for many cases.
 
 **New modules** include io, [simplejson][] as json, [PyProcessing][] as multiprocessing, and the AST (Abstract Syntax Tree) module. AST could be useful for implementing something like C#'s LINQ or Ruby's [Sequel][], as well as for templating languages in the vein of [Brevé][].
@@ -34,12 +26,11 @@ Many of the changes help ease the transition to 3.0, such as the -3 flag for ext
 
 Perhaps the most obvious change in Python 3.0 is that the **Unicode** type is taking over, replacing the old string type. For binary data there is a bytes type. In Python 2.6, bytes is an alias for the str type, such that:
 
-  <pre lang="python">
-  >>>(b'a' == 'a')
-  True
-  </pre>
+~~~python
+(b'a' == 'a') # => True
+~~~
 
-Python 3.0 introduces an entirely different bytes type, so *this is **not** the case.*
+Python 3.0 introduces an entirely different bytes type, so _this is **not** the case._
 
 For performance reasons Unicode strings are stored in UTF-16 internally, but you will likely stick with UTF-8 and let Python take care of the translation. Source code and identifiers can also use Unicode, though only to a certain point. I'm not sure if `שׁלוֹם = 'peace'` will work, but this is mainly there to help [OLPC][] kids learn Python.
 
@@ -51,9 +42,9 @@ Moving on to Python 3 specific enhancements, list **comprehensions** have been g
 
 When [unpacking][pep-3132] a list, you can use **star unpacking** to capture any other elements, whether from the beginning, middle or end:
 
-<pre lang="python">
+~~~python
 head, *tail = some_list
-</pre>
+~~~
 
 ### functions
 
@@ -68,25 +59,25 @@ There is some new MetaClass stuff, but I really didn't follow.
 
 Having learned Lua last year, I wasn't among the "huhs?" when the closures came up. In fact, I recently had to do a little hack to get closures working in Python 2.5:
 
-  <pre lang="python">
-  def parse_footnotes(text):
-    """Converts my custom style footnotes to Markdown Extra format"""
-    count = [0]       # using a list is a trick to do closures in Python
-    footnotes = []
-    def handle_match(mo):
-      """replace matched {fn ...} with [^1]"""
-      count[0] += 1
-      footnotes.append(mo.group(mo.lastindex))    # store footnote for later
-      return u'[^%d]' % count[0]
-  
-    ...
-  </pre>
+~~~python
+def parse_footnotes(text):
+  """Converts my custom style footnotes to Markdown Extra format"""
+  count = [0]       # using a list is a trick to do closures in Python
+  footnotes = []
+  def handle_match(mo):
+    """replace matched {fn ...} with [^1]"""
+    count[0] += 1
+    footnotes.append(mo.group(mo.lastindex))    # store footnote for later
+    return u'[^%d]' % count[0]
 
-In this example, I am writing a callback to process each match for a regular expression, and return the substitute value. I needed to keep a count in order to return [^1], [^2], etc. Writing a class for this is a little excessive, a closure is just right.
+  ...
+~~~
+
+In this example, I am writing a callback to process each match for a regular expression, and return the substitute value. I needed to keep a count in order to return `[^1]`, `[^2]`, etc. Writing a class for this is a little excessive, a closure is just right.
 
 Python 3.0 introduces the [nonlocal][pep-3104] keyword, that works in a similar fashion to `global`. The above code would look something like this:
 
-<pre lang="python">
+~~~python
 def parse_footnotes(text):
   """Converts my custom style footnotes to Markdown Extra format"""
   count = 0
@@ -99,12 +90,11 @@ def parse_footnotes(text):
     return '[^{0:d}]'.format(count)
 
   ...
-</pre>
-
+~~~
 
 ### exceptions
 
-Exceptions received quite an overhaul, not only adopting a consistent syntax, exceptions can also be **chained**. If an exception occurs while handling another exception, the original exception is not lost, and the traceback is tied to each exception object. 
+Exceptions received quite an overhaul, not only adopting a consistent syntax, exceptions can also be **chained**. If an exception occurs while handling another exception, the original exception is not lost, and the traceback is tied to each exception object.
 
 BaseException is at the root, and KeyboardInterrupt, SystemError and Exception inherit from that. You can easily catch Exception and let the other two fall through for the interpreter to handle.
 
@@ -123,16 +113,16 @@ All these sorts of changes should be handled by running **2to3** after taking ca
 
 ### summary
 
-Python 2.6 and 3.0 are presently scheduled for an October release. The changes in 3.0 look like really good improvements that move the language forward. 
+Python 2.6 and 3.0 are presently scheduled for an October release. The changes in 3.0 look like really good improvements that move the language forward.
 
-Porting any one project to 3.0 shouldn't take too long, it's mainly an issue of prerequisites. One of Python's major strengths is the vast library of third-party tools. You need to wait for, or get involved with the porting of any libraries you use before making the switch. That's going to take some time. 
+Porting any one project to 3.0 shouldn't take too long, it's mainly an issue of prerequisites. One of Python's major strengths is the vast library of third-party tools. You need to wait for, or get involved with the porting of any libraries you use before making the switch. That's going to take some time.
 
-Meanwhile, we need to become aware of the changes and how not to code if we want the transition to be as smooth as possible.
+Meanwhile, we need to be aware of the changes if we want the transition to be as smooth as possible.
 
-Thanks to Brett Cannon for his talk, and VanPyZ for hosting it. Due to my own limited understanding, I may have made errors in the above. If you run across any, or have other comments, please [write me][mailto].
+Thanks to Brett Cannon for his talk, and VanPyZ for hosting it. Due to my own limited understanding, I may have made errors in the above. If you run across any, or have other comments, please [contact me][mailto].
 
 
-[mailto]: mailto:nyoungman@gmail.com
+[mailto]: https://twitter.com/nathany
 
 
 [VanPyz]: http://www.vanpyz.org/
