@@ -9,12 +9,12 @@ end
 
 class SyntacticalTemplate < Tilt::RedcarpetTemplate::Redcarpet2
   def generate_renderer
-    Syntactical.new(hard_wrap: true)
+    Syntactical.new(hard_wrap: false)
   end
 
   def prepare
     # override the options to include code fencing, etc.
-    options = {
+    opts = {
       no_intra_emphasis: true,
       tables: true,
       fenced_code_blocks: true,
@@ -24,7 +24,7 @@ class SyntacticalTemplate < Tilt::RedcarpetTemplate::Redcarpet2
       space_after_headers: false,
       superscript: true
     }
-    @engine = Redcarpet::Markdown.new(generate_renderer, options)
+    @engine = Redcarpet::Markdown.new(generate_renderer, opts)
     @output = nil
   end
 end
