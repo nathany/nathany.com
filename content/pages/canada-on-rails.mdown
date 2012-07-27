@@ -12,7 +12,7 @@ spent.
 
 ### Core focus
 
-DHH spoke about moving Web Services stuff (and other unessentials) into
+<abbr title="David Heinemeier Hansson">DHH</abbr> spoke about moving Web Services stuff (and other unessentials) into
 plugins, as well as making Rails more RESTful. I'm quite happy about that, as
 I ended up reading into the [principles of REST][1] a few months back when I
 was thinking about learning Rails.
@@ -65,7 +65,7 @@ powerful framework, it is the elegance of its Ruby underpinnings that I am
 most attracted to as a programmer.
 
 Alex Bunardzic continued the discussion, comparing programmers to carpenters
-and luthiers. He was saying that what we want is not software cabinets, but
+and <span title="makers of stringed instruments">luthiers</span>. He was saying that what we want is not software cabinets, but
 “software that sings.” Software that breaths, that is sensitive to context and
 embraces simplicity. A good luthier crafts an instrument that reflects the
 owner's personality. Today's software tries to be everything to everyone, and
@@ -98,7 +98,7 @@ create snappier and more desktop-like interfaces. Thomas demonstrated Fuxoim,
 an iPhoto inspired tool built with nothing more than Ruby on Rails, HTML/CSS
 and JavaScript.
 
-DHH had also demoed pushing changes to the browser (vs. polling) by placing an
+<abbr title="David Heinemeier Hansson">DHH</abbr> had also demoed pushing changes to the browser (vs. polling) by placing an
 Adobe Flash pixel as a listener on an open socket to your server. This allowed
 an interface to update as itself as other users made changes that affect it.
 
@@ -147,7 +147,3 @@ was able to meet a few Rails peeps, including some of the speakers.
    [5]: http://llor.nu
 
    [6]: http://planetargon.com/
-
-  *[luthiers]: makers of stringed instruments
-
-  *[DHH]: David Heinemeier Hansson
