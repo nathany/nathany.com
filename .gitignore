@@ -1,5 +1,3 @@
-_site/
 .DS_Store
-*.tmproj
-*.espressostorage
 *.sublime-workspace
+.sass-cache

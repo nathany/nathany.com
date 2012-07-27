@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
+    coderay (1.0.7)
     haml (3.1.6)
     nesta (0.9.13)
       RedCloth (~> 4.2)
@@ -15,6 +16,7 @@ GEM
     rack-protection (1.2.0)
       rack
     rdiscount (1.6.8)
+    redcarpet (2.1.1)
     sass (3.1.20)
     shotgun (0.9)
       rack (>= 1.0)
@@ -28,4 +30,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nesta (= 0.9.13)
+  coderay
+  nesta
+  redcarpet
