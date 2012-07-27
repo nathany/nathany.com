@@ -1,22 +1,15 @@
-Type: Blog Post (Markdown)
-Blog: nathany
-Link: http://nathany.com/developer/cf-object-relational-mapper/
-Post: 102
-Title: The joys and perils of writing an ORM (a postmortem)
-Slug: cf-object-relational-mapper
 Keywords: coldfusion
-Status: publish
 Date: 2006-10-24 18:00:00 -0600
-Pings: On
-Comments: On
-Category: developer
+Summary: Inspired by ActiveRecord (Rails), I attempted to build an ORM for ColdFusion 7, but ran into some limitations.
 
-For a good part of January to May I worked on an ORM for ColdFusion MX 7. I
+# The Joys and Perils of Writing an ORM (a postmortem)
+
+For a good part of January to May I worked on an <abbr title="object-relational mapper">ORM</abbr> for ColdFusion MX 7. I
 had gone through a the depot application in [Agile Web Development with
 Rails][1] at home and was quite impressed. At work I was developing an
 administrative site in CFML. Since I was focusing on new technology, it didn't
 take much convincing to begin developing a solution for all the repetitive
-CRUD.
+<abbr title="create, read, update, delete">CRUD</abbr>.
 
 ### Schemas and data
 
@@ -46,10 +39,10 @@ built on top of Java. What I added was key management and rotation.
 Taglibs make for a nice templating language of sorts - _jsp-style._ I found
 that CF7 can even do loops with tags, such as:
 
-  <pre lang="cfm">
-  <iterator:loop over="dataObject" as="row">...</iterator:loop>
-  </pre>
-  
+~~~coldfusion
+<iterator:loop over="dataObject" as="row">...</iterator:loop>
+~~~
+
 This made the templates a lot cleaner than it would've been with scripting.
 
 Using a layer to handle forms had many benefits. For example, checkboxes had a
@@ -61,7 +54,7 @@ Month-Day-Year type drop downs into a single time stamp.
 The date picker I developed took a mask similar to `DateFormat()`. This
 allowed a variety of options for the display of the date and time pickers.
 Just month and year? Long month or short? 12 hour or 24 hour time? It then
-utilized object-oriented javascript to limit the day-of-the-month to
+utilized object-oriented JavaScript to limit the day-of-the-month to
 reasonable days (Feb 28th, not 31st) and even have min/max date/times.
 
 Speaking of JavaScript, a module for helping with scripting had methods such
@@ -72,12 +65,12 @@ stream, while at the same time setting up JavaScript includes for future
 inclusion via `<CFHEAD>`.
 
 I used application.cfc to rig up a basic MVC arrangement, but my concentration
-was more on the ORM, so I never implemented routing or any of that fancy
+was more on the <abbr title="object-relational mapper">ORM</abbr>, so I never implemented routing or any of that fancy
 stuff.
 
 ### Oh. oh. performance
 
-When I threw a lot of rows of data at the ORM, it would choke. :-( Time to
+When I threw a lot of rows of data at the <abbr title="object-relational mapper">ORM</abbr>, it would choke. :-( Time to
 optimize? It came down to two things, creating objects and populating them
 with query data.
 
@@ -94,7 +87,7 @@ new methods. You can pass function pointers around, but I couldn't find a way
 to have each function pointer grab a different chunk of data, as dynamically
 determined based on the database schema.
 
-About half way through my project I discovered [Reactor for ColdFusion][2]. It
+About half way through my project I discovered Reactor for ColdFusion. It
 generates code, with get/set accessors (Bean-style) for every property. This
 gets around my issue, but my system was much cleaner, not having XML
 configuration or having to generate several code files.
@@ -115,7 +108,7 @@ In the process of reworking things, I revised my `select()` routine. Basically
 this routine would take a SQL conditions statement (WHERE clause) and use
 named attributes as parameters for the query. Not only did it substitute the
 parameters in, it looked back through the SQL to find the associated column
-name, and then referred to the schema information. It could then drop in
+name, and then referred to the schema information. Then it could drop in
 `<CFQUERYPARAM>` tags for each parameter with the appropriate type and length,
 all determined automatically from the database.
 
@@ -171,12 +164,12 @@ cool CF is. On the other hand, I was constantly running up against CF's
 inability to be as dynamic as I would have liked. I also found myself
 preferring to use the `<CFSCRIPT>` syntax but finding it restrictive.
 
-Both DHH (Rails) and Adrian Holovaty (Django) found PHP too restrictive to
+Both <abbr title="David Heinemeier Hansson">DHH</abbr> (Rails) and Adrian Holovaty (Django) found PHP too restrictive to
 write the frameworks they did - they couldn't do things _the way_ they wanted
 to without moving to another language. Both Ruby and Python are much more
 dynamic than PHP or ColdFusion.
 
-That said, if I were making a second attempt at a ColdFusion ORM, I would do
+That said, if I were making a second attempt at a ColdFusion <abbr title="object-relational mapper">ORM</abbr>, I would do
 things somewhat differently. Hopefully resulting in a simpler, smarter
 solution.
 
@@ -186,11 +179,11 @@ ColdFusion makes templates and programming easy for HTML coders. It was
 especially nice being able to `CFQUERY` without needing to escape things. But
 now there are all these new ways of doing things... is it losing ground?
 
-To be honest, your end users don't care if you are using an ORM or writing
+To be honest, your end users don't care if you are using an <abbr title="object-relational mapper">ORM</abbr> or writing
 queries by hand. While working with a limited knowledge of Django, I have
 found it to be a struggle because I have 7 years experience with SQL and know
-what queries to write, but I'm having to learn the nuances of their ORM
-implementation, and trust my database work to them. Still, I do see the
+what queries to write, but I'm having to learn the nuances of their <abbr title="object-relational mapper">ORM</abbr>
+implementation, and trust all my database work to it. Still, I do see the
 benefits of writing less code, simpler code that is also database agnostic and
 easier to maintain.
 
@@ -222,12 +215,4 @@ I'm not sure if these things will make it to the language level. Mind you,
 Perl and Ruby make regular expressions a language feature, whereas other
 languages still use libraries. So who's to say? I suppose only time will tell.
 
-   [1]: http://www.pragmaticprogrammer.com/titles/rails1/
-
-   [2]: http://www.doughughes.net/index.cfm?filter=category&categoryId=30
-
-  *[ORM]: object-relational mapper
-
-  *[CRUD]: create, read, update, delete
-
-  *[DHH]: David Heinemeier Hansson
+   [1]: http://pragprog.com/book/rails1/agile-web-development-with-rails

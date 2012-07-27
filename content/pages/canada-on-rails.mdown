@@ -1,4 +1,6 @@
 Date: 2006-04-14 18:00:00 -0600
+Summary: My first real-life experience with the Ruby/Rails community.
+Keywords: rails
 
 # Canada on Rails
 

@@ -1,19 +1,8 @@
----
-title: a year of rails magic
-category: developer
----
-
-Type: Blog Post (Markdown)
-Blog: nathany
-Link: http://nathany.com/developer/rails-magic/
-Post: 9
-Title: a year of rails magic
-Slug: rails-magic
-Keywords: rails
-Status: publish
 Date: 2008-02-14 20:07:35 -0600
-Pings: On
-Comments: On
+Summary: More a less a rant regarding Rails 1.x, after one year of use.
+Keywords: rails
+
+# A Year of Rails Magic
 
 Two years ago I came across a [certain][1] full-stack web development framework. I bought the books, took in the [propaganda][2] and ported my personal website. But it wasn’t until this past year that I worked with _Ruby on Rails_ professionally, on a day-to-day basis.
 
@@ -41,11 +30,11 @@ When Ruby on Rails hit the streets four years ago, it came touting **convention 
 
 There is something quite **magical** and lovely about defining a class and letting Rails map it to a database table, examining the schema and providing all sorts of useful methods.
 
-~~~~~~ {ruby}
+~~~ ruby
 class Person < ActiveRecord::Base
 
 end
-~~~~~~
+~~~
 
 The problem with conventions is that _you must know them_ before anything makes sense. By itself, it isn’t completely obvious what the above code does. With the built-in pluralization support, Rails creates an object-mapping to the `people` table in your database. Everyone using Ruby on Rails should be accustomed with pluralization, which is intended to make your code read how you normally say it. But what happens when pluralization goes wrong?
 
@@ -53,9 +42,9 @@ The problem with conventions is that _you must know them_ before anything makes 
 
 Rails routing will map browser URIs to a controller “resource” as follows:
 
-~~~~~~ {ruby}
+~~~ ruby
 map.resources :sleeves
-~~~~~~
+~~~
 
 Using pluralization, the `sleeves/` URI works with a collection of sleeves, whereas an individual sleeve with an identifier of 1 would be referenced as `sleeve/1` — or so you’d think. Unfortunately English is a complex language, Rails gets confused and looks for a _sleefe_. This is easy enough to resolve, just specify a `:singular` attribute or globally define a new inflector. The point is that Rails magic can go awry, leaving you temporarily stumped.
 
@@ -67,17 +56,17 @@ A month into my first Rails contract, I threw myself into a much larger Rails pr
 
 I was a bit mystified by calls to several exclamation-mark terminated methods that didn’t seem to be defined _anywhere._ The project was using the `acts_as_state_machine` plugin, in which the following code will introduce the `submit!` method:
 
-~~~~~~ {ruby}
+~~~ ruby
 event :submit do
 
   ...
 
 end
-~~~~~~
+~~~
 
 Now how does that work? Welcome to the _wonderful world of **metaprogramming**,_ where methods can come out of nowhere.
 
-Granted, using acts_as_state_machine may not be “best practice.” In his RailsConf’06 [World of Resources][17] presentation, DHH demonstrates using a separate model for the _progress_ of a _kase_.
+Granted, using `acts_as_state_machine` may not be “best practice.” In his RailsConf’06 [World of Resources][17] presentation, <abbr title="David Heinemeier Hansson">DHH</abbr> demonstrates using a separate model for the _progress_ of a _kase_.
 
 Take another example, a remote developer setup ActionMailer with a custom `Notifier` class. He wrote a method and named it `notification` and checked the code in. When I was hooking up the code, I tried calling the method directly but it didn’t work. After finally consulting the Rails documentation, I found that I needed to call `Notifier.deliver_notification`. Quite counter-intuitive. I added a quick comment to make up for the code not being self-documenting.
 
@@ -87,7 +76,7 @@ A little magic can make something complex appear simple on the surface. Yet, **a
 
 ### finding beautiful
 
-If you have heard DHH speak, you know he finds happiness in “beautiful code.” But beauty is subjective. Let’s say that **brevity is beautiful**, if so, the framework may magically handle a few things so you have less to write, see, and maintain.
+If you have heard <abbr title="David Heinemeier Hansson">DHH</abbr> speak, you know he finds happiness in “beautiful code.” But beauty is subjective. Let’s say that **brevity is beautiful**, if so, the framework may magically handle a few things so you have less to write, see, and maintain.
 
 The Python community might rebuttal that very explicit code is better able to stand on its’ own, providing **better readability** than terse code.
 
@@ -113,7 +102,7 @@ hackery][20] is necessary.
 
 Some have [contrasted Django’s modularity][21] with Ruby on Rails. Since I have done some work with **Django**, I will throw in my `0b10` bits. A Django project is made up of one or more apps, each residing in a subfolder.
 
-You may consider Django to be a little like the Hierarchical-Model-View-Controller[^1] pattern, where the directory structure provides a hierarchy, each folder containing an MVC triad represented by models, url routes + views, and templates. Django was designed for modularity from the start.
+You may consider Django to be a little like the Hierarchical-Model-View-Controller[^1](#1) pattern, where the directory structure provides a hierarchy, each folder containing an MVC triad represented by models, url routes + views, and templates. Django was designed for modularity from the start.
 
 > "with each project I complete, I build up more of a library of reusable, plug-and-play type of pieces" - _Jeff Croft [commenting][22] on his productivity with Django_
 
@@ -123,7 +112,7 @@ You certainly can build up reusable parts with Rails, it just isn’t designed f
 
 Any web application I wrote prior to 2006 incorporated many, many SQL statements. ColdFusion allowed SQL to be written inline, without all the escaping necessary in languages that just represent SQL with strings. Before ActiveRecord, I thought that was a big deal.
 
-ActiveRecord is the crown gem of Rails. Other than reporting, I rarely find it necessary to drop down to SQL, a strong indication of how competent it is at handling many situations. This has real tangible benefits, making your code database agnostic, but then any ORM does that. What makes ActiveRecord _rock_ is the simple, elegant syntax required to drive all its’ power.
+ActiveRecord is the crown gem of Rails. Other than reporting, I rarely find it necessary to drop down to SQL, a strong indication of how competent it is at handling many situations. This has real tangible benefits, making your code database agnostic, but then any <abbr title="object-relational mapper">ORM</abbr> does that. What makes ActiveRecord _rock_ is the simple, elegant syntax required to drive all its’ power.
 
 #### migrations gone south
 
@@ -135,7 +124,7 @@ If you want to rollback something from a few changes ago, but without rolling ev
 
 Eventually you end up with a pretty cluttered array of database migrations, pleading with your conscious to factor all the changes down to essentially one migration per model. Going back to modify migrations requires careful communication, and becomes risky once in production with real data.
 
-One other quibble, it would be nice to have your data definition in the model to remind yourself of the fields without switching to a related migration/schema. Django takes this approach. [DataMapper][23] and Nitro’s [Og][24] follow suit and are thread-safe to boot (ActiveRecord is not). Rather than having separate migrations, they generate the database from the model and don’t require database introspection. Django extends the concept by representing more field types than the database. (FileField, ImageField, etc.)
+One other quibble, it would be nice to have your data definition in the model to remind yourself of the fields without switching to a related migration/schema. Django takes this approach. [DataMapper][23] and Nitro’s Og follow suit and are thread-safe to boot (ActiveRecord is not). Rather than having separate migrations, they generate the database from the model and don’t require database introspection. Django extends the concept by representing more field types than the database. (FileField, ImageField, etc.)
 
 When it comes time to alter a table in production, Django leaves you stuck with the manual database updates of yore… at least until schema evolution is fully implemented. For all the problems with Rails migrations, having migrations today wins over a better solution that isn’t here yet.
 
@@ -187,7 +176,7 @@ Ruby on Rails has been a great framework to learn and work with. It isn’t the 
 
 ### addendum
 
-Shortly after publishing this article, I was hit by something in Code Complete[^2]. It was about *coding into* a language/environment as opposed to simply *coding in.*
+Shortly after publishing this article, I was hit by something in Code Complete[^2](#2). It was about *coding into* a language/environment as opposed to simply *coding in.*
 
 Ruby on Rails ships with the mindset of putting your development on tracks,  giving helpful guidance to your web application development. Strict adherence to this mindset is very much *coding in*, where you work within the constraints of what is provided, and end up frustrated.
 
@@ -195,7 +184,7 @@ My complaints are less Earth-shattering when I decide to *code into* the environ
 
 ### a year later
 
-This article was written more than a year ago, and quite a lot has changed or is changing in Rails. For learning, the documentation fund has produced several free [Rails Guides][railsguides]. For modularity, much of Rails Engines is incorporated into 2.3, and there is even talk of mountable Rails apps in the future. Time-stamped migrations came out in 2.1 to help resolve conflicts between multiple developers. And in David Heinemeier Hansson's  [RailsConf'09 keynote][rails3dhh], he discussed unobtrusive JavaScript in the forthcoming Rails 3.0, including the ability to use different JavaScript libraries. Yehuda Katz has shared how loose coupling will allow validations to be reused outside ActiveRecord, and the ability to use different ORMs and non-relational databases. 
+This article was written more than a year ago, and quite a lot has changed or is changing in Rails. For learning, the documentation fund has produced several free [Rails Guides][railsguides]. For modularity, much of Rails Engines is incorporated into 2.3, and there is even talk of mountable Rails apps in the future. Time-stamped migrations came out in 2.1 to help resolve conflicts between multiple developers. And in David Heinemeier Hansson's  [RailsConf'09 keynote][rails3dhh], he discussed unobtrusive JavaScript in the forthcoming Rails 3.0, including the ability to use different JavaScript libraries. Yehuda Katz has shared how loose coupling will allow validations to be reused outside ActiveRecord, and the ability to use different <abbr title="object-relational mapper">ORMs</abbr> and non-relational databases.
 
 So it looks like by the time Rails 3 hits, the concerns I voiced will be addressed for the most part. There is also quite a bit of refactoring going on, which will hopefully make it easier to understand what goes on beneath the [abstractions][]. It's certainly worth keeping tabs on.
 
@@ -214,7 +203,7 @@ So it looks like by the time Rails 3 hits, the concerns I voiced will be address
 
    [2]: canada-on-rails
 
-   [3]: http://ctrl-shift-b.blogspot.com/2007/08/interactive-application-architecture.html
+   [3]: http://aspiringcraftsman.com/2007/08/25/interactive-application-architecture/
 
    [4]: http://blog.bwtaylor.com/2007/09/23/ruby_meet_erlang
 
@@ -256,19 +245,12 @@ So it looks like by the time Rails 3 hits, the concerns I voiced will be address
 
    [23]: http://datamapper.org
 
-   [24]: http://oxyliquit.de/tutorial/1
-
-   [25]: http://dev.rubyonrails.org/ticket/6000
+   [25]: http://www.ruby-forum.com/topic/144396
 
    [26]: http://lua-users.org/lists/lua-l/2007-12/msg00470.html
 
    [dj1]: http://code.djangoproject.com/wiki/VersionOneRoadmap
 
-  *[ORM]: object-relational mapper
+  <a name="1">^1</a> For more on model-view-controller and related patterns, see [Interactive Application Architecture Patterns][3].
 
-  *[DHH]: David Heinemeier Hansson
-
-
-  [^1]: For more on model-view-controller and related patterns, see [Interactive Application Architecture Patterns][3].
-  
-  [^2]: Code Complete 2 by Steve McConnell, section 4.3 (pg 66-69).
+  <a name="2">^2</a> Code Complete 2 by Steve McConnell, section 4.3 (pg 66-69).

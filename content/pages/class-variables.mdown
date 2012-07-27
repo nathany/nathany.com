@@ -1,12 +1,13 @@
 Date: 2010 July 13
+Summary: In Ruby, `@@class` variables are not really class variables. This articles takes a look at Java and Python to see how the semantics differ.
 
-# Language semantics: class variables
+# Language Semantics: Class Variables
 
-It wasn't until I was reading David Black's "[The Well Grounded Rubyist][black]" that I learned how Ruby @@class variables are not really class variables at all. Apparently they are global to the class hierarchy. Changing a value in the subclass impacts the base classes. Generally speaking, globals and global-like things are bad.
+It wasn't until I was reading David Black's "[The Well Grounded Rubyist][black]" that I learned how Ruby `@@class` variables are not really class variables at all. Apparently they are global to the class hierarchy. Changing a value in the subclass impacts the base classes. Generally speaking, globals and global-like things are bad.
 
 On the other hand, @instance variables, when defined outside of a method body, are considered "class instance variables" because *classes are objects* in Ruby and (implicit) self is pointing at the class at that time. Unfortunately these class instance variables can only be accessed from class methods.
 
-While looking through the code for DHH's abandoned `ssl_requirement` plugin, I discovered `read_inheritable_attribute` and [related methods][inherit] in Rails core. I can't say I really understood it myself, but it is described in [Class and Instance Variables In Ruby][nunemaker] by John Nunemaker.
+While looking through the code for DHH's abandoned `ssl_requirement` plugin, I discovered `read_inheritable_attribute` and related methods in Rails core. I can't say I really understood it myself, but it is described in [Class and Instance Variables In Ruby][nunemaker] by John Nunemaker.
 
 All of this seemed quite bizarre. It didn't seem like any other language I had experience with. I sought out some reasoning behind this language design in "[The Ruby Programming Language][matz]", co-authored by "Yukihiro \`Matz\` Matsumoto" himself, but all I found was:
 
@@ -134,16 +135,15 @@ So Python behaves a little differently than Java due to being a dynamic language
 
 ## End thoughts
 
-I can't say I really understand the ~230 lines of [inheritable_attributes.rb][inherit], but based on the description, it seems to implement the kind of shadowing that Python comes with out-of-the-box.
+I can't say I really understand the ~230 lines of `inheritable_attributes.rb`, but based on the description, it seems to implement the kind of shadowing that Python comes with out-of-the-box.
 
 So it seems, **Ruby is weirdly designed, but flexible enough that we can patch it ourselves.**
 
-While doing a language comparison last year, I found that Python strings can be treated as a collection of characters. This is not the case in Ruby, but when asked to improve upon my script, @wycats simply tweaked String for the purposes of [the script][gist].
+While doing a language comparison last year, I found that Python strings can be treated as a collection of characters. This is not the case in Ruby, but when asked to improve upon my script, [@wycats](https://twitter.com/wycats) simply tweaked String for the purposes of [the script][gist].
 
 Hm. Seeing a trend?
 
 [nunemaker]: http://railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/
-[inherit]: http://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/class/inheritable_attributes.rb
 [gist]: http://gist.github.com/313605#file_gistfile4.rb
 [black]: http://www.manning.com/black2/
 [matz]: http://oreilly.com/catalog/9780596516178
