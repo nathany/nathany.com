@@ -1,15 +1,6 @@
-Type: Blog Post (Markdown)
-Blog: nathany
-Link: http://nathany.com/developer/canada-on-rails/
-Post: 98
-Title: Canada on Rails
-Slug: canada-on-rails
-Keywords: rails
-Status: publish
 Date: 2006-04-14 18:00:00 -0600
-Pings: On
-Comments: On
-Category: developer
+
+# Canada on Rails
 
 The past two days I attended Canada on Rails, a web development-oriented
 conference in downtown Vancouver. The brilliant minds involved with Ruby on

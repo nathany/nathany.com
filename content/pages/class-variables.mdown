@@ -1,9 +1,6 @@
----
-layout: default
-title: "Language semantics: class variables"
----
+Date: 2010 July 13
 
-# {{ page.title }}
+# Language semantics: class variables
 
 It wasn't until I was reading David Black's "[The Well Grounded Rubyist][black]" that I learned how Ruby @@class variables are not really class variables at all. Apparently they are global to the class hierarchy. Changing a value in the subclass impacts the base classes. Generally speaking, globals and global-like things are bad.
 
@@ -23,43 +20,43 @@ To confirm my suspicion that these oddities were specific to Ruby and not just s
 
 Java class variables are defined with the `static` keyword:
 
-  {% highlight java %}
-  class Polygon {
-    static int sides = 8;
-  }
+~~~java
+class Polygon {
+  static int sides = 8;
+}
 
-  Polygon p1 = new Polygon();
-  {% endhighlight %}
-    
-In Java, accessing the (static) class variable through the object is equivalent to accessing it through the class. You can't have an instance variable and class variable with the same name. 
+Polygon p1 = new Polygon();
+~~~
 
-  {% highlight java %}
-  // in Java these are equivalent:
-  Polygon.sides = 4;
-  p1.sides = 4;
-  {% endhighlight %}
+In Java, accessing the (static) class variable through the object is equivalent to accessing it through the class. You can't have an instance variable and class variable with the same name.
+
+~~~java
+// in Java these are equivalent:
+Polygon.sides = 4;
+p1.sides = 4;
+~~~
 
 If a static class variable exists on a subclass, it is a separate value that *shadows* the base class.
 
-  {% highlight java %}
-  class Triangle extends Polygon {
-    static int sides = 3;
-  }
-  
-  System.out.println(Triangle.sides);   // 3
-  Triangle t1 = new Triangle();
-  {% endhighlight %}
-  
+~~~java
+class Triangle extends Polygon {
+  static int sides = 3;
+}
+
+System.out.println(Triangle.sides);   // 3
+Triangle t1 = new Triangle();
+~~~
+
 Much different from Ruby @@class variables, where one value is shared between Polygon, Triangle, and all their instances.
 
 If a Java subclass doesn't define the static instance variable, we will instead access the value defined in the base class.
 
-  {% highlight java %}
-  class Octogon extends Polygon {
-  }
-  
-  System.out.println(Octogon.sides);   // same as Polygon.sides
-  {% endhighlight %}
+~~~java
+class Octogon extends Polygon {
+}
+
+System.out.println(Octogon.sides);   // same as Polygon.sides
+~~~
 
 Java seems fairly straight-forward, but it is a static language where variables must be declared upfront. To level the playing field, I experimented with Python, a sibling dynamic language.
 
@@ -67,72 +64,72 @@ Java seems fairly straight-forward, but it is a static language where variables 
 
 In Python you define a class variable by not prepending it with `self`:
 
-  {% highlight python %}
-  class Polygon(object):
-    sides = 8
-  {% endhighlight %}
+~~~python
+class Polygon(object):
+  sides = 8
+~~~
 
 Access the class variable using the class name:
 
-  {% highlight python %}
-  print(Polygon.sides) # 8
-  {% endhighlight %}
+~~~python
+print(Polygon.sides) # 8
+~~~
 
 If you create an instance, the class variable is visible from it as well:
 
-  {% highlight python %}
-  p1 = Polygon()
-  print(p1.sides)   # 8
-  {% endhighlight %}
+~~~python
+p1 = Polygon()
+print(p1.sides)   # 8
+~~~
 
 Changes to the class variable are visible from the instance, but changing the instance variable will create a new variable that shadows the class variable.
 
-  {% highlight python %}
-  Polygon.sides = 4
-  print(p1.sides)  # 4
+~~~python
+Polygon.sides = 4
+print(p1.sides)  # 4
 
-  p1.sides = 5
-  print(p1.sides) # 5
+p1.sides = 5
+print(p1.sides) # 5
 
-  Polygon.sides = 8
-  print(Polygon.sides) # 8
-  print(p1.sides) # 5
-  {% endhighlight %}
+Polygon.sides = 8
+print(Polygon.sides) # 8
+print(p1.sides) # 5
+~~~
 
 Similarly, defining a subclass that redefines the class variable will shadow the base class.
 
-  {% highlight python %}
-  class Triangle(Polygon):
-    sides = 3;
+~~~python
+class Triangle(Polygon):
+  sides = 3;
 
-  print(Triangle.sides) # 3
-  Polygon.sides = 5
-  print(Triangle.sides) # 3
+print(Triangle.sides) # 3
+Polygon.sides = 5
+print(Triangle.sides) # 3
 
-  t1 = Triangle()
-  print(t1.sides) # 3
-  {% endhighlight %}
+t1 = Triangle()
+print(t1.sides) # 3
+~~~
 
 On the other hand, if the the class variable isn't set, it looks further up the hierarchy.
 
-  {% highlight python %}
-  class Octogon(Polygon):
-    pass
+~~~python
+class Octogon(Polygon):
+  pass
 
-  print(Octogon.sides)  # 5 = Polygon.sides at present
+print(Octogon.sides)  # 5 = Polygon.sides at present
 
-  Polygon.sides = 6
-  print(Octogon.sides)  # 6
-  {% endhighlight %}
+Polygon.sides = 6
+print(Octogon.sides)  # 6
+~~~
 
 Until, as you might expect, you set a class variable for the subclass.
 
-  {% highlight python %}
-  Octogon.sides = 8
-  Polygon.sides = 7
-  print(Octogon.sides)  # 8
-  {% endhighlight %}
-  
+~~~python
+Octogon.sides = 8
+Polygon.sides = 7
+print(Octogon.sides)  # 8
+~~~
+
 So Python behaves a little differently than Java due to being a dynamic language where you can create variables on the fly. Instance variables shadow class variables of the same name, so it's best to always refer to class variables as `ClassName.variable`. Makes good sense.
 
 ## End thoughts
