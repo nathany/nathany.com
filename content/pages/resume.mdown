@@ -1,4 +1,7 @@
-# Nathan Youngman 
+Keywords: resume, cv, curriculum vitae, web development, ruby on rails
+Description: Nathan Youngman's Resume
+
+# Resumé
 
 My career in **web development** began **fifteen years ago**, back when dinosaurs still roamed the Internet.
 
