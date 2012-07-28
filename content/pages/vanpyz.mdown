@@ -57,7 +57,7 @@ There is some new MetaClass stuff, but I really didn't follow.
 
 ### true closures
 
-Having learned Lua last year, I wasn't among the "huhs?" when the closures came up. In fact, I recently had to do a little hack to get closures working in Python 2.5:
+Having learned [Lua](http://luanova.org/a-computer-scientist-a-mathematician-and-an-engineer/) last year, I wasn't among the "huhs?" when the closures came up. In fact, I recently had to do a little hack to get closures working in Python 2.5:
 
 ~~~python
 def parse_footnotes(text):
