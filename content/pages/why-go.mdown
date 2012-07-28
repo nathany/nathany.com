@@ -1,0 +1,49 @@
+Date: 2012-05-07 15:17
+Keywords: golang
+Summary: Go is the new programming language on the block. What makes it interesting?
+
+# Why Go?
+
+## The Best of Both Worlds
+
+Google announced a new systems programming language to the world on November 10th, 2009. During the Go [tech talk](http://www.youtube.com/watch?v=rKnDgT73v8s), Rob Pike demonstrated a clean build of the standard library taking a few seconds.
+
+**Super fast builds** are one way that Go bridges the gap between statically compiled (C, C++, Java) and dynamic languages (Python, Ruby). Like Objective-C, Go has a runtime that enables **dynamic dispatch**, and the empty `interface{}` brings to mind the `id` type.
+
+Alongside the arrays, slices and maps of very high level languages, Go has structs and pointers (the good parts) commonly associated with C. **Duck typing**, commonly associated with dynamic languages, is central to Go's unique object model.
+
+If Go were merely an interesting breed of static and dynamic programming languages, it would certainly be interesting for systems programming. As Mark Summerfield declares in his recently published book, "Go is closer in spirit to C than to any other language," - [Programming in Go](http://www.informit.com/store/product.aspx?isbn=0321774639).
+
+But as a Rubyist or Pythonista, what would warrant a step down the _high level language ladder?_ Performance is an obvious reason, never needing to use the FFI to C for performance alone is certainly a win. Perhaps less obvious, but just is valuable, is simplicity.
+
+## Reboot
+
+Over time programming languages gather some amount of cruft. With [few exceptions](http://www.lua.org/), it becomes very [difficult to change](http://wiki.python.org/moin/Python2orPython3), as so much code relies on the existing syntax and semantics. A new language is a fresh start, with no need to carry over [mistakes of the past](http://nathany.github.com/class-variables/), and the opportunity to take new approaches.
+
+Here are some ways that Go rethinks the norm of object oriented programming:
+
+* Go does away with inheritance and polymorphism, instead utilizing a form of duck typing based on interfaces. Unlike Java `implements`, Go interface are implicit, profoundly affecting how code can interoperate.
+
+* Goroutines (coroutines multiplexed on system threads like Erlang) and channels (for passing data and synchronization) are independent concepts, providing greater flexibility than the Actor model.
+
+* Go use defer in place of "final", so we can keep code for opening and closing a resource together.
+
+* Exceptions are reserved for the truly exceptional (panic and recover), instead relying on multiple return values to pass error codes up the call stack.
+
+Right up to the [Go 1.0 release](http://blog.golang.org/2012/03/go-version-1-is-released.html) on March 28, 2012, anything could have changed. This was important in enabling the core team to tweak the language and rearrange the standard library into what we have now.
+
+## Go Web Development
+
+While Go was intended for writing the likes of web servers, it can certainly be employed for web applications.
+
+There isn't and may never be a "full stack web application framework" like Go on Rails, but at the same time there is a shift going on to "phat clients" with servers acting as an API. Combined with all the excitement around NoSQL, your application may not need an ORM like ActiveRecord or SQLAlchemy.
+
+Certainly the Go ecosystem will continue to grow, but depending on the project, it is quite serviceable now.
+
+## Get Going
+
+Some people wonder whether they should learn Go if they aren't seeing a number of employment opportunities. Firstly, it's always good to learn and stretch your mind. Secondly, I learned Ruby on Rails in 2006, before I could find any jobs using it, but now I've been using it full-time for several years.
+
+If you're starting out, I'd recommend thinking up a simple project that takes a few days, maybe a week. Over the 2011 Christmas break, I read through the roughcut of [Go Programming Language Phrasebook](http://www.informit.com/store/product.aspx?isbn=013291901X) and wrote a web scraper. While thinking about pointers was a _blast from the past_, I found that I really liked the language. The best way to know if you'll like Go is to dive in and get some first-hand experience.
+
+
