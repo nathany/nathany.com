@@ -8,17 +8,17 @@ Summary: Go is the new programming language on the block. What makes it interest
 
 Google announced a new systems programming language to the world on November 10th, 2009. During the Go [tech talk](http://www.youtube.com/watch?v=rKnDgT73v8s), Rob Pike demonstrated a clean build of the standard library taking a few seconds.
 
-**Super fast builds** are one way that Go bridges the gap between statically compiled (C, C++, Java) and dynamic languages (Python, Ruby). Like Objective-C, Go has a runtime that enables **dynamic dispatch**, and the empty `interface{}` brings to mind the `id` type.
+**Lightning fast builds** are one way that Go bridges the gap between statically compiled (C, C++, Java) and dynamic languages (Python, Ruby). Like Objective-C, Go has a runtime that enables **dynamic dispatch**, and the empty `interface{}` brings to mind the `id` type.
 
-Alongside the arrays, slices and maps of very high level languages, Go has structs and pointers (the good parts) commonly associated with C. **Duck typing**, commonly associated with dynamic languages, is central to Go's unique object model.
+Alongside slices and maps of _very_ high level languages, Go has structs and pointers (the good parts) commonly associated with C. **Duck typing** is central to Go's unique object model, unlike any compiled language I am aware of.
 
-If Go were merely an interesting breed of static and dynamic programming languages, it would certainly be interesting for systems programming. As Mark Summerfield declares in his recently published book, "Go is closer in spirit to C than to any other language," - [Programming in Go](http://www.informit.com/store/product.aspx?isbn=0321774639).
+Go is an interesting breed of static and dynamic programming languages, designed for systems programming. As Mark Summerfield declares in his recently published book, "Go is closer in spirit to C than to any other language," - [Programming in Go](http://www.informit.com/store/product.aspx?isbn=0321774639).
 
-But as a Rubyist or Pythonista, what would warrant a step down the _high level language ladder?_ Performance is an obvious reason, never needing to use the FFI to C for performance alone is certainly a win. Perhaps less obvious, but just is valuable, is simplicity.
+As a Rubyist or Pythonista, what would warrant a step down the _high level language ladder?_ Performance is an obvious reason, never needing to use an FFI to C for performance alone is certainly a win. Perhaps less obvious, but just is valuable, is simplicity.
 
 ## Reboot
 
-Over time programming languages gather some amount of cruft. With [few exceptions](http://www.lua.org/), it becomes very [difficult to change](http://wiki.python.org/moin/Python2orPython3), as so much code relies on the existing syntax and semantics. A new language is a fresh start, with no need to carry over [mistakes of the past](http://nathany.github.com/class-variables/), and the opportunity to take new approaches.
+Over time programming languages gather some amount of cruft. With [few exceptions](http://www.lua.org/), it becomes very [difficult to change](http://wiki.python.org/moin/Python2orPython3), as so much code relies on the existing syntax and semantics. A new language is a fresh start, with no need to carry over [mistakes of the past](class-variables), and the opportunity to take new approaches.
 
 Here are some ways that Go rethinks the norm of object oriented programming:
 
@@ -26,17 +26,17 @@ Here are some ways that Go rethinks the norm of object oriented programming:
 
 * Goroutines (coroutines multiplexed on system threads like Erlang) and channels (for passing data and synchronization) are independent concepts, providing greater flexibility than the Actor model.
 
-* Go use defer in place of "final", so we can keep code for opening and closing a resource together.
+* Go use defer in place of `final`, so we can keep code for opening and closing a resource together.
 
-* Exceptions are reserved for the truly exceptional (panic and recover), instead relying on multiple return values to pass error codes up the call stack.
+* Exceptions are reserved for the truly exceptional (panic and recover), instead we rely on multiple return values to pass error codes up the call stack.
 
-Right up to the [Go 1.0 release](http://blog.golang.org/2012/03/go-version-1-is-released.html) on March 28, 2012, anything could have changed. This was important in enabling the core team to tweak the language and rearrange the standard library into what we have now.
+Right up to the [Go 1.0 release](http://blog.golang.org/2012/03/go-version-1-is-released.html) on March 28, 2012, anything could have changed. This was important in enabling the core team to tweak the language and rearrange the standard library into what we have now. While breaking changes may have been annoying at the time, I'm glad they took this approach.
 
 ## Go Web Development
 
 While Go was intended for writing the likes of web servers, it can certainly be employed for web applications.
 
-There isn't and may never be a "full stack web application framework" like Go on Rails, but at the same time there is a shift going on to "phat clients" with servers acting as an API. Combined with all the excitement around NoSQL, your application may not need an ORM like ActiveRecord or SQLAlchemy.
+There isn't and may never be a "full stack web application framework" like Go on Rails, but at the same time there is a shift going on to "fat clients" and APIs. With all the excitement around [NoSQL](http://labix.org/mgo), your application may not need an ORM like ActiveRecord or SQLAlchemy.
 
 Certainly the Go ecosystem will continue to grow, but depending on the project, it is quite serviceable now.
 
