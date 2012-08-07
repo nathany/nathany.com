@@ -48,7 +48,7 @@ While looking for work, I attained [certification in PHP 5](http://yng.mn/zendce
 
 Tools:
 
-* Ruby on Rails 1.0, MySQL (2 months)
+* Ruby on Rails 1.2, MySQL (2 months)
 
 ### Wycliffe Bible Translators (September - November 2006; Calgary, AB) 
 
