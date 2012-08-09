@@ -1,5 +1,18 @@
 %footer.branding
-  %p
-    Powered by Nesta, a
-    = succeed "." do
-      %a(href="http://nestacms.com") Ruby CMS
+  #container
+    #social
+      %img{src:"custom/social.png", usemap:"#m_social", width:"980", height:"120", border:"0"}
+
+    %map{name:"m_social", id:"m_social"}
+      %area{shape:"rect", coords:"858,2,973,118", href:"http://www.linkedin.com/in/nathany", title:"LinkedIn", alt:"LinkedIn"}
+      %area{shape:"rect", coords:"715,2,830,118", href:"http://www.workingwithrails.com/person/7946-nathan-youngman", title:"Working With Rails", alt:"Working With Rails"}
+      %area{shape:"rect", coords:"574,2,689,118", href:"https://github.com/nathany", title:"GitHub", alt:"GitHub"}
+      %area{shape:"rect", coords:"432,2,547,118", href:"https://twitter.com/nathany", title:"Twitter", alt:"Twitter"}
+      %area{shape:"rect", coords:"289,2,404,118", href:"http://www.flickr.com/photos/nyoungman", title:"Flikr", alt:"Flikr"}
+      %area{shape:"rect", coords:"5,2,120,118", href:"http://delicious.com/nyoungman", title:"Delicious", alt:"Delicious"}
+      %area{shape:"rect", coords:"148,2,263,118", href:"http://www.facebook.com/nathany", title:"Facebook", alt:"Facebook"}
+
+    %p
+      Powered by Nesta, a
+      = succeed "." do
+        %a(href="http://nestacms.com") Ruby CMS

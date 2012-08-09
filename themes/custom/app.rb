@@ -6,9 +6,9 @@ module Nesta
     # Uncomment the Rack::Static line below if your theme has assets
     # (i.e images or JavaScript).
     #
-    # Put your assets in themes/default/public/default.
+    # Put your assets in themes/custom/public/default.
     #
-    # use Rack::Static, :urls => ["/default"], :root => "themes/default/public"
+    use Rack::Static, :urls => ["/custom"], :root => "themes/custom/public"
 
     helpers do
       # Add new helpers here.

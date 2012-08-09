@@ -1,5 +1,6 @@
 @import "mixins.sass"
 @import "colors.sass"
+@import "coderay.scss"
 
 // Variables
 
@@ -87,7 +88,7 @@ article, aside, footer, header, nav, section
   display: block
 
 div#container
-  width: 54em
+  width: 980px
   margin: 0 auto
   padding: 1em 1em 0 1em
 
@@ -102,10 +103,17 @@ div#container
     margin-left: 40em
     padding: 0 1em
 
-  footer.branding
-    clear: both
+footer.branding
+  clear: both
+  background-color: black
+  @include adjust-font-size($base-scale)
+  border-top: 3px solid #666
+  padding: 1em 0
+  margin: 0
+  #container
+    margin: 0 auto
+    width: 980px
     color: $meta-color
-    @include adjust-font-size($base-scale)
     p
       width: $content-width
       margin: 0
@@ -244,5 +252,3 @@ nav.categories
 
 div.feed
   margin: $base-vertical-margin 0
-
-@import 'coderay'
