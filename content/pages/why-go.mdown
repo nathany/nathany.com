@@ -14,29 +14,29 @@ Alongside slices and maps of _very_ high level languages, Go has structs and poi
 
 Go is an interesting breed of static and dynamic programming languages, designed for systems programming. As Mark Summerfield declares in his recently published book, "Go is closer in spirit to C than to any other language," - [Programming in Go](http://www.informit.com/store/product.aspx?isbn=0321774639).
 
-As a Rubyist or Pythonista, what would warrant a step down the _high level language ladder?_ Performance is an obvious reason, never needing to use an FFI to C for performance alone is certainly a win. Perhaps less obvious, but just is valuable, is simplicity.
+As a Rubyist or Pythonista, what would warrant a step down the _high level language ladder?_ Performance is an obvious reason, never needing to use an FFI to C for performance alone is certainly a win. Perhaps less obvious, but just as valuable, is simplicity.
 
 ## Reboot
 
-Over time programming languages gather some amount of cruft. With [few exceptions](http://www.lua.org/), it becomes very [difficult to change](http://wiki.python.org/moin/Python2orPython3), as so much code relies on the existing syntax and semantics. A new language is a fresh start, with no need to carry over [mistakes of the past](class-variables), and the opportunity to take new approaches.
+Over time programming languages gather some amount of cruft. With [few exceptions](http://www.lua.org/), it becomes very [difficult to change](http://wiki.python.org/moin/Python2orPython3), as so much code relies on the existing syntax and semantics. A new language is a fresh start, with no need to carry over [mistakes of the past](class-variables). An opportunity to take new approaches.
 
 Here are some ways that Go rethinks the norm of object oriented programming:
 
-* Go does away with inheritance and polymorphism, instead utilizing a form of duck typing based on interfaces. Unlike Java `implements`, Go interface are implicit, profoundly affecting how code can interoperate.
+* Go does away with inheritance and polymorphism, instead utilizing a form of duck typing based on interfaces. Unlike Java, Go interfaces are implicit (there is no `implements`), profoundly affecting how code can interoperate.
 
 * Goroutines (coroutines multiplexed on system threads like Erlang) and channels (for passing data and synchronization) are independent concepts, providing greater flexibility than the Actor model.
 
-* Go use defer in place of `final`, so we can keep code for opening and closing a resource together.
+* Go uses defer in place of `final`, so we can keep code for opening and closing a resource together.
 
 * Exceptions are reserved for the truly exceptional (panic and recover), instead we rely on multiple return values to pass error codes up the call stack.
 
-Right up to the [Go 1.0 release](http://blog.golang.org/2012/03/go-version-1-is-released.html) on March 28, 2012, anything could have changed. This was important in enabling the core team to tweak the language and rearrange the standard library into what we have now. While breaking changes may have been annoying at the time, I'm glad they took this approach.
+Go 1.0 was [released](http://blog.golang.org/2012/03/go-version-1-is-released.html) on March 28, 2012. This was important milestone, and enabled the core team to tweak the language and rearrange the standard library into what we have now. While breaking changes may have been annoying at the time, I'm glad they took this approach.
 
 ## Go Web Development
 
-While Go was intended for writing the likes of web servers, it can certainly be employed for web applications.
+While Go was created for writing web servers and such, it can certainly be employed for web applications.
 
-There isn't and may never be a "full stack web application framework" like Go on Rails, but at the same time there is a shift going on to "fat clients" and APIs. With all the excitement around [NoSQL](http://labix.org/mgo), your application may not need an ORM like ActiveRecord or SQLAlchemy.
+There isn't, and may never be, a "full stack web application framework" like Go on Rails. At the same time we are seeing a shift to "fat clients" and APIs. And with all the [NoSQL](http://labix.org/mgo) options, your application may not need an ORM like ActiveRecord or SQLAlchemy.
 
 Certainly the Go ecosystem will continue to grow, but depending on the project, it is quite serviceable now.
 
@@ -44,6 +44,6 @@ Certainly the Go ecosystem will continue to grow, but depending on the project, 
 
 Some people wonder whether they should learn Go if they aren't seeing a number of employment opportunities. Firstly, it's always good to learn and stretch your mind. Secondly, I learned Ruby on Rails in 2006, before I could find any jobs using it, but now I've been using it full-time for several years.
 
-If you're starting out, I'd recommend thinking up a simple project that takes a few days, maybe a week. Over the 2011 Christmas break, I read through the roughcut of [Go Programming Language Phrasebook](http://www.informit.com/store/product.aspx?isbn=013291901X) and wrote a web scraper. While thinking about pointers was a _blast from the past_, I found that I really liked the language. The best way to know if you'll like Go is to dive in and get some first-hand experience.
+If you're starting out, I'd recommend thinking up a simple project that you can accomplish in a few days. Over the 2011 Christmas break, I read through the roughcut of [Go Programming Language Phrasebook](http://www.informit.com/store/product.aspx?isbn=013291901X) and wrote a web scraper. While thinking about pointers was a _blast from the past_, I found that I really liked the language. The best way to know if you'll like Go is to dive in and get some first-hand experience.
 
 
