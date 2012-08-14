@@ -233,7 +233,7 @@ So it looks like by the time Rails 3 hits, the concerns I voiced will be address
 
    [17]: http://media.rubyonrails.org/presentations/worldofresources.pdf
 
-   [18]: http://rentzsch.com/notes/programmersDontLikeToCode
+   [18]: https://twitter.com/rentzsch
 
    [19]: http://www.rails-engines.org/
 
