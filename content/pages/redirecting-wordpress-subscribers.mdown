@@ -1,0 +1,48 @@
+Date: 2008-09-09 12:44:14 -0600
+Summary: How to control where WordPress users land when they login.
+Keywords: filters, login, PHP, redirect_to, WordPress
+
+# Redirecting WordPress Subscribers
+
+### the problem
+
+When subscribers log into WordPress, they are sent to the Dashboard where they can modify their profile. Chances are, this isn't exactly what you had in mind.
+
+To have subscribers sent to the home page, you might tack a query string onto your login links:
+
+    ?redirect_to=http://mysite.com
+
+Problem is, you won't catch them all. What if they register and then login, or click the login button on the registration page? Those are part of wp-admin in the core of WordPress.
+
+That led me to changing the default `redirect_to` in wp-login.php. It works, it's in one place, but changing core code makes upgrading a hassle.
+
+### the solution
+
+This morning I was pleased to find that a `login_redirect` filter was [added][trac] in the just released [WordPress 2.6.2][wp262], providing a much cleaner solution.
+
+Here is the code to add to your themes' `functions.php`:
+
+~~~php
+// redirect subscribers to the home page (WP 2.6.2)
+function change_login_redirect($redirect_to, $request_redirect_to, $user) {
+  if (is_a($user, 'WP_User') && $user->has_cap('edit_posts') === false) {
+    return get_bloginfo('siteurl');
+  }
+  return $redirect_to;
+}
+
+// add filter with default priority (10), filter takes (3) parameters
+add_filter('login_redirect','change_login_redirect', 10, 3);
+~~~
+
+We check the capabilities for `edit_posts`, if not present, we force the redirect to the home page. The other approach would be to look into the `$user->roles` array for 'subscriber', but capabilities are more exact, say, if you add another subscriber-like role using [Role Manager][roleman].
+
+Sometimes `$user` will be a `WP_Error` object, so the code handles that case by ensuring it actually is a `WP_User`.
+
+And that's all it takes. Happy WordPressing.
+
+
+[wp262]: http://wordpress.org/development/2008/09/wordpress-262/
+[trac]: http://trac.wordpress.org/ticket/7002
+[addfilter]: http://codex.wordpress.org/Function_Reference/add_filter
+[roleman]: http://www.im-web-gefunden.de/wordpress-plugins/role-manager/
