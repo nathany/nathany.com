@@ -44,7 +44,7 @@ Tools:
 
 ### Freelancing (February - March 2007; Edmonton, AB)
 
-While looking for work, I attained [certification in PHP 5](http://yng.mn/zendcert). Much to my delight, I landed my first two contracts with Ruby on Rails in 2007: a new [app for Royer Homes](https://github.com/nathany/royerhomes) and fixing up Econolution.
+While looking for work, I attained [certification in PHP 5](http://yng.mn/zendcert5). Much to my delight, I landed my first two contracts with Ruby on Rails in 2007: a new [app for Royer Homes](https://github.com/nathany/royerhomes) and fixing up Econolution.
 
 Tools:
 
