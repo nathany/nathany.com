@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
-ruby "1.9.3"
+ruby '1.9.3'
 
 gem 'nesta'
 gem 'redcarpet'
-gem 'coderay'
+gem 'pygments.rb', github: 'tmm1/pygments.rb'
 gem 'thin'
 gem 'rack-rewrite'
 
