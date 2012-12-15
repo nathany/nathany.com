@@ -32,7 +32,7 @@ Tools:
 
 In April 2007, I was able to _raise funds_ for a summer internship that piqued my interest. The [project](https://github.com/nathany/boat) enabled **human resources** to create forms that applicants could complete online. What became a ten month project was primarily a solo-developer effort, with some assistance from Campus Crusade for Christ U.S.
 
-Gloabl Aid Network (GAiN) is the humanitarian arm of Power to Change. For a start, we launched a [new web site](http://globalaid.net/), with the help of a graphics designer from the marketing team.
+Global Aid Network (GAiN) is the humanitarian arm of Power to Change. For a start, we launched a [new web site](http://globalaid.net/), with the help of a graphics designer from the marketing team.
 
 At GAiN, my primary task was to provide a tool to better manage **water well sponsorship** data, which at the time was kept in _one giant Excel file._ Using technologies prescribed by IT, I developed a custom database that integrated with donor/donation data. Now at over 400 wells, I can't imagine maintaining all that data in Excel.
 
@@ -94,6 +94,6 @@ Tools:
 
 ## Hobbies
 
-Outside of work, my interests include reading e-books (often technical), watching tech talks, and participating in local meetups like [@yegrb](http://yegrb.com/). I walk or take transit almost everywhere, and enjoy hiking and photowalks, as well as soccer, board games and cooking.
+Outside of work, my interests include reading e-books (often technical), watching tech talks, and participating in local meetups like [@yegrb](http://yegrb.com/). I walk or take transit almost everywhere, and enjoy hiking and photo walks, as well as soccer, board games and cooking.
 
 _References available upon request._
