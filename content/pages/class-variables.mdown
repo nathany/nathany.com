@@ -1,6 +1,5 @@
 Date: 2010 July 13
-Revised: 2012 December 16
-Summary: In Ruby, `@@class` variables are not really class variables. This articles takes a look at Java and Python to see how the semantics differ.
+Summary: In Ruby, `@@class` variables are not really class variables. This articles takes a look at Java and Python to see how the semantics differ. _Revised 16 December 2012._
 
 # Language Semantics: Class Variables
 
