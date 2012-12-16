@@ -1,21 +1,38 @@
 Date: 2010 July 13
+Revised: 2012 December 16
 Summary: In Ruby, `@@class` variables are not really class variables. This articles takes a look at Java and Python to see how the semantics differ.
 
 # Language Semantics: Class Variables
 
-It wasn't until I was reading David Black's "[The Well Grounded Rubyist][black]" that I learned how Ruby `@@class` variables are not really class variables at all. Apparently they are global to the class hierarchy. Changing a value in the subclass impacts the base classes. Generally speaking, globals and global-like things are bad.
+While reading David Black's _[The Well Grounded Rubyist][black]_, I found that Ruby class `@@variables` are not really class variables at all! Apparently they are global to the class hierarchy. Changing a value in the subclass impacts the base classes. Generally speaking, globals and global-like things are _bad._
 
-On the other hand, @instance variables, when defined outside of a method body, are considered "class instance variables" because *classes are objects* in Ruby and (implicit) self is pointing at the class at that time. Unfortunately these class instance variables can only be accessed from class methods.
+~~~ruby
+class Polygon
+  @@sides = 8
 
-While looking through the code for DHH's abandoned `ssl_requirement` plugin, I discovered `read_inheritable_attribute` and related methods in Rails core. I can't say I really understood it myself, but it is described in [Class and Instance Variables In Ruby][nunemaker] by John Nunemaker.
+  def self.sides
+    @@sides
+  end
+end
 
-All of this seemed quite bizarre. It didn't seem like any other language I had experience with. I sought out some reasoning behind this language design in "[The Ruby Programming Language][matz]", co-authored by "Yukihiro \`Matz\` Matsumoto" himself, but all I found was:
+class Triangle < Polygon
+  @@sides = 3
+end
+
+puts Polygon.sides  # => 3
+~~~
+
+On the other hand, instance `@variables`, when defined outside a method body, are considered "class instance variables" because *classes are objects* in Ruby and (implicit) self is pointing at the class at that time. Unfortunately these class instance variables can only be accessed from class methods.
+
+While looking through the code for DHH's abandoned `ssl_requirement` plugin, I discovered `read_inheritable_attribute` and related methods in ActiveSupport. John Nunemaker does a better job describing this in [Class and Instance Variables In Ruby][nunemaker].
+
+All of this felt quite bizarre. It wasn't like any other language I had experience with. I sought out the reasoning behind this language design in _[The Ruby Programming Language][matz],_ co-authored by "Yukihiro \`Matz\` Matsumoto" himself, but all I found was:
 
 >"One of the most important advantages of class instance variables over class variables has to do with the confusing behavior of class variables when subclassing an existing class."
 
 >"This is a strong argument for the use of class instance variables instead of class variables."
 
-To confirm my suspicion that these oddities were specific to Ruby and not just something I had overlooked, I decided to dust off the Java compiler.
+To confirm my suspicion that these oddities are specific to Ruby, and not just something I had overlooked, I decided to dust off the Java compiler.
 
 ## Java
 
@@ -48,9 +65,9 @@ System.out.println(Triangle.sides);   // 3
 Triangle t1 = new Triangle();
 ~~~
 
-Much different from Ruby @@class variables, where one value is shared between Polygon, Triangle, and all their instances.
+This is much different from Ruby class `@@variables`, where one value is shared between Polygon, Triangle, and all their instances.
 
-If a Java subclass doesn't define the static instance variable, we will instead access the value defined in the base class.
+If a Java subclass doesn't define the static instance variable, we end up accessing the value defined in the base class.
 
 ~~~java
 class Octogon extends Polygon {
@@ -97,11 +114,11 @@ print(Polygon.sides) # 8
 print(p1.sides) # 5
 ~~~
 
-Similarly, defining a subclass that redefines the class variable will shadow the base class.
+Redefining a class variable in a subclass will shadow the base class.
 
 ~~~python
 class Triangle(Polygon):
-  sides = 3;
+  sides = 3
 
 print(Triangle.sides) # 3
 Polygon.sides = 5
@@ -131,19 +148,41 @@ Polygon.sides = 7
 print(Octogon.sides)  # 8
 ~~~
 
-So Python behaves a little differently than Java due to being a dynamic language where you can create variables on the fly. Instance variables shadow class variables of the same name, so it's best to always refer to class variables as `ClassName.variable`. Makes good sense.
+So Python behaves a little differently than Java, due to being a dynamic language where you can create variables on the fly. Instance variables shadow class variables of the same name, so it's best to always refer to class variables as `ClassName.variable`. Makes sense.
+
+## ActiveSupport
+
+If we want behavior similar to Python, we can use [class_attribute][], which replaced `inheritable_attributes` in Rails 3 (released after the initial writing of this article).
+
+~~~ruby
+require 'active_support/core_ext/class/attribute'
+
+class Polygon
+  class_attribute :sides
+end
+
+class Triangle < Polygon
+end
+
+Polygon.sides = 8
+Triangle.sides = 3
+
+puts Polygon.sides, Triangle.sides  # => 8, 3
+~~~
 
 ## End thoughts
 
-I can't say I really understand the ~230 lines of `inheritable_attributes.rb`, but based on the description, it seems to implement the kind of shadowing that Python comes with out-of-the-box.
+Like Smalltalk, classes _are_ objects in Ruby. Instance `@variables` defined inside the class body are different than instance `@variables` defined inside methods. Ruby's object model can be _surprising_ to programmers like myself, who learned object-orientation through C++/Java.
 
-So it seems, **Ruby is weirdly designed, but flexible enough that we can patch it ourselves.**
+I'm not familiar with how class `@@variables` came to Ruby, but almost everything I've read says **don't use them.** Fortunately, Ruby's Lisp heritage allows the savvy Rubyist to extend Ruby's semantics, whether adding [class attributes][class_attribute], [iterating over characters in a string][gist], or [implementing Python-style decorators][decorators].
 
-While doing a language comparison last year, I found that Python strings can be treated as a collection of characters. This is not the case in Ruby, but when asked to improve upon my script, [@wycats](https://twitter.com/wycats) simply tweaked String for the purposes of [the script][gist].
+Perhaps one day we'll see _Ruby 3.0_ remove the rough edges, making it easier for newcomers to adopt.
 
-Hm. Seeing a trend?
 
 [nunemaker]: http://railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/
-[gist]: http://gist.github.com/313605#file_gistfile4.rb
+[gist]: https://gist.github.com/313605#file-gistfile4-rb
 [black]: http://www.manning.com/black2/
-[matz]: http://oreilly.com/catalog/9780596516178
+[matz]: http://shop.oreilly.com/product/9780596516178.do
+[class_attribute]: http://api.rubyonrails.org/classes/Class.html#method-i-class_attribute
+[good_parts]: http://shop.oreilly.com/product/9780596517748.do
+[decorators]: http://yehudakatz.com/2009/07/11/python-decorators-in-ruby/
