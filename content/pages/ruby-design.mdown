@@ -40,7 +40,7 @@ If you scan through the [list of proposals][pep0], you will find GvR next to 19 
 
 Wouldn't it be nice to see Matz's proposal for *refinements*, and its subsequent acceptance -- or rejection. :-P
 
-It's unlikely that Ruby's process would be exactly like Python's, but it's **a good starting point**. Maybe a draft could be submitted in either Japanese or English, with the editors providing a bilingual translation before it could be accepted? We would probably pick Git and Markdown, with many other details still needing to be worked out.
+It's unlikely that Ruby's process would be exactly like Python's, but it's **a good starting point**. Maybe a draft could be submitted in either Japanese or English, with the editors providing a bilingual translation before it could be accepted? We would probably pick Git and Markdown, with many other details yet to be worked out.
 
 Proposing enhancements to Ruby in this way would be a significant change/improvement to the current process. Still, I think this is a much smaller jump than what Brian has been proposing.
 
@@ -56,7 +56,7 @@ If someone were to say "Ruby is defined by its' implementation", we could not ar
 
 This is why we _need_ a language reference.
 
-A publicly available document that the average Rubyist can and should read, so we *all* recognize the difference between what it _"Ruby proper"_ and what is an implementation detail (eg. encodings on any object?).
+A publicly available document that the average Rubyist can and should read, so we *all* recognize the difference between what it _"Ruby proper"_ and what is an implementation detail (eg. encodings on *any* object?).
 
 It's not the same as RubySpec or the IPA/ISO spec. Implementors would want a formal specification like that. This is a reference for user's of the language. 
 
