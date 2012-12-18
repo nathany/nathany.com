@@ -39,7 +39,7 @@ built on top of Java. What I added was key management and rotation.
 Taglibs make for a nice templating language of sorts - _jsp-style._ I found
 that CF7 can even do loops with tags, such as:
 
-~~~coldfusion
+~~~cfm
 <iterator:loop over="dataObject" as="row">...</iterator:loop>
 ~~~
 
