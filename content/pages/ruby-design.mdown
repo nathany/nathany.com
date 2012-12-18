@@ -13,21 +13,25 @@ Like many, **I write Ruby for a living.** Every developer or organization heavil
 
 Over the past few years, Ruby implementations have sprung up everywhere. While [MRI][] continues to be the **reference implementation,** we also have [JRuby][], [Rubinius][], [MacRuby][], [RubyMotion][], [MagLev][], [IronRuby][] and [mruby][].
 
-Ideally you should be able to run your Ruby code on any implementation. This raises an important question: **What is the definition of Ruby?** If MRI is the definition of Ruby, how can we tell what behaviours are intentional rather than just [accidents of the implementation][whitespace]? If we, as Rubyists, rely on misfeatures of MRI, every implementation of Ruby has the burden of supporting those behaviours.
+Ideally you should be able to run your Ruby code on any implementation. This raises an important question: **What is the definition of Ruby?** If MRI is the definition of Ruby, how can we tell what behaviours are intentional, rather than just [accidents of the implementation][whitespace]? If we, as Rubyists, rely on misfeatures of MRI, every implementation of Ruby has the burden of supporting those behaviours.
 
-At RubyConf 2012, [Brian Ford](https://twitter.com/brixen) gave a talk entitled "[Toward a Design Process for Ruby][brixen_talk]". He discussed both technical and social challenges he has faced while implementing Rubinius, as well as challenges the Ruby community will face to remain relevant. 
+At RubyConf 2012, [Brian Ford](https://twitter.com/brixen) gave a talk entitled "[Toward a Design Process for Ruby][brixen_talk]". He discussed both technical and social challenges he has faced while implementing Rubinius, as well as challenges the Ruby community will face to remain relevant. I highly recommend listening to his talk.
 
 On December 10th, the developers from various Ruby implementations held [a meeting on IRC][IRC] to discuss how the design process can be improved. That this meeting happened at all is a truly beautiful thing.
 
 While no conclusions have been made, Brian [followed up with a blog post][brixen_blog] with [futher discussion in Redmine][brixen_discuss].
 
+In my opinion, Brian's plan is too far-reaching. Smaller steps are needed.
+
 ## Borrowing From Our Neighbours
 
-Everyone is entitled to an opinion, this is mine.
+I feel that looking to other language communities is the most appropriate starting point for improving Ruby's design process.
 
-I don't consider myself a Pythonista, but I have a lot of _respect_ for the Python community and their processes. Take a read through the [Python Enhancement Proposal: Purpose and Guidelines][pep1].
+While I don't consider myself a Pythonista, I do have a lot of _respect_ for the Python community and their processes. 
 
-Here are some key points:
+Take a read through the [Python Enhancement Proposal: Purpose and Guidelines][pep1].
+
+Here are the salient points:
 
 * They have a BDFL, for Ruby **we have Matz.**
 * Anyone can champion an enhancement proposal. It isn't restricted to a committee of core developers.
@@ -42,27 +46,27 @@ Wouldn't it be nice to see Matz's proposal for *refinements*, and its subsequent
 
 It's unlikely that Ruby's process would be exactly like Python's, but it's **a good starting point**. Maybe a draft could be submitted in either Japanese or English, with the editors providing a bilingual translation before it could be accepted? We would probably pick Git and Markdown, with many other details yet to be worked out.
 
-Proposing enhancements to Ruby in this way would be a significant change/improvement to the current process. Still, I think this is a much smaller jump than what Brian has been proposing.
+Proposing enhancements to Ruby in this way would be a significant change/improvement to the current process.
 
 ## Language Reference
 
 Having a process to propose enhancements to Ruby is great for the future of Ruby, but what about the present?
 
-We need a comprehensive language reference. Is the [Ruby Core Reference][coreref] the closest thing we have to the [Python Language Reference][langref]? :-(
-
 If someone were to say "Ruby is defined by its' implementation", we could not argue:
 
 >"Not true -- what's generally considered the de facto reference implementation (CPython) has some aspects that are NOT part of the Python Language (as defined in the Reference), such as reference counting, the GIL…" - Alex Martelli on [Stack Overflow][so]
 
-This is why we _need_ a language reference.
+We need a comprehensive language reference. Is the [Ruby Core Reference][coreref] the closest thing we have to the [Python Language Reference][langref]? :-(
 
-A publicly available document that the average Rubyist can and should read, so we *all* recognize the difference between what it _"Ruby proper"_ and what is an implementation detail (eg. encodings on *any* object?).
+A publicly available document that the average Rubyist can and should read, so we *all* recognize the difference between what it _"Ruby proper"_ and what is an implementation detail. (eg. encodings on *any* object?).
 
 It's not the same as RubySpec or the IPA/ISO spec. Implementors would want a formal specification like that. This is a reference for users of the language. 
 
 Documenting Ruby as it exists today, and written enhancements proposals will be a lot of work. No question. But we gain the benefits of **document driven design**. If a feature is difficult or embarrassing to explain to your users, then maybe it isn't a good idea. :-)
 
 Thank you for Ruby and its many implementations. Here's to hoping it only gets *better with age.*
+
+_Comment on [Hacker News][hn]._
 
 [brixen_talk]: http://www.youtube.com/watch?v=BagNfTbXn3w
 [whitespace]: http://www.rubyinside.com/the-split-is-not-enough-whitespace-shenigans-for-rubyists-5980.html
@@ -86,3 +90,10 @@ Thank you for Ruby and its many implementations. Here's to hoping it only gets *
 [pep0]: http://www.python.org/dev/peps/
 [coreref]: http://www.ruby-doc.org/core-1.9.3/
 [so]: http://stackoverflow.com/questions/1094961/is-there-a-python-language-specification
+
+[reddit]: http://www.reddit.com/r/ruby/comments/14zfwj/the_future_of_ruby_thoughts_on_the_ruby_design/
+[hn]: http://news.ycombinator.com/item?id=4931302
+[twitter]: https://twitter.com/nathany/status/280574485592154112
+
+[sponsor]: http://pyfound.blogspot.ca/2011/05/pypy-receives-us10000-at-pycon-usa.html
+
