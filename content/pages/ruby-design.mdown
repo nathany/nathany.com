@@ -7,7 +7,7 @@ Summary: Thoughts on the Ruby Design Process.
 
 Ruby has attracted a sizeable following --- programmers who care about expressiveness, flexibility and aesthetics. Together we've built a vibrant ecosystem of tools, libraries and frameworks.
 
-Like many, **I write Ruby for a living.** Every developer or organization heavily invested in Ruby should be interested in its' future direction.
+Like many, **I write Ruby for a living.** Every developer or organization heavily invested in Ruby should be interested in its future direction.
 
 ## Ruby Design Process
 
@@ -58,7 +58,7 @@ This is why we _need_ a language reference.
 
 A publicly available document that the average Rubyist can and should read, so we *all* recognize the difference between what it _"Ruby proper"_ and what is an implementation detail (eg. encodings on *any* object?).
 
-It's not the same as RubySpec or the IPA/ISO spec. Implementors would want a formal specification like that. This is a reference for user's of the language. 
+It's not the same as RubySpec or the IPA/ISO spec. Implementors would want a formal specification like that. This is a reference for users of the language. 
 
 Documenting Ruby as it exists today, and written enhancements proposals will be a lot of work. No question. But we gain the benefits of **document driven design**. If a feature is difficult or embarrassing to explain to your users, then maybe it isn't a good idea. :-)
 
