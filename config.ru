@@ -3,6 +3,15 @@ require 'bundler/setup'
 
 Bundler.require(:default)
 
+use Rack::Cache,
+  verbose: true,
+  metastore: "memcached://#{ENV['MEMCACHE_SERVERS']}/meta",
+  entitystore: "memcached://#{ENV['MEMCACHE_SERVERS']}/body"
+
+use Rack::ResponseHeaders do |headers|
+  headers['Cache-Control'] = "public, max-age=3600"
+end
+
 use Rack::ConditionalGet
 use Rack::ETag
 
