@@ -11,11 +11,21 @@ Today I prefer bullet trains. **Ruby on Rails** has been my focus since 2007 -- 
 
 The following positions encompass my career as a **developer**. Forays into project management (as indicated) have served to reinforce *my passion to create.* To be a developer -- to learn, to build, to share.
 
-Most recently, I worked with a graphics designer to build a custom WordPress theme for [Dr. Winnifred Tang](http://learn2manageld.com/). I've also been digging into front-end design, through books like _Bulletproof Design_ and _Responsive Design._
+### Jobber (October 2012 - present; Edmonton, AB)
+
+Jobber is a new business management application targeted at field service companies. We endeavour to be a one-stop shop, offering invoicing, scheduling and a variety of (industry specific) add-ons. Thus far I have worked on the timesheets add-on, performance optimizations, and 
+
+Tools:
+
+* Ruby on Rails 3.x, Postgres, JQuery/Mobile, Git, Heroku
+
+### Freelance
+
+While I was "in-between things", a graphics designer and I built a WordPress theme for [Dr. Winnifred Tang](http://learn2manageld.com/). I also read _Bulletproof Design_ and _Responsive Design._
 
 ### Yardstick, Testing and Training Experts  (July 2009 - May 2012; Edmonton, AB)
 
-Yardstick Measure is a multi-tenant **learning management system** (LMS) focused on creating and delivering proctored exams. Our core team fluctuated from 2-4 developers. We collaborated on architecture, through code reviews, and occasional pair programming. I was responsible for creating a booking system and adding e-commerce support (including taxation). I also scripted multiple data migrations from third-party systems. In 2011, I accepted additional **project management** responsibilities, managing the tasks of our core team and several external contractors. I also served as the primary contact for a significant client, with offices in Montreal and Geneva. Still, I kept on coding, as visible in this [code_swarm](https://vimeo.com/35538422) of the project.
+Yardstick Measure is a multi-tenant **learning management system** (LMS) focused on creating and delivering proctored exams. Our core team fluctuated from 2-4 developers. We collaborated with whiteboards, code reviews, and pair programming. I was responsible for creating a booking system and adding e-commerce support (including taxation). I also scripted multiple data migrations from third-party systems. In 2011, I accepted additional **project management** responsibilities, managing the tasks of our core team and several external contractors. I also served as the primary contact for a significant client, with offices in Montreal and Geneva. Still, I kept on coding, as visible in this [code_swarm](https://vimeo.com/35538422) of the project.
 
 Tools:
 
@@ -24,9 +34,9 @@ Tools:
 
 ### Power to Change Ministries (May 2007 - May 2009; Langley, BC)
 
-In April 2007, I was able to _raise funds_ for a summer internship that piqued my interest. The [project](https://github.com/nathany/boat) enabled **human resources** to create forms that applicants could complete online. What became a ten month project was primarily a solo-developer effort, with some assistance from Campus Crusade for Christ U.S.
+In April 2007, I was able to _raise funds_ for a summer internship that piqued my interest. The project enabled **human resources** to create forms that applicants could complete online. What became a ten month project was primarily a solo-developer effort, with some assistance from Campus Crusade for Christ U.S.
 
-Global Aid Network (GAiN) is the humanitarian arm of Power to Change. For a start, we launched a [new web site](http://globalaid.net/), with the help of a graphics designer from the marketing team.
+Global Aid Network (GAiN) is the humanitarian arm of Power to Change. For a start, we launched a new web site, with the help of a graphics designer from the marketing team.
 
 At GAiN, my primary task was to provide a tool to better manage **water well sponsorship** data, which at the time was kept in _one giant Excel file._ Using technologies prescribed by IT, I developed a custom database that integrated with donor/donation data. Now at over 400 wells, I can't imagine maintaining all that data in Excel.
 
@@ -36,9 +46,9 @@ Tools:
 * WordPress (PHP/MySQL), JQuery, Slideshow Pro, Mercurial (2 months) 
 * Microsoft Access (VBA), Microsoft SQL Server, Microsoft Reporting Services (5 months)
 
-### Freelancing (February - March 2007; Edmonton, AB)
+### Freelance (February - March 2007; Edmonton, AB)
 
-While looking for work, I attained [certification in PHP 5](http://yng.mn/zendcert5). Much to my delight, I landed my first two contracts with Ruby on Rails in 2007: a new [app for Royer Homes](https://github.com/nathany/royerhomes) and fixing up Econolution.
+While looking for work, I attained [certification in PHP 5](http://yng.mn/zendcert5). Much to my delight, I landed my first two contracts with Ruby on Rails in 2007: a new app for Royer Homes and fixing up Econolution.
 
 Tools:
 
@@ -46,7 +56,7 @@ Tools:
 
 ### Wycliffe Bible Translators (September - November 2006; Calgary, AB)
 
-Having an interest in Biblical languages and Wycliffe's mandate, I attended a **summer of linguistics** program at CanIL. After finishing school, I _volunteered_ with Wycliffe Canada, where I worked on two small projects. The first, a personnel data browser for IT, the other, a tool to format job opportunities into PDFs. I enjoyed the experience, but unfortunately I couldn't volunteer with Wycliffe forever.
+Having an interest in Biblical languages and Wycliffe's mandate, I attended a *summer of linguistics* program at CanIL. After finishing school, I _volunteered_ with Wycliffe Canada, where I worked on two small projects. The first, a personnel data browser for IT, the other, a tool to format job opportunities into PDFs. I enjoyed the experience, but unfortunately I couldn't volunteer with Wycliffe forever.
 
 Tools:
 
