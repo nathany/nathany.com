@@ -11,7 +11,7 @@ end
 
 class SyntacticalTemplate < Tilt::RedcarpetTemplate::Redcarpet2
   def generate_renderer
-    Syntactical.new(hard_wrap: false)
+    Syntactical.new(hard_wrap: false, with_toc_data: true)
   end
 
   def prepare
