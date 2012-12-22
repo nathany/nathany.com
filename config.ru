@@ -5,11 +5,14 @@ Bundler.require(:default)
 
 use Rack::Cache,
   verbose: true,
+  default_ttl: 3600,
+  allow_reload: false,
+  allow_revalidate: true,
   metastore: "memcached://#{ENV['MEMCACHE_SERVERS']}/meta",
   entitystore: "memcached://#{ENV['MEMCACHE_SERVERS']}/body"
 
 use Rack::ResponseHeaders do |headers|
-  headers['Cache-Control'] = "public, max-age=3600"
+  headers['Cache-Control'] = "public, must_revalidate, max-age=3600"
 end
 
 use Rack::ConditionalGet
