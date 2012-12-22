@@ -74,7 +74,9 @@ When the upgrade completes, it suggests you run:
 
 So do that. And finally, you can delete the old version of Postgres.app. **Phew!**
 
-You can [Follow][] Postgres.app on Twitter to find out when you *get to do this all over again. :-)* 
+## That's A Wrap
+
+You can [follow][] Postgres.app on Twitter to find out when you *get to do this all over again. :-)* 
 
 Now all I have left to do is find a [_nice_ database client][sequel] for Postgres. It looks like the two new candidates are [Tuples 2][] (soon) and [Induction][] (very alpha), though [Navicat][] has been steadily improving as well. Hmm.
 
@@ -93,5 +95,5 @@ Hit me up on [Twitter][] if you have any suggestions for improving this article.
 [Navicat]: http://www.navicat.com/en/products/navicat_pgsql/pgsql_detail_mac.html
 [pgAdmin]: http://www.pgadmin.org/download/macosx.php
 
-[Follow]: https://twitter.com/Postgresapp
+[follow]: https://twitter.com/Postgresapp
 [Twitter]: https://twitter.com/nathany
