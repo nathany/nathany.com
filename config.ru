@@ -26,7 +26,7 @@ end
 
 require 'nesta/app'
 
-Sinatra::Base.configure :production do
+Nesta::App.configure :production do
   require 'newrelic_rpm'
 end
 
