@@ -1,10 +1,6 @@
 require 'redcarpet'
 require 'pygments'
 
-configure :production do
-  require 'newrelic_rpm'
-end
-
 class Syntactical < Redcarpet::Render::HTML
   include Redcarpet::Render::SmartyPants
 

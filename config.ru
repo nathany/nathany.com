@@ -16,4 +16,9 @@ use Rack::Rewrite do
 end
 
 require 'nesta/app'
+
+Sinatra::Base.configure :production do
+  require 'newrelic_rpm'
+end
+
 run Nesta::App
