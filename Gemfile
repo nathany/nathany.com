@@ -15,3 +15,7 @@ group :development do
   gem 'pry-debugger'
   gem 'foreman'
 end
+
+group :production do
+  gem 'newrelic_rpm'
+end
