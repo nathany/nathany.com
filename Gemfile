@@ -3,7 +3,7 @@ ruby '1.9.3'
 
 gem 'nesta'
 gem 'redcarpet'
-gem 'pygments.rb', github: 'tmm1/pygments.rb'
+gem 'pygments.rb'
 gem 'thin'
 gem 'rack-rewrite'
 
