@@ -1,0 +1,8 @@
+# functional
+
+Spurred on by the multi-core challenge, the past few years have seen a surge of interest in Erlang & Haskell, combined with the introduction of Clojure, F#, and Scala. Lambdas are finding their way into every mainstream language, whether Python 3's `nonlocal` keyword, PHP 5.3's anonymous functions, and Objective-C 2.0's blocks. Even Java will have them eventually.
+
+
+tension - deferring a decision until you know more, and writing exemplary code
+
+> "[Design] doesn't guess the future; it preserves your options for accommodating the future."
