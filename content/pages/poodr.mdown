@@ -1,0 +1,58 @@
+Date: 2012 December 29
+Summary: 
+Keywords: ruby, OOD, Object Oriented Design
+
+# Practical Object Oriented Design
+
+With functional programming being lauded as the way of the future, 
+
+Avdi Grimm's [Objects on Rails][oor] "Sponsor Edition" includes a conversation with [Sandi Metz](metz)
+
+eye-opener
+
+
+> "Design is more the art of preserving changeability than it is the act of achieving perfection."
+
+tension - deferring a decision until you know more, and writing exemplary code
+
+> "Applications that are easy to change consist of classes that are easy to reuse. Reusable classes are pluggable units of well-defined behavior that have few entanglements."
+
+minimize dependencies
+manage the direction of dependencies, depend on things that change less often
+
+
+Trust other objects
+
+> "The distinction between a message that asks for what the sender wants and a message that tells the receiver how to behave may seem subtle but the consequences are significant."
+
+
+abstract vs. concrete (ease of extension, easy to understand)
+
+
+
+managing dependencies
+objects know too much
+
+> "Well-designed code is easy to change, refactoring is how you change from one design to the next, and tests free you to refactor with impunity." Chapter 9 192
+
+> "Good design naturally progresses toward small independent objects that rely on abstractions… Abstractions are wonderfully flexible design components but the improvements they provide come at one slight cost: While each individual abstraction might be easy to understand, there is no single place in the code that makes obvious the behavior of the whole."
+
+
+
+> "Incoming messages should be tested for the state they return. Outgoing command messages should be tested to ensure they get sent. Outgoing query messages should not be tested."
+
+
+[Øredev](talk)
+
+
+
+[metz]: https://twitter.com/sandimetz
+
+[poodr]: http://www.poodr.info/
+
+[oor]: http://objectsonrails.com/
+
+[talk]: https://vimeo.com/53154357
+
+
+> "[Design] doesn't guess the future; it preserves your options for accommodating the future."
