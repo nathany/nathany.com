@@ -20,7 +20,7 @@ What if we could <mark>arrange our code</mark> to be more amenable to change? Th
 
 > "Design is more the art of preserving changeability than it is the act of achieving perfection."
 
-[Sandi Metz](metz) sets us out on a journey towards changeability. She guides us through a number of **OO design principles**, when and why they are valuable. Dedicated chapters cover inheritance, composition, duck typing and mixins, with tips to choose among them. The goal throughout is to increase productivity and reduce costs.
+[Sandi Metz][metz] sets us out on a journey towards changeability. She guides us through a number of **OO design principles**, when and why they are valuable. Dedicated chapters cover inheritance, composition, duck typing and mixins, with tips to choose among them. The goal throughout is to increase productivity and reduce costs.
 
 ## Dependencies
 
