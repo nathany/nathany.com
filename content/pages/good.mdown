@@ -1,0 +1,176 @@
+Date: 2013 January 12
+Summary: Go
+Keywords: golang, OOD, Object Oriented Design, Go, composition, interfaces
+Flags: draft
+
+# Go Object Oriented Design
+
+Go is a thoroughly object-oriented language. It allows
+methods to be defined <mark>on any type</mark>, without the boxing/unboxing common to other languages.
+
+There is no familiar `class` based system, in particular, Go [does not provide inheritance][composition]. What one must understand is that classical inheritance and object-oriented are not synonymous.
+
+> "Use of classical inheritance is always optional; every problem that it solves can be solved another way." - [Sandi Metz][poodr]
+
+Much of what classes offer can be found in Go, just as independent concepts:
+
+* polymorphism via <mark>interfaces</mark>
+* automatic message delegation via <mark>embedding</mark>
+* namespacing via <mark>exports</mark>
+
+## An Example
+
+[Practical Object-Oriented Programming in Ruby][poodr]
+
+Composition!
+
+Rather than MountainBike as a specialization of Bike
+extract what is unique
+compose a Bike of Parts
+
+some type embedding
+
+I you are already familiar with Go, you may want to skip the prose and read the source on [GitHub][].
+
+// pg 176
+
+```
+package main
+
+import "fmt"
+```
+
+```
+type Part struct {
+  Name        string
+  Description string
+  NeedsSpare  bool
+}
+```
+ 
+C struct 
+
+ 
+```
+type Parts []Part
+```
+
+Slice
+
+  Parts is a slice vs. a struct containing one, giving it slice like behavior.
+  (like on Page 173)
+
+
+```
+/*
+  Bicycle
+  Automatic delegation to Spares() is provided by Parts.
+*/
+type Bicycle struct {
+  Size string
+  Parts
+}
+```
+Embedding
+
+```
+func (parts Parts) Spares() (spares Parts) {
+  for _, part := range parts {
+    if part.NeedsSpare {
+      spares = append(spares, part)
+    }
+  }
+  return spares
+}
+```
+
+methods syntax
+_ (index)
+append
+
+```
+var (
+  RoadBikeParts = Parts{
+    {"chain", "10-speed", true},
+    {"tire_size", "23", true},
+    {"tape_color", "red", true},
+  }
+
+  MountainBikeParts = Parts{
+    {"chain", "10-speed", true},
+    {"tire_size", "2.1", true},
+    {"front_shock", "Manitou", false},
+    {"rear_shock", "Fox", true},
+  }
+
+  RecumbentBikeParts = Parts{
+    {"chain", "9-speed", true},
+    {"tire_size", "28", true},
+    {"flag", "tall and orange", true},
+  }
+)
+```
+
+composite literals
+factories
+
+
+  I don't see much need for a PartsFactory to convert an array to objects. Go's
+  composite literal syntax can use either name:values or just values, with the one
+  gotcha that all parameters must be specified with the later syntax.
+
+```
+func main() {
+  roadBike := Bicycle{Size: "L", Parts: RoadBikeParts}
+  mountainBike := Bicycle{Size: "L", Parts: MountainBikeParts}
+  recumbentBike := Bicycle{Size: "L", Parts: RecumbentBikeParts}
+```
+
+field label/value composite literals
+
+```
+  fmt.Println(roadBike.Spares())
+  fmt.Println(mountainBike.Spares())
+  fmt.Println(recumbentBike.Spares())
+
+  comboParts := Parts{}
+  comboParts = append(comboParts, mountainBike.Parts...)
+  comboParts = append(comboParts, roadBike.Parts...)
+  comboParts = append(comboParts, recumbentBike.Parts...)
+
+  fmt.Println(len(comboParts))
+  fmt.Println(comboParts.Spares())
+}
+```
+
+We can combine Parts and still call Spares, unlike the Ruby example. (page 173)
+
+
+
+
+## Interfaces
+
+duck types, depending on messages instead of any specific class… document
+
+> "It is impossible to create an abstraction unknowingly or by accident; in statically typed languages defining an interface is _always_ intentional." - [Sandi Metz][poodr]
+
+`Stringer?`
+
+## Export
+
+uniform access principle
+
+```
+type Part struct {
+  name        string
+  description string
+  needsSpare  bool
+}
+```
+
+
+[poodr]: http://www.poodr.info/
+[composition]: http://talks.golang.org/2012/splash.article#TOC_15.
+
+[GitHub]: https://github.com/nathany/go-poodr/blob/master/chapter8/parts3.go
+

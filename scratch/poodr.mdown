@@ -6,3 +6,14 @@ Spurred on by the multi-core challenge, the past few years have seen a surge of 
 tension - deferring a decision until you know more, and writing exemplary code
 
 > "[Design] doesn't guess the future; it preserves your options for accommodating the future."
+
+# inheritance
+
+> "The hierarchy must be designed early, often as the first step of designing the program, and early decisions can be difficult to change once the program is written." - [Rob Pike][composition]
+
+> "A decision to proceed with the hierarchy accepts that the risk that you may not yet have enough information to identify the correct abstraction."  - [Sandi Metz][poodr]
+
+> "When your problem is one of needing numerous specializations of a stable, common abstraction, inheritance can be an extremely low-cost solution."  - [Sandi Metz][poodr]
+
+[poodr]: http://www.poodr.info/
+[composition]: http://talks.golang.org/2012/splash.article#TOC_15.
