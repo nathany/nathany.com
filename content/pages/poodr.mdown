@@ -4,11 +4,11 @@ Keywords: ruby, OOD, Object Oriented Design, monolithic, change, abstract, duck 
 
 # Practical Object-Oriented Design
 
-Object-oriented programming is like a comfortable old hat. Classes, inheritance, polymorphism -- I learned all that 20 years ago with C++. What more is there to know about OO? 
+Object-oriented programming is like a comfortable old hat. Classes, inheritance, polymorphism -- I learned all that 20 years ago -- with C++. What more is there to know about OO? 
 
-As it turns out, quite a lot.
+As it turns out, **quite a lot.**
 
-Avdi Grimm's [Objects on Rails][oor] "Sponsor Edition" includes a conversation with [Sandi Metz](metz). They discuss her new book, <cite>[Practical Object-Oriented Design in Ruby][poodr]</cite>, a <mark>must read</mark> for any Rubyist.
+<cite>[Practical Object-Oriented Design in Ruby][poodr]</cite> is a <mark>must read</mark> for any Rubyist. My copy is full of highlights, but I'll focus on a few take aways.
 
 ## Change
 
@@ -16,15 +16,15 @@ Who hasn't experienced the big "monolihtic" app? A *seemingly* small change caus
 
 In software, **change is inevitable.** We can't predict *how* it will change, but we know it will.
 
-What if we could <mark>arrange our code</mark> to be amenable to change? That would be worth learning.
+What if we could <mark>arrange our code</mark> to be more amenable to change? That would be worth learning.
 
 > "Design is more the art of preserving changeability than it is the act of achieving perfection."
 
-Sandi sets us out on a journey towards changeability. She guides us through a number of **OO design principles**, when and why they are valuable. Dedicated chapters cover inheritance, composition, duck typing and mixins, with tips to choose among them. The goal throughout is to increase productivity and reduce costs.
+[Sandi Metz](metz) sets us out on a journey towards changeability. She guides us through a number of **OO design principles**, when and why they are valuable. Dedicated chapters cover inheritance, composition, duck typing and mixins, with tips to choose among them. The goal throughout is to increase productivity and reduce costs.
 
 ## Dependencies
 
-Objects will have dependencies -- they need to talk to each other. The key to avoid [complect][] code is to <mark>choose dependencies wisely</mark>.
+Objects will have dependencies -- they need to talk to each other. The key to avoid "[complect][]" code is to <mark>choose dependencies wisely</mark>.
 
 > "Applications that are easy to change consist of classes that are easy to reuse. Reusable classes are pluggable units of well-defined behavior that have few entanglements."
 
@@ -34,7 +34,7 @@ Then consider which direction dependencies should go. <mark>Depend on things tha
 
 ## Trust
 
-Procedural programs operate by performing a series of steps.
+Procedural programs operate by performing a series of steps, whereas object-oriented programs are about <mark>sending messages</mark>.
 
 When one object tells another to perform a series of steps, <mark>it knows too much</mark>! To minimize dependencies, an object needs to ask for what it wants, and **trust** that the  receiver takes the necessary steps. It doesn't need to know the details.
 
@@ -42,11 +42,11 @@ When one object tells another to perform a series of steps, <mark>it knows too m
 
 ## Ducks
 
-Rather than depending on a concrete `Class`, consider relying on a duck type that implements the necessary message.
+Rather than depending on a concrete `Class`, consider relying on a duck type that implements the necessary message. Depending on a "duck-like" thing is much more flexible.
 
 > "Good design naturally progresses toward small independent objects that rely on abstractions... Abstractions are wonderfully flexible design components but the improvements they provide come at one slight cost: While each individual abstraction might be easy to understand, there is no single place in the code that makes obvious the behavior of the whole."
 
-Use tests to document your ducks.
+Think about the duck types being used, and use tests to document them.
 
 ## Test
 
@@ -62,11 +62,11 @@ She also explains why not everything should be tested, and what should be:
 
 ## Code
 
-For a book that touts <mark>exemplary code</mark>, it might come as a surprise that not every code example can be considered exemplary. 
+For a book that touts <mark>exemplary code</mark>, it might come as a surprise that not every code example can be considered exemplary. On occasion, Sandi *purposely* drags the reader through the consequences of not designing for change.
 
-Each chapter starts with a bicycle-themed example and builds on it as the chapter progresses. On occasion, Sandi *purposely* drags the reader through the consequences of not designing for change.
+Each chapter begins with a bicycle-themed example. The example is altered as the chapter progresses -- new requirements are introduced, issues are identified, code is refactored. 
 
-Rather than only demonstrating the end goal, the code is on a journey. New requirements are introduced, issues are identified, code is refactored.
+Walking through the process is incredibly informative, much more so than only seeing the final result.
 
 ## Finalize
 
