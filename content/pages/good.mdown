@@ -25,7 +25,7 @@ Chapter 6 presents a simple problem. A mechanic needs to know which spare parts 
 
 ### Packages
 
-```
+```go
 package main
 
 import "fmt"
@@ -36,7 +36,7 @@ Packages provide a namespace. The `main` package is where a program begins, and 
 
 ### Types
 
-```
+```go
 type Part struct {
     Name        string
     Description string
@@ -46,7 +46,7 @@ type Part struct {
  
 We define a new type named `Part`. This structure is very much like a C struct.
  
-```
+```go
 type Parts []Part
 ```
 
@@ -56,7 +56,7 @@ We can declare methods on any type, so we don't need to wrap `[]Part` in a struc
 
 ### Methods
 
-```
+```go
 func (parts Parts) Spares() (spares Parts) {
     for _, part := range parts {
         if part.NeedsSpare {
@@ -75,7 +75,7 @@ This code isn't nearly as elegant as `select` in Ruby. A functional filter is po
 
 ### Embedding
 
-```
+```go
 type Bicycle struct {
     Size string
     Parts
@@ -91,7 +91,7 @@ Patterns used with classical inheritance, like the template method pattern, aren
 
 ### Composite Literals
 
-```
+```go
 var (
     RoadBikeParts = Parts{
         {"chain", "10-speed", true},
@@ -116,7 +116,7 @@ var (
 
 Go provides a nice syntax for initializing objects, called [composite literals][]. Being able to initialize a struct with an array-like syntax made the PartsFactory from the Ruby example feel unnecessary.
 
-```
+```go
 func main() {
     roadBike := Bicycle{Size: "L", Parts: RoadBikeParts}
     mountainBike := Bicycle{Size: "L", Parts: MountainBikeParts}
@@ -129,7 +129,7 @@ The short declaration operator (`:=`) uses <mark>type inference</mark> to initia
 
 ### Output
 
-```
+```go
     fmt.Println(roadBike.Spares())
     fmt.Println(mountainBike.Spares())
     fmt.Println(recumbentBike.Spares())
@@ -145,7 +145,7 @@ We print the the result of calling Spares in the default format:
 
 ### Combining Parts
 
-```
+```go
     comboParts := Parts{}
     comboParts = append(comboParts, mountainBike.Parts...)
     comboParts = append(comboParts, roadBike.Parts...)
@@ -172,7 +172,7 @@ Compared to <mark>duck typing</mark>, interfaces are statically checked and docu
 
 For an example, let's say we didn't want to print the NeedsSpare flag of Part. We could write a String method as such:
 
-```
+```go
 func (part Part) String() string {
     return fmt.Sprintf("%s: %s", part.Name, part.Description)
 }
@@ -188,7 +188,7 @@ Then the calls to `Println` above would output this instead:
 
 This works because we have satisfied the Stringer interface, which the `fmt` package makes use of. It is defined as:
 
-```
+```go
 type Stringer interface {
     String() string
 }
@@ -200,7 +200,7 @@ Interface types can be used in the same places as other types. Variables and arg
 
 Go uses packages for namespacing. Identifiers that begin with a capital letter are exported. To make an identifier "private" to a package, we just start it with a lowercase letter.
 
-```
+```go
 type Part struct {
     name        string
     description string
@@ -210,7 +210,7 @@ type Part struct {
 
 To apply the <mark>uniform access principle</mark> to Part, we could change the struct definition and provide setter/getter methods such as:
 
-```
+```go
 func (part Part) Name() string {
     return part.name
 }
