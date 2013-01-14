@@ -1,38 +1,29 @@
-Date: 2013 January 12
-Summary: Go
+Date: 2013 January 14
+Summary: Composition not inheritance, polymorphism through interfaces, and packages for namespacing.
 Keywords: golang, OOD, Object Oriented Design, Go, composition, interfaces
 Flags: draft
 
 # Go Object Oriented Design
 
-Go is a thoroughly object-oriented language. It allows
-methods to be defined <mark>on any type</mark>, without the boxing/unboxing common to other languages.
+Go is a thoroughly object-oriented language. For example, it allows methods <mark>on any type</mark> we define, without all the boxing/unboxing common to other languages.
 
-There is no familiar `class` based system, in particular, Go [does not provide inheritance][composition]. What one must understand is that classical inheritance and object-oriented are not synonymous.
+Go does **not** use classes, but provides many of the same features:
+
+* automatic message delegation via <mark>embedding</mark>
+* polymorphism via <mark>interfaces</mark>
+* namespacing via <mark>exports</mark>
+
+There is [no inheritance][composition] in Go. Forget about *is-a* relationships and think about OO design in terms of **composition**.
 
 > "Use of classical inheritance is always optional; every problem that it solves can be solved another way." - [Sandi Metz][poodr]
 
-Much of what classes offer can be found in Go, just as independent concepts:
+## Composition by Example
 
-* polymorphism via <mark>interfaces</mark>
-* automatic message delegation via <mark>embedding</mark>
-* namespacing via <mark>exports</mark>
+Having recently [read][] through [Practical Object-Oriented Programming in Ruby][poodr], I decided to [translate][] the examples to Go.
 
-## An Example
+Chapter 6 presents a simple problem. A mechanic needs to know which spare parts to bring on a bike trip, depending on which bikes have been rented. The problem can be solved using classical inheritance, where MountainBike and RoadBike are specializations of a Bicycle base class. Chapter 8 reworks the same example to use composition instead. I'm quite happy with how well this version [translated to Go][GitHub]. Let's take a look.
 
-[Practical Object-Oriented Programming in Ruby][poodr]
-
-Composition!
-
-Rather than MountainBike as a specialization of Bike
-extract what is unique
-compose a Bike of Parts
-
-some type embedding
-
-I you are already familiar with Go, you may want to skip the prose and read the source on [GitHub][].
-
-// pg 176
+### Packages
 
 ```
 package main
@@ -40,137 +31,215 @@ package main
 import "fmt"
 ```
 
+Packages provide a namespace. The `main` package is where a program begins, and the `fmt` package provides string formatting functions.
+
+
+### Types
+
 ```
 type Part struct {
-  Name        string
-  Description string
-  NeedsSpare  bool
+    Name        string
+    Description string
+    NeedsSpare  bool
 }
 ```
  
-C struct 
-
+We define a new type named `Part`. This structure is very much like a C struct.
  
 ```
 type Parts []Part
 ```
 
-Slice
+The Parts type is a *slice* of parts. Slices are dynamically resizable arrays, and are quite common in Go.
 
-  Parts is a slice vs. a struct containing one, giving it slice like behavior.
-  (like on Page 173)
+We can declare methods on any type, so we don't need to wrap `[]Part` in a struct. This means Parts can have <mark>all the behavior of slices, plus our own custom behavior.</mark>
 
-
-```
-/*
-  Bicycle
-  Automatic delegation to Spares() is provided by Parts.
-*/
-type Bicycle struct {
-  Size string
-  Parts
-}
-```
-Embedding
+### Methods
 
 ```
 func (parts Parts) Spares() (spares Parts) {
-  for _, part := range parts {
-    if part.NeedsSpare {
-      spares = append(spares, part)
+    for _, part := range parts {
+        if part.NeedsSpare {
+            spares = append(spares, part)
+        }
     }
-  }
-  return spares
+    return spares
 }
 ```
 
-methods syntax
-_ (index)
-append
+A method declaration in Go is just like a function, except it has an <mark>explicit receiver</mark>, declared immediately after `func`. This function takes advantage of named return variables, pre-initializing spares for us.
+
+The method body is fairly straightforward. We iterate over parts, ignoring the index position (`_`), and filtering the parts to return. `Append` mutates spares, but it may need to allocate and return a larger slice. 
+
+This code isn't nearly as elegant as `select` in Ruby. A functional filter is possible in Go, it just isn't [builtin][].
+
+### Embedding
+
+```
+type Bicycle struct {
+    Size string
+    Parts
+}
+```
+
+Bicycle is *composed of* a Size and Parts. By not specifying a named field for Parts, we make use of [embedding][]. This provides *automatic delegation* with no further ceremony, eg. `bike.Spares()` and `bike.Parts.Spares()` are equivalent.
+
+It is possible to override `Spares()` on Bicycle and still reference the embedded `Parts.Spares()`. This *feels* almost like inheritance, but embedding does **not** provide polymorphism. The receiver of `Spares()` will always be of type Parts, even when called directly from a Bicycle. 
+
+Patterns used with classical inheritance, like the template method pattern, aren't suitable for embedding. It's far better to think in terms of composition & delegation ([forwardable][] in *Ruby speak*), as we have here.
+
+
+### Composite Literals
 
 ```
 var (
-  RoadBikeParts = Parts{
-    {"chain", "10-speed", true},
-    {"tire_size", "23", true},
-    {"tape_color", "red", true},
-  }
+    RoadBikeParts = Parts{
+        {"chain", "10-speed", true},
+        {"tire_size", "23", true},
+        {"tape_color", "red", true},
+    }
 
-  MountainBikeParts = Parts{
-    {"chain", "10-speed", true},
-    {"tire_size", "2.1", true},
-    {"front_shock", "Manitou", false},
-    {"rear_shock", "Fox", true},
-  }
+    MountainBikeParts = Parts{
+        {"chain", "10-speed", true},
+        {"tire_size", "2.1", true},
+        {"front_shock", "Manitou", false},
+        {"rear_shock", "Fox", true},
+    }
 
-  RecumbentBikeParts = Parts{
-    {"chain", "9-speed", true},
-    {"tire_size", "28", true},
-    {"flag", "tall and orange", true},
-  }
+    RecumbentBikeParts = Parts{
+        {"chain", "9-speed", true},
+        {"tire_size", "28", true},
+        {"flag", "tall and orange", true},
+    }
 )
 ```
 
-composite literals
-factories
-
-
-  I don't see much need for a PartsFactory to convert an array to objects. Go's
-  composite literal syntax can use either name:values or just values, with the one
-  gotcha that all parameters must be specified with the later syntax.
+Go provides a nice syntax for initializing objects, called [composite literals][]. Being able to initialize a struct with an array-like syntax made the PartsFactory from the Ruby example feel unnecessary.
 
 ```
 func main() {
-  roadBike := Bicycle{Size: "L", Parts: RoadBikeParts}
-  mountainBike := Bicycle{Size: "L", Parts: MountainBikeParts}
-  recumbentBike := Bicycle{Size: "L", Parts: RecumbentBikeParts}
+    roadBike := Bicycle{Size: "L", Parts: RoadBikeParts}
+    mountainBike := Bicycle{Size: "L", Parts: MountainBikeParts}
+    recumbentBike := Bicycle{Size: "L", Parts: RecumbentBikeParts}
 ```
 
-field label/value composite literals
+Composite literals can also use `field: value` syntax. 
+
+The short declaration operator (`:=`) uses <mark>type inference</mark> to initialize roadBike, etc. with the Bicycle type.
+
+### Output
 
 ```
-  fmt.Println(roadBike.Spares())
-  fmt.Println(mountainBike.Spares())
-  fmt.Println(recumbentBike.Spares())
+    fmt.Println(roadBike.Spares())
+    fmt.Println(mountainBike.Spares())
+    fmt.Println(recumbentBike.Spares())
+```
 
-  comboParts := Parts{}
-  comboParts = append(comboParts, mountainBike.Parts...)
-  comboParts = append(comboParts, roadBike.Parts...)
-  comboParts = append(comboParts, recumbentBike.Parts...)
+We print the the result of calling Spares in the default format: 
 
-  fmt.Println(len(comboParts))
-  fmt.Println(comboParts.Spares())
+```
+[{chain 10-speed true} {tire_size 23 true} {tape_color red true}]
+[{chain 10-speed true} {tire_size 2.1 true} {rear_shock Fox true}]
+[{chain 9-speed true} {tire_size 28 true} {flag tall and orange true}]
+```
+
+### Combining Parts
+
+```
+    comboParts := Parts{}
+    comboParts = append(comboParts, mountainBike.Parts...)
+    comboParts = append(comboParts, roadBike.Parts...)
+    comboParts = append(comboParts, recumbentBike.Parts...)
+
+    fmt.Println(len(comboParts), comboParts[9:])
+    fmt.Println(comboParts.Spares())
 }
 ```
 
-We can combine Parts and still call Spares, unlike the Ruby example. (page 173)
+Parts behaves like a slice. Getting the length, taking a slice, or combining multiple slices into one all work as they normally do. The equivalent solution in Ruby is to subclass Array, but unfortunately Ruby loses the spares method when two Parts are concatenated.
 
+> "...in a perfect object-oriented language this solution would be exactly correct. Unfortunately, the Ruby language has not quite achieved perfection..." - [Sandi Metz][poodr]
 
-
+There is a somewhat ugly workaround in Ruby, using `Enumerable`, `forwardable`, and `def_delegators`. Go has no such deficiency. `[]Part` does exactly what we want, and is far more concise.
 
 ## Interfaces
 
-duck types, depending on messages instead of any specific class… document
+Polymorphism in Go is provided via interfaces. They are satisfied implicitly, unlike Java or C#, so they be defined for code you don't own.
+
+Compared to <mark>duck typing</mark>, interfaces are statically checked and documented through their declaration, rather than through `respond_to?` tests.
 
 > "It is impossible to create an abstraction unknowingly or by accident; in statically typed languages defining an interface is _always_ intentional." - [Sandi Metz][poodr]
 
-`Stringer?`
-
-## Export
-
-uniform access principle
+For an example, let's say we didn't want to print the NeedsSpare flag of Part. We could write a String method as such:
 
 ```
-type Part struct {
-  name        string
-  description string
-  needsSpare  bool
+func (part Part) String() string {
+    return fmt.Sprintf("%s: %s", part.Name, part.Description)
 }
 ```
 
+Then the calls to `Println` above would output this instead:
 
+```
+[chain: 10-speed tire_size: 23 tape_color: red]
+[chain: 10-speed tire_size: 2.1 rear_shock: Fox]
+[chain: 9-speed tire_size: 28 flag: tall and orange]
+```
+
+This works because we have satisfied the Stringer interface, which the `fmt` package makes use of. It is defined as:
+
+```
+type Stringer interface {
+    String() string
+}
+```
+
+Interface types can be used in the same places as other types. Variables and arguments can take a Stringer, which accepts anything that implements the `String() string` method signature.
+
+## Exports
+
+Go uses packages for namespacing. Identifiers that begin with a capital letter are exported. To make an identifier "private" to a package, we just start it with a lowercase letter.
+
+```
+type Part struct {
+    name        string
+    description string
+    needsSpare  bool
+}
+```
+
+To apply the <mark>uniform access principle</mark> to Part, we could change the struct definition and provide setter/getter methods such as:
+
+```
+func (part Part) Name() string {
+    return part.name
+}
+
+func (part *Part) SetName(name string) {
+    part.name = name
+}
+```
+
+It is easy to determine if code internal to a package is using the public API or unexported methods, just by looking at the case of the method at the call site.
+
+Go also provides first-class functions and closures, which are commonly used for namespacing in languages like JavaScript.
+
+## For Great GOOD
+
+Composition, embedding and interfaces provide powerful tools for Object-Oriented Design in Go. Thinking in terms of inheritance really doesn't work. Trust me, [I tried][translate].
+
+While Idiomatic Go requires a change in thinking, I am pleasantly surprised with how simple & concise Go code can be, when using Go's object model as intended.
+
+
+[read]: /poodr
 [poodr]: http://www.poodr.info/
 [composition]: http://talks.golang.org/2012/splash.article#TOC_15.
 
+[translate]: https://github.com/nathany/go-poodr/
 [GitHub]: https://github.com/nathany/go-poodr/blob/master/chapter8/parts3.go
 
+[embedding]: http://golang.org/doc/effective_go.html#embedding
+[builtin]: http://golang.org/pkg/builtin/
+[composite literals]: http://golang.org/doc/effective_go.html#composite_literals
+
+[forwardable]: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/forwardable/rdoc/Forwardable.html
