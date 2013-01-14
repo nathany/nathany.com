@@ -1,7 +1,6 @@
 Date: 2013 January 14
 Summary: Composition not inheritance, polymorphism through interfaces, and packages for namespacing.
 Keywords: golang, OOD, Object Oriented Design, Go, composition, interfaces
-Flags: draft
 
 # Go Object Oriented Design
 
