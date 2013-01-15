@@ -11,7 +11,7 @@ gem 'rack-rewrite'
 gem 'memcachier'
 gem 'dalli'
 gem 'rack-cache'
-gem 'oink'
+# gem 'oink'
 
 # gem (RUBY_VERSION =~ /^1.9/) ? 'ruby-debug19': 'ruby-debug'
 

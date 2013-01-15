@@ -3,7 +3,7 @@ require 'bundler/setup'
 
 Bundler.require(:default)
 
-use(Oink::Middleware, :instruments => :memory, :logger => Hodel3000CompliantLogger.new(STDOUT))
+# use(Oink::Middleware, :instruments => :memory, :logger => Hodel3000CompliantLogger.new(STDOUT))
 
 # caching in production
 if ENV['RACK_ENV'] == "production"
