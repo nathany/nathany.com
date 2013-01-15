@@ -20,7 +20,7 @@ There is [no inheritance][composition] in Go. Forget about *is-a* relationships 
 
 Having recently [read][] through [Practical Object-Oriented Programming in Ruby][poodr], I decided to [translate][] the examples to Go.
 
-Chapter 6 presents a simple problem. A mechanic needs to know which spare parts to bring on a bike trip, depending on which bikes have been rented. The problem can be solved using classical inheritance, where MountainBike and RoadBike are specializations of a Bicycle base class. Chapter 8 reworks the same example to use composition instead. I'm quite happy with how well this version [translated to Go][GitHub]. Let's take a look.
+Chapter 6 presents a simple problem. A mechanic needs to know which spare parts to bring on a bike trip, depending on which bikes have been rented. The problem can be solved using classical inheritance, where MountainBike and RoadBike are specializations of a Bicycle base class. Chapter 8 reworks the same example to <mark>use composition instead</mark>. I'm quite happy with how well this version [translated to Go][GitHub]. Let's take a look.
 
 ### Packages
 
@@ -30,7 +30,7 @@ package main
 import "fmt"
 ```
 
-Packages provide a namespace. The `main` package is where a program begins, and the `fmt` package provides string formatting functions.
+Packages provide a namespace. The `main()` function of the `main` package is where a program begins. The `fmt` package provides string formatting functions.
 
 
 ### Types
@@ -43,7 +43,7 @@ type Part struct {
 }
 ```
  
-We define a new type named `Part`. This structure is very much like a C struct.
+We define a new type named Part. This structure is very much like a C struct.
  
 ```go
 type Parts []Part
@@ -68,7 +68,7 @@ func (parts Parts) Spares() (spares Parts) {
 
 A method declaration in Go is just like a function, except it has an <mark>explicit receiver</mark>, declared immediately after `func`. This function takes advantage of named return variables, pre-initializing spares for us.
 
-The method body is fairly straightforward. We iterate over parts, ignoring the index position (`_`), and filtering the parts to return. `Append` mutates spares, but it may need to allocate and return a larger slice. 
+The method body is fairly straightforward. We iterate over parts, ignoring the index position (`_`), and filtering the parts to return. The `append` [builtin][] mutates spares, but it may need to allocate and return a larger slice. 
 
 This code isn't nearly as elegant as `select` in Ruby. A functional filter is possible in Go, it just isn't [builtin][].
 
@@ -83,7 +83,7 @@ type Bicycle struct {
 
 Bicycle is *composed of* a Size and Parts. By not specifying a named field for Parts, we make use of [embedding][]. This provides *automatic delegation* with no further ceremony, eg. `bike.Spares()` and `bike.Parts.Spares()` are equivalent.
 
-It is possible to override `Spares()` on Bicycle and still reference the embedded `Parts.Spares()`. This *feels* almost like inheritance, but embedding does **not** provide polymorphism. The receiver of `Spares()` will always be of type Parts, even when called directly from a Bicycle. 
+It is possible to override `Spares()` on Bicycle and still reference the embedded `Parts.Spares()`. This *feels* almost like inheritance, but <mark>embedding does **not** provide polymorphism.</mark> The receiver of `Spares()` will always be of type Parts, even when called directly from a Bicycle. 
 
 Patterns used with classical inheritance, like the template method pattern, aren't suitable for embedding. It's far better to think in terms of composition & delegation ([forwardable][] in *Ruby speak*), as we have here.
 
@@ -122,7 +122,7 @@ func main() {
     recumbentBike := Bicycle{Size: "L", Parts: RecumbentBikeParts}
 ```
 
-Composite literals can also use `field: value` syntax. 
+Composite literals can also use a `field: value` syntax, in which all fields are optional.
 
 The short declaration operator (`:=`) uses <mark>type inference</mark> to initialize roadBike, etc. with the Bicycle type.
 
@@ -155,21 +155,21 @@ We print the the result of calling Spares in the default format:
 }
 ```
 
-Parts behaves like a slice. Getting the length, taking a slice, or combining multiple slices into one all work as they normally do. The equivalent solution in Ruby is to subclass Array, but unfortunately Ruby loses the spares method when two Parts are concatenated.
+Parts behaves like a slice. Getting the length, taking a slice, or combining multiple slices all works as usual. The equivalent solution in Ruby is to subclass Array, but unfortunately Ruby "misplaces" the spares method when two Parts are concatenated.
 
 > "...in a perfect object-oriented language this solution would be exactly correct. Unfortunately, the Ruby language has not quite achieved perfection..." - [Sandi Metz][poodr]
 
-There is a somewhat ugly workaround in Ruby, using `Enumerable`, `forwardable`, and `def_delegators`. Go has no such deficiency. `[]Part` does exactly what we want, and is far more concise.
+There is a somewhat ugly workaround in Ruby, using `Enumerable`, `forwardable`, and `def_delegators`. Go has no such deficiency. `[]Part` does exactly what we want, and it is far more concise.
 
 ## Interfaces
 
-Polymorphism in Go is provided via interfaces. They are satisfied implicitly, unlike Java or C#, so they be defined for code you don't own.
+Polymorphism in Go is provided by interfaces. They are <mark>satisfied implicitly</mark>, unlike Java & C#, so interfaces can be defined for code we don't own.
 
-Compared to <mark>duck typing</mark>, interfaces are statically checked and documented through their declaration, rather than through `respond_to?` tests.
+Compared to <mark>duck typing</mark>, interfaces are statically checked and documented through their declaration, rather than through writing a series of `respond_to?` tests.
 
 > "It is impossible to create an abstraction unknowingly or by accident; in statically typed languages defining an interface is _always_ intentional." - [Sandi Metz][poodr]
 
-For an example, let's say we didn't want to print the NeedsSpare flag of Part. We could write a String method as such:
+For a simple example, let's say we didn't want to print the NeedsSpare flag of Part. We could write a String method as such:
 
 ```go
 func (part Part) String() string {
@@ -207,7 +207,7 @@ type Part struct {
 }
 ```
 
-To apply the <mark>uniform access principle</mark> to Part, we could change the struct definition and provide setter/getter methods such as:
+To apply the <mark>uniform access principle</mark> to the Part type, we could change the struct definition and provide setter/getter methods such as:
 
 ```go
 func (part Part) Name() string {
@@ -219,15 +219,23 @@ func (part *Part) SetName(name string) {
 }
 ```
 
-It is easy to determine if code internal to a package is using the public API or unexported methods, just by looking at the case of the method at the call site.
+It's easy to determine what is using the public API vs. internal fields or methods. Just look at the case of the identifier (eg. `part.Name()` vs. `part.name`).
 
-Go also provides first-class functions and closures, which are commonly used for namespacing in languages like JavaScript.
+Notice that we don't prefix [getters][] with Get (eg. `GetName`). Getters aren't strictly necessary either, especially with strings. When the need arises, we can always change the Name field to use a custom type that satisfies the Stringer interface.
+
+### Finding Some Privacy
+
+Private names (lowerCase) can be accessed from anywhere in the same package, even if the package contains multiple structs across multiple files. If you find this unsettling, packages can also be as small as you need.
+
+It is good practice to use the *(more stable)* public API when possible, even from within the same class in classical languages. This requires convention, which we can certainly apply in Go.
+
+Alternatively, Go provides first-class functions and closures, which are commonly used for namespacing in languages like JavaScript.
 
 ## For Great GOOD
 
-Composition, embedding and interfaces provide powerful tools for Object-Oriented Design in Go. Thinking in terms of inheritance really doesn't work. Trust me, [I tried][translate].
+Composition, embedding and interfaces provide powerful tools for Object-Oriented Design in Go. Thinking in terms of inheritance *really* doesn't work. Trust me, [I tried][translate].
 
-While Idiomatic Go requires a change in thinking, I am pleasantly surprised with how simple & concise Go code can be, when using Go's object model as intended.
+While Idiomatic Go requires a change in thinking, I am pleasantly surprised with how simple & concise Go code can be, when playing to the strengths of Go's object model.
 
 
 [read]: /poodr
@@ -240,5 +248,6 @@ While Idiomatic Go requires a change in thinking, I am pleasantly surprised with
 [embedding]: http://golang.org/doc/effective_go.html#embedding
 [builtin]: http://golang.org/pkg/builtin/
 [composite literals]: http://golang.org/doc/effective_go.html#composite_literals
+[getters]: http://golang.org/doc/effective_go.html#Getters
 
 [forwardable]: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/forwardable/rdoc/Forwardable.html
