@@ -229,8 +229,6 @@ Private names (lowerCase) can be accessed from anywhere in the same package, eve
 
 It is good practice to use the *(more stable)* public API when possible, even from within the same class in classical languages. This requires convention, which we can certainly apply in Go.
 
-Alternatively, Go provides first-class functions and closures, which are commonly used for namespacing in languages like JavaScript.
-
 ## For Great GOOD
 
 Composition, embedding and interfaces provide powerful tools for Object-Oriented Design in Go. Thinking in terms of inheritance *really* doesn't work. Trust me, [I tried][translate].
