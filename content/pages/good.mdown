@@ -83,7 +83,7 @@ type Bicycle struct {
 
 Bicycle is *composed of* a Size and Parts. By not specifying a named field for Parts, we make use of [embedding][]. This provides *automatic delegation* with no further ceremony, eg. `bike.Spares()` and `bike.Parts.Spares()` are equivalent.
 
-It is possible to override `Spares()` on Bicycle and still reference the embedded `Parts.Spares()`. This *feels* almost like inheritance, but <mark>embedding does **not** provide polymorphism.</mark> The receiver of `Spares()` will always be of type Parts, even when called directly from a Bicycle. 
+If we were to add a `Spares()` method to Bicycle, it would take precedence, but we could still reference the embedded `Parts.Spares()`. This *feels* almost like inheritance, but <mark>embedding does **not** provide polymorphism.</mark> The receiver for methods on Parts will always be of type Parts, even when delegated through Bicycle. 
 
 Patterns used with classical inheritance, like the template method pattern, aren't suitable for embedding. It's far better to think in terms of composition & delegation ([forwardable][] in *Ruby speak*), as we have here.
 
