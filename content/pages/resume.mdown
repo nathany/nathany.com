@@ -13,7 +13,7 @@ The following positions encompass my career as a **developer**. Forays into proj
 
 ### Jobber (October 2012 - present; Edmonton, AB)
 
-Jobber is a new business management application targeted at field service companies. We endeavour to be a one-stop shop, offering invoicing, scheduling and a variety of (industry specific) add-ons. Thus far I have worked on the timesheets add-on, performance optimizations, and 
+Jobber is a new business management application targeted at field service companies. We endeavour to be a one-stop shop, offering invoicing, scheduling and a variety of (industry specific) add-ons.
 
 Tools:
 
