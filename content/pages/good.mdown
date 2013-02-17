@@ -49,7 +49,7 @@ We define a new type named Part. This structure is very much like a C struct.
 type Parts []Part
 ```
 
-The Parts type is a *slice* of parts. Slices are dynamically resizable arrays, and are quite common in Go.
+The Parts type is a *slice* of Part objects. Slices are dynamically resizable arrays, and are quite common in Go.
 
 We can declare methods on any type, so we don't need to wrap `[]Part` in a struct. This means Parts can have <mark>all the behavior of slices, plus our own custom behavior.</mark>
 
