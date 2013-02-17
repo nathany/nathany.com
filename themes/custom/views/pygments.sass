@@ -1,114 +1,30 @@
 .highlight
   background: #f6f6f6
 
+  /* ?
   .hll
     background-color: #ffffcc
 
-  /* Comment
-  .c
-    color: #8f5902
-    font-style: italic
+  /* Token & Text
+
+  /* Text.Whitespace
+  .w
+    color: #f8f8f8
+    text-decoration: underline
 
   /* Error
   .err
     color: #a40000
     border: 1px solid #ef2929
 
-  /* Generic
-  .g
-    color: black
-
-  /* Keyword
-  .k
-    color: #204a87
-    font-weight: bold
-
-  /* Literal
-  .l
-    color: black
-
-  /* Name
-  .n
-    color: black
-
-  /* Operator
-  .o
-    color: #ce5c00
-    font-weight: bold
-
   /* Other
   .x
     color: black
 
-  /* Punctuation
-  .p
-    color: #000000
-    font-weight: bold
 
-  /* Comment.Multiline
-  .cm
-    color: #8f5902
-    font-style: italic
-
-  /* Comment.Preproc
-  .cp
-    color: #8f5902
-    font-style: italic
-
-  /* Comment.Single
-  .c1
-    color: #8f5902
-    font-style: italic
-
-  /* Comment.Special
-  .cs
-    color: #8f5902
-    font-style: italic
-
-  /* Generic.Deleted
-  .gd
-    color: #a40000
-
-  /* Generic.Emph
-  .ge
-    color: #000000
-    font-style: italic
-
-  /* Generic.Error
-  .gr
-    color: #ef2929
-
-  /* Generic.Heading
-  .gh
-    color: #000080
-    font-weight: bold
-
-  /* Generic.Inserted
-  .gi
-    color: #00a000
-
-  /* Generic.Output
-  .go
-    color: #000000
-    font-style: italic
-
-  /* Generic.Prompt
-  .gp
-    color: #8f5902
-
-  /* Generic.Strong
-  .gs
-    color: #000000
-    font-weight: bold
-
-  /* Generic.Subheading
-  .gu
-    color: #800080
-    font-weight: bold
-
-  /* Generic.Traceback
-  .gt
-    color: #a40000
+  /* Keyword
+  .k
+    color: #204a87
     font-weight: bold
 
   /* Keyword.Constant
@@ -141,18 +57,10 @@
     color: #204a87
     font-weight: bold
 
-  /* Literal.Date
-  .ld
+
+  /* Name
+  .n
     color: black
-
-  /* Literal.Number
-  .m
-    color: #0000cf
-    font-weight: bold
-
-  /* Literal.String
-  .s
-    color: #4e9a06
 
   /* Name.Attribute
   .na
@@ -161,6 +69,10 @@
   /* Name.Builtin
   .nb
     color: #204a87
+
+  /* Name.Builtin.Pseudo
+  .bp
+    color: #3465a4
 
   /* Name.Class
   .nc
@@ -214,35 +126,31 @@
     color: #000000
     font-weight: bold
 
-  /* Operator.Word
-  .ow
-    color: #204a87
-    font-weight: bold
+  /* Name.Variable.Class
+  .vc
+    color: black
 
-  /* Text.Whitespace
-  .w
-    color: #f8f8f8
-    text-decoration: underline
+  /* Name.Variable.Global
+  .vg
+    color: black
 
-  /* Literal.Number.Float
-  .mf
-    color: #0000cf
-    font-weight: bold
+  /* Name.Variable.Instance
+  .vi
+    color: black
 
-  /* Literal.Number.Hex
-  .mh
-    color: #0000cf
-    font-weight: bold
 
-  /* Literal.Number.Integer
-  .mi
-    color: #0000cf
-    font-weight: bold
+  /* Literal
+  .l
+    color: black
 
-  /* Literal.Number.Oct
-  .mo
-    color: #0000cf
-    font-weight: bold
+  /* Literal.Date
+  .ld
+    color: black
+
+
+  /* Literal.String
+  .s
+    color: #4e9a06
 
   /* Literal.String.Backtick
   .sb
@@ -288,24 +196,128 @@
   /* Literal.String.Symbol
   .ss
     color: #4e9a06
+ 
 
-  /* Name.Builtin.Pseudo
-  .bp
-    color: #3465a4
+  /* Literal.Number
+  .m
+    color: #0000cf
+    font-weight: bold
 
-  /* Name.Variable.Class
-  .vc
-    color: black
+  /* Literal.Number.Float
+  .mf
+    color: #0000cf
+    font-weight: bold
 
-  /* Name.Variable.Global
-  .vg
-    color: black
+  /* Literal.Number.Hex
+  .mh
+    color: #0000cf
+    font-weight: bold
 
-  /* Name.Variable.Instance
-  .vi
-    color: black
+  /* Literal.Number.Integer
+  .mi
+    color: #0000cf
+    font-weight: bold
 
   /* Literal.Number.Integer.Long
   .il
     color: #0000cf
+    font-weight: bold
+
+  /* Literal.Number.Oct
+  .mo
+    color: #0000cf
+    font-weight: bold 
+      
+
+  /* Operator
+  .o
+    color: #ce5c00
+    font-weight: bold
+
+  /* Operator.Word
+  .ow
+    color: #204a87
+    font-weight: bold
+
+
+  /* Punctuation
+  .p
+    color: #000000
+    font-weight: bold
+
+
+  /* Comment
+  .c
+    color: #8f5902
+    font-style: italic
+
+  /* Comment.Multiline
+  .cm
+    color: #8f5902
+    font-style: italic
+
+  /* Comment.Preproc
+  .cp
+    color: #8f5902
+    font-style: italic
+
+  /* Comment.Single
+  .c1
+    color: #8f5902
+    font-style: italic
+
+  /* Comment.Special
+  .cs
+    color: #8f5902
+    font-style: italic
+
+
+  /* Generic
+  .g
+    color: black
+
+  /* Generic.Deleted
+  .gd
+    color: #a40000
+
+  /* Generic.Emph
+  .ge
+    color: #000000
+    font-style: italic
+
+  /* Generic.Error
+  .gr
+    color: #ef2929
+
+  /* Generic.Heading
+  .gh
+    collar: #000080
+    font-weight: bold
+
+  /* Generic.Inserted
+  .gi
+    color: #00a000
+
+  /* Generic.Output
+  .go
+    color: #000000
+    font-style: italic
+
+  /* Generic.Prompt
+  .gp
+    color: #8f5902
+
+  /* Generic.Strong
+  .gs
+    color: #000000
+    font-weight: bold
+
+  /* Generic.Subheading
+  .gu
+    color: #800080
+    font-weight: bold
+
+  /* Generic.Traceback
+  .gt
+    color: #a40000
     font-weight: bold
