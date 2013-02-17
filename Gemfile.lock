@@ -1,19 +1,17 @@
 GIT
-  remote: git://github.com/gma/nesta.git
-  revision: 1e91aae0dc99cb1e23ffcfa1be22b290522cbc40
+  remote: git://github.com/nathany/nesta.git
+  revision: 6d3f1e1cf0aebbe1b30ec243aff44f2d4fbf376d
+  branch: markup-options
   specs:
     nesta (0.9.13)
-      RedCloth (~> 4.2)
       haml (~> 3.1)
       rack (~> 1.3)
-      rdiscount (~> 1.6)
       sass (~> 3.1)
       sinatra (~> 1.3)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.9)
     coderay (1.0.8)
     columnize (0.3.6)
     dalli (2.6.2)
@@ -66,7 +64,6 @@ GEM
     rb-fsevent (0.9.3)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
-    rdiscount (1.6.8)
     redcarpet (2.2.2)
     sass (3.2.5)
     sinatra (1.3.4)
