@@ -235,8 +235,9 @@ Composition, embedding and interfaces provide powerful tools for Object-Oriented
 
 While Idiomatic Go requires a change in thinking, I am pleasantly surprised with how simple & concise Go code can be, when playing to the strengths of Go's object model.
 
-*Comment on [Go+][], [Hacker News][HN], [reddit][], or the [Go Nuts mailing list][gonuts].*
+*Comment on [Go+][], [Hacker News][HN], [reddit][], [LinkedIn][], or the [Go Nuts mailing list][gonuts].*
 
+[LinkedIn]: http://lnkd.in/mxNfUb
 [Go+]: https://plus.google.com/104313268939103200754/posts/Q59rppGdyUR
 [HN]: http://news.ycombinator.com/item?id=5058678
 [reddit]: http://www.reddit.com/r/golang/comments/16lli8/go_object_oriented_design/
