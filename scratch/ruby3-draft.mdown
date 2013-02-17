@@ -1,0 +1,89 @@
+Summary: Hopes and dreams for Ruby.
+Flags: draft
+
+Brian's talk covers a range of topics, including encodings, refinements, concurrency, and cleaning up the standard library.
+
+
+
+## Encodings
+
+strings, symbols, regular expressions
+
+on any object
+implementation detail
+
+Han unification
+
+discussed in the dark, thrust upon them
+
+[unicode]
+[unicode]: http://unspecified.wordpress.com/2012/04/19/the-importance-of-language-level-abstract-unicode-strings/
+
+
+http://pybites.blogspot.ca/2012/09/python-33-is-my-favorite-python-release.html
+
+## Refinements
+
+"I've heard RSpec used as a main example of a library that could really benefit from refinements... we need to maintain support for 1.8.7, 1.9.2 and 1.9.3 for as long as its common for gem authors to support those versions... we won't be in a position to use refinements for many years."
+
+https://bugs.ruby-lang.org/issues/4085#note-186
+[Myron Marston](https://twitter.com/myronmarston)
+
+
+## Concurrency
+
+[Tony Arcieri's](https://twitter.com/bascule) [Celluloid](http://celluloid.io/)
+
+memory model, extension API
+
+cleaning up the standard library
+
+(keyword arguments)
+
+Erlang is older than Perl.
+
+
+
+"I'd rather ask you guys to propose and discuss a future standard concurrency model."
+
+
+"This is an incredibly important discussion."
+http://technicae.cogitat.io/2012/12/async-in-python-3.html
+
+
+
+
+
+## Ruby 3
+
+[Q & A with Yukihrio 'Matz' Matsumoto][matz_talk]
+[matz_talk]: http://www.youtube.com/watch?v=B7vCuNaqT7k
+
+
+http://kresimirbojcic.com/2012/08/23/things-to-look-forward-to-in-ruby-2-dot-0.html
+
+
+global regex variables
+maybe legacy C API, every C extension is rewritten
+maybe a big addition to standard libraries
+
+language compatibility as much as possible
+
+
+Less Not More
+
+caveats
+
+2008, expectation ... five years
+
+
+
+
+immutable collections
+https://github.com/harukizaemon/hamster
+persistent - Maglev
+
+comprehension
+
+multiprocess
+Fibres
