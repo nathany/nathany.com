@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '1.9.3'
 
-gem 'nesta'
+gem 'nesta', github: 'gma/nesta'
 gem 'redcarpet'
 gem 'pygments.rb'
 
@@ -20,6 +20,7 @@ group :development do
   gem 'pry'
   gem 'pry-debugger'
   gem 'foreman'
+  gem 'mr-sparkle'
 end
 
 group :production do
