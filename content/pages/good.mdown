@@ -85,7 +85,7 @@ Bicycle is *composed of* a Size and Parts. By not specifying a named field for P
 
 If we were to add a `Spares()` method to Bicycle, it would take precedence, but we could still reference the embedded `Parts.Spares()`. This *feels* almost like inheritance, but <mark>embedding does **not** provide polymorphism.</mark> The receiver for methods on Parts will always be of type Parts, even when delegated through Bicycle. 
 
-Patterns used with classical inheritance, like the template method pattern, aren't suitable for embedding. It's far better to think in terms of composition & delegation ([forwardable][] in *Ruby speak*), as we have here.
+Patterns used with classical inheritance, like the template method pattern, aren't suitable for embedding. It's far better to think in terms of composition & delegation, as we have here.
 
 
 ### Composite Literals
@@ -159,7 +159,7 @@ Parts behaves like a slice. Getting the length, taking a slice, or combining mul
 
 > "...in a perfect object-oriented language this solution would be exactly correct. Unfortunately, the Ruby language has not quite achieved perfection..." - [Sandi Metz][poodr]
 
-There is a somewhat ugly workaround in Ruby, using `Enumerable`, `forwardable`, and `def_delegators`. Go has no such deficiency. `[]Part` does exactly what we want, and it is far more concise.
+There is a somewhat ugly workaround in Ruby, using `Enumerable`, `forwardable`, and `def_delegators`. Go has no such deficiency. `[]Part` does exactly what we want, and it is far more concise (Update: Ruby's `SimpleDelegator` looks a bit nicer).
 
 ## Interfaces
 
@@ -254,7 +254,5 @@ While Idiomatic Go requires a change in thinking, I am pleasantly surprised with
 [builtin]: http://golang.org/pkg/builtin/
 [composite literals]: http://golang.org/doc/effective_go.html#composite_literals
 [getters]: http://golang.org/doc/effective_go.html#Getters
-
-[forwardable]: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/forwardable/rdoc/Forwardable.html
 
 [filter]: https://gobyexample.com/collection-functions
