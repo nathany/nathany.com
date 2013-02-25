@@ -68,9 +68,9 @@ func (parts Parts) Spares() (spares Parts) {
 
 A method declaration in Go is just like a function, except it has an <mark>explicit receiver</mark>, declared immediately after `func`. This function takes advantage of named return variables, pre-initializing spares for us.
 
-The method body is fairly straightforward. We iterate over parts, ignoring the index position (`_`), and filtering the parts to return. The `append` [builtin][] may need to allocate and return a larger slice, as we didn't preallocate its capacity. 
+The method body is fairly straightforward. We iterate over parts, ignoring the index position (`_`), filtering the parts to return. The `append` [builtin][] may need to allocate and return a larger slice, as we didn't preallocate its capacity.
 
-This code isn't nearly as elegant as `select` in Ruby. A functional filter is possible in Go, it just isn't [builtin][].
+This code isn't nearly as elegant as `select` in Ruby. A functional filter [is possible in Go][filter], it just isn't [builtin][].
 
 ### Embedding
 
@@ -256,3 +256,5 @@ While Idiomatic Go requires a change in thinking, I am pleasantly surprised with
 [getters]: http://golang.org/doc/effective_go.html#Getters
 
 [forwardable]: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/forwardable/rdoc/Forwardable.html
+
+[filter]: https://gobyexample.com/collection-functions
