@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '1.9.3'
+ruby '2.0.0'
 
 # gem 'nesta', github: 'gma/nesta'
 gem 'nesta', github: 'nathany/nesta', branch: 'fork'
@@ -19,7 +19,7 @@ gem 'rack-cache'
 group :development do
   gem 'racksh'
   gem 'pry'
-  gem 'pry-debugger'
+  # gem 'pry-debugger'
   gem 'foreman'
   gem 'mr-sparkle'
 end
