@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 ruby '1.9.3'
 
 # gem 'nesta', github: 'gma/nesta'
-gem 'nesta', github: 'nathany/nesta', branch: 'markup-options'
+gem 'nesta', github: 'nathany/nesta', branch: 'fork'
 gem 'redcarpet'
 gem 'pygments.rb'
 
