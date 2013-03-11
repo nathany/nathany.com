@@ -5,51 +5,41 @@ Keywords: ruby:1.8, rails:1.0, python:2.5, django:0.96, php:5, zendframework:0.1
 
 # Object Oriented Frameworks for Web Development
 
-I began working on the web in 1997, starting with simple web sites and gradually building more dynamic database-driven web sites, including fairly sophisticated systems for e-commerce and online presence management.
+I began working on the web in 1997, starting with simple web sites and gradually building more dynamic database-driven web sites, including fairly sophisticated systems for e-commerce and online presence management. But **2006** marks _a significant departure_ for me. Despite some experience with C++, Java and Objective-C, it never hit me to go OO on the web.
 
-But 2006 marks _a significant departure_ for me. Until recently, I never heard of <abbr title="model view controller">MVC</abbr>. Despite my hobbyist experience with C++, Java and Objective-C, it never hit me to go OO on the web.
+**Ruby on Rails** got me started. Like every web developer out there, I wanted to learn what the ***hype*** was about. I worked through the depot application in _Agile Web Development with Rails (1st ed.),_ I attended [Canada on Rails][1] in April for some good wholesome indoctrination (well, perhaps [not that wholesome](http://www.flickr.com/photos/planetargon/127984254/))!
 
-**Ruby on Rails** got me started. Like every web developer out there, I wanted to learn what the **hype** was about. I am one of those folks who learned Ruby via the Rails door. Besides working through the depot application in _Agile Web Development with Rails,_ I moved my PHP driven personal site to Rails. I also attended [Canada on Rails][1] for some good wholesome indoctrination (well, perhaps [not that wholesome](http://www.flickr.com/photos/planetargon/127984254/))!
+I moved my personal site to Rails, but I also investigated Zend Framework, to see if it could handle all the routing and database needs that Rails so *gracefully* took care of.
 
-I spent five months developing a framework in ColdFusion 7, learning much about object oriented techniques on the now Adobe-owned platform. I ran into some limitations, and also discovered some jewels of the language.
-
-I investigated Zend Framework for PHP, and as a test began porting my personal site over to see if it could handle all the routing and database needs that Rails so gracefully took care of.
-
-In two months I learned the basics of Python and Django, and wrote two smallish apps for data browsing, PDF generation, both secured with LDAP-based
-authentication.
+In two months I learned the basics of Python and Django, and wrote two smallish apps for data browsing and PDF generation, both secured with LDAP-based authentication.
 
 I'd like to share some of my experiences.
 
 ## Ruby
 
-I began learning [Ruby][3] with “[why's (poignant) guide to Ruby][4]”, and while I found the pacing too slow for an experienced programmer, it did make me realize just how smartly Ruby is _designed_. Looking at the way punctuation is used, each character seemed to be chosen in a way that makes sense (eg. `@` for attribute). Even the convention of consonants being capitalized like Proper Names, and variables being all lowercase. Some things take getting use to -- everything is an object, and blocks can take some time to grasp. But after the initial hurdles, I found Ruby to be both ***a very powerful and elegant language.***
+I began learning [Ruby][3] with "[why's (poignant) guide to Ruby][4]", and while I found the pacing too slow for an experienced programmer, it did make me realize just how smartly Ruby is _designed_. The way punctuation is used, each character seemed to be chosen in a way that makes sense (eg. `@` for attribute). Even the convention of consonants being capitalized like Proper Names, and variables being all lowercase. Some things take getting use to -- everything is an object, and blocks can take some time to grasp. But after the initial hurdles, I found Ruby to be both ***a very powerful and elegant language.***
 
-Matz began developing Ruby in 1993, more than three years after Guido began creating Python. As a more recent language, he had the advantage of incorporating the best of Perl, Python, Lisp and other languages.
+Matz began developing Ruby in 1993, more than three years after Guido began creating Python. He had the advantage of incorporating the best of Perl, Python, Lisp and other languages. On the other hand, Ruby wasn't widely publicized until 1998 (7 years after Python was made public). It still is maturing as far as library support.
 
-As a newer language, one that wasn't widely publicized until 1998 (7 years after Python was made public), it still is maturing as far as library support
-and performance.
+My experiments with **Unicode** were dismaying. Once I determined that I must `require 'jcode'`, I found that string offsets would grab specific bytes from a string, not code points as desired. Since Rubyists can easily revamp the base String class, there may be a solution out there, but certainly the bundled support is less than I expected for a programming language developed in Japan.
 
-Until <abbr title="Yet Another Ruby Virtual machine (vm)">YARV</abbr> is bundled with Ruby, performance is a valid concern. For web applications, the solution is to make good use of page caching, which everyone ought to do anyway, but especially in the case of Ruby on Rails.
-
-My experiments with Unicode were a bit dismaying. Once I determined that I must `require 'jcode'`, I found that string offsets would grab specific bytes from a string, not code points as desired. Since Rubyists can easily revamp the base String class, there may be a solution out there, but certainly the bundled support is less than I expected for a programming language developed in Japan.
+Until <abbr title="Yet Another Ruby Virtual machine (vm)">YARV</abbr> is bundled with Ruby, **performance** is a valid concern. For web applications, the solution is to make good use of page caching, which everyone ought to do anyway, but especially with Ruby on Rails.
 
 ### Ruby on Rails
 
-[Rails][6] is all the hype these days. Not only does it provide a good skeleton to get started, it allows you to avoid writing SQL (for the most part), and ties into prototype and script.acul.us for all the Ajax and Web 2.0 goodness you could want.
+[Rails][6] is all the hype these days. Not only does it provide a good skeleton to get started, it allows you to avoid writing SQL (for the most part), and ties into prototype and script.acul.us for ***all the Ajax and Web 2.0 goodness you could want.***
 
 I am quite happy with the direction that Rails is taking. Matter-of-factly, I had been looking into RESTful web applications and found it reason enough to _not_ use Rails, which was driven by actions on the URL line. So I was very pleased to hear that RESTful design was a big focus of the next release. I also agree with the core focus of Rails -- how the team decides between what is essential and what should be an add-on plugin.
 
-My main concerns with Rails are thread safety and deployment. I can't speak to resource usage of spawning multiple processes vs. multiple threads, so I'm not sure if the lack of thread safety is a big deal! But I must say that getting Ruby and subsequently Rails installed on my Mac and again on TextDrive with Lighttpd was _no small task._
+My main concerns with Rails are thread safety and deployment. I can't speak to the resource usage of spawning multiple processes vs. multiple threads, so I'm not sure if the lack of thread safety is a big deal! But I must say that getting Ruby and subsequently Rails installed on my Mac and again on TextDrive was _no small task._
 
 One problem was the utter number of installers and guides that just weren't current. For localhosting, building from source following [the Hivelogic guide][9] turned out to be the best solution.
 
-There are many different web servers and methods to deploy Rails, and wading through all those options to find one that really works for you is a nightmare. It also sounds a tad more complex to manage a mongrel cluster than to have a mod_python like process on Apache. Yes, we can become server administrators for our Rails apps, but it takes time.
-
-Ruby has more going for it than Rails. There are tools like [Capistrano][12] to help with deployment, and [RSpec][13] is very intriguing for applying *test-first* practices to application design. Both employ _“domain specific languages”_, that is, they hijack Ruby into providing an English like syntax to achieve their ends. Ruby already is very readable, and it is also very flexible, so it is quite suitable for this process.
+Ruby has more going for it than Rails. There are tools like [Capistrano][12] to help with deployment, and [RSpec][13] is very intriguing for applying *test-first* practices to application design. Both employ _"domain specific languages"_, that is, they hijack Ruby into providing an English-like syntax to achieve their ends. Ruby already is very readable, and it is also very flexible, so it is quite suitable for this process.
 
 ## Python
 
-I began learning [Python][] in September 2006 while at Wycliffe Canada. I was a short-term volunteer, so ensuring that what I developed could be maintained was my primary concern. I chose Python because other developers in the organization used it for other tasks. Besides Wycliffe, you'll find Python used in many interesting places:
+I began learning [Python][] in September 2006 while at Wycliffe Canada. I was a short-term volunteer, so ensuring that what I developed would be maintainable was my primary concern. I chose Python because other developers in the organization used it for other tasks. Besides Wycliffe, you'll find Python used in many interesting places:
 
 * Guido van Rossum, the creator of Python, now works at Google. Apparently
 they use it for a fair number of things.
@@ -67,11 +57,11 @@ using a competent editor with Python support (I use [TextMate][]).
 
 With Ruby, Matz wanted to create a language more object oriented than Python, and it is. In fact Python didn't even have classes in the first release. Python is already 17 years old, and that history brings some baggage as well as many benefits.
 
-A major benefit is the Python libraries, which are really quite wonderful. Whether working with the built in support for CSV files or hashing, or using third-party libraries for LDAP or generating PDFs ([reportlab][]), I am always impressed with what Python is capable of. Not only that, Python itself and many of the add-ons are provided as Mac OS X installers, and are easy enough to install with Debian's package manager too.
+A major benefit is the Python libraries, which are really quite wonderful. Whether working with the built in support for CSV files or hashing, or using third-party libraries for LDAP or generating PDFs ([reportlab][]), I am always impressed with what Python is capable of. Not only that, Python has Mac OS X installers, and it's easy enough to install with Debian's package manager too.
 
-When it comes to web development, there are _many_ frameworks for Python. There is something called <abbr title="Web Server Gateway Interface">WSGI</abbr> in Python, that makes it super simple to write your own web framework, and so people have. It is nice to have choices, and I like the friendly community feel. Frameworks like [Pylons][18] tie into other tools like [SQLAlchemy][19], a very competent <abbr title="object-relational mapper">ORM</abbr>.
+When it comes to web development, there are _many_ frameworks for Python. There is something called <abbr title="Web Server Gateway Interface">WSGI</abbr> in Python, that makes it super simple to write your own web framework, and so people have. Frameworks like [Pylons][18] tie into other tools like [SQLAlchemy][19], a very competent <abbr title="object-relational mapper">ORM</abbr>.
 
-But making a choice does take work, and whereas Ruby has a Rails focus and many books on it, many of the frameworks for Python do not have the same level of good educational material.
+It is nice to have choices, but making a choice does take work. Ruby is very focused around Rails and there are many books on it, whereas many of the frameworks for Python do not have the same level of good educational material.
 
 ### Django
 
@@ -93,15 +83,15 @@ One change will be to make the already excellent Unicode support the standard st
 
 I began was playing in [PHP][] 3.x back in 2000. The PHP language may not be as expressive as Ruby or Python, but it is easy to learn. Of course my code was always in *typical PHP fashion* -- procedural and mixing everything together.
 
-One of my experiments was with multibyte (specifically Hebrew) text. PHP's support for Unicode was quite abysmal, which again is surprising, with [Zend][] being based out of Israel. That could change with linguist *Yahoo!* [Andrei Zmievski][27] working on Unicode support for PHP 6. There are even plans to support transliteration!
+One of my experiments was with multibyte (specifically Hebrew) text. PHP's support for Unicode was quite abysmal, which again is surprising, with [Zend][] being based out of Israel. That could change with linguist & *Yahoo!* [Andrei Zmievski][27] working on Unicode support for PHP 6. There are even plans to support transliteration!
 
 What is especially ugly about PHP is the API, which feel like a hodgepodge of libraries from many sources, and to great extent, I suppose it is. Along comes Zend Framework, with the promise of a nice clean object-oriented interface.
 
 ### Zend Framework
 
-This August, I began using [Zend Framework][25], a community project that Zend started up. As an experiment, I _"derailed"_ my personal site by porting it to ZF. At least I tried -- I got the routing working but ran into trouble with the “topic tree” which helps categorize my list of articles. In Rails this is achieved with `acts_as_tree` in the model, and `:include => [:topic]` while retrieving the article list. No such facility in Zend Framework, at least not yet.
+This August, I began using [Zend Framework][25], a community project that Zend started up. As an experiment, I _"derailed"_ my personal site by porting it to ZF. At least I tried -- I got the routing working but ran into trouble with the "topic tree" which helps categorize my list of articles. In Rails this is achieved with `acts_as_tree` in the model, and `:include => [:topic]` while retrieving the article list. No such facility in Zend Framework, at least not yet.
 
-I took a look at Zend Framework again when I was beginning a small project which would generate PDFs. What I found was a pretty nice API that unfortunately didn't support wrapping of text. On the other hand, [reportlab][] for Python was at version 2.0, and not only handled wrapping paragraphs, but also shrinking the font if the text doesn't fit, along with many other features. I also found Python had good built in support for reading in CSV files with line breaks within fields and double-quote mark escaping. While PHP could've worked, Python quickly became my choice for the project.
+I took a look at Zend Framework again when I was beginning a small project which would generate PDFs. What I found was a pretty nice API that unfortunately didn't support wrapping of text. On the other hand, [reportlab][] for Python was at version 2.0, and not only handled wrapping paragraphs, but also shrinking the text to fit, along with many other features. I also found Python had good built in support for reading in CSV files with line breaks within fields and double-quote mark escaping. While PHP could've worked, Python quickly became my choice for the project.
 
 The problem was that Zend Framework was still fairly young (version 0.15). It would be a great project to get involved in, but at the time I wanted to focus on my own project, not on building frameworks.
 
@@ -111,7 +101,7 @@ All said, I have learned a great deal from this years' foray into web
 frameworks. I now have the knowledge to choose the best tool for the job from
 a wider range of possibilities. 
 
-If left to myself, I will likely focus on Ruby on Rails with plans of starting _a new project_. The 2nd edition of [Agile Web Development with Rails][33] is nearly out of beta. Reading through that should provide a good refresher, and fill me in with all the new developments.
+If left to myself, I will likely focus on Ruby on Rails. The 2nd edition of [Agile Web Development with Rails][33] is nearly out of beta. Reading through that should provide a good refresher, and fill me in with all the new developments.
 
 Regardless of which tools and projects I end up working on, I'm very much
 looking forward to improving my development practices. That means ***object-
