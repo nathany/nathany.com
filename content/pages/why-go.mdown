@@ -12,7 +12,7 @@ Google announced a new systems programming language to the world on November 10t
 
 Alongside slices and maps of _very_ high level languages, Go has structs and pointers (the good parts) commonly associated with C. **Duck typing** is central to Go's unique object model, unlike any compiled language I am aware of.
 
-Go is an interesting breed of static and dynamic programming languages, designed for systems programming. As Mark Summerfield declares in his recently published book, "Go is closer in spirit to C than to any other language," - [Programming in Go](http://www.informit.com/store/product.aspx?isbn=0321774639).
+Go is an interesting breed of static and dynamic programming languages, designed for systems programming. As Mark Summerfield declares in his recently published book, "Go is closer in spirit to C than to any other language," - [Programming in Go](http://www.informit.com/store/programming-in-go-creating-applications-for-the-21st-9780321774637).
 
 As a Rubyist or Pythonista, what would warrant a step down the _high level language ladder?_ Performance is an obvious reason, never needing to use an FFI to C for performance alone is certainly a win. Perhaps less obvious, but just as valuable, is simplicity.
 
@@ -44,6 +44,6 @@ Certainly the Go ecosystem will continue to grow, but depending on the project, 
 
 Some people wonder whether they should learn Go if they aren't seeing a number of employment opportunities. Firstly, it's always good to learn and stretch your mind. Secondly, I learned Ruby on Rails in 2006, before I could find any jobs using it, but now I've been using it full-time for several years.
 
-If you're starting out, I'd recommend thinking up a simple project that you can accomplish in a few days. Over the 2011 Christmas break, I read through the roughcut of [Go Programming Language Phrasebook](http://www.informit.com/store/product.aspx?isbn=013291901X) and wrote a web scraper. While thinking about pointers was a _blast from the past_, I found that I really liked the language. The best way to know if you'll like Go is to dive in and get some first-hand experience.
+If you're starting out, I'd recommend thinking up a simple project that you can accomplish in a few days. Over the 2011 Christmas break, I read through the roughcut of [Go Programming Language Phrasebook](http://www.informit.com/store/go-programming-language-phrasebook-9780132919012) and wrote a web scraper. While thinking about pointers was a _blast from the past_, I found that I really liked the language. The best way to know if you'll like Go is to dive in and get some first-hand experience.
 
 

@@ -181,7 +181,7 @@ Fortunately, Ruby's Lisp heritage allows the savvy Rubyist to extend Ruby's sema
 
 Perhaps one day we'll see _Ruby 3.0_ remove the misfeatures that trip up newcomers. Until then, do like you do in JavaScript, and use the [good parts][good_parts].
 
-[nunemaker]: http://railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/
+[nunemaker]: http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/
 [gist]: https://gist.github.com/313605#file-gistfile4-rb
 [black]: http://www.manning.com/black2/
 [matz]: http://shop.oreilly.com/product/9780596516178.do
