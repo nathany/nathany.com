@@ -22,7 +22,7 @@ class SyntacticalTemplate < Tilt::RedcarpetTemplate::Redcarpet2
       fenced_code_blocks: true,
       autolink: true,
       strikethrough: true,
-      lax_html_blocks: true,
+      lax_spacing: true,
       space_after_headers: false,
       superscript: true
     }

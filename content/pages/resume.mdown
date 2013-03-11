@@ -3,7 +3,7 @@ Description: From the HTML of yore to the modern web, this is the account of one
 
 # Resumé
 
-Picture it. **Fifteen years ago**, there I was -- stitching together HTML tags -- taming the [T. rex][trex] that roamed the *infobahn.*
+Picture it. **Sixteen years ago**, there I was -- stitching together HTML tags -- taming the [T. rex][trex] that roamed the *infobahn.*
 
 Today I prefer bullet trains. **Ruby on Rails** has been my focus since 2007 -- and the pace of innovation is *unyielding*.  It's fantastic!
 
