@@ -6,11 +6,9 @@ Keywords: rails:1.2
 
 Two years ago I came across a [certain][rails] full-stack web development framework. I bought the books, took in the [propaganda][] and ported my personal website. But it wasn't until this past year that I worked with _Ruby on Rails_ professionally, on a day-to-day basis.
 
-There is no denying that Ruby on Rails represents a **monumental step forward** in web application development. If you're not convinced, just consider all the copy-cat frameworks. David Heinemeier Hansson took Fowler patterns like Supervising Controller (for "[MVC][]") and Active Record and made them accessible to non-Enterprise folk (like myself:-). Prototype & Script.aculo.us are well-integrated, providing training wheels to begin your Ajax-enabled web application without a lot of JavaScript knowledge.
+There is no denying that Ruby on Rails represents a **monumental step forward** in web application development. If you're not convinced, just consider all the copy-cat frameworks. David Heinemeier Hansson took Fowler patterns like Supervising Controller (for "[MVC][]") and Active Record and made them accessible to non-Enterprise folk (like myself:-). Prototype & Script.aculo.us are well-integrated, providing *training wheels* to begin your Ajax-enabled web application without a lot of JavaScript knowledge.
 
-Ruby on Rails had its heyday, but the *hype has moved on* to the likes of Erlang. With a number of Ruby [micro-frameworks][merb] popping up, I don't think I am the only one who has felt disillusioned with Rails.
-
-This is a discussion of some of the pitfalls I experienced, and the issues that keep Rails from being the "perfect" web framework in my books. If you are considering Ruby on Rails, perhaps knowing the issues will serve as road signs before you run into them yourself.
+This is a discussion of some of the frustrations I experienced, and the issues that keep Rails from being the "perfect" web framework in my books. If you are considering Ruby on Rails, perhaps knowing the issues will serve as road signs before you run into them yourself.
 
 ## Learning Curve
 
