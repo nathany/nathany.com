@@ -1,7 +1,7 @@
 Slug: oop-your-webdev
 Date: 2006-11-01 18:00:00 -0600
 Summary: A survey of Rails, Django, and Zend Framework -- bringing OOP to the web.
-Keywords: ruby:1.8, rails:1.0, python:2.5, django:0.96, php:5, zendframework:0.15, coldfusion:7
+Keywords: ruby:1.8, rails:1.0, python:2.5, django:0.96, php:5, zendframework:0.15
 
 # Object Oriented Frameworks for Web Development
 
@@ -105,20 +105,7 @@ I took a look at Zend Framework again when I was beginning a small project which
 
 The problem was that Zend Framework was still fairly young (version 0.15). It would be a great project to get involved in, but at the time I wanted to focus on my own project, not on building frameworks.
 
-### ColdFusion
-
-I've spent six years of my life employed as a ColdFusion programmer, and have even changed jobs to stick with ColdFusion rather than jump to Java.
-
-ColdFusion's tag based syntax is easy for HTML coders, a boon for splitting development between HTML-based designers and web application developers. The developers can do all sorts of backend work, and create a simple set of tags (or taglibs) for the designers to use. But during development, the tag based syntax can feel overly verbose, and the `CFSCRIPT` scripting language is restrictive.
-
-ColdFusion is designed for web application development, so I have worked with it directly most of the time. I have looked at Fusebox and Mach II a little, but there are many other frameworks I have not tried. Since ColdFusion has a single purpose, it can be finely tuned for that purpose. On the other hand, the team behind ColdFusion is charged with providing a language and the related libraries. ColdFusion feels higher level than other languages, which that makes it nice to work with, but in other ways it is limiting. It just depends what you're trying to achieve.
-
-[Adobe ColdFusion][cf] and [NewAtlanta's BlueDragon][29] are commercial, setting CFML apart from the other languages discussed (some of Zend's tools are commercial, but PHP is still free). It fills some needs quite well, but in other cases, a free open source platform provides a more powerful solution.
-
-### So where do I go from here?
-
-
-### In Summary
+## In Summary
 
 All said, I have learned a great deal from this years' foray into web
 frameworks. I now have the knowledge to choose the best tool for the job from
@@ -127,8 +114,8 @@ a wider range of possibilities.
 If left to myself, I will likely focus on Ruby on Rails with plans of starting _a new project_. The 2nd edition of [Agile Web Development with Rails][33] is nearly out of beta. Reading through that should provide a good refresher, and fill me in with all the new developments.
 
 Regardless of which tools and projects I end up working on, I'm very much
-looking forward to improving my development practices. That means object-
-oriented, test-driven code that is easier to maintain.
+looking forward to improving my development practices. That means ***object-
+oriented, test-driven code that is easier to maintain.***
 
    [1]: canada-on-rails
 
@@ -173,10 +160,6 @@ oriented, test-driven code that is easier to maintain.
    [zend]: http://www.zend.com/en/
 
    [27]: http://zmievski.org/
-
-   [cf]: http://www.adobe.com/products/coldfusion-family.html
-
-   [29]: http://www.newatlanta.com/products/bluedragon/index.cfm
 
    [31]: http://routes.groovie.org/
 
