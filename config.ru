@@ -30,6 +30,7 @@ use Rack::Rewrite do
   r301 %r{/developer/djangodash/?}, '/django-dash'
   r301 %r{/developer/vanpyz-from-future/?}, '/vanpyz'
   r301 %r{/developer/(.*)}, '/$1'
+  r301 %r{/upgrading_postgres}, '/upgrading-postgres'
 end
 
 require 'nesta/app'
