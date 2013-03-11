@@ -4,144 +4,72 @@ Keywords: rails
 
 # Canada on Rails
 
-The past two days I attended Canada on Rails, a web development-oriented
-conference in downtown Vancouver. The brilliant minds involved with Ruby on
-Rails gave us the lowdown: the how-to's, the deep thoughts, and a look at many
-of the extensions. Unfortunately a few of the speakers were difficult to hear
-from the back row, possibly new to the spotlight and lacking in confidence.
-Still, there was quite a lot of useful tidbits to glean, making for time well
-spent.
+The past two days I attended Canada on Rails, a web development-oriented conference in downtown Vancouver. The brilliant minds involved with Ruby on Rails gave us the lowdown: the how-to's, the deep thoughts, and a look at many of the extensions. Unfortunately a few of the speakers were difficult to hear from the back row, possibly new to the spotlight and lacking in confidence. Still, there was quite a lot of useful tidbits to glean, making for time well spent.
 
-### Core focus
+## Core focus
 
-<abbr title="David Heinemeier Hansson">DHH</abbr> spoke about moving Web Services stuff (and other unessentials) into
-plugins, as well as making Rails more RESTful. I'm quite happy about that, as
-I ended up reading into the *principles of REST* a few months back when I
-was thinking about learning Rails.
+<abbr title="David Heinemeier Hansson">DHH</abbr> spoke about moving Web Services stuff (and other unessentials) into plugins, as well as making Rails more RESTful. I'm quite happy about that, as I ended up reading into the *principles of REST* a few months back when I was thinking about learning Rails.
 
-Dave's main push was to make Rails core the things most people need most of
-the time, taking care of the low level things in order to ease development.
-That also means staying away from providing an all-in-one solution (forums,
-blogs, wikis, all those applications) in the core, which would then require
-tireless customization to suit your needs.
+Dave's main push was to make Rails core the things most people need most of the time, taking care of the low level things in order to ease development. That also means staying away from providing an all-in-one solution (forums, blogs, wikis, all those applications) in the core, which would then require tireless customization to suit your needs.
 
-### How you slice it
+## How you slice it
 
-In programming, we tend to have layers, low level layers that higher levels
-use. These are horizontal slices.
+In programming, we tend to have layers, low level layers that higher levels use. These are horizontal slices.
 
-Joe O'Brien covered vertical slices - having applications talk to each other.
-Specifically on talking to backend systems by wrapping messages/services in
-whatever envelope need be, such as SOAP. He also discussed when it is
-appropriate to queue things up (asynchronous) using Starbucks and ATM
-examples.
+Joe O'Brien covered vertical slices - having applications talk to each other. Specifically on talking to backend systems by wrapping messages/services in whatever envelope need be, such as SOAP. He also discussed when it is appropriate to queue things up (asynchronous) using Starbucks and ATM examples.
 
-Later on James Adams demonstrated Engines, which expands the Rails plugin
-system in a way that is useful for having vertical slices within a Ruby
-application.
+Later on James Adams demonstrated Engines, which expands the Rails plugin system in a way that is useful for having vertical slices within a Ruby application.
 
-### Best behavior
+## Best behavior
 
-Possibly one of the most interesting talk for me was Behavior Driven
-Development by Dave Astles. He went through RSpec, a framework which
-essentially provides different lingo for unit testing. Writing specifications
-makes test-first feel more natural. Additionally, it was neat to see the use
-of extra dummy methods to make for more English like syntax. In a statement
-like `should.be 5`, the preposition .be is optional, but improves readability.
+Possibly one of the most interesting talk for me was Behavior Driven Development by Dave Astles. He went through RSpec, a framework which essentially provides different lingo for unit testing. Writing specifications makes test-first feel more natural. Additionally, it was neat to see the use of extra dummy methods to make for more English like syntax. In a statement like `should.be 5`, the preposition .be is optional, but improves readability.
 
-Steven Baker also covered testing, and mentioned many useful tools: FlexMocks,
-RCoverage, Insurance, Water, and Selenium.
+Steven Baker also covered testing, and mentioned many useful tools: FlexMocks, RCoverage, Insurance, Water, and Selenium.
 
-### Sound software
+## Sound software
 
-Long time Rubyist, David Black discussed Ruby culture and Rails culture and
-how they fit together. Having a background in film history and literature, and
-a cellist with a Baroque band, he made interesting parallels between music and
-programming. Just as it is possible to make music with any instrument, so it
-is possible to make software with any programming language. Yet there is a
-huge diversity in _sound_, and “people identify very strongly with their
-instruments.”
+Long time Rubyist, David Black discussed Ruby culture and Rails culture and how they fit together. Having a background in film history and literature, and a cellist with a Baroque band, he made interesting parallels between music and programming. Just as it is possible to make music with any instrument, so it is possible to make software with any programming language. Yet there is a huge diversity in _sound_, and “people identify very strongly with their instruments.”
 
-I appreciated David's approach and refined thinking. While Rails is a rich and
-powerful framework, it is the elegance of its Ruby underpinnings that I am
-most attracted to as a programmer.
+I appreciated David's approach and refined thinking. While Rails is a rich and powerful framework, it is the elegance of its Ruby underpinnings that I am most attracted to as a programmer.
 
-Alex Bunardzic continued the discussion, comparing programmers to carpenters
-and <span title="makers of stringed instruments">luthiers</span>. He was saying that what we want is not software cabinets, but
-“software that sings.” Software that breaths, that is sensitive to context and
-embraces simplicity. A good luthier crafts an instrument that reflects the
-owner's personality. Today's software tries to be everything to everyone, and
-has no personality at all.
+Alex Bunardzic continued the discussion, comparing programmers to carpenters and <span title="makers of stringed instruments">luthiers</span>. He was saying that what we want is not software cabinets, but “software that sings.” Software that breaths, that is sensitive to context and embraces simplicity. A good luthier crafts an instrument that reflects the owner's personality. Today's software tries to be everything to everyone, and has no personality at all.
 
-> “A guitar must be at the verge of falling apart if it is to produce the
-sweetest possible song.” — Danny Ferrington
+> “A guitar must be at the verge of falling apart if it is to produce the sweetest possible song.” — Danny Ferrington
 
-### Environment
+## Environment
 
-Speaking of software, Kyle Shank took us through the many features of
-[RadRails][2], an Eclipse based IDE for Rails development. It was quite
-impressive, still I prefer the fast and light feel of [TextMate][3], even if
-it means keeping a Terminal session open.
+Speaking of software, Kyle Shank took us through the many features of [RadRails][], an Eclipse based IDE for Rails development. It was quite impressive, still I prefer the fast and light feel of [TextMate][], even if it means keeping a Terminal session open.
 
-### Snappier web
+## Snappier web
 
-Amy Hoy gave us an introduction to Ajax, and all the easy to use methods in
-Ruby to handle JavaScript things. She talked briefly about prototype and
-script.aculo.us, and Thomas Fuchs the creator of script.aculo.us took over
-from there with a more in-depth discussion of RJS, which is a Ruby template
-that generates JavaScript.
+Amy Hoy gave us an introduction to Ajax, and all the easy to use methods in Ruby to handle JavaScript things. She talked briefly about prototype and script.aculo.us, and Thomas Fuchs the creator of script.aculo.us took over from there with a more in-depth discussion of RJS, which is a Ruby template that generates JavaScript.
 
-One of the most useful things mentioned was [FireBug][4], a Firefox plugin for
-debugging JavaScript and Ajax requests. A list of other tools included
-Tamperdata, Safari Web Inspector and Microsoft Script Debugger.
+One of the most useful things mentioned was [FireBug][], a Firefox plugin for debugging JavaScript and Ajax requests. A list of other tools included Tamperdata, Safari Web Inspector and Microsoft Script Debugger.
 
-While some of the visual effects are mostly eye-candy, these things help
-create snappier and more desktop-like interfaces. Thomas demonstrated Fuxoim,
-an iPhoto inspired tool built with nothing more than Ruby on Rails, HTML/CSS
-and JavaScript.
+While some of the visual effects are mostly eye-candy, these things help create snappier and more desktop-like interfaces. Thomas demonstrated Fuxoim, an iPhoto inspired tool built with nothing more than Ruby on Rails, HTML/CSS and JavaScript.
 
-<abbr title="David Heinemeier Hansson">DHH</abbr> had also demoed pushing changes to the browser (vs. polling) by placing an
-Adobe Flash pixel as a listener on an open socket to your server. This allowed
-an interface to update as itself as other users made changes that affect it.
+<abbr title="David Heinemeier Hansson">DHH</abbr> had also demoed pushing changes to the browser (vs. polling) by placing an Adobe Flash pixel as a listener on an open socket to your server. This allowed an interface to update as itself as other users made changes that affect it.
 
-Michael Buffington gave a humorous presentation on his game Unroll which
-uses the capabilities of script.aculo.us to make a multiplayer web-based game
+Michael Buffington gave a humorous presentation on his game Unroll which uses the capabilities of script.aculo.us to make a multiplayer web-based game
 with no Flash or Shockwave plugins required.
 
-### Magick
+## Magick
 
-Geoffrey Grosenbach demonstrated Gruff, his graph and charting application
-that sits on top of RMagick (which sits on top of ImageMagick). Besides
-showing lots of pretty graphs, Geoff described how to get Rails to cache
-images properly.
+Geoffrey Grosenbach demonstrated Gruff, his graph and charting application that sits on top of RMagick (which sits on top of ImageMagick). Besides showing lots of pretty graphs, Geoff described how to get Rails to cache images properly.
 
-Sebastian Kanthak went over FileColumn, a plugin for handling file uploads,
-with a few built in features for scaling and cropping photos. Unique was its
-ability to handle validation errors, such that files need not be re-uploaded
-if something else in the form post fails.
+Sebastian Kanthak went over FileColumn, a plugin for handling file uploads, with a few built in features for scaling and cropping photos. Unique was its ability to handle validation errors, such that files need not be re-uploaded if something else in the form post fails.
 
-### Argonists
+## Argonists
 
-Robby Russel and Jeremey Voorhis of Rails web-shop [Planet Argon][6] gave
-talks on legacy databases and internationalization respectively. While the
-Rails framework is all about following conventions, Robby demonstrated how it
-is still possible to configure things to work with older schemas.
+Robby Russel and Jeremey Voorhis of Rails web-shop [Planet Argon][argon] gave talks on legacy databases and internationalization respectively. While the Rails framework is all about following conventions, Robby demonstrated how it is still possible to configure things to work with older schemas.
 
-I am quite interested in internationalization, and Jeremy gave us a good dose
-of it as he walked through the Globalize plugin's features. Essentially, it
-offers a means to provide multiple translations for text in your database or
-views. He even demonstrated bidirectional text and web design for Hebrew &
-English. Globalize was developed in Israel by Joshua Harvey.
+I am quite interested in internationalization, and Jeremy gave us a good dose of it as he walked through the Globalize plugin's features. Essentially, it offers a means to provide multiple translations for text in your database or views. He even demonstrated bidirectional text and web design for Hebrew & English. Globalize was developed in Israel by Joshua Harvey.
 
-### Conclusion
+## Conclusion
 
-So that pretty much sums it up. Afterwards they had a party at Vibes, where I
-was able to meet a few Rails peeps, including some of the speakers.
+So that pretty much sums it up. Afterwards they had a party at Vibes, where I was able to meet a few Rails peeps, including some of the speakers.
 
-   [2]: http://www.aptana.com/products/radrails
-
-   [3]: http://macromates.com
-
-   [4]: http://getfirebug.com/
-
-   [6]: http://planetargon.com/
+[RadRails]: http://www.aptana.com/products/radrails
+[TextMate]: http://macromates.com
+[FireBug]: http://getfirebug.com/
+[argon]: http://planetargon.com/
