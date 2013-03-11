@@ -237,6 +237,25 @@ While Idiomatic Go requires a change in thinking, I am pleasantly surprised with
 
 *Comment on [Go+][], [Hacker News][HN], [reddit][], [LinkedIn][], or the [Go Nuts mailing list][gonuts].*
 
+> "So few people realize that classes and inheritance are mostly historic accidents and not real needs for good OOD." - Javier Guerra via Go+
+
+> "This is excellent stuff. It helps who looks for correspondences at least to get started. Some people will inevitably look for OO analogies when learning Go (like I did!), but the official docs avoid them like the plague." - Rodrigo Moraes via Go+
+
+> "Seconding +Rodrigo Moraes here, excellent stuff. I think this would have accelerated my own learning curve, where I've kept looking for classical OO approaches. Thanks for the writeup." - Levi Cook via Go+ and [Twitter](https://twitter.com/levicook/status/291238998867861504)
+
+> "Great article, really enjoyed it! Well structured and example code seems to be good. Will be going over this again tomorrow and adding some of the tricks I wasn't aware of to my toolbox." - codygman via HN
+
+> "This article was great. I come from the land of C#(and Python, js) and this really cleared up a lot of questions I had about how OO works in Go." - TinyGoats via reddit
+
+> "Great post! Having also read POODR, it's great to see how well Go fares in terms of concise-ness and expressiveness against a language like ruby." - Benjamin Moss via LinkedIn
+
+> "Yes, indeed, good post" - Alexander Zhaunerchyk via LinkedIn
+
+> "Enjoyed this one. Still trying to wrap my head around some of it." - Sammy Moshe via LinkedIn
+
+> "A great introduction to the Go language from @nathany: "Go Object Oriented Design" - Pat Shaughnessy via [Twitter](https://twitter.com/pat_shaughnessy/status/290856086695718912)
+
+
 [LinkedIn]: http://lnkd.in/mxNfUb
 [Go+]: https://plus.google.com/104313268939103200754/posts/Q59rppGdyUR
 [HN]: http://news.ycombinator.com/item?id=5058678
