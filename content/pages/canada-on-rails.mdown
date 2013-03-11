@@ -28,13 +28,13 @@ Steven Baker also covered testing, and mentioned many useful tools: FlexMocks, R
 
 ## Sound software
 
-Long time Rubyist, David Black discussed Ruby culture and Rails culture and how they fit together. Having a background in film history and literature, and a cellist with a Baroque band, he made interesting parallels between music and programming. Just as it is possible to make music with any instrument, so it is possible to make software with any programming language. Yet there is a huge diversity in _sound_, and “people identify very strongly with their instruments.”
+Long time Rubyist, David Black discussed Ruby culture and Rails culture and how they fit together. Having a background in film history and literature, and a cellist with a Baroque band, he made interesting parallels between music and programming. Just as it is possible to make music with any instrument, so it is possible to make software with any programming language. Yet there is a huge diversity in _sound_, and "people identify very strongly with their instruments."
 
 I appreciated David's approach and refined thinking. While Rails is a rich and powerful framework, it is the elegance of its Ruby underpinnings that I am most attracted to as a programmer.
 
-Alex Bunardzic continued the discussion, comparing programmers to carpenters and <span title="makers of stringed instruments">luthiers</span>. He was saying that what we want is not software cabinets, but “software that sings.” Software that breaths, that is sensitive to context and embraces simplicity. A good luthier crafts an instrument that reflects the owner's personality. Today's software tries to be everything to everyone, and has no personality at all.
+Alex Bunardzic continued the discussion, comparing programmers to carpenters and <span title="makers of stringed instruments">luthiers</span>. He was saying that what we want is not software cabinets, but "software that sings." Software that breaths, that is sensitive to context and embraces simplicity. A good luthier crafts an instrument that reflects the owner's personality. Today's software tries to be everything to everyone, and has no personality at all.
 
-> “A guitar must be at the verge of falling apart if it is to produce the sweetest possible song.” — Danny Ferrington
+> "A guitar must be at the verge of falling apart if it is to produce the sweetest possible song." -- Danny Ferrington
 
 ## Environment
 

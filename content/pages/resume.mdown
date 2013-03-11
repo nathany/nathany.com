@@ -74,7 +74,7 @@ Tools:
 
 ### Sagebrush Corporation (June 1999 - December 2002; Edmonton, AB)
 
-Following the merger of several related companies, I was brought on to design a new web site, incorporating a searchable catalog for Econo-Clad’s rebound books. This was my first foray into **e-commerce,** and an important transition from mostly static brochure-ware sites to fairly sophisticated web apps (including a portal site and an internal task management tool). My immediate manager was the only other web developer, but we worked among half-a-dozen software developers, whom I was able to glean a lot from. It was also cool that they fed my Apple fanboyism with a ticket to WWDC!
+Following the merger of several related companies, I was brought on to design a new web site, incorporating a searchable catalog for Econo-Clad's rebound books. This was my first foray into **e-commerce,** and an important transition from mostly static brochure-ware sites to fairly sophisticated web apps (including a portal site and an internal task management tool). My immediate manager was the only other web developer, but we worked among half-a-dozen software developers, whom I was able to glean a lot from. It was also cool that they fed my Apple fanboyism with a ticket to WWDC!
 
 Tools:
 
