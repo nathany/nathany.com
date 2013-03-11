@@ -1,7 +1,7 @@
 Date: 2007-11-10 18:44:00
 Summary: Thoughts on Lua and simplicity.
 
-# A Computer Scientist, a Mathematician and an Engineer
+# A Computer Scientist, a Mathematician, and an Engineer
 
 <small>_Crossposted from [lua nova](http://luanova.org/a-computer-scientist-a-mathematician-and-an-engineer/)._</small>
 
