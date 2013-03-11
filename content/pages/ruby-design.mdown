@@ -11,7 +11,7 @@ Like many, **I write Ruby for a living.** Every developer or organization heavil
 
 ## Ruby Design Process
 
-Over the past few years, Ruby implementations have sprung up everywhere. While [MRI][] continues to be the **reference implementation,** we also have [JRuby][], [Rubinius][], [MacRuby][], [RubyMotion][], [MagLev][], [IronRuby][] and [mruby][].
+Over the past few years, Ruby implementations have sprung up everywhere. While [MRI][] continues to be the **reference implementation,** we also have [JRuby][], [Rubinius][], [MacRuby][], [RubyMotion][], [MagLev][], [IronRuby][], [mruby][], and most recently [Topaz][].
 
 Ideally you should be able to run your Ruby code on any implementation. This raises an important question: **What is the definition of Ruby?** If MRI is the definition of Ruby, how can we tell what behaviours are intentional, rather than just [accidents of the implementation][whitespace]? If we, as Rubyists, rely on misfeatures of MRI, every implementation of Ruby has the burden of supporting those behaviours.
 
@@ -19,7 +19,7 @@ At RubyConf 2012, [Brian Ford](https://twitter.com/brixen) gave a talk entitled 
 
 On December 10th, the developers from various Ruby implementations held [a meeting on IRC][IRC] to discuss how the design process can be improved. That this meeting happened at all is a truly beautiful thing.
 
-While no conclusions have been made, Brian [followed up with a blog post][brixen_blog] with [futher discussion in Redmine][brixen_discuss].
+While no conclusions have been made, Brian [followed up with a blog post][brixen_blog] and [further discussion in Redmine][brixen_discuss].
 
 In my opinion, Brian's plan is too far-reaching. Smaller steps are needed.
 
@@ -68,6 +68,16 @@ Thank you for Ruby and its many implementations. Here's to hoping it only gets *
 
 _Comment on [Hacker News][hn]._
 
+> "Some of this has been tried in Ruby before. They're called [RCRs][] (Ruby Change Requests). The experiment...[failed][]." - [halostatue][]
+
+*P.S. Yui NARUSE setup a new Redmine project: [CommonRuby][]. It's a step in the right direction.*
+
+[CommonRuby]: https://bugs.ruby-lang.org/projects/common-ruby
+
+[halostatue]: http://news.ycombinator.com/item?id=4932652
+[RCRs]: http://www.ruby-lang.org/en/news/2003/12/19/new-ruby-change-request-rcr-process/
+[failed]: http://www.ruby-forum.com/topic/148408
+
 [brixen_talk]: http://www.youtube.com/watch?v=BagNfTbXn3w
 [whitespace]: http://www.rubyinside.com/the-split-is-not-enough-whitespace-shenigans-for-rubyists-5980.html
 [linguistics]: http://www.prestonlee.com/2010/08/04/ruby-on-the-perl-origins-of-and-versus-and-and-or/
@@ -80,6 +90,7 @@ _Comment on [Hacker News][hn]._
 [MagLev]: http://maglev.github.com/
 [IronRuby]: http://www.ironruby.net/
 [mruby]: https://github.com/mruby/mruby
+[Topaz]: http://docs.topazruby.com/en/latest/
 
 [IRC]: http://bugs.ruby-lang.org/projects/ruby/wiki/DevelopersMeeting20121210
 [brixen_blog]: http://brixen.io/2012/12/11/a-ruby-design-process
