@@ -146,7 +146,7 @@ This talk touches on "Why Go" but also provides a quick introduction to **who** 
 
 <iframe src="http://player.vimeo.com/video/65704694" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-For more Go talks, I maintain a [Vimeo channel][Vimeo] and a [YouTube playlist][YouTube]. Also, see the Go page on [InfoQ][] and an interview with Robert Griesemer's on [Channel 9][channel9]. Finally, the [Go Wiki][] also provides a list of talks.
+For more Go talks, I maintain a [Vimeo channel][Vimeo] and a [YouTube playlist][YouTube]. Also, see the Go page on [InfoQ][] and an interview with Robert Griesemer on [Channel 9][channel9]. Finally, the [Go Wiki][] also provides a list of talks.
  
 
 [Vimeo]: https://vimeo.com/channels/golang
