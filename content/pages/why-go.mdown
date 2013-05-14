@@ -4,21 +4,21 @@ Summary: Reasons to learn and use the Go programming language. First published i
 
 # Why Go?
 
-Go was [introduced](http://www.youtube.com/watch?v=rKnDgT73v8s) on November 10th, 2009 as a new system programming language with quick build times. Go's excellent tooling, elegant concurrency model and unique approach to object-orientation has captivated the attention of developers from compiled and scripting languages alike.
+Go was [introduced](http://www.youtube.com/watch?v=rKnDgT73v8s) on November 10th, 2009 as a new system programming language with quick build times. Go's excellent tooling, <mark>elegant concurrency model</mark> and unique approach to object-orientation has captivated the attention of developers from compiled and scripting languages alike.
 
 > “Go will be the server language of the future.” - Tobias Lütke, via [Twitter][tobi]
 
-Is there is truth to Tobi's assertion? Before we can evaluate if Go is a panacea for modern web development, let's look at the trends, and consider what "the server language of future" should provide.
+Is there is truth to Tobi's assertion? Before we can evaluate if Go is a panacea for modern web development, let's look at the trends, and consider what <mark>"the server language of future"</mark> should provide.
 
 [tobi]: https://twitter.com/tobi/status/326086379207536640
 
 ### Real-Time Web
 
-Ajax is so 2005.
+<mark>Ajax is so 2005.</mark>
 
 Modern web applications provide real-time collaboration, with [Trello][] ([tech][trello_tech]) and [Asana][] ([tech][asana_tech]) being exemplary.
 
-Some applications employ bolt-on solutions like Pusher. It works in a pinch, but feels analogous to a movie filmed in 3D vs. one with 3D added later.
+Some applications employ bolt-on solutions like Pusher. It works in a pinch, but feels analogous to a movie filmed in 3D vs. a movie with 3D added later.
 
 > "People's expectations of any product they use are set by the *best* experiences they have." - Gene Smith
 
@@ -32,11 +32,11 @@ Go should address the C10K problem, being able to maintain connections with thou
 
 ### Cloud Computing
 
-There is a distinction between *the Cloud* and the data centre underneath it. The cloud offers servers on-demand. Turn a knob to handle traffic, or better yet, take advantage of auto-scaling.
+There is a distinction between *the Cloud* and the data centre underneath it. The cloud offers servers on-demand. Turn a knob to handle traffic, or let auto-scaling turn the knobs for you.
 
-When scaling up or restarting instances, some virtual machines take a long, long time to come to life. Scripting languages often need to load and parse every line of code.
+When scaling up or restarting instances, some virtual machines take a long, long, long time to come to life. Scripting languages often load and parse every line of code.
 
-Go applications should launch quickly so our servers can handle increased demand. Work arounds like idle instances or warmup requests should be unnecessary.
+Go applications should launch quickly so our servers can handle increased demand. Idle instances, warmup requests, or other work arounds should be unnecessary.
 
 ### Multicore Performance
 
@@ -54,7 +54,7 @@ Go should use asynchronous I/O so that our application can interact with any num
 
 ###  The Fat Client Renaissance 
 
-Between native mobile, HTML5 and Web Components, clients are doing more and servers are getting skinny. Modern apps are designed "API first", built with the flexibility to target multiple clients.
+Between native mobile, HTML5 and Web Components, clients are doing more and servers are getting skinny. Modern apps are designed <mark>"API first"</mark>, built with the flexibility to target multiple clients.
 
 Go shouldn't be tied to the *frameworks of yore*, but it should excel at writing APIs, with excellent support for JSON.
 
@@ -71,7 +71,7 @@ Languages like Ruby and Python are afflicted by years of synchronous APIs. These
 
 At least Python is on the right path.
 
-Node.js scores better in this regard, especially with a library like async.js. 
+Node.js scores better, especially when coupled with a library like async.js. 
 
 [Tulip]: http://pyvideo.org/video/1667/keynote-1
 
@@ -99,7 +99,7 @@ To that end, Tony Arcieri's [Celluloid](http://celluloid.io/) steps in. But prov
 
 [matz_talk]: http://www.youtube.com/watch?v=B7vCuNaqT7k
 
-Go channels provide a built-in concurrency primitive as powerful as the actors model.
+Go channels provide a concurrency primitive comparable to the actors model.
 
 ### Static Binaries
 
@@ -109,15 +109,15 @@ Go applications compile quickly and launch immediately.
 
 ## The Best of Both Worlds
 
-So Go is ready for the future, but is it fun? In my opinion, yes!
+So Go is ready for the future, <mark>but is it fun?</mark> In my opinion, yes!
 
 Go provides type inference, hash maps (dictionaries), variable length arrays, methods on any user-defined type, and implicitly satisfied interfaces, all without diverging far from the familiar syntax and semantics of C-like languages.
 
 > "Go is closer in spirit to C than to any other language," - Mark Summerfield, [Programming in Go](http://www.informit.com/store/programming-in-go-creating-applications-for-the-21st-9780321774637).
 
-It compiles quickly without makefiles, integrates with Git, etc. for distributed package management, and reformats code with gofmt. Compilation makes a certain class of tests unnecessary, and code completion works really well with GoSublime or other editors supported by gocode.
+It compiles quickly without makefiles, integrates with Git, etc. for distributed package management, and reformats code with `gofmt`. Compilation makes a certain class of tests unnecessary, and code completion works really well via GoSublime or `gocode`.
 
-Performance critical code can be optimized without the need for C, though FFI is available for using external libraries.
+Performance critical code can be optimized without the need for C, so the fun doesn't need to end. And <mark>we have gophers!</mark> What could be more fun than that?
 
 Go really does provide the best of dynamic and statically compiled languages. It's fun and efficient. 
 
@@ -129,11 +129,11 @@ It's very difficult to change a programming language once widely adopted. Even i
 
 When I look at Ruby, I see C++11 in different clothes. Twenty years of cruft, and still adding features that [nobody needs][refinements].
 
-A new language is a fresh start.
+<mark>A new language is a fresh start.</mark>
 
 Go is designed for clarity. It can be terse so long as the meaning is clear. In Go, ambiguity is avoided, even if it means increased verbosity.
 
-> “Go has been described by several engineers here as a WYSIWYG language. That is, the code does exactly what it says on the page.” Peter Bourgon, [Go at SoundCloud][soundcloud]
+> “Go has been described by several engineers here as a WYSIWYG language. That is, the code does exactly what it says on the page.” - Peter Bourgon, [Go at SoundCloud][soundcloud]
 
 The Go specification is easy to digest, it doesn't feel like mastery is beyond my reach. Simple, orthogonal concepts are highly valuable.
 
@@ -190,8 +190,8 @@ Rubyists are often attached to syntax, whether snake case, single line ifs, or b
 
 Though initially quite neutral, I have come to like a number of things about Go's syntax:
 
-* Indicating privacy with case is a concise way to export specific fields, and makes it easy to see what code is using the public API vs. an internal API.
-* I rather use `camelCase` throughout an application, than have camelCase for interacting with JavaScript libraries and `snake_case` elsewhere.
+* Indicating privacy with case is a concise way to export specific fields, and  it's easy to distinguish between code using the public API vs. an internal API.
+* I rather use `camelCase` throughout a web application than have camelCase for interacting with JavaScript libraries and `snake_case` elsewhere.
 * Initializing (nested) arrays/slices, maps and structs with the same composite literal syntax is actually really convenient.
 * I love having `gofmt` hooked into to my save key. Automatic reformatting saves *so* much time.
 
