@@ -8,7 +8,7 @@ Go was [introduced](http://www.youtube.com/watch?v=rKnDgT73v8s) on November 10th
 
 > “Go will be the server language of the future.” - Tobias Lütke, via [Twitter][tobi]
 
-Is there is truth to Tobi's assertion? Before we can evaluate if Go is a panacea for modern web development, let's look at the trends, and consider what <mark>"the server language of future"</mark> should provide.
+Is there truth to Tobi's assertion? Before we can evaluate if Go is a panacea for modern web development, let's look at the trends, and consider what <mark>"the server language of future"</mark> should provide.
 
 [tobi]: https://twitter.com/tobi/status/326086379207536640
 
@@ -61,7 +61,7 @@ Go shouldn't be tied to the *frameworks of yore*, but it should excel at writing
 
 ## Report Card
 
-So how does Go stack up? Given this is an article on the merits Go, pretty well! Let's compare Go with our favourite scripting languages.
+So how does Go stack up? Given this is an article on the merits of Go, pretty well! Let's compare Go with our favourite scripting languages.
 
 ### Async
 
