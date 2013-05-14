@@ -255,6 +255,7 @@ While Idiomatic Go requires a change in thinking, I am pleasantly surprised with
 
 > "A great introduction to the Go language from @nathany: "Go Object Oriented Design" - Pat Shaughnessy via [Twitter](https://twitter.com/pat_shaughnessy/status/290856086695718912)
 
+> "There is an awesome article written by Nathan Youngman which I highly recommend every beginner should read. It really put many details into perspective for me." - Alejandro Gaviria via [Personal Ramblings](http://mikebeale.blogspot.ch/2012/07/dumping-php-for-go.html)
 
 [LinkedIn]: http://lnkd.in/mxNfUb
 [Go+]: https://plus.google.com/104313268939103200754/posts/Q59rppGdyUR
