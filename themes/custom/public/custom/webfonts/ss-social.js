@@ -1,7 +1,7 @@
 /*
 * Symbolset
 * www.symbolset.com
-* Copyright © 2012 Oak Studios LLC
+* Copyright © 2013 Oak Studios LLC
 *
 * Upload this file to your web server
 * and place this before the closing </body> tag.
@@ -10,7 +10,7 @@
 
 if (/(MSIE [7-9]\.|Opera.*Version\/(10\.[5-9]|(11|12)\.)|Chrome\/([1-9]|10)\.|Version\/[2-4][\.0-9]+ Safari\/|Version\/(4\.0\.[4-9]|4\.[1-9]|5\.0)[\.0-9]+? Mobile\/.*Safari\/|Android [1-2]\.|BlackBerry.*WebKit)/.test(navigator.userAgent) && !/(IEMobile)/.test(navigator.userAgent)) {
 
-  var ss_set={'five hundred pixels':'\uF642','fivehundredpixels':'\uF642','five hundred px':'\uF642','github octocat':'\uF671','stack overflow':'\uF672','fivehundredpx':'\uF642','githuboctocat':'\uF671','stackoverflow':'\uF672','google plus':'\uF613','app dot net':'\uF614','kickstarter':'\uF681','googleplus':'\uF613','foursquare':'\uF690','soundcloud':'\uF6B3','blackberry':'\uF6F4','appdotnet':'\uF614','wordpress':'\uF621','posterous':'\uF623','instagram':'\uF641','pinterest':'\uF650','thumbs up':'\uD83D\uDC4D','microsoft':'\uF6F1','facebook':'\uF610','linkedin':'\uF612','google +':'\uF613','readmill':'\uF652','pinboard':'\uF654','dribbble':'\uF660','envelope':'\u2709','thumbsup':'\uD83D\uDC4D','twitter':'\uF611','google+':'\uF613','app net':'\uF614','blogger':'\uF622','youtube':'\uF630','dropbox':'\uF653','behance':'\uF661','octocat':'\uF671','spotify':'\uF6B1','last fm':'\uF6B2','approve':'\uD83D\uDC4D','windows':'\uF6F2','android':'\uF6F3','appnet':'\uF614','zerply':'\uF615','reddit':'\uF616','tumblr':'\uF620','flickr':'\uF640','svpply':'\uF651','github':'\uF670','paypal':'\uF680','lastfm':'\uF6B2','vimeo':'\uF631','skype':'\uF6A0','email':'\u2709','share':'\uF601','apple':'\uF8FF','yelp':'\uF691','rdio':'\uF6B0','mail':'\u2709','like':'\uD83D\uDC4D','rss':'\uE310'};
+  var ss_set={'five hundred pixels':'\uF642','fivehundredpixels':'\uF642','five hundred px':'\uF642','github octocat':'\uF671','stack overflow':'\uF672','stackoverflow':'\uF672','fivehundredpx':'\uF642','githuboctocat':'\uF671','kickstarter':'\uF681','app dot net':'\uF614','google plus':'\uF613','googleplus':'\uF613','foursquare':'\uF690','soundcloud':'\uF6B3','letterboxd':'\uF632','blackberry':'\uF6F4','delicious':'\uF655','posterous':'\uF623','pinterest':'\uF650','microsoft':'\uF6F1','thumbs up':'\uD83D\uDC4D','telephone':'\uD83D\uDCDE','appdotnet':'\uF614','wordpress':'\uF621','instagram':'\uF641','facebook':'\uF610','thumbsup':'\uD83D\uDC4D','readmill':'\uF652','pinboard':'\uF654','dribbble':'\uF660','envelope':'\u2709','google +':'\uF613','linkedin':'\uF612','twitter':'\uF611','approve':'\uD83D\uDC4D','behance':'\uF661','youtube':'\uF630','blogger':'\uF622','dropbox':'\uF653','octocat':'\uF671','android':'\uF6F3','google+':'\uF613','last fm':'\uF6B2','app net':'\uF614','windows':'\uF6F2','spotify':'\uF6B1','flickr':'\uF640','lastfm':'\uF6B2','zerply':'\uF615','appnet':'\uF614','paypal':'\uF680','tumblr':'\uF620','github':'\uF670','svpply':'\uF651','reddit':'\uF616','share':'\uF601','phone':'\uD83D\uDCDE','apple':'\uF8FF','vimeo':'\uF631','email':'\u2709','steam':'\uF617','quora':'\uF624','500px':'\uF642','skype':'\uF6A0','like':'\uD83D\uDC4D','mail':'\u2709','call':'\uD83D\uDCDE','link':'\uD83D\uDD17','rdio':'\uF6B0','yelp':'\uF691','etsy':'\uF682','vine':'\uF633','rss':'\uE310'};
 
 
   if (typeof ss_icons !== 'object' || typeof ss_icons !== 'object') {
