@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/all.css" />
+  <link rel="stylesheet" href="{{ site.url }}/assets/webfonts/ss-social-regular.css" />
+  <link rel="icon" type="image/x-icon" href="{{ site.url }}/favicon.png" />
+</head>
+<body>
+
+  {% include header.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+  {% include analytics.html %}
+
+</body>
+</html>

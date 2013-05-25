@@ -1,9 +1,10 @@
-Slug: oop-your-webdev
-Date: 2006-11-01 18:00:00 -0600
-Summary: A survey of Rails, Django, and Zend Framework -- bringing OOP to the web.
-Keywords: ruby:1.8, rails:1.0, python:2.5, django:0.96, php:5, zendframework:0.15
-
-# Object Oriented Frameworks for Web Development
+---
+title: Object Oriented Frameworks for Web Development
+date: 2006-11-01
+excerpt: A survey of Rails, Django, and Zend Framework -- bringing OOP to the web.
+tags: ruby:1.8, rails:1.0, python:2.5, django:0.96, php:5, zendframework:0.15
+layout: article
+---
 
 I began working on the web in 1997, starting with simple web sites and gradually building more dynamic database-driven web sites, including fairly sophisticated systems for e-commerce and online presence management. But **2006** marks _a significant departure_ for me. Despite some experience with C++, Java and Objective-C, it never hit me to go OO on the web.
 
@@ -53,7 +54,7 @@ manipulate data. It has a smart design, such as using tuples to allow
 methods to return multiple arguments. With dynamic typing, variables need not be declared, but Python is strongly typed so it does not automatically cast, for example, integers to strings.
 
 Python's indentation takes _no_ getting use to at all, especially if you are
-using a competent editor with Python support (I use [TextMate][]). 
+using a competent editor with Python support (I use [TextMate][]).
 
 With Ruby, Matz wanted to create a language more object oriented than Python, and it is. In fact Python didn't even have classes in the first release. Python is already 17 years old, and that history brings some baggage as well as many benefits.
 
@@ -99,7 +100,7 @@ The problem was that Zend Framework was still fairly young (version 0.15). It wo
 
 All said, I have learned a great deal from this years' foray into web
 frameworks. I now have the knowledge to choose the best tool for the job from
-a wider range of possibilities. 
+a wider range of possibilities.
 
 If left to myself, I will likely focus on Ruby on Rails. The 2nd edition of [Agile Web Development with Rails][33] is nearly out of beta. Reading through that should provide a good refresher, and fill me in with all the new developments.
 
@@ -156,4 +157,4 @@ oriented, test-driven code that is easier to maintain.***
    [33]: http://pragprog.com/book/rails2/agile-web-development-with-rails
 
 [agileweb]: http://pragprog.com/book/rails1/agile-web-development-with-rails
-   
+

@@ -1,8 +1,10 @@
-Date: 2008-02-14 20:07:35 -0600
-Summary: Some frustrations with Rails 1.x which have since been addressed.
-Keywords: rails:1.2
-
-# A Year of Rails Magic
+---
+title: A Year of Rails Magic
+date: 2008-02-14
+excerpt: Some frustrations with Rails 1.x which have since been addressed.
+tags: rails:1.2
+layout: article
+---
 
 Two years ago I came across a [certain][rails] full-stack web development framework. I bought the books, took in the [propaganda][] and ported my personal website. But it wasn't until this past year that I worked with _Ruby on Rails_ professionally, on a day-to-day basis.
 
@@ -85,7 +87,7 @@ Doing a rewrite? Rails will jump start your new project. Unfortunately, it doesn
 
 ## Half A Slice
 
-When it comes to web application **modularity**, there is more than one way you can slice it. Horizontal slices layer on top of each other, typified as your database, your web framework, and web server. 
+When it comes to web application **modularity**, there is more than one way you can slice it. Horizontal slices layer on top of each other, typified as your database, your web framework, and web server.
 
 Your application may also have different parts, perhaps an authentication system or a forum. These are vertical slices, including the views your user sees down to the database interactions of the model. Ruby on Rails is _in no way_ designed with this sort of modularity in mind. Instead, what you get is **plugins**, but plugins themselves only represent _the lower portion of the vertical slice_ (excluding the view). For something small like an authentication system, your plugin may have setup code to copy prefabbed views into the main application. For a larger component, like a forum, you could deploy an entirely separate application and expose RESTful APIs to communicate between the two.
 
@@ -93,7 +95,7 @@ In any sizeable project I've worked on, we've made use of **Rails Engines** whic
 
 Until recently, the tricks Engines performs to make everything work would tie you to a particular version of Rails. Fortunately, as of Rails 2.x *less weird hackery* is necessary.
 
-Some have [contrasted Django's modularity][21] with Ruby on Rails. Since I have done some work with **Django**, I will throw in my two bits. 
+Some have [contrasted Django's modularity][21] with Ruby on Rails. Since I have done some work with **Django**, I will throw in my two bits.
 
 A Django project is made up of one or more apps, each residing in a subfolder. You might consider Django to be a little like the Hierarchical-Model-View-Controller[^1](#1) pattern, where the directory structure provides a hierarchy, each folder containing an MVC triad represented by models, url routes + views, and templates. Django was designed for modularity from the start.
 
@@ -130,7 +132,7 @@ For my latest project, we have a multi-page _form_ where each page loads and sav
 
 Right now pages are independent of each other, so I haven't seen any strange race conditions caused by loading and saving at the same time or out of order. Error handling is a little odd, if the server succeeds at loading the next page, but fails to save, how do I present that? During the course of development, I've wondered if it wouldn't be better to have a single request that could do a load and/or save. Certainly it would be more efficient in terms of number of requests.
 
-Maybe there is another way to implement REST that would work better than the default Rails approach? Other REST implementations I've seen generally use JSON and have a _fatter_ client where the client maintains its own state. 
+Maybe there is another way to implement REST that would work better than the default Rails approach? Other REST implementations I've seen generally use JSON and have a _fatter_ client where the client maintains its own state.
 
 Purists will be quick to indicate that REST should be stateless, with each request being entirely self-contained. That means no server-side sessions. This has benefits with regards to back-button handling, bookmarks and error recovery.
 

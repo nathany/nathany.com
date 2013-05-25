@@ -1,7 +1,9 @@
-Date: 2010 July 13
-Summary: In Ruby, `@@class` variables are not really class variables. This articles takes a look at Java and Python to see how the semantics differ. _Revised 17 December 2012._
-
-# Language Semantics: Class Variables
+---
+title: "Language Semantics: Class Variables"
+date: 2010-07-13
+excerpt: In Ruby, `@@class` variables are not really class variables. This articles takes a look at Java and Python to see how the semantics differ. *Revised 17 December 2012.*
+layout: article
+---
 
 While reading David Black's _[The Well Grounded Rubyist][black]_, I found that Ruby class `@@variables` are not really class variables at all! Apparently they are global to the class hierarchy. Changing a value in the subclass impacts the base classes. Generally speaking, globals and global-like things are _bad._
 

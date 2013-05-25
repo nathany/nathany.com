@@ -1,5 +1,9 @@
-Keywords: resume, cv, curriculum vitae, web development, ruby on rails
-Description: From the HTML of yore to the modern web, this is the account of one developer.
+---
+title: Resumé
+tags: resume, cv, curriculum vitae, web development, ruby on rails
+excerpt: From the HTML of yore to the modern web, this is the account of one developer.
+permalink: /resume/
+---
 
 # Resumé
 
@@ -101,7 +105,7 @@ Tools:
 E-books and tech talks complement courses in computer programming (NRI 1994), linguistics (CanIL 2006) and photography (TWU 2008). To **share** what I'm learning, I frequent [local meetups][yegrb], hackathons and code retreats.
 
 Taking transit keeps me active, and I enjoy hiking and soccer when it's *not freezing* outside, or tea by the fireplace when it is.
- 
+
 _References are available upon request._
 
 [trex]: http://en.wikipedia.org/wiki/Mozilla_(mascot)

@@ -3,15 +3,24 @@ safe: true
 lsi: false
 pygments: true
 timezone: America/Edmonton
-exclude: [archive]
+exclude: ["Gemfile", "Gemfile.lock"]
 
 future: false
-permalink: title
+permalink: :title
 relative_permalinks: false
 
 markdown: redcarpet
 
-redcloth:
-  hard_breaks: true
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - tables
+    - fenced_code_blocks
+    - disable_indented_code_blocks
+    - autolink
+    - strikethrough
+    - lax_spacing
+    - superscript
+    - with_toc_data
 
 gauges_id: 50242f6af5a1f50568000011

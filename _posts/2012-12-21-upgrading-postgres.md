@@ -1,7 +1,9 @@
-Date: 2012 December 21
-Summary: Migrating to Postgres 9.2 takes some command line acrobatics.
-
-# Upgrading Postgres.app
+---
+title: Upgrading Postgres.app
+date: 2012-12-21
+excerpt: Migrating to Postgres 9.2 takes some command line acrobatics.
+layout: article
+---
 
 Heroku recently [unveiled][heroku] support for **Postgres 9.2**, offering performance improvements and several new features. Before migrating our *production* database at [Jobber][], we want to run it in development for a few days.
 
@@ -17,7 +19,7 @@ _These instructions are for upgrading to Version 9.2.2.0 (20). If you have a new
 
 ## Database already exists
 
-My first attempt failed. 
+My first attempt failed.
 
 The new data files already had a `nathany` database (my username), so `pg_upgrade` couldn't create it. I'm sure there are a few ways to solve this problem, depending on whether or not you want to migrate this database or discard it. Let's keep it.
 
@@ -48,9 +50,9 @@ Substitute `nathany` for your username.
 Now we can **quit** Postgres.app and run the upgrade. It requires absolute paths (no ~/ shortcuts). Substitute `nathany` for your username once again.
 
 ``` bash
-pg_upgrade --old-datadir "/Users/nathany/Library/Application Support/Postgres/var-9.1" 
-           --new-datadir "/Users/nathany/Library/Application Support/Postgres/var" 
-           --old-bindir "/Users/nathany/Desktop/Postgres.app/Contents/MacOS/bin" 
+pg_upgrade --old-datadir "/Users/nathany/Library/Application Support/Postgres/var-9.1"
+           --new-datadir "/Users/nathany/Library/Application Support/Postgres/var"
+           --old-bindir "/Users/nathany/Desktop/Postgres.app/Contents/MacOS/bin"
            --new-bindir "/Applications/Postgres.app/Contents/MacOS/bin"
 ```
 
@@ -66,7 +68,7 @@ DROP DATABASE
 nathany=# \q
 ```
 
-When the upgrade completes, it suggests you run: 
+When the upgrade completes, it suggests you run:
 
 ``` bash
 ./analyze_new_cluster.sh
@@ -76,7 +78,7 @@ So do that. And finally, you can delete the old version of Postgres.app. **Phew!
 
 ## That's A Wrap
 
-You can [follow][] Postgres.app on Twitter to find out when you *get to do this all over again. :-)* 
+You can [follow][] Postgres.app on Twitter to find out when you *get to do this all over again. :-)*
 
 Now all I have left to do is find a [_nice_ database client][sequel] for Postgres. It looks like the two new candidates are [Tuples 2][] and [Induction][] (very alpha), though [Navicat][] has been steadily improving as well. Hmm.
 

@@ -1,8 +1,10 @@
-Date: 2006-04-14 18:00:00 -0600
-Summary: Notes from my first real-life experience with the Ruby on Rails community.
-Keywords: rails
-
-# Canada on Rails
+---
+title: Canada on Rails
+date: 2006-04-14
+excerpt: Notes from my first real-life experience with the Ruby on Rails community.
+tags: rails
+layout: article
+---
 
 The past two days I attended Canada on Rails, a web development-oriented conference in downtown Vancouver. The brilliant minds involved with Ruby on Rails gave us the lowdown: the how-to's, the deep thoughts, and a look at many of the extensions. Unfortunately a few of the speakers were difficult to hear from the back row, possibly new to the spotlight and lacking in confidence. Still, there was quite a lot of useful tidbits to glean, making for time well spent.
 
