@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 # gem 'nesta', github: 'gma/nesta'
 gem 'nesta', github: 'nathany/nesta', branch: 'fork'
+# gem 'nesta', :path => '../opensource/nesta'
 gem 'redcarpet'
 gem 'pygments.rb'
 

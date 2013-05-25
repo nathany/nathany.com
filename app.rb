@@ -20,6 +20,7 @@ class SyntacticalTemplate < Tilt::RedcarpetTemplate::Redcarpet2
       no_intra_emphasis: true,
       tables: true,
       fenced_code_blocks: true,
+      disable_indented_code_blocks: true,
       autolink: true,
       strikethrough: true,
       lax_spacing: true,
