@@ -1,30 +1,11 @@
-source 'http://rubygems.org'
-ruby '2.0.0'
+source 'https://rubygems.org'
+ruby '1.9.3'
 
-# gem 'nesta', github: 'gma/nesta'
-gem 'nesta', github: 'nathany/nesta', branch: 'fork'
-# gem 'nesta', :path => '../opensource/nesta'
-gem 'redcarpet'
-gem 'pygments.rb'
-
-gem 'unicorn'
-gem 'rack-contrib' # ResponseHeaders
-gem 'rack-rewrite'
-gem 'memcachier'
-gem 'dalli'
-gem 'rack-cache'
-# gem 'oink'
-
-# gem (RUBY_VERSION =~ /^1.9/) ? 'ruby-debug19': 'ruby-debug'
-
-group :development do
-  gem 'racksh'
-  gem 'pry'
-  # gem 'pry-debugger'
-  gem 'foreman'
-  gem 'mr-sparkle'
-end
-
-group :production do
-  gem 'newrelic_rpm'
-end
+# Jekyll on GitHub Pages
+# https://help.github.com/articles/using-jekyll-with-pages
+gem 'jekyll',     '=1.0.2'
+gem 'liquid',     '=2.5.0'
+gem 'redcarpet',  '=2.2.2'
+# gem 'maruku',     '=0.6.1'
+# gem 'rdiscount',  '=1.6.8'
+# gem 'RedCloth',   '=4.2.9'

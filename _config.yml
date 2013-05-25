@@ -1,0 +1,17 @@
+name: Nathan Youngman
+safe: true
+lsi: false
+pygments: true
+timezone: America/Edmonton
+exclude: [archive]
+
+future: false
+permalink: title
+relative_permalinks: false
+
+markdown: redcarpet
+
+redcloth:
+  hard_breaks: true
+
+gauges_id: 50242f6af5a1f50568000011
