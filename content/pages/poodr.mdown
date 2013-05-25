@@ -72,7 +72,7 @@ Walking through the process is incredibly informative, much more so than only se
 
 I'm really glad to have read [POODR][]. Sandi's writing is eminently practical, giving the reader an OO toolbox to work with, and plenty of sound advice. The small, focused examples really help drive home the concepts.
 
-At ~240 pages, no words are wasted. If you're still not convinced, you can get a flavour for the book by taking <mark>fifty minutes</mark> to watch </cite>[Less - The Path to Better Design][talk]</cite> from Øredev.
+At ~240 pages, no words are wasted. If you're still not convinced, you can get a flavour for the book by watching <cite>[Less - The Path to Better Design][talk]</cite> from Øredev and <cite>[The Magic Tricks of Testing][talk2]</cite> from RubyConf.
 
 [metz]: https://twitter.com/sandimetz
 
@@ -83,3 +83,5 @@ At ~240 pages, no words are wasted. If you're still not convinced, you can get a
 [talk]: https://vimeo.com/53154357
 
 [complect]: http://www.infoq.com/presentations/Simple-Made-Easy
+
+[talk2]: http://www.youtube.com/watch?v=URSWYvyc42M
