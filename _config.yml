@@ -1,13 +1,13 @@
 name: Nathan Youngman
 author: Nathan Youngman
 # url: http://nathany.com
-url: http://127.0.0.1:4000
+# url: http://127.0.0.1:4000
 
 safe: true
 lsi: false
 pygments: true
 timezone: America/Edmonton
-exclude: ["Gemfile", "Gemfile.lock"]
+exclude: ["Gemfile", "Gemfile.lock", "nathany.sublime-project"]
 
 future: false
 permalink: :title
