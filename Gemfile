@@ -9,3 +9,7 @@ gem 'redcarpet',  '=2.2.2'
 # gem 'maruku',     '=0.6.1'
 # gem 'rdiscount',  '=1.6.8'
 # gem 'RedCloth',   '=4.2.9'
+
+gem 'sass'
+gem 'rb-fsevent'
+gem 'foreman'

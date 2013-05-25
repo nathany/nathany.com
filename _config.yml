@@ -7,7 +7,7 @@ safe: true
 lsi: false
 pygments: true
 timezone: America/Edmonton
-exclude: ["Gemfile", "Gemfile.lock", "nathany.sublime-project"]
+exclude: ["Gemfile", "Gemfile.lock", "Procfile", "build.sh", "nathany.sublime-project"]
 
 future: false
 permalink: :title
