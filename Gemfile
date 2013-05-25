@@ -11,5 +11,7 @@ gem 'redcarpet',  '=2.2.2'
 # gem 'RedCloth',   '=4.2.9'
 
 gem 'sass'
-gem 'rb-fsevent'
-gem 'foreman'
+gem 'bourbon'     # bourbon install --path=_sass/
+gem 'neat'
+gem 'rb-fsevent'  # for sass watch on Mac OS X
+gem 'foreman'     # "foreman start" our Procfile

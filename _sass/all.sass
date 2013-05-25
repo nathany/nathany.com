@@ -1,12 +1,8 @@
-@import "normalize.scss"
-@import "colors.sass"
-@import "pygments.sass"
-@import "ss-social-regular.scss"
+@import "normalize"
+@import "bourbon/bourbon", "neat/neat"
 
-// Variables
+// SMACSS
+@import "base", "layout", "states", "themes"
 
-$content-width: 37em
-$border-style: 1px dashed $border-color
-
-// Typography
-
+@import "pygments"
+@import "ss-social-regular"

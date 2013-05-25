@@ -2,3 +2,6 @@
 *.sublime-workspace
 .sass-cache
 _site/
+
+_sass/bourbon
+_sass/neat
