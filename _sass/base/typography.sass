@@ -1,9 +1,11 @@
 body
   font-size: 1.5rem
-  
-h1
-  color: $green
-  
+    
+mark
+  background-color: inherit
+  color: $yellow
+  font-style: italic
+
 blockquote
   font-style: italic
   margin: 0
@@ -19,10 +21,11 @@ blockquote, .highlight
   &:before, &:after
     content: ""
     position: absolute
-    background: $base3
+    z-index: -999
     top: -4px
     bottom: -4px
     width: 9999px
+    background: $base3
     border-top: 4px solid $base2
     border-bottom: 4px solid $base2
   &:before
