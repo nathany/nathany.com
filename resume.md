@@ -3,6 +3,7 @@ title: Resumé
 tags: resume, cv, curriculum vitae, web development, ruby on rails
 excerpt: From the HTML of yore to the modern web, this is the account of one developer.
 permalink: /resume/
+layout: default
 ---
 
 # Resumé
