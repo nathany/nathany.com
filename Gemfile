@@ -14,4 +14,4 @@ gem 'sass'
 gem 'bourbon'     # bourbon install --path=_sass/
 gem 'neat'
 gem 'rb-fsevent'  # for sass watch on Mac OS X
-gem 'foreman'     # "foreman start" our Procfile
+gem 'foreman'     # "sudo foreman start" our Procfile
