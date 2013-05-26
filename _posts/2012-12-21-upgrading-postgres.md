@@ -47,12 +47,12 @@ Substitute `nathany` for your username.
 
 ## Upgrade
 
-Now we can **quit** Postgres.app and run the upgrade. It requires absolute paths (no ~/ shortcuts). Substitute `nathany` for your username once again.
+Now we can **quit** Postgres.app and run the upgrade. It requires absolute paths, so you must substitute `~/` for the path to your user folder (eg. `/Users/nathany/`).
 
 ``` bash
-pg_upgrade --old-datadir "/Users/nathany/Library/Application Support/Postgres/var-9.1"
-           --new-datadir "/Users/nathany/Library/Application Support/Postgres/var"
-           --old-bindir "/Users/nathany/Desktop/Postgres.app/Contents/MacOS/bin"
+pg_upgrade --old-datadir "~/Library/Application Support/Postgres/var-9.1"
+           --new-datadir "~/Library/Application Support/Postgres/var"
+           --old-bindir "~/Desktop/Postgres.app/Contents/MacOS/bin"
            --new-bindir "/Applications/Postgres.app/Contents/MacOS/bin"
 ```
 
