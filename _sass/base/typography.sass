@@ -3,3 +3,33 @@ body
   
 h1
   color: $green
+  
+blockquote
+  font-style: italic
+  margin: 0
+  padding: 1rem 2rem
+
+blockquote, .highlight
+  background-color: $base3
+  position: relative
+  border-top: 4px solid $base2
+  border-bottom: 4px solid $base2
+  
+  /* make background full width */
+  &:before, &:after
+    content: ""
+    position: absolute
+    background: $base3
+    top: -4px
+    bottom: -4px
+    width: 9999px
+    border-top: 4px solid $base2
+    border-bottom: 4px solid $base2
+  &:before
+    right: 100%
+  &:after
+    left: 100%
+
+/* avoid full page horizontal scroll */
+html, body
+  overflow-x: hidden
