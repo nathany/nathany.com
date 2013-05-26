@@ -6,6 +6,8 @@ permalink: /resume/
 layout: default
 ---
 
+<article>
+  
 # Resumé
 
 Picture it. **Sixteen years ago**, there I was -- stitching together HTML tags -- taming the [T. rex][trex] that roamed the *infobahn.*
@@ -111,3 +113,5 @@ _References are available upon request._
 
 [trex]: http://en.wikipedia.org/wiki/Mozilla_(mascot)
 [yegrb]: http://yegrb.com/
+
+</article>

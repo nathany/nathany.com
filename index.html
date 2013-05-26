@@ -1,4 +1,23 @@
 ---
 layout: default
-title: Nathan Youngman
+title: Articles
 ---
+
+<article>
+  <a href="{{ site.url }}/articles.xml" title="Atom feed" class="ss-icon ss-rss"></a>
+
+  <h1>Nathan's Articles</h1>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | markdownify }}</p>
+        <p><em class="meta">Published on {{ post.date | date_to_string }}</em></p>
+      </li>
+    {% endfor %}
+
+    <li><h3><a href="/resume">Resumé</a></h3></li>
+  </ul>
+  
+</article>
