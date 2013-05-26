@@ -1,3 +1,18 @@
 /* ==========================================================================
    Layout
    ========================================================================== */
+
+$visual-grid: true
+
+@import "neat/neat"
+
+#page
+  @include outer-container
+
+  article
+    section.meta
+      @include span-columns(3)
+      
+    section.content
+      @include span-columns(9)
+      
