@@ -5,11 +5,27 @@
 .highlight
   background: $base3
 
-  code, pre
+  pre
     font-family: 'Inconsolata', monospace
     font-size: 1.5rem
     overflow: auto
     white-space: pre
+    position: relative
+    display: block
+    padding: 1.5em 1em 0.5em 1em
+    border: 2px solid $base2
+  
+  pre code:before
+    content: attr(data-lang)
+    text-transform: capitalize
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    background: $base02
+    color: $base1
+    padding: 0 1em
+    font-family: sans-serif
     
   /* ?
   .hll
