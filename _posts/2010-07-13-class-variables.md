@@ -1,7 +1,9 @@
 ---
 title: "Language Semantics: Class Variables"
 date: 2010-07-13
-excerpt: In Ruby, `@@class` variables are not really class variables. This articles takes a look at Java and Python to see how the semantics differ. *Revised 17 December 2012.*
+revised: 2012/12/17
+excerpt: Ruby `@@class` *hierarchy* variables are unlike Java and Python.
+tags: rubyquirks
 layout: article
 ---
 
