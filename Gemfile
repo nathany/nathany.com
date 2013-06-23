@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.0.0'
 
 # Jekyll on GitHub Pages
 # https://help.github.com/articles/using-jekyll-with-pages
-gem 'jekyll',     '=1.0.2'
+gem 'jekyll',     '=1.0.3'
 gem 'liquid',     '=2.5.0'
 gem 'redcarpet',  '=2.2.2'
 # gem 'maruku',     '=0.6.1'
