@@ -81,7 +81,7 @@ I have been horrified by plenty of ugly, incomprehensible code in Rails projects
 
 Corners of my projects still contain what I would consider "ugly" code. Is today's ugly code tomorrows unintelligible code? Maintainable code **must be understood,** down the road, and by others. If it can't be understood, it's destined for the trash.
 
-> "the common case for wanting to rewrite _is to understand." - [Jonathan ‘Wolf' Rentzsch][18]_
+> "The common case for wanting to rewrite _is to understand." - [Jonathan ‘Wolf' Rentzsch][18]_
 
 Doing a rewrite? Rails will jump start your new project. Unfortunately, it doesn't cater to reuse quite so well.
 
