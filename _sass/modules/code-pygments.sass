@@ -8,6 +8,7 @@
     background-color: #ffffcc
 
   // Token & Text
+  color: $base1
 
   // Text.Whitespace
   .w
@@ -16,103 +17,101 @@
 
   // Error
   .err
-    color: #a40000
+    color: $magenta
     border: 1px solid #ef2929
 
   // Other
   .x
-    color: black
+    color: $orange
 
 
   // Keyword
   .k
-    color: #204a87
+    color: $blue
     font-weight: bold
 
   // Keyword.Constant
   .kc
-    color: #204a87
+    color: shade($yellow,30%)
     font-weight: bold
 
   // Keyword.Declaration
   .kd
-    color: #204a87
+    color: $blue
     font-weight: bold
 
   // Keyword.Namespace
   .kn
-    color: #204a87
+    color: $blue
     font-weight: bold
 
   // Keyword.Pseudo
   .kp
-    color: #204a87
+    color: $blue
     font-weight: bold
 
   // Keyword.Reserved
   .kr
-    color: #204a87
+    color: $blue
     font-weight: bold
 
   // Keyword.Type
   .kt
-    color: #204a87
-    font-weight: bold
+    color: $yellow
+    // font-weight: bold
 
 
   // Name
   .n
-    color: black
+    color: $base1
 
   // Name.Attribute
   .na
-    color: #c4a000
+    color: $base1
 
   // Name.Builtin
   .nb
-    color: #204a87
+    color: $green
 
   // Name.Builtin.Pseudo
   .bp
-    color: #3465a4
+    color: $blue
 
   // Name.Class
   .nc
-    color: black
+    color: $base01
 
   // Name.Constant
   .no
-    color: black
+    color: $base01
 
   // Name.Decorator
   .nd
-    color: #5c35cc
-    font-weight: bold
+    color: $blue
 
   // Name.Entity
   .ni
-    color: #ce5c00
+    color: $orange
 
   // Name.Exception
   .ne
-    color: #cc0000
-    font-weight: bold
+    color: $yellow
 
   // Name.Function
   .nf
-    color: black
+    color: $base1
 
   // Name.Label
   .nl
-    color: #f57900
+    // color: black
 
   // Name.Namespace
   .nn
-    color: black
+    // color: black
 
   // Name.Other
   .nx
-    color: black
+    // color: black
 
   // Name.Property
   .py
@@ -120,206 +119,203 @@
 
   // Name.Tag
   .nt
-    color: #204a87
-    font-weight: bold
+    color: $blue
 
   // Name.Variable
   .nv
-    color: #000000
-    font-weight: bold
+    color: $blue
 
   // Name.Variable.Class
   .vc
-    color: black
+    color: $yellow
 
   // Name.Variable.Global
   .vg
-    color: black
+    color: $blue
 
   // Name.Variable.Instance
   .vi
-    color: black
+    color: $blue
 
 
   // Literal
   .l
-    color: black
+    color: $base1
 
   // Literal.Date
   .ld
-    color: black
-
+    // color: black
 
   // Literal.String
   .s
-    color: #4e9a06
+    color: $cyan
 
   // Literal.String.Backtick
   .sb
-    color: #4e9a06
+    color: shade($cyan, 10%)
 
   // Literal.String.Char
   .sc
-    color: #4e9a06
+    color: $cyan
 
   // Literal.String.Doc
   .sd
-    color: #8f5902
+    color: $base01
     font-style: italic
 
   // Literal.String.Double
   .s2
-    color: #4e9a06
+    color: $cyan
 
   // Literal.String.Escape
   .se
-    color: #4e9a06
+    color: $red
 
   // Literal.String.Heredoc
   .sh
-    color: #4e9a06
+    color: $cyan
 
   // Literal.String.Interpol
   .si
-    color: #4e9a06
+    color: $cyan
 
   // Literal.String.Other
   .sx
-    color: #4e9a06
+    color: $cyan
 
   // Literal.String.Regex
   .sr
-    color: #4e9a06
+    color: $red
 
   // Literal.String.Single
   .s1
-    color: #4e9a06
+    color: $cyan
 
   // Literal.String.Symbol
   .ss
-    color: #4e9a06
+    color: shade($cyan,30%)
 
 
   // Literal.Number
   .m
-    color: #0000cf
+    color: $cyan
     font-weight: bold
 
   // Literal.Number.Float
   .mf
-    color: #0000cf
+    color: $cyan
     font-weight: bold
 
   // Literal.Number.Hex
   .mh
-    color: #0000cf
+    color: $cyan
     font-weight: bold
 
   // Literal.Number.Integer
   .mi
-    color: #0000cf
+    color: $cyan
     font-weight: bold
 
   // Literal.Number.Integer.Long
   .il
-    color: #0000cf
+    color: $cyan
     font-weight: bold
 
   // Literal.Number.Oct
   .mo
-    color: #0000cf
+    color: $cyan
     font-weight: bold
 
 
   // Operator
   .o
-    color: #ce5c00
+    color: shade($blue, 30%)
     font-weight: bold
 
   // Operator.Word
   .ow
-    color: #204a87
+    color: $green
     font-weight: bold
 
 
   // Punctuation
   .p
-    color: #000000
-    font-weight: bold
+    color: shade($blue, 30%)
+    // font-weight: bold
 
 
   // Comment
   .c
-    color: #8f5902
+    color: $base01
     font-style: italic
 
   // Comment.Multiline
   .cm
-    color: #8f5902
+    color: $base01
     font-style: italic
 
   // Comment.Preproc
   .cp
-    color: #8f5902
+    color: $base01
     font-style: italic
 
   // Comment.Single
   .c1
-    color: #8f5902
+    color: $base01
     font-style: italic
 
   // Comment.Special
   .cs
-    color: #8f5902
+    color: $base01
     font-style: italic
 
 
   // Generic
   .g
-    color: black
+    // color: black
 
   // Generic.Deleted
   .gd
-    color: #a40000
+    color: $red
 
   // Generic.Emph
   .ge
-    color: #000000
+    // color: black
     font-style: italic
 
   // Generic.Error
   .gr
-    color: #ef2929
+    color: $red
 
   // Generic.Heading
   .gh
-    collar: #000080
+    color: $orange
     font-weight: bold
 
   // Generic.Inserted
   .gi
-    color: #00a000
+    color: $green
 
   // Generic.Output https://github.com/mojombo/jekyll/issues/1153
   span.go
-    color: #000000
+    // color: black
     font-style: italic
 
   // Generic.Prompt
   .gp
-    color: #8f5902
+    color: shade($green,30%)
 
   // Generic.Strong
   .gs
-    color: #000000
+    // color: black
     font-weight: bold
 
   // Generic.Subheading
   .gu
-    color: #800080
+    color: $orange
     font-weight: bold
 
   // Generic.Traceback
   .gt
-    color: #a40000
+    color: $magenta
     font-weight: bold
