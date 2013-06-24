@@ -1,5 +1,25 @@
 body
+  font-family: Georgia
   font-size: 1.5rem
+
+h1, h2, h3, h4
+  font-family: sans-serif
+  line-height: 1.5
+  margin-bottom: 0
+
+h1
+  color: $blue
+
+.meta
+  font-style: italic
+  color: $yellow
+  font-size: 0.9rem
+
+p, li
+  line-height: 1.5
+
+h2 + p, h1 + p.meta
+  margin-top: 0
 
 mark
   background-color: inherit
@@ -9,7 +29,6 @@ mark
 blockquote
   font-style: italic
   margin: 0
-  padding: 1rem 4rem
 
 blockquote, .highlight
   position: relative
@@ -44,26 +63,3 @@ blockquote
     background: $color2
     border-top: 4px solid $base1
     border-bottom: 4px solid $base1
-
-/* avoid full page horizontal scroll */
-html, body
-  overflow-x: hidden
-  font-family: Georgia
-
-h1, h2, h3, h4
-  font-family: sans-serif
-  line-height: 1.5
-  margin-bottom: 0
-
-h1
-  color: $blue
-
-.meta
-  font-style: italic
-  font-size: 0.9rem
-
-p
-  line-height: 1.5
-
-h2 + p
-  margin-top: 0

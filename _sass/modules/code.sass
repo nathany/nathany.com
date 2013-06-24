@@ -7,30 +7,26 @@
     font-family: 'Inconsolata', monospace
     overflow: auto
     white-space: pre
-    // ensure enough room for language indicator:
-    min-height: 4rem
+    margin: 0
 
-  // less than this width and the indicator starts overlapping the code
-  $tablet: new-breakpoint(min-width 1024px)
-  @include media($tablet)
-    pre code
-      position: relative
-      display: block
+  pre code
+    position: relative
+    display: block
+    padding: 2rem 0
 
-    // language indicator:  
-    pre code:before
-      content: attr(data-lang)
-      text-transform: capitalize
-      position: absolute
-      top: 0
-      right: 0
-      color: $base1
-      font-family: sans-serif
-      font-size: 3rem
-      line-height: 3.6rem
-      overflow: hidden
-      vertical-align: texttop
-      // limit to about 8 characters:
-      max-width: 14rem
+  // language indicator:
+  pre code:before
+    content: attr(data-lang)
+    text-transform: capitalize
+    font-family: 'Inconsolata', monospace
+    position: absolute
+    top: 0
+    right: 0
+    color: $color3
+    vertical-align: texttop
+    // limit to about 8 characters:
+    max-width: 14rem
+    background: $base1
+    padding: 0.2rem 0.5rem
 
 @import "code-pygments"

@@ -4,17 +4,11 @@
 
 @import "neat/neat"
 
-$max-width: 50rem
+$max-width: 60rem
 $visual-grid: false
 
 #page
   @include outer-container
-  $desktop: new-breakpoint(min-width 1280px 12)
 
   article
     padding: 0 1rem
-    // @include media($desktop)
-    //   section.meta
-    //     @include span-columns(3)
-    //   section.content
-    //     @include span-columns(9)
