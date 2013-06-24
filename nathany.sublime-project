@@ -2,8 +2,13 @@
 	"folders":
 	[
 		{
-			"path": ".",
-      "folder_exclude_patterns": [".sass-cache", "_site"]
+			"folder_exclude_patterns":
+			[
+				".sass-cache",
+				"_site"
+			],
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }
