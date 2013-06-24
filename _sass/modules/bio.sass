@@ -1,4 +1,5 @@
 .bio
+  font-family: sans-serif
   border: 0.5rem solid $color4
   background-color: $color3
   color: $color1
@@ -11,9 +12,11 @@
       font-weight: bold
       color: $color2
       margin: 0
+      line-height: 1.2
     .description
       margin-top: 0
       font-size: 0.9rem
+      line-height: 1
   .photo
     @include retina-image(images/photo, 128px 160px, jpg)
     width: 128px
