@@ -12,7 +12,6 @@ blockquote
   padding: 1rem 4rem
 
 blockquote, .highlight
-  background-color: $base3
   position: relative
   border-top: 4px solid $base2
   border-bottom: 4px solid $base2
@@ -25,13 +24,26 @@ blockquote, .highlight
     top: -4px
     bottom: -4px
     width: 9999px
-    background: $base3
     border-top: 4px solid $base2
     border-bottom: 4px solid $base2
   &:before
     right: 100%
   &:after
     left: 100%
+
+blockquote
+  background-color: $base3
+  &:before, &:after
+    background: $base3
+
+.highlight
+  background-color: $color2
+  border-top: 4px solid $base1
+  border-bottom: 4px solid $base1
+  &:before, &:after
+    background: $color2
+    border-top: 4px solid $base1
+    border-bottom: 4px solid $base1
 
 /* avoid full page horizontal scroll */
 html, body
