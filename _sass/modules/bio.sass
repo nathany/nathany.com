@@ -1,12 +1,15 @@
+$horizontal: new-breakpoint(min-width 528px 1)
+
+$border-width: 8px
+
 .bio
   font-family: sans-serif
-  border: 0.5rem solid $color3
+  border: $border-width solid $color3
   background-color: $color5
   color: $color1
   margin: 1rem
-  max-width: 25rem
+  width: 256px + ($border-width * 2)
   .text
-    height: 160px
     padding: 1rem 1rem 0 1rem
     .name
       font-weight: bold
@@ -18,8 +21,15 @@
       font-size: 0.9rem
       line-height: 1
   .photo
-    @include retina-image(images/photo, 128px 160px, jpg)
-    width: 128px
-    height: 160px
-    margin-right: 1rem
-    float: left
+    @include retina-image(images/photo, 256px 256px, jpg)
+    width: 256px
+    height: 128px
+    background-position: center left
+
+  @include media($horizontal)
+    width: 512px + ($border-width * 2)
+    height: 160px + ($border-width * 2)
+    .photo
+      margin-right: 1rem
+      float: left
+      height: 160px
