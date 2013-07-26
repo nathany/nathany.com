@@ -24,6 +24,7 @@ A number of third-party tools exist, including
 [Goven](https://github.com/kr/goven),
 [Go Pack](https://github.com/gopack/gpk),
 [Go Package Manager](https://github.com/GPMGo/gopm),
+[Gob](https://github.com/tanema/gob),
 [GVM](https://github.com/moovweb/gvm),
 [Johnny Deps](https://github.com/vividcortex/johnny-deps) and
 [Rx](http://godoc.org/kylelemons.net/go/rx). It's great that our fellow gophers are building these tools and exploring different avenues, but _which one do I use?_
