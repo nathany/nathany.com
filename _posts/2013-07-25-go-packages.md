@@ -88,7 +88,7 @@ Anything that makes upstream contributions more work is a step backwards. It doe
 
 Gofix is an incredibly intriguing tool. It isn't yet to the point where package authors can easily ship gofix modules to update dependent code. As it turns out, designing an simple AST-altering API is a bit of a challenge.
 
-Even with such a wonderful tool, I have my doubts on how well it would scale to the larger package ecosystem. It's one thing to gofix my own code, but gofixing third-party packages seems fraught with problems. I hope to be proven wrong.
+Even with such a wonderful tool, I have my doubts on how well it would scale to the larger package ecosystem. It's one thing to gofix my own code, but gofixing third-party packages seems fraught with problems.
 
 ### Don't Forget History
 
