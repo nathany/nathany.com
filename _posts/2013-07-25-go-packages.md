@@ -82,7 +82,7 @@ Even better, `gofmt` helps ensure that a pull request only has the necessary cha
 
 ### Avoid Rewriting Imports
 
-Anything that makes upstream contributions more work is a bad idea. It doesn't take much to rewrite import paths locally, but it makes it just a little bit harder to test and submit a patch. Best to avoid.
+Anything that makes upstream contributions more work is a step backwards. It doesn't take much to rewrite import paths locally, but it makes it just a little bit harder to test and submit a patch. Best to avoid.
 
 ### Don't Try To Gofix Others
 
