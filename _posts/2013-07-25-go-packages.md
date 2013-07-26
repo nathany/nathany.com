@@ -47,11 +47,11 @@ The problem is, <mark>we don't have a _"Go Packaging Authority"_ providing guida
 
 Shortly after, I saw [Mitchell Hashimoto](http://mitchellh.com/)'s GopherVault proposal to the versioning problem. It too wasn't without flaws, perhaps like any new idea.
 
-So I thought: I should take a step back and really think about this more. Not because I'm any sort of expect, but because <mark>I would like Go to have a great packaging story</mark>. Over the _past month,_ I used a [Google Doc](http://goo.gl/oqkvu) as my outlet, and invited others to contribute.
+So I thought: I should take a step back and really think about this more. Not because I'm any sort of expert, but because <mark>I would like Go to have a great packaging story</mark>. Over the _past month,_ I used a [Google Doc](http://goo.gl/oqkvu) as my outlet, and invited others to contribute.
 
 While I don't have a grand solution, I believe there are a few fundamentals to building a great packaging story.
 
-## 1. Keep Builds Sane
+## 1. Sane Builds
 
 Chris Howey's fsnotify package has a legitimate reason to move. First to `code.google.com/p/go.exp/fsnotify` and eventually into the standard library.
 
@@ -67,7 +67,7 @@ By convention, `go get` will create the folder `$GOPATH/src/github.com/howeyc/fs
 
 However, the compiler doesn't care where the source code came from. As long as the package can be found at `$GOPATH/src/github.com/howeyc/fsnotify`, it's absolutely fine if the code came from a fork at `github.com/mycompany/fsnotify` or a fictional mirror at `bitbucket.org/howeyc/fsnotify`.
 
-If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy. A level of indirection, in one form or another, could be be quite helpful for keeping builds sane.
+If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy. A level of indirection, in one form or another, could be be quite helpful for making builds more sane.
 
 ### Avoid Versions in Paths
 
