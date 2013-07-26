@@ -1,10 +1,9 @@
 ---
 title: Go Package Management
 date: 2013/07/25
-tags: golang
+tags: golang, packages, dependencies
 excerpt: A cry for gophers to unify on remote package management.
 layout: article
-published: false
 ---
 
 ## Foundation
@@ -73,7 +72,7 @@ If the Go Community as a whole decided to use `import "fsnotify"`, we could move
 
 A project should only ever import one version of a given package. What would happen if your project were to import both `labix.org/v2/mgo` and `labix.org/v1/mgo`? It's the same problem all over again.
 
-While this example may sound far-fetched, it doesn't take much imagination to see it becoming an issue. As packages mature, and dependency trees gets deeper, our tools need to adapt.
+While this example may sound far-fetched, it doesn't take much imagination to see it becoming an issue. As packages mature, and dependency trees get deeper, our tools need to adapt.
 
 ## 2. Encourage Upstream Contributions
 
@@ -89,7 +88,7 @@ Anything that makes upstream contributions more work is a bad idea. It doesn't t
 
 Gofix is an incredibly intriguing tool. It isn't yet to the point where package authors can easily ship gofix modules to update dependent code. As it turns out, designing an simple AST-altering API is a bit of a challenge.
 
-Even with such a wonderful tool, I have my doubts on how well it would scale to the larger package ecosystem. It's one thing to Gofix my own code, but Gofixing another third-party package seems fraught with problems. I hope to be proven wrong.
+Even with such a wonderful tool, I have my doubts on how well it would scale to the larger package ecosystem. It's one thing to gofix my own code, but gofixing a third-party package seems fraught with problems. I hope to be proven wrong.
 
 ### Don't Forget History
 
@@ -117,11 +116,11 @@ If and when we get into versioning and dependency resolution, the need for inter
 
 ### Community
 
-It would be great if the Go Authors specified and built an official package manager for Go. It's not a requirement though.
+It would be great if the Go Authors specified and built a full-featured package manager for Go. It's not a requirement though.
 
 The larger Go Community can make a package management tool official. It doesn't need to be part of the `go` tool to be what we all use.
 
-So lets rally together and get started!
+So let's rally together and get started!
 
 
 
