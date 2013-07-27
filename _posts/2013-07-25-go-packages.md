@@ -118,7 +118,7 @@ If and when we get into versioning and dependency resolution, the need for inter
 
 ### Community
 
-It would be great if the Go Authors specified and built a full-featured package manager for Go. It's not a requirement though.
+It would be great if the Go Team specified and built a full-featured package manager for Go. It's not a requirement though.
 
 The larger Go Community can make a package management tool official. It doesn't need to be part of the `go` tool to be what we all use.
 
