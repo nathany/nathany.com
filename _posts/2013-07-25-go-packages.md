@@ -124,7 +124,7 @@ The larger Go Community can make a package management tool official. It doesn't 
 
 So let's rally together and get started!
 
-
+*Comment on [Go+](https://plus.google.com/u/0/104313268939103200754/posts/aQG7HB3grZ4), [reddit](http://www.reddit.com/r/golang/comments/1j3ie4/go_package_management/), or the [Go Nuts mailing list](https://groups.google.com/forum/#!topic/golang-nuts/sfshThQ_wrA).*
 
 
 
