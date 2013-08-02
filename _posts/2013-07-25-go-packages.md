@@ -74,7 +74,7 @@ If the Go Community as a whole decided to use `import "fsnotify"`, we could move
 
 A project should only ever import one version of a given package. What would happen if your project were to import both `labix.org/v2/mgo` and `labix.org/v1/mgo`? It's the same problem all over again.
 
-While this example may sound far-fetched, it doesn't take much imagination to see it becoming an issue. As packages mature, and dependency trees get deeper, our tools need to adapt.
+While this example may sound far-fetched, it is easy to see this becoming an issue as packages mature and dependency trees get deeper.
 
 ## 2. Encourage Upstream Contributions
 
@@ -92,7 +92,7 @@ Gofix is an incredibly intriguing tool. It isn't yet to the point where package 
 
 Even with such a wonderful tool, I have my doubts on how well it would scale to the larger package ecosystem. It's one thing to gofix my own code, but gofixing third-party packages seems fraught with problems.
 
-### Don't Forget History
+### Don't Forget Our History
 
 Any package management solution that does away with the hidden .git, .hg, .bzr folder removes the ease of contribution.
 
