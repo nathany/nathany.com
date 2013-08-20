@@ -3,7 +3,7 @@ ruby '2.0.0'
 
 # Jekyll on GitHub Pages
 # https://help.github.com/articles/using-jekyll-with-pages
-gem 'jekyll',     '=1.0.3'
+gem 'jekyll',     '=1.1.2'
 gem 'liquid',     '=2.5.1'
 gem 'redcarpet',  '=2.2.2'
 # gem 'maruku',     '=0.6.1'
