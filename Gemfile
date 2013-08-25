@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 # Jekyll on GitHub Pages
 # https://help.github.com/articles/using-jekyll-with-pages
+# https://github.com/github/pages-gem/blob/master/github-pages.gemspec
 gem 'jekyll',     '=1.1.2'
 gem 'liquid',     '=2.5.1'
 gem 'redcarpet',  '=2.2.2'
