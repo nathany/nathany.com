@@ -6,6 +6,8 @@ excerpt: A cry for gophers to unify on remote package management.
 layout: article
 ---
 
+![Gophers with boxes ready to mail](/assets/images/gopher-packaging.jpg)
+
 ## Foundation
 
 The Go tool-chain includes the `go get` command to install third-party packages directly from version control systems.
