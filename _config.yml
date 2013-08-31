@@ -9,7 +9,7 @@ pygments: true
 timezone: America/Edmonton
 exclude: ["Gemfile", "Gemfile.lock", "Procfile", "build.sh", "nathany.sublime-project"]
 
-future: false
+future: true
 permalink: :title
 relative_permalinks: false
 
