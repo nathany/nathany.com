@@ -22,7 +22,7 @@ Here are a few packages for working with databases: [codex](https://github.com/c
 
 We probably have enough options, but I bet any one of these packages could be improved upon. Why not find something close to your needs and contribute?
 
-If you later decide to start fresh, or come up with a wildly different approach, you'll have met a fellow gopher and probably learned something too.
+If later you decide to start fresh, or take a wildly different approach, you'll have met a fellow gopher and probably learned something too.
 
 ## Write A Readme
 
@@ -83,7 +83,7 @@ hg push                # Share tags (.hgtags already committed)
 
 ### Bazaar
 
-See [Bazaar Wiki](http://wiki.bazaar.canonical.com/Tag) for details. Yes, these instructions are exactly the same as Mercurial.
+See [Bazaar Wiki](http://wiki.bazaar.canonical.com/Tag) for details. *Yes, these instructions are exactly the same as Mercurial.*
 
 ```bash
 bzr tag v1.0.0         # Tag the current revision
@@ -97,7 +97,9 @@ bzr push               # Share tags (stores tags with branch)
 
 Go uses Semantic Versioning and ***so should you.*** Go went through many changes until it stabilized as 1.0.0. This year 1.1.0 was released, a backwards compatible update. 1.1.2 was a patch release, and breaking changes await a 2.0.0 release in the distant future. Please <mark>read and follow</mark> [Semantic Versioning 2.0.0](http://semver.org/).
 
-If you have something against versions, please still tag your releases. Use the international date format (ISO 8601) as in `r2013-08-31`.
+By convention, tags that specify a version should start with the letter 'v', for example: <mark>v1.0.0-rc.1</mark>.
+
+If you have something against versions, please still tag your releases. Might I suggest using the international date format (ISO 8601), as in <mark>r2013-08-31</mark>.
 
 ***Add a tag today!***
 
@@ -111,9 +113,9 @@ In case you are wondering, there are APIs to list tags for [GitHub](http://devel
 
 ## Write a Changelog
 
-[Dominik Honnef](http://dominik.honnef.co/) is writing a series entitled *"What's happening in Go tip"*. Reading a high-level summary of changes is so much better than parsing through dozens of commit messages.
+[Dominik Honnef](http://dominik.honnef.co/) is writing a series entitled *"What's happening in Go tip"*. Reading a high-level summary of changes is so much nicer than parsing dozens of commit messages.
 
-This is the benefit of providing a `CHANGES.md` for your project, even if it's just in point form. Here's an example:
+This is the benefit of providing a changelog for your project, even if it's just in point form. Here's an example:
 
 ```
 # Changelog
@@ -133,12 +135,12 @@ This is the benefit of providing a `CHANGES.md` for your project, even if it's j
 
 Please take note:
 
-* Entries are in ***reverse chronological*** order, putting the most useful information at the top.
+* Entries are in ***reverse chronological*** order, putting the most relevant information first.
 * The first "word" for ***second-level headings*** matches the **tag** we used previously.
-* A standard file name makes it easier for humans to locate (I'm suggesting CHANGES, though some people use HISTORY, NEWS or CHANGELOG). We could bring it to a vote. :-)
+* A standard filename makes it easier for humans to locate (I'm currently using CHANGES, though some people use HISTORY, NEWS or CHANGELOG). We could [bring it to a vote][survey]. :-)
 * Though not shown here, it's fairly common to have an "Unreleased" section at the top, listing changes on `master` that will become the next release.
 
-Markdown is a well known format that displays nicely on GitHub and BitBucket. A `CHANGES.article` in the [Go present](http://godoc.org/code.google.com/p/go.talks/pkg/present) format is only slightly different:
+Markdown is a well known format that displays nicely on GitHub and BitBucket. The [Go present](http://godoc.org/code.google.com/p/go.talks/pkg/present) format is only slightly different:
 
 ```
 * Changelog
@@ -155,9 +157,9 @@ What I find more interesting are tools to [parse changelogs](https://github.com/
 
 ## Finî
 
-I hope this is a good starting place for practices that are beneficial to us humans today, while also paving the way for more and better tooling.
+I hope this is a good starting place for practices that are beneficial to us humans today, while also paving the way for more and better tooling. Thanks for reading. If you wouldn't mind, please complete [this five question survey][survey].
 
-Please let me know how I can improve this article. You can reach me on Twitter [@gophertown](https://twitter.com/gophertown).
+Let me know how I can improve this article. You can reach me on Twitter [@gophertown](https://twitter.com/gophertown).
 
 Related Articles:
 
@@ -166,3 +168,5 @@ Related Articles:
 
 
 [contributing]: https://github.com/gophertown/looper/blob/master/CONTRIBUTING.md
+[survey]: https://docs.google.com/forms/d/1XGjy74hrq2DG-Zh4VwqxSuAWPlLf2zx5KAU1VCph5ys/viewform
+
