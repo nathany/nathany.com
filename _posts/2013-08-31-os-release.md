@@ -2,7 +2,7 @@
 title: Releasing Open Source
 date: 2013/08/31
 tags: golang, packages, tagging, open source
-excerpt: Being a good open source citizen.
+excerpt: Being a good open source citizen for the benefit of humans and tooling.
 layout: article
 ---
 
