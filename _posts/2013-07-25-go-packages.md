@@ -70,7 +70,7 @@ By convention, `go get` will create the folder `$GOPATH/src/github.com/howeyc/fs
 
 However, the compiler doesn't care where the source code came from. As long as the package can be found at `$GOPATH/src/github.com/howeyc/fsnotify`, it's absolutely fine if the code came from a fork at `github.com/mycompany/fsnotify` or a fictional mirror at `bitbucket.org/howeyc/fsnotify`.
 
-If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy. A level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) [or another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could be be quite helpful for making builds more sane.
+If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy. A level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) or [another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could be be quite helpful for making builds more sane.
 
 ### Avoid Versions in Paths
 
