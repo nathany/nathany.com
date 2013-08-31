@@ -8,7 +8,7 @@ layout: article
 
 ![Gophers with parcels](/assets/images/gopher-tagging.jpg)
 
-*Go get* is cool and all, but like many gophers, I yearn for robust dependency management. Given that it took 13 months for [Bundler](http://bundler.io/) 1.0 to be realized, I don't expect it to happen overnight.
+*Go get* is [cool and all](http://www.goinggo.net/2013/08/organizing-code-to-support-go-get.html), but like many gophers, I yearn for robust dependency management. Given that it took 13 months for [Bundler](http://bundler.io/) 1.0 to be realized, I don't expect it to happen overnight.
 
 It would be great to chip in somehow, but I have no idea how to write a [SAT solver](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem). Maybe you're in the same boat.
 
