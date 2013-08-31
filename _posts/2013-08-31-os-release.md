@@ -149,7 +149,7 @@ Markdown is a well known format that displays nicely on GitHub and BitBucket. A 
 - Pass through for -tags command line argument. Thanks @jtacoma.
 ```
 
-For the slackers, [tools exist to generate changelogs](http://rubyworks.github.io/vclog/), though I have yet to try it.
+For the lazy, [tools exist to generate changelogs](http://rubyworks.github.io/vclog/), though I have yet to try it.
 
 What I find more interesting are tools to [parse changelogs](https://github.com/tech-angels/vandamme). Apps like [Gemnasium](https://gemnasium.com/) will present the *relevant subset* of a changelog. Consistent use of tags, subheadings and filenames make this kind of tooling fairly straightforward.
 
