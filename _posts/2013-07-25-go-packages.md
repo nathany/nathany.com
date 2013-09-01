@@ -1,6 +1,7 @@
 ---
 title: Go Package Management
 date: 2013/07/25
+revised: 2013/09/01
 tags: golang, packages, dependencies
 excerpt: A cry for gophers to unify on remote package management.
 layout: article
@@ -48,19 +49,21 @@ There are actually a number of solutions to reproducible builds. Git provides [s
 
 The problem is, <mark>we don't have a _"Go Packaging Authority"_ providing guidance</mark>, so every newcomer is left to find their own way.
 
-Shortly after, I saw [Mitchell Hashimoto](http://mitchellh.com/)'s GopherVault proposal to the versioning problem. It too wasn't without flaws, perhaps like any new idea.
+Shortly after, I saw [Mitchell Hashimoto](http://mitchellh.com/)'s GopherVault proposal. It too wasn't without flaws, perhaps like any new idea.
 
 So I thought: I should take a step back and really think about this more. Not because I'm any sort of expert, but because <mark>I would like Go to have a great packaging story</mark>. Over the _past month,_ I used a [Google Doc](http://goo.gl/oqkvu) as my outlet, and invited others to contribute.
 
 While I don't have a grand solution, I believe there are a few fundamentals to building a great packaging story.
 
-## 1. Sane Builds
+## 1. Reliable Builds
 
-Chris Howey's fsnotify package has a legitimate reason to move. First to `code.google.com/p/go.exp/fsnotify` and eventually into the standard library.
+Chris Howey's fsnotify package has a legitimate reason to move. First to `code.google.com/p/go.exp/fsnotify` and [eventually into the standard library](https://code.google.com/p/go/issues/detail?id=4068).
 
-What would happen if a project were to import both `github.com/howeyc/fsnotify` and `code.google.com/p/go.exp/fsnotify`? Would it compile? Would both `init()` and compete for resources? Would it merely enlarge the resulting binary?
+What would happen if a project were to import both `github.com/howeyc/fsnotify` and `code.google.com/p/go.exp/fsnotify`? Each version is in a separate namespace, so it should compile.
 
-It's unlikely that a project would directly depend on fsnotify from two locations. It may depend on my mythical fsnotify-ext package, which imports `code.google.com/p/go.exp/fsnotify` while another dependency (eg. Revel) uses `github.com/howeyc/fsnotify`. Now we're in trouble.
+Beyond bloating up executables, the issues will vary from package to package. Different versions may compete for exclusive access to the same file, same port or other resources.
+
+It's unlikely that a project would directly depend on fsnotify from two locations. It may depend on my mythical fsnotify-ext package, which imports `code.google.com/p/go.exp/fsnotify` while another dependency (eg. Revel) uses `github.com/howeyc/fsnotify`. We run into trouble as the dependency tree grows.
 
 ### One Import Path
 
@@ -68,9 +71,9 @@ To avoid this scenario, every package must have one &ndash; and only one &ndash;
 
 By convention, `go get` will create the folder `$GOPATH/src/github.com/howeyc/fsnotify` for the code retrieved from `github.com/howeyc/fsnotify`.
 
-However, the compiler doesn't care where the source code came from. As long as the package can be found at `$GOPATH/src/github.com/howeyc/fsnotify`, it's absolutely fine if the code came from a fork at `github.com/mycompany/fsnotify` or a fictional mirror at `bitbucket.org/howeyc/fsnotify`.
+The compiler doesn't care where the source code came from. As long as the package can be found at `$GOPATH/src/github.com/howeyc/fsnotify`, it's absolutely fine if the code came from a fork at `github.com/mycompany/fsnotify` or a fictional mirror at `bitbucket.org/howeyc/fsnotify`.
 
-If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy. A level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) or [another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could be be quite helpful for making builds more sane.
+If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy. A level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) or [another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could really help make builds more reliable.
 
 ### Avoid Versions in Paths
 
@@ -90,7 +93,7 @@ Anything that makes upstream contributions more work is a step backwards. It doe
 
 ### Don't Try To Gofix Others
 
-Gofix is an incredibly intriguing tool. It isn't yet to the point where package authors can easily ship gofix modules to update dependent code. As it turns out, designing an simple AST-altering API is a bit of a challenge.
+Gofix is an incredibly intriguing tool. It isn't yet to the point where package authors can easily ship gofix modules to update dependent code. As it turns out, designing an simple AST-altering API is a *bit of a challenge.*
 
 Even with such a wonderful tool, I have my doubts on how well it would scale to the larger package ecosystem. It's one thing to gofix my own code, but gofixing third-party packages seems fraught with problems.
 
@@ -106,7 +109,7 @@ Package management tools may be technically interesting to develop, but the real
 
 While embracing DVCS is a great idea, I believe it can be taken too far.
 
-DVCS-specific solutions like Git submodules make it more difficult to use and contribute to Bazaar packages like goamz, gocheck and mgo. I don't want to see the Go community fractured by DVCS selection.
+DVCS-specific solutions like Git submodules make it more difficult to use and contribute to Bazaar packages like goamz, gocheck and mgo. I don't want to see the Go community [fractured by DVCS selection](https://github.com/VividCortex/johnny-deps/issues/30).
 
 Similarly, package management tools should be cross-platform, not catering to users of a particular OS.
 
