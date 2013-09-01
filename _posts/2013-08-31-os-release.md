@@ -160,7 +160,7 @@ In addition to writing tests, it's useful to set up <mark>Continuous Integration
 
 Even if you have a solo effort, CI can be helpful:
 
-* When someone submits a pull request (yourself included), your CI server will let you know if it's *safe to merge.*
+* When someone submits a pull request (yourself included), the CI server will let you know if it's *safe to merge.*
 * Many services offer Continuous Deployment as well. Your servers don't need Go installed and any dependency snafus that arise can be identified before deployment begins.
 
 If you're not already using the "feature branch, pull request, code review" workflow for your own work, I highly recommend it.
