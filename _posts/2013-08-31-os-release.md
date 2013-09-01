@@ -156,14 +156,27 @@ What I find more interesting are tools to [parse changelogs](https://github.com/
 
 ## Green Master
 
-In addition to writing tests, it's useful to set up <mark>Continuous Integration</mark> to run those tests. Here are a few services that support Go: [CircleCI](https://circleci.com/), [Codeship](https://www.codeship.io/), [drone.io](https://drone.io/), [Travis CI](https://travis-ci.org/) and [wercker](http://wercker.com/) (Source: [CIaaS roundup](http://blog.testnoir.com/ciaas-roundup-11-hosted-continuous-integration-services/)).
+In addition to writing tests, it's useful to set up <mark>Continuous Integration</mark> to run those tests. If you're not already using the "feature branch, pull request, code review" workflow for your own work, I highly recommend it.
 
-Even if you have a solo effort, CI can be helpful:
+All these services offer <mark>Continuous Deployment</mark> as well. Your servers don't need Go installed, so if any dependency snafus arise, they can be identified before deployment begins.
 
-* When someone submits a pull request (yourself included), the CI server will let you know if it's *safe to merge.*
-* Many services offer Continuous Deployment as well. Your servers don't need Go installed and any dependency snafus that arise can be identified before deployment begins.
+Here are a few services that support Go and are free for open source.
 
-If you're not already using the "feature branch, pull request, code review" workflow for your own work, I highly recommend it.
+### drone.io
+
+[drone.io](https://drone.io/) is super quick to setup through the web interface, and it supports GitHub, BitBucket and Google Code. I'm impressed.
+
+For those private projects, the pricing is quite competitive, and it so happens to be [written in Go](https://groups.google.com/forum/#!topic/golang-nuts/Lo7KP3rWP3o) too.
+
+### Travis CI
+
+[Travis CI](https://travis-ci.org/) has been around longer than most, and has some nice features. Though it only integrates with GitHub, Travis will let you know if pull requests are *safe to merge.* It also allow testing against [older versions of Go or Go tip](http://about.travis-ci.org/docs/user/languages/go/).
+
+### wercker
+
+[wercker](http://wercker.com/) looks to be the most flexible offering. It allows the community to build custom boxes for any language or environment required, and includes [support for Go](http://devcenter.wercker.com/articles/languages/go.html).
+
+They [blog on Go](http://blog.wercker.com/tags/golang.html) deployment to Heroku and App Engine, code coverage, and more. Wercker is currently a free beta, but they plan to keep it [free for open source](https://hacks.mozilla.org/2013/02/wercker-continuous-delivery-made-easy-a-webfwd-project/).
 
 ## Finî
 
