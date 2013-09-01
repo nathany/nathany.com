@@ -156,7 +156,7 @@ What I find more interesting are tools to [parse changelogs](https://github.com/
 
 ## Green Master
 
-In addition to writing tests, it's useful to set up <mark>Continuous Integration</mark> to run those tests. If you're not already using the "feature branch, pull request, code review" workflow for your own work, I highly recommend it.
+In addition to writing tests, it's useful to set up <mark>Continuous Integration</mark> to run those tests. If you're not already using the "feature branch, [pull request](https://help.github.com/articles/using-pull-requests), code review" workflow for your own work, I highly recommend it.
 
 All these services offer <mark>Continuous Deployment</mark> as well. Your servers don't need Go installed, so if any dependency snafus arise, they can be identified before deployment begins.
 
