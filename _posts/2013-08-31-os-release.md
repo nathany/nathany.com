@@ -167,7 +167,7 @@ If you're not already using the "feature branch, pull request, code review" work
 
 ## Finî
 
-I hope this is a good starting place for practices that are beneficial to us humans today, while also paving the way for more and better tooling. Thanks for reading. If you wouldn't mind, please complete [this five question survey][survey].
+I hope this is a good starting place for practices that are beneficial to us humans today, while also paving the way for more and better tooling. Thanks for reading. If you wouldn't mind, please complete [this quick survey][survey].
 
 Let me know how I can improve this article. You can reach me on Twitter [@gophertown](https://twitter.com/gophertown) or comment on [Go+](https://plus.google.com/104313268939103200754/posts/Ca9S8UjSfLU),
 [reddit](http://www.reddit.com/r/golang/comments/1lgy4p/releasing_open_source_for_humans_and_for_tooling/), or the
