@@ -8,9 +8,9 @@ layout: article
 
 ![Gophers with parcels](/assets/images/gopher-tagging.jpg)
 
-*Go get* is [cool and all](http://www.goinggo.net/2013/08/organizing-code-to-support-go-get.html), but like many gophers, I yearn for robust dependency management. Given that it took 13 months for [Bundler](http://bundler.io/) 1.0 to be realized, I don't expect it to happen overnight.
+*Go get* is [cool and all](http://www.goinggo.net/2013/08/organizing-code-to-support-go-get.html), though some assembly is required. How does your team handle reproducible builds? How will we version packages to handle bug reports?
 
-It would be great to chip in somehow, but I have no idea how to write a [SAT solver](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem). Maybe you're in the same boat.
+Hailing from the Ruby community, my initial tendency is to gravitate towards a [SAT solver](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem) for dependency management. Given that it took 13 months for [Bundler](http://bundler.io/) 1.0 to be realized, I don't expect this to happen overnight, and I personally have no idea how to write one. If you're in the same boat, you may be wondering how to help out.
 
 There a few simple things <mark>we can all do</mark> to improve the Go ecosystem. Before you unleash your next open source project and \[ANN\] it on [Go Nuts](https://groups.google.com/forum/#!forum/golang-nuts), consider this.
 
@@ -38,7 +38,7 @@ date:        Sun Mar 02 20:47:34 2008 -0800
 summary:     Go spec starting point.
 ```
 
-If you're writing a package, be sure to [document the APIs](http://blog.golang.org/godoc-documenting-go-code) and link to your [GoDoc](http://godoc.org/) from the README.
+If you're writing a package, be sure to [document the APIs](http://blog.golang.org/godoc-documenting-go-code) and link to your [GoDoc](http://godoc.org/) page from the README.
 
 ### Contributing
 
@@ -91,7 +91,6 @@ bzr tag -r 13 v0.1.0   # Tag a past revision
 bzr tags               # List tags
 bzr push               # Share tags (stores tags with branch)
 ```
-
 
 ### Versions
 
@@ -154,6 +153,17 @@ Markdown is a well known format that displays nicely on GitHub and BitBucket. Th
 For the lazy, [tools exist to generate changelogs](http://rubyworks.github.io/vclog/), though I have yet to try it.
 
 What I find more interesting are tools to [parse changelogs](https://github.com/tech-angels/vandamme). Apps like [Gemnasium](https://gemnasium.com/) will present the *relevant subset* of a changelog. Consistent use of tags, subheadings and filenames make this kind of tooling fairly straightforward.
+
+## Green Master
+
+In addition to writing tests, it's useful to set up <mark>Continuous Integration</mark> to run those tests. Here are a few services that support Go: [CircleCI](https://circleci.com/), [Codeship](https://www.codeship.io/), [drone.io](https://drone.io/), [Travis CI](https://travis-ci.org/) and [wercker](http://wercker.com/) (Source: [CIaaS roundup](http://blog.testnoir.com/ciaas-roundup-11-hosted-continuous-integration-services/)).
+
+Even if you have a solo effort, CI can be helpful:
+
+* When someone submits a pull request (yourself included), your CI server will let you know if it's *safe to merge.*
+* Many services offer Continuous Deployment as well. Your servers don't need Go installed and any dependency snafus that arise can be identified before deployment begins.
+
+If you're not already using the "feature branch, pull request, code review" workflow for your own work, I highly recommend it.
 
 ## Finî
 
