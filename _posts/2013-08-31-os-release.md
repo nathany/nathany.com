@@ -38,7 +38,7 @@ date:        Sun Mar 02 20:47:34 2008 -0800
 summary:     Go spec starting point.
 ```
 
-If you're writing a package, be sure to [document the APIs](http://blog.golang.org/godoc-documenting-go-code) and link to your [GoDoc](http://godoc.org/) page from the README.
+If you're writing a package, be sure to [document the APIs](http://golang.org/doc/articles/godoc_documenting_go_code.html) and link to your [GoDoc](http://godoc.org/) page from the README.
 
 ### Contributing
 
@@ -170,7 +170,7 @@ For those private projects, the pricing is quite competitive, and it so happens 
 
 ### Travis CI
 
-[Travis CI](https://travis-ci.org/) has been around longer than most, and has some nice features. Though it only integrates with GitHub, Travis will let you know if pull requests are *safe to merge.* It also allow testing against [older versions of Go or Go tip](http://about.travis-ci.org/docs/user/languages/go/).
+[Travis CI](https://travis-ci.org/) has been around longer than most, and has some nice features. Though it only integrates with GitHub, Travis will let you know if pull requests are *safe to merge.* It also allows testing against [older versions of Go or Go tip](http://about.travis-ci.org/docs/user/languages/go/).
 
 ### wercker
 
