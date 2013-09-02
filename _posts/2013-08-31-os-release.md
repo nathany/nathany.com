@@ -16,7 +16,7 @@ There a few simple things <mark>we can all do</mark> to improve the Go ecosystem
 
 ## See What's Out There
 
-Before getting started, do a search on [GoDoc](http://godoc.org/).
+Before getting started, do a search on [GoDoc](http://godoc.org/) or ask around.
 
 Here are a few packages for working with databases: [codex](https://github.com/chuckpreslar/codex), [gorp](https://github.com/coopernurse/gorp), [goSQL](https://github.com/quintans/goSQL), [hood](https://github.com/eaigner/hood), [jet](https://github.com/eaigner/jet), [kdb](https://github.com/sdming/kdb), [meddler](https://github.com/russross/meddler), and [sqlx](https://github.com/jmoiron/sqlx).
 
