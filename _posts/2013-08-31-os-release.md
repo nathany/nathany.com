@@ -10,7 +10,7 @@ layout: article
 
 *Go get* is [cool and all](http://www.goinggo.net/2013/08/organizing-code-to-support-go-get.html), though some assembly is required. How does your team handle reproducible builds? How will we version packages to handle bug reports?
 
-Hailing from the Ruby community, my initial tendency is to gravitate towards a [SAT solver](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem) for dependency management. Given that it took 13 months for [Bundler](http://bundler.io/) 1.0 to be realized, I don't expect this to happen overnight, and I personally have no idea how to write one. If you're in the same boat, you may be wondering how to help out.
+Hailing from the Ruby community, my tendency has been to gravitate towards a [SAT solver](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem) for dependency management. Given that it took 13 months for [Bundler](http://bundler.io/) 1.0 to be realized, I don't expect this to happen overnight, and I personally have no idea how to write one. If you're in the same boat, you may be wondering how to help out.
 
 There a few simple things <mark>we can all do</mark> to improve the Go ecosystem. Before you unleash your next open source project and \[ANN\] it on [Go Nuts](https://groups.google.com/forum/#!forum/golang-nuts), consider this.
 
@@ -55,7 +55,13 @@ There is a `LICENSE` file in the root of my Development folder with the Copyrigh
 
 ## Tag Your Releases
 
-Tools like [Johnny Deps](https://github.com/vividcortex/johnny-deps) and [Rx](http://godoc.org/kylelemons.net/go/rx) already make use of tags to checkout specific releases. When I looked at using one of these tools, I found that 3 of 4 dependencies had no tags (sad panda). Then I realized I hadn't tagged my project either!
+40-character SHAs aren't the best for conversation.
+
+>What version did you have when you ran into this bug?
+
+>Oh, I think it was commit df126e5386a3ed95a945f99cd910a2b82dc422c6.
+
+While `go get` has no concept of versions, the DVCS way to indicate versions is through tags. Tools like [Johnny Deps](https://github.com/vividcortex/johnny-deps) and [Rx](http://godoc.org/kylelemons.net/go/rx) already make use of tags to checkout specific releases. When I looked at using one of these tools, I found that 3 of 4 dependencies had no tags (sad panda). Then I realized I hadn't tagged my project either!
 
 Whether or not you use these tools, it's still a good habit to add tags in your DVCS of choice.
 
@@ -94,17 +100,19 @@ bzr push               # Share tags (stores tags with branch)
 
 ### Versions
 
-Go uses Semantic Versioning and ***so should you.*** Go went through many changes until it stabilized as 1.0.0. This year 1.1.0 was released, a backwards compatible update. 1.1.2 was a patch release, and breaking changes await a 2.0.0 release in the distant future. Please <mark>read and follow</mark> [Semantic Versioning 2.0.0](http://semver.org/).
+Go uses Semantic Versioning and ***so should you.*** Go went through **many changes** until it stabilized as 1.0.0. This year 1.1.0 was released, a backwards compatible update. 1.1.2 was a patch release, and breaking changes await a 2.0.0 release in the **distant future.** Please <mark>read and follow</mark> [Semantic Versioning 2.0.0](http://semver.org/).
 
-By convention, tags that specify a version should start with the letter 'v', for example: <mark>v1.0.0-rc.1</mark>.
+That said, all my work is 0.y.z. I may avoid the v2 problem by never having a v1. :-P
 
-If you have something against versions, please still tag your releases. Might I suggest using the international date format (ISO 8601), as in <mark>r2013-08-31</mark>.
+> "Major version zero (0.y.z) is for initial development. Anything may change at any time. The public API should not be considered stable." - SemVer
+
+If you have something against versions, please still tag your releases. Might I suggest using the international date format (ISO 8601), as in <mark>r2013-08-31</mark>?
 
 ***Add a tag today!***
 
 ### Futureproof
 
-Before we can specify dependencies, we need to version our releases. Tags are the most obvious approach. Using a consistent format opens up possibilities for future tooling, but tags remain useful for humans even if future tooling doesn't use them directly.
+Before we can specify dependencies, we need to version our releases. Using a consistent format opens up possibilities for future tooling, but tags remain useful for humans even if future tooling doesn't use them directly.
 
 In case you are wondering, there are APIs to list tags for [GitHub](http://developer.github.com/v3/git/refs/#get-all-references) and [BitBucket](https://confluence.atlassian.com/display/BITBUCKET/repository+Resource#repositoryResource-GETalistofthetags).
 
