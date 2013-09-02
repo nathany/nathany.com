@@ -112,7 +112,7 @@ If you have something against versions, please still tag your releases. Might I 
 
 ### Futureproof
 
-Before we can specify dependencies, we need to version our releases. Using a consistent format opens up possibilities for future tooling, but tags remain useful for humans even if future tooling doesn't use them directly.
+Before we can even consider specifying dependencies, we need to version our releases. Using a consistent format opens up possibilities for future tooling, but tags remain useful for humans even if tools don't use them directly.
 
 In case you are wondering, there are APIs to list tags for [GitHub](http://developer.github.com/v3/git/refs/#get-all-references) and [BitBucket](https://confluence.atlassian.com/display/BITBUCKET/repository+Resource#repositoryResource-GETalistofthetags).
 
