@@ -48,13 +48,11 @@ On June 23rd, David Hinks posted a Google Doc with the following message:
 
 After contributing to David's document, I put together my own proposal based loosely on Bundler's `Gemfile.lock`. [Dave Cheney](http://dave.cheney.net/) pointed out some flaws, and [Kyle Lemons](http://kylelemons.net/) observed similarities between my proposal and [Rx cabinets](http://godoc.org/kylelemons.net/go/rx#hdr-Cabinet_Command).
 
-There are actually a number of solutions to reproducible builds. Git provides [submodules](http://git-scm.com/book/en/Git-Tools-Submodules) and [subtree merging](http://git-scm.com/book/en/Git-Tools-Subtree-Merging). Third-party tools like Rx and Go Pin can track references, or Goven can copy dependencies into your project.
+This was before I realized the myriad of available options. Git provides [submodules](http://git-scm.com/book/en/Git-Tools-Submodules) and [subtree merging](http://git-scm.com/book/en/Git-Tools-Subtree-Merging). Third-party tools like Rx and Go Pin can track references, or Goven can copy dependencies into your project.
 
 The problem is, <mark>we don't have a _"Go Packaging Authority"_ providing guidance</mark>, so every newcomer is left to find their own way.
 
-Shortly after, I saw [Mitchell Hashimoto](http://mitchellh.com/)'s GopherVault proposal. It too wasn't without flaws, perhaps like any new idea.
-
-So I thought: I should take a step back and really think about this more. Not because I'm any sort of expert, but because <mark>I would like Go to have a great packaging story</mark>. Over the _past month,_ I used a [Google Doc](http://goo.gl/oqkvu) as my outlet, and invited others to contribute.
+So I thought: I should take a step back, do some research, and really think about this more. Not because I'm any sort of expert, but because <mark>I would like Go to have a great packaging story</mark>. Over the _past month,_ I used a [Google Doc](http://goo.gl/oqkvu) as my outlet, and invited others to contribute.
 
 While I don't have a grand solution, I believe there are a few fundamentals to building a great packaging story.
 
@@ -64,9 +62,9 @@ Chris Howey's fsnotify package has a legitimate reason to move. First to `code.g
 
 What would happen if a project were to import both `github.com/howeyc/fsnotify` and `code.google.com/p/go.exp/fsnotify`? Each version is in a separate namespace, so it should compile.
 
-Beyond bloating up executables, the issues will vary from package to package. Different versions may compete for exclusive access to the same file, same port or other resources.
+Beyond bloating up executables, the issues will vary from package to package. Different versions may compete for exclusive access to the same file, same port or other resources. Values of interface types may be compatible across both versions of the package, while values of other types won't be implicitly interchangeable. The `init()` functions will be called for both packages, and there will be distinct versions of top-level variables and all global state. *Thanks to Kyle Lemons and John Waycott for [making the issues concrete](https://groups.google.com/forum/#!topic/golang-nuts/5Mr6A8zK6Kk).*
 
-It's unlikely that a project would directly depend on fsnotify from two locations. It may depend on my mythical fsnotify-ext package, which imports `code.google.com/p/go.exp/fsnotify` while another dependency (eg. Revel) uses `github.com/howeyc/fsnotify`. We run into trouble as the dependency tree grows.
+While a single project wouldn't directly depend on fsnotify from two locations, it may depend on a package which imports `code.google.com/p/go.exp/fsnotify` while another dependency uses `github.com/howeyc/fsnotify`. We run into trouble as the dependency tree grows.
 
 ### One Import Path
 
