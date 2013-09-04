@@ -1,6 +1,6 @@
 Nathan's Articles
 =================
- 
+
 This is my blog.
 
 * Jekyll hosted by GitHub Pages
@@ -10,4 +10,5 @@ This is my blog.
 
 Content is &copy; 2013, Nathan Youngman.
 
-Feel free to look around and use this for inspiration if you're building a Jekyll blog of your own.
+Symbolset webfonts Copyright © 2013 Oak Studios LLC
+http://symbolset.com/
