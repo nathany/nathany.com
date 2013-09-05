@@ -24,11 +24,12 @@ A number of third-party tools exist, including
 [Envie](https://github.com/sam-falvo/envie),
 [Go Nuts](http://www.gonuts.io/-/doc),
 [Go Pin](https://github.com/laher/gopin),
-[Goven](https://github.com/kr/goven),
 [Go Pack](https://github.com/gopack/gpk),
 [Go Package Manager](https://github.com/GPMGo/gopm),
 [Gob](https://github.com/tanema/gob),
+[godeps](https://launchpad.net/godeps),
 [Gope](https://github.com/jm/gope),
+[Goven](https://github.com/kr/goven),
 [GVM](https://github.com/moovweb/gvm),
 [Johnny Deps](https://github.com/vividcortex/johnny-deps),
 [Pak](https://github.com/theplant/pak)
