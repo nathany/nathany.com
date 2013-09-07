@@ -29,6 +29,7 @@ A number of third-party tools exist, including
 [Gob](https://github.com/tanema/gob),
 [godeps](https://launchpad.net/godeps),
 [Gope](https://github.com/jm/gope),
+[goproj](https://github.com/divoxx/goproj),
 [Goven](https://github.com/kr/goven),
 [GVM](https://github.com/moovweb/gvm),
 [Johnny Deps](https://github.com/vividcortex/johnny-deps),
