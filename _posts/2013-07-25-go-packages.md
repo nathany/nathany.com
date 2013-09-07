@@ -66,7 +66,7 @@ What would happen if a project were to import both `github.com/howeyc/fsnotify` 
 
 Beyond bloating up executables, the issues will vary from package to package. Different versions may compete for exclusive access to the same file, same port or other resources. Values of interface types may be compatible across both versions of the package, while values of other types won't be implicitly interchangeable. The `init()` functions will be called for both packages, and there will be distinct versions of top-level variables and all global state. *Thanks to Kyle Lemons and John Waycott for [making the issues concrete](https://groups.google.com/forum/#!topic/golang-nuts/5Mr6A8zK6Kk).*
 
-While a single project wouldn't directly depend on fsnotify from two locations, it may depend on a package which imports `code.google.com/p/go.exp/fsnotify` while another dependency uses `github.com/howeyc/fsnotify`. We run into trouble as the dependency tree grows.
+It's unlikely that one package would depend on fsnotify from two locations, but it may depend on a package which imports `code.google.com/p/go.exp/fsnotify` while another dependency uses `github.com/howeyc/fsnotify`. We run into trouble as the dependency tree grows.
 
 ### One Import Path
 
@@ -76,7 +76,9 @@ By convention, `go get` will create the folder `$GOPATH/src/github.com/howeyc/fs
 
 The compiler doesn't care where the source code came from. As long as the package can be found at `$GOPATH/src/github.com/howeyc/fsnotify`, it's absolutely fine if the code came from a fork at `github.com/mycompany/fsnotify` or a fictional mirror at `bitbucket.org/howeyc/fsnotify`.
 
-If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy. A level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) or [another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could really help make builds more reliable.
+If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy.
+
+Importing a repository path gives an immediacy that I have grown quite fond of. At the same time, recognize that a level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) or [another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could help make builds more reliable.
 
 ### Avoid Versions in Paths
 
