@@ -3,7 +3,7 @@ title: Go Package Management
 date: 2013/07/25
 revised: 2013/09/01
 tags: golang, packages, dependencies
-excerpt: A cry for gophers to unify on remote package management.
+excerpt: A cry for gophers to unify on a dependency management solution.
 layout: article
 ---
 
