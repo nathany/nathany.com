@@ -144,7 +144,7 @@ Please take note:
 
 * Entries are in ***reverse chronological*** order, putting the most relevant information first.
 * The first "word" for ***second-level headings*** matches the **tag** we used previously.
-* A standard filename makes it easier for humans to locate (I'm currently using CHANGES, though some people use HISTORY, NEWS or CHANGELOG). We could [bring it to a vote][survey]. :-)
+* A standard file name makes it easier for humans to locate. Some people use CHANGES, CHANGELOG, HISTORY, or NEWS. We could [bring it to a vote][survey]. :-)
 * Though not shown here, it's fairly common to have an "Unreleased" section at the top, listing changes on `master` that will become the next release.
 
 Markdown is a well known format that displays nicely on GitHub and BitBucket. The [Go present](http://godoc.org/code.google.com/p/go.talks/pkg/present) format is only slightly different:
@@ -160,7 +160,7 @@ Markdown is a well known format that displays nicely on GitHub and BitBucket. Th
 
 For the lazy, [tools exist to generate changelogs](http://rubyworks.github.io/vclog/), though I have yet to try it.
 
-What I find more interesting are tools to [parse changelogs](https://github.com/tech-angels/vandamme). Apps like [Gemnasium](https://gemnasium.com/) will present the *relevant subset* of a changelog. Consistent use of tags, subheadings and filenames make this kind of tooling fairly straightforward.
+What I find more interesting are tools to [parse changelogs](https://github.com/tech-angels/vandamme). Apps like [Gemnasium](https://gemnasium.com/) will present the *relevant subset* of a changelog. Consistent use of tags, subheadings and file names make this kind of tooling fairly straightforward.
 
 ## Green Master
 
