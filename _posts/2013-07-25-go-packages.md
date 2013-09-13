@@ -81,7 +81,7 @@ The compiler doesn't care where the source code came from. As long as the packag
 
 If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy.
 
-Importing a repository path gives an immediacy that I have grown quite fond of. At the same time, recognize that a level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) or [another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could help make builds more reliable.
+Importing a repository path gives an immediacy that I have grown quite fond of. At the same time, recognize that a level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) or [another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could gain us some flexibility.
 
 ### Avoid Versions in Paths
 
