@@ -144,4 +144,5 @@ Related Articles:
 * [Releasing Open Source](/os-release)
 * [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) (Johnny Deps)
 * [Rx: My prescription for your Go dependency headaches](http://kylelemons.net/blog/2012/04/22-rx-for-go-headaches.article) (Rx)
+* [Dependency Hell](http://areyoufuckingcoding.me/2012/04/16/dpendency-hell/)
 
