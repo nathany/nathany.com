@@ -1,7 +1,7 @@
 ---
 title: Go Package Management
 date: 2013/07/25
-revised: 2013/09/01
+revised: 2013/09/12
 tags: golang, packages, dependencies
 excerpt: A cry for gophers to unify on a dependency management solution.
 layout: article
@@ -20,22 +20,25 @@ I think building on top of DVCS is a brilliant move. While `go get` isn't a full
 > "Everything else is built on this flexible foundation (FTP) and has grown over time." - Steffen Mueller,
 [Python people want CPAN and how the latter came about](http://www.google.com/url?q=http%3A%2F%2Fmail.python.org%2Fpipermail%2Fdistutils-sig%2F2009-December%2F014977.html&sa=D&sntz=1&usg=AFQjCNHK-oYwAsIsjWXjqi44P8yDBIJgXQ)
 
-A number of third-party tools exist, including
+A number of third-party tools exist. The ones I'm aware of, in alphabetical order are:
+[Dondur](https://github.com/oguzbilgic/dondur),
 [Envie](https://github.com/sam-falvo/envie),
 [Go Nuts](http://www.gonuts.io/-/doc),
 [Go Pin](https://github.com/laher/gopin),
 [Go Pack](https://github.com/gopack/gpk),
 [Go Package Manager](https://github.com/GPMGo/gopm),
 [Gob](https://github.com/tanema/gob),
+[godep](https://github.com/kr/godep),
 [godeps](https://launchpad.net/godeps),
+[gom](https://github.com/mattn/gom),
 [Gope](https://github.com/jm/gope),
 [goproj](https://github.com/divoxx/goproj),
 [Goven](https://github.com/kr/goven),
+[gpm](https://github.com/pote/gpm) (a fork of [Johnny Deps](https://github.com/vividcortex/johnny-deps)),
 [GVM](https://github.com/moovweb/gvm),
-[Johnny Deps](https://github.com/vividcortex/johnny-deps),
 [Pak](https://github.com/theplant/pak)
 and
-[Rx](http://godoc.org/kylelemons.net/go/rx). It's great that our fellow gophers are building these tools and exploring different avenues, but _which one do I use?_
+[Rx](http://godoc.org/kylelemons.net/go/rx). It's great that our fellow gophers are building tools, to the extent that we are exploring different avenues, but _which one do I use?_
 
 Newcomers to the Python community were in a similar situation, but it's getting better, now that there is BDFL-delegate overseeing packaging:
 
@@ -132,13 +135,13 @@ It would be great if the Go Team specified and built a full-featured package man
 
 The larger Go Community can make a package management tool official. It doesn't need to be part of the `go` tool to be what we all use.
 
-So let's rally together and get started!
+So let's rally <strong>together</strong> and get started!
 
 *Comment on [Go+](https://plus.google.com/u/0/104313268939103200754/posts/aQG7HB3grZ4), [reddit](http://www.reddit.com/r/golang/comments/1j3ie4/go_package_management/), or the [Go Nuts mailing list](https://groups.google.com/forum/#!topic/golang-nuts/sfshThQ_wrA).*
 
 Related Articles:
 
 * [Releasing Open Source](/os-release)
-
-
+* [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) (Johnny Deps)
+* [Rx: My prescription for your Go dependency headaches](http://kylelemons.net/blog/2012/04/22-rx-for-go-headaches.article) (Rx)
 
