@@ -1,6 +1,7 @@
 ---
 title: Releasing Open Source
 date: 2013/08/31
+revised: 2013/09/15
 tags: golang, packages, tagging, open source
 excerpt: Being a good open source citizen for the benefit of humans and tooling.
 layout: article
@@ -22,7 +23,7 @@ Here are a few packages for working with databases: [codex](https://github.com/c
 
 We probably have enough options, but I bet any one of these packages could be improved upon. Why not find something close to your needs and contribute?
 
-If later you decide to start fresh, or take a wildly different approach, you'll have met a fellow gopher and probably learned something too.
+If later you decide to start fresh, or take a wildly different approach, you'll have met a fellow gopher, and probably learned something too.
 
 ## Write A Readme
 
@@ -51,7 +52,7 @@ In addition to a `README.md`, provide instructions for those who have a question
 
 Go is under a BSD (3-clause) License. I don't need the third clause for personal projects, so I just use the BSD 2-clause License (Simplified BSD). [Choose whatever license suits your needs](http://choosealicense.com/).
 
-There is a `LICENSE` file in the root of my Development folder with the Copyright set, so I can just copy the file and I'm good to go. To make it easier to tell which license I'm using, I like to commit the LICENSE by itself with the message "Simplified BSD License".
+There is a `LICENSE` file in the root of my Development folder with the Copyright set, so I can just copy the file and I'm good to go. I'm investigating [project generators](https://github.com/gophertown/template/issues/1) to make this process even smoother.
 
 ## Tag Your Releases
 
@@ -112,7 +113,7 @@ If you have something against versions, please still tag your releases. Might I 
 
 ### Futureproof
 
-Before we can even consider specifying dependencies, we need to version our releases. Using a consistent format opens up possibilities for future tooling, but tags remain useful for humans even if tools don't use them directly.
+Before we can even consider specifying dependencies, we need to version our releases. Using a consistent format opens up possibilities for future tooling, but tags remain useful for humans, even if tools don't use them directly.
 
 In case you are wondering, there are APIs to list tags for [GitHub](http://developer.github.com/v3/git/refs/#get-all-references) and [BitBucket](https://confluence.atlassian.com/display/BITBUCKET/repository+Resource#repositoryResource-GETalistofthetags).
 
@@ -120,7 +121,7 @@ In case you are wondering, there are APIs to list tags for [GitHub](http://devel
 
 ## Write a Changelog
 
-[Dominik Honnef](http://dominik.honnef.co/) is writing a series entitled *"What's happening in Go tip"*. Reading a high-level summary of changes is so much nicer than parsing dozens of commit messages.
+[Dominik Honnef](http://dominik.honnef.co/) is writing a wonderful series entitled *"What's happening in Go tip"*. Reading a high-level summary of changes is so much nicer than parsing dozens of commit messages.
 
 This is the benefit of providing a changelog for your project, even if it's just in point form. Here's an example:
 
@@ -144,23 +145,12 @@ Please take note:
 
 * Entries are in ***reverse chronological*** order, putting the most relevant information first.
 * The first "word" for ***second-level headings*** matches the **tag** we used previously.
-* A standard file name makes it easier for humans to locate. Some people use CHANGES, CHANGELOG, HISTORY, or NEWS. We could [bring it to a vote][survey]. :-)
+* A standard file name makes it easier for humans to locate. `CHANGELOG.md` was the most favoured [in the survey][results] that accompanied this article, so I am renaming my Changelogs.
 * Though not shown here, it's fairly common to have an "Unreleased" section at the top, listing changes on `master` that will become the next release.
 
-Markdown is a well known format that displays nicely on GitHub and BitBucket. The [Go present](http://godoc.org/code.google.com/p/go.talks/pkg/present) format is only slightly different:
+Markdown is a well known format that displays nicely on GitHub and BitBucket. There was an overwhelming preference for Markdown in the [survey results][results].
 
-```
-* Changelog
-
-** v0.1.1 / 2013-04-21
-
-- Fixes "named files must all be in one directory" error [#2]
-- Pass through for -tags command line argument. Thanks @jtacoma.
-```
-
-For the lazy, [tools exist to generate changelogs](http://rubyworks.github.io/vclog/), though I have yet to try it.
-
-What I find more interesting are tools to [parse changelogs](https://github.com/tech-angels/vandamme). Apps like [Gemnasium](https://gemnasium.com/) will present the *relevant subset* of a changelog. Consistent use of tags, subheadings and file names make this kind of tooling fairly straightforward.
+[Tools exist to generate changelogs](http://rubyworks.github.io/vclog/), though I have yet to try it. What I find more interesting are tools to [parse changelogs](https://github.com/tech-angels/vandamme). Apps like [Gemnasium](https://gemnasium.com/) will present the *relevant subset* of a changelog. Consistent use of tags, subheadings and file names make this kind of tooling fairly straightforward.
 
 ## Green Master
 
@@ -170,11 +160,17 @@ In addition to writing tests, it's useful to set up <mark>Continuous Integration
 
 Here are a few services that support Go and are free for open source.
 
+### GoCI
+
+[GoCI](http://goci.me/) is an [open source](https://github.com/zeebo/goci) continuous integration service by Jeff Wendling.
+
+While more rudimentary than the other offerings, I'm curious what it could become if the Go community chips in.
+
 ### drone.io
 
 [drone.io](https://drone.io/) is super quick to setup through the web interface, and it supports GitHub, BitBucket and Google Code. I'm impressed.
 
-For those private projects, the pricing is quite competitive, and it so happens to be [written in Go](https://groups.google.com/forum/#!topic/golang-nuts/Lo7KP3rWP3o) too.
+For those private projects, the pricing is quite competitive, and it so happens to be [written in Go](https://groups.google.com/forum/#!topic/golang-nuts/Lo7KP3rWP3o) too. The default build commands for Go [may need a little tweaking](https://gist.github.com/nathany/6402146).
 
 ### Travis CI
 
@@ -182,13 +178,17 @@ For those private projects, the pricing is quite competitive, and it so happens 
 
 ### wercker
 
-[wercker](http://wercker.com/) looks to be the most flexible offering. It allows the community to build custom boxes for any language or environment required, and includes [support for Go](http://devcenter.wercker.com/articles/languages/go.html).
+[wercker](http://wercker.com/) looks to be the most flexible offering, though at the same time I felt a little overwhelmed. It allows the community to build custom boxes for any language or environment required, and includes [support for Go](http://devcenter.wercker.com/articles/languages/go.html).
 
 They [blog on Go](http://blog.wercker.com/tags/golang.html) deployment to Heroku and App Engine, code coverage, and more. Wercker is currently a free beta, but they plan to keep it [free for open source](https://hacks.mozilla.org/2013/02/wercker-continuous-delivery-made-easy-a-webfwd-project/).
 
 ## Finî
 
-I hope this is a good starting place for practices that are beneficial to us humans today, while also paving the way for more and better tooling. Thanks for reading. If you wouldn't mind, please complete [this quick survey][survey].
+I hope this is a good starting place for practices that are beneficial to us humans today, while also paving the way for more and better tooling.
+
+When this article was first published, I included a survey, to help establish some conventions for tagging and naming of changelogs. With only [92 respondents][results], it may not be conclusive, but I'm already updating my projects based on the results.
+
+Hopefully some tools will appear that can rely on these conventions, and I'm currently investigating a [badge](http://b.repl.ca/) to help encourage adoption.
 
 Let me know how I can improve this article. You can reach me on Twitter [@gophertown](https://twitter.com/gophertown) or comment on [Go+](https://plus.google.com/104313268939103200754/posts/Ca9S8UjSfLU),
 [reddit](http://www.reddit.com/r/golang/comments/1lgy4p/releasing_open_source_for_humans_and_for_tooling/), or the
@@ -197,9 +197,9 @@ Let me know how I can improve this article. You can reach me on Twitter [@gopher
 Related Articles:
 
 * [Go Package Management](/go-packages)
-
-
+* [A Better Changelog](http://bitprophet.org/blog/2013/09/14/a-better-changelog/)
+* [Continuous Integration for Go Code](http://jmcvetta.github.io/blog/2013/08/30/continuous-integration-for-go-code/)
 
 [contributing]: https://github.com/gophertown/looper/blob/master/CONTRIBUTING.md
 [survey]: https://docs.google.com/forms/d/1XGjy74hrq2DG-Zh4VwqxSuAWPlLf2zx5KAU1VCph5ys/viewform
-
+[results]: https://docs.google.com/a/nathany.com/forms/d/1XGjy74hrq2DG-Zh4VwqxSuAWPlLf2zx5KAU1VCph5ys/viewanalytics
