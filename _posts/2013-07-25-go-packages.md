@@ -1,7 +1,7 @@
 ---
 title: Go Package Management
 date: 2013/07/25
-revised: 2013/09/12
+revised: 2013/09/24
 tags: golang, packages, dependencies
 excerpt: A cry for gophers to unify on a dependency management solution.
 layout: article
@@ -30,6 +30,7 @@ A number of third-party tools exist. The ones I'm aware of, in alphabetical orde
 [Gob](https://github.com/tanema/gob),
 [godep](https://github.com/kr/godep),
 [godeps](https://launchpad.net/godeps),
+[goem](https://github.com/adeven/goem),
 [gom](https://github.com/mattn/gom),
 [Gope](https://github.com/jm/gope),
 [goproj](https://github.com/divoxx/goproj),
@@ -145,4 +146,6 @@ Related Articles:
 * [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) (Johnny Deps)
 * [Rx: My prescription for your Go dependency headaches](http://kylelemons.net/blog/2012/04/22-rx-for-go-headaches.article) (Rx)
 * [Dependency Hell](http://areyoufuckingcoding.me/2012/04/16/dpendency-hell/)
+* [A journey in golang package manager](http://dev.af83.com/2013/09/14/a-journey-in-golang-package-manager.html)
+
 
