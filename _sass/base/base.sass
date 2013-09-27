@@ -24,6 +24,26 @@ a.ss-icon
     color: black
     @include transition (color 0.3s ease-in-out)
 
+a.circle
+  display: inline-block
+  text-align: center
+  width: 2rem
+  height: 2rem
+  line-height: 3rem
+  background-color: $base1
+  border-radius: 50%
+  text-decoration: none
+  &:hover
+    background-color: black
+    @include transition (background-color 0.3s ease-in-out)
+  span
+    position: relative
+    top: -0.4rem
+    left: 0
+    font-size: 1.2rem
+    color: $color5
+
+
 figcaption
   background-color: $color5
   color: $color1
