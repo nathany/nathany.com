@@ -1,7 +1,7 @@
 ---
 title: Releasing Open Source
 date: 2013/08/31
-revised: 2013/09/15
+revised: 2013/09/28
 tags: golang, packages, tagging, open source
 excerpt: Being a good open source citizen for the benefit of humans and tooling.
 layout: article
@@ -19,7 +19,7 @@ There a few simple things <mark>we can all do</mark> to improve the Go ecosystem
 
 Before getting started, do a search on [GoDoc](http://godoc.org/) or ask around.
 
-Here are a few packages for working with databases:
+There are a few packages for working with databases:
 [codex](https://github.com/chuckpreslar/codex),
 [gorp](https://github.com/coopernurse/gorp),
 [goSQL](https://github.com/quintans/goSQL),
@@ -31,7 +31,7 @@ Here are a few packages for working with databases:
 and
 [Vivom](https://github.com/oguzbilgic/vivom).
 
-We probably have enough options, but I bet any one of these packages could be improved upon. Why not find something close to your needs and contribute?
+We probably have enough options, but I bet any one of these packages could be improved upon. Why not pick one and contribute?
 
 If later you decide to start fresh, or take a wildly different approach, you'll have met a fellow gopher, and probably learned something too.
 
@@ -51,7 +51,7 @@ summary:     Go spec starting point.
 
 If you're writing a package, be sure to [document the APIs](http://golang.org/doc/articles/godoc_documenting_go_code.html) and link to your [GoDoc](http://godoc.org/) page from the README.
 
-### Contributing
+## Encourage Contributions
 
 In addition to a `README.md`, provide instructions for those who have a question, an issue, or code to contribute. Put this in a file named `CONTRIBUTING.md`. If you're using GitHub, it will link to your CONTRIBUTING file from the *New Issue* form:
 
@@ -72,9 +72,7 @@ There is a `LICENSE` file in the root of my Development folder with the Copyrigh
 
 >Oh, I think it was commit df126e5386a3ed95a945f99cd910a2b82dc422c6.
 
-Where versions can be compared very simply, eg. >= 3.2.0, a tool could only tell if 11586e3 > b1e3a97 with the full DVCS history.
-
-Right now `go get` has no concept of versions, but the DVCS way to indicate versions is through tags. Tools like [Johnny Deps](https://github.com/vividcortex/johnny-deps) and [Rx](http://godoc.org/kylelemons.net/go/rx) already make use of tags to checkout specific releases. When I looked at using one of these tools, I found that 3 of 4 dependencies had no tags (sad panda). Then I realized I hadn't tagged my project yet either!
+Right now `go get` has no concept of releases, but <mark>the DVCS way</mark> to indicate releases is through tags. Tools like [Johnny Deps](https://github.com/vividcortex/johnny-deps) and [Rx](http://godoc.org/kylelemons.net/go/rx) already make use of tags to checkout specific releases. When I looked at using one of these tools, I found that 3 of 4 dependencies had no tags (sad panda). Then I realized I hadn't tagged my project yet either!
 
 Whether or not you use these tools, it's still a good habit to add tags in your DVCS of choice.
 
@@ -113,23 +111,21 @@ bzr push               # Share tags (stores tags with branch)
 
 ### Versions
 
-Go uses Semantic Versioning and ***so should you.*** Go went through **many changes** until it stabilized as 1.0.0. This year 1.1.0 was released, a backwards compatible update. 1.1.2 was a patch release, and breaking changes await a 2.0.0 release in the **distant future.** Please <mark>read and follow</mark> [Semantic Versioning 2.0.0](http://semver.org/).
-
-That said, all my work is 0.y.z. I may avoid the v2 problem by never having a v1. :-P
+Go uses semantic versioning and ***so should we.*** Go went through *many changes* until it stabilized as v1.0.0. 
 
 > "Major version zero (0.y.z) is for initial development. Anything may change at any time. The public API should not be considered stable." - SemVer
 
-If you have something against versions, please still tag your releases. Might I suggest using the international date format (ISO 8601), as in <mark>r2013-08-31</mark>?
+This year Go v1.1.0 was released, a backwards compatible update. Then v1.1.2 was a patch release, and breaking changes await a v2.0.0 release in the *distant future.* So we're all on the same page, please <mark>read and follow</mark> [Semantic Versioning 2.0.0](http://semver.org/).
 
-***Add a tag today!***
+If you have something against versions, please still tag your releases. Might I suggest using the international date format (ISO 8601), as in <mark>r2013-08-31</mark>?
 
 ### Futureproof
 
-Before we can even consider specifying dependencies, we need to version our releases. Using a consistent format opens up possibilities for future tooling, but tags remain useful for humans, even if tools don't use them directly.
+We can prepare today for the tools we are building tomorrow.
 
-In case you are wondering, there are APIs to list tags for [GitHub](http://developer.github.com/v3/git/refs/#get-all-references) and [BitBucket](https://confluence.atlassian.com/display/BITBUCKET/repository+Resource#repositoryResource-GETalistofthetags).
+There are APIs to list tags for [GitHub](http://developer.github.com/v3/git/refs/#get-all-references) and [BitBucket](https://confluence.atlassian.com/display/BITBUCKET/repository+Resource#repositoryResource-GETalistofthetags). If we stick to a <mark>consistent tagging format</mark>, tools can parse them into their constituent parts. Then versions can be compared very simply, eg. >= 3.2.0, whereas a tool could only tell if 11586e3 > b1e3a97 with the full DVCS history.
 
-
+If you're in the camp that wants a SAT solver like Bundler, tagging our releases is the first step in that direction. If you never want to hear of SAT again, having been traumatized by Maven (so I hear), tagged releases are still incredibly helpful for us today.
 
 ## Write a Changelog
 
@@ -194,6 +190,15 @@ For those private projects, the pricing is quite competitive, and it so happens 
 
 They [blog on Go](http://blog.wercker.com/tags/golang.html) deployment to Heroku and App Engine, code coverage, and more. Wercker is currently a free beta, but they plan to keep it [free for open source](https://hacks.mozilla.org/2013/02/wercker-continuous-delivery-made-easy-a-webfwd-project/).
 
+
+## Release Often
+
+After the 14-month marathon that was Go 1.1, Go has moved to [a 6 month release cycle][gorelease].
+
+>"One of the benefits of time based releases is that they encourage evolutionary change, instead of revolutionary change. Instead of radical breaks every year or two years, smaller changes are made every month." - [Jeremy Evans][]
+
+An interesting observation that I would like to explore.
+
 ## Finî
 
 I hope this is a good starting place for practices that are beneficial to us humans today, while also paving the way for more and better tooling.
@@ -202,16 +207,19 @@ When this article was first published, I included a survey, to help establish so
 
 Hopefully some tools will appear that can rely on these conventions, and I'm currently investigating a [badge](http://b.repl.ca/) to help encourage adoption.
 
-Let me know how I can improve this article. You can reach me on Twitter [@gophertown](https://twitter.com/gophertown) or comment on [Go+](https://plus.google.com/104313268939103200754/posts/Ca9S8UjSfLU),
+Comment on [Go+](https://plus.google.com/104313268939103200754/posts/Ca9S8UjSfLU),
 [reddit](http://www.reddit.com/r/golang/comments/1lgy4p/releasing_open_source_for_humans_and_for_tooling/), or the
 [Go Nuts mailing list](https://groups.google.com/forum/#!topic/golang-nuts/FyXLZNPH7_U).
 
 Related Articles:
 
 * [Go Package Management](/go-packages)
-* [A Better Changelog](http://bitprophet.org/blog/2013/09/14/a-better-changelog/)
-* [Continuous Integration for Go Code](http://jmcvetta.github.io/blog/2013/08/30/continuous-integration-for-go-code/)
+* [A Better Changelog](http://bitprophet.org/blog/2013/09/14/a-better-changelog/) by Jeff Forcier
+* [Continuous Integration for Go Code](http://jmcvetta.github.io/blog/2013/08/30/continuous-integration-for-go-code/) by Jason McVetta
 
 [contributing]: https://github.com/gophertown/looper/blob/master/CONTRIBUTING.md
 [survey]: https://docs.google.com/forms/d/1XGjy74hrq2DG-Zh4VwqxSuAWPlLf2zx5KAU1VCph5ys/viewform
 [results]: https://docs.google.com/a/nathany.com/forms/d/1XGjy74hrq2DG-Zh4VwqxSuAWPlLf2zx5KAU1VCph5ys/viewanalytics
+
+[gorelease]: https://groups.google.com/forum/#!msg/golang-dev/WyoohU08z5M/YQ4Gj0EFwmEJ
+[Jeremy Evans]: http://jeremyevans-pres.heroku.com/heroku201205/index.html#185
