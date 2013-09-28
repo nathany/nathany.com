@@ -9,17 +9,13 @@ layout: article
 
 ![Gophers with parcels](/assets/images/gopher-tagging.jpg)
 
-*Go get* is [cool and all](http://www.goinggo.net/2013/08/organizing-code-to-support-go-get.html), though some assembly is required. How does your team handle reproducible builds? How will we version packages to handle bug reports?
-
-Hailing from the Ruby community, my tendency has been to gravitate towards a [SAT solver](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem) for dependency management. Given that it took 13 months for [Bundler](http://bundler.io/) 1.0 to be realized, I don't expect this to happen overnight, and I personally have no idea how to write one. If you're in the same boat, you may be wondering how to help out.
-
 There a few simple things <mark>we can all do</mark> to improve the Go ecosystem. Before you unleash your next open source project and \[ANN\] it on [Go Nuts](https://groups.google.com/forum/#!forum/golang-nuts), consider this.
 
 ## See What's Out There
 
 Before getting started, do a search on [GoDoc](http://godoc.org/) or ask around.
 
-There are a few packages for working with databases:
+There are already a few packages for working with databases:
 [codex](https://github.com/chuckpreslar/codex),
 [gorp](https://github.com/coopernurse/gorp),
 [goSQL](https://github.com/quintans/goSQL),
@@ -49,7 +45,7 @@ date:        Sun Mar 02 20:47:34 2008 -0800
 summary:     Go spec starting point.
 ```
 
-If you're writing a package, be sure to [document the APIs](http://golang.org/doc/articles/godoc_documenting_go_code.html) and link to your [GoDoc](http://godoc.org/) page from the README.
+If you're writing a reusable library, be sure to [document the APIs](http://golang.org/doc/articles/godoc_documenting_go_code.html), and add a link to your [GoDoc](http://godoc.org/) page in the README.
 
 ## Encourage Contributions
 
