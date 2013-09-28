@@ -1,9 +1,9 @@
 ---
 title: Go Package Management
 date: 2013/07/25
-revised: 2013/09/24
+revised: 2013/09/28
 tags: golang, packages, dependencies
-excerpt: A cry for gophers to unify on a dependency management solution.
+excerpt: A call to action for gophers to unify on a dependency management solution.
 layout: article
 ---
 
@@ -126,7 +126,7 @@ Similarly, package management tools should be cross-platform, not catering to us
 
 As a package maintainer, I'm not about to say "you must install Go Nuts to use this package" or "I recommend Rx to get new versions of this package."
 
-We as a community need to agree on a set of tools, a common metadata format and strategy for managing packages. If multiple package management tools are to exist, they need to interoperate.
+We as a community need to agree on a set of tools, a common metadata format, and strategy for managing dependencies. If multiple package management tools are to exist, they need to interoperate.
 If and when we get into versioning and dependency resolution, the need for interoperability becomes even more pronounced.
 
 
@@ -143,9 +143,11 @@ So let's rally <strong>together</strong> and get started!
 Related Articles:
 
 * [Releasing Open Source](/os-release)
-* [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) (Johnny Deps)
-* [Rx: My prescription for your Go dependency headaches](http://kylelemons.net/blog/2012/04/22-rx-for-go-headaches.article) (Rx)
-* [Dependency Hell](http://areyoufuckingcoding.me/2012/04/16/dpendency-hell/)
-* [A journey in golang package manager](http://dev.af83.com/2013/09/14/a-journey-in-golang-package-manager.html)
+* [How to Write Go Code](http://golang.org/doc/code.html)
+* [Organizing Code to Support Go Get](http://www.goinggo.net/2013/08/organizing-code-to-support-go-get.html) by William Kennedy
+* Johnny Deps: [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) by Baron Schwartz
+* [Rx: My prescription for your Go dependency headaches](http://kylelemons.net/blog/2012/04/22-rx-for-go-headaches.article) by Kyle Lemons
+* [Dependency Hell](http://areyoufuckingcoding.me/2012/04/16/dpendency-hell/) by Chris Kowalik
+* [A journey in golang package manager](http://dev.af83.com/2013/09/14/a-journey-in-golang-package-manager.html) by Bruno Michel
 
 
