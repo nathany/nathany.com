@@ -7,7 +7,7 @@ excerpt: A call to action for gophers to unify on a dependency management soluti
 layout: article
 ---
 
-![Gophers with boxes ready to mail](/assets/images/gopher-packaging.jpg)
+![Gophers with parcels and a friendly fox](/assets/images/gopher-fox.jpg)
 
 ## Foundation
 
