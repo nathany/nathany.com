@@ -72,7 +72,9 @@ There is a `LICENSE` file in the root of my Development folder with the Copyrigh
 
 >Oh, I think it was commit df126e5386a3ed95a945f99cd910a2b82dc422c6.
 
-While `go get` has no concept of versions, the DVCS way to indicate versions is through tags. Tools like [Johnny Deps](https://github.com/vividcortex/johnny-deps) and [Rx](http://godoc.org/kylelemons.net/go/rx) already make use of tags to checkout specific releases. When I looked at using one of these tools, I found that 3 of 4 dependencies had no tags (sad panda). Then I realized I hadn't tagged my project either!
+Where versions can be compared very simply, eg. >= 3.2.0, a tool could only tell if 11586e3 > b1e3a97 with the full DVCS history.
+
+Right now `go get` has no concept of versions, but the DVCS way to indicate versions is through tags. Tools like [Johnny Deps](https://github.com/vividcortex/johnny-deps) and [Rx](http://godoc.org/kylelemons.net/go/rx) already make use of tags to checkout specific releases. When I looked at using one of these tools, I found that 3 of 4 dependencies had no tags (sad panda). Then I realized I hadn't tagged my project yet either!
 
 Whether or not you use these tools, it's still a good habit to add tags in your DVCS of choice.
 
@@ -156,11 +158,11 @@ Please take note:
 * Entries are in ***reverse chronological*** order, putting the most relevant information first.
 * The first "word" for ***second-level headings*** matches the **tag** we used previously.
 * A standard file name makes it easier for humans to locate. `CHANGELOG.md` was the most favoured [in the survey][results] that accompanied this article, so I am renaming my Changelogs.
-* Though not shown here, it's fairly common to have an "Unreleased" section at the top, listing changes on `master` that will become the next release.
+* Though not shown here, it's fairly common to have an "Unreleased" section at the top, building up a list of changes that will become the next release.
 
 Markdown is a well known format that displays nicely on GitHub and BitBucket. There was an overwhelming preference for Markdown in the [survey results][results].
 
-[Tools exist to generate changelogs](http://rubyworks.github.io/vclog/), though I have yet to try it. What I find more interesting are tools to [parse changelogs](https://github.com/tech-angels/vandamme). Apps like [Gemnasium](https://gemnasium.com/) will present the *relevant subset* of a changelog. Consistent use of tags, subheadings and file names make this kind of tooling fairly straightforward.
+[Tools exist to generate changelogs](http://rubyworks.github.io/vclog/), though I have yet to try any. What I find more interesting are tools to [parse changelogs](https://github.com/tech-angels/vandamme). Apps like [Gemnasium](https://gemnasium.com/) will present the *relevant subset* of a changelog. Consistent use of tags, subheadings and file names make this kind of tooling fairly straightforward.
 
 ## Green Master
 
