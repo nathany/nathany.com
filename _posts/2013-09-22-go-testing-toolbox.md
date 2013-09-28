@@ -1,6 +1,6 @@
 ---
 title: Go Testing Toolbox
-date: 2013-09-22
+date: 2013-09-28
 tags: golang, testing, vagrantup, coverage, mocking, continuous integration, looper, autotest
 excerpt: ...
 layout: article
@@ -63,7 +63,7 @@ mentioned in the [Go 1.2 Release Notes](http://tip.golang.org/doc/go1.2#cover)
 
 ```bash
 go test -coverprofile=c.out -covermode=count
-
+go tool cover -html=c.out
 ```
 
 
@@ -76,6 +76,38 @@ switch gears
 [go2xunit][]
 [Jenkins][]/Hudson test integration
 
+In addition to writing tests, it's useful to set up <mark>Continuous Integration</mark> to run those tests against the latest dependencies. All these services offer <mark>Continuous Deployment</mark> as well. Your servers don't need Go installed, and if any dependency snafus arise, they can be identified before deployment begins.
+
+Here are a few services that support Go and are free for open source.
+
+### GoCI
+
+[GoCI](http://goci.me/) is an [open source](https://github.com/zeebo/goci) continuous integration service by Jeff Wendling.
+
+While more rudimentary than the other offerings, I'm curious what it could become if the Go community chips in.
+
+### drone.io
+
+[drone.io](https://drone.io/) is super quick to setup through the web interface, and it supports GitHub, BitBucket and Google Code. I'm impressed.
+
+For those private projects, the pricing is quite competitive, and it so happens to be [written in Go](https://groups.google.com/forum/#!topic/golang-nuts/Lo7KP3rWP3o) too. The default build commands for Go [may need a little tweaking](https://gist.github.com/nathany/6402146).
+
+### Travis CI
+
+[Travis CI](https://travis-ci.org/) has been around longer than most, and has some nice features. Though it only integrates with GitHub, Travis will let you know if pull requests are *safe to merge.* It also allows testing against [older versions of Go or Go tip](http://about.travis-ci.org/docs/user/languages/go/).
+
+### wercker
+
+[wercker](http://wercker.com/) looks to be the most flexible offering, though at the same time I felt a little overwhelmed. It allows the community to build custom boxes for any language or environment required, and includes [support for Go](http://devcenter.wercker.com/articles/languages/go.html).
+
+They [blog on Go](http://blog.wercker.com/tags/golang.html) deployment to Heroku and App Engine, code coverage, and more. Wercker is currently a free beta, but they plan to keep it [free for open source](https://hacks.mozilla.org/2013/02/wercker-continuous-delivery-made-easy-a-webfwd-project/).
+
+### AppVeyor
+
+[AppVeyor][]
+
+[test][appveyortest]
+
 
 ## Cross-platform testing
 
@@ -83,7 +115,7 @@ switch gears
 
 [Vagrant][] and [VirtualBox][]
 
-[Vagrantfile][] in my src folder (`src\Vagrantfile`)
+[Vagrantfile][] in my src folder (`src/Vagrantfile`)
 
 <mark>synced folder</mark>
 
@@ -107,8 +139,8 @@ becomes Z:\project
 
 no conflicts
 
-bin\*.exe
-pkg\windows_amd64
+`bin\*.exe`
+`pkg\windows_amd64`
 
 PowerShell
 
@@ -156,4 +188,9 @@ Related Articles:
 [vagrantssh]: https://github.com/mitchellh/vagrant/tree/master/plugins/commands/ssh
 
 [modernie]: http://www.modern.ie/en-us/virtualization-tools
+
+[AppVeyor]: http://www.appveyor.com/
+[appveyortest]: https://bitbucket.org/appveyor/test-go
+
+
 

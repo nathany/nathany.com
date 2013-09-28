@@ -113,13 +113,13 @@ Go uses semantic versioning and ***so should we.*** Go went through *many change
 
 This year Go v1.1.0 was released, a backwards compatible update. Then v1.1.2 was a patch release, and breaking changes await a v2.0.0 release in the *distant future.* So we're all on the same page, please <mark>read and follow</mark> [Semantic Versioning 2.0.0](http://semver.org/).
 
-If you have something against versions, please still tag your releases. Might I suggest using the international date format (ISO 8601), as in <mark>r2013-08-31</mark>?
+If you are strongly against versions, please still tag your releases. Might I suggest using the international date format (ISO 8601), as in <mark>r2013-08-31</mark>?
 
 ### Futureproof
 
 We can prepare today for the tools we are building tomorrow.
 
-There are APIs to list tags for [GitHub](http://developer.github.com/v3/git/refs/#get-all-references) and [BitBucket](https://confluence.atlassian.com/display/BITBUCKET/repository+Resource#repositoryResource-GETalistofthetags). If we stick to a <mark>consistent tagging format</mark>, tools can parse them into their constituent parts. Then versions can be compared very simply, eg. >= 3.2.0, whereas a tool could only tell if 11586e3 > b1e3a97 with the full DVCS history.
+There are APIs to list tags for [GitHub](http://developer.github.com/v3/git/refs/#get-all-references) and [BitBucket](https://confluence.atlassian.com/display/BITBUCKET/repository+Resource#repositoryResource-GETalistofthetags). If we stick to a <mark>consistent tagging format</mark>, tools can parse them into their constituent parts. Then versions can be compared very simply, eg. >= 3.2.0, whereas a tool could only determine if 11586e3 > b1e3a97 with the full DVCS history.
 
 If you're in the camp that wants a SAT solver like Bundler, tagging our releases is the first step in that direction. If you never want to hear of SAT again, having been traumatized by Maven (so I hear), tagged releases are still incredibly helpful for us today.
 
@@ -158,34 +158,11 @@ Markdown is a well known format that displays nicely on GitHub and BitBucket. Th
 
 ## Green Master
 
-If you're not already using the "feature branch, [pull request](https://help.github.com/articles/using-pull-requests), code review" workflow for your own work, I highly recommend it.
+With `go get`, anyone could pull your master branch at any time. When writing a reusable library, it's critical to keep master stable.
 
-In addition to writing tests, it's useful to set up <mark>Continuous Integration</mark> to run those tests against the latest dependencies. All these services offer <mark>Continuous Deployment</mark> as well. Your servers don't need Go installed, and if any dependency snafus arise, they can be identified before deployment begins.
+Rather than developing directly on master, use a feature branch, and only merge when ready for release. Before merging, review your own code, or ask your peers to take a look. If you're using GitHub, a great way to do this is with a [pull request](https://help.github.com/articles/using-pull-requests) from the feature branch to master.
 
-Here are a few services that support Go and are free for open source.
-
-### GoCI
-
-[GoCI](http://goci.me/) is an [open source](https://github.com/zeebo/goci) continuous integration service by Jeff Wendling.
-
-While more rudimentary than the other offerings, I'm curious what it could become if the Go community chips in.
-
-### drone.io
-
-[drone.io](https://drone.io/) is super quick to setup through the web interface, and it supports GitHub, BitBucket and Google Code. I'm impressed.
-
-For those private projects, the pricing is quite competitive, and it so happens to be [written in Go](https://groups.google.com/forum/#!topic/golang-nuts/Lo7KP3rWP3o) too. The default build commands for Go [may need a little tweaking](https://gist.github.com/nathany/6402146).
-
-### Travis CI
-
-[Travis CI](https://travis-ci.org/) has been around longer than most, and has some nice features. Though it only integrates with GitHub, Travis will let you know if pull requests are *safe to merge.* It also allows testing against [older versions of Go or Go tip](http://about.travis-ci.org/docs/user/languages/go/).
-
-### wercker
-
-[wercker](http://wercker.com/) looks to be the most flexible offering, though at the same time I felt a little overwhelmed. It allows the community to build custom boxes for any language or environment required, and includes [support for Go](http://devcenter.wercker.com/articles/languages/go.html).
-
-They [blog on Go](http://blog.wercker.com/tags/golang.html) deployment to Heroku and App Engine, code coverage, and more. Wercker is currently a free beta, but they plan to keep it [free for open source](https://hacks.mozilla.org/2013/02/wercker-continuous-delivery-made-easy-a-webfwd-project/).
-
+Write unit tests to help ensure that your code continues to behave according to your expectations. Besides running your tests locally, consider setting up Continuous Integration. Some CI services will integrate with pull requests, helping you keep master green.
 
 ## Release Often
 
@@ -197,7 +174,7 @@ An interesting observation that I would like to explore.
 
 ## Finî
 
-I hope this is a good starting place for practices that are beneficial to us humans today, while also paving the way for more and better tooling.
+I hope this is a good starting place for practices that are beneficial today, while also paving the way for better tooling.
 
 When this article was first published, I included a survey, to help establish some conventions for tagging and naming of changelogs. With only [92 respondents][results], it may not be conclusive, but I'm already updating my projects based on the results.
 
