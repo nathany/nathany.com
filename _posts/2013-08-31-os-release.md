@@ -1,7 +1,7 @@
 ---
 title: Releasing Open Source
 date: 2013/08/31
-revised: 2013/09/28
+revised: 2013/09/29
 tags: golang, packages, tagging, open source
 excerpt: Being a good open source citizen for the benefit of humans and tooling.
 layout: article
@@ -24,8 +24,10 @@ There are already a few packages for working with databases:
 [kdb](https://github.com/sdming/kdb),
 [meddler](https://github.com/russross/meddler),
 [sqlx](https://github.com/jmoiron/sqlx),
+[Vivom](https://github.com/oguzbilgic/vivom),
 and
-[Vivom](https://github.com/oguzbilgic/vivom).
+[xorm](https://github.com/lunny/xorm).
+
 
 We probably have enough options, but I bet any one of these packages could be improved upon. Why not pick one and contribute?
 
