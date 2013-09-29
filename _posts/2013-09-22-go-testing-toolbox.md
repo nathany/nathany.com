@@ -2,9 +2,8 @@
 title: Go Testing Toolbox
 date: 2013-09-28
 tags: golang, testing, vagrantup, coverage, mocking, continuous integration, looper, autotest
-excerpt: ...
+excerpt: A conglomeration of testing tools, from Autotest to Vagrant.
 layout: article
-published: false
 ---
 
 ![Gophers with a ruler and a hammer](/assets/images/gopher-tools.jpg)
@@ -55,7 +54,7 @@ So I looked for a light weight alternative. The solution was to use <mark>interf
 
 If an interface doesn't fit the problem, Karl Seguin has an different approach, by [redefining functions in tests][injection]. [Gomock][] has continued to improve and may fit your situation, and there is a newcomer to the mocking scene, [withmock][].
 
-Then there are specialized "mocking" tools. For testing HTTP client libraries, the standard library ships with [httptest][]. Will Norris explains how it works in *[Testing in go-github](https://willnorris.com/2013/08/testing-in-go-github)*.
+Then there are specialized "mocking" tools. For testing HTTP client libraries, the standard library ships with [httptest][]. Will Norris explains how it works in *[Testing in go-github][go-github]*.
 
 
 ## Coverage
@@ -69,11 +68,13 @@ go test -coverprofile=c.out -covermode=count
 go tool cover -html=c.out
 ```
 
-If the new cover tool doesn't suit your fancy/needs, take a look at Andrew Wilkins' [gocov][]. If you are using drone.io for CI, you can hook it up to [Coveralls][]. See [goveralls](https://github.com/mattn/goveralls) for details.
+If the new cover tool doesn't suit your fancy/needs, take a look at Andrew Wilkins' [gocov][]. Combine it with drone.io for CI to be able to hook it up to [Coveralls][]. See [goveralls](https://github.com/mattn/goveralls) for details.
 
 Having played with both, I much prefer the new cover tools UI to [Coveralls][]. It's snappy and easy to navigate.
 
 ## Continuous Integration
+
+*Note: If you previously read my [Releasing Open Source][os-release] article, most of this section will be familiar.*
 
 If you're a fan of [Jenkins][], take a look at [go2xunit][], otherwise you may like one of these services. They all support Go and are <mark>free for open source</mark>.
 
@@ -81,7 +82,7 @@ If you're a fan of [Jenkins][], take a look at [go2xunit][], otherwise you may l
 
 [GoCI](http://goci.me/) is an [open source](https://github.com/zeebo/goci) continuous integration service by Jeff Wendling.
 
-While more rudimentary than the other offerings, I'm curious what it could become if the Go community chips in.
+While more rudimentary than the other offerings, it is the only CI service focussed exclusively on Go. I'm curious what it could become if the Go community chips in.
 
 ### drone.io
 
@@ -109,53 +110,61 @@ They [blog frequently on Go](http://blog.wercker.com/tags/golang.html) deploymen
 
 ## Cross-Platform Testing
 
+Before contributing to [fsnotify][], I wanted a way to test my changes across the adapters for kqueue (BSD), inotify (Linux) and ReadDirectoryChanges (Windows). My development machine is running OS X, which currently uses the kqueue adapter (though support for FSEvents is in the works). How would I test the others?
+
 ### Vagrant
 
-[Vagrant][] and [VirtualBox][]
+[Vagrant][] is a tool to script the creation of [VirtualBox][] VMs (as well as VMWare and other providers). 
 
-[Vagrantfile][] in my src folder (`src/Vagrantfile`)
+When you run `vagrant up` it will download Linux and BSD *boxes* if necessary, install the DVCS tools and Go binaries, and finally configure the GOPATHs and other essentials.
 
-<mark>synced folder</mark>
+The way I have this setup, my `src/` folder is shared, so I can continue to use my editor and tools on OS X, while being able to issue commands to Linux and BSD VMs:
 
-vagrant up
-`vagrant halt` and `vagrant destroy`
+```bash
+vagrant ssh linux -c 'cd gophertown/looper; go test ./...'
+```
 
-(can't run Looper inside the VM on a synced folder)
+Each VM has its own `bin/` folder so `go install` won't stomp on the binaries created by your host OS or the other VM.
+
+If you would like to try it out, there are more details in the [Vagrant Gopher][vagrant-gopher] repository. I welcome contributions, but be warned, you'll be dealing with Bash script embedded in Ruby. Lotsa fun!
 
 ### Windows
 
-not aware Vagrant
+I'm not aware of a way to work with the Windows command line through Vagrant, so I had to set all this up manually.
 
-Windows 7 Professional license
+You can [download Windows Virtual Machines][modernie] from Microsoft for free, but I went with a proper Windows 7 Professional license to avoid the constant genuine Windows nagging.
 
-[download Windows Virtual Machines][modernie] from Microsoft
-nag a bit but they're free
+Using VMWare Fusion, I shared my project folder which contains src, bin, and pkg. It becomes Z:\project on Windows. 
 
-sharing my project folder which contains src, bin, and pkg.
+Fortunately this doesn't cause conflicts because binaries on Windows have an `.exe` extension and Go creates a `pkg\windows_amd64` folder for static libraries.
 
-becomes Z:\project
-
-no conflicts
-
-`bin\*.exe`
-`pkg\windows_amd64`
-
-PowerShell
-
-Installed Go binaries by hand.
-
+With the Go binaries installed, I can use PowerShell to run my tests.
 
 ## Autotest
 
-Some people like running tests directly in their editor or IDE
+Many people like running tests directly in their editor or IDE. I prefer to have a separate Terminal window for running tests. 
 
-Terminal window
+This past February I wrote an autotest tool at a hackathon. [Looper][] uses [fsnotify][] to watch your file system. When you hit save it runs the tests for that package (folder).
 
-Looper
+Looper still has a long ways to go, but even at the start it had some nice features:
+
+* Recursive watching, when you add a subfolder it will start watching it.
+* It has a prompt that uses readline to manage history.
+* ANSI colours indicate pass/fail.
+ 
+I'm already thinking about automatically running tests across multiple VMs using Vagrant, and maybe adding one-off commands for shortcuts, like generating a coverage report. My goal isn't to replace Bash though, so there is much to consider.
+
+## PASS
+
+Well, I hope you found this article helpful. If it was a FAIL, please let me know how I can improve it.
 
 
 Related Articles:
 
+* [Releasing Open Source][os-release]
+* [Writing table driven tests in Go][tabledriven] by Dave Cheney
+* [Testing in go-github][go-github] by Will Norris
+* [Code coverage with gocov and wercker][gocov-wercker] by Pieter Joost
 * [Continuous Integration for Go Code](http://jmcvetta.github.io/blog/2013/08/30/continuous-integration-for-go-code/) by Jason McVetta
 
 
@@ -183,12 +192,11 @@ Related Articles:
 [go2xunit]: https://bitbucket.org/tebeka/go2xunit
 [Jenkins]: http://jenkins-ci.org/
 
+[fsnotify]: https://github.com/howeyc/fsnotify
+
 [Vagrant]: http://www.vagrantup.com/
 [VirtualBox]: https://www.virtualbox.org/
-[Vagrantfile]: https://gist.github.com/nathany/6662802
-
-[CDPATH]: http://theunixtoolbox.com/cdpath/
-[vagrantssh]: https://github.com/mitchellh/vagrant/tree/master/plugins/commands/ssh
+[vagrant-gopher]: https://github.com/gophertown/vagrant-gopher
 
 [modernie]: http://www.modern.ie/en-us/virtualization-tools
 
@@ -196,5 +204,10 @@ Related Articles:
 [appveyortest]: https://bitbucket.org/appveyor/test-go/src
 [appveyor-ann]: http://blog.appveyor.com/2013/09/25/appveyor-update-and-new-pricing/
 
+[gocov-wercker]: http://blog.wercker.com/2013/08/05/checking-code-coverage-with-gocov.html
+[go-github]: https://willnorris.com/2013/08/testing-in-go-github
 
+[os-release]: /os-release
+
+[Looper]: https://github.com/gophertown/looper
 
