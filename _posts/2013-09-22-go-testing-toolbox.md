@@ -54,7 +54,7 @@ So I looked for a light weight alternative. The solution was to use <mark>interf
 
 If an interface doesn't fit the problem, Karl Seguin has an different approach, by [redefining functions in tests][injection]. [Gomock][] has continued to improve and may fit your situation, and there is a newcomer to the mocking scene, [withmock][].
 
-Then there are specialized "mocking" tools. For testing HTTP client libraries, the standard library ships with [httptest][]. Will Norris explains how it works in *[Testing in go-github][go-github]*.
+Then there are specialized "mocking" tools. For testing HTTP client libraries, the standard library ships with [httptest][]. Will Norris explains how it works in [Testing in go-github][go-github].
 
 
 ## Coverage
