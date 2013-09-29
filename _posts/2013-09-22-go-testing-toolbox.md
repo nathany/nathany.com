@@ -154,10 +154,17 @@ Looper still has a long ways to go, but even at the start it had some nice featu
  
 I'm already thinking about automatically running tests across multiple VMs using Vagrant, and maybe adding one-off commands for shortcuts, like generating a coverage report. My goal isn't to replace Bash though, so there is much to consider.
 
+The [Looper][] README maintains a list of alternative tools for all your autotest and file watching needs.
+
 ## PASS
 
 Well, I hope you found this article helpful. If it was a FAIL, [please let me know](https://twitter.com/nathany) how I can improve it.
 
+Comment on
+[Go+](https://plus.google.com/104313268939103200754/posts/TJSwZWpLBfg),
+[Hacker News](https://news.ycombinator.com/item?id=6465480),
+[reddit](http://www.reddit.com/r/golang/comments/1ndodi/go_testing_toolbox/), or the
+[Go Nuts mailing list](https://groups.google.com/forum/#!topic/golang-nuts/VUjD2LRwCTQ).
 
 Related Articles:
 
