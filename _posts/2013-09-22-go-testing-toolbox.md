@@ -59,7 +59,7 @@ Then there are specialized "mocking" tools. For testing HTTP client libraries, t
 
 ## Coverage
 
-Test coverage allows you to see if there are methods or conditional branches that your test suite doesn't reach.
+Test coverage allows you to see which methods and conditional branches your test suite doesn't reach.
 
 Andrew Gerrand and Rob Pike are developing [a new coverage tool](http://tip.golang.org/doc/go1.2#cover) for Go 1.2. To try it out, you'll need the Go 1.2 release candidate or [install Go from source](http://golang.org/doc/install/source). After you *go get* it, a lovely report in your browser is as simple as:
 
