@@ -8,11 +8,11 @@ layout: article
 
 ![Gophers with a ruler and a hammer](/assets/images/gopher-tools.jpg)
 
-Lets explore some of the tools available for testing our Go code.
+Let's explore some of the tools available for testing our Go code.
 
 ## Unit Testing
 
-Go has testing baked in. Below we contrast the standard [testing][] package and Gustavo Niemeyer's popular [gocheck][] library:
+Go has testing baked in. Below we contrast the standard [testing][] package with Gustavo Niemeyer's popular [gocheck][] library:
 
 ```go
 // with testing
@@ -41,7 +41,7 @@ Gocheck isn't the only third-party option out there. Andrea Fazzi's [PrettyTest]
 
 Go has anonymous functions, so it was only a matter of time before someone built a [Jasmine][]-style BDD library. There are several options, including [Mao][]/[Zen][] and [GoConvey][]. Unfortunately I haven't had a chance to try these yet, so I can't vouch for them. 
 
-No doubt there are other tools that have slipped past my radar. Lately I've been reaching for the standard testing package, mostly to avoid *yet-another-dependency* in reusable libraries.
+No doubt there are other tools that have slipped past my radar. Lately I've been reaching for the standard testing package, mostly to avoid *yet-another-dependency* in reusable libraries. Go 1.2's ability to download test dependencies with `go get -t` may change that for me.
 
 
 ## Mocking
@@ -59,7 +59,7 @@ Then there are specialized "mocking" tools. For testing HTTP client libraries, t
 
 ## Coverage
 
-Test coverage allows you to see if there are methods or conditional branches that running your test suite doesn't reach.
+Test coverage allows you to see if there are methods or conditional branches that your test suite doesn't reach.
 
 Andrew Gerrand and Rob Pike developed a new coverage tool, as mentioned in the [Go 1.2 Release Notes](http://tip.golang.org/doc/go1.2#cover). After you *go get* it, a lovely HTML report in your browser is as simple as:
 
@@ -74,9 +74,9 @@ Having played with both, I much prefer the new cover tools UI to [Coveralls][]. 
 
 ## Continuous Integration
 
-*Note: If you previously read my [Releasing Open Source][os-release] article, most of this section will be familiar.*
-
 If you're a fan of [Jenkins][], take a look at [go2xunit][], otherwise you may like one of these services. They all support Go and are <mark>free for open source</mark>.
+
+*Note: If you previously read my [Releasing Open Source][os-release] article, most of this section will be familiar.*
 
 ### GoCI
 
@@ -96,13 +96,13 @@ For those private projects, the pricing is quite competitive, and it so happens 
 
 ### AppVeyor
 
-[AppVeyor][] is a CI service for .NET developers. I approached them over Twitter to be able to test Go libraries on Windows. They added the option to build using a PowerShell script, installed Go on their servers, and have since [officially announced Go language support][appveyor-ann].
+[AppVeyor][] is a CI service for .NET developers. I approached them over Twitter with an interest in testing Go libraries on Windows. They added the option to use a PowerShell script for the build phase, installed Go on their servers, and have since [officially announced Go language support][appveyor-ann].
 
-Here is the [source code][appveyortest] for a sample application with the build commands.
+Here is the [source code][appveyortest] for a sample application with the necessary build script.
 
 ### wercker
 
-[wercker](http://wercker.com/) looks to be the most flexible offering, though at the same time I felt a little overwhelmed. It allows the community to build custom boxes for any language or environment required, and includes [support for Go](http://devcenter.wercker.com/articles/languages/go.html).
+[wercker](http://wercker.com/) looks to be the most flexible offering, though I found the whole thing a bit overwhelming. It allows the community to build custom boxes for any language or environment required, and includes [support for Go](http://devcenter.wercker.com/articles/languages/go.html).
 
 They [blog frequently on Go](http://blog.wercker.com/tags/golang.html) deployment to Heroku and App Engine, code coverage, and more. Wercker is currently a free beta, but they plan to keep it [free for open source](https://hacks.mozilla.org/2013/02/wercker-continuous-delivery-made-easy-a-webfwd-project/).
 
@@ -116,7 +116,7 @@ Before contributing to [fsnotify][], I wanted a way to test my changes across th
 
 [Vagrant][] is a tool to script the creation of [VirtualBox][] VMs (as well as VMWare and other providers). 
 
-When you run `vagrant up` it will download Linux and BSD *boxes* if necessary, install the DVCS tools and Go binaries, and finally configure the GOPATHs and other essentials.
+When you run `vagrant up` with the Vagrantfile I wrote, it will download Linux and BSD *boxes* if necessary, install the DVCS tools and Go binaries, and configure GOPATH and other environment variables.
 
 The way I have this setup, my `src/` folder is shared, so I can continue to use my editor and tools on OS X, while being able to issue commands to Linux and BSD VMs:
 
@@ -132,11 +132,11 @@ If you would like to try it out, there are more details in the [Vagrant Gopher][
 
 I'm not aware of a way to work with the Windows command line through Vagrant, so I had to set all this up manually.
 
-You can [download Windows Virtual Machines][modernie] from Microsoft for free, but I went with a proper Windows 7 Professional license to avoid the constant genuine Windows nagging.
+You can [download Windows Virtual Machines][modernie] from Microsoft for free, but I went with a proper Windows 7 Professional license to avoid the constant "Genuine Windows" nagging.
 
 Using VMWare Fusion, I shared my project folder which contains src, bin, and pkg. It becomes Z:\project on Windows. 
 
-Fortunately this doesn't cause conflicts because binaries on Windows have an `.exe` extension and Go creates a `pkg\windows_amd64` folder for static libraries.
+Fortunately, this doesn't cause conflicts, because binaries on Windows have an `.exe` extension and Go puts static libraries under `pkg\windows_amd64`.
 
 With the Go binaries installed, I can use PowerShell to run my tests.
 
@@ -156,13 +156,13 @@ I'm already thinking about automatically running tests across multiple VMs using
 
 ## PASS
 
-Well, I hope you found this article helpful. If it was a FAIL, please let me know how I can improve it.
+Well, I hope you found this article helpful. If it was a FAIL, [please let me know](https://twitter.com/nathany) how I can improve it.
 
 
 Related Articles:
 
-* [Releasing Open Source][os-release]
 * [Writing table driven tests in Go][tabledriven] by Dave Cheney
+* ["Dependency Injection" in Go][injection] by Karl Seguin
 * [Testing in go-github][go-github] by Will Norris
 * [Code coverage with gocov and wercker][gocov-wercker] by Pieter Joost
 * [Continuous Integration for Go Code](http://jmcvetta.github.io/blog/2013/08/30/continuous-integration-for-go-code/) by Jason McVetta
