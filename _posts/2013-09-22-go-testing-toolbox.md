@@ -52,7 +52,7 @@ A summer ago, I was learning OpenGL, and wanted a way to stub out the graphics c
 
 So I looked for a light weight alternative. The solution was to use <mark>interfaces</mark> in the production code, which allowed me to write a test double that satisfied said interface. That worked pretty well, and is the approach I continue to use today.
 
-If an interface doesn't fit the problem, Karl Seguin has an different approach, by [redefining functions in tests][injection]. [Gomock][] has continued to improve and may fit your situation, and there is a newcomer to the mocking scene, [withmock][].
+If [mocking with an interface](http://play.golang.org/p/9JUvbeBTAY) doesn't fit, Karl Seguin has an different approach, by [redefining functions in tests][injection]. [Gomock][] has continued to improve and may fit your situation, and there is a newcomer to the mocking scene, [withmock][].
 
 Then there are specialized "mocking" tools. For testing HTTP client libraries, the standard library ships with [httptest][]. Will Norris explains how it works in [Testing in go-github][go-github].
 
