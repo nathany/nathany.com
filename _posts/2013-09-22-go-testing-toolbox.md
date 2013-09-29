@@ -7,14 +7,13 @@ layout: article
 published: false
 ---
 
+![Gophers with a ruler and a hammer](/assets/images/gopher-tools.jpg)
+
 Lets explore some of the tools available for testing our Go code.
 
 ## Unit Testing
 
-Go has built in [testing][] facilities which encourage us to use the Go language to write tests, rather than have a specialized assertion framework.
-
-Below we contrast the standard testing package and Gustavo Niemeyer's popular [gocheck][] library:
-
+Go has testing baked in. Below we contrast the standard [testing][] package and Gustavo Niemeyer's popular [gocheck][] library:
 
 ```go
 // with testing
@@ -34,51 +33,49 @@ c.Assert(gear.GearInches(), Within, 0.01, 137.1)
 
 So I wrote [a custom checker](https://github.com/nathany/go-poodr/blob/master/chapter9/gear1/gear1_check_test.go) in less than 20 lines of code. Arguably, I could've written a `Within()` helper function in 3. So you win some, you lose some.
 
-Lately I've been reaching for the standard testing package more, both to see how far I can push it, while avoiding *yet-another-dependency.*
+There are ways to write concise tests without pulling in an xUnit assertion frameworks. If you've ever seen Cucumber <mark>data tables</mark>, you will appreciate [table driven tests][tabledriven], a simple way of testing many variations with relatively compact code.
 
-Speaking of pushing the language, if you've ever seen Cucumber <mark>data tables</mark>, you will appreciate [table driven tests][tabledriven], a simple way of testing many variations with relatively compact code.
 
-Gocheck isn't the only third-party option out there. Andrea Fazzi's [PrettyTest][] has a colourful test runner, and it is compatible with both gocheck and the standard testing library.
+### Alternatives
 
-Go has anonymous functions, so it was only a matter of time before someone built a [Jasmine][]-style BDD library. There are several options, including [Mao][]/[Zen][] and [GoConvey][]. I haven't had a chance to try these yet, so I can't vouch for them.
+Gocheck isn't the only third-party option out there. Andrea Fazzi's [PrettyTest][] has a colourful test runner, and it is compatible with gocheck assertions.
 
-No doubt there are other tools that have slipped passed my radar.
+Go has anonymous functions, so it was only a matter of time before someone built a [Jasmine][]-style BDD library. There are several options, including [Mao][]/[Zen][] and [GoConvey][]. Unfortunately I haven't had a chance to try these yet, so I can't vouch for them. 
+
+No doubt there are other tools that have slipped past my radar. Lately I've been reaching for the standard testing package, mostly to avoid *yet-another-dependency* in reusable libraries.
+
 
 ## Mocking
 
-Mocking, stubbing, fakes, and test doubles... it's not an area that I'm well versed in.
+Mocking, stubbing, fakes, test doubles... it can be a bit confusing.
 
-A summer ago, I was learning OpenGL, and wanted a way to stub out the graphics context in tests. At first I looked at some tools like [gomock][], but I wasn't a huge fan of the code generation required, and I didn't actually need expectations.
+A summer ago, I was learning OpenGL, and wanted a way to stub out the graphics context in tests. I looked at [gomock][], but I wasn't a huge fan of the code generation required, and I didn't actually need expectations.
 
-So I looked for a light weight alternative. The solution was to use <mark>interfaces</mark> in the production code, which allowed me to write a test double that satisfied said interface. That worked, and it's the approach I continue to use today.
+So I looked for a light weight alternative. The solution was to use <mark>interfaces</mark> in the production code, which allowed me to write a test double that satisfied said interface. That worked pretty well, and is the approach I continue to use today.
 
 If an interface doesn't fit the problem, Karl Seguin has an different approach, by [redefining functions in tests][injection]. [Gomock][] has continued to improve and may fit your situation, and there is a newcomer to the mocking scene, [withmock][].
 
-For testing HTTP client libraries, the standard library ships with [httptest][]. Will Norris explains how it works in *[Testing in go-github](https://willnorris.com/2013/08/testing-in-go-github)*.
+Then there are specialized "mocking" tools. For testing HTTP client libraries, the standard library ships with [httptest][]. Will Norris explains how it works in *[Testing in go-github](https://willnorris.com/2013/08/testing-in-go-github)*.
 
 
 ## Coverage
 
-mentioned in the [Go 1.2 Release Notes](http://tip.golang.org/doc/go1.2#cover)
+Test coverage allows you to see if there are methods or conditional branches that running your test suite doesn't reach.
+
+Andrew Gerrand and Rob Pike developed a new coverage tool, as mentioned in the [Go 1.2 Release Notes](http://tip.golang.org/doc/go1.2#cover). After you *go get* it, a lovely HTML report in your browser is as simple as:
 
 ```bash
 go test -coverprofile=c.out -covermode=count
 go tool cover -html=c.out
 ```
 
+If the new cover tool doesn't suit your fancy/needs, take a look at Andrew Wilkins' [gocov][]. If you are using drone.io for CI, you can hook it up to [Coveralls][]. See [goveralls](https://github.com/mattn/goveralls) for details.
 
-
-Go Authors
-switch gears
+Having played with both, I much prefer the new cover tools UI to [Coveralls][]. It's snappy and easy to navigate.
 
 ## Continuous Integration
 
-[go2xunit][]
-[Jenkins][]/Hudson test integration
-
-In addition to writing tests, it's useful to set up <mark>Continuous Integration</mark> to run those tests against the latest dependencies. All these services offer <mark>Continuous Deployment</mark> as well. Your servers don't need Go installed, and if any dependency snafus arise, they can be identified before deployment begins.
-
-Here are a few services that support Go and are free for open source.
+If you're a fan of [Jenkins][], take a look at [go2xunit][], otherwise you may like one of these services. They all support Go and are <mark>free for open source</mark>.
 
 ### GoCI
 
@@ -96,20 +93,21 @@ For those private projects, the pricing is quite competitive, and it so happens 
 
 [Travis CI](https://travis-ci.org/) has been around longer than most, and has some nice features. Though it only integrates with GitHub, Travis will let you know if pull requests are *safe to merge.* It also allows testing against [older versions of Go or Go tip](http://about.travis-ci.org/docs/user/languages/go/).
 
+### AppVeyor
+
+[AppVeyor][] is a CI service for .NET developers. I approached them over Twitter to be able to test Go libraries on Windows. They added the option to build using a PowerShell script, installed Go on their servers, and have since [officially announced Go language support][appveyor-ann].
+
+Here is the [source code][appveyortest] for a sample application with the build commands.
+
 ### wercker
 
 [wercker](http://wercker.com/) looks to be the most flexible offering, though at the same time I felt a little overwhelmed. It allows the community to build custom boxes for any language or environment required, and includes [support for Go](http://devcenter.wercker.com/articles/languages/go.html).
 
-They [blog on Go](http://blog.wercker.com/tags/golang.html) deployment to Heroku and App Engine, code coverage, and more. Wercker is currently a free beta, but they plan to keep it [free for open source](https://hacks.mozilla.org/2013/02/wercker-continuous-delivery-made-easy-a-webfwd-project/).
-
-### AppVeyor
-
-[AppVeyor][]
-
-[test][appveyortest]
+They [blog frequently on Go](http://blog.wercker.com/tags/golang.html) deployment to Heroku and App Engine, code coverage, and more. Wercker is currently a free beta, but they plan to keep it [free for open source](https://hacks.mozilla.org/2013/02/wercker-continuous-delivery-made-easy-a-webfwd-project/).
 
 
-## Cross-platform testing
+
+## Cross-Platform Testing
 
 ### Vagrant
 
@@ -158,6 +156,8 @@ Looper
 
 Related Articles:
 
+* [Continuous Integration for Go Code](http://jmcvetta.github.io/blog/2013/08/30/continuous-integration-for-go-code/) by Jason McVetta
+
 
 [testing]: http://golang.org/pkg/testing/
 [tabledriven]: http://dave.cheney.net/2013/06/09/writing-table-driven-tests-in-go
@@ -177,6 +177,9 @@ Related Articles:
 [gomock]: https://code.google.com/p/gomock/
 [httptest]: http://golang.org/pkg/net/http/httptest/
 
+[gocov]: https://github.com/axw/gocov
+[Coveralls]: https://coveralls.io/
+
 [go2xunit]: https://bitbucket.org/tebeka/go2xunit
 [Jenkins]: http://jenkins-ci.org/
 
@@ -190,7 +193,8 @@ Related Articles:
 [modernie]: http://www.modern.ie/en-us/virtualization-tools
 
 [AppVeyor]: http://www.appveyor.com/
-[appveyortest]: https://bitbucket.org/appveyor/test-go
+[appveyortest]: https://bitbucket.org/appveyor/test-go/src
+[appveyor-ann]: http://blog.appveyor.com/2013/09/25/appveyor-update-and-new-pricing/
 
 
 

@@ -188,7 +188,7 @@ Related Articles:
 
 * [Go Package Management](/go-packages)
 * [A Better Changelog](http://bitprophet.org/blog/2013/09/14/a-better-changelog/) by Jeff Forcier
-* [Continuous Integration for Go Code](http://jmcvetta.github.io/blog/2013/08/30/continuous-integration-for-go-code/) by Jason McVetta
+
 
 [contributing]: https://github.com/gophertown/looper/blob/master/CONTRIBUTING.md
 [survey]: https://docs.google.com/forms/d/1XGjy74hrq2DG-Zh4VwqxSuAWPlLf2zx5KAU1VCph5ys/viewform
