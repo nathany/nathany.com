@@ -32,6 +32,7 @@ A number of third-party tools exist. The ones I'm aware of, in alphabetical orde
 [godeps](https://launchpad.net/godeps),
 [goem](https://github.com/adeven/goem),
 [gom](https://github.com/mattn/gom),
+[gondler](https://github.com/rosylilly/gondler),
 [Gope](https://github.com/jm/gope),
 [goproj](https://github.com/divoxx/goproj),
 [Goven](https://github.com/kr/goven),
