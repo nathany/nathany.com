@@ -120,7 +120,7 @@ Package management tools may be technically interesting to develop, but the real
 
 While embracing DVCS is a great idea, I believe it can be taken too far.
 
-DVCS-specific solutions like Git submodules make it more difficult to use and contribute to Bazaar packages like goamz, gocheck and mgo. I don't want to see the Go community [fractured by DVCS selection](https://github.com/VividCortex/johnny-deps/issues/30).
+DVCS-specific solutions like Git submodules make it more difficult to use and contribute to Bazaar packages like goamz, gocheck and mgo. I don't want to see the Go community fractured by DVCS selection.
 
 Similarly, package management tools should be cross-platform, not catering to users of a particular OS.
 
