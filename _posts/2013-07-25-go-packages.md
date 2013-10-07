@@ -39,9 +39,10 @@ A number of third-party tools exist. The ones I'm aware of, in alphabetical orde
 [Goven](https://github.com/kr/goven),
 [gpm](https://github.com/pote/gpm) (a fork of [Johnny Deps](https://github.com/vividcortex/johnny-deps)),
 [GVM](https://github.com/moovweb/gvm),
-[Pak](https://github.com/theplant/pak)
+[Pak](https://github.com/theplant/pak),
+[Rx](http://godoc.org/kylelemons.net/go/rx)
 and
-[Rx](http://godoc.org/kylelemons.net/go/rx). It's great that our fellow gophers are building tools, to the extent that we are exploring different avenues, but _which one do I use?_
+[vendorize](https://github.com/kisielk/vendorize). It's great that our fellow gophers are building tools, to the extent that we are exploring different avenues, but _which one do I use?_
 
 Newcomers to the Python community were in a similar situation, but it's getting better, now that there is BDFL-delegate overseeing packaging:
 
