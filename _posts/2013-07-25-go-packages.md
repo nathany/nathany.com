@@ -1,7 +1,7 @@
 ---
 title: Go Package Management
 date: 2013/07/25
-revised: 2013/09/28
+revised: 2013/10/07
 tags: golang, packages, dependencies
 excerpt: A call to action for gophers to unify on a dependency management solution.
 layout: article
@@ -42,7 +42,7 @@ A number of third-party tools exist. The ones I'm aware of, in alphabetical orde
 [Pak](https://github.com/theplant/pak),
 [Rx](http://godoc.org/kylelemons.net/go/rx)
 and
-[vendorize](https://github.com/kisielk/vendorize). It's great that our fellow gophers are building tools, to the extent that we are exploring different avenues, but _which one do I use?_
+[vendorize](https://github.com/kisielk/vendorize).
 
 Newcomers to the Python community were in a similar situation, but it's getting better, now that there is BDFL-delegate overseeing packaging:
 
@@ -57,11 +57,11 @@ On June 23rd, David Hinks posted a Google Doc with the following message:
 
 After contributing to David's document, I put together my own proposal based loosely on Bundler's `Gemfile.lock`. [Dave Cheney](http://dave.cheney.net/) pointed out some flaws, and [Kyle Lemons](http://kylelemons.net/) observed similarities between my proposal and [Rx cabinets](http://godoc.org/kylelemons.net/go/rx#hdr-Cabinet_Command).
 
-This was before I realized the myriad of available options. Git provides [submodules](http://git-scm.com/book/en/Git-Tools-Submodules) and [subtree merging](http://git-scm.com/book/en/Git-Tools-Subtree-Merging). Third-party tools like Rx and Go Pin can track references, or Goven can copy dependencies into your project.
+This was before I realized the myriad of available options. Git provides [submodules](http://git-scm.com/book/en/Git-Tools-Submodules) and [subtree merging][subtree merging]. Third-party tools like Rx and Go Pin can track references, or Goven can copy dependencies into your project.
 
-The problem is, <mark>we don't have a _"Go Packaging Authority"_ providing guidance</mark>, so every newcomer is left to find their own way.
+The problem is, <mark>we don't have a _"Go Packaging Authority"_ providing guidance</mark>, so every newcomer is left to find their own way. ***Update:*** The Go Team [recommends](http://tip.golang.org/doc/faq#get_version) copying third-party dependencies into an application's source tree. This approach provides the benefits that Martin Fowler outlines in his article "[ReproducibleBuild](http://martinfowler.com/bliki/ReproducibleBuild.html)", what Brad Fitzpatrick describes as a [hermetic view of the world](http://www.youtube.com/watch?v=p9VUCp98ay4&t=36m55s).
 
-So I thought: I should take a step back, do some research, and really think about this more. Not because I'm any sort of expert, but because <mark>I would like Go to have a great packaging story</mark>. Over the _past month,_ I used a [Google Doc](http://goo.gl/oqkvu) as my outlet, and invited others to contribute.
+I thought I should take a step back, do some research, and really think about this more. Not because I'm any sort of expert, but because <mark>I would like Go to have a great packaging story</mark>. Over the _month of July,_ I used a [Google Doc](http://goo.gl/oqkvu) as my outlet, and invited others to contribute.
 
 While I don't have a grand solution, I believe there are a few fundamentals to building a great packaging story.
 
@@ -101,7 +101,9 @@ Even better, `gofmt` helps ensure that a pull request only has the necessary cha
 
 ### Avoid Rewriting Imports
 
-Anything that makes upstream contributions more work is a step backwards. It doesn't take much to rewrite import paths locally, but it makes it just a little bit harder to test and submit a patch. Best to avoid.
+Anything that makes upstream contributions more work feels like a step backwards. It doesn't take much to rewrite import paths locally, but it makes it just a little bit harder to test and submit a patch.
+
+***Update:*** Upon further consideration, a tool that could rewrite import paths bidirectionally, or otherwise enable merging changes upstream, would relieve my concerns.
 
 ### Don't Try To Gofix Others
 
@@ -131,17 +133,11 @@ Similarly, package management tools should be cross-platform, not catering to us
 
 As a package maintainer, I'm not about to say "you must install Go Nuts to use this package" or "I recommend Rx to get new versions of this package."
 
-We as a community need to agree on a set of tools, a common metadata format, and strategy for managing dependencies. If multiple package management tools are to exist, they need to interoperate.
-If and when we get into versioning and dependency resolution, the need for interoperability becomes even more pronounced.
-
+We as a community need to agree on a set of tools and a strategy for managing dependencies. If multiple package management tools are to exist, they need to interoperate.
 
 ### Community
 
-It would be great if the Go Team specified and built a full-featured package manager for Go. It's not a requirement though.
-
-The larger Go Community can make a package management tool official. It doesn't need to be part of the `go` tool to be what we all use.
-
-So let's rally <strong>together</strong> and get started!
+It would be great if the Go Team specified and built a full-featured package manager for Go. It's not a requirement though. It doesn't need to be part of the `go` tool to be what we all use.
 
 *Comment on [Go+](https://plus.google.com/u/0/104313268939103200754/posts/aQG7HB3grZ4), [reddit](http://www.reddit.com/r/golang/comments/1j3ie4/go_package_management/), or the [Go Nuts mailing list](https://groups.google.com/forum/#!topic/golang-nuts/sfshThQ_wrA); or get involved in the [working group](https://groups.google.com/forum/#!forum/go-package-management).*
 
@@ -155,4 +151,6 @@ Related Articles:
 * [Dependency Hell](http://areyoufuckingcoding.me/2012/04/16/dpendency-hell/) by Chris Kowalik
 * [A journey in golang package manager](http://dev.af83.com/2013/09/14/a-journey-in-golang-package-manager.html) by Bruno Michel
 
+
+[subtree merging]: http://git-scm.com/book/en/Git-Tools-Subtree-Merging
 
