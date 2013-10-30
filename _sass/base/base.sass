@@ -16,33 +16,14 @@ a:visited
 a:link, a:hover, a:active
   color: $base1
 
-a.ss-icon, .fa-trello
+.fa
   color: $base1
   text-decoration: none
   font-size: 2rem
+  padding-right: 0.2rem
   &:hover
     color: black
     @include transition (color 0.3s ease-in-out)
-
-a.circle
-  display: inline-block
-  text-align: center
-  width: 2rem
-  height: 2rem
-  line-height: 3rem
-  background-color: $base1
-  border-radius: 50%
-  text-decoration: none
-  &:hover
-    background-color: black
-    @include transition (background-color 0.3s ease-in-out)
-  span
-    position: relative
-    top: -0.4rem
-    left: 0
-    font-size: 1.2rem
-    color: $color5
-
 
 figcaption
   background-color: $color5
@@ -80,10 +61,10 @@ ul.posts
 
 .right-icons
   float: right
+  font-size: 2.5rem
+  line-height: 2.5rem
   .fa-trello
     padding-right: 1rem
-    font-size: 2.5rem
-    line-height: 2.5rem
 
 article img
   width: 100%
