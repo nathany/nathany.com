@@ -82,7 +82,9 @@ You can [follow][] Postgres.app on Twitter to find out when you *get to do this 
 
 Now all I have left to do is find a [_nice_ database client][sequel] for Postgres. It looks like the two new candidates are [Tuples 2][] and [Induction][] (very alpha), though [Navicat][] has been steadily improving as well. Hmm.
 
-Hit me up on [Twitter][] if you have any suggestions for improving this article. Thanks!
+Related Articles:
+
+* [Upgrading Postgres.app From 9.2 to 9.3](http://www.yonbergman.com/2013/11/04/upgrading-postgres-app-9-2-to-9-3/) by Yonatan Bergman
 
 [heroku]: https://postgres.heroku.com/blog/past/2012/12/6/postgres_92_now_available/
 [documentation]: http://postgresapp.com/documentation
