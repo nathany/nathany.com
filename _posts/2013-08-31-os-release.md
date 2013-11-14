@@ -1,7 +1,7 @@
 ---
 title: Releasing Open Source
 date: 2013/08/31
-revised: 2013/09/29
+revised: 2013/11/13
 tags: golang, packages, tagging, open source, changelog, release notes
 excerpt: Being a good open source citizen for the benefit of humans and tooling.
 layout: article
@@ -47,7 +47,7 @@ date:        Sun Mar 02 20:47:34 2008 -0800
 summary:     Go spec starting point.
 ```
 
-If you're writing a reusable library, be sure to [document the APIs](http://golang.org/doc/articles/godoc_documenting_go_code.html), and add a link to your [GoDoc](http://godoc.org/) page in the README.
+If you're writing a reusable library, also be sure to [document the APIs](http://golang.org/doc/articles/godoc_documenting_go_code.html). [GoDoc](http://godoc.org/) makes it easy for others to read your API documentation. Add a [![GoDoc](https://godoc.org/github.com/howeyc/fsnotify?status.png)](http://godoc.org/github.com/howeyc/fsnotify) badge to your README (see the *Tools* link on the GoDoc page for your package).
 
 ## Encourage Contributions
 
