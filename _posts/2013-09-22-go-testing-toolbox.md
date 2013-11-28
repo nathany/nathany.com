@@ -39,7 +39,7 @@ There are ways to write concise tests without pulling in an xUnit assertion fram
 
 Gocheck isn't the only third-party option out there. Andrea Fazzi's [PrettyTest][] has a colourful test runner, and it is compatible with gocheck assertions.
 
-Go has anonymous functions, so it was only a matter of time before someone built a [Jasmine][]-style BDD library. There are several options, including [Mao][]/[Zen][], [GoConvey][] and [Ginkgo][]/[G&Omega;mega][gomega]. Unfortunately I haven't had a chance to try these yet, so I can't vouch for them. 
+Go has anonymous functions, so it was only a matter of time before someone built a [Jasmine][]-style BDD library. There are several options, including [Mao][]/[Zen][], [Goblin][], [GoConvey][] and [Ginkgo][]/[G&Omega;mega][gomega]. Unfortunately I haven't had a chance to try these yet, so I can't vouch for them. 
 
 No doubt there are other tools that have slipped past my radar. Lately I've been reaching for the standard testing package, mostly to avoid *yet-another-dependency* in reusable libraries. Go 1.2's ability to download test dependencies with `go get -t` may change that for me.
 
@@ -188,6 +188,7 @@ Related Articles:
 [GoConvey]: https://github.com/smartystreets/goconvey
 [Ginkgo]: https://github.com/onsi/ginkgo
 [gomega]: https://github.com/onsi/gomega
+[Goblin]: https://github.com/franela/goblin
 
 [injection]: http://openmymind.net/Dependency-Injection-In-Go/
 
