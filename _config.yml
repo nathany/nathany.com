@@ -3,6 +3,8 @@ author: Nathan Youngman
 url: http://nathany.com
 # url: http://127.0.0.1
 
+history_url: https://github.com/nathany/nathany.github.io/commits/master/
+
 safe: true
 lsi: false
 pygments: true

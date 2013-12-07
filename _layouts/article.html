@@ -9,7 +9,7 @@ layout: default
       {{ page.excerpt | markdownify }}
       <p>
       {% if page.revised %}
-        First published on {{ page.date | date_to_string }}, last revised {{ page.revised | date_to_string }}.
+        First published on {{ page.date | date_to_string }}, <a href="{{ site.history_url }}{{ page.path }}">last revised</a> {{ page.revised | date_to_string }}.
       {% else %}
         Published on {{ page.date | date_to_string }}
       {% endif %}
