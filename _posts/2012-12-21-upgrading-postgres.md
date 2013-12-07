@@ -5,6 +5,8 @@ excerpt: Migrating to Postgres 9.2 takes some command line acrobatics.
 layout: article
 ---
 
+![Elephant](/assets/images/elephant.jpg)
+
 Heroku recently [unveiled][heroku] support for **Postgres 9.2**, offering performance improvements and several new features. Before migrating our *production* database at [Jobber][], we want to run it in development for a few days.
 
 I've been using [Postgres.app][] on my Mac for a while now. Patches are seamless, but migrating from 9.1 to 9.2 takes some command line acrobatics. The [documentation][] sets you on the right track, but I ran into a few gotchas.
