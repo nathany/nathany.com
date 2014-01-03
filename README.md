@@ -8,4 +8,4 @@ This is my blog.
 * Foreman to run multiple watchers
 * xip.io for mobile testing
 
-Content is &copy; 2013, Nathan Youngman.
+Content is &copy; 2006-2014, Nathan Youngman.
