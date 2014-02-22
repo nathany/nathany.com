@@ -1,7 +1,9 @@
 .DS_Store
 *.sublime-workspace
-.sass-cache
 _site/
 
+.sass-cache
 _sass/bourbon
 _sass/neat
+
+.bundle
