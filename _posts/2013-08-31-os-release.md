@@ -7,7 +7,7 @@ excerpt: Being a good open source citizen for the benefit of humans and tooling.
 layout: article
 ---
 
-![Gophers with parcels](/assets/images/gopher-tagging.jpg)
+![Gophers with a friendly fox](/assets/images/gopher-fox.jpg)
 
 There a few simple things <mark>we can all do</mark> to improve the Go ecosystem. Before you unleash your next open source project and \[ANN\] it on [Go Nuts](https://groups.google.com/forum/#!forum/golang-nuts), consider this.
 
