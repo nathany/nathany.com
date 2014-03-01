@@ -1,9 +1,9 @@
 ---
-title: Go Package Management 2.0
+title: Go Package Management
 date: 2013/07/25
-revised: 2014/02/28
+revised: 2014/03/01
 tags: golang, packages, dependencies
-excerpt: A rewrite of my previous article on dependency management in Go.
+excerpt: A summary of dependency management in Go.
 layout: article
 ---
 
@@ -126,7 +126,7 @@ Handling dependencies is incredibly important to the Go Team, even more importan
 
 When you [release open source](/os-release) libraries, aim to minimize the number of dependencies. Learn and use the standard library. Be go gettable. Consider [existing tools][tools], contribute, make things better.
 
-*Comment on the [GoPM mailing list](https://groups.google.com/forum/#!forum/go-package-management).*
+*Comment on [reddit](http://www.reddit.com/r/golang/comments/1z900p/go_package_management_20/) or the [GoPM mailing list](https://groups.google.com/forum/#!forum/go-package-management).*
 
 Related Articles:
 
