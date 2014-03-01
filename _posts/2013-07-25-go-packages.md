@@ -1,156 +1,141 @@
 ---
-title: Go Package Management
+title: Go Package Management 2.0
 date: 2013/07/25
-revised: 2013/10/07
+revised: 2014/02/28
 tags: golang, packages, dependencies
-excerpt: A call to action for gophers to unify on a dependency management solution.
+excerpt: A rewrite of my previous article on dependency management in Go.
 layout: article
 ---
 
 ![Gophers with parcels](/assets/images/gopher-tagging.jpg)
 
-## Foundation
+## Remote Packages
 
-The Go tool-chain includes the `go get` command to install third-party packages directly from version control systems.
+The `go get` command installs remote packages directly from version control (GitHub, Bitbucket, Google Code, Launchpad). Building on top of DVCS is a brilliant move. There is a lovely *immediacy* to pulling in a dependency. <mark>Import and go.</mark>
 
-> "One of the virtues of the Go tool is that it uses Git, Mercurial, Subversion, Bazaar..." - Andrew Gerrand, [Go Fireside Chat 2013](http://www.youtube.com/watch?v=p9VUCp98ay4)
+Package managers like [Bundler](http://bundler.io/), [Pip](http://www.pip-installer.org/) and [NPM](https://www.npmjs.org/) all have some mechanism to bypass their central repositories and pull code directly from source control. The go tool makes this first-class.
 
-I think building on top of DVCS is a brilliant move. While `go get` isn't a full-featured package manager like [Bundler](http://bundler.io/) (Ruby) or [Pip](http://www.pip-installer.org/) (Python), we can use it to bootstrap more capable tools built by the Go Community.
+When I want to contribute to an upstream package, those other tools force me to reconfigure my project. With the go tool, I switch to the package's directory, make a change and test it out. Sending a pull request is just a few steps away. <mark>Open source collaboration made simple.</mark>
 
-> "Everything else is built on this flexible foundation (FTP) and has grown over time." - Steffen Mueller,
-[Python people want CPAN and how the latter came about](http://www.google.com/url?q=http%3A%2F%2Fmail.python.org%2Fpipermail%2Fdistutils-sig%2F2009-December%2F014977.html&sa=D&sntz=1&usg=AFQjCNHK-oYwAsIsjWXjqi44P8yDBIJgXQ)
+For hobbyists and those starting out, the go tool is all you need.
 
-A number of third-party tools exist. The ones I'm aware of, in alphabetical order are:
-[Dondur](https://github.com/oguzbilgic/dondur),
-[Envie](https://github.com/sam-falvo/envie),
-[Go Nuts](http://www.gonuts.io/-/doc),
-[Go Pin](https://github.com/laher/gopin),
-[Go Pack](https://github.com/gopack/gpk),
-[Go Package Manager](https://github.com/GPMGo/gopm),
-[Gob](https://github.com/tanema/gob),
-[godep](https://github.com/kr/godep),
-[godeps](https://launchpad.net/godeps),
-[goem](https://github.com/adeven/goem),
-[gom](https://github.com/mattn/gom),
-[gondler](https://github.com/rosylilly/gondler),
-[gopack](https://github.com/d2fn/gopack),
-[Gope](https://github.com/jm/gope),
-[goproj](https://github.com/divoxx/goproj),
-[Goven](https://github.com/kr/goven),
-[gpm](https://github.com/pote/gpm) (a fork of [Johnny Deps](https://github.com/vividcortex/johnny-deps)),
-[GVM](https://github.com/moovweb/gvm),
-[Pak](https://github.com/theplant/pak),
-[Rx](http://godoc.org/kylelemons.net/go/rx)
-and
-[vendorize](https://github.com/kisielk/vendorize).
+Resources: 
 
-Newcomers to the Python community were in a similar situation, but it's getting better, now that there is BDFL-delegate overseeing packaging:
+* [How to Write Go Code](http://golang.org/doc/code.html) (golang.org)
+* [Organizing Code to Support Go Get](http://www.goinggo.net/2013/08/organizing-code-to-support-go-get.html) by William Kennedy
 
-> "That basically gives us the power to say 'Yes'. And lets us channel the energy of all the people involved in productive directions, such that we'll actually improve the ecosystem as whole, rather than people going off their separate ways and just creating more fractured communities." - Nick Coghlan, [Nobody Expects the Python Packaging Authority](http://www.youtube.com/watch?v=8Xrdt3-YVz4)
+The simplicity of the go tool does come with its trade-offs.
+
+> "I want to have reproducible builds on different computers at different times.  This is currently problematic; let's make things better." - David Hinkes, [Go+](https://plus.google.com/u/0/115983116618286597159/posts/gczN5SQ94ek) 
+
+`Go get` does not have an explicit concept of versions. Members of a team may be importing different revisions *(version skew)*. Dependencies may introduce incompatibilities or security vulnerabilities, or even change licenses or disappear. For these reasons, it's desirable to have more control over the upgrade process when building a real-world application.
 
 
-## Let's Make Things Better
 
-On June 23rd, David Hinks posted a Google Doc with the following message:
+![I ate some packages and now they are part of me.](/assets/images/gopher-vendor.jpg)
 
-> "I want to have reproducible builds on different computers at different times.  This is currently problematic; let's make things better." - David Hinkes, [Go+](https://plus.google.com/u/0/115983116618286597159/posts/gczN5SQ94ek)
+## Vendor Your Dependencies
 
-After contributing to David's document, I put together my own proposal based loosely on Bundler's `Gemfile.lock`. [Dave Cheney](http://dave.cheney.net/) pointed out some flaws, and [Kyle Lemons](http://kylelemons.net/) observed similarities between my proposal and [Rx cabinets](http://godoc.org/kylelemons.net/go/rx#hdr-Cabinet_Command).
+Large companies like Google and Facebook do most development in a single giant repository. This enables massive refactors in a single commit, such as changing an API and every use of it.
 
-This was before I realized the myriad of available options. Git provides [submodules](http://git-scm.com/book/en/Git-Tools-Submodules) and [subtree merging][subtree merging]. Third-party tools like Rx and Go Pin can track references, or Goven can copy dependencies into your project.
+When it comes to third-party dependencies, the Go Team [recommends](http://golang.org/doc/faq#get_version) copying them into the source tree:
 
-The problem is, <mark>we don't have a _"Go Packaging Authority"_ providing guidance</mark>, so every newcomer is left to find their own way. ***Update:*** The Go Team [recommends](http://golang.org/doc/faq#get_version) copying third-party dependencies into an application's source tree. This approach provides the benefits that Martin Fowler outlines in his article "[ReproducibleBuild](http://martinfowler.com/bliki/ReproducibleBuild.html)", what Brad Fitzpatrick describes as a [hermetic view of the world](http://www.youtube.com/watch?v=p9VUCp98ay4&t=36m55s).
+> "If you're using an externally supplied package and worry that it might change in unexpected ways, the simplest solution is to copy it to your local repository. (This is the approach Google takes internally.) Store the copy under a new import path that identifies it as a local copy. For example, you might copy `original.com/pkg` to `you.com/external/original.com/pkg`." - [Go FAQ](http://golang.org/doc/faq#get_version)
 
-I thought I should take a step back, do some research, and really think about this more. Not because I'm any sort of expert, but because <mark>I would like Go to have a great packaging story</mark>. Over the _month of July,_ I used a [Google Doc](http://goo.gl/oqkvu) as my outlet, and invited others to contribute.
+There is no need for a central archive of every version of every Go library ever released. Dependencies may move or disappear in the world outside your project, but your project has a copy of the dependencies it needs at any given point in history. Brad Fitzpatrick [describes this](http://www.youtube.com/watch?v=p9VUCp98ay4&t=36m55s) as a <mark>"hermetic view of the world"</mark>. 
 
-While I don't have a grand solution, I believe there are a few fundamentals to building a great packaging story.
+How is travelling back through the history of your project useful? Martin Fowler describes some benefits in [ReproducibleBuild](http://martinfowler.com/bliki/ReproducibleBuild.html):
 
-## 1. Reliable Builds
+* To reproduce a bug on the release branch that doesn't happen on master.
+* Using `bisect` to isolate the commit that introduced a bug.
 
-Chris Howey's fsnotify package has a legitimate reason to move. First to `code.google.com/p/go.exp/fsnotify` and [eventually into the standard library](https://code.google.com/p/go/issues/detail?id=4068).
+It's possible to upgrade dependencies in a controlled and tested manner, resolving all the stated issues with `go get`.
 
-What would happen if a project were to import both `github.com/howeyc/fsnotify` and `code.google.com/p/go.exp/fsnotify`? Each version is in a separate namespace, so it should compile.
+So what are the trade-offs?
 
-Beyond bloating up executables, the issues will vary from package to package. Different versions may compete for exclusive access to the same file, same port or other resources. Values of interface types may be compatible across both versions of the package, while values of other types won't be implicitly interchangeable. The `init()` functions will be called for both packages, and there will be distinct versions of top-level variables and all global state. *Thanks to Kyle Lemons and John Waycott for [making the issues concrete](https://groups.google.com/forum/#!topic/golang-nuts/5Mr6A8zK6Kk).*
+* Compared to `go get`, it is a little more complicated, likely requiring an additional tool or script to copy, upgrade and remove dependencies.
+* It's more difficult to contribute upstream (particularly if import rewriting is one-way). If upstream contributions are frequent, this option may be less appealing.
+* This solution applies well to applications, but it's not clear how to better manage dependencies of a *library*.
 
-It's unlikely that one package would depend on fsnotify from two locations, but it may depend on a package which imports `code.google.com/p/go.exp/fsnotify` while another dependency uses `github.com/howeyc/fsnotify`. We run into trouble as the dependency tree grows.
+Resources:
 
-### One Import Path
+* [Manage Dependencies With Godep](http://www.goinggo.net/2013/10/manage-dependencies-with-godep.html) by William Kennedy
 
-To avoid this scenario, every package must have one &ndash; and only one &ndash; import path. <mark>The entire Go ecosystem must use the same import path for fsnotify.</mark>
+
+![Packaging tools](/assets/images/gopher-packaging-tools.jpg)
+
+## The Right Tool
+
+Most language ecosystems have settled on one tool for versioning third-party packages. Go doesn't mandate a one-size-fits-all solution:
+
+> "Versioning is a source of significant complexity, especially in large code bases, and we are unaware of any approach that works well at scale in a large enough variety of situations to be appropriate to force on all Go users." - [Go FAQ](http://golang.org/doc/faq#get_version)
+
+Using `go get` or copying dependencies into a `vendor` folder are the approaches endorsed by the Go Team.
+
+Others have simply forked all their dependencies to control when upgrades occur. Some have built tools to checkout dependencies with SHA revision identifiers. Still others utilize DVCS features like [submodules](http://git-scm.com/book/en/Git-Tools-Submodules) or [subtree merging][subtree merging]. Experiment, find what works for you.
+
+
+
+The `go` tool provides a place for newcomers to start and some conventions to build upon.
+
+> "One of the virtues of the Go tool is that it uses Git, Mercurial, Subversion, Bazaar..." - Andrew Gerrand, [Go Fireside Chat 2013](http://www.youtube.com/watch?v=p9VUCp98ay4&t=37m42s)
 
 By convention, `go get` will create the folder `$GOPATH/src/github.com/howeyc/fsnotify` for the code retrieved from `github.com/howeyc/fsnotify`.
 
-The compiler doesn't care where the source code came from. As long as the package can be found at `$GOPATH/src/github.com/howeyc/fsnotify`, it's absolutely fine if the code came from a fork at `github.com/mycompany/fsnotify` or a fictional mirror at `bitbucket.org/howeyc/fsnotify`.
+The compiler actually doesn't care where the source code came from. As long as the package can be found at `$GOPATH/src/github.com/howeyc/fsnotify`, it's absolutely fine if the code actually came from a fork at `github.com/mycompany/fsnotify` or a mirror at `code.google.com/p/go.exp/fsnotify`.
 
-If the Go Community as a whole decided to use `import "fsnotify"`, we could move the code to `$GOPATH/src/fsnotify`, and the compiler would be happy.
+Adding remotes, checking out tags, all the usual DVCS operations are fair game.
 
-Importing a repository path gives an immediacy that I have grown quite fond of. At the same time, recognize that a level of indirection, in [one form](https://groups.google.com/forum/#!msg/golang-nuts/BMZDD6FM-QE/LX4JSs4NVLIJ) or [another](https://docs.google.com/document/d/1u_J1dZCalu2t-QwYFW-cnCLomfP8RoQq8a2Eo0pnJ0A/edit?usp=sharing), could gain us some flexibility.
+## The Next Big Thing
 
-### Avoid Versions in Paths
+So you have an idea that will <mark>revolutionize</mark> how we `go get` packages? 
 
-A project should only ever import one version of a given package. What would happen if your project were to import both `labix.org/v2/mgo` and `labix.org/v1/mgo`? It's the same problem all over again.
+First, join the [GoPM mailing list](https://groups.google.com/forum/#!forum/go-package-management), share your passion, and find out what others are working on. Next, [evaluate what's out there][tools]. We don't need 20 tools that do the same thing (NIH). We want to:
 
-While this example may sound far-fetched, it is easy to see this becoming an issue as packages mature and dependency trees get deeper.
+> "...channel the energy of all the people involved in productive directions, such that we'll actually improve the ecosystem as whole, rather than people going off their separate ways and just creating more fractured communities." - Nick Coghlan, [Nobody Expects the Python Packaging Authority](http://www.youtube.com/watch?v=8Xrdt3-YVz4)
 
-## 2. Encourage Upstream Contributions
+### Think Different
 
-One of the great things about `go get` is how easy it is to switch into a third-party package, perform a patch and pull request, and get back to work without reconfiguring the project.
+Take off those Node.js or Ruby-coloured glasses. Recognize that <mark>Go is different.</mark>
 
-Even better, `gofmt` helps ensure that a pull request only has the necessary changes, without any superfluous formatting differences.
+#### No NPM
 
-### Avoid Rewriting Imports
+NPM has a unique strategy for handling multiple versions. Each module requires the versions it wants, which may result in multiple versions of the same module being used in an application. This works well for JavaScript, but Go is not JavaScript.
 
-Anything that makes upstream contributions more work feels like a step backwards. It doesn't take much to rewrite import paths locally, but it makes it just a little bit harder to test and submit a patch.
+Beyond bloating up executables, the issues will vary from package to package. Different versions may compete for exclusive access to the same file, same port or other resources. Values of `interface` types may be compatible across both versions of the package, while values of other types won't be implicitly interchangeable. The `init()` functions will be called for both packages, and there will be distinct versions of top-level variables and all global state. *Thanks to Kyle Lemons and John Waycott for [making the issues concrete](https://groups.google.com/forum/#!topic/golang-nuts/5Mr6A8zK6Kk).*
 
-***Update:*** Upon further consideration, a tool that could rewrite import paths bidirectionally, or otherwise enable merging changes upstream, would relieve my concerns.
+#### No Bundler
 
-### Don't Try To Gofix Others
+Those coming from the Ruby on Rails community may remember copying third-party plugins into the `vendor` folder in the days before Bundler. Surely Go has something more *"sophisticated"* than that?
 
-Gofix is an incredibly intriguing tool, but it isn't a silver bullet. 
+As you read above, the approach used by Google actually has a number of strengths. It won't be suitable for every situation, but the apparent simplicity and increased repository size shouldn't deter you from trying it.
 
-It's not to the point where package authors can easily ship gofix modules to update dependent code. As it turns out, designing an simple AST-altering API is a *bit of a challenge.*
+Let's remember that Bundler's approach isn't without flaws:
 
-Even with such a wonderful tool, I have my doubts on how well it would scale to the larger package ecosystem. It's one thing to gofix my own code, but gofixing third-party packages would leave my entire workspace with uncommitted changes. Then what?
+* The story of [Sprockets 2.2 backport](https://github.com/rails/rails/issues/9492) is a case where one gem took control away from developers, requiring a hacky workaround.
+* Central repositories [go down](http://blog.nodejs.org/2013/11/26/npm-post-mortem/), [get hacked](https://news.ycombinator.com/item?id=5139583) and are costly to run.
+* Different permissions for those who can commit and those who can publish a gem have resulted in gems without a recent release.
 
-### Don't Forget Our History
+More importantly, such a tool my never gain sufficient traction if existing Go packages are expected to contain version metadata for it to work. Even if it is technically feasible, "Bundler for Go" may not be culturally suitable. <mark>When in Go do as the gophers do.</mark>
 
-Any package management solution that does away with the hidden .git, .hg, .bzr folder removes the ease of contribution.
+### Keep It Simple
 
-## 3. Work Together
+Handling dependencies is incredibly important to the Go Team, even more important than [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself):
 
-Package management tools may be technically interesting to develop, but the real challenge is a people problem. Gophers hail from *NIX and Windows, with backgrounds in C, Python, Ruby, PHP and .NET. We are a diverse group with differing views on what package management should look like.
+> "Through the design of the standard library, great effort was spent on controlling dependencies. It can be better to copy a little code than to pull in a big library for one function. Dependency hygiene trumps code reuse." - [Go at Google](http://talks.golang.org/2012/splash.article#TOC_7.)
 
-### Be Inclusive
+When you [release open source](/os-release) libraries, aim to minimize the number of dependencies. Learn and use the standard library. Be go gettable. Consider [existing tools][tools], contribute, make things better.
 
-While embracing DVCS is a great idea, I believe it can be taken too far.
-
-DVCS-specific solutions like Git submodules make it more difficult to use and contribute to Bazaar packages like goamz, gocheck and mgo. I don't want to see the Go community fractured by DVCS selection.
-
-Similarly, package management tools should be cross-platform, not catering to users of a particular OS.
-
-### Interoperability
-
-As a package maintainer, I'm not about to say "you must install Go Nuts to use this package" or "I recommend Rx to get new versions of this package."
-
-We as a community need to agree on a set of tools and a strategy for managing dependencies. If multiple package management tools are to exist, they need to interoperate.
-
-### Community
-
-It would be great if the Go Team specified and built a full-featured package manager for Go. It's not a requirement though. It doesn't need to be part of the `go` tool to be what we all use.
-
-*Comment on [Go+](https://plus.google.com/u/0/104313268939103200754/posts/aQG7HB3grZ4), [reddit](http://www.reddit.com/r/golang/comments/1j3ie4/go_package_management/), or the [Go Nuts mailing list](https://groups.google.com/forum/#!topic/golang-nuts/sfshThQ_wrA); or get involved in the [working group](https://groups.google.com/forum/#!forum/go-package-management).*
+*Comment on the [GoPM mailing list](https://groups.google.com/forum/#!forum/go-package-management).*
 
 Related Articles:
 
-* [Releasing Open Source](/os-release)
-* [How to Write Go Code](http://golang.org/doc/code.html)
-* [Organizing Code to Support Go Get](http://www.goinggo.net/2013/08/organizing-code-to-support-go-get.html) by William Kennedy
-* Johnny Deps: [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) by Baron Schwartz
+* [Why I think Go package management is important](http://dave.cheney.net/2013/10/10/why-i-think-go-package-management-is-important) by Dave Cheney
+* [Go Package Management For 2014](http://www.goinggo.net/2014/01/go-package-management-for-2014.html) by William Kennedy
 * [Rx: My prescription for your Go dependency headaches](http://kylelemons.net/blog/2012/04/22-rx-for-go-headaches.article) by Kyle Lemons
+* [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) (with Johnny Deps) by Baron Schwartz
 * [Dependency Hell](http://areyoufuckingcoding.me/2012/04/16/dpendency-hell/) by Chris Kowalik
 * [A journey in golang package manager](http://dev.af83.com/2013/09/14/a-journey-in-golang-package-manager.html) by Bruno Michel
 
-
 [subtree merging]: http://git-scm.com/book/en/Git-Tools-Subtree-Merging
-
+[tools]: https://code.google.com/p/go-wiki/wiki/PackageManagementTools
