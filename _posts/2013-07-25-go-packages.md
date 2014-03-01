@@ -90,7 +90,7 @@ Adding remotes, checking out tags, all the usual DVCS operations are fair game.
 
 So you have an idea that will <mark>revolutionize</mark> how we `go get` packages? 
 
-First, join the [GoPM mailing list](https://groups.google.com/forum/#!forum/go-package-management), share your passion, and find out what others are working on. Next, [evaluate what's out there][tools]. We don't need 20 tools that do the same thing (NIH). We want to:
+First, join the [GoPM mailing list][gopm], share your passion, and find out what others are working on. Next, [evaluate what's out there][tools]. We don't need 20 tools that do the same thing (NIH). We want to:
 
 > "...channel the energy of all the people involved in productive directions, such that we'll actually improve the ecosystem as whole, rather than people going off their separate ways and just creating more fractured communities." - Nick Coghlan, [Nobody Expects the Python Packaging Authority](http://www.youtube.com/watch?v=8Xrdt3-YVz4)
 
@@ -124,9 +124,11 @@ Handling dependencies is incredibly important to the Go Team, even more importan
 
 > "Through the design of the standard library, great effort was spent on controlling dependencies. It can be better to copy a little code than to pull in a big library for one function. Dependency hygiene trumps code reuse." - [Go at Google](http://talks.golang.org/2012/splash.article#TOC_7.)
 
-When you [release open source](/os-release) libraries, aim to minimize the number of dependencies. Learn and use the standard library. Be go gettable. Consider [existing tools][tools], contribute, make things better.
+When [releasing open source](/os-release) libraries, aim to minimize the number of dependencies. Learn and use the standard library. Be go gettable.
 
-*Comment on [reddit](http://www.reddit.com/r/golang/comments/1z900p/go_package_management_20/) or the [GoPM mailing list](https://groups.google.com/forum/#!forum/go-package-management).*
+When building an app, try [existing tools][tools] to vendor your dependencies. Contribute improvements. If need be, try another approach. Share what works for you. <mark>Let's make things better.</mark>
+
+*Comment on [reddit](http://www.reddit.com/r/golang/comments/1z900p/go_package_management_20/) or the [GoPM mailing list][gopm].*
 
 Related Articles:
 
@@ -139,3 +141,4 @@ Related Articles:
 
 [subtree merging]: http://git-scm.com/book/en/Git-Tools-Subtree-Merging
 [tools]: https://code.google.com/p/go-wiki/wiki/PackageManagementTools
+[gopm]: https://groups.google.com/forum/#!forum/go-package-management
