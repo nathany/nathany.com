@@ -1,7 +1,7 @@
 ---
 title: Go Package Management
 date: 2013/07/25
-revised: 2014/03/01
+revised: 2014/03/11
 tags: golang, packages, dependencies
 excerpt: A summary of dependency management in Go.
 layout: article
