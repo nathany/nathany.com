@@ -66,7 +66,9 @@ Resources:
 
 ## The Right Tool
 
-Most language ecosystems have settled on one tool for versioning third-party packages. Go doesn't mandate a one-size-fits-all solution:
+Most language ecosystems have settled on one tool for versioning packages. Yet it's worth noting that Yukihiro "Matz" Matsumoto isn't the driving force behind Bundler, nor is Guido van Rossum the BDFL for Pip. Members of the community built these tools, and in time they became established as the *standard.*
+
+Go itself doesn't mandate a one-size-fits-all solution:
 
 > "Versioning is a source of significant complexity, especially in large code bases, and we are unaware of any approach that works well at scale in a large enough variety of situations to be appropriate to force on all Go users." - [Go FAQ](http://golang.org/doc/faq#get_version)
 
