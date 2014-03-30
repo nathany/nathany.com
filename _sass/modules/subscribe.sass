@@ -1,7 +1,7 @@
 #mc_embed_signup
   background-color: white
-  border: 8px solid $color3
-  width: 23rem
+  border: $border-width solid #ccc
+  width: 256px + ($border-width * 2)// 18rem
   padding: 0.5rem 1rem
   h2
     margin: 0
@@ -18,10 +18,13 @@
     color: white
     font-family: sans-serif
     margin: 5px 0 5px 4rem
-    width: 12rem
+    width: 10rem
     @include transition (all 0.30s ease-in-out)
     &:hover
       background-color: darken($green, 10%)
+
+  @include media($horizontal)
+    width: 512px + ($border-width * 2)
 
 input[type=text], input[type=email]
   background-color: #eee
@@ -31,7 +34,7 @@ input[type=text], input[type=email]
   font-family: Georgia
   font-size: 1.4rem
   outline: none
-  width: 16rem
+  width: 14rem
 
   padding: 3px 0px 3px 3px
   margin: 5px 0
