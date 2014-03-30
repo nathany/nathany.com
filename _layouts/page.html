@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<article class="page">
+  <section class="title">
+    <h1>{{ page.title }}</h1>
+    <div class="meta">
+      {{ page.excerpt | markdownify }}
+    </div>
+  </section>
+  <section class="content">
+    {{ content }}
+  </section>
+</article>
+
+{% include bio.html %}
+
