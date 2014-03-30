@@ -1,0 +1,44 @@
+#mc_embed_signup
+  background-color: white
+  border: 8px solid $color3
+  width: 23rem
+  padding: 0.5rem 1rem
+  h2
+    margin: 0
+    color: $green
+
+  label
+    width: 4rem
+    display: inline-block
+
+  .button
+    border-radius: 4px
+    border: 2px solid $color3
+    background-color: $green
+    color: white
+    font-family: sans-serif
+    margin: 5px 0 5px 4rem
+    width: 12rem
+    @include transition (all 0.30s ease-in-out)
+    &:hover
+      background-color: darken($green, 10%)
+
+input[type=text], input[type=email]
+  background-color: #eee
+  border-radius: 4px
+  border: 2px solid $color5
+  color: $color5
+  font-family: Georgia
+  font-size: 1.4rem
+  outline: none
+  width: 16rem
+
+  padding: 3px 0px 3px 3px
+  margin: 5px 0
+
+  @include transition (all 0.30s ease-in-out)
+
+  &:focus
+    background-color: white
+    border: 2px solid $green
+    box-shadow: 0 0 5px $green
