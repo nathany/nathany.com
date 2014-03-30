@@ -17,10 +17,11 @@ a:link, a:hover, a:active
   color: $base1
 
 .fa
-  color: $base1
   text-decoration: none
   font-size: 2rem
   padding-right: 0.2rem
+  &:visited, &:link
+    color: $base01
   &:hover
     color: white
     @include transition (color 0.3s ease-in-out)
