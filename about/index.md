@@ -70,7 +70,7 @@ What excites me? The next generation of developers, programming languages, and s
 
 As I reminisce of the people and authors who got me to where I am, I think about the next generation of web developers. While I've taken to <mark>writing what I learn</mark> and mentor occasionally, there is so much more to do.
 
-After evaluating several languages and paradigms, I settled on [Go](http://golang.org/). The emphasis on productivity, efficiency and simplicity appeals to me. My open source involvement has increased, I want to help grow the available libraries and the community. Organizing the [Edmonton Go](http://edmontongo.org/) meetup is my contribution to the latter.
+After evaluating several languages and paradigms, I settled on [Go](http://golang.org/). The emphasis on [productivity](http://talks.golang.org/2012/splash.article), efficiency and simplicity appeals to me. My open source involvement has increased, I want to help grow the available libraries and the community. Organizing the [Edmonton Go](http://edmontongo.org/) meetup is my contribution to the latter.
 
 I work at a startup. We deploy SaaS and deploy often. We have a simple sustainable model: monthly subscriptions. Despite all the activity in the native/mobile space, my focus remains on the web as a platform. <mark>"Embrace the document"</mark> resonates with me, while the Web Component future grabs for my attention.
 
