@@ -64,7 +64,7 @@ It wasn't long before I wrote a command-line tool to make HTML easier to work wi
 
 I used HyperProcess at my first web development job. At my next job, I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, the combination of SQL, ColdFusion, and JavaScript made for a platform where I could do "real programming." 
 
-I stuck with ColdFusion for eight years across three jobs. Then *Ruby on Rails* came along, enticing me with its ORM and organized file layout. It didn't hurt that I have a certain fondness for trains (my Dad worked for CN Rail when I was young). Ruby has been my predominate language for the past eight years (for a detailed breakdown, see my [resume](http://careers.stackoverflow.com/nathany)).
+I stuck with ColdFusion for eight years across three jobs. Then *Ruby on Rails* came along, enticing me with its ORM and organized file layout. It didn't hurt that I have a certain fondness for trains (my Dad worked for CN Rail when I was young). Ruby has been my primary language for the past eight years (for a detailed breakdown, see my [resume](http://careers.stackoverflow.com/nathany)).
 
 When I began this career, I didn't know the web would become this open platform for building apps, that the SaaS model would become a predominate way to distribute software. I fell into web development, and I'm really glad I did!
 
