@@ -46,15 +46,19 @@ My high school needed an application to do timed typing tests, so I wrote one. T
 
 QuickBasic also allowed me to build a custom database for an alarm installation company. I was proud of the text-based UI, but unfortunately I had never heard of B-trees. It got slow with more data.
 
+<img src="/assets/images/trialtype.gif" alt="Trial Type 2" class="right">
+
 Eventually I gave Turbo C another try, using DOS `edit` and the command-line compiler instead of that wretched IDE. Borland C++ allowed me to make a Windows version of Trial Type and the far less successful **Graphematics** (think graphing calculator).
 
-Apps were making me money, but I still really wanted to make games. By now I was using C and Assembler and experimenting with Mode X, VESA and EMS/XMS memory. <mark>640K really wasn't enough.</mark> I bought Watcom C/C++ so I could use DOS4GW. It was wondrous!
+Apps were making me money, but I still really wanted to make games. By now I was using C and Assembler and experimenting with Mode X, VESA and EMS/XMS memory. <mark>640K really wasn't enough.</mark> I bought [Watcom C/C++](https://en.wikipedia.org/wiki/Watcom_C) so I could use DOS4GW. It was wondrous!
 
 The Internet turned out to be quite useful. I was able to assemble a team of artists to work on a real-time strategy game entitled **Galaxy**. We got a prototype up and running, but it was difficult to maintain the initial momentum. The rise of DirectX brought the question of whether to continue or switch technologies. In the end, the prototype was as far as we got.
 
 ## Career
 
 At that time the web was still relatively new. I remember reading the HTML 2.0 specification, one of the few available resources to learn it. 
+
+<img src="/assets/images/hp.jpg" alt="HyperProcess" class="right">
 
 It wasn't long before I wrote a command-line tool to make HTML easier to work with. **HyperProcess** was a preprocessor for HTML. It supported file includes and other features, while also serving to lint and compress your HTML. Think static-site generator sans-Markdown.
 
@@ -66,7 +70,7 @@ When I began this career, I didn't know the web would become this open platform 
 
 ## Next
 
-What excites me? The next generation of developers, programming languages, and software.
+Let's talk about the next generation of developers, programming languages, and software.
 
 As I reminisce of the people and authors who got me to where I am, I think about the next generation of web developers. While I've taken to <mark>writing what I learn</mark> and mentor occasionally, there is so much more to do.
 
