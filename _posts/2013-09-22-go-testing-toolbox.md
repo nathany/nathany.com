@@ -169,6 +169,7 @@ Comment on
 Related Articles:
 
 * [Writing table driven tests in Go][tabledriven] by Dave Cheney
+* [Mocking functions in Go](http://blog.natefinch.com/2014/04/mocking-functions-in-go.html) by Nate Finch
 * ["Dependency Injection" in Go][injection] by Karl Seguin
 * [Testing in go-github][go-github] by Will Norris
 * [Code coverage with gocov and wercker][gocov-wercker] by Pieter Joost
