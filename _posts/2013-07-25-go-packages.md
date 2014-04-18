@@ -1,7 +1,7 @@
 ---
 title: Go Package Management
 date: 2013/07/25
-revised: 2014/03/11
+revised: 2014/04/17
 tags: golang, packages, dependencies
 excerpt: A summary of dependency management in Go.
 layout: article
@@ -126,7 +126,7 @@ Handling dependencies is incredibly important to the Go Team, even more importan
 
 > "Through the design of the standard library, great effort was spent on controlling dependencies. It can be better to copy a little code than to pull in a big library for one function. Dependency hygiene trumps code reuse." - [Go at Google](http://talks.golang.org/2012/splash.article#TOC_7.)
 
-When [releasing open source](/os-release) libraries, aim to minimize the number of dependencies. Learn and use the standard library. Be go gettable.
+When [releasing open source](/os-release) libraries, aim to minimize the number of dependencies. Learn and use the standard library. Be go gettable. Take a look at [gopkg.in](http://labix.org/gopkg.in) for your next major version.
 
 When building an app, try [existing tools][tools] to vendor your dependencies. Contribute improvements. If need be, try another approach. Share what works for you. <mark>Let's make things better.</mark>
 
@@ -134,7 +134,9 @@ When building an app, try [existing tools][tools] to vendor your dependencies. C
 
 Related Articles:
 
-* [Why I think Go package management is important](http://dave.cheney.net/2013/10/10/why-i-think-go-package-management-is-important) by Dave Cheney
+* [Go and Package Versioning](http://zduck.com/2014/go-and-package-versioning/) by Joshua Poehls
+* [Maybe Go without dependency management can be a good thing](http://mwholt.blogspot.ca/2014/03/maybe-go-without-dependency-management.html) by Matthew Holt
+* [Why I think Go package management is important](http://dave.cheney.net/2013/10/10/why-i-think-go-package-management-is-important) and [Thoughts on Go package management six months on](http://dave.cheney.net/2014/03/22/thoughts-on-go-package-management-six-months-on) by Dave Cheney
 * [Go Package Management For 2014](http://www.goinggo.net/2014/01/go-package-management-for-2014.html) by William Kennedy
 * [Rx: My prescription for your Go dependency headaches](http://kylelemons.net/blog/2012/04/22-rx-for-go-headaches.article) by Kyle Lemons
 * [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) (with Johnny Deps) by Baron Schwartz
