@@ -1,0 +1,52 @@
+$tip-left: -10px
+$tip-bottom: 30px
+$tip-arrow-size: 6px
+$tip-border-size: 4px
+$tip-border-color: $base2
+
+/* CSS Styles (Copy this into the style.css file of your theme) */
+[data-tooltip]
+  display: inline
+  position: relative
+
+[data-tooltip]:hover:after
+  content: attr(data-tooltip) "\A" attr(data-credit)
+  white-space: pre-wrap
+  width: 300px
+
+  background: $base3
+  border: $tip-border-size solid $tip-border-color
+  color: $color1
+
+  font-family: sans-serif
+  font-weight: bold
+  font-size: 0.9rem
+  line-height: 1
+
+  padding: 3px 8px
+  display: block
+
+  position: absolute
+  left: $tip-left
+  bottom: $tip-bottom
+  z-index: 8
+
+// small arrow
+[data-tooltip]:hover:before
+  border: solid
+  border-color: $tip-border-color transparent
+  border-width: $tip-arrow-size $tip-arrow-size 0 $tip-arrow-size
+  content: ""
+  display: block
+  position: absolute
+  left: $tip-left + $tip-border-size
+  bottom: $tip-bottom - $tip-arrow-size
+  z-index: 9
+
+
+figure[data-tooltip]:hover:after
+  bottom: $tip-arrow-size + $tip-border-size
+
+figure[data-tooltip]:hover:before
+  bottom: $tip-border-size
+
