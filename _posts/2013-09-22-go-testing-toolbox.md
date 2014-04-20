@@ -6,7 +6,7 @@ excerpt: A conglomeration of testing tools, from Autotest to Vagrant.
 layout: article
 ---
 
-![Gopher tools](/assets/images/gopher-tools.jpg)
+<img alt="Gopher tools" class="full" src="/assets/images/gopher-tools.jpg">
 
 Let's explore some of the tools available for testing our Go code.
 

@@ -7,7 +7,7 @@ excerpt: A summary of dependency management in Go.
 layout: article
 ---
 
-![Gophers with parcels](/assets/images/gopher-tagging.jpg)
+<img alt="Gophers with parcels" class="full" src="/assets/images/gopher-tagging.jpg">
 
 ## Remote Packages
 
@@ -31,8 +31,7 @@ The simplicity of the go tool does come with its trade-offs.
 `Go get` does not have an explicit concept of versions. Members of a team may be importing different revisions *(version skew)*. Dependencies may introduce incompatibilities or security vulnerabilities, or even change licenses or disappear. For these reasons, it's desirable to have more control over the upgrade process when building a real-world application.
 
 
-
-![I ate some packages and now they are part of me.](/assets/images/gopher-vendor.jpg)
+<img alt="I had some packages for lunch and now they are part of me." class="full" src="/assets/images/gopher-vendor.jpg">
 
 ## Vendor Your Dependencies
 
@@ -62,7 +61,7 @@ Resources:
 * [Manage Dependencies With Godep](http://www.goinggo.net/2013/10/manage-dependencies-with-godep.html) by William Kennedy
 
 
-![Packaging tools](/assets/images/gopher-packaging-tools.jpg)
+<img alt="Packaging tools" class="full" src="/assets/images/gopher-packaging-tools.jpg">
 
 ## The Right Tool
 
