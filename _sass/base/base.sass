@@ -27,30 +27,6 @@ a:visited, a:hover, a:active
     color: white
     @include transition (color 0.3s ease-in-out)
 
-$horizontal-footer: new-breakpoint(min-width 420px 1)
-
-footer
-  font-size: 2rem
-  background-color: $color5
-  color: $base01
-  padding: 0.1rem 1rem
-  a
-    text-decoration: none
-    &:visited, &:link
-      color: $base01
-    &:hover
-      color: white
-  .up
-    text-align: center
-    position: absolute
-    left: 50%
-  // on wider screens:
-  @include media($horizontal-footer)
-    .up
-      margin-left: -2.5rem
-      &:after
-        content: "Articles"
-
 ul.posts
   list-style: none
   padding: 0
@@ -64,11 +40,4 @@ ul.posts
     line-height: 2rem
     a
       text-decoration: none
-
-.right-icons
-  float: right
-  font-size: 2.5rem
-  line-height: 2.5rem
-  .fa-trello
-    padding-right: 1rem
 
