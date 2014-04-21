@@ -5,7 +5,9 @@ excerpt: Migrating to Postgres 9.2 takes some command line acrobatics.
 layout: article
 ---
 
-<img src="/assets/images/elephant.jpg" class="full" alt="Elephant">
+<figure data-tooltip="{{ site.data.credits.photo }}">
+    <img src="/assets/images/elephant.jpg" class="full" alt="Elephant">
+</figure>
 
 Heroku recently [unveiled][heroku] support for **Postgres 9.2**, offering performance improvements and several new features. Before migrating our *production* database at [Jobber][], we want to run it in development for a few days.
 

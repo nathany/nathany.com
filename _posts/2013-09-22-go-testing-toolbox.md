@@ -6,7 +6,11 @@ excerpt: A conglomeration of testing tools, from Autotest to Vagrant.
 layout: article
 ---
 
-<img alt="Gopher tools" class="full" src="/assets/images/gopher-tools.jpg">
+<figure data-tooltip="{{ site.data.credits.photo }}" data-tooltip2="{{ site.data.credits.gopher }}">
+    <img alt="Gopher tools" class="full" src="/assets/images/gopher-tools.jpg">
+    <figcaption>Toolbox sans box &mdash; 
+    this is <em>not</em> whac-a-gopher.</figcaption>
+</figure>
 
 Let's explore some of the tools available for testing our Go code.
 

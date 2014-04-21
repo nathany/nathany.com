@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Nathan
-excerpt: A brief history of becoming a programmer.
+excerpt: A personal account of becoming a programmer.
 ---
 
 This is me. I work at [Jobber](http://getjobber.com/) as Lead Backend Developer, providing business management software for field service companies. Our web application is written in Ruby and runs on Rails 4. 
