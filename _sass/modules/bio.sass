@@ -3,12 +3,13 @@ $horizontal: new-breakpoint(min-width 528px 1)
 $border-width: 8px
 
 .bio
-  font-family: sans-serif
-  border: $border-width solid $color3
-  background-color: $color5
-  color: $color1
   margin: 1rem
   width: 256px + ($border-width * 2)
+
+  font-family: sans-serif
+  color: $color1
+  background-color: $color5
+  border: $border-width solid $color3
   .text
     padding: 1rem 1rem 0 1rem
     .name
@@ -25,10 +26,8 @@ $border-width: 8px
       margin-bottom: 0.5rem
       font-size: 0.9rem
       line-height: 1
-  figure
-    margin: 0
-  .photo
-    @include retina-image(images/photo, 256px 256px, jpg)
+  .portrait
+    @include retina-image(images/portrait, 256px 256px, jpg)
     width: 256px
     height: 128px
     background-position: center left
@@ -36,7 +35,7 @@ $border-width: 8px
   @include media($horizontal)
     width: 512px + ($border-width * 2)
     height: 160px + ($border-width * 2)
-    .photo
+    .portrait
       margin-right: 1rem
       float: left
       height: 160px
