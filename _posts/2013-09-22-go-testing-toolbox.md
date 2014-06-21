@@ -125,7 +125,7 @@ When you run `vagrant up` with the Vagrantfile I wrote, it will download Linux a
 The way I have this setup, my `src/` folder is shared, so I can continue to use my editor and tools on OS X, while being able to issue commands to Linux and BSD VMs:
 
 ```bash
-vagrant ssh linux -c 'cd gophertown/looper; go test ./...'
+vagrant ssh linux -c 'cd nathany/looper; go test ./...'
 ```
 
 Each VM has its own `bin/` folder so `go install` won't stomp on the binaries created by your host OS or the other VM.
@@ -211,7 +211,7 @@ Related Articles:
 
 [Vagrant]: http://www.vagrantup.com/
 [VirtualBox]: https://www.virtualbox.org/
-[vagrant-gopher]: https://github.com/gophertown/vagrant-gopher
+[vagrant-gopher]: https://github.com/nathany/vagrant-gopher
 
 [modernie]: http://www.modern.ie/en-us/virtualization-tools
 
@@ -224,5 +224,5 @@ Related Articles:
 
 [os-release]: /os-release
 
-[Looper]: https://github.com/gophertown/looper
+[Looper]: https://github.com/nathany/looper
 

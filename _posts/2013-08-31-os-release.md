@@ -62,7 +62,7 @@ In addition to a `README.md`, provide instructions for those who have a question
 
 Go is under a BSD (3-clause) License. I don't need the third clause for personal projects, so I just use the BSD 2-clause License (Simplified BSD). [Choose whatever license suits your needs](http://choosealicense.com/).
 
-There is a `LICENSE` file in the root of my Development folder with the Copyright set, so I can just copy the file and I'm good to go. I'm investigating [project generators](https://github.com/gophertown/template/issues/1) to make this process even smoother.
+There is a `LICENSE` file in the root of my Development folder with the Copyright set, so I can just copy the file and I'm good to go. I'm investigating [project generators](https://github.com/nathany/template/issues/1) to make this process even smoother.
 
 ## Tag Your Releases
 
@@ -195,7 +195,7 @@ Related Articles:
 * [A Better Changelog](http://bitprophet.org/blog/2013/09/14/a-better-changelog/) by Jeff Forcier
 
 
-[contributing]: https://github.com/gophertown/looper/blob/master/CONTRIBUTING.md
+[contributing]: https://github.com/nathany/looper/blob/master/CONTRIBUTING.md
 [survey]: https://docs.google.com/forms/d/1XGjy74hrq2DG-Zh4VwqxSuAWPlLf2zx5KAU1VCph5ys/viewform
 [results]: https://docs.google.com/a/nathany.com/forms/d/1XGjy74hrq2DG-Zh4VwqxSuAWPlLf2zx5KAU1VCph5ys/viewanalytics
 
