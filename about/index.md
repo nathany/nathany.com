@@ -26,7 +26,7 @@ My first computer was a Commodore 16 from a garage sale, tape drive and all! I w
 
 By junior high, our school upgraded the lab from Apple IIs to amber-screened XTs. Thankfully there was one computer with a colour screen, and our neighbours let me use their PC after school. Progressing from GW-BASIC to QBasic, I did remakes of *Star Traders* and *Atlantis.*
 
-In addition to lawn-mowing income, I made money tutoring people on computers. When I had enough saved, I went to *Programmers Guild* to buy Turbo C 2.0. Unfortunately Turbo C wasn't the most approachable:
+In addition to lawn-mowing income, I earned money tutoring people on computers. When I had enough saved, I went to *Programmers Guild* to buy Turbo C 2.0. Unfortunately Turbo C wasn't the most approachable:
 
 * A simple syntax error would dump a dozen seemingly unrelated errors.
 * I found the IDE confusing, the keys reminded me of WordStar!
