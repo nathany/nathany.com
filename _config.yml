@@ -7,7 +7,7 @@ history_url: https://github.com/nathany/nathany.github.io/commits/master/
 
 safe: true
 lsi: false
-pygments: true
+highlighter: pygments
 timezone: America/Edmonton
 exclude: ["Gemfile", "Gemfile.lock", "Procfile", "build.sh", "nathany.sublime-project"]
 
