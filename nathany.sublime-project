@@ -8,6 +8,10 @@
 				"_site",
 				".bundle"
 			],
+			"file_exclude_patterns":
+			[
+				".Ulysses*"
+			],
 			"follow_symlinks": true,
 			"path": "."
 		}
