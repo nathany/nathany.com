@@ -1,11 +1,11 @@
 ---
 layout: none
 ---
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ site.url }}/</loc>
-    <changefreq>daily</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </url>
@@ -15,4 +15,7 @@ layout: none
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
   {% endfor %}
+  <url>
+    <loc>{{ site.url }}/about</loc>
+  </url>
 </urlset>
