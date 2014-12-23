@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.4'
+ruby '2.1.5'
 
 # Jekyll on GitHub Pages
 # https://help.github.com/articles/using-jekyll-with-pages
@@ -16,7 +16,7 @@ gem 'github-pages'
 # gem 'RedCloth',   '=4.2.9'
 
 gem 'sass'
-gem 'bourbon', '~> 4.0.0.rc1'     # bourbon install --path=_sass/
+gem 'bourbon'     # bourbon install --path=_sass/
 gem 'neat'
 gem 'rb-fsevent'  # for sass watch on Mac OS X
 gem 'foreman'     # "sudo foreman start" our Procfile
