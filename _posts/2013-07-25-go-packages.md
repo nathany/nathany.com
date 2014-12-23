@@ -140,6 +140,7 @@ When building an app, try [existing tools][tools] to vendor your dependencies. C
 
 Related Articles:
 
+* [Managing Dependencies](http://blog.gopheracademy.com/advent-2014/deps/) by Nathan Youngman
 * [Go and Package Versioning](http://zduck.com/2014/go-and-package-versioning/) by Joshua Poehls
 * [Maybe Go without dependency management can be a good thing](http://mwholt.blogspot.ca/2014/03/maybe-go-without-dependency-management.html) by Matthew Holt
 * [Why I think Go package management is important](http://dave.cheney.net/2013/10/10/why-i-think-go-package-management-is-important) and [Thoughts on Go package management six months on](http://dave.cheney.net/2014/03/22/thoughts-on-go-package-management-six-months-on) by Dave Cheney
