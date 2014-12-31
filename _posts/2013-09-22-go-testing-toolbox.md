@@ -173,11 +173,12 @@ Comment on
 Related Articles:
 
 * [Writing table driven tests in Go][tabledriven] by Dave Cheney
-* [Mocking functions in Go](http://blog.natefinch.com/2014/04/mocking-functions-in-go.html) by Nate Finch
+* [Mocking functions in Go](http://npf.io/2014/04/mocking-functions-in-go/) by Nate Finch
 * ["Dependency Injection" in Go][injection] by Karl Seguin
 * [Testing in go-github][go-github] by Will Norris
 * [Code coverage with gocov and wercker][gocov-wercker] by Pieter Joost
 * [Continuous Integration for Go Code](http://jmcvetta.github.io/blog/2013/08/30/continuous-integration-for-go-code/) by Jason McVetta
+* [CI for Windows Go Packages with AppVeyor](http://npf.io/2014/07/ci-for-windows-go-packages-with-appveyor/)
 
 
 [testing]: http://golang.org/pkg/testing/
