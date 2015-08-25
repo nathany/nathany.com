@@ -176,7 +176,7 @@ After the 14-month marathon that was Go 1.1, Go has moved to [a 6 month release 
 
 An interesting observation that I would like to explore.
 
-## Finî
+## Fin&icirc;
 
 I hope this is a good starting place for practices that are beneficial today, while also paving the way for better tooling.
 
