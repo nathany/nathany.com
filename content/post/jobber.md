@@ -1,0 +1,174 @@
++++
+title = "Jobber on Rails"
+date = "2013-10-01"
+revised = "2013-11-13"
+tags = ["SaaS", "startup", "Ruby", "Ruby on Rails", "assets", "Postgres", "JQuery Mobile", "Direct Upload"]
+summary = "A year in review."
++++
+
+<figure data-tooltip="Photograph by Aaron Pedersen">
+    <img alt="Jobber office" class="full" src="/images/jobber.jpg">
+    <figcaption>Ruff. Coding is fun.</figcaption>
+</figure>
+
+[Jobber][] provides business management software (calendaring, invoicing, etc.) to field service companies, such as landscapers, maid services, or pretty much any vertical involving on-site work.
+
+Last October I joined the two founders to continue building the product. This month our *team of eight* is moving to a renovated 1800+ sqft office to accommodate our growth.
+
+## First Sight
+
+Edmonton has a [vibrant startup scene][startupyeg], so what attracted me to Jobber?
+
+* I wanted to taste the startup life, but still take home a salary.
+* Jobber had already found product-market fit as SaaS for small business.
+* The opportunity to work on [mapping](http://www.google.com/intx/en/enterprise/earthmaps/maps.html) and [mobile][jqm] was compelling.
+* *Ruby on Rails:* I have been using Rails for 6+ years now. Every once in a while I work on a WordPress site to remind myself of how much I like Ruby. :-P
+* *Heroku:* I've spent enough time doing deployment to appreciate having someone else to keep the servers running while I focus on programming.
+
+## Moving Fast
+
+While I have been responsible for a lot of feature development, I'm going to focus on the infrastructure and performance improvements, which hopefully will be of use to you.
+
+### Unicorn
+
+We made [Unicorn][] our app server about 9 months ago. This required a lot of research to get the [configuration](https://gist.github.com/nathany/5058140) just right.
+
+Once our app is fully loaded, it uses about ~300MB of memory. We were an early adopter of Heroku's double dynos, which provide enough RAM to run 3 Unicorn workers per dyno (Unicorn uses a process model). If being able to handle 3 concurrent requests sounds pathetic, *it kinda is,* but there are two other factors to consider: 
+
+* The faster we can complete requests (in milliseconds), the more we can handle. 
+* We can run as many dynos as we need, and we pay Heroku a lot of money to do just that.
+
+Overall Unicorn has been a good move. I mean, it's good enough for GitHub, right? Double dynos have been a life saver for two reasons:
+
+* The servers are able to handle 3x the requests for only 2x the price of regular dynos.
+* Our servers are less sensitive to long running requests. It takes 3 slow requests all randomly pushed to the same dyno before a 4th request will queue.
+
+**Update:** More recently we've split requests between two *"Apps"*, taking advantage of the Heroku [pipelines lab](https://devcenter.heroku.com/articles/labs-pipelines) to deploy to both at once. The result: fast requests queue behind other fast requests, while slower requests cheerfully ruminate on another fleet of dynos (such as generating 6-months of data for our iCal feed).
+
+Alongside Unicorn, we sometimes use [Mr. Sparkle][mr-sparkle] for development. We also use [unicorn-worker-killer][] to take care of wayward unicorns that want to eat more than their share of memory.
+
+### CDN
+
+Given the $72/month we pay per dyno, it makes no sense to waste those resources serving static JavaScript, CSS and images. Last year I setup [asset_sync][] to serve our assets from S3/Cloudfront.
+
+We did run into one tricky issue with Internet Explorer 9. Any time an Ajax request returned HTML, the embedded JavaScript would fail to bind. An example would be a dialog box that made use of `link_to_function` for the cancel button.
+
+Once we were able to correlate serving assets from a separate domain with buttons not working in IE, the first step was to better simulate the production environment:
+
+```ruby
+# use a different domain for assets (development.rb)
+config.action_controller.asset_host = "http://s3.dev:3000"
+```
+
+Thankfully the solution wasn't a crazy IE-specific hack. Rather, moving to Unobtrusive JavaScript got IE9 working and improved our code too.
+
+These days [Heroku recommends pointing your CDN  directly at your dynos](https://devcenter.heroku.com/articles/using-amazon-cloudfront-cdn-with-rails) rather than using asset_sync, which is what we do now.
+
+### Direct File Uploads
+
+Following the theme of avoiding the Rails stack when possible, three months ago I got the majority of our uploads going directly to S3.
+
+Until then [Paperclip](https://github.com/thoughtbot/paperclip) had been handling our uploads and all the image resizing was happening on a web dyno.
+
+#### Research
+
+[CarrierWaveDirect](https://github.com/dwilkie/carrierwave_direct) is looking for a maintainer, making the switch to CarrierWave less appealing. We also looked briefly at [S3 Multipart](https://github.com/maxgillett/s3_multipart).
+
+In the end we decided to incorporate [S3 Direct Upload](https://github.com/waynehoover/s3_direct_upload), which is a Rails helper around [JQuery File Upload](https://github.com/blueimp/jQuery-File-Upload). The clincher was an article by Yuval Kordov on using [Paperclip and S3 Direct Upload](http://blog.littleblimp.com/post/53942611764/direct-uploads-to-s3-with-rails-paperclip-and).
+
+#### The Process
+
+We want uploads to post to S3, but many of our forms do more than just upload files. We use one form to post to S3, and on success we update a hidden `direct_upload_url` field in the main form and enable the submit button.
+
+We kept Paperclip to manage image resizing and hook into the data model. We use fog to copy files from an upload bucket to the location Paperclip expects, and force Paperclip to make thumbnails for images. All this is done on a background worker, so as to not tie up our web dynos.
+
+When there will be a thumbnail, we predetermine the url where it will end up, tagging a temporary image with a `data-processed-src`. Then we poll the url on S3 from JavaScript until the thumbnail exists, replacing out the temporary image.
+
+#### Results
+
+With these improvements we were able to enable <mark>uploads from mobile devices</mark>, even on slow connections, as well as support <mark>multiple file uploads</mark> simultaneously. We also added progress bars and client-side file size limits that are checked prior to upload.
+
+We ran into one gotcha with Safari on iOS 6. When we enabled multiple file uploads it was no longer possible to use the camera. Android phones have the user choose between camera or gallery. I've yet to check if iOS 7 improves upon this.
+
+We knew Internet Explorer 9 wouldn't support progress bars or client-side file size limits, but sending blank content types to S3 was unexpected:
+
+```ruby
+# content type is blank when uploaded from IE9
+content_type = MIME::Types.type_for(file_name).first.to_s if content_type.blank?
+```
+
+We use [Jcrop](http://deepliquid.com/content/Jcrop.html) for cropping company logos and user profile images. It looks possible to crop and scale images client-side before uploading them directly to S3, but not while supporting IE9 or older Android phones, so there are some improvements yet to make.
+
+We ended up with quite a bit of code to orchestrate between Paperclip and S3 Direct Upload. There is definitely room for a gem that blends the functionality of both gems, while focusing specifically on direct uploads.
+
+### Full Text Search
+
+We were using a third-party search provider, but they had the nasty habit of getting really slow, timing out, or outright downtime. It wasn't a regular occurrence, but often enough that we started writing fallbacks to search the database, particularly for things like autocomplete.
+
+Two months ago we upgraded our [Heroku Postgres Plan](https://postgres.heroku.com/pricing), improving on our overall latency with cycles to spare. To take advantage of all that extra horse power, we rewrote search.
+
+There are two existing gems, [pg_search](https://github.com/Casecommons/pg_search) and [textacular](https://github.com/textacular/textacular). [Check them out](http://robots.thoughtbot.com/post/58438017998/implementing-multi-table-full-text-search-with-postgres), but we ended up doing things a little differently.
+
+#### Indexing
+
+We use a single table to index everything for our global search, with a column to limit search to a specific area. The table holds a `tsvector` column with a `gin` index (rather than a `text` column). This allows us to use the unaccent extension and combine different weights (`[abcd]`) to eg. prioritize client names over notes.
+
+Our indexing is 230 lines of code, mostly repetitive SQL wrapped in some Ruby. We have rake tasks to reindex everything (or a subset), and we use the same scopes and SQL to generate triggers.
+
+When a record is created, updated or removed, the Rails code is blindly unaware of indexing. The database triggers take care of everything.
+
+Update: This didn't work out quite as well as I had hoped. I expected the trigger to run asyncronously while Rails got on with the request, but that isn't the case.
+
+#### Searching
+
+We have a small class to prepare a `tsquery`. It breaks up words and escapes special characters.
+
+One neat trick we do is search against a specific weight. Say we are doing autocompletion by client name, we use the same global search table, but have PostgreSQL only consider weight 'a' for client records. This way it ignores notes (weight 'd') without needing a separate index.
+
+#### Results
+
+Reindexing is much faster than it was before. Overall performance, if not improved, is at least more consistent.
+
+We also trimmed 2,500 lines of code and a third-party client gem. It's much simpler to combine other scopes with search, for filtering or handling permissions.
+
+PostgreSQL's [full text search](http://www.postgresql.org/docs/devel/static/textsearch.html) may not be quite as capable as the alternatives. I haven't found a good solution for stemming and stop words, particularly because we don't know what language people are using, and the same stemming algorithm is needed for the index and search query. So for now we are using the `simple` dictionary.
+
+Overall we're quite happy with the solution. For me, it was a nice chance to strut my languishing SQL skills.
+
+## Meant To Be
+
+So after pushing all this work to S3 or the database, what's left of Rails? 
+
+Quite a lot, actually. Our core Rails app [CLOCs][CLOC] in at 46,384 lines of Ruby, up from 33,267 when I started (this includes specs). We're certainly not using Ruby as "just a glue language".
+
+For all the headaches with memory footprints, slow performance, [SQL clobbering](https://github.com/blog/1440-today-s-email-incident), and the continual stream of security issues, would it make sense to use anything other than Rails? 
+
+When I run `bundle list` it reports 180 gems. We wrote a few of these, but the Ruby ecosystem is providing us with a lot of functionality for "free". I think it will be quite some time before [a newer language](http://golang.org/) has equivalent libraries to cover the same spectrum.
+
+## Why I &hearts; My Jobber
+
+I work and play (foosball) with a great group of guys. Some say "be the worst", that is, work with people smarter than you. I'm not sure that worst is best. I'm learning and mentoring, it goes both ways.
+
+The team gets product design. We aren't afraid to say "no" to  customers. We understand that people want features, but we balance that with keeping the UI simple for newcomers. Our add-ons are pivotal in catering to many different companies.
+
+Quality is the focus. We know [we fail at estimating](http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating), so we don't set arbitrary deadlines. Unless it's a polish week, I'm usually able to work on one thing at a time (think Kanban). Once a feature is complete, I almost always spend some time refactoring the code, making it easier to understand and change in the future. We make heavy use of GitHub pull requests for code review, and pair program as the need arises.
+
+We are always upgrading. Our app is using the latest Ruby 2.0, and though a few dependencies keep us from Rails 4, I was beginning to prepare for its arrival a year ago. Faster asset compilation and support for additional PostgreSQL data types are two enhancements I'm looking forward to. Local developers who are *[stuck in Kansas](http://www.youtube.com/watch?v=yhseQP52yIY&t=13m16s)*, you'll [find us][jobs] if you keep heading west. :-P
+
+*Comment on [Gooogle+](https://plus.google.com/104313268939103200754/posts/RDEdkFRiHbm) or [reddit](http://www.reddit.com/r/rails/comments/1nn41q/optimizing_our_stack_unicorn_asset_sync_direct/).*
+
+[Jobber]: http://getjobber.com/
+[CLOC]: http://cloc.sourceforge.net/
+[startupyeg]: http://startupedmonton.com/
+[maps]: http://www.google.com/intx/en/enterprise/earthmaps/maps.html
+[jqm]: https://github.com/GetJobber/jqm-spike
+[jobs]: http://getjobber.com/jobs
+
+[asset_sync]: https://github.com/rumblelabs/asset_sync
+
+[unicorn]: http://unicorn.bogomips.org/
+[unicorn-worker-killer]: https://github.com/kzk/unicorn-worker-killer
+[mr-sparkle]: https://github.com/MicahChalmer/mr-sparkle
+
+
+[signing]: http://codeartists.com/post/36892733572/how-to-directly-upload-files-to-amazon-s3-from-your

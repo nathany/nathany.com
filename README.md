@@ -3,9 +3,7 @@ Nathan's Articles
 
 This is my blog.
 
-* Jekyll hosted by GitHub Pages
-* Sass + Bourbon + Neat
-* Foreman to run multiple watchers
-* xip.io for mobile testing
+* [gohugo.io](https://gohugo.io/)
+* Sassc + Bourbon + Neat
 
-Content is &copy; 2006-2014, Nathan Youngman.
+Content is &copy; 2006-2015, Nathan Youngman.

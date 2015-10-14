@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+<article>
+  <section class="title">
+    <h1>{{ .Title }}</h1>
+    <div class="meta">
+      {{ if .Params.summary }}
+        <p>{{ .Params.summary | markdownify }}</p>
+      {{ end }}
+      <p>
+        {{ if .Params.revised }}
+          First published on {{ .Date.Format "2 Jan 2006" }},
+          <a href="{{ .Site.Params.HistoryURL }}{{ .Path }}">last revised</a>
+          {{ .Params.revised | dateFormat "2 Jan 2006" }}.
+        {{ else }}
+          Published on {{ .Date.Format "2 Jan 2006" }}.
+        {{ end }}
+      </p>
+    </div>
+  </section>
+  <section class="content">
+    {{ .Content }}
+  </section>
+</article>
+
+{{ partial "bio.html" . }}
+
+{{ partial "footer.html" . }}

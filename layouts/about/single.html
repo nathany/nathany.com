@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+<article class="page">
+
+  <section class="title">
+    <h1>{{ .Title }}</h1>
+    <div class="meta">
+      {{ if .Params.summary }}
+        <p>{{ .Params.summary | markdownify }}</p>
+      {{ end }}
+    </div>
+  </section>
+  <section class="content">
+    {{ .Content }}
+  </section>
+</article>
+
+{{ partial "bio.html" . }}
+
+{{ partial "footer.html" . }}

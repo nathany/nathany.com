@@ -1,8 +1,6 @@
 .DS_Store
 *.sublime-workspace
-_site/
-
 .sass-cache
 
-.bundle
-.Ulysses*
+public
+static/all.css

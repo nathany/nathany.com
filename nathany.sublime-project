@@ -5,12 +5,15 @@
 			"folder_exclude_patterns":
 			[
 				".sass-cache",
-				"_site",
-				".bundle"
+				"public",
+				"_archive",
+				"_scratch",
+				"sass/bourbon",
+				"sass/neat"
 			],
 			"file_exclude_patterns":
 			[
-				".Ulysses*"
+				"static/all.css"
 			],
 			"follow_symlinks": true,
 			"path": "."
