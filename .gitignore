@@ -3,8 +3,6 @@
 _site/
 
 .sass-cache
-_sass/bourbon
-_sass/neat
 
 .bundle
 .Ulysses*
