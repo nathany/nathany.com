@@ -11,7 +11,7 @@ $border-width: 8px
   background-color: $color5
   border: $border-width solid $color3
   .text
-    padding: 1rem 1rem 0 1rem
+    padding: 1rem 1rem 0.5rem 1rem
     .name
       font-weight: bold
       margin: 0
@@ -31,11 +31,21 @@ $border-width: 8px
     width: 256px
     height: 128px
     background-position: center left
+  .book-cover
+    @include retina-image(images/book-cover, 256px 320px, png)
+    width: 256px
+    height: 320px
+    background-position: center left
 
   @include media($horizontal)
-    width: 512px + ($border-width * 2)
-    height: 160px + ($border-width * 2)
+    width: 512px + 160px + ($border-width * 2)
+    height: 200px + ($border-width * 2)
     .portrait
+      float: left
+      height: 200px
+    .book-cover
+      @include retina-image(images/book-cover-wide, 160px 200px, png)
       margin-right: 1rem
       float: left
-      height: 160px
+      width: 160px
+      height: 200px
