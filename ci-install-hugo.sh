@@ -11,4 +11,4 @@ set -e
 # fi
 
 # hugo from master
-go get -v -d github.com/spf13/hugo
+go get -v github.com/spf13/hugo
