@@ -3,7 +3,7 @@ title = "Go Object Oriented Design"
 date = "2013-01-14"
 revised = "2014-08-18"
 summary = "Composition not inheritance, polymorphism through interfaces, and packages for namespacing."
-tags = ["golang", "OOP", "Object Oriented Design", "Go", "composition", "interfaces", "types", "values"]
+keywords = ["golang", "OOP", "Object Oriented Design", "Go", "composition", "interfaces", "types", "values"]
 +++
 
 Go has <mark>types and values</mark> rather than classes and objects. So can a language without classes or objects be object-oriented?

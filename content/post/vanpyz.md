@@ -1,6 +1,6 @@
 +++
 title = "Py on the Horizon"
-tags = ["python", "user group", "Vancouver"]
+keywords = ["python", "user group", "Vancouver"]
 date = "2008-09-03"
 summary = "Notes from Brett Cannon's talk on the changes in Python 2.6 and 3.0."
 +++

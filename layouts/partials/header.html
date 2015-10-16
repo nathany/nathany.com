@@ -5,8 +5,8 @@
   {{ if .Params.summary }}
     <meta name="description" content="{{ .Params.summary }}">
   {{ end }}
-  {{ if .Params.tags }}
-    <meta name="keywords" content="{{ delimit .Params.tags "," }}">
+  {{ if .Keywords }}
+    <meta name="keywords" content="{{ delimit .Keywords "," }}">
   {{ end }}
   <title>{{ .Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">

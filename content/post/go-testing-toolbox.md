@@ -1,7 +1,7 @@
 +++
 title = "Go Testing Toolbox"
 date = "2013-09-28"
-tags = ["golang", "testing", "vagrantup", "coverage", "mocking", "continuous integration", "looper", "autotest"]
+keywords = ["golang", "testing", "vagrantup", "coverage", "mocking", "continuous integration", "looper", "autotest"]
 summary = "A conglomeration of testing tools, from Autotest to Vagrant."
 +++
 

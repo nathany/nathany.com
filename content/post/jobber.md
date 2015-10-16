@@ -2,7 +2,7 @@
 title = "Jobber on Rails"
 date = "2013-10-01"
 revised = "2013-11-13"
-tags = ["SaaS", "startup", "Ruby", "Ruby on Rails", "assets", "Postgres", "JQuery Mobile", "Direct Upload"]
+keywords = ["SaaS", "startup", "Ruby", "Ruby on Rails", "assets", "Postgres", "JQuery Mobile", "Direct Upload"]
 summary = "A year in review."
 +++
 

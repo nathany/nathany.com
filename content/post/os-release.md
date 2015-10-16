@@ -2,7 +2,7 @@
 title = "Releasing Open Source"
 date = "2013-08-31"
 revised = "2013-11-13"
-tags = ["golang", "packages", "tagging", "open source", "changelog", "release notes"]
+keywords = ["golang", "packages", "tagging", "open source", "changelog", "release notes"]
 summary = "Being a good open source citizen for the benefit of humans and tooling."
 +++
 

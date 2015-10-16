@@ -2,7 +2,7 @@
 title = "A Year of Rails Magic"
 date = "2008-02-14"
 summary = "Some frustrations with Rails 1.x which have since been addressed."
-tags = ["rails:1.2"]
+keywords = ["rails:1.2"]
 +++
 
 Two years ago I came across a [certain][rails] full-stack web development framework. I bought the books, took in the [propaganda][] and ported my personal website. But it wasn't until this past year that I worked with _Ruby on Rails_ professionally, on a day-to-day basis.

@@ -2,7 +2,7 @@
 title = "Object Oriented Frameworks for Web Development"
 date = "2006-11-01"
 summary = "A survey of Rails, Django, and Zend Framework &mdash; bringing OOP to the web."
-tags = ["ruby:1.8", "rails:1.0", "python:2.5", "django:0.96", "php:5", "zendframework:0.15"]
+keywords = ["ruby:1.8", "rails:1.0", "python:2.5", "django:0.96", "php:5", "zendframework:0.15"]
 +++
 
 I began working on the web in 1997, starting with simple web sites and gradually building more dynamic database-driven web sites, including fairly sophisticated systems for e-commerce and online presence management. But **2006** marks _a significant departure_ for me. Despite some experience with C++, Java and Objective-C, it never hit me to go OO on the web.

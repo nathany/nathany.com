@@ -2,7 +2,7 @@
 title = "Why Go?"
 date = "2012-05-07"
 revised = "2015-02-27"
-tags = ["golang"]
+keywords = ["golang"]
 summary = "Intrigued by the Go programming language."
 +++
 
