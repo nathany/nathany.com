@@ -1,7 +1,7 @@
 +++
 title = "Upgrading Postgres.app"
 date = "2012-12-21"
-summary = "Migrating to Postgres 9.2 takes some command line acrobatics."
+description = "Migrating to Postgres 9.2 takes some command line acrobatics."
 +++
 
 <figure data-tooltip="Photograph &copy; 2015 Nathan Youngman">

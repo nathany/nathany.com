@@ -1,7 +1,7 @@
 +++
 title = "Object Oriented Frameworks for Web Development"
 date = "2006-11-01"
-summary = "A survey of Rails, Django, and Zend Framework &mdash; bringing OOP to the web."
+description = "A survey of Rails, Django, and Zend Framework &mdash; bringing OOP to the web."
 keywords = ["ruby:1.8", "rails:1.0", "python:2.5", "django:0.96", "php:5", "zendframework:0.15"]
 +++
 

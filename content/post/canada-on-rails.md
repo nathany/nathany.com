@@ -1,7 +1,7 @@
 +++
 title = "Canada on Rails"
 date = "2006-04-14"
-summary = "Notes from my first real-life experience with the Ruby on Rails community."
+description = "Notes from my first real-life experience with the Ruby on Rails community."
 keywords = ["rails"]
 +++
 

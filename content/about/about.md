@@ -1,6 +1,6 @@
 +++
 title = "About Nathan"
-summary = "A personal account of becoming a programmer."
+description = "A personal account of becoming a programmer."
 +++
 
 This is me. I work at [Jobber](https://getjobber.com/) as Lead Backend Developer, providing business management software for field service companies. Our web application is written in Ruby and runs on Rails 4. 

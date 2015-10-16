@@ -1,7 +1,7 @@
 +++
 title = "Practical Object-Oriented Design"
 date = "2013-01-10"
-summary = "Sandi Metz' book on Object-Oriented Design is well worth the read."
+description = "Sandi Metz' book on Object-Oriented Design is well worth the read."
 keywords = ["ruby", "OOD", "Object Oriented Design", "monolithic", "change", "abstract", "duck typing"]
 +++
 

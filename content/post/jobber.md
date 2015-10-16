@@ -3,7 +3,7 @@ title = "Jobber on Rails"
 date = "2013-10-01"
 revised = "2013-11-13"
 keywords = ["SaaS", "startup", "Ruby", "Ruby on Rails", "assets", "Postgres", "JQuery Mobile", "Direct Upload"]
-summary = "A year in review."
+description = "A year in review."
 +++
 
 <figure data-tooltip="Photograph by Aaron Pedersen">

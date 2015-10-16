@@ -2,8 +2,8 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  {{ if .Params.summary }}
-    <meta name="description" content="{{ .Params.summary }}">
+  {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
   {{ end }}
   {{ if .Keywords }}
     <meta name="keywords" content="{{ delimit .Keywords "," }}">

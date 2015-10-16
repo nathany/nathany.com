@@ -1,7 +1,7 @@
 +++
 title = "A Computer Scientist, a Mathematician, and an Engineer"
 date = "2007-11-10"
-summary = "Thoughts on Lua and simplicity."
+description = "Thoughts on Lua and simplicity."
 +++
 
 <small>_Crossposted from [lua nova](http://luanova.org/a-computer-scientist-a-mathematician-and-an-engineer/)._</small>

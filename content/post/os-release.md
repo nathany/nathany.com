@@ -3,7 +3,7 @@ title = "Releasing Open Source"
 date = "2013-08-31"
 revised = "2013-11-13"
 keywords = ["golang", "packages", "tagging", "open source", "changelog", "release notes"]
-summary = "Being a good open source citizen for the benefit of humans and tooling."
+description = "Being a good open source citizen for the benefit of humans and tooling."
 +++
 
 <figure data-tooltip="Photograph &copy; 2015 Nathan Youngman" data-tooltip2="Go gopher designed by Ren&eacute;e French">

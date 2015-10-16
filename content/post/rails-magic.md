@@ -1,7 +1,7 @@
 +++
 title = "A Year of Rails Magic"
 date = "2008-02-14"
-summary = "Some frustrations with Rails 1.x which have since been addressed."
+description = "Some frustrations with Rails 1.x which have since been addressed."
 keywords = ["rails:1.2"]
 +++
 

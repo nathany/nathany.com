@@ -2,7 +2,7 @@
 title = "Go Object Oriented Design"
 date = "2013-01-14"
 revised = "2014-08-18"
-summary = "Composition not inheritance, polymorphism through interfaces, and packages for namespacing."
+description = "Composition not inheritance, polymorphism through interfaces, and packages for namespacing."
 keywords = ["golang", "OOP", "Object Oriented Design", "Go", "composition", "interfaces", "types", "values"]
 +++
 

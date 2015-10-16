@@ -2,7 +2,7 @@
 title = "Language Semantics: Class Variables"
 date = "2010-07-13"
 revised = "2012-12-17"
-summary = "Ruby `@@class` *hierarchy* variables are unlike Java and Python."
+description = "Ruby `@@class` *hierarchy* variables are unlike Java and Python."
 keywords = ["rubyquirks"]
 +++
 

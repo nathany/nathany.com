@@ -2,7 +2,7 @@
 title = "Go Testing Toolbox"
 date = "2013-09-28"
 keywords = ["golang", "testing", "vagrantup", "coverage", "mocking", "continuous integration", "looper", "autotest"]
-summary = "A conglomeration of testing tools, from Autotest to Vagrant."
+description = "A conglomeration of testing tools, from Autotest to Vagrant."
 +++
 
 <figure data-tooltip="Photograph &copy; 2015 Nathan Youngman" data-tooltip2="Go gopher designed by Ren&eacute;e French">

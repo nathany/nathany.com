@@ -4,8 +4,8 @@
   <section class="title">
     <h1>{{ .Title }}</h1>
     <div class="meta">
-      {{ if .Params.summary }}
-        <p>{{ .Params.summary | markdownify }}</p>
+      {{ if .Description }}
+        <p>{{ .Description | markdownify }}</p>
       {{ end }}
       <p>
         {{ if .Params.revised }}

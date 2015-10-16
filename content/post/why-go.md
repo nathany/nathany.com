@@ -3,7 +3,7 @@ title = "Why Go?"
 date = "2012-05-07"
 revised = "2015-02-27"
 keywords = ["golang"]
-summary = "Intrigued by the Go programming language."
+description = "Intrigued by the Go programming language."
 +++
 
 <figure data-tooltip="Photograph &copy; 2015 Nathan Youngman" data-tooltip2="Go gopher designed by Ren&eacute;e French">

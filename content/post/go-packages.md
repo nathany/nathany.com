@@ -3,7 +3,7 @@ title = "Go Package Management"
 date = "2013-07-25"
 revised = "2014-04-17"
 keywords = ["golang", "packages", "dependencies"]
-summary = "A summary of dependency management in Go."
+description = "A summary of dependency management in Go."
 +++
 
 <figure data-tooltip="Photograph &copy; 2015 Nathan Youngman" data-tooltip2="Go gopher designed by Ren&eacute;e French">

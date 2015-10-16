@@ -14,8 +14,8 @@
               Published on {{ .Date.Format "2 January 2006" }}.
             {{ end }}
           </p>
-          {{ if .Params.summary }}
-            <p>{{ .Params.summary | markdownify }}</p>
+          {{ if .Description }}
+            <p>{{ .Description | markdownify }}</p>
           {{ end }}
         </li>
       {{ end }}
