@@ -2,7 +2,7 @@
 title = "Get ready, get set, Go"
 date = "2015-10-19"
 keywords = ["golang", "book", "Manning", "learn"]
-description = "An excerpt from Learn Go, available from Manning Publications."
+description = "An excerpt from Learn Go, a book I'm writing with Manning Publications."
 +++
 
 [Learn Go]: https://manning.com/books/learn-go?a_aid=nathany&a_bid=53f68821
@@ -17,7 +17,7 @@ description = "An excerpt from Learn Go, available from Manning Publications."
 [fmt.go]: https://play.golang.org/p/v4n7eJGd2J
 [tickets.go]: https://play.golang.org/p/oluEimZNj0
 
-The following article is an excerpt from [Learn Go][], a book I am writing with Manning Publications. All illustrations are by [Olga Shalakhina](https://twitter.com/OlgaShalakhina), based on the Go gopher designed by [Ren&eacute;e French](https://twitter.com/reneefrench).
+The following article is an excerpt from [Learn Go][], a book I'm writing with Manning Publications. All illustrations are by [Olga Shalakhina](https://twitter.com/OlgaShalakhina), based on the Go gopher designed by [Ren&eacute;e French](https://twitter.com/reneefrench).
 
 ## Introducing the Go Playground
 The quickest way to get started with Go is to navigate to [play.golang.org][playground]. The Go Playground enables you to edit, run, and experiment with Go without needing to install anything. When you click the **[Run]** button, the Playground will compile and execute your code on Google servers and display the result.
