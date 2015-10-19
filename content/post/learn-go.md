@@ -345,8 +345,8 @@ Being able to substitute variables anywhere in a sentence is great, but `Printf`
 fmt.Printf("$%4v\n", 94)  //<1>
 fmt.Printf("$%4v\n", 100) //<2>
 ```
-1. Print `${nbsp}{nbsp}94`
-2. Print `${nbsp}100`
+1. Print &nbsp;&nbsp;94
+2. Print 100
 
 <i class="fa fa-lightbulb-o fa-2x fa-pull-left" title="Tip"></i> See the [online documentation](https://golang.org/pkg/fmt/) for other format verbs.
 
