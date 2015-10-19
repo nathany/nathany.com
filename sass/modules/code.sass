@@ -1,0 +1,69 @@
+/* ==============================================
+   Code
+   ============================================== */
+
+.highlight
+  pre
+    font-family: 'Inconsolata', monospace
+    overflow: auto
+    white-space: pre
+    margin: 0
+
+  pre code
+    position: relative
+    display: block
+    padding: 2rem 0
+
+  // language indicator:
+  pre code:before
+    content: attr(data-lang)
+    text-transform: capitalize
+    font-family: 'Inconsolata', monospace
+    font-weight: bold
+    color: $color5
+    background: $base1
+    padding: 0.2rem 0.5rem
+
+    position: absolute
+    top: 0
+    right: 0
+    vertical-align: texttop
+
+    max-width: 8rem
+    text-overflow: ellipsis
+    overflow: hidden
+
+
+@import "code-pygments"
+
+
+// code annotations
+ol
+  counter-reset: li // Initiate a counter
+  list-style: none  // Remove default numbering
+
+ol ol
+  margin: 0 0 0 2em // Add some left margin for inner lists
+
+ol li
+  position: relative
+  display: block
+  padding-left: 1rem
+  margin: .5rem 0
+
+ol li:before
+  color: $color5
+  font-family: 'Inconsolata', monospace
+  content: counter(li)
+  counter-increment: li
+  position: absolute
+  left: -2rem
+  background: tint($base1, 30%)
+  border: 2px solid $base1
+  height: 2rem
+  width: 2rem
+  line-height: 2rem
+  text-align: center
+  font-weight: bold
+  border-radius: 2rem
+

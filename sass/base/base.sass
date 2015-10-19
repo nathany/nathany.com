@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Base
+   No class or id selectors here.
+   ========================================================================== */
+
+@import "colors"
+@import "typography"
+
+body
+  background-color: #eee
+  color: $color5
+
+a:link
+  color: $base01
+
+a:visited, a:hover, a:active
+  color: $base1
+
+.bio .fa
+  text-decoration: none
+  font-size: 2rem
+  padding-right: 0.4rem
+  padding-bottom: 0.3rem
+  &:visited, &:link
+    color: $base01
+  &:hover
+    color: white
+    @include transition (color 0.3s ease-in-out)
+
+ul.posts
+  list-style: none
+  padding: 0
+
+  li
+    margin-bottom: 2rem
+  p, h2
+    margin: 0
+  h2
+    font-size: 2rem
+    line-height: 2rem
+    a
+      text-decoration: none
+

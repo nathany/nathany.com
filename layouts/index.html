@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+<article>
+  <h1>Nathan's Articles</h1>
+
+  <ul class="posts">
+      {{ range where .Data.Pages "Section" "post" }}
+        <li>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p class="meta">
+            {{ if .Params.revised }}
+              First published on {{ .Date.Format "2 January 2006" }}, last revised {{ .Params.revised | dateFormat "2 Jan 2006" }}.
+            {{ else }}
+              Published on {{ .Date.Format "2 January 2006" }}.
+            {{ end }}
+          </p>
+          {{ if .Description }}
+            <p>{{ .Description | markdownify }}</p>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  </section>
+</article>
+
+{{ partial "bio.html" . }}
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,22 @@
+  </div> <!-- end page -->
+
+  <footer>
+
+    <p>
+      <span class="copyright" data-tooltip="&copy; {{ .Site.Copyright }}" data-tooltip2="{{ .Site.Params.FontAwesome }}">&copy; 2015</span>
+      <!-- {{ .Site.LastChange.Format "2006" }} -->
+
+      <a href="/" class="articles">&#8679;</a>
+
+      <span class="right-icons">
+        <a href="https://trello.com/b/vDA2qSZo/nathany-com-articles" class="fa fa-trello"></a>
+        <a href="{{ .RSSlink }}" title="Atom feed" class="fa fa-rss"></a>
+      </span>
+    </p>
+
+  </footer>
+
+  {{ partial "analytics.html" . }}
+
+</body>
+</html>

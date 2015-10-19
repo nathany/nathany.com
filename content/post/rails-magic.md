@@ -1,0 +1,232 @@
++++
+title = "A Year of Rails Magic"
+date = "2008-02-14"
+description = "Some frustrations with Rails 1.x which have since been addressed."
+keywords = ["rails:1.2"]
++++
+
+Two years ago I came across a [certain][rails] full-stack web development framework. I bought the books, took in the [propaganda][] and ported my personal website. But it wasn't until this past year that I worked with _Ruby on Rails_ professionally, on a day-to-day basis.
+
+There is no denying that Ruby on Rails represents a **monumental step forward** in web application development. If you're not convinced, just consider all the copy-cat frameworks. David Heinemeier Hansson took Fowler patterns like Supervising Controller (for "[MVC][]") and Active Record and made them accessible to non-Enterprise folk (like myself:-). Prototype & Script.aculo.us are well-integrated, providing *training wheels* to begin your Ajax-enabled web application without a lot of JavaScript knowledge.
+
+This is a discussion of some of the frustrations I experienced, and the issues that keep Rails from being the "perfect" web framework in my books. If you are considering Ruby on Rails, perhaps knowing the issues will serve as road signs before you run into them yourself.
+
+## Learning Curve
+
+When you watch the [screencasts][] it all looks so _very_ easy. Yet to use Ruby on Rails effectively, there is _really a lot_ to learn. The Rails framework itself is quite immense, and you better learn [Ruby][] at some point! When it comes time for deployment, you will need to figure out Capistrano. Eventually you'll need to learn how [Prototype][] to handle your Ajax needs directly.
+
+Everything is evolving so quickly that documentation is often lacking or dated. Do you work with the old versions (i.e. Capistrano 1.x) or struggle to piece together information from multiple sources? It usually seems pointless to learn an already dated technology, so I'd opt for the later.
+
+Considering the dearth of online tutorial-style documentation, most people begin Rails with a few selections from [The Pragmatic Bookshelf][9]. So did I, and they were all very helpful. But don't stop there.
+
+Watch [PeepCode][] and [RailsCasts][]. Before RailsCasts I was dismayed that complex forms seemed easiest to build with multiple Ajax requests, rather than representing a set of rows that all saved at once. Similarly, I thought RJS was pretty useless because it seemed intended only for Ajax requests. PeepCode clued me in to writing RJS for the initial request.
+
+There are a number of good blogs out there, you need every resource you can find to keep up.
+
+## The Magicians' Convention
+
+When Ruby on Rails hit the streets four years ago, it came touting **convention over configuration**. Rather than writing some *ghastly* XML configuration file, the developer could achieve the same by following a few simple conventions.
+
+There is something quite **magical** and lovely about defining a class and letting Rails map it to a database table, examining the schema and providing all sorts of useful methods.
+
+~~~ ruby
+class Person < ActiveRecord::Base
+end
+~~~
+
+The problem with conventions is that _you must know them_ before anything makes sense. By itself, it isn't completely obvious what the above code does. With the built-in pluralization support, Rails creates an object-mapping to the `people` table in your database. Everyone using Ruby on Rails should be accustomed with pluralization, which is intended to make your code read how you normally say it. But what happens when pluralization goes wrong?
+
+### Bad Inflection
+
+Rails routing will map browser URIs to a controller "resource" as follows:
+
+~~~ ruby
+map.resources :sleeves
+~~~
+
+Using pluralization, the `sleeves/` URI works with a collection of sleeves, whereas an individual sleeve with an identifier of 1 would be referenced as `sleeve/1` -- or so I thought. Unfortunately English is a complex language, Rails gets confused and looks for a _sleefe_. This is easy enough to resolve, just specify a `:singular` attribute or globally define a new inflector. The point is that Rails magic can go awry, leaving you temporarily stumped.
+
+Any chance of pluralization being fixed up? It doesn't seem likely, though perhaps [recent i18n efforts][i18n] will result in all-new pluralization support in the future. Who knows?
+
+### Methods Out Of Nowhere
+
+A month into my first Rails contract, I threw myself into a much larger Rails project to help fix a few _nigglies_ (which is a nice way of saying _bugs_).
+
+I was a bit mystified by calls to several exclamation-mark terminated methods that didn't seem to be defined _anywhere._ As it turns out, the project was using the `acts_as_state_machine` plugin, in which the following code will introduce the `submit!` method:
+
+``` ruby
+event :submit do
+  # ...
+end
+```
+
+Now how does that work? Welcome to the _wonderful world of **metaprogramming**,_ where methods can come out of nowhere.
+
+Granted, using `acts_as_state_machine` may not be "best practice." In his RailsConf'06 [World of Resources][17] presentation, <abbr title="David Heinemeier Hansson">DHH</abbr> demonstrates using a separate model for the _progress_ of a _kase_.
+
+Take another example, a remote developer setup ActionMailer with a custom `Notifier` class. He wrote a method and named it `notification` and checked the code in. When I was hooking up the code, I tried calling the method directly but it didn't work. After finally consulting the Rails documentation, I found that I needed to call `Notifier.deliver_notification`. Quite counter-intuitive. I added a quick comment to make up for the code not being self-documenting.
+
+These frustrations are minor, and can be resolved by becoming thoroughly familiar with Rails and _all the plugins_ in use. Read your manual, know the APIs, standard stuff. Still, there is no question that having methods defined on the fly _takes some getting use to_.
+
+A little magic can make something complex appear simple on the surface. Yet, **a simple solution will always be better than a complex solution masked in simplicity.** In our own Ruby code, we need to _conjure responsibly_, being careful to not confuse cleverness for beauty.
+
+## Finding Beautiful
+
+If you have heard <abbr title="David Heinemeier Hansson">DHH</abbr> speak, you know he finds happiness in "beautiful code." But beauty is subjective. Let's say that **brevity is beautiful**, if so, the framework may magically handle a few things so you have less to write, see, and maintain.
+
+The Python community might rebuttal that very explicit code is better able to stand on its own, providing **better readability** than terse code.
+
+I have been horrified by plenty of ugly, incomprehensible code in Rails projects. Was it because I was new and hadn't caught on yet? Or that code was hastily written (Internet time) by developers also new to the platform? Or maybe I just had heightened expectations as to what beautiful code should be?
+
+Corners of my projects still contain what I would consider "ugly" code. Is today's ugly code tomorrows unintelligible code? Maintainable code **must be understood,** down the road, and by others. If it can't be understood, it's destined for the trash.
+
+> "The common case for wanting to rewrite _is to understand." - [Jonathan ‘Wolf' Rentzsch][18]_
+
+Doing a rewrite? Rails will jump start your new project. Unfortunately, it doesn't cater to reuse quite so well.
+
+## Half A Slice
+
+When it comes to web application **modularity**, there is more than one way you can slice it. Horizontal slices layer on top of each other, typified as your database, your web framework, and web server.
+
+Your application may also have different parts, perhaps an authentication system or a forum. These are vertical slices, including the views your user sees down to the database interactions of the model. Ruby on Rails is _in no way_ designed with this sort of modularity in mind. Instead, what you get is **plugins**, but plugins themselves only represent _the lower portion of the vertical slice_ (excluding the view). For something small like an authentication system, your plugin may have setup code to copy prefabbed views into the main application. For a larger component, like a forum, you could deploy an entirely separate application and expose RESTful APIs to communicate between the two.
+
+In any sizeable project I've worked on, we've made use of **Rails Engines** which modifies the Rails plugin architecture to actually be useful, supporting full vertical slices. Still, it has its problems, especially when you still need to work on your "plugin(s)." Any change to your public assets (i.e JavaScript, stylesheets) in the plugin requires restarting your development server, and don't expect to `script/generate` a new plugin model.
+
+Until recently, the tricks Engines performs to make everything work would tie you to a particular version of Rails. Fortunately, as of Rails 2.x *less weird hackery* is necessary.
+
+Some have [contrasted Django's modularity][21] with Ruby on Rails. Since I have done some work with **Django**, I will throw in my two bits.
+
+A Django project is made up of one or more apps, each residing in a subfolder. You might consider Django to be a little like the Hierarchical-Model-View-Controller[^1](#1) pattern, where the directory structure provides a hierarchy, each folder containing an MVC triad represented by models, url routes + views, and templates. Django was designed for modularity from the start.
+
+> "with each project I complete, I build up more of a library of reusable, plug-and-play type of pieces" - Jeff Croft [commenting][croft] on his productivity with Django
+
+You certainly can build up reusable parts with Rails, it just isn't designed for modularity as well as Django.
+
+## Data Modelling
+
+Any web application I wrote prior to 2006 incorporated many, many SQL statements. ColdFusion allowed SQL to be written inline, without all the escaping necessary in languages that just represent SQL with strings. Before ActiveRecord, I thought that was a nice feature.
+
+ActiveRecord is the crown gem of Rails. Other than reporting, I rarely find it necessary to drop down to SQL, a strong indication of how competent it is at handling many situations. This has real tangible benefits, making your code database agnostic, but then any <abbr title="object-relational mapper">ORM</abbr> does that. What makes ActiveRecord _rock_ is the simple, elegant syntax required to drive all its power.
+
+### Migrations Gone South
+
+To create database tables for Rails, you write a migration in database-agnostic Ruby code. To make changes you write additional migrations, each prefixed with an incrementing number. These migrations can be run in your production environment without having to manually write SQL scripts or remember what to modify.
+
+Problems arise in a multi-developer environment. If two people create (unrelated) migrations at the same time, the numbers clobber each other, temporarily stumping you or even slipping back into source-control.
+
+If you want to rollback something from a few changes ago, without rolling everything back on the way, you'll end up adding another migration to do it. Special care is needed in case your migrations reference models or fields that disappear later, breaking a fresh run of the migrations. Typically this is accomplished by stubbing the model class in the migration itself.
+
+Eventually you end up with a pretty cluttered array of database migrations, pleading with your conscious to factor all the changes down to essentially one migration per model. Going back to modify migrations requires careful communication, and becomes risky once in production with real data.
+
+One other quibble, it would be nice to have your data definition in the model to remind yourself of the fields without switching to a related migration/schema. Django takes this approach. [DataMapper][23] and Nitro's Og follow suit and are thread-safe to boot (ActiveRecord is not). Rather than having separate migrations, they generate the database from the model and don't require database introspection. Django extends the concept by representing more field types than the database. (FileField, ImageField, etc.)
+
+When it comes time to alter a table in production, Django leaves you stuck with the manual database updates of yore… at least until schema evolution is fully implemented. For all the problems with Rails migrations, having migrations today wins over a better solution that isn't here yet.
+
+## Fitting The Mold
+
+In the early days of Rails, there were concerns with the unRESTful nature of having actions exposed in URIs. Rails has changed significantly, now strongly focusing on **RESTful design** where your controller methods match up to HTTP
+verbs.
+
+For my latest project, we have a multi-page _form_ where each page loads and saves via Ajax. As the user pages around, it loads partials with GET requests as needed. Anything the user changes is saved when paging and auto-saved on a timer using PUT requests. These requests map nicely to the stock `show` and `update` methods in the Rails controller. My PageHandler JavaScript class is fairly intelligent about minimizing requests, but in the usual case, users move from page to page in order, taking _two_ Ajax requests each time.
+
+Right now pages are independent of each other, so I haven't seen any strange race conditions caused by loading and saving at the same time or out of order. Error handling is a little odd, if the server succeeds at loading the next page, but fails to save, how do I present that? During the course of development, I've wondered if it wouldn't be better to have a single request that could do a load and/or save. Certainly it would be more efficient in terms of number of requests.
+
+Maybe there is another way to implement REST that would work better than the default Rails approach? Other REST implementations I've seen generally use JSON and have a _fatter_ client where the client maintains its own state.
+
+Purists will be quick to indicate that REST should be stateless, with each request being entirely self-contained. That means no server-side sessions. This has benefits with regards to back-button handling, bookmarks and error recovery.
+
+The multi-page forms in my application are user-created by Human Resources, and answers are stored in a generic table. Rails model **validation** doesn't work in this case, even a custom validator because I need to auto-save data that may be incomplete or invalid. Instead I use JavaScript to validate dates, email addresses, phone numbers and so on. When the entire form is done and submitted, it then needs to be checked for validity. No framework can handle every case, so I don't fault Rails, but its validation mechanism is a bit Web 1.0.
+
+## Obtrusive Javascript
+
+A principle of Rails is to make it harder to write bad code than it is to write good code. Mixing domain logic with your view goes _against the grain_ of the MVC structure that Rails prescribes. Unfortunately this principle breaks down when you come to _behaviors_ written in JavaScript.
+
+Unobtrusive JavaScript is an ideal situation where templates and JavaScript are completely separated. Event-handlers hook onto HTML elements by
+identifiers rather than being written inline with the traditional `onclick` HTML attributes.
+
+Rails provides nothing to facilitate this kind of separation, while making it easy to mix JavaScript or even RJS directly in a template. It doesn't prevent me from doing it right, but it doesn't help either. The majority of "unbeauty" in my code is in the form of behaviors dumped directly into my templates.
+
+Duplication between server-side and client-side code makes me unhappy. When prepping a form with disabled fields based on various criteria, Ruby is used. To alter the form on the client, JavaScript is used. I admit I don't know RJS that well, but it feels too limited to really replace JavaScript. Server-side JavaScript seems like best solution, or how about pushing more logic to the client via JSON setup data? Alternatively, a validation or form handling library could be designed to provide a fairly consistent API between both JavaScript and Ruby. This is one area I need to ponder longer.
+
+## Inconsistencies
+
+There are the obvious inconsistencies in Rails, like every command line tool using a different switch to specify the Rails _environment._ That doesn't annoy me so much as inconsistencies in the APIs, especially when working with form elements. I find myself frequently consulting the API docs to get my syntax right. **Consistency breeds memorability.**
+
+One specific inconsistency is the lack of support for the HTML class attribute with `select_year`, `select_month`, etc. Even more frustrating is the existence of [user-submitted patches][25] that seem disregarded by the core team.
+
+If Ruby ever gets real named parameters instead of this _last hash_ non-sense, I would expect the Rails APIs to become a lot simpler and more consistent.
+
+## Clone Wars
+
+The lighter, more flexible [Merb][] framework sounds attractive, especially because it relies on the same Ruby-based infrastructure (i.e. Gems, Capistrano, Mongrel, RSpec).
+
+Merb *is* a Rails clone, but it sets out to distinguish itself, rather than outright duplicate or merely name-drop.
+
+Ruby on Rails has been a great framework to learn and work with. It isn't the _last word_ on frameworks, and hopefully the glut of Rails-wannabes will cease. Let's take what we've learned and bring *new innovations* to the web framework space.
+
+## A Community, Not A Product
+
+One adjustment coming from products like ColdFusion is to recognize Ruby, and Rails, as open-source communities. Rather than complain about the _dreaded **wontfix** tickets,_ we can get involved by submitting and testing patches, and bringing them to the core teams' attention through the mailing list. Become a collaborator.
+
+> "Lua is not a product to be implemented. Lua is an invention that is constantly adapting and changing… at the whims of it's collaborators." - _Zed Shaw on the [Lua mailing list][26]_
+
+## Addendum
+
+Shortly after publishing this article, I was hit by something in Code Complete[^2](#2). It was about ***coding into*** a language/environment as opposed to simply *coding in.*
+
+Ruby on Rails ships with the mindset of putting your development on tracks,  giving helpful guidance to your web application development. Strict adherence to this mindset is very much *coding in*, where you work within the constraints of what is provided, and end up frustrated.
+
+My complaints are less Earth-shattering when I decide to *code into* the environment. Not limiting my solutions to the constraints, instead augmenting the environment with my own libraries and conventions as needed.
+
+## A Year Later
+
+This article was written more than a year ago, and quite a lot has changed or is changing in Rails. For learning, the documentation fund has produced several free [Rails Guides][railsguides]. For modularity, much of Rails Engines is incorporated into 2.3, and there is even talk of mountable Rails apps in the future. Time-stamped migrations came out in 2.1 to help resolve conflicts between multiple developers. And in David Heinemeier Hansson's  [RailsConf'09 keynote][rails3dhh], he discussed unobtrusive JavaScript in the forthcoming Rails 3.0, including the ability to use different JavaScript libraries. Yehuda Katz has shared how loose coupling will allow validations to be reused outside ActiveRecord, and the ability to use different <abbr title="object-relational mapper">ORMs</abbr> and non-relational databases.
+
+So it looks like by the time Rails 3 hits, the concerns I voiced will be addressed for the most part. There is also quite a bit of refactoring going on, which will hopefully make it easier to understand what goes on beneath the [abstractions][]. It's certainly worth keeping tabs on.
+
+
+
+
+[abstractions]: http://www.joelonsoftware.com/articles/LeakyAbstractions.html
+
+[railsguides]: http://guides.rubyonrails.org/
+
+[rails3dhh]: http://railsconf.blip.tv/file/2081411/
+
+
+
+[rails]: http://www.rubyonrails.com/
+[propaganda]: canada-on-rails
+[MVC]: http://aspiringcraftsman.com/2007/08/25/interactive-application-architecture/
+[merb]: http://merbivore.com/
+[screencasts]: http://www.rubyonrails.com/screencasts
+[ruby]: http://www.ruby-lang.org/en/
+[Prototype]: http://www.prototypejs.org
+
+[9]: http://www.pragprog.com/
+
+[11]: http://obiefernandez.com/
+
+[PeepCode]: https://peepcode.com/
+[RailsCasts]: http://railscasts.com/
+[i18n]: http://groups.google.com/group/rubyonrails-core/browse_thread/thread/18e2f6137aef639c?hl=en
+
+[17]: http://media.rubyonrails.org/presentations/worldofresources.pdf
+
+[18]: https://twitter.com/rentzsch
+
+[21]: http://wiseheartdesign.com/2006/12/6/rails-needs-something-better-than-engines/
+
+[croft]: http://jacobian.org/writing/db-journalism/
+
+[23]: http://datamapper.org
+
+[25]: http://www.ruby-forum.com/topic/144396
+
+[26]: http://lua-users.org/lists/lua-l/2007-12/msg00470.html
+
+[dj1]: http://code.djangoproject.com/wiki/VersionOneRoadmap
+
+<a name="1">^1</a> For more on model-view-controller and related patterns, see [Interactive Application Architecture Patterns][MVC].
+
+<a name="2">^2</a> Code Complete 2 by Steve McConnell, section 4.3 (pg 66-69).
