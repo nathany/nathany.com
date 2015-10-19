@@ -3,20 +3,19 @@ title = "Get ready, get set, Go"
 date = "2015-10-19"
 keywords = ["golang", "book", "Manning", "learn"]
 description = "An excerpt from Learn Go, available from Manning Publications."
-draft = true
 +++
 
 [Learn Go]: https://manning.com/books/learn-go?a_aid=nathany&a_bid=53f68821
 [playground]: https://play.golang.org
 [playground.go]: https://play.golang.org
-[mars.go]: https://play.golang.org
-[travel.go]: https://play.golang.org
-[rand.go]: https://play.golang.org
-[loop.go]: https://play.golang.org
-[if.go]: https://play.golang.org
-[switch.go]: https://play.golang.org
-[fmt.go]: https://play.golang.org
-[tickets.go]: https://play.golang.org
+[mars.go]: https://play.golang.org/p/NVt8w6GhPx
+[travel.go]: https://play.golang.org/p/WwaBM472vC
+[rand.go]: https://play.golang.org/p/EYbLe8uaqO
+[loop.go]: https://play.golang.org/p/Rvgb78U8D6
+[if.go]: https://play.golang.org/p/XUHfCMpb2S
+[switch.go]: https://play.golang.org/p/MPFnfrwNzj
+[fmt.go]: https://play.golang.org/p/v4n7eJGd2J
+[tickets.go]: https://play.golang.org/p/oluEimZNj0
 
 The following article is an excerpt from [Learn Go][], a book I am writing with Manning Publications. All illustrations are by [Olga Shalakhina](https://twitter.com/OlgaShalakhina), based on the Go gopher designed by [Ren&eacute;e French](https://twitter.com/reneefrench).
 
