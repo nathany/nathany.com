@@ -34,12 +34,12 @@ When you visit the Go Playground, you will see the following code, which is as g
 
 <a name="playground.go"></a>
 ```go
-package main //<1>
+package main // #1
 
-import "fmt" //<2>
+import "fmt" // #2
 
-func main() { //<3>
-    fmt.Println("Hello, playground") //<4>
+func main() { // #3
+    fmt.Println("Hello, playground") // #4
 }
 ```
 Listing 1. Hello, playground: [playground.go][]
@@ -86,17 +86,17 @@ The following program helped me calculate how young and light I would be if I li
 
 <a name="mars.go"></a>
 ```go
-// My weight loss program. //<1>
+// My weight loss program. // #1
 package main
 
 import "fmt"
 
-// main is the function where it all begins. //<1>
+// main is the function where it all begins. // #1
 func main() {
     fmt.Print("My weight on the surface of Mars is ")
-    fmt.Print(210.0 * 0.3783) //<2>
+    fmt.Print(210.0 * 0.3783) // #2
     fmt.Print(" lbs, and I would be ")
-    fmt.Print(38 * 365 / 687) //<3>
+    fmt.Print(38 * 365 / 687) // #3
     fmt.Print(" years old.")
 }
 ```
@@ -145,10 +145,10 @@ func main() {
     const lightSpeed = 299792 // km/s
     var distance = 56000000   // km
 
-    fmt.Println(distance/lightSpeed, "seconds") //<1>
+    fmt.Println(distance/lightSpeed, "seconds") // #1
 
     distance = 401000000
-    fmt.Println(distance/lightSpeed, "seconds") //<2>
+    fmt.Println(distance/lightSpeed, "seconds") // #2
 }
 ```
 
@@ -188,9 +188,9 @@ The `Intn` function in the `rand` package will generate a pseudo-random whole nu
 ```go
 package main
 
-import ( //<1>
+import ( // #1
     "fmt"
-    "math/rand" //<2>
+    "math/rand" // #2
 )
 
 func main() {
@@ -227,11 +227,11 @@ import (
 func main() {
     var count = 0
 
-    for count < 10 { //<1>
+    for count < 10 { // #1
         var num = rand.Intn(10) + 1
         fmt.Println(num)
 
-        count = count + 1 //<2>
+        count = count + 1 // #2
     }
 }
 ```
@@ -261,13 +261,13 @@ import (
 )
 
 func main() {
-    var num = rand.Intn(3) //<1>
+    var num = rand.Intn(3) // #1
 
-    if num == 0 { //<2>
+    if num == 0 { // #2
         fmt.Println("Space Adventures")
-    } else if num == 1 { //<3>
+    } else if num == 1 { // #3
         fmt.Println("SpaceX")
-    } else { //<4>
+    } else { // #4
         fmt.Println("Virgin Galactic")
     }
 }
@@ -342,8 +342,8 @@ fmt.Printf("weight %v, age %v\n", weight, age)
 Being able to substitute variables anywhere in a sentence is great, but `Printf` will even let you customize how values are displayed. The `%4v` verb pads the value to a width of 4 characters, useful for aligning text:
 
 ```go
-fmt.Printf("$%4v\n", 94)  //<1>
-fmt.Printf("$%4v\n", 100) //<2>
+fmt.Printf("$%4v\n", 94)  // #1
+fmt.Printf("$%4v\n", 100) // #2
 ```
 1. Print &nbsp;&nbsp;94
 2. Print 100
