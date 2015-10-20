@@ -161,7 +161,7 @@ The first calculation is based on Mars and Earth being nearby, with `distance` d
 
 The `lightSpeed` constant cannot be changed. If you try to assign it a new value, the Go compiler will report the error "cannot assign to lightSpeed".
 
-<i class="fa fa-lightbulb-o fa-2x fa-pull-left fa-border" title="Tip"></i> Variables must be declared before they are used. Go will report an error if you assign to a variable that hasn't been declared with `var`, for example `speed = 16`. This can help catch mistakes, like accidentally assigning a value to `distant` when you intend to use `distance`.
+<i class="fa fa-lightbulb-o fa-2x fa-pull-left fa-border" title="Tip"></i> Variables must be declared before they are used. Go will report an error if you assign to a variable that hasn't been declared with `var`, for example `speed = 16`. This can help catch mistakes, like accidentally assigning a value to `distence` when you intend to use `distance`.
 
 #### Experiment
 Type [Listing 3](#travel.go) into the Go Playground and click **[Run]**. Light speed is pretty convenient; I don't hear anyone asking "are we there yet?"
