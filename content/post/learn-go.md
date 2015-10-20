@@ -447,3 +447,4 @@ This article introduced to the structure of a basic Go program. From there you b
 [reddit](https://www.reddit.com/r/golang/comments/3pg6bg/get_ready_get_set_go/), [Lobsters](https://lobste.rs/s/1ingoe/get_ready_get_set_go), or the
 [Go Nuts mailing list](https://groups.google.com/d/msg/golang-nuts/HklI9ycFs3o/_PTtnxezCAAJ).*
 
+<i class="fa fa-credit-card fa-2x fa-pull-left fa-border" title="Note"></i> Deal of the Day October 20: Half off Learn Go, Go in Action, and Go Web Programming. Use code **dotd102015au** at [manning.com/books/learn-go](https://manning.com/books/learn-go?a_aid=nathany&a_bid=53f68821).
