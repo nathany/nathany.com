@@ -124,7 +124,7 @@ Before you make travel plans, use Go to find out a little more about life on Mar
 
     `fmt.Print("I am ", 38*365/687, " years old on Mars.")`
 
-    Modify [Listing 2](#mars.go) to display the same output with only one call to the `Print` function.
+    Modify [Listing 2](#mars.go) to display the same output with only a single `Print` function.
 
 
 <i class="fa fa-lightbulb-o fa-2x fa-pull-left fa-border" title="Tip"></i> After modifying your code, click the **[Format]** button in the Go Playground. It will automatically reformat the indentation and spacing of your code without changing what it does.
