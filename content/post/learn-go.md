@@ -22,10 +22,7 @@ The following article is an excerpt from [Learn Go][], a book I'm writing with M
 ## Introducing the Go Playground
 The quickest way to get started with Go is to navigate to [play.golang.org][playground]. The Go Playground enables you to edit, run, and experiment with Go without needing to install anything. When you click the **[Run]** button, the Playground will compile and execute your code on Google servers and display the result.
 
-<figure>
-    <img alt="The Go Playground" class="full" src="/images/playground.png">
-    <figcaption>The Go Playground</figcaption>
-</figure>
+<img alt="The Go Playground" class="full" src="/images/playground.png">
 
 The Go Playground does have some limitations. For example, the only way you can save your work is by clicking the **[Share]** button and keeping a list of bookmarks. Most gophers prefer to use a text editor and the command line running on their own computer, but you can become comfortable with Go with just your web browser.
 
