@@ -440,3 +440,10 @@ This article introduced to the structure of a basic Go program. From there you b
 * Used mathematical expressions to calculate ages, weights, durations, and fictional ticket prices.
 * Became familiar with Go's syntax for branching and repetition with `if`, `switch`, and `for`.
 * Used 11 Go keywords out of a total of 25: `package`, `import`, `func`, `const`, `var`, `for`, `if`, `else`, `switch`, `case`, and `default`.
+
+*Comment on
+[Go+](https://plus.google.com/+NathanYoungman/posts/6awZcB8Ey2v),
+[Hacker News](https://news.ycombinator.com/item?id=10417684),
+[reddit](https://www.reddit.com/r/golang/comments/3pg6bg/get_ready_get_set_go/), [Lobsters](https://lobste.rs/s/1ingoe/get_ready_get_set_go), or the
+[Go Nuts mailing list](https://groups.google.com/d/msg/golang-nuts/HklI9ycFs3o/_PTtnxezCAAJ).*
+
