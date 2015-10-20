@@ -2,7 +2,7 @@
 title = "Get ready, get set, Go"
 date = "2015-10-19"
 keywords = ["golang", "book", "Manning", "learn"]
-description = "An excerpt from Learn Go, a beginner's guide to Go, that I'm writing with Manning Publications."
+description = "An excerpt from Learn Go: a beginner's guide to Go."
 +++
 
 [Learn Go]: https://manning.com/books/learn-go?a_aid=nathany&a_bid=53f68821
