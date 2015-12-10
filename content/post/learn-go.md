@@ -433,13 +433,15 @@ Table 1. The distance from Earth to Mars
 
 ## Summary
 
-This article introduced to the structure of a basic Go program. From there you built up a spaceline ticket generator using the Go Playground with variables, pseudo-random numbers, loops and conditions. Along the way, you:
+This article introduced to the structure of a basic Go program. From there you built up a spaceline ticket generator using The Go Playground with variables, pseudo-random numbers, loops and conditions. Along the way, you:
 
 * Used the standard library to print text and numbers to the screen and to generate pseudo-random numbers.
 * Declared constants and variables and assigned new values to variables.
 * Used mathematical expressions to calculate ages, weights, durations, and fictional ticket prices.
 * Became familiar with Go's syntax for branching and repetition with `if`, `switch`, and `for`.
 * Used 11 Go keywords out of a total of 25: `package`, `import`, `func`, `const`, `var`, `for`, `if`, `else`, `switch`, `case`, and `default`.
+
+If you like this article, an early release of [Learn Go][] is available from Manning Publications. The coupon code **39youngman** will save you 39% on either the eBook or print/eBook combo. Using my affiliate link helps me out, please share it with your friends: [http://yng.mn/39youngman](http://yng.mn/39youngman).
 
 *Comment on
 [Go+](https://plus.google.com/+NathanYoungman/posts/6awZcB8Ey2v), [Golang News](http://golangnews.com/stories/330),
