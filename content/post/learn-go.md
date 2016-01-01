@@ -443,6 +443,8 @@ This article introduced to the structure of a basic Go program. From there you b
 
 If you like this article, an early release of [Learn Go][] is available from Manning Publications. The coupon code **39youngman** will save you 39% on either the eBook or print/eBook combo. Using my affiliate link helps me out, please share it with your friends: [http://yng.mn/39youngman](http://yng.mn/39youngman).
 
+You can follow the progress of Learn Go on [Twitter](https://twitter.com/learngolang) or [Facebook](https://www.facebook.com/learngolang/) and participate in the [Manning forums](https://forums.manning.com/forums/learn-go).
+
 *Comment on
 [Go+](https://plus.google.com/+NathanYoungman/posts/6awZcB8Ey2v), [Golang News](http://golangnews.com/stories/330),
 [Hacker News](https://news.ycombinator.com/item?id=10417684),
