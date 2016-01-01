@@ -1,7 +1,7 @@
 baseURL = "https://nathany.com"
 languageCode = "en-us"
 title = "Nathan Youngman"
-copyright = "2015 Nathan Youngman"
+copyright = "2016 Nathan Youngman"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
@@ -23,4 +23,3 @@ InspectletWid = "1094946129"
 
 FontAwesome = "Font Awesome by Dave Gandy"
 Portrait = "Portrait by Donna Santos"
-
