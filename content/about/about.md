@@ -3,9 +3,9 @@ title = "About Nathan"
 description = "A personal account of becoming a programmer."
 +++
 
-This is me. I work at [Jobber](https://getjobber.com/) as Lead Backend Developer, providing business management software for field service companies. Our web application is written in Ruby and runs on Rails 4. 
+This is me. I am currently freelancing while writing [Learn Go][learngo] with Manning Publications.
 
-Besides a programmer and a pedestrian, my interests include writing, photography, board games, cooking and linguistics. I also organize the [Edmonton Go](https://edmontongo.org/) meetup and co-organize [YEGRB](http://yegrb.com/).
+Besides a programmer, author and pedestrian, my interests include photography, board games, and cooking. I also organize the [Edmonton Go](https://edmontongo.org/) meetup.
 
 What follows is my personal account of becoming a programmer and what I'm excited for next.
 
@@ -25,7 +25,7 @@ My first computer was a Commodore 16 from a garage sale, tape drive and all! I w
 
 By junior high, our school upgraded the lab from Apple IIs to amber-screened XTs. Thankfully there was one computer with a colour screen, and our neighbours let me use their PC after school. Progressing from GW-BASIC to QBasic, I did remakes of *Star Traders* and *Atlantis.*
 
-In addition to lawn-mowing income, I earned money tutoring people on computers. When I had enough saved, I went to *Programmers Guild* to buy Turbo C 2.0. Unfortunately Turbo C wasn't the most approachable:
+In addition to lawn-mowing income, I earned money tutoring people on computers. When I had enough saved, I went to Programmers Guild to buy Turbo C 2.0. Unfortunately Turbo C wasn't the most approachable:
 
 * A simple syntax error would dump a dozen seemingly unrelated errors.
 * I found the IDE confusing, the keys reminded me of WordStar!
@@ -34,12 +34,12 @@ In addition to lawn-mowing income, I earned money tutoring people on computers. 
 
 While in Grade 9, my Mom helped me pay for a correspondence course from NRI (McGraw Hill). The three-year course covered computer programming in five languages and came with a 386 SX.
 
-Resolved in my future career path, I wrote a letter to 
+Resolved in my future career path, I wrote a letter to
 Nintendo and received a genuine response encouraging me in my studies to become a programmer.
 
 <img src="/images/firebirds.png" alt="Playing Atari Games" class="right">
 
-So, inspired by Galaga and other SHMUPs, my brother and I set out to make **Firebirds**. It had timing issues on faster computers and the "scrolling" and collision system were amateurish. While not exactly [Raptor](https://en.wikipedia.org/wiki/Raptor:_Call_of_the_Shadows), it was a complete game, with title screens, difficulty levels, 2-players, sound effects, and both mouse and keyboard control. We distributed it through local Bulletin Board Systems (BBS). 
+So, inspired by Galaga and other SHMUPs, my brother and I set out to make **Firebirds**. It had timing issues on faster computers and the "scrolling" and collision system were amateurish. While not exactly [Raptor](https://en.wikipedia.org/wiki/Raptor:_Call_of_the_Shadows), it was a complete game, with title screens, difficulty levels, 2-players, sound effects, and both mouse and keyboard control. We distributed it through local Bulletin Board Systems (BBS).
 
 My high school needed an application to do timed typing tests, so I wrote one. The first version of **Trial Type** was a DOS application written in QuickBasic. I registered **Lynx Software** as a sole proprietorship and licensed the software to a number of schools.
 
@@ -55,17 +55,17 @@ The Internet turned out to be quite useful. I was able to assemble a team of art
 
 ## Career
 
-At that time the web was still relatively new. I remember reading the HTML 2.0 specification, one of the few resources available to learn it. 
+At that time the web was still relatively new. I remember reading the HTML 2.0 specification, one of the few resources available to learn it.
 
 <img src="/images/hp.jpg" alt="HyperProcess" class="right">
 
 It wasn't long before I wrote a command-line tool to make HTML easier to work with. **HyperProcess** was a preprocessor for HTML. It supported file includes and other features, while also serving to lint and compress your HTML. Think static-site generator sans-Markdown.
 
-HyperProcess came in handy at my first web development job. At my next job, I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do "real programming." 
+HyperProcess came in handy at my first web development job. At my next job, I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do "real programming."
 
 I stuck to ColdFusion for eight years [across three jobs][resume]. Then *Ruby on Rails* came along, enticing me with its ORM and organized file layout. It didn't hurt that I have a certain fondness for trains (my Dad worked for CN Rail when I was young). Ruby became my primary language for the next eight years across [another three jobs][resume].
 
-By some bizarre coincidence, ColdFusion, Java, JavaScript, PHP, and Ruby were all released in 1995, the same year I graduated High School. Impeccable timing for the budding web developer. 
+By some bizarre coincidence, ColdFusion, Java, JavaScript, PHP, and Ruby were all released in 1995, the same year I graduated High School. Impeccable timing for the budding web developer.
 
 When I began this career, I didn't know the web would become this open platform for building apps, or that the SaaS model would become a predominate way to distribute software. I fell into web development, and I'm really glad I did!
 
@@ -75,14 +75,13 @@ Let's talk about the next generation of developers, programming languages, and s
 
 As I reminisce of the people and authors who got me to where I am, I think about the next generation of web developers. While I've taken to <mark>writing what I learn</mark> and mentor occasionally, there is so much more to do.
 
-These days HTML, CSS and JavaScript are compile targets for languages *like* [Haml][], [Sass][] and [CoffeeScript][]. What about server-side languages? After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my nextgen language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency and simplicity appeals to me. My open source involvement has increased, I want to help grow the available libraries and the community. Organizing the [Edmonton Go](https://edmontongo.org/) meetup is my contribution to the latter.
+These days HTML, CSS and JavaScript are compile targets for languages *like* [Haml][], [Sass][] and [TypeScript][]. What about server-side languages? After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my nextgen language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency and simplicity appeals to me. My open source involvement has increased. I want to help grow the [available](https://fsnotify.org/) [libraries](https://github.com/RobotsAndPencils/buford) and the [community](https://edmontongo.org/).
 
-I work at a startup. We deploy SaaS and deploy often. We have a simple sustainable model: monthly subscriptions. Despite all the activity in the native/mobile space, my focus remains on the web as a platform. <mark>"Embrace the document"</mark> resonates with me, while the Web Component future grabs for my attention.
-
-For that extra push in working on a *side-product*, I joined [JFDI](http://jfdi.bz/). We'll see what comes of it.
+Today I am writing [Learn Go][learngo], a beginner's guide to the Go programming language. If all goes well, I hope to follow up with another Go book and possibly a set of screencasts.
 
 [Haml]: http://haml.info/
 [Sass]: http://sass-lang.com/
-[CoffeeScript]: http://coffeescript.org/
+[TypeScript]: http://www.typescriptlang.org/
 
 [resume]: https://careers.stackoverflow.com/nathany
+[learngo]: http://yng.mn/learngolang
