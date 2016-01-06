@@ -3,6 +3,7 @@ title = "Practical Object-Oriented Design"
 date = "2013-01-10"
 description = "Sandi Metz' book on Object-Oriented Design is well worth the read."
 keywords = ["ruby", "OOD", "Object Oriented Design", "monolithic", "change", "abstract", "duck typing"]
+legacy = true
 +++
 
 Object-oriented programming is like a comfortable old hat. Classes, inheritance, polymorphism -- I learned all that 20 years ago -- with C++. What more is there to know about OO?

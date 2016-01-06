@@ -3,6 +3,7 @@ title = "Py on the Horizon"
 keywords = ["python", "user group", "Vancouver"]
 date = "2008-09-03"
 description = "Notes from Brett Cannon's talk on the changes in Python 2.6 and 3.0."
+legacy = true
 +++
 
 ## from __future__ import coder_who_says_py

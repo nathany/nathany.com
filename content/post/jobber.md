@@ -4,6 +4,7 @@ date = "2013-10-01"
 revised = "2013-11-13"
 keywords = ["SaaS", "startup", "Ruby", "Ruby on Rails", "assets", "Postgres", "JQuery Mobile", "Direct Upload"]
 description = "A year in review."
+legacy = true
 +++
 
 <figure data-tooltip="Photograph by Aaron Pedersen">
@@ -33,9 +34,9 @@ While I have been responsible for a lot of feature development, I'm going to foc
 
 We made [Unicorn][] our app server about 9 months ago. This required a lot of research to get the [configuration](https://gist.github.com/nathany/5058140) just right.
 
-Once our app is fully loaded, it uses about ~300MB of memory. We were an early adopter of Heroku's double dynos, which provide enough RAM to run 3 Unicorn workers per dyno (Unicorn uses a process model). If being able to handle 3 concurrent requests sounds pathetic, *it kinda is,* but there are two other factors to consider: 
+Once our app is fully loaded, it uses about ~300MB of memory. We were an early adopter of Heroku's double dynos, which provide enough RAM to run 3 Unicorn workers per dyno (Unicorn uses a process model). If being able to handle 3 concurrent requests sounds pathetic, *it kinda is,* but there are two other factors to consider:
 
-* The faster we can complete requests (in milliseconds), the more we can handle. 
+* The faster we can complete requests (in milliseconds), the more we can handle.
 * We can run as many dynos as we need, and we pay Heroku a lot of money to do just that.
 
 Overall Unicorn has been a good move. I mean, it's good enough for GitHub, right? Double dynos have been a life saver for two reasons:
@@ -137,11 +138,11 @@ Overall we're quite happy with the solution. For me, it was a nice chance to str
 
 ## Meant To Be
 
-So after pushing all this work to S3 or the database, what's left of Rails? 
+So after pushing all this work to S3 or the database, what's left of Rails?
 
 Quite a lot, actually. Our core Rails app [CLOCs][CLOC] in at 46,384 lines of Ruby, up from 33,267 when I started (this includes specs). We're certainly not using Ruby as "just a glue language".
 
-For all the headaches with memory footprints, slow performance, [SQL clobbering](https://github.com/blog/1440-today-s-email-incident), and the continual stream of security issues, would it make sense to use anything other than Rails? 
+For all the headaches with memory footprints, slow performance, [SQL clobbering](https://github.com/blog/1440-today-s-email-incident), and the continual stream of security issues, would it make sense to use anything other than Rails?
 
 When I run `bundle list` it reports 180 gems. We wrote a few of these, but the Ruby ecosystem is providing us with a lot of functionality for "free". I think it will be quite some time before [a newer language](http://golang.org/) has equivalent libraries to cover the same spectrum.
 

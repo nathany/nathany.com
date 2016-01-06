@@ -4,6 +4,7 @@ date = "2010-07-13"
 revised = "2012-12-17"
 description = "Ruby `@@class` *hierarchy* variables are unlike Java and Python."
 keywords = ["rubyquirks"]
+legacy = true
 +++
 
 While reading David Black's _[The Well Grounded Rubyist][black]_, I found that Ruby class `@@variables` are not really class variables at all! Apparently they are global to the class hierarchy. Changing a value in the subclass impacts the base classes. Generally speaking, globals and global-like things are _bad._

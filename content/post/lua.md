@@ -2,6 +2,7 @@
 title = "A Computer Scientist, a Mathematician, and an Engineer"
 date = "2007-11-10"
 description = "Thoughts on Lua and simplicity."
+legacy = true
 +++
 
 <small>_Crossposted from [lua nova](http://luanova.org/a-computer-scientist-a-mathematician-and-an-engineer/)._</small>

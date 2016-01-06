@@ -4,7 +4,7 @@
   <h1>Nathan's Articles</h1>
 
   <ul class="posts">
-      {{ range where .Data.Pages "Section" "post" }}
+      {{ range where (where .Data.Pages "Section" "post") ".Params.legacy" "!=" "true" }}
         <li>
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <p class="meta">

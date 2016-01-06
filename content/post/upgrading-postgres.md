@@ -2,6 +2,7 @@
 title = "Upgrading Postgres.app"
 date = "2012-12-21"
 description = "Migrating to Postgres 9.2 takes some command line acrobatics."
+legacy = true
 +++
 
 <figure data-tooltip="Photograph &copy; 2015 Nathan Youngman">
