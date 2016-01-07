@@ -84,4 +84,4 @@ Today I am writing [Learn Go][learngo], a beginner's guide to the Go programming
 [TypeScript]: http://www.typescriptlang.org/
 
 [resume]: https://careers.stackoverflow.com/nathany
-[learngo]: http://yng.mn/learngolang
+[learngo]: https://yng.mn/learngolang
