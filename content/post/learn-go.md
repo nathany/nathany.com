@@ -5,7 +5,7 @@ keywords = ["golang", "book", "Manning", "learn"]
 description = "An excerpt from Learn Go: a beginner's guide to Go."
 +++
 
-[Learn Go]: https://manning.com/books/learn-go?a_aid=nathany&a_bid=53f68821
+[Learn Go]: https://yng.mn/learngolang
 [playground]: https://play.golang.org
 [playground.go]: https://play.golang.org
 [mars.go]: https://play.golang.org/p/NVt8w6GhPx
