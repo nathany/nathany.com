@@ -163,7 +163,7 @@ The Go [specification][] is easy to digest. Mastery isn't beyond our reach.
 
 It's always good to learn and stretch your mind. Even if learning Go never [lands you a job](http://www.golangprojects.com/), you will gain new perspectives when using other languages. For example, learning Go interfaces may give you a new appreciation for duck types in Python and Ruby.
 
-I began learning Ruby on Rails over Christmas 2005, well before I could find any jobs using it. Ten years later I can safely say it was [a good investment](https://careers.stackoverflow.com/nathany).
+I began learning Ruby on Rails over Christmas 2005, well before I could find any jobs using it. Ten years later I can safely say it was [a good investment](https://stackoverflow.com/story/nathany).
 
 **Should I build my SaaS startup on Go?**
 

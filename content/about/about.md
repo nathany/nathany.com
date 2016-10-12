@@ -83,5 +83,5 @@ Today I am writing [Learn Go][learngo], a beginner's guide to the Go programming
 [Sass]: http://sass-lang.com/
 [TypeScript]: http://www.typescriptlang.org/
 
-[resume]: https://careers.stackoverflow.com/nathany
+[resume]: https://stackoverflow.com/story/nathany
 [learngo]: https://yng.mn/learngolang
