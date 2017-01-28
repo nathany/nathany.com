@@ -18,7 +18,5 @@ about = "/:filename/"
 [Params]
 HistoryURL = "https://github.com/nathany/nathany.com/commits/master/content/"
 
-GaugesId = "50242f6af5a1f50568000011"
-
 FontAwesome = "Font Awesome by Dave Gandy"
 Portrait = "Portrait by Donna Santos"
