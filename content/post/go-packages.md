@@ -148,6 +148,8 @@ Related Articles:
 * [100% Reproducible Builds in Go](https://vividcortex.com/blog/2013/09/10/100-reproducible-builds-in-go/) (with Johnny Deps) by Baron Schwartz
 * [Dependency Hell](http://areyoufuckingcoding.me/2012/04/16/dpendency-hell/) by Chris Kowalik
 * [A journey in golang package manager](http://dev.af83.com/2013/09/14/a-journey-in-golang-package-manager.html) by Bruno Michel
+* [The Saga of Go Dependency Management](https://blog.gopheracademy.com/advent-2016/saga-go-dependency-management/) by Sam Boyer
+* [Go dependency tool](https://github.com/golang/dep)
 
 [subtree merging]: http://git-scm.com/book/en/Git-Tools-Subtree-Merging
 [tools]: https://code.google.com/p/go-wiki/wiki/PackageManagementTools
