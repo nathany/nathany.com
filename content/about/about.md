@@ -3,7 +3,7 @@ title = "About Nathan"
 description = "A personal account of becoming a programmer."
 +++
 
-This is me. I am currently freelancing while writing [Learn Go][learngo] with Manning Publications.
+This is me. I am currently freelancing while writing [Get Programming with Go][programminggo] with Manning Publications.
 
 Besides a programmer, author and pedestrian, my interests include photography, board games, and cooking. I also organize the [Edmonton Go](https://edmontongo.org/) meetup.
 
@@ -77,11 +77,11 @@ As I reminisce of the people and authors who got me to where I am, I think about
 
 These days HTML, CSS and JavaScript are compile targets for languages *like* [Haml][], [Sass][] and [TypeScript][]. What about server-side languages? After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my nextgen language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency and simplicity appeals to me. My open source involvement has increased. I want to help grow the [available](https://fsnotify.org/) [libraries](https://github.com/RobotsAndPencils/buford) and the [community](https://edmontongo.org/).
 
-Today I am writing [Learn Go][learngo], a beginner's guide to the Go programming language. If all goes well, I hope to follow up with another Go book and possibly a set of screencasts.
+Today I am writing [Get Programming with Go][programminggo], a beginner's guide to the Go programming language. If all goes well, I hope to follow up with another Go book and possibly a set of screencasts.
 
 [Haml]: http://haml.info/
 [Sass]: http://sass-lang.com/
 [TypeScript]: http://www.typescriptlang.org/
 
 [resume]: https://stackoverflow.com/story/nathany
-[learngo]: https://yng.mn/learngolang
+[programminggo]: https://yng.mn/programminggo

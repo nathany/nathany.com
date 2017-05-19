@@ -3,6 +3,7 @@ title = "Get ready, get set, Go"
 date = "2015-10-19"
 keywords = ["golang", "book", "Manning", "learn"]
 description = "An excerpt from Learn Go: a beginner's guide to Go."
+legacy = true
 +++
 
 [Learn Go]: https://yng.mn/learngolang
