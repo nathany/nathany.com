@@ -5,7 +5,9 @@ copyright = "2018 Nathan Youngman"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
-rssURI = "articles.xml"
+
+[outputFormats.RSS]
+baseName = "articles"
 
 [author]
 name = "Nathan Youngman"
