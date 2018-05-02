@@ -3,9 +3,9 @@ title = "About Nathan"
 description = "A personal account of becoming a programmer."
 +++
 
-This is me. I am currently freelancing while writing [Get Programming with Go][programminggo] with Manning Publications.
+This is me. Right now I'm a part-time employee of a small consulting company while writing [Get Programming with Go][programminggo] with Manning Publications.
 
-Besides a programmer, author and pedestrian, my interests include photography, board games, and cooking. I also organize the [Edmonton Go](https://edmontongo.org/) meetup.
+Besides a programmer, author and pedestrian, my interests include photography, board games, and cooking healthy plant-based meals. I also organize the [Edmonton Go](https://edmontongo.org/) meetup.
 
 What follows is my personal account of becoming a programmer and what I'm excited for next.
 
@@ -13,9 +13,9 @@ What follows is my personal account of becoming a programmer and what I'm excite
 
 <img src="/images/atari.jpg" alt="Playing Atari Games" class="right">
 
-I grew up on Lego, Dr. Seuss and Berenstain Bears in an Albertan village. After my parents divorced, an Atari Computer found its way into our home. As far as I knew, its sole purpose was to play video games.
+I grew up on Lego, Dr. Seuss, and Berenstain Bears in an Albertan village. After my parents divorced, an Atari Computer found its way into our home. As far as I knew, its sole purpose was to play video games.
 
-Then one day the school library held a book fair where I found a colourful book filled with short BASIC programs (probably published by Usborne).
+Then one day the school library held a book fair where I found a colourful book filled with short BASIC programs (likely published by Usborne).
 
 My Dad saw my interest and gave me a coil-bound book to *really* learn BASIC. I got to use his [Kaypro](https://en.wikipedia.org/wiki/Kaypro) IV on the weekends. It came with BASIC and several games, including text adventures like *Colossal Cave* and *Hitchhiker's Guide to the Galaxy*.
 
@@ -23,16 +23,16 @@ My first computer was a Commodore 16 from a garage sale, tape drive and all! I w
 
 ## Teens
 
-By junior high, our school upgraded the lab from Apple IIs to amber-screened XTs. Thankfully there was one computer with a colour screen, and our neighbours let me use their PC after school. Progressing from GW-BASIC to QBasic, I did remakes of *Star Traders* and *Atlantis.*
+By junior high, our school upgraded the lab from Apple IIs to amber-screened XTs. Thankfully there was one computer with a colour screen, plus our neighbours let me use their PC after school. Progressing from GW-BASIC to QBasic, I did remakes of *Star Traders* and *Atlantis.*
 
-In addition to lawn-mowing income, I earned money tutoring people on computers. When I had enough saved, I went to Programmers Guild to buy Turbo C 2.0. Unfortunately Turbo C wasn't the most approachable:
+In addition to lawn-mowing income, I earned money tutoring people with computers. When I had enough saved, I went to Programmers Guild to buy Turbo C 2.0. Unfortunately Turbo C wasn't the most approachable:
 
 * A simple syntax error would dump a dozen seemingly unrelated errors.
 * I found the IDE confusing, the keys reminded me of WordStar!
 
 [QuickBASIC](https://en.wikipedia.org/wiki/Quickbasic) 4.5 turned out to be a much better investment.
 
-While in Grade 9, my Mom helped me pay for a correspondence course from NRI (McGraw Hill). The three-year course covered computer programming in five languages and came with a 386 SX.
+While in Grade 9, my Mom helped me pay for a correspondence course from NRI (McGraw-Hill Education). The three-year course covered computer programming in five languages and came with a 386 SX.
 
 Resolved in my future career path, I wrote a letter to
 Nintendo and received a genuine response encouraging me in my studies to become a programmer.
@@ -61,7 +61,7 @@ At that time the web was still relatively new. I remember reading the HTML 2.0 s
 
 It wasn't long before I wrote a command-line tool to make HTML easier to work with. **HyperProcess** was a preprocessor for HTML. It supported file includes and other features, while also serving to lint and compress your HTML. Think static-site generator sans-Markdown.
 
-HyperProcess came in handy at my first web development job. At my next job, I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do "real programming."
+HyperProcess came in handy at my first web development job, but at my next job I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do "real programming."
 
 I stuck to ColdFusion for eight years [across three jobs][resume]. Then *Ruby on Rails* came along, enticing me with its ORM and organized file layout. It didn't hurt that I have a certain fondness for trains (my Dad worked for CN Rail when I was young). Ruby became my primary language for the next eight years across [another three jobs][resume].
 
@@ -75,13 +75,12 @@ Let's talk about the next generation of developers, programming languages, and s
 
 As I reminisce of the people and authors who got me to where I am, I think about the next generation of web developers. While I've taken to <mark>writing what I learn</mark> and mentor occasionally, there is so much more to do.
 
-These days HTML, CSS and JavaScript are compile targets for languages *like* [Haml][], [Sass][] and [TypeScript][]. What about server-side languages? After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my nextgen language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency and simplicity appeals to me. My open source involvement has increased. I want to help grow the [available](https://fsnotify.org/) [libraries](https://github.com/RobotsAndPencils/buford) and the [community](https://edmontongo.org/).
+These days CSS and JavaScript are compile targets for languages *like* [Sass][] and [TypeScript][]. What about server-side languages? After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my nextgen language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency and simplicity appeals to me. My open source involvement has increased. I want to help grow the [available](https://fsnotify.org/) [libraries](https://github.com/RobotsAndPencils/buford) and the [community](https://edmontongo.org/).
 
 Today I am writing [Get Programming with Go][programminggo], a beginner's guide to the Go programming language. If all goes well, I hope to follow up with another Go book and possibly a set of screencasts.
 
-[Haml]: http://haml.info/
-[Sass]: http://sass-lang.com/
-[TypeScript]: http://www.typescriptlang.org/
+[Sass]: https://sass-lang.com/
+[TypeScript]: https://www.typescriptlang.org/
 
 [resume]: https://stackoverflow.com/story/nathany
 [programminggo]: https://yng.mn/programminggo
