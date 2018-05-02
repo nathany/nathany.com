@@ -5,7 +5,7 @@ description = "A personal account of becoming a programmer."
 
 This is me. Right now I'm a part-time employee of a small consulting company while writing [Get Programming with Go][programminggo] with Manning Publications.
 
-Besides a programmer, author and pedestrian, my interests include photography, board games, and cooking healthy plant-based meals. I also organize the [Edmonton Go](https://edmontongo.org/) meetup.
+Besides a programmer, author, and pedestrian, my interests include photography, board games, and cooking healthy plant-based meals. I also organize the [Edmonton Go](https://edmontongo.org/) meetup.
 
 What follows is my personal account of becoming a programmer and what I'm excited for next.
 
@@ -75,7 +75,7 @@ Let's talk about the next generation of developers, programming languages, and s
 
 As I reminisce of the people and authors who got me to where I am, I think about the next generation of web developers. While I've taken to <mark>writing what I learn</mark> and mentor occasionally, there is so much more to do.
 
-These days CSS and JavaScript are compile targets for languages *like* [Sass][] and [TypeScript][]. What about server-side languages? After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my nextgen language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency and simplicity appeals to me. My open source involvement has increased. I want to help grow the [available](https://fsnotify.org/) [libraries](https://github.com/RobotsAndPencils/buford) and the [community](https://edmontongo.org/).
+These days CSS and JavaScript are compile targets for languages *like* [Sass][] and [TypeScript][]. What about server-side languages? After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my nextgen language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency, and simplicity appeals to me. My open source involvement has increased. I want to help grow the [available](https://fsnotify.org/) [libraries](https://github.com/RobotsAndPencils/buford) and the [community](https://edmontongo.org/).
 
 Today I am writing [Get Programming with Go][programminggo], a beginner's guide to the Go programming language. If all goes well, I hope to follow up with another Go book and possibly a set of screencasts.
 
