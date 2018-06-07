@@ -8,4 +8,4 @@ This is my blog.
 * [gohugo.io](https://gohugo.io/)
 * Sassc + Bourbon + Neat
 
-Content is &copy; 2006-2017, Nathan Youngman.
+Content is &copy; 2006-2018, Nathan Youngman.
