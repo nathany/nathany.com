@@ -3,4 +3,4 @@
 .sass-cache
 
 public
-static/all.css
+resources/_gen
