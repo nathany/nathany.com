@@ -8,8 +8,9 @@
 				"public",
 				"_archive",
 				"_scratch",
-				"sass/bourbon",
-				"sass/neat"
+				"assets/sass/bourbon",
+				"assets/sass/neat",
+				"resources"
 			],
 			"file_exclude_patterns":
 			[
