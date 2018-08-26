@@ -83,4 +83,4 @@ Today I am writing [Get Programming with Go][programminggo], a beginner's guide 
 [TypeScript]: https://www.typescriptlang.org/
 
 [resume]: https://stackoverflow.com/story/nathany
-[programminggo]: https://yng.mn/programminggo
+[programminggo]: https://programminggo.com
