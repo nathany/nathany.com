@@ -3,9 +3,11 @@ title = "About Nathan"
 description = "A personal account of becoming a programmer."
 +++
 
-This is me. Right now I'm a part-time employee of a small consulting company while writing [Get Programming with Go][programminggo] with Manning Publications.
+This is me. Right now I serve as a part-time employee at a [small consulting company](https://agileanimal.com), doing front-end and back-end web development for a variety of clients. I am the primary author of [Get Programming with Go][programminggo], which was published in 2018.
 
-Besides a programmer, author, and pedestrian, my interests include photography, board games, and cooking healthy plant-based meals. I also organize the [Edmonton Go](https://edmontongo.org/) meetup.
+January 2014 marks the first [Edmonton Go](https://edmontongo.org/) meetup, which I continue to organize today. I occasionally volunteer as a mentor with [Canada Learning Code](https://canadalearningcode.ca) and I am responsible for maintaining several [open source projects](https://github.com/nathany).
+
+Outside of my career, the characteristics that define me are that of a Christ-follower, [plant-eater](https://www.instagram.com/planet_eater/), and pedestrian. Hobbies include photography, board games, cooking, and nature walks.
 
 What follows is my personal account of becoming a programmer and what I'm excited for next.
 
@@ -13,17 +15,17 @@ What follows is my personal account of becoming a programmer and what I'm excite
 
 <img src="/images/atari.jpg" alt="Playing Atari Games" class="right">
 
-I grew up on Lego, Dr. Seuss, and Berenstain Bears in an Albertan village. After my parents divorced, an Atari Computer found its way into our home. As far as I knew, its sole purpose was to play video games.
+I grew up on Lego, Dr. Seuss, and Berenstain Bears in an Alberta village. After my parents divorced, an Atari Computer found its way into our home. As far as I knew, its sole purpose was to play video games.
 
 Then one day the school library held a book fair where I found a colourful book filled with short BASIC programs (likely published by Usborne).
 
-My Dad saw my interest and gave me a coil-bound book to *really* learn BASIC. I got to use his [Kaypro](https://en.wikipedia.org/wiki/Kaypro) IV on the weekends. It came with BASIC and several games, including text adventures like *Colossal Cave* and *Hitchhiker's Guide to the Galaxy*.
+When my Dad saw my interest, he gave me a coil-bound manual to *really* learn BASIC. I got to use his [Kaypro](https://en.wikipedia.org/wiki/Kaypro) IV on the weekends. It came with BASIC and several games, including text adventures like *Colossal Cave* and *Hitchhiker's Guide to the Galaxy*.
 
 My first computer was a Commodore 16 from a garage sale, tape drive and all! I wrote a historic text adventure where your character wandered Israel in search of Jesus. It wasn't necessarily sophisticated or well-researched, but one of my first computer projects.
 
 ## Teens
 
-By junior high, our school upgraded the lab from Apple IIs to amber-screened XTs. Thankfully there was one computer with a colour screen, plus our neighbours let me use their PC after school. Progressing from GW-BASIC to QBasic, I did remakes of *Star Traders* and *Atlantis.*
+By junior high, our school upgraded the lab from Apple IIs to amber-screened XTs. Thankfully there was one computer with a colour screen, plus our neighbours let me use their PC after school. Progressing from GW-BASIC to QBasic, I wrote remakes of *Star Traders* and *Atlantis.*
 
 In addition to lawn-mowing income, I earned money tutoring people with computers. When I had enough saved, I went to Programmers Guild to buy Turbo C 2.0. Unfortunately Turbo C wasn't the most approachable:
 
@@ -59,15 +61,15 @@ At that time the web was still relatively new. I remember reading the HTML 2.0 s
 
 <img src="/images/hp.jpg" alt="HyperProcess" class="right">
 
-It wasn't long before I wrote a command-line tool to make HTML easier to work with. **HyperProcess** was a preprocessor for HTML. It supported file includes and other features, while also serving to lint and compress your HTML. Think static-site generator sans-Markdown.
+It wasn't long before I wrote a command-line tool to make HTML easier to work with. **HyperProcess** was a preprocessor for HTML. It supported file includes and other features, while also serving to lint and compress my HTML. Think static-site generator sans-Markdown.
 
 HyperProcess came in handy at my first web development job, but at my next job I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do "real programming."
 
-I stuck to ColdFusion for eight years [across three jobs][resume]. Then *Ruby on Rails* came along, enticing me with its ORM and organized file layout. It didn't hurt that I have a certain fondness for trains (my Dad worked for CN Rail when I was young). Ruby became my primary language for the next eight years across [another three jobs][resume].
+I stuck to ColdFusion for eight years [across three jobs][resume]. Then *Ruby on Rails* came along, enticing me with its <abbr title="Object-Relational Mapper">ORM</abbr> and organized file layout. It didn't hurt that I have a certain fondness for trains (my Dad worked for CN Rail when I was young). Ruby became my primary language for the next eight years across [another three jobs][resume].
 
 By some bizarre coincidence, ColdFusion, Java, JavaScript, PHP, and Ruby were all released in 1995, the same year I graduated High School. Impeccable timing for the budding web developer.
 
-When I began this career, I didn't know the web would become this open platform for building apps, or that the SaaS model would become a predominate way to distribute software. I fell into web development, and I'm really glad I did!
+When I began this career, I didn't know the web would become this open platform for building apps, or that the <abbr title="Software as a Service">SaaS</abbr> model would become a predominate way to distribute software. I fell into web development, and I'm really glad I did!
 
 ## Next
 
@@ -75,9 +77,9 @@ Let's talk about the next generation of developers, programming languages, and s
 
 As I reminisce of the people and authors who got me to where I am, I think about the next generation of web developers. While I've taken to <mark>writing what I learn</mark> and mentor occasionally, there is so much more to do.
 
-These days CSS and JavaScript are compile targets for languages *like* [Sass][] and [TypeScript][]. What about server-side languages? After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my nextgen language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency, and simplicity appeals to me. My open source involvement has increased. I want to help grow the [available](https://fsnotify.org/) [libraries](https://github.com/RobotsAndPencils/buford) and the [community](https://edmontongo.org/).
+JavaScript and <abbr title="Cascading Style Sheets">CSS</abbr> rule the front-end, alongside derivatives like [TypeScript][] and [Sass][]. There are many more options on the server-side. After evaluating several languages and paradigms, I settled on [Go](https://golang.org/) as my back-end language of choice. The emphasis on [productivity](https://talks.golang.org/2012/splash.article), efficiency, and simplicity appeals to me. My open source involvement has increased. I want to help grow the [available](https://fsnotify.org/) [libraries](https://github.com/RobotsAndPencils/buford) and the [community](https://edmontongo.org/).
 
-Today I am writing [Get Programming with Go][programminggo], a beginner's guide to the Go programming language. If all goes well, I hope to follow up with another Go book and possibly a set of screencasts.
+[Get Programming with Go][programminggo] is my first technical book, a beginner's guide to the Go programming language, focused on the language itself. I'm not finished yet. Through writing, volunteering, and other efforts, I intend to empower the next generation of developers.
 
 [Sass]: https://sass-lang.com/
 [TypeScript]: https://www.typescriptlang.org/
