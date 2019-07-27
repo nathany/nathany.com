@@ -177,9 +177,9 @@ Not really. I recommend learning the standard library and [Gorilla Web Toolkit][
 
 If you must have a full stack web application framework, [Revel][] is as close as it gets.
 
-[gorilla]: http://www.gorillatoolkit.org/
-[tutorial]: http://shadynasty.biz/
-[Revel]: http://robfig.github.io/revel/
+[gorilla]: https://www.gorillatoolkit.org/
+[tutorial]: https://web.archive.org/web/20120804000251/http://shadynasty.biz/blog/2012/07/30/quick-and-clean-in-go/
+[Revel]: https://revel.github.io/
 
 **This all sounds great, but where can I find a second opinion?**
 
