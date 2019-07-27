@@ -446,8 +446,7 @@ If you like this article, an early release of [Learn Go][] is available from Man
 
 You can follow the progress of Learn Go on [Twitter](https://twitter.com/learngolang) or [Facebook](https://www.facebook.com/learngolang/) and participate in the [Manning forums](https://forums.manning.com/forums/learn-go).
 
-*Comment on
-[Go+](https://plus.google.com/+NathanYoungman/posts/6awZcB8Ey2v), [Golang News](http://golangnews.com/stories/330),
+*Comment on [Golang News](http://golangnews.com/stories/330),
 [Hacker News](https://news.ycombinator.com/item?id=10417684),
 [reddit](https://www.reddit.com/r/golang/comments/3pg6bg/get_ready_get_set_go/), [Lobsters](https://lobste.rs/s/1ingoe/get_ready_get_set_go), or the
 [Go Nuts mailing list](https://groups.google.com/d/msg/golang-nuts/HklI9ycFs3o/_PTtnxezCAAJ).*

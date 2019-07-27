@@ -28,7 +28,7 @@ Resources:
 
 The simplicity of the go tool does come with its trade-offs.
 
-> "I want to have reproducible builds on different computers at different times.  This is currently problematic; let's make things better." - David Hinkes, [Go+](https://plus.google.com/u/0/115983116618286597159/posts/gczN5SQ94ek) 
+> "I want to have reproducible builds on different computers at different times.  This is currently problematic; let's make things better." - David Hinkes
 
 `Go get` does not have an explicit concept of versions. Members of a team may be importing different revisions *(version skew)*. Dependencies may introduce incompatibilities or security vulnerabilities, or even change licenses or disappear. For these reasons, it's desirable to have more control over the upgrade process when building a real-world application.
 

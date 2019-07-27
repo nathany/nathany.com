@@ -239,13 +239,13 @@ Composition, embedding and interfaces provide powerful tools for Object-Oriented
 
 While Idiomatic Go requires a change in thinking, I am pleasantly surprised with how simple and concise Go code can be when playing to its strengths.
 
-*Comment on [Go+][], [Hacker News][HN2], [reddit][], [LinkedIn][], or the [Go Nuts mailing list][gonuts].*
+*Comment on [Hacker News][HN2], [reddit][], [LinkedIn][], or the [Go Nuts mailing list][gonuts].*
 
-> "So few people realize that classes and inheritance are mostly historic accidents and not real needs for good OOD." - Javier Guerra via Go+
+> "So few people realize that classes and inheritance are mostly historic accidents and not real needs for good OOD." - Javier Guerra
 
-> "This is excellent stuff. It helps who looks for correspondences at least to get started. Some people will inevitably look for OO analogies when learning Go (like I did!), but the official docs avoid them like the plague." - Rodrigo Moraes via Go+
+> "This is excellent stuff. It helps who looks for correspondences at least to get started. Some people will inevitably look for OO analogies when learning Go (like I did!), but the official docs avoid them like the plague." - Rodrigo Moraes
 
-> "Seconding +Rodrigo Moraes here, excellent stuff. I think this would have accelerated my own learning curve, where I've kept looking for classical OO approaches. Thanks for the writeup." - Levi Cook via Go+ and [Twitter](https://twitter.com/levicook/status/291238998867861504)
+> "Seconding +Rodrigo Moraes here, excellent stuff. I think this would have accelerated my own learning curve, where I've kept looking for classical OO approaches. Thanks for the writeup." - Levi Cook via [Twitter](https://twitter.com/levicook/status/291238998867861504)
 
 > "Great article, really enjoyed it! Well structured and example code seems to be good. Will be going over this again tomorrow and adding some of the tricks I wasn't aware of to my toolbox." - codygman via [HN][]
 
@@ -271,7 +271,6 @@ Related:
 
 
 [LinkedIn]: http://lnkd.in/mxNfUb
-[Go+]: https://plus.google.com/104313268939103200754/posts/Q59rppGdyUR
 [HN]: http://news.ycombinator.com/item?id=5058678
 [HN2]: https://news.ycombinator.com/item?id=6392545
 [reddit]: http://www.reddit.com/r/golang/comments/16lli8/go_object_oriented_design/

@@ -185,10 +185,8 @@ If you must have a full stack web application framework, [Revel][] is as close a
 
 Erik Unger has compiled a list of articles that make [The Case For Go][case].
 
-*Comment on [Go+][], [Hacker News][HN], [reddit][], or [LinkedIn][].*
+*Comment on [Hacker News][HN], [reddit][], or [LinkedIn][].*
 
-
-[Go+]: https://plus.google.com/u/0/104313268939103200754/posts/TT41f84SBqW
 [reddit]: http://www.reddit.com/r/golang/comments/1eapil/go_will_be_the_server_language_of_the_future/
 [HN]: https://news.ycombinator.com/item?id=5703097
 [LinkedIn]: http://www.linkedin.com/groups/Go-will-be-server-language-3712244.S.240593516

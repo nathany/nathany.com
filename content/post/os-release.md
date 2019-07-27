@@ -183,7 +183,7 @@ When this article was first published, I included a survey, to help establish so
 
 Hopefully some tools will appear that can rely on these conventions, and I'm currently investigating a [badge](http://b.repl.ca/) to help encourage adoption.
 
-Comment on [Go+](https://plus.google.com/104313268939103200754/posts/Ca9S8UjSfLU),
+Comment on 
 [reddit](http://www.reddit.com/r/golang/comments/1lgy4p/releasing_open_source_for_humans_and_for_tooling/), or the
 [Go Nuts mailing list](https://groups.google.com/forum/#!topic/golang-nuts/FyXLZNPH7_U).
 
