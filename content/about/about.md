@@ -7,7 +7,7 @@ This is me. Right now I serve as a part-time employee at a [small consulting com
 
 January 2014 marks the first [Edmonton Go](https://edmontongo.org/) meetup, which I continue to organize today. I occasionally volunteer as a mentor with [Canada Learning Code](https://canadalearningcode.ca) and I am responsible for maintaining several [open source projects](https://github.com/nathany).
 
-Outside of my career, the characteristics that define me are that of a Christ-follower, [plant-eater](https://www.instagram.com/planet_eater/), and pedestrian. Hobbies include photography, board games, cooking, and nature walks.
+Outside of my career, the characteristics that define me are that of a Christ-follower, [plant-eater](https://www.instagram.com/planet.nathany/), and pedestrian. Hobbies include photography, board games, cooking, and nature walks.
 
 What follows is my personal account of becoming a programmer and what I'm excited for next.
 
