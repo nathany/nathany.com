@@ -85,4 +85,4 @@ JavaScript and <abbr title="Cascading Style Sheets">CSS</abbr> rule the front-en
 [TypeScript]: https://www.typescriptlang.org/
 
 [resume]: https://stackoverflow.com/story/nathany
-[programminggo]: https://programminggo.com
+[programminggo]: https://www.manning.com/books/get-programming-with-go?utm_source=nathany&utm_medium=affiliate&utm_campaign=book_youngman_get_9_17_18&a_aid=nathany&a_bid=53f68821
