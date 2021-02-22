@@ -16,9 +16,6 @@ name = "Nathan Youngman"
 post = "/:filename/"
 about = "/:filename/"
 
-[Params]
-HistoryURL = "https://github.com/nathany/nathany.com/commits/master/content/"
-
 [deployment]
 order = [".png$", ".jpg$", ".gif$", ".svg$"]
 

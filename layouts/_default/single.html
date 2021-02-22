@@ -10,7 +10,7 @@
       <p>
         {{ if .Params.revised }}
           First published on {{ .Date.Format "2 Jan 2006" }},
-          <a href="{{ .Site.Params.HistoryURL }}{{ .Path }}">last revised</a>
+          last revised
           {{ .Params.revised | dateFormat "2 Jan 2006" }}.
         {{ else }}
           Published on {{ .Date.Format "2 Jan 2006" }}.
