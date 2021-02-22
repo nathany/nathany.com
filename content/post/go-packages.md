@@ -4,6 +4,7 @@ date = "2013-07-25"
 revised = "2014-04-17"
 keywords = ["golang", "packages", "dependencies"]
 description = "A summary of dependency management in Go."
+legacy = true
 +++
 
 <figure data-tooltip="Photograph &copy; 2015 Nathan Youngman" data-tooltip2="Go gopher designed by Ren&eacute;e French">
