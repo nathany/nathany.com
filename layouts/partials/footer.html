@@ -3,14 +3,14 @@
   <footer>
 
     <p>
-      <span class="copyright" data-tooltip="&copy; {{ .Site.Copyright }}">&copy; 2021</span>
+      <span class="copyright" data-tooltip="&copy; {{ .Site.Copyright }}">&copy; 2022</span>
       <!-- {{ .Site.LastChange.Format "2006" }} -->
 
       <a href="/" class="articles">&#8679;</a>
 
       <span class="right-icons">
-        {{ if .RSSLink }}
-          <a href="{{ .RSSLink }}"  type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
+        {{ with .OutputFormats.Get "RSS" }}
+          <a href="{{ .Permalink }}"  type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
         {{ end }}
       </span>
     </p>

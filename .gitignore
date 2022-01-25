@@ -1,6 +1,7 @@
 .DS_Store
 *.sublime-workspace
 .sass-cache
+.hugo_build.lock
 
 public
 resources/_gen
