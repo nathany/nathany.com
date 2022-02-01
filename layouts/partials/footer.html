@@ -1,12 +1,10 @@
-  </div> <!-- end page -->
-
   <footer>
 
     <p>
-      <span class="copyright" data-tooltip="&copy; {{ .Site.Copyright }}">&copy; 2022</span>
+      <span class="copyright" data-tooltip="Copyright &copy; {{ .Site.Copyright }}">&copy; 2022</span>
       <!-- {{ .Site.LastChange.Format "2006" }} -->
 
-      <a href="/" class="articles">&#8679;</a>
+      <a href="/" class="articles">&#8679; Articles</a>
 
       <span class="right-icons">
         {{ with .OutputFormats.Get "RSS" }}
@@ -16,6 +14,8 @@
     </p>
 
   </footer>
+
+</div> <!-- end page -->
 
 </body>
 </html>
