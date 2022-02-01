@@ -1,20 +1,20 @@
 +++
-title = "Practical Object-Oriented Design"
+title = "📕 Practical Object-Oriented Design"
 date = "2013-01-10"
-description = "Sandi Metz' book on Object-Oriented Design is well worth the read."
-keywords = ["ruby", "OOD", "Object Oriented Design", "monolithic", "change", "abstract", "duck typing"]
-legacy = true
+revised = "2022-01-31"
+description = "Sandi Metz wrote a book on Object-Oriented Design. It is well worth the read."
+keywords = ["ruby", "book review", "Object Oriented Design", "monolithic", "change", "abstract", "duck typing"]
 +++
 
 Object-oriented programming is like a comfortable old hat. Classes, inheritance, polymorphism -- I learned all that 20 years ago -- with C++. What more is there to know about OO?
 
 As it turns out, **quite a lot.**
 
-<cite>[Practical Object-Oriented Design in Ruby][poodr]</cite> is a <mark>must read</mark> for any Rubyist. My copy is full of highlights, but I'll focus on a few take aways.
+<cite>[Practical Object-Oriented Design][poodr]</cite> is a <mark>must read</mark> for any Rubyist. My copy is full of highlights, but I'll focus on a few key takeaways.
 
 ## Change
 
-Who hasn't experienced the big "monolihtic" app? A *seemingly* small change causes ripples throughout the code base. The tests are broken more often than they are helpful. We tell the customer that "it wasn't designed to support that." Productivity and moral are down. What's the solution?
+Who hasn't experienced the big "monolithic" app? A *seemingly* small change causes ripples throughout the code base. The tests are broken more often than they are helpful. We tell the customer that "it wasn't designed to support that." Productivity and moral are down. What's the solution?
 
 In software, **change is inevitable.** We can't predict *how* it will change, but we know it will.
 
@@ -78,12 +78,10 @@ At ~240 pages, no words are wasted. If you're still not convinced, you can get a
 
 [metz]: https://twitter.com/sandimetz
 
-[poodr]: http://www.poodr.info/
-
-[oor]: http://objectsonrails.com/
+[poodr]: https://www.poodr.com/
 
 [talk]: https://vimeo.com/53154357
 
-[complect]: http://www.infoq.com/presentations/Simple-Made-Easy
+[complect]: https://www.infoq.com/presentations/Simple-Made-Easy
 
-[talk2]: http://www.youtube.com/watch?v=URSWYvyc42M
+[talk2]: https://www.youtube.com/watch?v=URSWYvyc42M
