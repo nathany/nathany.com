@@ -31,3 +31,8 @@ gzip = true
 [[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
 gzip = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
