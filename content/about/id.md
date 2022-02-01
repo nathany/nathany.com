@@ -94,11 +94,11 @@ The following summer I was between jobs with time on my hands. One of my experim
 
 That year I landed a job at an early-stage startup, becoming one of the first employees. We were building a Ruby on Rails app and deploying it to Heroku, but scaling was expensive. We upgraded our application server to Unicorn, which uses a process model. Our application used about ~300MB of memory, so we could handle 3 simultaneous requests per Heroku dyno (1GB each). Better than one, but still not great. Eventually I moved the app to [Puma][], which helped improve matters, but I knew Go would be much more efficient.
 
-Go, APIs, and microservices were all the [hype][], but the monolith at work just grew bigger and bigger. Though I couldn't use Go at work, I invested my own time into [open][fsnotify] [source][looper] [projects][s3up] and started the [Edmonton Go][edmontongo] meetup in 2014.
+Go, APIs, and microservices were all the [hype][], but the monolith at work just grew bigger and bigger. While I couldn't use Go at work, I did invest my own time into [open][fsnotify] [source][looper] [projects][s3up] and started the [Edmonton Go][edmontongo] meetup in 2014.
 
 Later that year I took a second job, working a few hours a week as a contractor for a 🦊 [small consulting company][aai]. My task was to transition performance-sensitive functionality from Ruby to Go, interacting with Ruby through JSON APIs, message queues like Sidekiq, or Redis pub/sub. Projects included Apple push notifications ([open source][buford]), streaming file uploads to S3, and a websockets proxy.
 
-Then we discovered 🧪 [Elixir][] and [Phoenix][]. Built on [Erlang/OTP][erlang], it promised concurrency and efficiency similar to Go, while Phoenix and Ecto provided many of niceties of Ruby on Rails. I wasn't sold at first, having come to appreciate Go's simplicity, static type checking, and fast compiler. Still, I enjoy learning, so [learn I did][elixir-guide].
+Then we discovered 🧪 [Elixir][] and [Phoenix][]. Built on [Erlang/OTP][erlang], it promised concurrency and efficiency similar to Go, while Phoenix and Ecto provided the niceties of Ruby on Rails. I wasn't sold at first, having come to appreciate Go's simplicity, static type checking, and fast compiler. Still, I enjoy learning, so [learn I did][elixir-guide].
 
 [hype]: /why-go
 
