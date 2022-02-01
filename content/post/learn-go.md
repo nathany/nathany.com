@@ -6,7 +6,7 @@ description = "An excerpt from Learn Go: a beginner's guide to Go."
 legacy = true
 +++
 
-[Learn Go]: https://yng.mn/learngolang
+[Learn Go]: https://bit.ly/getprogrammingwithgo
 [playground]: https://play.golang.org
 [playground.go]: https://play.golang.org
 [mars.go]: https://play.golang.org/p/NVt8w6GhPx
@@ -442,9 +442,7 @@ This article introduced to the structure of a basic Go program. From there you b
 * Became familiar with Go's syntax for branching and repetition with `if`, `switch`, and `for`.
 * Used 11 Go keywords out of a total of 25: `package`, `import`, `func`, `const`, `var`, `for`, `if`, `else`, `switch`, `case`, and `default`.
 
-If you like this article, an early release of [Learn Go][] is available from Manning Publications. The coupon code **39youngman** will save you 39% on either the eBook or print/eBook combo. Using my affiliate link helps me out, please share it with your friends: [https://yng.mn/39youngman](https://yng.mn/39youngman).
-
-You can follow the progress of Learn Go on [Twitter](https://twitter.com/learngolang) or [Facebook](https://www.facebook.com/learngolang/) and participate in the [Manning forums](https://forums.manning.com/forums/learn-go).
+You can follow the progress of Learn Go on [Twitter](https://twitter.com/programminggo) and participate in the [Manning forums](https://forums.manning.com/forums/get-programming-with-go).
 
 *Comment on [Golang News](http://golangnews.com/stories/330),
 [Hacker News](https://news.ycombinator.com/item?id=10417684),

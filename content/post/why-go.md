@@ -1,7 +1,7 @@
 +++
 title = "Why Go?"
 date = "2012-05-07"
-revised = "2015-02-27"
+revised = "2022-01-31"
 keywords = ["golang"]
 description = "Intrigued by the Go programming language."
 +++
@@ -11,13 +11,11 @@ description = "Intrigued by the Go programming language."
     <figcaption>Getting into the swing of it.</figcaption>
 </figure>
 
-Go was [introduced](http://www.youtube.com/watch?v=rKnDgT73v8s) on November 10th, 2009 as a new system programming language with quick build times. Go's excellent tooling, <mark>elegant concurrency model</mark> and unique approach to object-orientation has captivated the attention of developers from compiled and scripting languages alike.
+Go was [introduced](https://www.youtube.com/watch?v=rKnDgT73v8s) on November 10th, 2009 as a new system programming language with quick build times. Go's excellent tooling, <mark>elegant concurrency model</mark> and unique approach to object-orientation has captivated the attention of developers from compiled and scripting languages alike.
 
-> "[Go will be the server language of the future.][tobi]" - Tobias Lütke, Shopify
+> "Go will be the server language of the future." - Tobias Lütke, Shopify
 
 Is there truth to Tobi's assertion? Before we can evaluate if Go is a panacea for modern web development, let's look at the trends, and consider what <mark>"the server language of future"</mark> should provide.
-
-[tobi]: https://twitter.com/tobi/status/326086379207536640
 
 ### Real-Time Web
 
@@ -31,11 +29,11 @@ Some applications employ bolt-on solutions like Pusher. It works in a pinch, but
 
 Go should address the C10K problem, being able to maintain connections with thousands of users from a single instance, without exhausting available memory.
 
-[Trello]: https://trello.com/
-[Asana]: http://asana.com/
+[Trello]: https://trello.com
+[trello_tech]: https://web.archive.org/web/20171010230928/https://blog.fogcreek.com/the-trello-tech-stack/
 
-[trello_tech]: http://blog.fogcreek.com/the-trello-tech-stack/
-[asana_tech]: http://www.quora.com/Web-Application-Frameworks/What-is-Asanas-Luna-technology-framework
+[Asana]: https://asana.com
+[asana_tech]: https://www.quora.com/Web-Application-Frameworks/What-is-Asanas-Luna-technology-framework
 
 ### Cloud Computing
 
@@ -49,17 +47,21 @@ Go applications should launch quickly so our servers respond immediately to incr
 
 Multicore went mainstream in 2004 with the first x86 dual-core chips. Even with data centres using commodity hardware, we should expect [the number of cores to double][8core] on a regular basis.
 
-Go should be scalable. We should not need to rewrite our software to take advantage of additional cores.
+Go should be scalable. We shouldn't need to rewrite our software to take advantage of additional cores.
+
+[8core]: https://blog.linode.com/2013/03/18/linode-nextgen-the-hardware/
 
 ### Microservices
 
 Today applications rely on a number of external services: databases, caches, search and message queues.
 
-It is becoming more common to [build applications as a collection of microservices](http://info.thoughtworks.com/building-microservices-book.html). 
+It is becoming more common to [build applications as a collection of microservices][microservices]. 
 
-Go should use asynchronous I/O so that our application can interact with any number of services without blocking web requests.
+Go should use asynchronous I/O, so that our application can interact with any number of services without blocking web requests.
 
-###  The Fat Client Renaissance
+[microservices]: https://www.thoughtworks.com/books/building-microservices
+
+### The Fat Client Renaissance
 
 With native mobile, HTML5 and Web Components, clients are doing more and servers are getting skinny. Modern apps are designed <mark>API first</mark>, built with the flexibility to support multiple clients.
 
@@ -80,7 +82,7 @@ At least Python is on the right path.
 
 Node.js scores better, especially when coupled with a library like async.js.
 
-[Tulip]: http://pyvideo.org/video/1667/keynote-1
+[Tulip]: https://pyvideo.org/pycon-us-2013/keynote-1.html
 
 The Go runtime ensures that any one goroutine isn't blocking the others. Code is written in a synchronous style while being fully non-blocking. There is no need for callbacks, so there is no "callback hell."
 
@@ -90,9 +92,9 @@ What happens if we want to support thousands of connections and still take advan
 
 Go has one straightforward model. It multiplexes <mark>goroutines</mark> onto OS threads (like Erlang), and stacks grow as needed. Go not only addresses the C10K problem, it blows past it! (C1000K)
 
-And don't forget that Python and Ruby (MRI) still have the GIL/GVL. Go doesn't have an interpreter, nor a virtual machine, so no global lock. Multicore FTW!
+And don't forget that Python and Ruby (MRI) have a GIL/GVL. Go doesn't have an interpreter, nor a virtual machine, so no global lock. Multicore FTW!
 
-[Cluster]: http://nodejs.org/api/cluster.html
+[Cluster]: https://nodejs.org/api/cluster.html
 
 ### Concurrency
 
@@ -100,11 +102,12 @@ Ruby's support for concurrency is left to users of the language:
 
 >"I don't consider myself as the concurrent guy, I don't think I can make the right decision for an actor library. I'd rather ask you guys to propose and discuss a future standard concurrency model." - Yukihrio 'Matz' Matsumoto, [Ruby Conf 2012 Q&A][matz_talk]
 
-To that end, Tony Arcieri's [Celluloid](http://celluloid.io/) steps in. But providing solid support for concurrency still [requires involvement from the language/runtime][ruby_needs].
+To that end, Tony Arcieri's [Celluloid][] steps in. But providing solid support for concurrency still [requires involvement from the language/runtime][ruby_needs].
 
-[ruby_needs]: http://tonyarcieri.com/2012-the-year-rubyists-learned-to-stop-worrying-and-love-the-threads
+[Celluloid]: https://github.com/celluloid/celluloid
+[ruby_needs]: https://tonyarcieri.com/2012-the-year-rubyists-learned-to-stop-worrying-and-love-the-threads
 
-[matz_talk]: http://www.youtube.com/watch?v=B7vCuNaqT7k
+[matz_talk]: https://www.youtube.com/watch?v=B7vCuNaqT7k
 
 Go channels provide a concurrency primitive comparable to the actors model. With actors we name the endpoints (mailboxes), whereas channels are the conduit. 
 
@@ -122,20 +125,17 @@ So Go is ready for the future, <mark>but is it fun?</mark> In my opinion, yes!
 
 Go provides type inference, hash maps (dictionaries), variable-length arrays, methods on any user-defined type, and implicitly satisfied interfaces. All without diverging far from the familiar syntax and semantics of C-like languages.
 
-> "Go is closer in spirit to C than to any other language," - Mark Summerfield, [Programming in Go](http://www.informit.com/store/programming-in-go-creating-applications-for-the-21st-9780321774637).
+> "Go is closer in spirit to C than to any other language," - Mark Summerfield, Programming in Go
 
 It compiles quickly without makefiles, integrates with Git for distributed package management, and reformats code with `gofmt`. Compilation makes a certain class of tests unnecessary, and code completion works really well thanks to `gocode` built into [GoSublime][] and [vim-go](https://github.com/fatih/vim-go) .
 
-Performance critical code can be optimized without the need to mix C with another language. And [we have gophers][gophers]! What could be more fun than that?
+Performance critical code can be optimized without the need to mix C with another language. And _we have gophers!_ What could be more fun than that?
 
 Go strikes a balance between dynamic and statically compiled languages. It's fun and efficient.
 
 The best way to know if you'll like Go is to dive in and <mark>get some first-hand experience</mark>. So think up a small project and try it for yourself!
 
 [GoSublime]: https://github.com/DisposaBoy/GoSublime
-[gophers]: https://plus.google.com/photos/104313268939103200754/albums/5876555195702165569
-
-[case]: https://gist.github.com/ungerik/3731476
 
 ## Reboot
 
@@ -151,46 +151,48 @@ Go is designed for clarity. It can be terse so long as the meaning is clear. In 
 
 The Go [specification][] is easy to digest. Mastery isn't beyond our reach.
 
-[refinements]: https://bugs.ruby-lang.org/issues/4085
-[soundcloud]: http://backstage.soundcloud.com/2012/07/go-at-soundcloud/
-[specification]: http://golang.org/ref/spec
-
+[soundcloud]: https://developers.soundcloud.com/blog/go-at-soundcloud
+[specification]: https://go.dev/ref/spec
 
 
 ## Questions
 
 **Should I learn Go?**
 
-It's always good to learn and stretch your mind. Even if learning Go never [lands you a job](http://www.golangprojects.com/), you will gain new perspectives when using other languages. For example, learning Go interfaces may give you a new appreciation for duck types in Python and Ruby.
+It's always good to learn and stretch your mind. Even if learning Go never [lands you a job](https://www.golangprojects.com/), you will gain new perspectives when using other languages. For example, learning Go interfaces may give you a new appreciation for duck types in Python and Ruby.
 
-I began learning Ruby on Rails over Christmas 2005, well before I could find any jobs using it. Ten years later I can safely say it was [a good investment](https://stackoverflow.com/story/nathany).
+I began learning Ruby on Rails over Christmas 2005, well before I could find any jobs using it. Years later I can safely say it was a good investment for my [career](https://stackoverflow.com/story/nathany).
 
 **Should I build my SaaS startup on Go?**
 
 A startup needs to run lean and prove out the idea. If you're building a web app, you will find a much quicker time-to-MVP using a framework like Ruby on Rails or Django.
 
-I would still recommend [looking into Go](http://startupedmonton.tumblr.com/post/107921476571/why-tech-startups-should-look-at-go) and how it could benefit your company.
+I would still recommend [looking into Go](https://startupedmonton.tumblr.com/post/107921476571/why-tech-startups-should-look-at-go) and how it could benefit your company.
 
 **Is there a web framework like Rails or Django for Go?**
 
-Not really. I recommend learning the standard library and [Gorilla Web Toolkit][gorilla]. They provide many of the facilities you would find in Sinatra or Flask. There is a good [tutorial][] that starts out with the standard library and adopts Gorilla.
+Not really. I recommend learning the standard library and [Gorilla Web Toolkit][gorilla]. They provide many of the facilities you would find in Sinatra or Flask. Here is a good [tutorial][] that starts out with the standard library and adopts Gorilla.
 
 If you must have a full stack web application framework, [Revel][] is as close as it gets.
 
 [gorilla]: https://www.gorillatoolkit.org/
-[tutorial]: https://web.archive.org/web/20120804000251/http://shadynasty.biz/blog/2012/07/30/quick-and-clean-in-go/
+[tutorial]: https://web.archive.org/web/20120804000251/https://shadynasty.biz/blog/2012/07/30/quick-and-clean-in-go/
 [Revel]: https://revel.github.io/
 
 **This all sounds great, but where can I find a second opinion?**
 
 Erik Unger has compiled a list of articles that make [The Case For Go][case].
 
-*Comment on [Hacker News][HN], [reddit][], or [LinkedIn][].*
+[case]: https://gist.github.com/ungerik/3731476
 
-[reddit]: http://www.reddit.com/r/golang/comments/1eapil/go_will_be_the_server_language_of_the_future/
+**How can I learn Go?**
+
+Though this article was published in 2012, Go remains a language worth learning. If you or someone you know is interested, consider picking up a copy of my book _Get Programing with Go_ from [Manning Publications][manning] or [Amazon][].
+
+[manning]: https://bit.ly/getprogrammingwithgo
+[Amazon]: https://amzn.to/2NTz7fd
+
+*Comment on [Hacker News][HN].*
+
 [HN]: https://news.ycombinator.com/item?id=5703097
-[LinkedIn]: http://www.linkedin.com/groups/Go-will-be-server-language-3712244.S.240593516
 
-[Go Programming Language Phrasebook]: http://www.informit.com/store/go-programming-language-phrasebook-9780132919012
-
-[8core]: https://blog.linode.com/2013/03/18/linode-nextgen-the-hardware/
