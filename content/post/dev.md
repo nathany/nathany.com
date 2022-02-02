@@ -1,9 +1,9 @@
 +++
 title = "My journey into programming"
-description = "How I fell into web development."
+description = "How I fell into web development, a memoir."
 date = "2014-03-30"
 revised = "2022-02-01"
-keywords = ["self-taught", "web developer", "story"]
+keywords = ["self-taught", "web developer", "story", "memoir"]
 +++
 
 Today I work for a 🦊 [small consulting company][aai] as a full-stack web developer, writing apps predominately with 🧪 [Elixir][] and [Phoenix][]. I am also the author of [Get Programming with Go][programminggo], which was published in 2018.
