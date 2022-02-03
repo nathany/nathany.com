@@ -1,5 +1,5 @@
 +++
-title = "📕 Practical Object-Oriented Design"
+title = "📕 Reviewing Practical Object-Oriented Design"
 date = "2013-01-10"
 revised = "2022-01-31"
 description = "Sandi Metz wrote a book on Object-Oriented Design. It is well worth the read."
