@@ -22,7 +22,7 @@ When my Dad saw my interest, he gave me a coil-bound manual for BASIC and let me
 
 The first computer I owned was a Commodore 16 from a garage sale, tape drive and all! I wrote a historic text adventure where your character wandered Israel in search of Jesus. It wasn't  sophisticated or well-researched, but one of my first computer projects.
 
-## Teenage Years
+## Youth
 
 By junior high, our school upgraded the lab from Apple IIs to amber-screened XTs. Thankfully there was one computer with a colour screen, plus our neighbours let me use their PC after school. Progressing from GW-BASIC to QBasic, I wrote my own remakes of *[Star Traders][star-traders]* and *Atlantis.*
 
@@ -31,11 +31,11 @@ By junior high, our school upgraded the lab from Apple IIs to amber-screened XTs
 In addition to lawn-mowing income, I earned money tutoring people with computers. When I had enough saved, I went to Programmers Guild to buy Turbo C 2.0. Unfortunately Turbo C wasn't the most approachable:
 
 * A simple syntax error would dump a dozen seemingly unrelated errors.
-* I found the IDE confusing, the keys reminded me of WordStar!
+* I found the <abbr title="Integrated Development Environment">IDE</abbr> confusing, the keys reminded me of WordStar!
 
 [QuickBASIC](https://en.wikipedia.org/wiki/Quickbasic) 4.5 turned out to be a much better investment.
 
-While in Grade 9, my Mom helped me pay for a correspondence course from NRI (McGraw-Hill Education). The three-year course covered computer programming in five languages and came with a 386 SX.
+While in Grade 9, my Mom helped me pay for a correspondence course from <abbr title="National Radio Institute">NRI</abbr> (McGraw-Hill Education). The three-year course covered computer programming in five languages and came with a 386 SX.
 
 Resolved in my future career path, I wrote a letter to
 Nintendo and received a genuine response encouraging me in my studies to become a programmer.
