@@ -9,9 +9,9 @@
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <p class="meta">
             {{ if .Params.revised }}
-              First published on {{ .Date.Format "2 January 2006" }}, last revised {{ .Params.revised | dateFormat "2 Jan 2006" }}.
+              Last revised on {{ .Params.revised | time.Format "2006/01/02" }}.
             {{ else }}
-              Published on {{ .Date.Format "2 January 2006" }}.
+              Published on {{ .Date.Format | time.Format "2006/01/02" }}.
             {{ end }}
           </p>
           {{ if .Description }}

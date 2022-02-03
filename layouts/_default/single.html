@@ -9,11 +9,10 @@
       {{ end }}
       <p>
         {{ if .Params.revised }}
-          First published on {{ .Date.Format "2 Jan 2006" }},
-          last revised
-          {{ .Params.revised | dateFormat "2 Jan 2006" }}.
+          First published on {{ .Date | time.Format ":date_long" }}.
+          Last revised on {{ .Params.revised | time.Format ":date_long" }}.
         {{ else }}
-          Published on {{ .Date.Format "2 Jan 2006" }}.
+          Published on {{ .Date | time.Format ":date_long" }}.
         {{ end }}
       </p>
     </div>
