@@ -64,7 +64,7 @@ At that time the web was still relatively new. I remember reading the HTML 2.0 s
 
 It wasn't long before I wrote a command-line tool to make HTML easier to work with. **HyperProcess** was a cross-platform preprocessor for HTML written in C. It supported file includes and other features, while also serving to lint and minify my HTML. Think static-site generator sans-Markdown, or [Jamstack][] before the rise of JavaScript and RESTful APIs.
 
-HyperProcess came in handy at my first web development job, but at my next job I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do _real_ programming. I stuck with ColdFusion for eight years [across three jobs][cv]. 
+HyperProcess came in handy at my first web development job, but at my next job I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do _real_ programming. I stuck with ColdFusion for eight years across three jobs. 
 
 Though I didn't know it at the time, ColdFusion, Java, JavaScript, PHP, and Ruby were all released in 1995, the same year I graduated High School. Impeccable timing for a budding web developer.
 
@@ -72,7 +72,7 @@ Though I didn't know it at the time, ColdFusion, Java, JavaScript, PHP, and Ruby
 
 I was on sabbatical in Europe when I first heard of a certain new web framework. *Ruby on Rails* enticed me with its <abbr title="Object-Relational Mapper">ORM</abbr> and organized file layout. To top it off, my Dad worked for 🛤 <abbr title="Canadian National Railway">CN</abbr> when I was young, so even the name _Rails_ was appealing. 
 
-After returning from Bible school to celebrate Christmas, I found a copy of _Agile Web Development with Rails_ (Pragmatic Bookshelf, 2005) at the local computer bookstore. I did some freelancing until I was hired by a Christian non-profit to build an app with Ruby on Rails. Thus I transitioned my career, with Ruby becoming my primary language for the next eight years, across [another three jobs][cv].
+After returning from Bible school to celebrate Christmas, I found a copy of _Agile Web Development with Rails_ (Pragmatic Bookshelf, 2005) at the local computer bookstore. I did some freelancing until I was hired by a Christian non-profit to build an app with Ruby on Rails. Thus I transitioned my career, with Ruby becoming my primary language for the next eight years, across another three jobs.
 
 [Jamstack]: https://jamstack.org/
 
@@ -121,5 +121,4 @@ As I reminisce of the people and authors who got me to where I am, I think about
 Through writing, mentoring, and other efforts to <mark>share what we learn</mark>, we can empower the next generation of developers.
 
 [aai]: https://agileanimal.com
-[cv]: https://stackoverflow.com/story/nathany
 [programminggo]: https://bit.ly/getprogrammingwithgo

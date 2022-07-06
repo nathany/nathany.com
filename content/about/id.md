@@ -15,10 +15,8 @@ Outside of my career, the characteristics that define me are: âœ Christian, ğŸŒ
 Related:
 
 * [My journey into programming][dev]
-* [Curriculum vitae][cv]
 
 [aai]: https://agileanimal.com
 [programminggo]: https://bit.ly/getprogrammingwithgo
 
 [dev]: /dev
-[cv]: https://stackoverflow.com/story/nathany
