@@ -20,8 +20,10 @@ I'm Nathan. A full-stack web [developer][dev] working for a 🦊 [small consulti
 Related:
 
 * [My journey into programming][dev]
+* [Résumé][resume]
 
 [aai]: https://agileanimal.com
 [programminggo]: https://bit.ly/getprogrammingwithgo
 
 [dev]: /dev
+[resume]: /resume
