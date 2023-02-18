@@ -1,7 +1,7 @@
 baseURL = "https://nathany.com"
 languageCode = "en-us"
 title = "Nathan Youngman"
-copyright = "2022 Nathan Youngman"
+copyright = "2023 Nathan Youngman"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
