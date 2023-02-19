@@ -20,7 +20,7 @@ Alberta, Canada
 
 ### [AGiLE ANiMAL](https://agileanimal.com/)
 Senior Developer -- *Feb 2016-present*  
-Working with distributed teams -- remote work from home from 2017.
+Working with distributed teams.
 
 * **Copia Wealth Studios** (FinTech) -- *Jan 2021-present*   
   Admin portal and data ingestion team lead from May 2022.
@@ -50,7 +50,7 @@ Working with distributed teams -- remote work from home from 2017.
   Elixir barcode scanning service with a C NIF (Native Implemented Functions) and integration into a Vue.js frontend.
 
 * **McGraw-Hill Education** (education) -- *Sep 2016-Apr 2018*  
-  Remotely embedded in a large organization, working with architects and developers to replace a monolithic application with smaller services. Developed a Gradebook service (Go, PostgreSQL) and contributed to an Assessment Authoring service (Node.js).
+  Remotely embedded into a large organization, working with architects and developers to replace a monolithic application with smaller services. Developed a Gradebook service (Go, PostgreSQL) and contributed to an Assessment Authoring service (Node.js).
   
 * **RoboClient** (file management) -- *Mar 2016-Jul 2016*  
   Elixir app for iOS App Bundles (IPA) for Robots and Pencils.
