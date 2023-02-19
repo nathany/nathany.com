@@ -6,7 +6,7 @@ revised = "2022-02-01"
 keywords = ["self-taught", "web developer", "story", "memoir"]
 +++
 
-Today I work for a 🦊 [small consulting company][aai] as a senior developer, writing web apps predominately with 🧪 [Elixir][] and [Phoenix][]. I am also the author of [Get Programming with Go][programminggo], which was published in 2018.
+Today I work for a 🦊 [small consulting company][aai] as a senior developer, writing web apps predominately with 🧪 [Elixir][] and [Phoenix][]. I'm also the author of [Get Programming with Go][programminggo], which was published in 2018.
 
 What follows is my personal account of becoming a programmer and my career.
 
