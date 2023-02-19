@@ -18,10 +18,9 @@ Alberta, Canada
 * 25 years of web development
 * [Go and Node.js: a comparison](https://youtu.be/N8Fc7RQfmdU) talk (2019)
 
-### AGiLE ANiMAL
+### [AGiLE ANiMAL](https://agileanimal.com/)
 Senior Developer -- *Feb 2016-present*  
 Remote work from home with various distributed teams. 
-Contract work from *Dec 2014-Jan 2016*.
 
 * **Copia Wealth Studios** (FinTech) -- *Jan 2021-present*   
   Admin portal and data ingestion team lead from May 2022.
@@ -59,14 +58,16 @@ Contract work from *Dec 2014-Jan 2016*.
 * **SoundPays** (e-commerce) -- *Feb 2016-Oct 2019*  
   Elixir app and API clients for Chase, Moneris, BluePay, Beanstream.
 
+Contract work from *Dec 2014-Jan 2016*.
+
 * Apple Push Notifications client (APNS) -- *Dec 2015-Sep 2016*  
   Go, HTTP/2, [open source](https://github.com/RobotsAndPencils/buford).
 
 * Various experimental projects -- *Dec 2014-Dec 2015*  
   Built Go services (Apple push notifications client, streaming file uploads to S3) for use from Ruby through JSON APIs, message queues (Sidekiq), or Redis pub/sub.
 
-### Jobber
-Senior Software Developer -- *Oct 2012-Feb 2015* 
+### [Jobber](https://getjobber.com/)
+Senior Software Developer -- *Oct 2012-Feb 2015*  
 Jobber's first employee.
 
 * Developed business management software for small businesses (calendar, invoicing).
@@ -75,8 +76,8 @@ Jobber's first employee.
 
 <small>Ruby on Rails, PostgreSQL, JQuery (Mobile), Sass, GitHub, Heroku, S3, Unicorn, Puma, Sprintly</small>
 
-### Meazure Learning
-Full Stack Ruby Software Craftsperson -- *Jul 2009-May 2012*
+### [Meazure Learning](https://www.meazurelearning.com/)
+Full Stack Ruby Software Craftsperson -- *Jul 2009-May 2012*  
 Team lead from 2011.
 
 Developed the Meazure Exam Platform, a ground-up replacement for ProExams.
@@ -87,16 +88,15 @@ Developed the Meazure Exam Platform, a ground-up replacement for ProExams.
 
 <small>Ruby on Rails 2.x, MySQL, MongoDB, Redis, JQuery, Git, GitHub, Airbrake, Lighthouse/FogBugz, ColdFusion and Microsoft SQL Server (ProExams)</small>
 
-### Power to Change
+### [Power to Change](https://p2c.com/)
 Web Developer -- *May 2007-May 2009*
 
-> In April 2007, I was able to raise funds for a summer internship that piqued my interest. The project enabled human resources to create forms that applicants could complete online. The project took ten months as a solo-developer, with some assistance from Campus Crusade for Christ U.S.
-> 
-> After working with HR, I took a contract with Global Aid Network (GAiN), the humanitarian arm of Power to Change. For a start, we launched a new web site, with the help of a graphics designer from the marketing team.
-> 
-> At GAiN, my primary task was to provide a tool to better manage water well sponsorship data, which at the time was kept in one giant Excel file. Using technologies prescribed by IT, I developed a custom database that integrated with donor/donation data. With now over 2000 wells, I can't imagine maintaining all that data in Excel.
-
-<small>Ruby on Rails 1.2, MySQL, Prototype.js, Subversion, Trac (10 months) WordPress (PHP/MySQL), JQuery, Slideshow Pro, Mercurial (2 months) Microsoft Access (VBA), Microsoft SQL Server, Microsoft Reporting Services</small>
+* Developed an application for human resources to create and manage online job application forms. Raised funds for the summer job, but it was extended to ten months.  
+  <small>Ruby on Rails 1.2, MySQL, Prototype.js, Subversion, Trac</small>
+* Launched a new website for Global Aid Network (GAiN), the humanitarian arm of Power to Change.  
+  <small>WordPress (PHP/MySQL), JQuery, Slideshow Pro, Mercurial</small>
+* Developed a custom database for GAiN to manage water well sponsorship data.  
+  <small>Microsoft Access (VBA), Microsoft SQL Server, Microsoft Reporting Services</small>
 
 ### Wycliffe Bible Translators Canada
 Volunteer Web Developer -- *Sep 2006-Nov 2006*
