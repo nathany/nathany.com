@@ -22,7 +22,7 @@ Alberta, Canada
 Senior Developer -- *Feb 2016-present*  
 Working with distributed teams.
 
-* **Copia Wealth Studios** (FinTech) -- *Jan 2021-present*   
+* **Copia Wealth Studios** (Fintech) -- *Jan 2021-present*   
   Admin portal and data ingestion team lead from May 2022.
 
   * Transition to a new admin portal (LiveView) and improve the underlying data model.
