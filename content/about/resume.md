@@ -20,7 +20,7 @@ Alberta, Canada
 
 ### [AGiLE ANiMAL](https://agileanimal.com/)
 Senior Developer -- *Feb 2016-present*  
-Remote work from home with various distributed teams. 
+Working with distributed teams -- remote work from home from 2017.
 
 * **Copia Wealth Studios** (FinTech) -- *Jan 2021-present*   
   Admin portal and data ingestion team lead from May 2022.
@@ -28,11 +28,11 @@ Remote work from home with various distributed teams.
   * Transition to a new admin portal (LiveView) and improve the underlying data model.
   * Create and utilize API clients for Morningstar ByAllAccounts (XML) and Yodlee.
   * Provide guidance to junior developers through code reviews and pairing sessions.
-  * Backlog grooming, capturing issues and features, and breaking down stories.
+  * Backlog grooming, capturing issues and features, and breaking down stories in Shortcut.
   * Collaborating with our subject matter expert, product design and API & ML teams.
   * Coordinating deployments with frontend teams (React, iOS).
     
-  <small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, Convox, AppSignal, Shortcut</small>
+  <small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, Convox, AppSignal</small>
 
 * **Unshuffled** (poker with friends) -- *May 2020-Jan 2021*  
   Elixir backend and websocket API.
@@ -80,59 +80,71 @@ Jobber's first employee.
 Full Stack Ruby Software Craftsperson -- *Jul 2009-May 2012*  
 Team lead from 2011.
 
-Developed the Meazure Exam Platform, a ground-up replacement for ProExams.
-
+* Developed the Meazure Exam Platform, a ground-up replacement for ProExams.
 * Contributed to the architecture and design of item banking, exam design and delivery interfaces in collaboration with domain experts (psychometricians).
 * Responsible for developing a booking system and adding e-commerce support with Canadian sales tax calculations. 
-* Collaborated through code reviews, pair programming, and managed tasks for our core team and external contractors.
+* Collaborated through code reviews, pair programming, and managing tasks for our core team and external contractors.
 
 <small>Ruby on Rails 2.x, MySQL, MongoDB, Redis, JQuery, Git, GitHub, Airbrake, Lighthouse/FogBugz, ColdFusion and Microsoft SQL Server (ProExams)</small>
 
 ### [Power to Change](https://p2c.com/)
 Web Developer -- *May 2007-May 2009*
 
-* Developed an application for human resources to create and manage online job application forms. Raised funds for the summer job, but it was extended to ten months.  
+* Developed an application for human resources to create and manage online job application forms. Raised funds for a summer job, but it was extended to ten months.  
   <small>Ruby on Rails 1.2, MySQL, Prototype.js, Subversion, Trac</small>
-* Launched a new website for Global Aid Network (GAiN), the humanitarian arm of Power to Change.  
+* Launched a new website for Global Aid Network (GAiN), the humanitarian arm.  
   <small>WordPress (PHP/MySQL), JQuery, Slideshow Pro, Mercurial</small>
 * Developed a custom database for GAiN to manage water well sponsorship data.  
   <small>Microsoft Access (VBA), Microsoft SQL Server, Microsoft Reporting Services</small>
 
-### Wycliffe Bible Translators Canada
+### [Wycliffe Bible Translators of Canada](https://www.wycliffe.ca/)
 Volunteer Web Developer -- *Sep 2006-Nov 2006*
 
-> Having an interest in Biblical languages and Wycliffe's mandate, I attended a summer of linguistics program at CanIL. After finishing school, I volunteered with Wycliffe Canada, where I worked on two small projects. The first, a personnel data browser for IT, the other, a tool to format job opportunities into PDFs. I enjoyed the experience, but unfortunately I couldn't volunteer with Wycliffe forever.
+* After attending a summer of linguistics program at CanIL, I volunteered with Wycliffe for two months.
+* Wrote a personnel data browser for IT and a tool to format job opportunities into PDFs.
 
 <small>Django, Python, PostgreSQL, LDAP</small>
 
 ### Vintacom Media Group
-Web Developer -- *Dec 2002-May 2006*
+Web Developer -- *Dec 2002-Sep 2005, Jan-May 2006*  
+Team lead in 2005.
 
-> Through participation in a local ColdFusion User Group, I was offered a job in the online dating industry. The multi-tenant platform had large datasets, high-traffic, massive mail-outs, and thousands of financial transactions every day (with over 1 million users at its peak). Early on I was entrusted with implementing additional payment gateways, renewals, and better fraud controls.
-> 
-> In 2005, I accepted additional project management responsibilities, but left in the fall for a four month sabbatical at Tauernhof Bible School in Austria. Returning to Vintacom the following January, it was during this time period that I became interested in Ruby on Rails, and attended the Canada on Rails conference.
+* Worked on a network of online dating websites with over 1 million users (at its peak) and thousands of financial transactions every day.
+* Entrusted with implementing additional payment gateways, renewals, and fraud prevention. 
+* Took a four month sabbatical in 2005 to study at Tauernhof Bible School in Austria.
 
 <small>ColdFusion, Microsoft SQL Server, IIS, CVS, Userplane</small>
 
 ### Sagebrush Corporation
 Web Developer -- *Jun 1999-Dec 2002*
 
-> Following the merger of several related companies, I was brought on to design a new web site, incorporating a searchable catalog for Econo-Clad’s rebound books. This was my first foray into e-commerce, and an important transition from mostly static marketing sites to fairly sophisticated web apps (including a portal site and an internal task management tool). My immediate manager was the only other web developer, but we worked among half-a-dozen software developers, whom I was able to glean a lot from. It was also cool that they fed my Apple fanboyism with a ticket to WWDC.
+* Design a new web site after the merger.
+* Built an online searchable catalog for Econo-Clad's rebound books. 
+* Built a portal site and an internal task management tool.
+* Transitioned from building static marketing sites to fairly sophisticated web apps.
 
 <small>ColdFusion, Microsoft SQL Server, IIS, Visual Source Safe/CVS, Fireworks</small>
 
 ### Canadiana Group Inc.
 Web Developer -- *Nov 1997-Jun 1999*
 
-> This design firm is where I was introduced to Photoshop, to slice and optimize graphics from our in-house designers. There were 3-4 developers, but we tended to work independently on different projects. Though most web sites were static HTML, we did use client-side and server-side scripting, and even a few databases.
+* Used Photoshop to slice and optimize graphics from our in-house designers.
+* Most web sites were static HTML, but we used some JavaScript, ColdFusion or server-side includes.
 
-<small>Cold Fusion 3.1, Microsoft Access, JavaScript, Photoshop</small>
+<small>ColdFusion 3.1, Microsoft Access, JavaScript, Photoshop</small>
 
 ### Pathways Data Systems
 Web Developer -- *Jun 1997-Nov 1997*
 
-> My entry into web development was in 1997, working part-time on several small web sites. On the side, I developed Hyperprocess, my own static-site generator that supported file includes and other helpful functions (written in C).
+* My entry into web development was in 1997, working part-time on several small web sites. 
+* Developed HyperProcess on the side (written in C), a static-site generator for file includes, updating image tags, etc.
 
 <small>HTML 3.2, Paint Shop Pro</small>
 
 [programminggo]: https://bit.ly/getprogrammingwithgo
+
+Related: 
+
+* [My journey into programming][dev]
+
+[dev]: /dev

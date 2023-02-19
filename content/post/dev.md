@@ -6,7 +6,7 @@ revised = "2022-02-01"
 keywords = ["self-taught", "web developer", "story", "memoir"]
 +++
 
-Today I work for a 🦊 [small consulting company][aai] as a full-stack web developer, writing apps predominately with 🧪 [Elixir][] and [Phoenix][]. I am also the author of [Get Programming with Go][programminggo], which was published in 2018.
+Today I work for a 🦊 [small consulting company][aai] as a senior developer, writing web apps predominately with 🧪 [Elixir][] and [Phoenix][]. I am also the author of [Get Programming with Go][programminggo], which was published in 2018.
 
 What follows is my personal account of becoming a programmer and my career.
 
@@ -118,7 +118,12 @@ As I reminisce of the people and authors who got me to where I am, I think about
 
 [Get Programming with Go][programminggo] (Manning Publications, 2018) is my first technical book, a beginner's guide to the Go programming language, focused on the language itself. 
 
-Through writing, mentoring, and other efforts to <mark>share what we learn</mark>, we can empower the next generation of developers.
+Through writing, mentoring, and other efforts to <mark>share what we learn</mark>, we can empower the next generation of developers!
+
+Related:
+
+* [Résumé][resume]
 
 [aai]: https://agileanimal.com
 [programminggo]: https://bit.ly/getprogrammingwithgo
+[resume]: /resume
