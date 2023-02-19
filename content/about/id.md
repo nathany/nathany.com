@@ -8,7 +8,7 @@ aliases = [
 
 Hi.
 
-I'm Nathan. A full-stack web [developer][dev] working for a 🦊 [small consulting company][aai], and the author of [Get Programming with Go][programminggo] (Manning Publications, 2018).
+I'm Nathan, a senior developer at a 🦊 [small consulting company][aai], and the author of [Get Programming with Go][programminggo] (Manning Publications, 2018).
 
 |   |lifestyle    |   |hobbies     |
 |:-:|-------------|:-:|-------------|
@@ -19,9 +19,11 @@ I'm Nathan. A full-stack web [developer][dev] working for a 🦊 [small consulti
 
 Related:
 
+* [Résumé][resume]
 * [My journey into programming][dev]
 
 [aai]: https://agileanimal.com
 [programminggo]: https://bit.ly/getprogrammingwithgo
 
 [dev]: /dev
+[resume]: /resume
