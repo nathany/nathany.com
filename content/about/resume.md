@@ -6,7 +6,7 @@ aliases = [
 ]
 +++
 
-**Nathan Youngman**
+**Nathan Youngman**  
 Alberta, Canada
 
 ### Highlights
@@ -20,59 +20,72 @@ Alberta, Canada
 
 ### AGiLE ANiMAL
 Senior Developer -- *Feb 2016-present*  
-Remote work from home on with various distributed teams. 
+Remote work from home with various distributed teams. 
 Contract work from *Dec 2014-Jan 2016*.
 
 * **Copia Wealth Studios** (FinTech) -- *Jan 2021-present*   
-  Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL
-  GitHub Actions, Convox, AppSignal, Shortcut, Slite, Around
-  Admin portal (LiveView) and data ingestion, including API clients for Morningstar ByAllAccounts (XML) and Yodlee (REST). Data & Portal team lead from May 2022. Providing guidance to junior developers through code reviews and pairing sessions. Backlog grooming, capturing issues and feature requests, breaking down stories. Collaborating with subject matter expert, product design, API & ML team. Coordinate deployments with frontend teams (React, iOS).
+  Admin portal and data ingestion team lead from May 2022.
 
-* **Unshuffled** (poker with friends) -- *May 2020-Jan 2021* 
+  * Transition to a new admin portal (LiveView) and improve the underlying data model.
+  * Create and utilize API clients for Morningstar ByAllAccounts (XML) and Yodlee.
+  * Provide guidance to junior developers through code reviews and pairing sessions.
+  * Backlog grooming, capturing issues and features, and breaking down stories.
+  * Collaborating with our subject matter expert, product design and API & ML teams.
+  * Coordinating deployments with frontend teams (React, iOS).
+    
+  <small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, Convox, AppSignal, Shortcut</small>
+
+* **Unshuffled** (poker with friends) -- *May 2020-Jan 2021*  
   Elixir backend and websocket API.
 
-* **ATB Ventures** (marketing site) -- *Mar 2020-Jun 2020*
-  React, Gatsby, Strapi
+* **ATB Ventures** (marketing site) -- *Mar 2020-Jun 2020*  
+  React, Gatsby, Strapi.
 
-* **Arizona State University** (Slack bot) -- *Oct 2019-Feb 2021*
-  Elixir server.
+* **Arizona State University** (Slack bot) -- *Oct 2019-Feb 2021*  
+  Slack bot for students and success coaches. Elixir, PostgreSQL, DynamoDB.
 
-* **AltaGas** (mobile front-end) -- *Nov 2018-Jan 2020*
-  Vue.js, Apollo GraphQL, and Node.js for a proxy server for legacy APIs.
+* **AltaGas** (mobile front-end) -- *Nov 2018-Jan 2020*  
+  Vue.js, Apollo GraphQL, and a Node.js proxy server for legacy APIs.
 
-* **MyAlberta Digital ID** (identity) -- *May 2018-Jun 2021*
+* **MyAlberta Digital ID** (identity) -- *May 2018-Jun 2021*  
   Elixir barcode scanning service with a C NIF (Native Implemented Functions) and integration into a Vue.js frontend.
 
-* **McGraw-Hill Education** (education) -- *Sep 2016-Apr 2018*
-  Gradebook service (Go, PostgreSQL), Assessment Authoring service (Node.js).
-  Remotely embedded in a large organization, working with architects and developers to replace a monolithic application with smaller services.
+* **McGraw-Hill Education** (education) -- *Sep 2016-Apr 2018*  
+  Remotely embedded in a large organization, working with architects and developers to replace a monolithic application with smaller services. Developed a Gradebook service (Go, PostgreSQL) and contributed to an Assessment Authoring service (Node.js).
   
-* **RoboClient** (file management) -- *Mar 2016-Jul 2016*
-  Elixir backend for iOS App Bundles (IPA).
+* **RoboClient** (file management) -- *Mar 2016-Jul 2016*  
+  Elixir app for iOS App Bundles (IPA) for Robots and Pencils.
 
-* **SoundPays** (e-commerce) -- *Feb 2016-Oct 2019*
-  Elixir backend with API clients for Chase, Moneris, BluePay, Beanstream.
+* **SoundPays** (e-commerce) -- *Feb 2016-Oct 2019*  
+  Elixir app and API clients for Chase, Moneris, BluePay, Beanstream.
 
-* Apple Push Notifications client (APNS) -- *Dec 2015-Sep 2016*
-  Go, HTTP/2, [open source](https://github.com/RobotsAndPencils/buford)
+* Apple Push Notifications client (APNS) -- *Dec 2015-Sep 2016*  
+  Go, HTTP/2, [open source](https://github.com/RobotsAndPencils/buford).
 
-* Various experimental projects -- *Dec 2014-Dec 2015*
-  Apple push notifications, streaming file uploads to S3 with Go for use from Ruby through JSON APIs, message queues (Sidekiq), or Redis pub/sub.
+* Various experimental projects -- *Dec 2014-Dec 2015*  
+  Built Go services (Apple push notifications client, streaming file uploads to S3) for use from Ruby through JSON APIs, message queues (Sidekiq), or Redis pub/sub.
 
 ### Jobber
 Senior Software Developer -- *Oct 2012-Feb 2015* 
+Jobber's first employee.
 
-> Developing business management software as the first employee. Responsible for feature development and several broad changes, including implementing Puma (multi-threaded web server), upgrading to Rails 4, and reworking search and file uploads across the app. As the company grew, I mentored new developers and pushed for maintainable code through code reviews and tools like Code Climate and Hound. 
+* Developed business management software for small businesses (calendar, invoicing).
+* Implemented several broad changes, including Puma (multi-threaded web server), upgrading to Rails 4, and reworking search and file uploads across the app. 
+* As the company grew, I mentored new developers and pushed for maintainable code through code reviews and tools like Code Climate and Hound.
 
-<small>Ruby on Rails, PostgreSQL, JQuery (Mobile), Sass, GitHub, Heroku, S3, Unicorn, Puma, Sprintly.</small>
+<small>Ruby on Rails, PostgreSQL, JQuery (Mobile), Sass, GitHub, Heroku, S3, Unicorn, Puma, Sprintly</small>
 
 ### Meazure Learning
 Full Stack Ruby Software Craftsperson -- *Jul 2009-May 2012*
 Team lead from 2011.
 
-> Helped maintain the legacy ProExams learning management system (LMS) prior to starting Measure, a greenfield project for creating and delivering proctored exams. Responsible for developing a booking system and adding e-commerce support with sales tax calculations. Collaborated through code reviews, pair programming, and managed tasks for our core team and external contractors. Collaborated with domain experts (psychometricians) and interacted directly with clients.
- 
-<small>Ruby on Rails 2.x, MySQL, MongoDB, Redis, JQuery, Git, GitHub, Airbrake, Lighthouse/FogBugz, ColdFusion, Microsoft SQL Server</small>
+Developed the Meazure Exam Platform, a ground-up replacement for ProExams.
+
+* Contributed to the architecture and design of item banking, exam design and delivery interfaces in collaboration with domain experts (psychometricians).
+* Responsible for developing a booking system and adding e-commerce support with Canadian sales tax calculations. 
+* Collaborated through code reviews, pair programming, and managed tasks for our core team and external contractors.
+
+<small>Ruby on Rails 2.x, MySQL, MongoDB, Redis, JQuery, Git, GitHub, Airbrake, Lighthouse/FogBugz, ColdFusion and Microsoft SQL Server (ProExams)</small>
 
 ### Power to Change
 Web Developer -- *May 2007-May 2009*
