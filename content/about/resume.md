@@ -6,7 +6,7 @@ aliases = [
 ]
 +++
 
-Nathan Youngman  
+**Nathan Youngman**
 Alberta, Canada
 
 ### Highlights
@@ -19,7 +19,7 @@ Alberta, Canada
 * [Go and Node.js: a comparison](https://youtu.be/N8Fc7RQfmdU) talk (2019)
 
 ### AGiLE ANiMAL
-Senior Developer (consulting company) -- *Feb 2016-present*  
+Senior Developer -- *Feb 2016-present*  
 Remote work from home on with various distributed teams. 
 Contract work from *Dec 2014-Jan 2016*.
 
@@ -60,22 +60,22 @@ Contract work from *Dec 2014-Jan 2016*.
   Apple push notifications, streaming file uploads to S3 with Go for use from Ruby through JSON APIs, message queues (Sidekiq), or Redis pub/sub.
 
 ### Jobber
-Full Stack Senior Developer (startup) -- *Oct 2012-Feb 2015* 
+Senior Software Developer -- *Oct 2012-Feb 2015* 
 
-> Developing business management software as the first employee. Responsible for many cross-cutting changes, including implementing Puma (multi-threaded web server), upgrading to Rails 4, and reworking search and file uploads across the app. The company grew to 20 people by the time I left. Served as a mentor to new developers and pushed for maintainable code through code reviews and tools like Code Climate and Hound. 
+> Developing business management software as the first employee. Responsible for feature development and several broad changes, including implementing Puma (multi-threaded web server), upgrading to Rails 4, and reworking search and file uploads across the app. As the company grew, I mentored new developers and pushed for maintainable code through code reviews and tools like Code Climate and Hound. 
 
-<small>Ruby on Rails, PostgreSQL, JQuery Mobile, CoffeeScript, Sass, Git, GitHub, Heroku, Unicorn, Puma, S3, Sprintly.</small>
+<small>Ruby on Rails, PostgreSQL, JQuery (Mobile), Sass, GitHub, Heroku, S3, Unicorn, Puma, Sprintly.</small>
 
+### Meazure Learning
+Full Stack Ruby Software Craftsperson -- *Jul 2009-May 2012*
+Team lead from 2011.
 
-### Meazure Learning (was Yardstick Software)
-Senior Developer -- Jul 2009-May 2012
-
-> Yardstick Measure is a multi-tenant learning management system (LMS) focused on creating and delivering proctored exams. Our core team fluctuated from 2-4 developers. We collaborated on architecture, through code reviews and pair programming. I was responsible for creating a booking system, adding e-commerce support (including taxation), company management (CRM), as well as multiple data migrations from third-party systems. In 2011, I accepted additional project management responsibilities, managing the tasks of our core team and several external contractors. I also served as the primary contact for a significant client, with offices in Montreal and Geneva.
+> Helped maintain the legacy ProExams learning management system (LMS) prior to starting Measure, a greenfield project for creating and delivering proctored exams. Responsible for developing a booking system and adding e-commerce support with sales tax calculations. Collaborated through code reviews, pair programming, and managed tasks for our core team and external contractors. Collaborated with domain experts (psychometricians) and interacted directly with clients.
  
-<small>Ruby on Rails 2.x, MySQL, MongoDB, Redis, JQuery, Git, GitHub, Airbrake, Lighthouse/FogBugz (2.5 years) ColdFusion, Microsoft SQL Server (legacy LMS, 5 months)</small>
+<small>Ruby on Rails 2.x, MySQL, MongoDB, Redis, JQuery, Git, GitHub, Airbrake, Lighthouse/FogBugz, ColdFusion, Microsoft SQL Server</small>
 
 ### Power to Change
-Web Developer -- May 2007-May 2009
+Web Developer -- *May 2007-May 2009*
 
 > In April 2007, I was able to raise funds for a summer internship that piqued my interest. The project enabled human resources to create forms that applicants could complete online. The project took ten months as a solo-developer, with some assistance from Campus Crusade for Christ U.S.
 > 
@@ -86,14 +86,14 @@ Web Developer -- May 2007-May 2009
 <small>Ruby on Rails 1.2, MySQL, Prototype.js, Subversion, Trac (10 months) WordPress (PHP/MySQL), JQuery, Slideshow Pro, Mercurial (2 months) Microsoft Access (VBA), Microsoft SQL Server, Microsoft Reporting Services</small>
 
 ### Wycliffe Bible Translators Canada
-Volunteer Web Developer -- Sep 2006-Nov 2006
+Volunteer Web Developer -- *Sep 2006-Nov 2006*
 
 > Having an interest in Biblical languages and Wycliffe's mandate, I attended a summer of linguistics program at CanIL. After finishing school, I volunteered with Wycliffe Canada, where I worked on two small projects. The first, a personnel data browser for IT, the other, a tool to format job opportunities into PDFs. I enjoyed the experience, but unfortunately I couldn't volunteer with Wycliffe forever.
 
 <small>Django, Python, PostgreSQL, LDAP</small>
 
 ### Vintacom Media Group
-Web Developer -- Dec 2002-May 2006 
+Web Developer -- *Dec 2002-May 2006*
 
 > Through participation in a local ColdFusion User Group, I was offered a job in the online dating industry. The multi-tenant platform had large datasets, high-traffic, massive mail-outs, and thousands of financial transactions every day (with over 1 million users at its peak). Early on I was entrusted with implementing additional payment gateways, renewals, and better fraud controls.
 > 
@@ -102,21 +102,21 @@ Web Developer -- Dec 2002-May 2006
 <small>ColdFusion, Microsoft SQL Server, IIS, CVS, Userplane</small>
 
 ### Sagebrush Corporation
-Web Developer -- Jun 1999-Dec 2002
+Web Developer -- *Jun 1999-Dec 2002*
 
 > Following the merger of several related companies, I was brought on to design a new web site, incorporating a searchable catalog for Econo-Clad’s rebound books. This was my first foray into e-commerce, and an important transition from mostly static marketing sites to fairly sophisticated web apps (including a portal site and an internal task management tool). My immediate manager was the only other web developer, but we worked among half-a-dozen software developers, whom I was able to glean a lot from. It was also cool that they fed my Apple fanboyism with a ticket to WWDC.
 
 <small>ColdFusion, Microsoft SQL Server, IIS, Visual Source Safe/CVS, Fireworks</small>
 
 ### Canadiana Group Inc.
-Web Developer -- Nov 1997-Jun 1999
+Web Developer -- *Nov 1997-Jun 1999*
 
 > This design firm is where I was introduced to Photoshop, to slice and optimize graphics from our in-house designers. There were 3-4 developers, but we tended to work independently on different projects. Though most web sites were static HTML, we did use client-side and server-side scripting, and even a few databases.
 
 <small>Cold Fusion 3.1, Microsoft Access, JavaScript, Photoshop</small>
 
 ### Pathways Data Systems
-Web Developer -- Jun 1997-Nov 1997
+Web Developer -- *Jun 1997-Nov 1997*
 
 > My entry into web development was in 1997, working part-time on several small web sites. On the side, I developed Hyperprocess, my own static-site generator that supported file includes and other helpful functions (written in C).
 
