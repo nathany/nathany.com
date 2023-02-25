@@ -2,11 +2,11 @@
 title = "My journey into programming"
 description = "How I fell into web development, a memoir."
 date = "2014-03-30"
-revised = "2022-02-01"
+revised = "2023-02-25"
 keywords = ["self-taught", "web developer", "story", "memoir"]
 +++
 
-Today I work for a 🦊 [small consulting company][aai] as a senior developer, writing web apps predominately with 🧪 [Elixir][] and [Phoenix][]. I'm also the author of [Get Programming with Go][programminggo], which was published in 2018.
+Today I work with 🧪 [Elixir][] and [Phoenix][] as a lead developer for [Copia Wealth Studios][copia]. I'm also the author of [Get Programming with Go][programminggo], which was published in 2018.
 
 What follows is my personal account of becoming a programmer and my career.
 
@@ -125,5 +125,6 @@ Related:
 * [Résumé][resume]
 
 [aai]: https://agileanimal.com
+[copia]: https://copiawealthstudios.com/
 [programminggo]: https://bit.ly/getprogrammingwithgo
 [resume]: /resume
