@@ -50,7 +50,7 @@ QuickBasic also allowed me to build a custom database for an alarm installation 
 
 <img src="/images/trialtype.gif" alt="Trial Type 2" class="right">
 
-Eventually I gave Turbo C another try, using DOS `edit` and the command-line compiler instead of that wretched IDE. Later, Borland C++ allowed me to make a Windows version of Trial Type and the far less successful **Graphematics** graphing calculator.
+Eventually I gave Turbo C another try, using DOS `edit` and the command-line compiler instead of that unintuitive IDE. Later, Borland C++ allowed me to make a Windows version of Trial Type and the far less successful **Graphematics** graphing calculator.
 
 Apps were making me money, but I still really wanted to make games. By now I was using C and Assembler and experimenting with Mode X, VESA and EMS/XMS memory. <mark>640K really wasn't enough.</mark> I bought [Watcom C/C++](https://en.wikipedia.org/wiki/Watcom_C) so I could use DOS4GW. It was wondrous!
 
@@ -93,7 +93,7 @@ Go, APIs, and microservices were all the [hype][], but the monolith at work just
 
 Later that year I took a second job, working a few hours a week as a contractor for a 🦊 [small consulting company][aai]. My task was to transition performance-sensitive functionality from Ruby to Go, interacting with Ruby through JSON APIs, message queues like Sidekiq, or Redis pub/sub. Projects included Apple push notifications ([open source][buford]), streaming file uploads to S3, and a websockets proxy.
 
-Then we discovered 🧪 [Elixir][] and [Phoenix][]. Built on [Erlang/OTP][erlang], it promised concurrency and efficiency similar to Go, while Phoenix and Ecto provided the niceties of Ruby on Rails. I wasn't sold at first, having come to appreciate Go's simplicity, static type checking, and fast compiler. Still, I enjoy learning, so [learn I did][elixir-guide].
+Then we discovered 🧪 [Elixir][] and [Phoenix][]. Built on [Erlang/OTP][erlang], it promised concurrency and efficiency similar to Go, while Phoenix and Ecto provided the niceties of Ruby on Rails. I wasn't sold at first, having come to appreciate Go's simplicity, static type checking, and fast compiler. Still, I enjoy learning, so learn I did.
 
 [Elixir]: https://elixir-lang.org/
 [Phoenix]: https://www.phoenixframework.org/
@@ -107,12 +107,10 @@ Then we discovered 🧪 [Elixir][] and [Phoenix][]. Built on [Erlang/OTP][erlang
 
 [buford]: https://github.com/RobotsAndPencils/buford
 [erlang]: https://www.erlang.org/
-[elixir-guide]: https://elixir-lang.org/getting-started/introduction.html
-
 
 ## Next Gen
 
-When I began this career, I didn't know the web would become this open platform for building apps, or that the <abbr title="Software as a Service">SaaS</abbr> model would become a dominate way to distribute software. I fell into web development, and I'm really glad I did!
+When I began my career, I didn't know the web would become an open platform for building apps, or that the <abbr title="Software as a Service">SaaS</abbr> model would become a dominate way to distribute software. I fell into web development, and I'm really glad I did!
 
 As I reminisce of the people and authors who got me to where I am, I think about the next generation of web developers.
 
