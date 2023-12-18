@@ -13,25 +13,25 @@ Alberta, Canada
 
 * Elixir and Phoenix since 2016
 * Author of [Get Programming with Go][programminggo]
-* 6 years of remote work from home
-* 22 years of relational databases and SQL
-* 25 years of web development
+* 7 years of remote work from home
+* 24 years of relational databases and SQL
+* 27 years of web development
 * [Go and Node.js: a comparison](https://youtu.be/N8Fc7RQfmdU) talk (2019)
 
 ### [Copia Wealth Studios](https://copiawealthstudios.com/)
 Lead Developer -- *Mar 2023-present*
 
-<small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, Convox and AppSignal</small>
+<small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, AppSignal</small>
 
 ### [AGiLE ANiMAL](https://agileanimal.com/)
 Senior Developer -- *Feb 2016-Feb 2023*  
 Working with distributed teams.
 
-* **Copia Wealth Studios** (Fintech) -- *Jan 2021-Feb 2023*   
-  Admin portal and data ingestion team lead from May 2022.
+* **Copia Wealth Studios** (Fintech) -- *Jan 2021-Feb 2023*
+  Back office and data ingestion team lead from May 2022.
 
-  * Transition to a new admin portal (LiveView) and improve the underlying data model.
-  * Create and utilize API clients for Morningstar ByAllAccounts (XML) and Yodlee.
+  * Transition to a new back office (LiveView) and improve the underlying data model.
+  * Create an API clients and data ingestion pipeline for Morningstar ByAllAccounts.
   * Provide guidance to junior developers through code reviews and pairing sessions.
   * Backlog grooming, capturing issues and features and breaking down stories in Shortcut.
   * Collaborating with our subject matter expert, product design and API & ML teams.
@@ -115,7 +115,7 @@ Web Developer -- *Dec 2002-Sep 2005, Jan-May 2006*
 Team lead in 2005.
 
 * Worked on a network of online dating websites with over 1 million users (at its peak) and thousands of financial transactions every day.
-* Entrusted with implementing additional payment gateways, renewals and fraud prevention. 
+* Entrusted with implementing additional payment gateways, renewals and fraud prevention.
 * Took a four month sabbatical in 2005 to study at Tauernhof Bible School in Austria.
 
 <small>ColdFusion, Microsoft SQL Server, IIS, CVS and Userplane</small>
@@ -148,7 +148,7 @@ Web Developer -- *Jun 1997-Nov 1997*
 
 [programminggo]: https://bit.ly/getprogrammingwithgo
 
-Related: 
+Related:
 
 * [My journey into programming][dev]
 
