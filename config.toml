@@ -1,13 +1,19 @@
 baseURL = "https://nathany.com"
 languageCode = "en-us"
 title = "Nathan Youngman"
-copyright = "2024 Nathan Youngman"
+copyright = "2025 Nathan Youngman"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [outputFormats.RSS]
 baseName = "articles"
+
+[params]
+copyright-year = '2025'
+[params.author]
+name = "Nathan Youngman"
+email = "git@nathany.com"
 
 [author]
 name = "Nathan Youngman"
