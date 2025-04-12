@@ -17,7 +17,7 @@ jobs:
         env:
           HUGO_VERSION: 0.146.2
       - name: Hugo Build
-        run: $HOME/hugo -v
+        run: $HOME/hugo
       - name: Deploy to S3
         if: github.ref == 'refs/heads/main'
         run: $HOME/hugo -v deploy --maxDeletes -1
