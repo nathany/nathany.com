@@ -5,6 +5,7 @@ copyright = "2025 Nathan Youngman"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
+disableKinds = ["taxonomy", "section"]
 
 [outputFormats.RSS]
 baseName = "articles"
@@ -19,8 +20,8 @@ email = "git@nathany.com"
 name = "Nathan Youngman"
 
 [permalinks]
-post = "/:filename/"
-about = "/:filename/"
+post = "/:contentbasename/"
+about = "/:contentbasename/"
 
 [deployment]
 order = [".png$", ".jpg$", ".gif$", ".svg$"]
