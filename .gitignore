@@ -1,7 +1,9 @@
 .DS_Store
-*.sublime-workspace
 .sass-cache
 .hugo_build.lock
 
-public
-resources/_gen
+# Generated files by hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
