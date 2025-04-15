@@ -1,0 +1,3 @@
+{{- $pastYear := .Get 0 | int -}}
+{{- $currentYear := time.Now.Year -}}
+{{- math.Sub $currentYear $pastYear -}}

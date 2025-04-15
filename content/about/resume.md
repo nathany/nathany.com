@@ -13,9 +13,9 @@ Alberta, Canada
 
 * Elixir and Phoenix since 2016
 * Author of [Get Programming with Go][programminggo]
-* 7 years of remote work from home
-* 24 years of relational databases and SQL
-* 27 years of web development
+* {{< years_ago 2016 >}} years of remote work from home
+* {{< years_ago 1999 >}} years of relational databases and SQL
+* {{< years_ago 1997 >}} years of web development
 * [Go and Node.js: a comparison](https://youtu.be/N8Fc7RQfmdU) talk (2019)
 
 ### [Copia Wealth Studios](https://copiawealthstudios.com/)
