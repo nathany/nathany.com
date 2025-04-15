@@ -15,7 +15,7 @@ In 2017 I became a 🌱 *herbivore* and I have been a 🚶 *pedestrian* all my l
 Related:
 
 * [Résumé][resume]
-* [My journey into programming][dev]
+* [My Journey Into Programming][dev]
 
 [programminggo]: https://bit.ly/getprogrammingwithgo
 
