@@ -21,7 +21,13 @@ Alberta, Canada
 ### [Copia Wealth Studios](https://copiawealthstudios.com/)
 Lead Developer -- *Mar 2023-present*
 
-<small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, AppSignal</small>
+* Lead/co-lead the Data Team, responsible for ingesting data from financial institutions.
+* Establish architectural patterns through <abbr title="Request For Comments">RFCs</abbr>, code, and code generation.
+* Optimize data pipeline by moving business logic to PostgreSQL and SQL.
+* Contribute to the LiveView-based Back Office and React-based customer facing app.
+* Manage backlog and provide regular code reviews.
+
+<small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, Shortcut and AppSignal</small>
 
 ### [AGiLE ANiMAL](https://agileanimal.com/)
 Senior Developer -- *Feb 2016-Feb 2023*  
@@ -37,7 +43,7 @@ Working with distributed teams.
   * Collaborating with our subject matter expert, product design and API & ML teams.
   * Coordinating deployments with frontend teams (React, iOS).
     
-  <small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, Convox and AppSignal</small>
+  <small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, Shortcut and AppSignal</small>
 
 * **Unshuffled** (poker with friends) -- *May 2020-Jan 2021*  
   Elixir backend and websocket API.
