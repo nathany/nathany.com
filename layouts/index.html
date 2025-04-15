@@ -11,7 +11,7 @@
             {{ if .Params.revised }}
               Last revised on {{ .Params.revised | time.Format "2006/01/02" }}.
             {{ else }}
-              Published on {{ .Date.Format | time.Format "2006/01/02" }}.
+              Published on {{ .Date | time.Format "2006/01/02" }}.
             {{ end }}
           </p>
           {{ if .Description }}
