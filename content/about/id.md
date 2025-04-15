@@ -6,9 +6,9 @@ aliases = [
 ]
 +++
 
-Hi.
+Hi, I'm Nathan 👋
 
-I'm Nathan (he/him), 👨🏼‍💻 *lead developer* at [Copia Wealth Studios](https://copiawealthstudios.com/) and ✍🏼 *author* of [Get Programming with Go][programminggo] (Manning Publications, 2018).
+A self-taught developer from 🇨🇦 Canada and ✍️ author of [Get Programming with Go][programminggo] (Manning Publications, 2018).
 
 In 2017 I became a 🌱 *herbivore* and I have been a 🚶 *pedestrian* all my life -- my small contribution towards averting the 🌊 *climate crisis*. I've also been a 🙍🏼‍♂️ *bachelor* all my life, tend to be a 🏠 *homebody*, and have a weakness for 📚 <dfn data-tooltip="piling up books to read later">[tsundoku][]</dfn>.
 
