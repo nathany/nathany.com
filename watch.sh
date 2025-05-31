@@ -1,3 +1,3 @@
-hugo server -D --watch --logLevel info
+hugo server -D -F --watch --logLevel info
 
 
