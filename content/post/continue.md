@@ -6,7 +6,10 @@ keywords = ["game development", "writing", "learning", "habits", "career break",
 draft = true
 +++
 
-For the past 5.5 years I've been working towards early retirement, but more recently I decided to take a career break. In [part I][break], I covered how I got here. Part II covers what I plan to do.
+For the past 5.5 years, I've been working towards early retirement, but more recently I decided to take a career break. This is the second post in a two-part series:
+
+* [Career Break: How I Got Here][break]
+* **Career Break: What Will I Do**
 
 > "Tell me, what is it you plan to do
 >
@@ -34,3 +37,7 @@ writing
 
 [break]: /break
 
+Taking a career break will help answer several questions:
+
+* Will I have the discipline to make progress on my goals and projects?
+* Will I enjoy working on my own projects, or will I miss the camaraderie?
