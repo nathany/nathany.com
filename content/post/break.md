@@ -6,7 +6,7 @@ keywords = ["personal finance", "index funds", "career break", "sabbatical", "Ca
 draft = true
 +++
 
-For the past 5.5 years, I've been working towards early retirement, but more recently I decided to take a career break. This is the first post in a two-part series:
+For the past 5½ years, I've been working towards early retirement, but more recently I decided to take a career break. This is the first post in a two-part series:
 
 * **Career Break: How I Got Here**
 * [Career Break: What Will I Do][continue]
@@ -15,7 +15,7 @@ Let's start by getting some terminology out of the way:
 
 * A *career break* is a broad term for stepping away from a career for any reason at all. It doesn't require permission.
 * A *mini-retirement* is similar, but carries connotations of rest, leisure, and travel. 
-* A *sabbatical* is time-off arranged with an employer, with the expectation of return, and an emphasis on professional development or research. In the case of University professors, a sabbatical leave is often paid.
+* A *sabbatical* is time-off arranged with an employer, with the expectation of return, and an emphasis on professional development or research. In the case of university professors, a sabbatical leave is often paid.
 
 For the purposes of these articles, I'm using the broader term career break.
 
@@ -27,7 +27,7 @@ I was working part-time and enjoying an extra free day every week. But I was sta
 
 ### Fintech
 
-In 2021 I began a new project working in financial technologies (fintech). So in 4.5 years, have I learned any deep insights that impacted my own financial journey?
+In 2021 I began a new project working in financial technologies (fintech). So in 4½ years, have I learned any deep insights that impacted my own financial journey?
 
 No, not really.
 
@@ -35,17 +35,17 @@ The millionaires who need specialized software to manage their wealth are not on
 
 On the other hand, I have one globally diversified index fund, one mortgage, and some cash.
 
-The good news is, if this interests you, you can learn everything you need about personal finance by reading a few books. And I do suggest you read a few books, because **I am not a financial advisor**, and this article is to share my experience, not to provide financial advise.
+The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: I am not a financial advisor, and this article is to share my experience, not to provide financial advise.
 
 ### Mortgage
 
-After renting for decades, I purchased my first house in 2017 with 10% down. Fortunately I don't live in the most expensive of Canadian 🇨🇦 cities, so it was relatively affordable at the time.
+After renting for decades, I purchased my first house in 2017 with 10% down. Fortunately, I don't live in the most expensive of Canadian 🇨🇦 cities, so it was relatively affordable at the time.
 
 My mortgage came up for renewal in late 2022, with interest rates that were difficult to stomach. Such is life, I guess. 🤷🏼‍♂️ I decided to let my investment portfolio coast, while diverting much of my income towards the mortgage.
 
-When I first got a mortgage, I expected to have it paid off in 2042. That is still the case today, even though I've paid off ¾ of my home. The difference is that today my payments are only ~$550 per month.[^1]
+When I first got a mortgage, I planned to have it paid off in 2042. That is still the case today, even though I've paid off ¾ of my home. The difference is that today my payments are only ~$550 per month.[^1]
 
-Compared to renting, my housing costs are quite competitive. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and greater liquidity.
+Compared to renting, my housing costs are quite competitive. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and greater liquidity. I've come to terms with that.
 
 ### House hacking
 
@@ -83,7 +83,7 @@ At the same time, there is still room to reduce some of these numbers:
 
 #### Annually
 
-Those monthly numbers add up to $24,600/year[^1]. From there I have two different scenarios.
+Those monthly numbers add up to $24,600/year. From there I have two different scenarios.
 
 In the **first scenario**, I'm renting out a room for the entire year. That means I'll receive some tax-free income, because the rent is below fair market value. For any income withdrawn from my retirement savings (RRSP 🇨🇦), I need to pay taxes.
 
@@ -105,8 +105,6 @@ $28,000/year entirely from retirement savings
 * ~$2400/year for federal and provincial income tax
 * ~$1000/year for occasional expenses
 
-Note: For a career break of a year or less, I likely wouldn't need to go into this much detail.
-
 ### Withdrawal rate
 
 The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. If my annual expenses are $28K, my <abbr title="Financially Independent">FI</abbr> number would be $700K. Then I could withdraw 4% per year, adjusted for inflation, and have enough money to last 30 years. But I have nowhere near $700K in investments, not even close!
@@ -124,15 +122,15 @@ The 4% rule can be a useful guideline, but there are several problems with it fo
 
 This formula assumes a rate of return of 3% above inflation using a stock+bond portfolio. The book warns that returns will vary, with some years having negative returns, but the formula doesn't attempt to be safe.
 
-Mitigating a market downturn may could be accomplished by using cash savings, tightening spending, or returning to work. For the purposes of a career break, this formula seems reasonable. Just substitute "(years left to live)" with the number of years for a break, and voila!
+Mitigating a market downturn could be accomplished by using cash savings, tightening spending, or returning to work. For the purposes of a career break, this formula seems reasonable. Just substitute "(years left to live)" with the number of years for a break, and voila!
 
 For example, a 3-year career break at $28K/year could be achievable with a $59K in investments. Though, given the volatility of the stock market, I'd prefer $39K in investments and $28K in cash.
 
 ### Cash
 
-Holding too much cash is risky. The *purchasing power* of $1000 today is less than 10 years ago, and it will be less in another 10 years.
+Holding too much cash is risky!
 
-A high-interest savings account may keep pace with inflation, but not always.
+The *purchasing power* of $1000 today is less than 10 years ago, and it will be less in another 10 years. A high-interest savings account may keep pace with inflation, but not always.
 
 Still, there is a place for cash.
 
@@ -144,25 +142,27 @@ It's common advice to have 3-6 months of living expenses saved in case of an eme
 
 For a career break of a year or less, it would make sense to fund it entirely from cash savings. If I were planning a longer career break from the get-go, I would have likely used a combination of cash savings and investments in a TFSA.
 
-However, I was working towards early retirement, so much of my net worth is held in RRSPs. Therefore I have been saving enough cash to at least last until the end of the current calendar year. Next year I can withdraw from my RRSP at a lower tax bracket if I'm not working.
+However, I was working towards early retirement, so much of my net worth is held in RRSPs. Therefore I have been saving enough cash to last until the end of the current calendar year. 
+
+Next year I can withdraw from my RRSP at a lower tax bracket if I'm not working -- though I will lose that contribution room.
 
 #### Cash cushion
 
-In the context of early retirement, a cash cushion is part of a *bucket strategy* to help mitigate the volatility of the stock market. In the long-term the stock market will outperform cash and hedge against inflation, but in the short-term it is volatile.
+In the context of early retirement, a cash cushion is part of a *bucket strategy* to help mitigate the volatility of the stock market. In the long-term, the stock market will outperform cash and hedge against inflation, but in the short-term it is volatile.
 
-Stock market corrections of 5%-20% are fairly common, and may take 3-8 months to recover. Instead of withdrawing from investments, I could live from the cash cushion, and then replenish it after the market recovers. At least that's the idea.
+Stock market *corrections* of 5%-20% are fairly common, and may take 3-8 months to recover. Instead of withdrawing from investments, I could live from the cash cushion, and then replenish it after the market recovers. At least that's the idea.
 
-A stock market crash could take several years to recover. I don't have that much cash! In such an event, I may still need to withdraw when the stock market is down, just in order to live. A cash cushion may help, but it wouldn't be enough to mitigate a market crash entirely. This is where combining the cash cushion with a safe withdrawal rate like the 4% rule would come into play, by having more invested in the first place.
+A stock market *crash* could take several years to recover. I don't have that much cash! In such an event, I may still need to withdraw when the stock market is down, just in order to live. A cash cushion may help, but it wouldn't be enough to mitigate a market crash entirely. This is where combining the cash cushion with a safe withdrawal rate like the 4% rule would come into play, by having more invested in the first place.
 
-Since I'm taking a career break and not retiring yet, the more likely scenario is that I'd just go back to work. If for some reason I couldn't go back to work immediately, having a cash cushion and/or an emergency fund could come in handy.
+Since I'm taking a career break and not retiring yet, the more likely scenario is that I'd just go back to work. If I couldn't return to work immediately, having a cash cushion and/or an emergency fund could come in handy.
 
 Note: Generally it's not advisable to put low performing assets like cash in tax-advantaged accounts, but my cash cushion is in an RRSP because I'm nowhere near the contribution limit.
 
 #### Withholding tax
 
-Withholding tax is specifically for withdrawals from an RRSP. It's a bit like paying income tax on your paycheque even if you get some money back at the end of the year. It's like an interest-free loan for the government.
+Withholding tax is specifically for withdrawals from an RRSP. It's a bit like paying income tax on your paycheque even if you get some money back at the end of the year. An interest-free loan for the government.
 
-For example, if I withdrew $28K from my RRSP, the government would withhold $6400, so I would only receive $21,600. Even though I would only owe $2400 in income tax and should get $4000 back the following year. Crazy, right?
+For example, if I withdrew $28K from my RRSP, the government would withhold $6400, so I would only receive $21,600. Yes, even though I would only owe $2400 in income tax and should get $4000 back the following year. Crazy, right?
 
 Rather than withdrawing even more from my RRSP, I think it makes sense to have an extra $4000 on hand to account for it.
 
@@ -173,7 +173,7 @@ Taking a career break will help answer several questions, which will inform my p
 In relation to finances, it is a test to reign in discretionary spending and live within a smaller budget. How will that feel? It's also an opportunity to experience and learn more about the wealth preservation phase (drawdown) as opposed to wealth accumulation.
 
 All of this is a means to an end. Setting aside the money to enable a career break is important,
-but the real value is in how we use our time. That is a topic I intend to cover in my next post.
+but the real value is in *how we use our time*. That is a topic I intend to cover in my next post.
 
 [continue]: /continue
 [trinity]: https://en.wikipedia.org/wiki/Trinity_study

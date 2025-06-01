@@ -6,7 +6,7 @@ keywords = ["game development", "writing", "learning", "habits", "career break",
 draft = true
 +++
 
-For the past 5.5 years, I've been working towards early retirement, but more recently I decided to take a career break. This is the second post in a two-part series:
+For the past 5½ years, I've been working towards early retirement, but more recently I decided to take a career break. This is the second post in a two-part series:
 
 * [Career Break: How I Got Here][break]
 * **Career Break: What Will I Do**
