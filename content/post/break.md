@@ -15,13 +15,13 @@ Let's start by getting some terminology out of the way:
 
 * A *career break* is a broad term for stepping away from a career for any reason at all. It doesn't require permission.
 * A *mini-retirement* is similar, but carries connotations of rest, leisure, and travel. 
-* A *sabbatical* is time-off arranged with an employer, with the expectation of return, and an emphasis on professional development or research. In the case of university professors, a sabbatical leave is often paid.
+* A *sabbatical* is time off arranged with an employer, with the expectation of return, and an emphasis on professional development or research. In the case of university professors, a sabbatical leave is often paid.
 
 For the purposes of these articles, I'm using the broader term career break.
 
 ## How I got here
 
-In late 2019, I happened upon [<span class="fab fa-youtube fa"></span>The Simple Path to Wealth](https://www.youtube.com/watch?v=T71ibcZAX3I) by JL Collins (Talks at Google). I subsequently binge read several personal finance books, starting with The Simple Path to Wealth 🇺🇸, followed by Wealthing Like Rabbits, Millionaire Teacher, and Quit Like A Millionaire.
+In late 2019, I happened upon [<span class="fab fa-youtube fa"></span>The Simple Path to Wealth](https://www.youtube.com/watch?v=T71ibcZAX3I) by JL Collins (Talks at Google). I subsequently binge-read several personal finance books, starting with The Simple Path to Wealth 🇺🇸, followed by Wealthing Like Rabbits, Millionaire Teacher, and Quit Like A Millionaire.
 
 I was working part-time and enjoying an extra free day every week. But I was starting to think about retirement, maybe early retirement, or even just "F-you money". I decided to go full-time at the beginning of 2020, but rather than inflate my lifestyle, I would invest the difference in low-cost index funds (ETFs).
 
@@ -35,7 +35,7 @@ The millionaires who need specialized software to manage their wealth are not on
 
 On the other hand, I have one globally diversified index fund, one mortgage, and some cash.
 
-The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: I am not a financial advisor, and this article is to share my experience, not to provide financial advise.
+The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: I am not a financial advisor, and this article is to share my experience, not to provide financial advice.
 
 ### Mortgage
 
@@ -55,8 +55,8 @@ I have been renting out a room for much of the 8 years that I've owned this hous
 
 ### Cost of living
 
-Before taking an unpaid leave, I need to know how much money I can live on. For this exercise I'm
-focussed on *surviving comfortably* -- without much for discretionary spending.
+Before taking a career break, I need to know how much money I can live on. For this exercise I'm
+focused on *surviving comfortably* -- without much for discretionary spending.
 
 #### Monthly
 
@@ -100,7 +100,7 @@ In the **second scenario**, I have no rental income for the entire year. Besides
 
 Scenario 2. without rental income
 
-$28,000/year entirely from retirement savings
+$28,000/year ($28K) entirely from retirement savings
 
 * ~$2400/year for federal and provincial income tax
 * ~$1000/year for occasional expenses
@@ -111,7 +111,7 @@ The early retirement crowd likes to promote the 4% safe withdrawal rate from the
 
 The 4% rule can be a useful guideline, but there are several problems with it for my purposes:
 
-* The Trinity study is based on a portfolio of U.S. stocks and bonds. My allocation is different, so the safe withdrawal rate is likely lower[^2], requiring even more savings. 💸
+* The Trinity study is based on a portfolio of U.S. stocks and bonds. My allocation is different, so the safe withdrawal rate is likely lower, requiring even more savings. 💸
 * If I were retiring early, I would hope to live longer than 30 years. 💸
 * But I'm taking a career break, not retiring, so I don't need enough savings for 30 years.
 * A portfolio that could survive the Great Depression without requiring any adjustments may be a little *too conservative* for my tastes.
@@ -142,7 +142,7 @@ It's common advice to have 3-6 months of living expenses saved in case of an eme
 
 For a career break of a year or less, it would make sense to fund it entirely from cash savings. If I were planning a longer career break from the get-go, I would have likely used a combination of cash savings and investments in a TFSA.
 
-However, I was working towards early retirement, so much of my net worth is held in RRSPs. Therefore I have been saving enough cash to last until the end of the current calendar year. 
+However, since I was working towards early retirement, much of my net worth is held in RRSPs. Therefore I have been saving enough cash to last until the end of the current calendar year. 
 
 Next year I can withdraw from my RRSP at a lower tax bracket if I'm not working -- though I will lose that contribution room.
 
@@ -177,7 +177,5 @@ but the real value is in *how we use our time*. That is a topic I intend to cove
 
 [continue]: /continue
 [trinity]: https://en.wikipedia.org/wiki/Trinity_study
-[felix]: https://www.youtube.com/watch?v=1FwgCRIS0Wg
 
 [^1]: All figures are in Canadian dollars. 🍁
-[^2]: [The 2.7% Rule for Retirement Spending][felix]
