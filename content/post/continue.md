@@ -25,9 +25,9 @@ If you're familiar with [my journey into programming][journey], you'll recall my
 
 When I had some free time between jobs in 2012, I gravitated towards graphics programming (OpenGL) while learning Go. Unfortunately I didn't get that far before I went back to working. Those bills won't pay themselves! 💸
 
-When I published *Get Programming with Go* in 2018, part of my motivation was to *pay-it-forward*, being a self-taught developer who learned from books.
+When I published *Get Programming with Go* in 2018, part of my motivation was to *pay it forward*, being a self-taught developer who learned from books.
 
-Making indie games and sharing my learnings are my long term aspirations. I have been saving my pennies and looking forward to fully investing my time and mental capacity into that goal.
+Making indie games and sharing my learnings are my long-term aspirations. I have been saving my pennies and looking forward to fully investing my time and mental capacity into that goal.
 
 ### Goals
 
@@ -35,7 +35,7 @@ As a starting place, I would like to build the skills and experience to confiden
 
 I recently built a new Windows 11 desktop PC with an 8-core Zen 5 CPU and a Radeon 9070 XT GPU. It's totally not *just* for playing video games. Honest!
 
-It's actually taking a little time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 19 years. Fortunately a lot of tools are available for both.
+It's actually taking a little time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 19 years. Fortunately, a lot of tools are available for both.
 
 For now I'm going to hold off on committing to any specific languages or game engines. I'd like to do some more experimentation first.
 
@@ -43,7 +43,7 @@ My other goal is to refresh my blog and do more writing. If I see the makings of
 
 ### Habits
 
-Beyond working on projects for the big goals, there are a number of good habits that I want to invest a little time into every (week)day.
+Beyond working on projects for the big goals, there are a number of good habits that I want to invest a little time into every weekday.
 
 * The usual suspects: exercise and healthy eating. 🌱 🏃🏼
 * Learning to play the piano 🎹
