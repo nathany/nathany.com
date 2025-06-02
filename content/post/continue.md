@@ -45,7 +45,7 @@ My other goal is to refresh my blog and do more writing. If I see the makings of
 
 Beyond working on projects for the big goals, there are a number of good habits that I want to invest a little time into every weekday.
 
-* The usual suspects: exercise and healthy eating. 🌱 🏃🏼
+* The usual suspects: healthy eating and exercise 🌱 🏃🏼
 * Learning to play the piano 🎹
 * Practicing traditional art 🖌️
 * Reading more and sharing book summaries 📕
