@@ -113,8 +113,9 @@ The 4% rule can be a useful guideline, but there are several problems with it fo
 
 * The Trinity study is based on a portfolio of U.S. stocks and bonds. My allocation is different, so the safe withdrawal rate is likely lower, requiring even more savings. 💸
 * If I were retiring early, I would hope to live longer than 30 years. 💸
+* When retiring, it doesn't account for the Canada Pension Plan (CPP) or Old Age Security (OAS).
 * But I'm taking a career break, not retiring, so I don't need enough savings for 30 years.
-* A portfolio that could survive the Great Depression without requiring any adjustments may be a little *too conservative* for my tastes.
+* A portfolio that could survive the Great Depression without requiring any adjustments at all may be a little *too conservative* for my tastes.
 
 *Die With Zero* has a far more *optimistic* formula that Bill Perkins calls the survival threshold. It goes like this:
 
