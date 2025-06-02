@@ -17,7 +17,7 @@ Let's start by getting some terminology out of the way:
 * A *mini-retirement* is similar, but carries connotations of rest, leisure, and travel. 
 * A *sabbatical* is time off arranged with an employer, with the expectation of return, and an emphasis on professional development or research. In the case of university professors, a sabbatical leave is often paid.
 
-For the purposes of these articles, I'm using the broader term career break.
+For the purposes of this post, I'm using the broader term career break.
 
 ## How I got here
 
@@ -35,7 +35,7 @@ The millionaires who need specialized software to manage their wealth are not on
 
 On the other hand, I have one globally diversified index fund, one mortgage, and some cash.
 
-The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: I am not a financial advisor, and this article is to share my experience, not to provide financial advice.
+The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: I am not a financial advisor, and this post is to share my experience, not to provide financial advice.
 
 ### Mortgage
 
@@ -173,7 +173,9 @@ Taking a career break will help answer several questions, which will inform my p
 In relation to finances, it is a test to reign in discretionary spending and live within a smaller budget. How will that feel? It's also an opportunity to experience and learn more about the wealth preservation phase (drawdown) as opposed to wealth accumulation.
 
 All of this is a means to an end. Setting aside the money to enable a career break is important,
-but the real value is in *how we use our time*. That is a topic I intend to cover in my next post.
+but the real value is in *how we use our time*. That is a topic I intend to cover in my [next post][continue].
+
+Until next time. 👋🏼
 
 [continue]: /continue
 [trinity]: https://en.wikipedia.org/wiki/Trinity_study

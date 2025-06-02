@@ -19,25 +19,41 @@ For the past 5½ years, I've been working towards early retirement, but more rec
 
 ## What will I do
 
-my journey into programming
+### North star
 
-childhood dream
-game development
+If you're familiar with [my journey into programming][journey], you'll recall my childhood dream was to **make video games**. Life took a "detour" and I ended up doing [web development for 28 years][28]. 🤷🏼‍♂️
 
-web development for 28 years
+When I had some free time between jobs in 2012, I gravitated towards graphics programming (OpenGL) while learning Go. Unfortunately I didn't get that far before I went back to working. Those bills won't pay themselves! 💸
 
-self-taught
-books
-writing
+When I published *Get Programming with Go* in 2018, part of my motivation was to *pay-it-forward*, being a self-taught developer who learned from books.
+
+Making indie games and sharing my learnings are my long term aspirations. I have been saving my pennies and looking forward to fully investing my time and mental capacity into that goal.
+
+### Goals
+
+As a starting place, I would like to build the skills and experience to confidently participate in a solo game jam like [Ludum Dare][ludum]. Not just programming, but unleashing my creativity in art, animation, sound, music, game design, UX, writing, etc. All the things!
+
+I recently built a new Windows 11 desktop PC with an 8-core Zen 5 CPU and a Radeon 9070 XT GPU. It's totally not *just* for playing video games. Honest!
+
+It's actually taking a little time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 19 years. Fortunately a lot of tools are available for both.
+
+For now I'm going to hold off on committing to any specific languages or game engines. I'd like to do some more experimentation first.
+
+My other goal is to refresh my blog and do more writing. If I see the makings of a book, I've also been wanting to use [Typst][] for a real project.
 
 ### Habits
 
-### Projects
+Beyond working on projects for the big goals, there are a number of good habits that I want to invest a little time into every (week)day.
 
+* The usual suspects: exercise and healthy eating. 🌱 🏃🏼
+* Learning to play the piano 🎹
+* Practicing traditional art 🖌️
+* Reading more and sharing book summaries 📕
+
+We'll have to see how well I do. I may do a follow-up to this series at the end of my career break, and I fully intend to write more posts along the way. Thanks for reading!
 
 [break]: /break
-
-Taking a career break will help answer several questions:
-
-* Will I have the discipline to make progress on my goals and projects?
-* Will I enjoy working on my own projects, or will I miss the camaraderie?
+[journey]: /dev
+[28]: /28
+[Typst]: https://typst.app/
+[ludum]: https://ludumdare.com/
