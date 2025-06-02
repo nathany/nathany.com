@@ -50,7 +50,7 @@ Beyond working on projects for the big goals, there are a number of good habits 
 * Practicing traditional art 🖌️
 * Reading more and sharing book summaries 📕
 
-We'll have to see how well I do. I may do a follow-up to this series at the end of my career break, and I fully intend to write more posts along the way. Thanks for reading!
+We'll have to see how well I do. I may do a follow-up at the end of my career break, and I fully intend to write more posts along the way. Thanks for reading!
 
 [break]: /break
 [journey]: /dev
