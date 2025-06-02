@@ -62,7 +62,7 @@ focused on *surviving comfortably* -- without much for discretionary spending.
 
 These are my numbers:
 
-* ~$1000/month[^1] = mortgage + property tax + home insurance
+* ~$1,000/month[^1] = mortgage + property tax + home insurance
 * ~$500/month = utilities + mobile phone + internet
 * ~$400/month = groceries + personal care
 * ~$150/month = hair cut + transit + discretionary
@@ -94,7 +94,7 @@ Scenario 1. with rental income (below fair market value)
 $27,000/year with a portion coming from rental income
 
 * ~$900/year for federal income tax
-* ~$1500/year for occasional expenses
+* ~$1,500/year for occasional expenses
 
 In the **second scenario**, I have no rental income for the entire year. Besides being lonely, this would require withdrawing more from my retirement savings, and paying a noticeable amount of additional tax. I also take a hit on my budget for occasional expenses.
 
@@ -102,8 +102,8 @@ Scenario 2. without rental income
 
 $28,000/year ($28K) entirely from retirement savings
 
-* ~$2400/year for federal and provincial income tax
-* ~$1000/year for occasional expenses
+* ~$2,400/year for federal and provincial income tax
+* ~$1,000/year for occasional expenses
 
 ### Withdrawal rate
 
@@ -131,7 +131,7 @@ For example, a 3-year career break at $28K/year could be achievable with a $59K 
 
 Holding too much cash is risky!
 
-The *purchasing power* of $1000 today is less than 10 years ago, and it will be less in another 10 years. A high-interest savings account may keep pace with inflation, but not always.
+The *purchasing power* of $1,000 today is less than 10 years ago, and it will be less in another 10 years. A high-interest savings account may keep pace with inflation, but not always.
 
 Still, there is a place for cash.
 
@@ -161,11 +161,11 @@ Note: Generally it's not advisable to put low performing assets like cash in tax
 
 #### Withholding tax
 
-Withholding tax is specifically for withdrawals from an RRSP. It's a bit like paying income tax on your paycheque even if you get some money back at the end of the year. An interest-free loan for the government.
+Withholding tax is specifically for withdrawals from an RRSP. It's a bit like like income tax deducted from your paycheque, even if you get tax return in the end. It's an interest-free loan for the government. 😅
 
-For example, if I withdrew $28K from my RRSP, the government would withhold $6400, so I would only receive $21,600. Yes, even though I would only owe $2400 in income tax and should get $4000 back the following year. Crazy, right?
+For example, if I withdrew $28K from my RRSP, the government would withhold $6,400, so I would only receive $21,600. Yes, even though I would only owe $2,400 in income tax and should get $4,000 back the following year. Crazy, right?
 
-Rather than withdrawing even more from my RRSP, I think it makes sense to have an extra $4000 on hand to account for it.
+Rather than withdrawing even more from my RRSP, I think it makes sense to have an extra $4,000 on hand to account for it.
 
 ## An Experiment
 
