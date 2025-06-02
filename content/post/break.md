@@ -136,7 +136,7 @@ Still, there is a place for cash.
 
 #### Emergency fund
 
-It's common advice to have 3-6 months of living expenses saved in case of an emergency. While working, this is mainly for an unexpected job loss. During a career break, I'm thinking more about home maintenance.
+It's common advice to have 3-6 months of living expenses saved in case of an emergency. While working, this is mainly for unexpected job loss. During a career break, I'm thinking more about home maintenance.
 
 #### Savings
 
@@ -144,7 +144,7 @@ For a career break of a year or less, it would make sense to fund it entirely fr
 
 However, since I was working towards early retirement, much of my net worth is held in RRSPs. Therefore I have been saving enough cash to last until the end of the current calendar year. 
 
-Next year I can withdraw from my RRSP at a lower tax bracket if I'm not working -- though I will lose that contribution room.
+Next year I can withdraw from my RRSP at a lower tax bracket when I'm not working -- though I will lose that contribution room.
 
 #### Cash cushion
 

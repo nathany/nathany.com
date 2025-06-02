@@ -25,7 +25,7 @@ If you're familiar with [my journey into programming][journey], you'll recall my
 
 When I had some free time between jobs in 2012, I gravitated towards graphics programming (OpenGL) while learning Go. Unfortunately I didn't get that far before I went back to working. Those bills won't pay themselves! 💸
 
-When I published *Get Programming with Go* in 2018, part of my motivation was to *pay it forward*, being a self-taught developer who learned from books.
+In 2018 I published *Get Programming with Go*. Being a self-taught developer who learned from books, part of my motivation was to *pay it forward*.
 
 Making indie games and sharing my learnings are my long-term aspirations. I have been saving my pennies and looking forward to fully investing my time and mental capacity into that goal.
 
