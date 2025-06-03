@@ -35,7 +35,7 @@ As a starting place, I would like to build the skills and experience to confiden
 
 I recently built a new Windows 11 desktop with an 8-core Zen 5 CPU and Radeon 9070 XT GPU. It's totally not *just* for playing video games. Honest!
 
-It's taking some time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 24 years. Fortunately, a lot of tools are available on both.
+It's taking some time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 24 years. Fortunately, a lot of tools are available for both.
 
 For now I'm going to hold off on committing to any specific language or game engine. I'd like to do some more experimentation first.
 
