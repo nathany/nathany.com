@@ -11,7 +11,7 @@ For the past 5½ years, I've been working towards early retirement, but more rec
 * **Career Break: How I Got Here**
 * [Career Break: What Will I Do][continue]
 
-Let's start by getting some terminology out of the way:
+Let's start with some terminology:
 
 * A *career break* is a broad term for stepping away from a career for any reason at all. It doesn't require permission.
 * A *mini-retirement* is similar, but carries connotations of rest, leisure, and travel. 
@@ -31,9 +31,9 @@ In 2021 I began a new project working in financial technologies (fintech). So in
 
 No, not really.
 
-The millionaires who need specialized software to manage their wealth are not on the same path as I am. They own companies and real estate investments. And they are invested in a huge array of complicated financial instruments.
+The millionaires who need specialized software to manage their wealth are not on the same path as I am. Besides owning companies and real estate, they are invested in a huge array of complicated financial instruments.
 
-On the other hand, I have one globally diversified index fund, one mortgage, and some cash.
+On the other hand, I have one globally diversified index fund, one mortgage, and some cash. I'm no millionaire, but based on what I've read, there are some millionaires that subscribe to this simple approach.
 
 The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: I am not a financial advisor, and this post is to share my experience, not to provide financial advice.
 
@@ -43,9 +43,9 @@ After renting for decades, I purchased my first house in 2017 with 10% down. For
 
 My mortgage came up for renewal in late 2022, with interest rates that were difficult to stomach. Such is life, I guess. 🤷🏼‍♂️ I decided to let my investment portfolio coast, while diverting much of my income towards the mortgage.
 
-When I first got a mortgage, I planned to have it paid off in 2042. That is still the case today, even though I've paid off ¾ of my home. The difference is that today my payments are only ~$550 per month.[^1]
+When I first got a mortgage, the plan was to pay it off by 2042. That is still the case today, even though I've paid off ¾ of my home. The difference is that today my payments are only ~$550 per month.[^1]
 
-Compared to renting, my housing costs are quite competitive. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and greater liquidity. I've come to terms with that.
+Compared to renting, my housing costs are quite competitive, even when accounting for property taxes, home insurance, and maintenance. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and better liquidity. I've come to terms with that.
 
 ### House hacking
 
@@ -55,7 +55,7 @@ I have been renting out a room for much of the 8 years that I've owned this hous
 
 ### Cost of living
 
-Before taking a career break, I need to know how much money I can live on. For this exercise I'm
+Before taking a career break, I need to know how much money I can live on. For this exercise, I'm
 focused on *surviving comfortably* -- without much for discretionary spending.
 
 #### Monthly
@@ -65,15 +65,15 @@ These are my numbers:
 * ~$1,000/month[^1] = mortgage + property tax + home insurance
 * ~$500/month = utilities + mobile phone + internet
 * ~$400/month = groceries + personal care
-* ~$150/month = hair cut + transit + discretionary
+* ~$150/month = haircut + transit + discretionary
 
 Note: Utilities are ±$100 depending on the season -- this is a 12-month average.
 
 I try to keep my monthly expenses low:
 
 * For one, I don't own a vehicle.
-* There are no monthly subscriptions for entertainment, etc.
-* I keep tabs on rates for power and natural gas.
+* There are no monthly subscriptions for entertainment.
+* I keep tabs on the rates for power and natural gas.
 * I revisit my mobile phone and internet plans occasionally.
 
 At the same time, there is still room to reduce some of these numbers:
@@ -113,19 +113,19 @@ The 4% rule can be a useful guideline, but there are several problems with it fo
 
 * The Trinity study is based on a portfolio of U.S. stocks and bonds. My allocation is different, so the safe withdrawal rate is likely lower, requiring even more savings. 💸
 * If I were retiring early, I would hope to live longer than 30 years. 💸
-* When retiring, it doesn't account for the Canada Pension Plan (CPP) or Old Age Security (OAS).
-* But I'm taking a career break, not retiring, so I don't need enough savings for 30 years.
-* A portfolio that could survive the Great Depression without requiring any adjustments at all may be a little *too conservative* for my tastes.
+* When retiring, it doesn't account for Canada Pension Plan (CPP) or Old Age Security (OAS) payments.
+* Since I'm taking a career break, not retiring, I don't need enough savings for 30 years.
+* A portfolio that could survive the Great Depression without requiring *any* adjustments at all -- that may be a little *too conservative* for my tastes.
 
 *Die With Zero* has a far more *optimistic* formula that Bill Perkins calls the survival threshold. It goes like this:
 
 `Survival threshold = 0.7 x (cost to live one year) x (years left to live)`
 
-This formula assumes a rate of return of 3% above inflation using a stock+bond portfolio. The book warns that returns will vary, with some years having negative returns, but the formula doesn't attempt to be safe.
+This formula assumes a rate of return of 3% above inflation using a portfolio of stocks and bonds. The book warns that returns will vary, with some years having negative returns, but the formula doesn't attempt to be safe.
 
 Mitigating a market downturn could be accomplished by using cash savings, tightening spending, or returning to work. For the purposes of a career break, this formula seems reasonable. Just substitute "(years left to live)" with the number of years for a break, and voila!
 
-For example, a 3-year career break at $28K/year could be achievable with a $59K in investments. Though, given the volatility of the stock market, I'd prefer $39K in investments and $28K in cash.
+For example, a 3-year career break at $28K/year could be accomplished with $59K in investments. Though, given the volatility of the stock market, I'd prefer $39K in investments and $28K in cash.
 
 ### Cash
 
@@ -155,13 +155,13 @@ Stock market *corrections* of 5%-20% are fairly common, and may take 3-8 months 
 
 A stock market *crash* could take several years to recover. I don't have that much cash! In such an event, I may still need to withdraw when the stock market is down, just in order to live. A cash cushion may help, but it wouldn't be enough to mitigate a market crash entirely. This is where combining the cash cushion with a safe withdrawal rate like the 4% rule would come into play, by having more invested in the first place.
 
-Since I'm taking a career break and not retiring yet, the more likely scenario is that I'd just go back to work. If I couldn't return to work immediately, having a cash cushion and/or an emergency fund could come in handy.
+Since I'm taking a career break and not retiring yet, the more likely scenario is that I'd just go back to work. If I weren't able to return to work immediately, having a cash cushion and/or an emergency fund could come in handy.
 
 Note: Generally it's not advisable to put low performing assets like cash in tax-advantaged accounts, but my cash cushion is in an RRSP because I'm nowhere near the contribution limit.
 
 #### Withholding tax
 
-Withholding tax is specifically for withdrawals from an RRSP. It's a bit like like income tax deducted from your paycheque, even if you get tax return in the end. It's an interest-free loan for the government. 😅
+Withholding tax is specifically for withdrawals from an RRSP. It's a bit like income tax deducted from your paycheque, even if you get a tax return in the end. It's an interest-free loan to the government. 😅
 
 For example, if I withdrew $28K from my RRSP, the government would withhold $6,400, so I would only receive $21,600. Yes, even though I would only owe $2,400 in income tax and should get $4,000 back the following year. Crazy, right?
 
@@ -171,7 +171,7 @@ Rather than withdrawing even more from my RRSP, I think it makes sense to have a
 
 Taking a career break will help answer several questions, which will inform my plans for retirement in ways a spreadsheet simply can't.
 
-In relation to finances, it is a test to reign in discretionary spending and live within a smaller budget. How will that feel? It's also an opportunity to experience and learn more about the wealth preservation phase (drawdown) as opposed to wealth accumulation.
+In relation to finances, it is a test to rein in discretionary spending and live within a smaller budget. How will that feel? It's also an opportunity to experience and learn more about the wealth preservation phase (drawdown) as opposed to wealth accumulation.
 
 All of this is a means to an end. Setting aside the money to enable a career break is important,
 but the real value is in *how we use our time*. That is a topic I intend to cover in my [next post][continue].
