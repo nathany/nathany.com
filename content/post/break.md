@@ -3,7 +3,6 @@ title = "Career Break: How I Got Here"
 description = "Stepping away. The numbers."
 date = "2025-06-06"
 keywords = ["personal finance", "index funds", "career break", "sabbatical", "Canada"]
-draft = true
 +++
 
 For the past 5½ years, I've been working towards early retirement, but more recently I decided to take a career break. This is the first post in a two-part series:
