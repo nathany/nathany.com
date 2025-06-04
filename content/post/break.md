@@ -106,7 +106,7 @@ $28,000/year ($28K) entirely from retirement savings
 
 ### Withdrawal rate
 
-The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. If my annual expenses are $28K, my <abbr title="Financially Independent">FI</abbr> number would be $700K. Then I could withdraw 4% per year, adjusted for inflation, and have enough money to last 30 years. But I have nowhere near $700K in investments, not even close!
+The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. If my annual expenses are $28K, my <abbr title="Financially Independent">FI</abbr> number would be $700K. Then I could withdraw 4% per year, adjusted for inflation, and have enough money to last 30 years. But I have nowhere near $700K in investments, not even close! 🤑
 
 The 4% rule can be a useful guideline, but there are several problems with it for my purposes:
 
