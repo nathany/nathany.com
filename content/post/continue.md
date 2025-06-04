@@ -20,7 +20,7 @@ For the past 5½ years, I've been working towards early retirement, but more rec
 
 ### North star
 
-If you're familiar with [my journey into programming][journey], you'll recall my childhood dream was to **make video games**. Life took a "detour" and I ended up doing [web development for 28 years][28]. 🤷🏼‍♂️
+If you're familiar with [my journey into programming][journey], you'll recall my childhood dream was to **make video games**. 👾 Life took a "detour" and I ended up doing [web development for 28 years][28]. 🤷🏼‍♂️
 
 When I had some free time between jobs in 2012, I gravitated towards graphics programming (OpenGL) while learning Go. Unfortunately I didn't get that far before I went back to working. Those bills won't pay themselves! 💸
 
