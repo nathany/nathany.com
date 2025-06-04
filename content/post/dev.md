@@ -16,7 +16,7 @@ What follows is a personal account of becoming a programmer and my career as a w
 
 <img src="/images/atari.jpg" alt="Playing Atari Games" class="right" />
 
-I grew up on Lego, Dr. Seuss, and Berenstain Bears in a tiny Alberta 🇨🇦 village. After my parents divorce, an Atari Computer found its way into our home. As far as I knew, its sole purpose was to play video games. 🕹
+I grew up on Lego, Dr. Seuss, and Berenstain Bears in a tiny Canadian 🇨🇦 village. After my parents divorce, an Atari Computer found its way into our home. As far as I knew, its sole purpose was to play video games. 🕹
 
 Then one day the school library held a book fair where I found a colourful book filled with short BASIC programs. I don't recall the title, but it was likely one of the books published by Usborne.
 
