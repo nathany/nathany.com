@@ -34,9 +34,9 @@ As a starting place, I would like to build the skills and experience to confiden
 
 I recently built a new Windows 11 desktop with an 8-core Zen 5 CPU and Radeon 9070 XT GPU. It's totally not *just* for playing video games. Honest!
 
-It's taking some time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 24 years. Fortunately, a lot of tools are available for both.
+It has taken some time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 24 years. Fortunately, a lot of tools are available for both, and I also have the option of installing Linux.
 
-For now I'm going to hold off on committing to any specific language or game engine. I'd like to do some more experimentation first.
+For now I'm going to hold off on committing to any specific language or game framework. I'd like to do some more experimentation first.
 
 My other goal is to refresh my blog and do more writing. If I see the makings of a book, I've also been wanting to use [Typst][] for a real project.
 
@@ -49,7 +49,7 @@ Beyond working on projects for the big goals, there are a number of good habits 
 * Practicing traditional art 🖌️
 * Reading more and sharing book summaries 📕
 
-My career break begins on July 1, 2025. I may do a follow-up at the end, and I fully intend to write more posts along the way. Thanks for reading!
+My career break begins on July 1, 2025. I may do a follow-up in a year on how it went, and I fully intend to write more posts along the way. Thanks for reading!
 
 [break]: /break
 [journey]: /dev
