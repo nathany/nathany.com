@@ -5,7 +5,7 @@ date = "2025-06-06"
 keywords = ["game development", "writing", "learning", "habits", "career break", "sabbatical", "Canada"]
 +++
 
-For the past 5½ years, I've been working towards early retirement, but more recently I decided to take a career break. This is the second post in a two-part series:
+For the past 5½ years, I've been saving towards retirement, but I recently decided to take a career break. This is the second post in a two-part series:
 
 * [Career Break: How I Got Here][break]
 * **Career Break: What Will I Do**

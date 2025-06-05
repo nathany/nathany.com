@@ -5,7 +5,7 @@ date = "2025-06-06"
 keywords = ["personal finance", "index funds", "career break", "sabbatical", "Canada"]
 +++
 
-For the past 5½ years, I've been working towards early retirement, but more recently I decided to take a career break. This is the first post in a two-part series:
+For the past 5½ years, I've been saving towards retirement, but I recently decided to take a career break. This is the first post in a two-part series:
 
 * **Career Break: How I Got Here**
 * [Career Break: What Will I Do][continue]
@@ -44,7 +44,7 @@ My mortgage came up for renewal in late 2022, with interest rates that were diff
 
 When I first got a mortgage, the plan was to pay it off by 2042. That is still the case today, even though I've paid off ¾ of my home. The difference is that today my payments are only ~$550 per month.[^1]
 
-Compared to renting, my housing costs are quite competitive, even when accounting for property taxes, home insurance, and maintenance. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and better liquidity. I've come to terms with that.
+Compared to renting, my housing costs are quite competitive, even when accounting for property tax, home insurance, and maintenance. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and better liquidity. I've come to terms with that.
 
 ### House hacking
 
@@ -106,17 +106,9 @@ $28,000/year ($28K) entirely from retirement savings
 
 ### Withdrawal rate
 
-The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. If my annual expenses are $28K, my <abbr title="Financially Independent">FI</abbr> number would be $700K. Then I could withdraw 4% per year, adjusted for inflation, and have enough money to last 30 years. But I have nowhere near $700K in investments, not even close! 🤑
+The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. Based on the 4% rule, I have nowhere near enough to retire, but I'm also not retiring right now. So is there another formula that will work?
 
-The 4% rule can be a useful guideline, but there are several problems with it for my purposes:
-
-* The Trinity study is based on a portfolio of U.S. stocks and bonds. My allocation is different, so the safe withdrawal rate is likely lower, requiring even more savings. 💸
-* If I were retiring early, I would hope to live longer than 30 years. 💸
-* When retiring, it doesn't account for Canada Pension Plan (CPP) or Old Age Security (OAS) payments.
-* Since I'm taking a career break, not retiring, I don't need enough savings for 30 years.
-* A portfolio that could survive the Great Depression without requiring *any* adjustments at all -- that may be a little *too conservative* for my tastes.
-
-*Die With Zero* has a far more *optimistic* formula that Bill Perkins calls the survival threshold. It goes like this:
+In *Die With Zero*, Bill Perkins provides a formula that he calls the survival threshold. It goes like this:
 
 `Survival threshold = 0.7 x (cost to live one year) x (years left to live)`
 
@@ -124,7 +116,7 @@ This formula assumes a rate of return of 3% above inflation using a portfolio of
 
 Mitigating a market downturn could be accomplished by using cash savings, tightening spending, or returning to work. For the purposes of a career break, this formula seems reasonable. Just substitute "(years left to live)" with the number of years for a break, and voila!
 
-For example, a 3-year career break at $28K/year could be accomplished with $59K in investments. Though, given the volatility of the stock market, I'd prefer $39K in investments and $28K in cash.
+For example, a 3-year career break at $28K/year could be accomplished with $59K in investments. To mitigate volatility, we could plug two years into the formula and have a one-year cash cushion (more on that next). That would require $39K in investments and $28K in cash.
 
 ### Cash
 
