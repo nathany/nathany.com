@@ -132,9 +132,9 @@ It's common advice to have 3-6 months of living expenses saved in case of an eme
 
 #### Savings
 
-For a career break of a year or less, it would make sense to fund it entirely from cash savings. If I were planning a longer career break from the get-go, I would have likely used a combination of cash savings and investments in a TFSA.
+For a career break of a year or less, it would make sense to fund it entirely from cash savings. If I were planning a longer career break from the get-go, I would've likely used a combination of cash savings and investments in a TFSA.
 
-However, since I was working towards early retirement, much of my net worth is held in RRSPs. Therefore I have been saving enough cash to last until the end of the current calendar year. 
+However, since I was saving towards retirement, much of my net worth is held in RRSPs. Therefore I have been saving enough cash to last until the end of the current calendar year.
 
 Next year I can withdraw from my RRSP at a lower tax bracket when I'm not working -- though I will lose that contribution room.
 
@@ -148,17 +148,15 @@ A stock market *crash* could take several years to recover. I don't have that mu
 
 Since I'm taking a career break and not retiring yet, the more likely scenario is that I'd just go back to work. If I weren't able to return to work immediately, having a cash cushion and/or an emergency fund could come in handy.
 
-Note: Generally it's not advisable to put low performing assets like cash in tax-advantaged accounts, but my cash cushion is in an RRSP because I'm nowhere near the contribution limit.
-
 #### Withholding tax
 
 Withholding tax is specifically for withdrawals from an RRSP. It's a bit like income tax deducted from your paycheque, even if you get a tax return in the end. It's an interest-free loan to the government. 😅
 
 For example, if I withdrew $28K from my RRSP, the government would withhold $6,400, so I would only receive $21,600. Yes, even though I would only owe $2,400 in income tax and should get $4,000 back the following year. Crazy, right?
 
-Rather than withdrawing even more from my RRSP, I think it makes sense to have an extra $4,000 on hand to account for it.
+Rather than withdrawing even more from my RRSP, I think it makes sense to set aside $4,000 to account for withholding tax. I'm repurposing half of my emergency fund for this.
 
-## An Experiment
+### An Experiment
 
 Taking a career break will help answer several questions, which will inform my plans for retirement in ways a spreadsheet simply can't.
 
