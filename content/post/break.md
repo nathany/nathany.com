@@ -44,7 +44,7 @@ My mortgage came up for renewal in late 2022, with interest rates that were diff
 
 When I first got a mortgage, the plan was to pay it off by 2042. That is still the case today, even though I've paid off ¾ of my home. The difference is that today my payments are only ~$550 per month.[^1]
 
-Compared to renting, my housing costs are quite competitive, even when accounting for property tax, home insurance, and maintenance. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and better liquidity. I've come to terms with that.
+Compared to renting, my housing costs are quite competitive, even when accounting for property taxes, home insurance, and maintenance. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and better liquidity. I've come to terms with that.
 
 ### House hacking
 
