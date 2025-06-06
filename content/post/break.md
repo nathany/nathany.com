@@ -13,7 +13,7 @@ For the past 5½ years, I've been saving towards retirement, but I recently deci
 Let's start with some terminology:
 
 * A *career break* is a broad term for stepping away from a career for any reason at all. It doesn't require permission.
-* A *mini-retirement* is similar, but carries connotations of rest, leisure, and travel. 
+* A *mini-retirement* is similar, but carries connotations of rest, leisure, and travel.
 * A *sabbatical* is time off arranged with an employer, with the expectation of return, and an emphasis on professional development or research. In the case of university professors, a sabbatical leave is often paid.
 
 For the purposes of this post, I'm using the broader term career break.
@@ -44,7 +44,7 @@ My mortgage came up for renewal in late 2022, with interest rates that were diff
 
 When I first got a mortgage, the plan was to pay it off by 2042. That is still the case today, even though I've paid off ¾ of my home. The difference is that today my payments are only ~$550 per month.[^1]
 
-Compared to renting, my housing costs are quite competitive, even when accounting for property taxes, home insurance, and maintenance. The downside is that I have a large percentage of my net worth locked up in home equity, rather than invested in assets with higher returns and better liquidity. I've come to terms with that.
+Compared to renting, my housing costs are quite competitive, even when accounting for property taxes, home insurance, and maintenance. The downside is that a large percentage of my net worth is locked up in home equity, rather than invested in assets with higher returns and better liquidity. I've come to terms with that.
 
 ### House hacking
 
@@ -55,7 +55,7 @@ I have been renting out a room for much of the 8 years that I've owned this hous
 ### Cost of living
 
 Before taking a career break, I need to know how much money I can live on. For this exercise, I'm
-focused on *surviving comfortably* -- without much for discretionary spending.
+focused on *surviving comfortably* -- without that much for discretionary spending.
 
 #### Monthly
 
@@ -140,7 +140,7 @@ Next year I can withdraw from my RRSP at a lower tax bracket when I'm not workin
 
 #### Cash cushion
 
-In the context of early retirement, a cash cushion is part of a *bucket strategy* to help mitigate the volatility of the stock market. In the long-term, the stock market will outperform cash and hedge against inflation, but in the short-term it is volatile.
+In the context of retirement, a cash cushion is part of a *bucket strategy* to help mitigate the volatility of the stock market. In the long-term, the stock market will outperform cash and hedge against inflation, but in the short-term it is volatile.
 
 Stock market *corrections* of 5%-20% are fairly common, and may take 3-8 months to recover. Instead of withdrawing from investments, I could live from the cash cushion, and then replenish it after the market recovers. At least that's the idea.
 
@@ -150,9 +150,9 @@ Since I'm taking a career break and not retiring yet, the more likely scenario i
 
 #### Withholding tax
 
-Withholding tax is specifically for withdrawals from an RRSP. It's a bit like income tax deducted from your paycheque, even if you get a tax return in the end. It's an interest-free loan to the government. 😅
+Withholding tax is specifically for withdrawals from an RRSP. It's a bit like income tax deducted from your paycheque, even if you get a tax return in the end.
 
-For example, if I withdrew $28K from my RRSP, the government would withhold $6,400, so I would only receive $21,600. Yes, even though I would only owe $2,400 in income tax and should get $4,000 back the following year. Crazy, right?
+For example, if I withdrew $28K from my RRSP, the government would withhold $6,400, so I would only receive $21,600. Yes, even though I would only owe $2,400 in income tax and should get $4,000 back the following year. It's an interest-free loan to the government. 😅
 
 Rather than withdrawing even more from my RRSP, I think it makes sense to set aside $4,000 to account for withholding tax. I'm repurposing half of my emergency fund for this.
 
