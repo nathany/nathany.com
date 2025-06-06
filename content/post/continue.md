@@ -26,33 +26,37 @@ When I had some free time between jobs in 2012, I gravitated towards graphics pr
 
 When I published *Get Programming with Go* in 2018, part of my motivation was to *pay it forward*, being a self-taught developer who learned from books.
 
-Making indie games and sharing my learnings are my long-term aspirations. I have been saving my pennies and looking forward to fully investing my time and mental capacity into that goal.
+Learning how to make indie games and sharing my learnings are my long-term aspirations. I have been saving my pennies and looking forward to fully investing my time and mental capacity into that goal.
 
 ### Goals
 
 As a starting place, I would like to build the skills and experience to confidently participate in a solo game jam like [Ludum Dare][ludum]. Not just programming, but unleashing my creativity in art, animation, sound, music, game design, UX, writing... *all the things!*
 
+I'd like to do some experimentation before committing to any specific language or game framework. For game jams, I intend to pick a light-weight framework that supports WebAssembly, such as [Ebitengine][] or [Macroquad][].
+
+Longer-term, I'm interested in graphics programming and game development from scratch. I like learning how things work. Shipping finished games is secondary for me, at least right now.
+
 I recently built a new Windows 11 desktop with an 8-core Zen 5 CPU and Radeon 9070 XT GPU. It's totally not *just* for playing video games. Honest!
 
 It has taken some time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 24 years. Fortunately, a lot of tools are available for both.
-
-For now I'm going to hold off on committing to any specific language or game framework. I'd like to do some more experimentation first.
 
 My other goal is to refresh my blog and do more writing. If I see the makings of a book, I've also been wanting to use [Typst][] for a real project.
 
 ### Habits
 
-Beyond working towards the big goals, there are a number of habits that I want to invest time into every week.
+Beyond working towards the big goals, I plan to invest some time into these habits every week:
 
 * The usual suspects: healthy eating and exercise 🌱 🏃🏼
 * Learning to play the piano 🎹
 * Practicing traditional art 🖌️
 * Reading more and sharing book summaries 📕
 
-My career break begins on July 1, 2025. I may do a follow-up in a year on how it all went, and I fully intend to write more posts along the way. Thanks for reading!
+My career break begins on July 1, 2025. 🇨🇦 I may do a follow-up in a year on how it went, and I fully intend to write more posts along the way. Thanks for reading!
 
 [break]: /break
 [journey]: /dev
 [28]: /28
 [Typst]: https://typst.app/
 [ludum]: https://ludumdare.com/
+[Ebitengine]: https://ebitengine.org/
+[Macroquad]: https://macroquad.rs/
