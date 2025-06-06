@@ -1,6 +1,6 @@
 +++
 title = "Career Break: What Will I Do"
-description = "Watching grasshoppers. The Summer Day."
+description = "Watching grasshoppers on a summer day."
 date = "2025-06-06"
 keywords = ["game development", "writing", "learning", "habits", "career break", "sabbatical", "Canada"]
 +++
