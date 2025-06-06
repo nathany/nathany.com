@@ -42,7 +42,7 @@ My other goal is to refresh my blog and do more writing. If I see the makings of
 
 ### Habits
 
-Beyond working towards the big goals, there are a number of habits that I want to invest a little time into every weekday.
+Beyond working towards the big goals, there are a number of habits that I want to invest time into every week.
 
 * The usual suspects: healthy eating and exercise 🌱 🏃🏼
 * Learning to play the piano 🎹
