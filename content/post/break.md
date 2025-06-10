@@ -30,9 +30,9 @@ In 2021 I began a new project working in financial technologies (fintech). So in
 
 No, not really.
 
-The millionaires who need specialized software to manage their wealth are not on the same path as I am. Besides owning companies and real estate, they are invested in a huge array of complicated financial instruments.
+The people who need specialized software to manage their wealth are not on the same path as I am. Besides owning companies and real estate, they are invested in a huge array of complicated financial instruments.
 
-On the other hand, I have one globally diversified index fund, one mortgage, and some cash. I'm no millionaire, but based on what I've read, there are some millionaires that subscribe to this simple approach.
+On the other hand, I have one globally diversified index fund, one mortgage, and some cash.
 
 The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: I am not a financial advisor, and this post is to share my experience, not to provide financial advice.
 
@@ -71,7 +71,7 @@ Note: Utilities are ±$100 depending on the season -- this is a 12-month average
 I try to keep my monthly expenses low:
 
 * For one, I don't own a vehicle.
-* There are no monthly subscriptions for entertainment.
+* No monthly subscriptions for entertainment.
 * I keep tabs on the rates for power and natural gas.
 * I revisit my mobile phone and internet plans occasionally.
 
@@ -95,7 +95,7 @@ $27,000/year with a portion coming from rental income
 * ~$900/year for federal income tax
 * ~$1,500/year for occasional expenses
 
-In the **second scenario**, I have no rental income for the entire year. Besides being lonely, this would require withdrawing more from my retirement savings, and paying a noticeable amount of additional tax. I also take a hit on my budget for occasional expenses.
+In the **second scenario**, I have no rental income for the entire year. This would require withdrawing more from my retirement savings, and paying a noticeable amount of additional tax. I also take a hit to my budget for occasional expenses.
 
 Scenario 2. without rental income
 
@@ -116,7 +116,7 @@ This formula assumes a rate of return of 3% above inflation using a portfolio of
 
 Mitigating a market downturn could be accomplished by using cash savings, tightening spending, or returning to work. For the purposes of a career break, this formula seems reasonable. Just substitute "(years left to live)" with the number of years for a break, and voila!
 
-For example, a 3-year career break at $28K/year could be accomplished with $59K in investments. To mitigate volatility, we could plug two years into the formula and have a one-year cash cushion (more on that next). That would require $39K in investments and $28K in cash.
+For example, a 3-year career break at $28K/year could be accomplished with $59K in investments. To mitigate volatility, I would plug two years into the formula and have a one-year cash cushion (more on that next). That would require $39K in investments and $28K in cash.
 
 ### Cash
 
@@ -154,7 +154,7 @@ Withholding tax is specifically for withdrawals from an RRSP. It's a bit like in
 
 For example, if I withdrew $28K from my RRSP, the government would withhold $6,400, so I would only receive $21,600. Yes, even though I would only owe $2,400 in income tax and should get $4,000 back the following year. It's an interest-free loan to the government. 😅
 
-Rather than withdrawing even more from my RRSP, I think it makes sense to set aside $4,000 to account for withholding tax. I'm repurposing half of my emergency fund for this.
+Rather than withdrawing even more from my RRSP, I think it makes sense to set aside $4,000 to account for withholding tax. I plan to repurpose some of my emergency fund for this.
 
 ### An Experiment
 

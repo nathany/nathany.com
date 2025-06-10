@@ -36,7 +36,7 @@ I'd like to do some experimentation before committing to any specific language o
 
 Longer-term, I'm interested in graphics programming and game development from scratch. I like learning how things work. Shipping finished games is secondary for me, at least right now.
 
-I recently built a new Windows 11 desktop with an 8-core Zen 5 CPU and Radeon 9070 XT GPU. It's totally not *just* for playing video games. Honest!
+I recently built a new Windows 11 desktop with an 8-core Zen 5, Radeon 9070 XT, and a 32" 4K QD-OLED monitor. It's totally not *just* for playing video games. Honest!
 
 It has taken some time to familiarize myself with working on Windows again, as I've been using macOS for development for the past 24 years. Fortunately, a lot of tools are available for both.
 
@@ -51,7 +51,7 @@ Beyond working towards the big goals, I plan to invest some time into these habi
 * Practicing traditional art 🖌️
 * Reading more and sharing book summaries 📕
 
-My career break begins on July 1, 2025. 🇨🇦 I may do a follow-up in a year on how it went, and I fully intend to write more posts along the way. Thanks for reading!
+My career break begins on July 1, 2025 -- Canada Day. 🇨🇦 I have a number of ambitious goals for the coming year, probably *too many?* I plan to do a follow-up in a year on how it went, and I fully intend to write more posts along the way. Thanks for reading!
 
 [break]: /break
 [journey]: /dev
