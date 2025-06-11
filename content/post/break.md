@@ -142,11 +142,11 @@ Next year I can withdraw from my RRSP at a lower tax bracket when I'm not workin
 
 In the context of retirement, a cash cushion is part of a *bucket strategy* to help mitigate the volatility of the stock market. In the long-term, the stock market will outperform cash and hedge against inflation, but in the short-term it is volatile.
 
-Stock market *corrections* of 5%-20% are fairly common, and may take 3-8 months to recover. Instead of withdrawing from investments, I could live from the cash cushion, and then replenish it after the market recovers. At least that's the idea.
+Stock market *corrections* of 5%-20% are fairly common, and may take 3-8 months to recover. Instead of withdrawing from investments, I could live from a cash cushion, and then replenish it after the market recovers. At least that's the idea.
 
-A stock market *crash* could take several years to recover. I don't have that much cash! In such an event, I may still need to withdraw when the stock market is down, just in order to live. A cash cushion may help, but it wouldn't be enough to mitigate a market crash entirely. This is where combining the cash cushion with a safe withdrawal rate like the 4% rule would come into play, by having more invested in the first place.
+A stock market *crash* could take several years to recover. I don't have that much cash! In such an event, I may still need to withdraw when the stock market is down, just in order to live. A cash cushion may help, but it wouldn't be enough to mitigate a market crash entirely.
 
-Since I'm taking a career break and not retiring yet, the more likely scenario is that I'd just go back to work. If I weren't able to return to work immediately, having a cash cushion and/or an emergency fund could come in handy.
+Since I'm taking a career break and not retiring yet, in the event of a crash, I'd just go back to work. If I weren't able to return to work immediately, having a cash cushion and/or an emergency fund could come in handy.
 
 #### Withholding tax
 
