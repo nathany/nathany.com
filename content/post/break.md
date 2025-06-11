@@ -106,7 +106,7 @@ $28,000/year ($28K) entirely from retirement savings
 
 ### Withdrawal rate
 
-The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. Based on the 4% rule, I have nowhere near enough to retire, but I'm also not retiring right now. So is there another formula that will work?
+The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. Based on the 4% rule, I have nowhere near enough to retire, but I'm not retiring right now. So is there another formula that will work?
 
 In *Die With Zero*, Bill Perkins provides a formula that he calls the survival threshold. It goes like this:
 
@@ -116,7 +116,7 @@ This formula assumes a rate of return of 3% above inflation using a portfolio of
 
 Mitigating a market downturn could be accomplished by using cash savings, tightening spending, or returning to work. For the purposes of a career break, this formula seems reasonable. Just substitute "(years left to live)" with the number of years for a break, and voila!
 
-For example, a 3-year career break at $28K/year could be accomplished with $59K in investments. To mitigate volatility, I would plug two years into the formula and have a one-year cash cushion (more on that next). That would require $39K in investments and $28K in cash.
+For example, a 3-year career break at $28K/year could be accomplished with $59K in investments. To mitigate volatility, I could plug two years into the formula and have a one-year cash cushion (more on that next). That would require $39K in investments and $28K in cash.
 
 ### Cash
 
