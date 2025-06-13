@@ -1,7 +1,7 @@
 +++
 title = "Career Break: How I Got Here"
 description = "Stepping away. The numbers."
-date = "2025-06-06"
+date = "2025-06-13"
 keywords = ["personal finance", "index funds", "career break", "sabbatical", "Canada"]
 +++
 
@@ -30,11 +30,11 @@ In 2021 I began a new project working in financial technologies (fintech). So in
 
 No, not really.
 
-The people who need specialized software to manage their wealth are not on the same path as I am. Besides owning companies and real estate, they are invested in a huge array of complicated financial instruments.
+The high-net-worth individuals who need specialized software to manage their wealth are not on the same path as I am. Besides owning companies and real estate, they are invested in a huge array of complicated financial instruments.
 
 On the other hand, I have one globally diversified index fund, one mortgage, and some cash.
 
-The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: I am not a financial advisor, and this post is to share my experience, not to provide financial advice.
+The good news is, if this interests you, you can learn everything you need to know about personal finance by reading a few books. And I do suggest you read a few books, because disclaimer: this post is to share my experience, not to provide financial advice.
 
 ### Mortgage
 
@@ -55,7 +55,7 @@ I have been renting out a room for much of the 8 years that I've owned this hous
 ### Cost of living
 
 Before taking a career break, I need to know how much money I can live on. For this exercise, I'm
-focused on *surviving comfortably* -- without that much for discretionary spending.
+focused on *surviving comfortably* -- without much for discretionary spending.
 
 #### Monthly
 
@@ -106,7 +106,7 @@ $28,000/year ($28K) entirely from retirement savings
 
 ### Withdrawal rate
 
-The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. Based on the 4% rule, I have nowhere near enough to retire, but I'm not retiring right now. So is there another formula that will work?
+The early retirement crowd likes to promote the 4% safe withdrawal rate from the [Trinity study][trinity]. Based on the 4% rule, I have nowhere near enough to retire, but I'm not retiring yet. So is there another formula that will work?
 
 In *Die With Zero*, Bill Perkins provides a formula that he calls the survival threshold. It goes like this:
 
