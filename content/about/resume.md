@@ -7,19 +7,19 @@ aliases = [
 +++
 
 **Nathan Youngman**  
-Alberta, Canada
+Canada 🇨🇦
 
 ### Highlights
 
 * Elixir and Phoenix since 2016
 * Author of [Get Programming with Go][programminggo]
-* {{< years_ago 2016 >}} years of remote work from home
-* {{< years_ago 1999 >}} years of relational databases and SQL
-* {{< years_ago 1997 >}} years of web development
+* 9 years of remote work from home
+* 26 years of relational databases and SQL
+* 28 years of web development
 * [Go and Node.js: a comparison](https://youtu.be/N8Fc7RQfmdU) talk (2019)
 
 ### [Copia Wealth Studios](https://copiawealthstudios.com/)
-Lead Developer -- *Mar 2023-present*
+Lead Developer -- *Mar 2023-June 2025*
 
 * Lead/co-lead the Data Team, responsible for ingesting data from financial institutions.
 * Establish architectural patterns through <abbr title="Request For Comments">RFCs</abbr>, code, and code generation.
@@ -29,7 +29,7 @@ Lead Developer -- *Mar 2023-present*
 
 <small>Elixir, Phoenix, LiveView, GraphQL, Oban, PostgreSQL, Shortcut and AppSignal</small>
 
-### [AGiLE ANiMAL](https://agileanimal.com/)
+### [AGiLE ANiMAL](https://www.agileanimal.com/)
 Senior Developer -- *Feb 2016-Feb 2023*  
 Working with distributed teams.
 
@@ -77,7 +77,7 @@ Contract work from *Dec 2014-Jan 2016*.
 * Various experimental projects -- *Dec 2014-Dec 2015*  
   Built Go services (Apple push notifications client, streaming file uploads to S3) for use from Ruby through JSON APIs, message queues (Sidekiq) or Redis pub/sub.
 
-### [Jobber](https://getjobber.com/)
+### [Jobber](https://www.getjobber.com/)
 Senior Software Developer -- *Oct 2012-Feb 2015*  
 Jobber's first employee.
 

@@ -8,7 +8,7 @@ keywords = ["self-taught", "web developer", "story", "memoir"]
 
 Hi, I'm Nathan 👋
 
-A self-taught developer from 🇨🇦 Canada and ✍️ author of [Get Programming with Go][programminggo] (Manning Publications, 2018).
+A self-taught developer from Canada 🇨🇦 and author ✍️ of [Get Programming with Go][programminggo] (Manning Publications, 2018).
 
 What follows is a personal account of becoming a programmer and my career as a web developer.
 
@@ -16,13 +16,13 @@ What follows is a personal account of becoming a programmer and my career as a w
 
 <img src="/images/atari.jpg" alt="Playing Atari Games" class="right" />
 
-I grew up on Lego, Dr. Seuss, and Berenstain Bears in a tiny Alberta 🇨🇦 village. After my parents divorce, an Atari Computer found its way into our home. As far as I knew, its sole purpose was to play video games. 🕹
+I grew up on Lego, Dr. Seuss, and Berenstain Bears in a tiny Canadian 🇨🇦 village. After my parents' divorce, an Atari Computer found its way into our home. As far as I knew, its sole purpose was to play video games. 🕹
 
 Then one day the school library held a book fair where I found a colourful book filled with short BASIC programs. I don't recall the title, but it was likely one of the books published by Usborne.
 
 When my Dad saw my interest, he gave me a coil-bound manual for BASIC and let me use his [Kaypro](https://en.wikipedia.org/wiki/Kaypro) IV on the weekends. It came with several games, including interactive fiction like *Colossal Cave* and *Hitchhiker's Guide to the Galaxy*, some of which were distributed with BASIC source code.
 
-The first computer I owned was a Commodore 16 from a garage sale, tape drive and all! I wrote a historic text adventure where your character wandered Israel in search of Jesus. It wasn't  sophisticated or well-researched, but one of my first computer projects.
+The first computer I owned was a Commodore 16 from a garage sale, tape drive and all! I wrote a historic text adventure where your character wandered Israel in search of Jesus. It wasn't very sophisticated or well-researched, but one of my first computer projects.
 
 ## Youth
 
@@ -42,7 +42,7 @@ While in Grade 9, my Mom helped me pay for a correspondence course from <abbr ti
 Resolved in my future career path, I wrote a letter to
 Nintendo and received a genuine response encouraging me in my studies to become a programmer.
 
-<img src="/images/firebirds.png" alt="Playing Atari Games" class="right">
+<img src="/images/firebirds.png" alt="Firebirds" class="right">
 
 So, inspired by Galaga and other <abbr title="Shoot 'em up">SHMUPs</abbr>, my brother and I set out to make **Firebirds**. It was a complete game, with title screens, difficulty levels, 2-players, sound effects, and both mouse and keyboard control. It wasn't exactly [Raptor](https://en.wikipedia.org/wiki/Raptor:_Call_of_the_Shadows) though. It had timing issues on faster computers and the "scrolling" and collision system were amateurish.   We distributed it through local Bulletin Board Systems (BBS).
 
@@ -52,9 +52,9 @@ QuickBasic also allowed me to build a custom database for an alarm installation 
 
 <img src="/images/trialtype.gif" alt="Trial Type 2" class="right">
 
-Eventually I gave Turbo C another try, using DOS `edit` and the command-line compiler instead of that unintuitive IDE. Later, Borland C++ allowed me to make a Windows version of Trial Type and the far less successful **Graphematics** graphing calculator.
+Eventually I gave Turbo C another try, using DOS `edit` and the command-line compiler instead of that unintuitive IDE. Later, Borland C++ allowed me to make a Windows version of Trial Type and the less successful **Graphematics** graphing calculator.
 
-Apps were making me money, but I still really wanted to make games. By now I was using C and Assembler and experimenting with Mode X, VESA and EMS/XMS memory. <mark>640K really wasn't enough.</mark> I bought [Watcom C/C++](https://en.wikipedia.org/wiki/Watcom_C) so I could use DOS4GW. It was wondrous!
+Apps were making me money, but I still really wanted to make games. By now I was using C and Assembly and experimenting with Mode X (320x240) and VESA modes. <mark>640K really wasn't enough.</mark> I was directly addressing EMS/XMS memory, until I bought [Watcom C/C++](https://en.wikipedia.org/wiki/Watcom_C) so I could use DOS4GW. It was wondrous!
 
 The Internet turned out to be quite useful. I was able to assemble a team of artists to work on a real-time strategy game entitled **Galaxy**. We got a prototype up and running, but it lost momentum. The rise of DirectX brought the question of whether to continue or switch technologies. In the end, the prototype was as far as we got.
 
@@ -74,7 +74,7 @@ Though I didn't know it at the time, ColdFusion, Java, JavaScript, PHP, and Ruby
 
 ## All Aboard
 
-I was on sabbatical in Europe when I first heard of a new web framework. *Ruby on Rails* enticed me with its <abbr title="Object-Relational Mapper">ORM</abbr> and organized file layout. To top it off, my Dad worked for 🛤 <abbr title="Canadian National Railway">CN</abbr> when I was young, so anything remotely associated with trains was appealing.
+I was in Europe on sabbatical in 2005 when I first heard of *Ruby on Rails*. The new web framework enticed me with its <abbr title="Object-Relational Mapper">ORM</abbr> and organized file layout. To top it off, my Dad worked for 🛤 <abbr title="Canadian National Railway">CN</abbr> when I was young, so anything remotely associated with trains was appealing.
 
 After returning from Bible school to celebrate Christmas, I found a copy of _Agile Web Development with Rails_ (Pragmatic Bookshelf, 2005) at the local computer bookstore. I did some freelancing until I was hired by a Christian non-profit to build an app with Ruby on Rails. Thus I transitioned my career, with Ruby becoming my primary language for the next eight years, across another [three jobs][resume].
 
@@ -121,11 +121,11 @@ Writing a book was far from easy, but it was extremely fulfilling to hear from p
 
 ## Alchemy
 
-In early 2016, I became an employee at a 🦊 [small consulting company][aai].
+In early 2016, I became an employee at the 🦊 [small consulting company][aai] I had been contracted with previously.
 
 We had just discovered 🧪 [Elixir][] and [Phoenix][]. Built on [Erlang/OTP][erlang], it promised concurrency and efficiency similar to Go, while Phoenix and Ecto provided the niceties of Ruby on Rails. I wasn't sold at first, having come to appreciate Go's simplicity, static type checking, and fast compiler. Still, I enjoy learning, so learn I did.
 
-Elixir has kept me busy for the better part of 9 years, building products for [several companies][resume]. It's a really nice language, that's well suited for web development.
+Elixir has kept me busy for the better part of over 9 years, building products for [several companies][resume].
 
 [Elixir]: https://elixir-lang.org/
 [Phoenix]: https://www.phoenixframework.org/
@@ -134,9 +134,9 @@ Elixir has kept me busy for the better part of 9 years, building products for [s
 
 ## 28 Years Later
 
-When I began my career, I didn't know the web would become an open platform for building apps, or that the <abbr title="Software as a Service">SaaS</abbr> model would become a dominate way to distribute software. I fell into web development, and it worked out incredibly well!
+When I began my career, I didn't know the web would become an open platform for building apps, or that the <abbr title="Software as a Service">SaaS</abbr> model would become a dominant way to distribute software. I fell into web development, and it worked out incredibly well, despite [a few mistakes][28] along the way.
 
-What comes next? That's a story for another time.
+What comes next? That's [another story][continue].
 
 Related:
 
@@ -144,3 +144,5 @@ Related:
 
 [copia]: https://copiawealthstudios.com/
 [resume]: /resume
+[continue]: /continue
+[28]: /28
