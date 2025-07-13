@@ -113,7 +113,7 @@ In this case, Windows would work fine, since `c_long` is 32-bits there. On macOS
 
 Though this result isn't guaranteed. What we have here is genuine undefined behaviour (UB). 🙀
 
-The `labs` function on macOS or Linux is expecting 64-bits, but we only provide 32-bits. That means the upper 32-bits could be garbage left-over in CPU registers. The result is undefined. In this case, the function should not even be marked as `safe`. As it says in [The Rust Programming Language][rustbook] book:
+The `labs` function on macOS or Linux is expecting 64-bits, but we only provide 32-bits. That means the upper 32-bits could be garbage left-over in CPU registers. The result is undefined. In this case, the function shouldn't even be marked as `safe`. As it says in [The Rust Programming Language][rustbook] book:
 
 > Marking a function as `safe` does not inherently make it safe! Instead, it is like a promise you are making to Rust that it *is* safe.
 
