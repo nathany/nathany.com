@@ -115,7 +115,7 @@ In this case, the function should not be marked as `safe`. As it says in [The Ru
 
 > Marking a function as `safe` does not inherently make it safe! Instead, it is like a promise you are making to Rust that it *is* safe.
 
-At the time of this writing, the upcoming third edition of The Rust Programming Language book has a similar example, except they use `abs` instead of `labs`. That function doesn't exhibit the same issues, because C's `int` happens to be 32-bits on macOS, Windows, and Linux. Still, I have [opened an issue][bookissue] to request a few minor tweaks, in hopes of making readers aware of `std::ffi::c_int` and friends.
+At the time of this writing, the upcoming third edition of The Rust Programming Language book has a [similar example][rustbook], except they use `abs` instead of `labs`. That function doesn't exhibit the same issues, because C's `int` happens to be 32-bits on macOS, Windows, and Linux. Still, I have [opened an issue][bookissue] to request a few minor tweaks, in hopes of making readers aware of `std::ffi::c_int` and friends.
 
 By using `std::ffi::c_long` in the previous example, the Rust type properly matches the C type, the FFI is safe, and the Rust compiler can help us out.
 
