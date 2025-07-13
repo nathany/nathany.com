@@ -75,7 +75,7 @@ Currently there are no clippy warnings to indicate that there could be a compile
 
 Up until now, we've been exploring the "happy" path. 😅
 
-The previous code used `std::ffi::c_long`, so the compiler was able to help us out, even if only on the platforms where there was a type mismatch.
+The previous code uses `std::ffi::c_long`, so the compiler was able to help us out, even if only on the platforms where there was a type mismatch.
 
 Imagine if someone were unaware of `c_long` and didn't realize that `long` means different things on different platforms. This is a very real possibility, as Rust is an attractive proposition to programmers coming from scripting languages. It's even in the motto:
 
@@ -117,7 +117,7 @@ In this case, the function should not be marked as `safe`. As it says in [The Ru
 
 At the time of this writing, the upcoming third edition of The Rust Programming Language book has a similar example, except they use `abs` instead of `labs`. That function doesn't exhibit the same issues, because C's `int` happens to be 32-bits on macOS, Windows, and Linux. Still, I have [opened an issue][bookissue] to request a few minor tweaks, in hopes of making readers aware of `std::ffi::c_int` and friends.
 
-By using `std::ffi::c_long` in the previous example, the Rust type properly matches the C types, the FFI is safe, and the Rust compiler can help us out.
+By using `std::ffi::c_long` in the previous example, the Rust type properly matches the C type, the FFI is safe, and the Rust compiler can help us out.
 
 ## Takeaways
 
