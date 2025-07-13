@@ -129,6 +129,8 @@ By using `std::ffi::c_long` in the previous example, the Rust type properly matc
 * Remember that `std::ffi::c_long` isn't the same as `i32` or `i64` or even `isize`. It's something different. Likewise for `c_ulong` for unsigned long.
 * It's a good idea to compile and test on multiple platforms if you can. GitHub Actions are your friend.
 
+If we *absolutely* had to use some C code that takes a `long` or `unsigned long`, I haven't provided a solution for making it work cross-platform. The Rust compiler suggests the `try_into()` method as one option, which would result in an "out of range integral type conversion attempted" error for numbers that don't fit into a 32-bit integer on Windows. You could handle that in various ways, from a panic to returning a Result. Of course there are other solutions, and what's best will depend on the specific situation.
+
 If you want to play around with the examples, the source code for my [little experiment][experiment] is up on GitHub. There's also a [pure C experiment][cexperiment] where Visual Studio (MSVC) provides adequate warnings, but only at warning level 3 or greater. Rust's compile-time errors are certainly an improvement, but only if the FFI boundary is declared correctly.
 
 I hope you found this exploration of C `long` interesting.
