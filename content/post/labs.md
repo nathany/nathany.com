@@ -69,7 +69,7 @@ println!("Absolute value of {num}: {}", labs(num));
 
 The compiler errors are really great, but the only way to see them is to compile on multiple platforms.
 
-Currently there are no clippy warnings to indicate that there could be a compiler failure on another platform. I considered [suggesting it][clippy] to see what the Rust community thinks, but clippy isn't accepting any new lint suggestions right now. Maybe later. 🤷🏼‍♂️
+Currently there are no clippy warnings to indicate that there could be a compiler error on another platform. I considered [suggesting it][clippy] to see what the Rust community thinks, but clippy isn't accepting any new lint suggestions right now. Maybe later. 🤷🏼‍♂️
 
 ## It could be worse
 
