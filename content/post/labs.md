@@ -95,6 +95,8 @@ Now we get truncation at runtime on Windows -- and a failing test. Truncation fr
 
 > Absolute value of -9876543210: 1286608618
 
+😬
+
 ## The real trouble is yet to come
 
 For completeness, let's explore what happens if we incorrectly declare `labs` to accept and return an `i32`:
@@ -109,7 +111,7 @@ In this case, Windows would work fine, since `c_long` is 32-bits there. On macOS
 
 > Absolute value of -42: -42
 
-Though this result isn't guaranteed. What we have here is genuine undefined behaviour (UB). The `labs` function on macOS or Linux is expecting 64-bits, but we only provide 32-bits. That means the upper 32-bits could be garbage left-over in CPU registers. The result is undefined.
+Though this result isn't guaranteed. What we have here is genuine undefined behaviour (UB). 🙀 The `labs` function on macOS or Linux is expecting 64-bits, but we only provide 32-bits. That means the upper 32-bits could be garbage left-over in CPU registers. The result is undefined.
 
 In this case, the function should not be marked as `safe`. As it says in [The Rust Programming Language][rustbook] book:
 
