@@ -25,7 +25,7 @@ Today we're going to pick on `labs` because it uses `long`, and there's somethin
 
 ## Rust has our back, mostly
 
-Now, there is no practical reason to call C from Rust to compute an absolute value, as Rust has perfectly good [abs][] methods. But humour me. And to make it interesting, let's try passing an i64 to a function that accepts a c_long:
+Now, there is no practical reason to call C from Rust to compute an absolute value, as Rust has perfectly good [abs][]. But humour me. And to make it interesting, let's try passing an i64 to a function that accepts a c_long:
 
 ```rust
 use std::ffi::c_long;
