@@ -1,5 +1,5 @@
 +++
-title = "My Journey Into Programming"
+title = "🕸️ My Journey Into Programming"
 description = "How I fell into web development, a memoir."
 date = "2014-03-30"
 revised = "2025-04-15"
@@ -66,7 +66,7 @@ At that time the web was still relatively new. I remember reading the HTML 2.0 s
 
 It wasn't long before I wrote a command-line tool to make HTML easier to work with. **HyperProcess** was a cross-platform preprocessor for HTML written in C. It supported file includes and other features, while also serving to lint and minify my HTML. Think static-site generator sans-Markdown, or [Jamstack][] before the rise of JavaScript and RESTful APIs.
 
-HyperProcess came in handy at my first web development job, but at my next job I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do _real_ programming. I stuck with ColdFusion for eight years across [three jobs][resume]. 
+HyperProcess came in handy at my first web development job, but at my next job I discovered Server Side Includes and eventually ColdFusion. By the turn of the century, familiarity with SQL, ColdFusion, and JavaScript made for a platform where I could do _real_ programming. I stuck with ColdFusion for eight years across [three jobs][resume].
 
 Though I didn't know it at the time, ColdFusion, Java, JavaScript, PHP, and Ruby were all released in 1995 -- the same year I graduated from High School. Impeccable timing for a budding web developer.
 

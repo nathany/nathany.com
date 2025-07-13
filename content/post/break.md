@@ -1,5 +1,5 @@
 +++
-title = "Career Break: How I Got Here"
+title = "💸 Career Break: How I Got Here"
 description = "Stepping away. The numbers."
 date = "2025-06-13"
 keywords = ["personal finance", "index funds", "career break", "sabbatical", "Canada"]

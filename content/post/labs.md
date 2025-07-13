@@ -1,5 +1,5 @@
 +++
-title = "Hello FFI"
+title = "🦀 Hello FFI"
 description = "Foot guns at the labs."
 date = "2025-07-12"
 keywords = ["c", "cpp", "rust", "ffi", "foreign function interface", "long", "cross-platform"]
