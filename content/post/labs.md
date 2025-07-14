@@ -2,6 +2,7 @@
 title = "🦀 Hello FFI"
 description = "Foot guns at the labs."
 date = "2025-07-12"
+revised = "2025-07-14"
 keywords = ["c", "cpp", "rust", "ffi", "foreign function interface", "long", "cross-platform"]
 +++
 
@@ -71,7 +72,7 @@ The compiler errors are really great, but the only way to see them is to compile
 
 Currently there are no clippy warnings to indicate that there could be a compiler error on another platform. I considered [suggesting it][clippy] to see what the Rust community thinks, but clippy isn't accepting new lint suggestions right now. Maybe later. 🤷🏼‍♂️
 
-## It could be worse
+## But what if we make a mistake?
 
 Up until now, we've been exploring the "happy" path. 😅
 
@@ -91,13 +92,22 @@ unsafe extern "C" {
 
 It continues to work fine on macOS or Linux, where C's `long` is 64-bits, but what about on Windows where `long` is 32-bits? Well, now it compiles. Rust doesn't know what types the C function actually takes, so getting it right is entirely up to us!
 
-Now we get truncation at runtime on Windows -- and a failing test. Truncation from a 64-bit signed integer to a 32-bit signed integer is implementation-defined behaviour in C. It is considered "safe" by Rust's definition, but it results in a platform specific logic bug:
+Now we get truncation at runtime on Windows -- and a failing test.
 
 > Absolute value of -9876543210: 1286608618
 
 😬
 
-## The real trouble is yet to come
+**Correction:** In the original version of this article, I thought that this was still considered safe because in C the truncation from a 64-bit signed integer to a 32-bit signed integer is implementation defined behaviour. The following C code isn't undefined behaviour (UB), even on Windows, but an **incorrect type signature** at the FFI boundary does introduce UB, and is therefore **unsafe**.
+
+```c
+int64_t big_val = -9876543210LL; // This is bigger than 32-bit long on Windows
+int64_t result = labs(big_val); // Passing int64_t to function expecting long
+```
+
+Thanks to equeim over at [reddit][] for pointing out my mistake. 👍🏻
+
+## Even more undefined behaviour
 
 For completeness, let's explore what happens if we incorrectly declare `labs` to accept and return an `i32`:
 
@@ -111,9 +121,11 @@ In this case, Windows would work fine, since `c_long` is 32-bits there. On macOS
 
 > Absolute value of -42: -42
 
-Though this result isn't guaranteed. What we have here is genuine undefined behaviour (UB). 🙀
+Though this result isn't guaranteed. What we have here is yet more undefined behaviour (UB). 🙀
 
-The `labs` function on macOS or Linux is expecting 64-bits, but we only provide 32-bits. That means the upper 32-bits could be garbage left-over in CPU registers. The result is undefined. In this case, the function shouldn't even be marked as `safe`. As it says in [The Rust Programming Language][rustbook] book:
+The `labs` function on macOS or Linux is expecting 64-bits, but we only provide 32-bits. That means the upper 32-bits could be garbage left-over in CPU registers. The result is undefined. The type signature is once again incorrect (at least on some platforms).
+
+So the function shouldn't be marked as `safe`. As it says in [The Rust Programming Language][rustbook] book:
 
 > Marking a function as `safe` does not inherently make it safe! Instead, it is like a promise you are making to Rust that it *is* safe.
 
@@ -145,6 +157,7 @@ Until next time. 👋🏼
 [bookissue]: https://github.com/rust-lang/book/issues/4443
 [clippy]: https://github.com/rust-lang/rust-clippy/issues
 [c_long]: https://doc.rust-lang.org/1.88.0/std/ffi/type.c_long.html
+[reddit]: https://www.reddit.com/r/rust/comments/1lyjok1/hello_ffi_foot_guns_at_the_labs/
 
 [^1]: What I find perplexing is that it's not a difference in CPU architecture (x64 vs. arm64), nor is it compiler-specific (clang will produce warnings on Windows but not on macOS or vice versa). It was a platform choice.
 [^2]: It's totally reasonable that Microsoft wanted `long` to mean 32-bits on both 64-bit and 32-bit Windows systems for backwards compatibility, and I'm sure Unix systems had good reasons for making `long` 64-bit on 64-bit systems. It's the combination of both that warrants a face palm.
