@@ -49,6 +49,6 @@ $base-vertical-margin: 1.75em;
     background-size: $background-size;
 
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        background-image: url("#{$filename}@2x.#{$extension}");
+        background-image: url("#{$filename}_2x.#{$extension}");
     }
 }
