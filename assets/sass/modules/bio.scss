@@ -68,18 +68,26 @@ $border-width: 8px;
     @media (min-width: $horizontal) {
         width: 512px + 160px + ($border-width * 2);
         height: 200px + ($border-width * 2);
+        display: grid;
+        grid-template-columns: 256px 160px 1fr;
+        grid-template-rows: 200px;
+        gap: 1rem;
 
         .portrait {
-            float: left;
+            grid-column: 1;
             height: 200px;
         }
 
         .book-cover {
             @include retina-image(images/book-cover-wide, 160px 200px, png);
-            margin-right: 1rem;
-            float: left;
+            grid-column: 2;
             width: 160px;
             height: 200px;
+        }
+
+        .text {
+            grid-column: 3;
+            padding: 0 1rem 0.5rem 0;
         }
     }
 
