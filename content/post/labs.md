@@ -98,12 +98,7 @@ Now we get truncation at runtime on Windows -- and a failing test.
 
 😬
 
-**Correction:** In the original version of this article, I thought that this was still considered safe because in C the truncation from a 64-bit signed integer to a 32-bit signed integer is implementation defined behaviour. The following C code isn't undefined behaviour (UB), even on Windows, but an **incorrect type signature** at the FFI boundary does introduce UB, and is therefore **unsafe**.
-
-```c
-int64_t big_val = -9876543210LL; // This is bigger than 32-bit long on Windows
-int64_t result = labs(big_val); // Passing int64_t to function expecting long
-```
+**Correction:** In the original version of this article, I thought that this was still considered safe because in C the truncation from a 64-bit signed integer to a 32-bit signed integer is implementation defined behaviour. That's not undefined behaviour (UB), but an **incorrect type signature** does introduce UB, and is therefore **unsafe**.
 
 Thanks to equeim over at [reddit][] for pointing out my mistake. 👍🏻
 
