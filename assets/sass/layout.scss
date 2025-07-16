@@ -6,9 +6,18 @@ $max-width: 64rem;
 $visual-grid: false;
 
 #page {
-  @include outer-container;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
 
-  article {
-    padding: 0 1rem;
-  }
+    // Clearfix for containing floats
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    article {
+        padding: 0 1rem;
+    }
 }
