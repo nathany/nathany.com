@@ -6,6 +6,10 @@
 @import "colors";
 @import "typography";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f9f9f9;
   color: $color5;
