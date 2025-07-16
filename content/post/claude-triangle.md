@@ -216,7 +216,9 @@ Whenever the chime sounds in Zed, I look through the summary of what Claude acco
 
 These are all challenges I expect to face when I go to write something myself. But I take comfort in knowing that I can switch Zed from "Write" to "Ask" and request Claude's help with any problems that arise.
 
-That makes tackling something as big and complex as graphics programming a little less scary. 🤖 ❤️ 🫖
+That makes tackling something as big and complex as graphics programming a little less scary.
+
+🤖 ❤️ 🫖
 
 [^1]: I must've forgot to use sudo. The title is a reference to [xkcd 149][xkcd]: sudo make me a sandwich.
 [^2]: Zed for Windows is [compiled from source][zedwin] while awaiting a beta release. It's pretty rough.
