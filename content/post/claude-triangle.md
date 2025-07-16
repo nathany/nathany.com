@@ -206,7 +206,7 @@ These low-level graphics APIs are already tricky enough. There's CPU memory and 
 
 Based on my observations, I think trying to add structure to the code exacerbated these issues and made everything more difficult.
 
-That's not to say that I don't still want structure. Just that it will come in due time, once I've learned more and I'm working on a real project instead of a prototype. Will I ask Claude to write the code to create that structure? Right now, I'm thinking not, but we shall see.
+That's not to say that I don't want structure. Just that it will come in due time, once I've learned more and I'm working on a real project instead of a prototype. Will I ask Claude to write the code to create that structure? Right now, I'm thinking not, but we shall see.
 
 ## Conclusion
 
@@ -216,7 +216,7 @@ Whenever the chime sounds in Zed, I look through the summary of what Claude acco
 
 These are all challenges I expect to face when I go to write something myself. But I take comfort in knowing that I can switch Zed from "Write" to "Ask" and request Claude's help with any problems that arise.
 
-That makes tackling something as big and complex as Vulkan and graphics programming a little less scary. 🤖 ❤️ 🫖
+That makes tackling something as big and complex as graphics programming a little less scary. 🤖 ❤️ 🫖
 
 [^1]: I must've forgot to use sudo. The title is a reference to [xkcd 149][xkcd]: sudo make me a sandwich.
 [^2]: Zed for Windows is [compiled from source][zedwin] while awaiting a beta release. It's pretty rough.
