@@ -188,9 +188,9 @@ While setting up a new project, Claude found that the GLSL shaders weren't compi
 Now, it's probably a good thing that Claude isn't adding every package imaginable to a project. That could cause its own set of problems.
 But using battle-tested libraries instead of rolling everything from scratch is a best practice.
 
-Another case of Not Invented Here is being unaware of `cargo fix --edition` when asked to upgrade a project to Rust 2024. Instead Claude started making all the changes by hand, decided it was too complex, and figured it should roll its own script.
+Another case of *not invented here* is being unaware of `cargo fix --edition` when asked to upgrade a project to Rust 2024. Instead Claude started making all the changes by hand, decided it was too complex, and figured it should roll its own script.
 
-As a human programmer, I'll default to the solution that is the least amount of effort and the most reliable. Like using an existing libraries or checking to see if there are tools to help with an upgrade. To do otherwise would require a very compelling reason. Conservation of energy is part of being human -- maybe not so much for AI?
+As a human programmer, I'll default to the solution that is the least amount of effort and the most reliable. Like using existing libraries or looking for tools to help with an upgrade. To do otherwise would require a very compelling reason. Conservation of energy is part of being human -- maybe not so much for AI?
 
 [cargofix]: https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-extern.html#migration
 
