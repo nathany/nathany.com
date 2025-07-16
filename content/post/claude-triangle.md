@@ -7,36 +7,17 @@ keywords = ["Claude", "agentic", "Zed", "Rust", "Vulkan", "DirectX", "Direct3D"]
 
 I've been exploring graphics programming once again, with [Claude Sonnet 4][Claude] doing the heavy-lifting.
 
-The goal: build a "Bunny Mark" benchmark while exploring various graphics APIs and 🦀 Rust crates.
-
-Here's what we've done so far:
-
-* Render a blue background with [Ash][] and [Vulkan][] -- yeah, I didn't make it all the way to a triangle.[^1] 😅
-* Attempt to modularize the Vulkan code with Claude.
-* Attempt to switch from Ash to [Vulkano][], a higher-level safe wrapper for Ash, to compare the diff.
-* Start over with [Direct3D 11][d3d11] and the [windows][] crate -- [this time successfully][fmdx]! 🎉
-* Experiment with Kenny Kerr's Direct3D 12 [triangle sample for Rust][d3d12rs] while finding my way around the [PIX][] profiler/debugger.
-* Complete a fresh Vulkan 1.4 implementation of [Ferris Mark][fmvk] with Kyle Mayes' [vulkanalia][].
+The goal: build a Bunny Mark benchmark while exploring various graphics APIs and 🦀 Rust crates.
 
 [<img alt="Ferris Mark VK" class="full" src="/images/ferris-mark-vk.gif">][fmvk]
 
+It's only a few steps beyond the classic triangle, requiring textured quads with alpha blending, clamping for pixel-perfect scaling, some light "physics" for motion and collisions, basic metrics gathering, and sprite batching to minimize draw calls. Easy! 😅
+
 This post is an exploration of what I've learned along the way with regards to:
 
-* 🦀 the Rust language and its ecosystem
 * 🌋 Vulkan and ☢️ DirectX
 * 🤖 Claude and the intersection between AI and graphics programming
-
-[Ash]: https://github.com/ash-rs/ash
-[Vulkan]: https://www.vulkan.org/
-[Vulkano]: https://github.com/vulkano-rs/vulkano
-[windows]: https://github.com/microsoft/windows-rs/
-[d3d11]: https://learn.microsoft.com/en-us/windows/win32/direct3d11/atoc-dx-graphics-direct3d-11
-[d3d12rs]: https://github.com/microsoft/windows-rs/tree/master/crates/samples/windows/direct3d12
-[PIX]: https://devblogs.microsoft.com/pix/introduction/
-[vulkanalia]: https://github.com/KyleMayes/vulkanalia
-
-[fmdx]: https://github.com/nathany/ferris-mark-dx
-[fmvk]: https://github.com/nathany/ferris-mark-vk
+* 🦀 the Rust language and its ecosystem
 
 ## Some background
 
@@ -53,44 +34,57 @@ As far as Rust, I'm still learning that too. Though I've started to read every e
 [rustbyexample]: https://doc.rust-lang.org/rust-by-example/
 [rustbook]: https://doc.rust-lang.org/book/
 
-In terms of "agentic programming", I have some previous experience with [Claude][] and [MCP][] for web development, though I haven't needed MCP for graphics programming yet.
+### Zed and Claude
 
-[MCP]: https://modelcontextprotocol.io/introduction
-
-## My setup
-
-* Windows 11
-* [Zed][] code editor[^2]
-* [Claude desktop][ClaudeDesktop] or [claude.ai][]
-* [Vulkan SDK][], etc. as needed
-
-Zed is one of many "agentic" editors. It can scan through project files, consult documentation online, edit code,
-build it, run it and see the logs. If we were pair programming, it would be like letting Claude drive. It runs in a loop and can correct mistakes when a build fails, or even do `println!` debugging. 🤯
+I'm using the [Zed][] code editor on Windows[^1], one of several "agentic" coding options. It can scan through project files, consult documentation, edit code, build it, run it, and see the logs. If we were pair programming, it would be like letting Claude drive. It runs in a loop and can correct mistakes when a build fails, or even do `println!` debugging. 🤯
 
 I'm currently using [Claude Sonnet 4][Claude] in Zed with:
 
 * GitHub Copilot Pro for OSS Maintainers includes 300 requests/month for free.
 * Zed includes 50 requests/month for free
   * or a 14-day trial with 150 requests
-  * or 500/month for $20 USD.[^3]
+  * or 500/month for $20 USD.[^2]
 
 These requests are essentially the number of prompts I can write, and for context, it's pretty easy to burn through 50-100 requests in one day if Claude is driving.
 
-On the other hand, if I just want to ask Claude a general question, I will likely use my free account directly with Anthropic. I may even use them simultaneously, asking a question in Claude desktop to better understand something, while Zed churns away on some code changes.
+On the other hand, if I just want to ask [Claude][] a general question, I will use my free account directly with Anthropic. I may even use them simultaneously, asking a question in [Claude desktop][ClaudeDesktop] to better understand something, while Zed churns away on some code changes.
 
 [Zed]: https://zed.dev/
 [Claude]: https://www.anthropic.com/claude
 
-[claude.ai]: https://claude.ai
 [ClaudeDesktop]: https://claude.ai/download
 
-## Vulkan vs. DirectX
+## What I learned about 🌋 Vulkan and ☢️ DirectX
 
-If I were to make a little game from scratch (*not* an engine), which graphics API should I use with Rust? That was one of the questions I hoped to answer through this whole exercise.
+Ahh, the age old question -- which graphics API should I use? And furthermore, which 🦀 Rust crate should I use for bindings? If only I had a little more experience with them, then I could make a better decision!💡
 
-Spending a few days watching another programmer (Claude) struggle with making a small application provided me with some valuable experience before I sink weeks into learning all the intricacies in depth.
+But if I sunk days or weeks into reading tutorials and learning one option, then sunk cost fallacy could set in. Would I really want to spend weeks learning multiple graphics APIs before getting to the good part? Probably not.
 
-Based on my experience so far, here are some pros and cons of each (in my opinion).
+Fortunately we have a better option these days. With Claude's help, I was able to try out three different APIs (Vulkan, DX11, DX12) and three different Vulkan crates in just a few days.
+
+Here's what we've done so far:
+
+* Render a blue background with [Ash][] and [Vulkan][] -- yeah, I didn't make it all the way to a triangle.[^3] 😅
+* Attempt to modularize the Vulkan code with Claude.
+* Attempt to switch from Ash to [Vulkano][], a higher-level safe wrapper for Ash, to compare the diff.
+* Start over with [Direct3D 11][d3d11] and the [windows][] crate -- [this time successfully][fmdx]! 🎉
+* Experiment with Kenny Kerr's Direct3D 12 [triangle sample for Rust][d3d12rs] while finding my way around the [PIX][] profiler/debugger.
+* Complete a fresh Vulkan 1.4 implementation of [Ferris Mark][fmvk] with Kyle Mayes' [vulkanalia][].
+
+[Ash]: https://github.com/ash-rs/ash
+[Vulkan]: https://www.vulkan.org/
+[Vulkano]: https://github.com/vulkano-rs/vulkano
+[windows]: https://github.com/microsoft/windows-rs/
+[d3d11]: https://learn.microsoft.com/en-us/windows/win32/direct3d11/atoc-dx-graphics-direct3d-11
+[d3d12rs]: https://github.com/microsoft/windows-rs/tree/master/crates/samples/windows/direct3d12
+[PIX]: https://devblogs.microsoft.com/pix/introduction/
+[vulkanalia]: https://github.com/KyleMayes/vulkanalia
+
+[fmdx]: https://github.com/nathany/ferris-mark-dx
+[fmvk]: https://github.com/nathany/ferris-mark-vk
+
+
+Spending a few days watching another programmer (Claude) struggle with making a small application provided some valuable insights. Based on my experience so far, here are some pros and cons of each (in my opinion).
 
 ### Vulkan
 
@@ -129,7 +123,7 @@ The out-of-the box developer experience was less than ideal, at least in Zed or 
 
 ### DirectX 11
 
-So far I haven't come across any tutorials on using Direct3D with Rust 🦀, and very few samples. But fortunately Claude can help bridge that gap.
+I haven't come across any tutorials on using Direct3D with Rust 🦀, and very few samples. But fortunately Claude can help bridge that gap.
 
 **Upside**
 
@@ -140,49 +134,38 @@ So far I haven't come across any tutorials on using Direct3D with Rust 🦀, and
 **Downside**
 
 * Tied to an older, slower shader compiler (FXC), though still commonly used.
-* PIX requires D3D 11on12, which I had some trouble 💥 with. [AMD Radeon™ GPU Profiler][rgp] doesn't support DirectX 11 at all. Fortunately there are [other][RenderDoc] [alternatives][tracy].
-* Last updated 10 years ago with DirectX 11.4.
+* PIX requires D3D 11on12, which I had some trouble with. 💥 Fortunately there are [some][RenderDoc] [alternatives][tracy] that I could try.
 
-### What about WebGPU?
+### Why not WebGPU?
 
-I have yet to try out WebGPU, or more specifically the `wgpu` crate for Rust, but here's what I understand to be true.
+I didn't try out WebGPU, or more specifically the `wgpu` crate for Rust. While it sounds compelling, these are show-stoppers for me:
 
-**Upside**
-
-* A comparatively simple, but still modern low-level API. Kind've like Metal, but on more platforms.
-* It's used by Bevy, a fairly popular Rust game engine.
-
-**Downside**
-
-* Debugging could be more difficult, given that it's a layer on top of DirectX, Vulkan, and Metal. E.g. calling Vulkan through `wgpu`, `wgpu-hal`, and `ash` makes correlating validation layer errors back to an app more difficult than using Ash directly and understanding its API (which is fairly 1:1 with the Vulkan API).
-* Less bleeding edge than the APIs it's built on top of.
+* Given that it's a layer on top of DirectX, Vulkan, and Metal, I expect debugging to be more difficult. E.g. calling Vulkan through `wgpu`, `wgpu-hal`, and `ash` makes correlating validation layer errors back to an app more difficult than using Ash directly and understanding its API (which is fairly 1:1 with the Vulkan API).
 * Firefox hasn't yet shipped with [WebGPU enabled by default][caniuse], which uses `wgpu`.
 
 [caniuse]: https://caniuse.com/?search=webgpu
 
-## Claude Highlights
+## What I learned about 🤖 Claude
 
-As it turns out, quality error messages from the Rust compiler and Vulkan validation layers are good for humans *and* for AI. Claude can be left to churn away, revising code until the build has no errors, the tests pass, and the enabled validation layers are warning-free.
+As it turns out, quality error messages from the Rust compiler and Vulkan validation layers are good for humans *and* for AI. Claude can churn away on a task, revising code until the build has no errors, the tests pass, and the enabled validation layers are warning-free.
 
 Or take a more conservative approach, and ask Claude to summarize the issues, explain a particular error, or suggest a fix. Either way, having validation layers logging to `stdout` can be really helpful.
 
 Note: It's best not enable all the validation layers all the time, as that can eat through Claude's context window very quickly. Leaving the best practice and performance layers off until after the errors are fixed seems like a good approach.
 
-I've hardly scratched the surface of what's possible when using AI for graphics programming. For example, [RenderDoc][] and [Tracy Profiler][tracy] both have APIs and the potential to be integrated into an AI-augmented workflow for debugging, profiling, reviewing screenshots, etc.
+I've hardly scratched the surface of what's possible when using AI for graphics programming. For example, [RenderDoc][] and [Tracy Profiler][tracy] both have APIs and could be integrated into an AI-augmented workflow for debugging, profiling, reviewing screenshots, etc.
 
-## Claude Challenges
-
-It's not all rainbows and unicorns.
+But of course not everything is rainbows and unicorns. 🌈🦄
 
 ### Taking on too much at once
 
-When I'm programming, I tend to make many small changes and get into that test-driven (TDD) cycle of red, green, refactor.
+When I'm programming, I tend to make many small changes and get into that test-driven (TDD) cycle of red, green, refactor. 🚦
 
 Claude will happily churn out tonnes of code without trying it out until the very end. This can often lead to trouble, and I've watched Claude revert several minutes worth of work on multiple occasions.
 
-Part of this is on me. I'm still learning the domain, so I don't often know how much work my prompt entails. As I learn to work with Claude, I am asking not only for a plan, but also to estimate the magnitude of changes before deciding what to tackle. That way I can provide more guidance to break problems down.
+Part of this is on me. I'm still learning the domain, so I don't know how much work my prompt entails. As I learn to work with Claude, I am asking not only for a plan, but also to estimate the magnitude of changes before deciding what to tackle. That way I can provide more guidance to break problems down.
 
-Unfortunately the per request payment model *incentivizes asking for large changes.* Back and forth conversations burn through more requests. So while I like the simplicity of knowing how many prompts I have left, it may not be the best fit for cost conscious personal projects.
+Unfortunately the per request payment model *incentivizes asking for large changes.* Back and forth conversations burn through more requests. So while I like the simplicity of knowing how many prompts I have left, it may not have implications for cost conscious personal projects.
 
 ### Tangents
 
@@ -190,15 +173,15 @@ When Claude gets into trouble, it doesn't stop to think or ask for a second opin
 
 Dependency resolution conflicts are a good example.
 
-We were trying to switch from Ash to Vulkano while still keeping the modern Vulkan features like dynamic rendering. Claude was struggling, so when I shared an example of dynamic rendering in Vulkano, I thought it would help. Then Claude decided to downgrade all the dependencies based on the example code.
+We were trying to switch from Ash to Vulkano while still keeping the modern Vulkan features like dynamic rendering. Claude was struggling, so when I found and shared an example, I thought it would help. Then Claude decided to downgrade all the dependencies based on the example code. 😅
 
 Likewise, when we attempted to move from manual memory management to `vulkanalia-vma`, Claude ran into version conflicts and decided to downgrade `vulkanalia`.[^4]
 
-These downgrades weren't requested and involved significant code changes for older APIs. It's easy enough to revert, but it's a waste of time and energy.
+These downgrades weren't requested and involved significant code changes for older APIs. It's easy enough to revert, but it wastes time and energy.
 
 So programming with Claude is like pair programming in some ways, but in other ways it's not. Most significantly, at least in my experience, *Claude very rarely asks questions.*
 
-One of the reasons for [Claude Code][] not being an editor is the expectation that software developers will soon be operating further removed from the code. If that's based on Claude operating at a senior software engineer level within next year, then I guess that makes sense. But whatever the case, that direction is at odds with AI as a copilot or pair programmer.
+One of the reasons for [Claude Code][] not being an editor is the expectation that software developers will soon be further removed from the code. If that's based on Claude operating at a senior software engineer level within next year, then I guess that makes sense. But whatever the case, that direction is at odds with AI as a copilot or pair programmer.
 
 [Claude Code]: https://www.anthropic.com/claude-code
 
@@ -206,7 +189,7 @@ One of the reasons for [Claude Code][] not being an editor is the expectation th
 
 Claude is perfectly capable of adding new crates, reviewing the documentation and so forth. But looking for a package in the midst of solving another problem doesn't seem to be a *tool* in Claude's toolbelt.
 
-When reviewing some code, I found several lines of custom pseudo-random number generation. Claude can easily answer the question, "which random number crate should we use?" Then proceed to install `fastrand` and switch the code to it, but why didn't it do that from the start?
+When reviewing some code, I found several lines of custom pseudo-random number generation. Claude can easily answer the question, "which random number crate should we use?" and then proceed to install `fastrand` and switch the code to it. So why didn't it do that from the start?
 
 While setting up a new project, Claude found that the GLSL shaders weren't compiling. Instead of adding the `shaderc` crate, it started writing SPIR-V bytecode by hand! 😅
 
@@ -215,17 +198,17 @@ But using battled-tested existing packages instead of rolling everything from sc
 
 Another case of Not Invented Here is being unaware of `cargo fix --edition` when asked to upgrade a project to Rust 2024. Instead Claude started making all the changes by hand, decided it was too complex, and figured it should roll its own script.
 
-As a human programmer, I'm going to default to the solution that is the least work and the most reliable. Like using an existing package or checking to see if there are tools to help with an upgrade. To do otherwise would require a very compelling reason. Conservation of energy is part of being human, maybe not so much for AI?
+As a human programmer, I'm going to default to the solution that is the least work and the most reliable. Like using an existing package or checking to see if there are tools to help with an upgrade. To do otherwise would require a very compelling reason. Conservation of energy is part of being human, *maybe not so much for AI?*
 
 [cargofix]: https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-extern.html#migration
 
 ### Modularity
 
-If left to its own devices, Claude will happily write an entire program in a single file with a giant AppData structure. What ever happened to single responsibility principle and the like? Design patterns can certainly be taken too far, but there does seem to be a missing appreciation for maintainability, readability and *aesthetics* of the code being written.
+If left to its own devices, Claude will happily write an entire program in a single file with a giant AppData structure. What ever happened to single responsibility principle and the like?
 
 While working on my first Vulkan attempt (with Ash), I decided to address the "modularity problem" by asking Claude to break the code up into separate files for device, swapchain, etc. This was probably a mistake.
 
-Being new to the domain, I don't know where to draw the boundaries in the best possible way. So I can provide little guidance, or the guidance I did provide may have been wrong.
+Being new to the domain, I don't know where to draw the boundaries in the best possible way. The guidance I provided may have been wrong.
 
 These low-level graphics APIs are already tricky enough. There's CPU memory and Rust's take on RAII, alongside GPU memory and all the timing and synchronization issues. There's going back and forth between whether to manually clean up GPU resources or to use Drop, which makes the order of fields in structures matter.
 
@@ -237,17 +220,15 @@ That's not to say that I don't still want structure. Just that it will come in d
 
 Overall I think this was a very beneficial experience.
 
-In a few days I was able to try out three different APIs (Vulkan, DX11, DX12) and three different Vulkan crates. This isn't something I would've even attempted if I had to write everything myself.
-
 Whenever the chime sounds in Zed, I look through the summary of what Claude accomplished. Having noticed Claude struggle at times, I added a line to the [.rules](https://zed.dev/docs/ai/rules) file to also summarize the problems encountered. Every dependency conflict, validation layer error, and fight with the Rust borrow checker is a reminder: **that could be me!**
 
 These are all challenges I expect to face when I go to write something myself. But I take comfort in knowing that I can switch Zed from "Write" to "Ask" and request Claude's help with any problems that arise.
 
 That makes something as big and complex as learning Vulkan and graphics programming a little less scary. 🤖 ❤️ 🫖
 
-[^1]: I must've forgot to use sudo. The title is a reference to [xkcd 149][xkcd]: sudo make me a sandwich.
-[^2]: Zed for Windows is [compiled from source][zedwin] while awaiting a beta release. It's rough.
-[^3]: GitHub Copilot Pro+ includes 1500 requests/month for $39 USD, a much better deal than Zed Pro, I know. 🤷🏼‍♂️
+[^1]: Zed for Windows is [compiled from source][zedwin] while awaiting a beta release. It's rough.
+[^2]: GitHub Copilot Pro+ includes 1500 requests/month for $39 USD, a much better deal than Zed Pro, I know. 🤷🏼‍♂️
+[^3]: I must've forgot to use sudo. The title is a reference to [xkcd 149][xkcd]: sudo make me a sandwich.
 [^4]: These dependency conflicts with `vulkanalia-vma` have been fixed in the [latest release](https://github.com/KyleMayes/vulkanalia/blob/master/ext/vma/CHANGELOG.md#030---2025-07-14).
 
 [xkcd]: https://xkcd.com/149/
