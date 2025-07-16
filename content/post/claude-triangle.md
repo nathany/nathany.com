@@ -108,7 +108,7 @@ I haven't come across any tutorials on using Direct3D with Rust 🦀, and very f
 **Upside**
 
 * Harkening back to the simpler days when memory and synchronization were managed.
-* Requires far less code to get started and less bookkeeping.
+* Far less code to get started and less bookkeeping.
 * DirectWrite for text and Direct2D for vector graphics if desired.
 
 **Downside**
@@ -171,7 +171,7 @@ These downgrades weren't requested and involved significant code changes for old
 
 So programming with Claude is like pair programming in some ways, but in other ways it's not. Most significantly, at least in my experience, Claude *rarely* asks questions.
 
-One of the reasons for [Claude Code][] not being an editor is the expectation that software developers will soon be further removed from the code. If that's based on Claude operating at a senior software engineer level within next year, then I guess that makes sense. But whatever the case, that direction is at odds with AI as a copilot or pair programmer.
+One of the reasons for [Claude Code][] not being an editor is the expectation that software developers will soon be further removed from the code. If that's based on Claude operating at a senior engineer level within the next year, then I guess that makes sense. But whatever the case, that direction is at odds with AI as a copilot or pair programmer.
 
 [Claude Code]: https://www.anthropic.com/claude-code
 
@@ -200,7 +200,7 @@ If left to its own devices, Claude will happily write an entire program in a sin
 
 While working on my first Vulkan attempt (with Ash), I decided to address the "modularity problem" by asking Claude to break the code up into separate files for device, swapchain, etc. This was probably a mistake.
 
-Being new to the domain, I don't know where to draw the boundaries in the best possible way. The guidance I provided may have been wrong.
+Being new to the domain, I don't know where to draw the boundaries in the best possible way. The guidance I provided may have been wrong or insufficient.
 
 These low-level graphics APIs are already tricky enough. There's CPU memory and Rust's take on RAII, alongside GPU memory and all the timing and synchronization issues. There's going back and forth between whether to manually clean up GPU resources or to use Drop, which makes the order of fields in structures matter.
 
