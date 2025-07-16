@@ -98,9 +98,7 @@ Now we get truncation at runtime on Windows -- and a failing test.
 
 😬
 
-**Correction:** In the original version of this article, I thought that this was still considered safe because in C the truncation from a 64-bit signed integer to a 32-bit signed integer is implementation defined behaviour. That's not undefined behaviour (UB), but an **incorrect type signature** does introduce UB, and is therefore **unsafe**.
-
-Thanks to equeim over at [reddit][] for pointing out my mistake. 👍🏻
+**Correction:** In the original version of this article, I thought that this was still considered safe because in C the truncation from a 64-bit signed integer to a 32-bit signed integer is implementation defined behaviour. That's not undefined behaviour (UB), but an **incorrect type signature** does introduce UB, and is therefore **unsafe**. Thanks to equeim over at [reddit][] for pointing out my mistake. 👍🏻
 
 ## Even more undefined behaviour
 
