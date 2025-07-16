@@ -1,8 +1,8 @@
 +++
 title = "🤖 Sudo Make Me A Triangle"
 description = "Graphics Programming with Claude Sonnet 4."
-date = "2025-07-14"
-keywords = ["Claude", "agentic", "Zed", "Rust", "Vulkan", "DirectX", "Direct3D"]
+date = "2025-07-15"
+keywords = ["Claude", "agentic", "Zed", "Rust", "Vulkan", "DirectX", "Direct3D", "Bunny Mark"]
 +++
 
 I've been exploring graphics programming once again, with [Claude Sonnet 4][Claude] doing the heavy-lifting.
