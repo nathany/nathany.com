@@ -37,11 +37,11 @@ Before getting started, I watched several talks from [Vulkanised][]. In particul
 
 ## What I learned about 🌋 Vulkan and ☢️ DirectX
 
-Ahh, the age-old question -- which graphics API should I use? And which 🦀 Rust crate should I use for bindings? If only I had more experience with them, then I could make a better decision!💡
+Ahh, the age-old question -- which graphics API should I use? And which 🦀 Rust crate should I use for bindings? If only I had more experience with them, **then I could make a better decision!** 💡
 
-But if I sunk days or weeks into reading tutorials and learning one option, then the sunk cost fallacy could set in. Would I really want to spend weeks learning multiple graphics APIs before getting to the good part? Probably not.
+But if I spent days reading tutorials and learning one option, then the sunk cost fallacy could set in. Would I really want to spend weeks learning multiple graphics APIs before getting to the good part? Probably not.
 
-Fortunately we have a better option these days. With Claude's help, I was able to try out three different APIs (Vulkan, DX11, DX12) and three different Vulkan crates in just a few days.
+Fortunately we have another option these days. With Claude's help, I was able to try out three different APIs (Vulkan, DX11, DX12) and three different Vulkan crates in just a few days.
 
 Here's what we accomplished:
 
@@ -65,7 +65,7 @@ Here's what we accomplished:
 [fmvk]: https://github.com/nathany/ferris-mark-vk
 
 
-Spending a few days watching another programmer (Claude) struggle with making a small application provided some valuable insights. Based on my experience so far, here are some pros and cons.
+Spending a few days watching another programmer (Claude) struggle to make a small application provided some valuable insights. Based on my experience so far, here are some pros and cons.
 
 ### Vulkan
 
@@ -75,7 +75,7 @@ Spending a few days watching another programmer (Claude) struggle with making a 
 * The validation layers can optionally suggest best practices and performance optimizations.
 * Vulkan caught synchronization errors and provided useful guidance, rarely triggering a crash.
 * Khronos Group has made it a priority to make Vulkan easier to use, e.g. by simplifying APIs.
-* All the learning materials (including for Rust), SPIR-V becoming the standard, and cross-platform support.
+* All the learning materials (including for Rust), [SPIR-V becoming the standard](https://devblogs.microsoft.com/directx/directx-adopting-spir-v/), and cross-platform support.
 
 **Downside**
 
@@ -126,11 +126,19 @@ I'm using the [Zed][] code editor on Windows,[^2] one of several "agentic" codin
 
 If we were pair programming, it would be like letting Claude drive. Claude can churn away on a task, revising code until the build has no errors and the enabled validation layers are warning-free.
 
-Note: It's best not enable all the validation layers all the time, as that can eat through Claude's context window very quickly. Leaving the best practice and performance layers off until after the errors are fixed seems like a good approach.
+Alternatively, if I want Claude to take a back seat, Zed has an "Ask" [profile](https://zed.dev/docs/ai/agent-panel#profiles) that blocks write access. Claude can still reference the code base to provide assistance.
+
+* Want a summary of validation errors, ranked by importance?
+* How big of a code change is it to adopt a performance layer's suggestion?
+* Which Vulkan extension is required for a best practice suggested by AMD or NVIDIA's validation layers?
+
+Just ask.
+
+Note: It's best not enable all the validation layers all the time, as that can eat through Claude's context window very quickly. Leaving the best practice and performance layers off until after the errors are fixed is a good approach.
 
 I've hardly scratched the surface of what's possible when using AI for graphics programming. For example, [RenderDoc][] and [Tracy Profiler][tracy] both have APIs and could be integrated into an AI-augmented workflow for debugging, profiling, reviewing screenshots, etc.
 
-But of course not everything is rainbows and unicorns. 🌈 🦄
+Of course not everything is rainbows and unicorns. 🌈 🦄
 
 ### Taking on too much at once
 
