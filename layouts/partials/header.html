@@ -14,10 +14,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
   {{ $cssOpts := (dict "targetPath" "main.css" ) }}
   {{ if hugo.IsServer }}
-    {{ $styles := resources.Get "sass/all.sass" | toCSS $cssOpts }}
+    {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
   {{ else }}
-    {{ $styles := resources.Get "sass/all.sass" | toCSS $cssOpts | minify | fingerprint }}
+    {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
   {{ end }}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">

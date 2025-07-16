@@ -1,0 +1,373 @@
+/* ==========================================================================
+   Pygments
+   ========================================================================== */
+
+.highlight {
+  // ?
+  .hll {
+    background-color: #ffffcc;
+  }
+
+  // Token & Text
+  color: $base02;
+
+  // Text.Whitespace
+  .w {
+    color: #f8f8f8;
+  }
+
+  // Error
+  .err {
+    color: $magenta;
+    border: 1px solid #ef2929;
+  }
+
+  // Other
+  .x {
+    color: $orange;
+  }
+
+  // Keyword
+  .k {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  // Keyword.Constant
+  .kc {
+    color: shade($yellow,30%);
+    font-weight: bold;
+  }
+
+  // Keyword.Declaration
+  .kd {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  // Keyword.Namespace
+  .kn {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  // Keyword.Pseudo
+  .kp {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  // Keyword.Reserved
+  .kr {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  // Keyword.Type
+  .kt {
+    color: $yellow;
+    // font-weight: bold;
+  }
+
+  // Name
+  .n {
+    color: $base02;
+  }
+
+  // Name.Attribute
+  .na {
+    color: $base02;
+  }
+
+  // Name.Builtin
+  .nb {
+    color: $green;
+  }
+
+  // Name.Builtin.Pseudo
+  .bp {
+    color: $blue;
+  }
+
+  // Name.Class
+  .nc {
+    color: $base01;
+  }
+
+  // Name.Constant
+  .no {
+    color: $base01;
+  }
+
+  // Name.Decorator
+  .nd {
+    color: $blue;
+  }
+
+  // Name.Entity
+  .ni {
+    color: $orange;
+  }
+
+  // Name.Exception
+  .ne {
+    color: $yellow;
+  }
+
+  // Name.Function
+  .nf {
+    color: $base02;
+  }
+
+  // Name.Label
+  .nl {
+    // color: black;
+  }
+
+  // Name.Namespace
+  .nn {
+    // color: black;
+  }
+
+  // Name.Other
+  .nx {
+    // color: black;
+  }
+
+  // Name.Property
+  .py {
+    color: $orange;
+  }
+
+  // Name.Tag
+  .nt {
+    color: $blue;
+  }
+
+  // Name.Variable
+  .nv {
+    color: $blue;
+  }
+
+  // Name.Variable.Class
+  .vc {
+    color: $yellow;
+  }
+
+  // Name.Variable.Global
+  .vg {
+    color: $blue;
+  }
+
+  // Name.Variable.Instance
+  .vi {
+    color: $blue;
+  }
+
+  // Literal
+  .l {
+    color: $base02;
+  }
+
+  // Literal.Date
+  .ld {
+    // color: black;
+  }
+
+  // Literal.String
+  .s {
+    color: $cyan;
+  }
+
+  // Literal.String.Backtick
+  .sb {
+    color: shade($cyan, 10%);
+  }
+
+  // Literal.String.Char
+  .sc {
+    color: $cyan;
+  }
+
+  // Literal.String.Doc
+  .sd {
+    color: $base01;
+    font-style: italic;
+  }
+
+  // Literal.String.Double
+  .s2 {
+    color: $cyan;
+  }
+
+  // Literal.String.Escape
+  .se {
+    color: $red;
+  }
+
+  // Literal.String.Heredoc
+  .sh {
+    color: $cyan;
+  }
+
+  // Literal.String.Interpol
+  .si {
+    color: $cyan;
+  }
+
+  // Literal.String.Other
+  .sx {
+    color: $cyan;
+  }
+
+  // Literal.String.Regex
+  .sr {
+    color: $red;
+  }
+
+  // Literal.String.Single
+  .s1 {
+    color: $cyan;
+  }
+
+  // Literal.String.Symbol
+  .ss {
+    color: shade($cyan,30%);
+  }
+
+  // Literal.Number
+  .m {
+    color: $cyan;
+  }
+
+  // Literal.Number.Float
+  .mf {
+    color: $cyan;
+  }
+
+  // Literal.Number.Hex
+  .mh {
+    color: $cyan;
+  }
+
+  // Literal.Number.Integer
+  .mi {
+    color: $cyan;
+  }
+
+  // Literal.Number.Integer.Long
+  .il {
+    color: $cyan;
+  }
+
+  // Literal.Number.Oct
+  .mo {
+    color: $cyan;
+  }
+
+  // Operator
+  .o {
+    color: shade($blue, 30%);
+  }
+
+  // Operator.Word
+  .ow {
+    color: $green;
+  }
+
+  // Punctuation
+  .p {
+    color: shade($blue, 30%);
+  }
+
+  // Comment
+  .c {
+    color: $base01;
+    font-style: italic;
+  }
+
+  // Comment.Multiline
+  .cm {
+    color: $base01;
+    font-style: italic;
+  }
+
+  // Comment.Preproc
+  .cp {
+    color: $base01;
+    font-style: italic;
+  }
+
+  // Comment.Single
+  .c1 {
+    color: $base01;
+    font-style: italic;
+  }
+
+  // Comment.Special
+  .cs {
+    color: $base01;
+    font-style: italic;
+  }
+
+  // Generic
+  .g {
+    // color: black;
+  }
+
+  // Generic.Deleted
+  .gd {
+    color: $red;
+  }
+
+  // Generic.Emph
+  .ge {
+    // color: black;
+    font-style: italic;
+  }
+
+  // Generic.Error
+  .gr {
+    color: $red;
+  }
+
+  // Generic.Heading
+  .gh {
+    color: $orange;
+    font-weight: bold;
+  }
+
+  // Generic.Inserted
+  .gi {
+    color: $green;
+  }
+
+  // Generic.Output https://github.com/mojombo/jekyll/issues/1153
+  span.go {
+    // color: black;
+    font-style: italic;
+  }
+
+  // Generic.Prompt
+  .gp {
+    color: shade($green,30%);
+  }
+
+  // Generic.Strong
+  .gs {
+    // color: black;
+    font-weight: bold;
+  }
+
+  // Generic.Subheading
+  .gu {
+    color: $orange;
+    font-weight: bold;
+  }
+
+  // Generic.Traceback
+  .gt {
+    color: $magenta;
+    font-weight: bold;
+  }
+}

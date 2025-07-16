@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+  margin: 1rem;
+  font-size: 1.4rem;
+  color: $base01;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:visited, &:link {
+      color: $base01;
+    }
+
+    &:hover {
+      color: $base1;
+    }
+  }
+
+  .articles {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+  }
+}
+
+.right-icons {
+  float: right;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+
+  .fa-trello {
+    padding-right: 1rem;
+  }
+}

@@ -1,0 +1,132 @@
+$horizontal: new-breakpoint(min-width 528px 1);
+
+$border-width: 8px;
+
+.bio {
+  margin: 1rem;
+  width: 256px + ($border-width * 2);
+
+  font-family: sans-serif;
+  color: $color1;
+  background-color: $color5;
+  border: $border-width solid $color3;
+
+  .text {
+    padding: 1rem 1rem 0.5rem 1rem;
+
+    a:visited,
+    a:link {
+      text-decoration: none;
+    }
+
+    .name {
+      font-weight: bold;
+      margin: 0;
+      line-height: 1.2;
+
+      a:visited,
+      a:link {
+        color: $color2;
+      }
+
+      a:hover {
+        color: white;
+      }
+    }
+
+    .description {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1;
+
+      a:visited,
+      a:link {
+        color: $color1;
+      }
+
+      a:hover {
+        color: white;
+      }
+    }
+  }
+
+  .portrait {
+    @include retina-image(images/portrait, 256px 256px, jpg);
+    width: 256px;
+    height: 128px;
+    background-position: center left;
+  }
+
+  .book-cover {
+    @include retina-image(images/book-cover, 256px 320px, png);
+    width: 256px;
+    height: 320px;
+    background-position: center left;
+  }
+
+  @include media($horizontal) {
+    width: 512px + 160px + ($border-width * 2);
+    height: 200px + ($border-width * 2);
+
+    .portrait {
+      float: left;
+      height: 200px;
+    }
+
+    .book-cover {
+      @include retina-image(images/book-cover-wide, 160px 200px, png);
+      margin-right: 1rem;
+      float: left;
+      width: 160px;
+      height: 200px;
+    }
+  }
+
+  .fab,
+  .far {
+    padding-right: 0.4rem;
+    padding-bottom: 0.3rem;
+
+    &:visited,
+    &:link {
+      color: $base01;
+    }
+
+    &:hover {
+      @include transition (color 0.3s ease-in-out);
+    }
+  }
+
+  .far.fa-heart {
+
+    &:hover,
+    &:active {
+      color: #DB61A2;
+    }
+  }
+
+  .fab.fa-amazon {
+
+    &:hover,
+    &:active {
+      color: #FF7800;
+    }
+  }
+
+  .fab.fa-youtube {
+
+    &:hover,
+    &:active {
+      color: #FF2841;
+    }
+  }
+
+  .fab.fa-github-alt {
+
+    &:hover,
+    &:active {
+      color: white;
+    }
+  }
+}
