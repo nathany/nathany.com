@@ -2,22 +2,23 @@
 title = "🤖 Sudo Make Me A Triangle"
 description = "Graphics Programming with Claude Sonnet 4."
 date = "2025-07-15"
+revised = "2025-07-16"
 keywords = ["Claude", "agentic", "Zed", "Rust", "Vulkan", "DirectX", "Direct3D", "Bunny Mark"]
 +++
 
 I've been exploring graphics programming once again, with [Claude Sonnet 4][Claude] doing the heavy-lifting.
+
+This post is an exploration of what I've learned about:
+
+* 🌋 Vulkan and ☢️ DirectX
+* 🤖 Claude and the intersection between AI and graphics programming
+* 🦀 the Rust language and ecosystem
 
 The goal: build a Bunny Mark benchmark while exploring various graphics APIs and 🦀 Rust crates.
 
 [<img alt="Ferris Mark VK" class="full" src="/images/ferris-mark-vk.gif">][fmvk]
 
 Bunny Mark is just a few steps beyond the classic triangle, requiring textured quads with alpha blending, clamping for pixel-perfect scaling, some light "physics" for motion and collisions, basic metrics gathering, and sprite batching to minimize draw calls. Easy enough, right? 😅
-
-This post is an exploration of what I've learned along the way with regards to:
-
-* 🌋 Vulkan and ☢️ DirectX
-* 🤖 Claude and the intersection between AI and graphics programming
-* 🦀 the Rust language and ecosystem
 
 ## Some background
 
@@ -197,7 +198,7 @@ These low-level graphics APIs are already tricky enough. There's CPU memory and 
 
 Based on my observations, I think trying to add structure to the code exacerbated these issues and made everything more difficult.
 
-That's not to say that I don't want structure. Just that it will come in due time, once I've learned more and I'm working on a real project instead of a prototype. Will I ask Claude to write the code to create that structure? Right now, I'm thinking not, but we shall see.
+That's not to say that I don't want structure. Just that it will come in due time, once I've learned more and I'm working on a real project instead of a prototype. Will I ask Claude to write the code to create that structure? Right now, I'm thinking not.
 
 ## Conclusion
 
