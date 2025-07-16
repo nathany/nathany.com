@@ -3,8 +3,6 @@
     <p>
       <span class="copyright" data-tooltip="Copyright &copy; {{ .Site.Copyright }}">&copy; 2025</span>
 
-      <a href="/" class="articles">&#8679; Articles</a>
-
       <span class="right-icons">
         {{ with .OutputFormats.Get "RSS" }}
           <a href="{{ .Permalink }}"  type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>

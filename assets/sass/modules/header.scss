@@ -1,0 +1,42 @@
+/* ==========================================================================
+    Header
+   ========================================================================== */
+
+$border-width: 8px;
+
+header {
+  background-color: $color5;
+  border-bottom: $border-width solid $color3;
+  font-family: sans-serif;
+  color: $color1;
+
+  padding: 1rem 1rem;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  position: fixed; /* Fixed position - sit on top of the page */
+  top: 0;
+  width: 100%; /* Full width */
+  /* transition: 0.4s;  */
+  /* Add a transition effect (when scrolling - and font size is decreased) */
+
+  a {
+    text-decoration: none;
+
+    &:visited,
+    &:link {
+      color: $base01;
+    }
+
+    &:hover {
+      color: $base1;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+
+  .fa-house {
+    padding-right: 0.4rem;
+    padding-bottom: 0.3rem;
+  }
+}
