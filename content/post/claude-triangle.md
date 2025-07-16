@@ -117,15 +117,6 @@ I haven't come across any tutorials on using Direct3D with Rust 🦀, and very f
 * PIX requires D3D 11on12, which gave me some trouble. 💥 Fortunately there are [other][RenderDoc] [alternatives][tracy] that I could try.
 * Last updated 10 years ago with DirectX 11.4.
 
-### Why not WebGPU?
-
-I haven't tried out WebGPU, or more specifically the `wgpu` crate for Rust. While it sounds compelling, these are show-stoppers for me:
-
-* Given that it's a layer on top of DirectX, Vulkan, and Metal, I expect debugging to be more difficult. E.g. calling Vulkan through `wgpu`, `wgpu-hal`, and `ash` makes correlating validation layer errors back to an app more difficult than using Ash directly and understanding its API (which is fairly 1:1 with the Vulkan API).
-* At the time of this writing, Firefox hasn't yet shipped with [WebGPU enabled by default][caniuse], which uses `wgpu`.
-
-[caniuse]: https://caniuse.com/?search=webgpu
-
 ## Working with 🤖 Claude
 
 The informative Vulkan validation layers and Rust compiler errors may have been designed for humans, but they're also great for AI.
