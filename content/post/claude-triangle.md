@@ -64,7 +64,7 @@ Here's what we accomplished:
 [fmvk]: https://github.com/nathany/ferris-mark-vk
 
 
-Spending a few days watching another programmer (Claude) struggle with making a small application provided some valuable insights. Based on my experience so far, here are some pros and cons of each.
+Spending a few days watching another programmer (Claude) struggle with making a small application provided some valuable insights. Based on my experience so far, here are some pros and cons.
 
 ### Vulkan
 
@@ -99,7 +99,7 @@ The out-of-the box developer experience was less than ideal, at least in Zed or 
 
 * Synchronization can be tricky to get right, and mistakes cause crashes. 💥 When running under a debugger, the breakpoint triggered by a panic didn't make the issue obvious, at least not to me.
 * A "potential clear color optimization" was not visible in `stdout` nor the debuggers in Zed or Visual Studio Code (CodeLDDB). Seeing the warning required taking a capture in PIX.
-* A "redundant root signature error" was likewise not visible without taking a capture in PIX, and additionally required enabling Windows Developer Mode and running one of three different analysis steps for additional warnings: Run Warnings Analysis, Run Debug Layer, and Run GPU Validation.
+* A "redundant root signature error" was likewise not visible without taking a capture in PIX. Additionally, it required enabling Windows Developer Mode and running one of three different analysis steps for additional warnings: Run Warnings Analysis, Run Debug Layer, and Run GPU Validation.
 
 ### DirectX 11
 
@@ -148,7 +148,7 @@ Claude will happily churn out tons of code without trying it out until the very 
 
 Part of this is on me. I'm still learning the domain, so I don't know how much work my prompt entails. As I learn to work with Claude, I am asking not only for a plan, but also to estimate the magnitude of changes before deciding what to tackle. That way I can provide more guidance to break problems down.
 
-Unfortunately the per request payment model *incentivizes asking for large changes.* These requests are essentially the number of prompts I can write, so back and forth conversations burn through more requests. While I like the simplicity of knowing how many prompts I have left, I'm pretty limited in how many requests I can make:
+Unfortunately the per request payment model *incentivizes asking for large changes.* Requests are essentially the number of prompts I can write, so back and forth conversations burn through more requests. While I like the simplicity of knowing how many prompts I have left, I'm pretty limited in how many requests I can make:
 
 * GitHub Copilot Pro for OSS Maintainers includes 300 requests/month for free.
 * Zed includes 50 requests/month for free
@@ -157,7 +157,7 @@ Unfortunately the per request payment model *incentivizes asking for large chang
 
 For context, it's pretty easy to burn through 50-100 requests in one day if Claude is driving.
 
-### Tangents
+### Going on tangents
 
 When Claude gets into trouble, it doesn't stop to think or ask for a second opinion.
 
@@ -169,7 +169,7 @@ Likewise, when we attempted to move from manual memory management to `vulkanalia
 
 These downgrades weren't requested and involved significant code changes for older APIs. It's easy enough to revert, but it wastes time and energy.
 
-So programming with Claude is like pair programming in some ways, but in other ways it's not. Most significantly, at least in my experience, Claude *very* rarely asks questions.
+So programming with Claude is like pair programming in some ways, but in other ways it's not. Most significantly, at least in my experience, Claude *rarely* asks questions.
 
 One of the reasons for [Claude Code][] not being an editor is the expectation that software developers will soon be further removed from the code. If that's based on Claude operating at a senior software engineer level within next year, then I guess that makes sense. But whatever the case, that direction is at odds with AI as a copilot or pair programmer.
 
@@ -179,7 +179,7 @@ One of the reasons for [Claude Code][] not being an editor is the expectation th
 
 Claude is perfectly capable of adding new crates, reviewing the documentation and so forth. But looking for a package in the midst of solving another problem doesn't seem to be a *tool* in Claude's toolbelt.
 
-When reviewing some code, I found several lines of custom pseudo-random number generation. Claude can easily answer the question, "which random number crate should we use?" and then proceed to install `fastrand` and switch the code to it. So why didn't it do that from the start?
+When reviewing some code, I found several lines of custom pseudo-random number generation. Claude can easily answer the question, "which random number crate should we use?" and then proceed to install `fastrand` and switch the code to it.
 
 While setting up a new project, Claude found that the GLSL shaders weren't compiling. Instead of adding the `shaderc` crate, it started writing SPIR-V bytecode by hand! 😅
 
@@ -188,7 +188,7 @@ But using battle-tested libraries instead of rolling everything from scratch is 
 
 Another case of Not Invented Here is being unaware of `cargo fix --edition` when asked to upgrade a project to Rust 2024. Instead Claude started making all the changes by hand, decided it was too complex, and figured it should roll its own script.
 
-As a human programmer, I'm going to default to the solution that is the least work and the most reliable. Like using an existing libraries or checking to see if there are tools to help with an upgrade. To do otherwise would require a very compelling reason. Conservation of energy is part of being human -- maybe not so much for AI?
+As a human programmer, I'll default to the solution that is the least amount of work and the most reliable. Like using an existing libraries or checking to see if there are tools to help with an upgrade. To do otherwise would require a very compelling reason. Conservation of energy is part of being human -- maybe not so much for AI?
 
 [cargofix]: https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-extern.html#migration
 
