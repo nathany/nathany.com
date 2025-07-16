@@ -36,7 +36,7 @@ Before getting started, I watched several talks from [Vulkanised][]. In particul
 
 ## What I learned about 🌋 Vulkan and ☢️ DirectX
 
-Ahh, the age-old question -- which graphics API should I use? And which 🦀 Rust crate should I use for bindings? If only I had a little more experience with them, then I could make a better decision!💡
+Ahh, the age-old question -- which graphics API should I use? And which 🦀 Rust crate should I use for bindings? If only I had more experience with them, then I could make a better decision!💡
 
 But if I sunk days or weeks into reading tutorials and learning one option, then the sunk cost fallacy could set in. Would I really want to spend weeks learning multiple graphics APIs before getting to the good part? Probably not.
 
@@ -146,9 +146,9 @@ When I'm programming, I tend to make many small changes and get into that test-d
 
 Claude will happily churn out tons of code without trying it out until the very end. This can often lead to trouble -- I've watched Claude revert several minutes worth of work on multiple occasions.
 
-Part of this is on me. I'm still learning the domain, so I don't know how much work my prompt entails. As I learn to work with Claude, I am asking not only for a plan, but also to estimate the magnitude of changes before deciding what to tackle. That way I can provide more guidance to break problems down.
+Part of this is on me. I'm still learning the domain, so I don't know how much work my prompt entails. As I learn to work with Claude, I am asking not only for a plan, but also an estimate of the magnitude of changes. That way I can provide more guidance to break problems down.
 
-Unfortunately the per request payment model *incentivizes asking for large changes.* Requests are essentially the number of prompts I can write, so back and forth conversations burn through more requests. While I like the simplicity of knowing how many prompts I have left, I'm pretty limited in how many requests I can make:
+Unfortunately the per request payment model *incentivizes asking for large changes.* Requests are essentially the number of prompts I can write, so back and forth conversations burn through more requests. 🔥 While I like the simplicity of knowing how many prompts I have left, I'm pretty limited in how many requests I can make:
 
 * GitHub Copilot Pro for OSS Maintainers includes 300 requests/month for free.
 * Zed includes 50 requests/month for free
@@ -183,12 +183,14 @@ When reviewing some code, I found several lines of custom pseudo-random number g
 
 While setting up a new project, Claude found that the GLSL shaders weren't compiling. Instead of adding the `shaderc` crate, it started writing SPIR-V bytecode by hand! 😅
 
+> "Compilers? Where we're going, we don't need compilers."
+
 Now, it's probably a good thing that Claude isn't adding every package imaginable to a project. That could cause its own set of problems.
 But using battle-tested libraries instead of rolling everything from scratch is a best practice.
 
 Another case of Not Invented Here is being unaware of `cargo fix --edition` when asked to upgrade a project to Rust 2024. Instead Claude started making all the changes by hand, decided it was too complex, and figured it should roll its own script.
 
-As a human programmer, I'll default to the solution that is the least amount of work and the most reliable. Like using an existing libraries or checking to see if there are tools to help with an upgrade. To do otherwise would require a very compelling reason. Conservation of energy is part of being human -- maybe not so much for AI?
+As a human programmer, I'll default to the solution that is the least amount of effort and the most reliable. Like using an existing libraries or checking to see if there are tools to help with an upgrade. To do otherwise would require a very compelling reason. Conservation of energy is part of being human -- maybe not so much for AI?
 
 [cargofix]: https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-extern.html#migration
 
