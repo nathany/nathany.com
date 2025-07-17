@@ -6,8 +6,6 @@ $max-width: 64rem;
 $visual-grid: false;
 
 #page {
-  margin-top: calc(var(--header-height) + 4rem);
-
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
