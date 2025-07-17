@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+<article class="page identity-page">
+  <section class="title">
+    <h1>{{ .Title }}</h1>
+    <div class="meta">
+      {{ if .Description }}
+      <p>{{ .Description | markdownify }}</p>
+      {{ end }}
+    </div>
+  </section>
+  
+  <div class="identity-layout">
+    <aside class="identity-bio">
+      {{ partial "bio.html" . }}
+    </aside>
+    <section class="identity-content">
+      {{ .Content }}
+    </section>
+  </div>
+</article>
+
+{{ partial "footer.html" . }}

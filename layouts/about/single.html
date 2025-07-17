@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<article class="page {{ if eq .Title " Identity" }}identity-page{{ end }}">
+<article class="page">
   <section class="title">
     <h1>{{ .Title }}</h1>
     <div class="meta">
@@ -9,21 +9,10 @@
       {{ end }}
     </div>
   </section>
-
-  {{ if eq .Title "Identity" }}
-  <div class="identity-layout">
-    <aside class="identity-bio">
-      {{ partial "bio.html" . }}
-    </aside>
-    <section class="identity-content">
-      {{ .Content }}
-    </section>
-  </div>
-  {{ else }}
+  
   <section class="content">
     {{ .Content }}
   </section>
-  {{ end }}
 </article>
 
 {{ partial "footer.html" . }}
