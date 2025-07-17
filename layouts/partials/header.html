@@ -7,40 +7,40 @@
   <meta name="description" content="{{ .Description }}">
   {{ end }}
   {{ if .Keywords }}
-    <meta name="keywords" content="{{ delimit .Keywords " ," }}">
+  <meta name="keywords" content="{{ delimit .Keywords " ," }}">
   {{ end }}
   <title>{{ .Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
   {{ $cssOpts := (dict "targetPath" "main.css" ) }}
   {{ if hugo.IsServer }}
-    {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+  {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
   {{ else }}
-    {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
   {{ end }}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
   {{ with .OutputFormats.Get "RSS" }}
-    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
   {{ end }}
 
   {{ $jsOpts := (dict "targetPath" "all.js" ) }}
   {{ if hugo.IsServer }}
-    {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts }}
-    <script src="{{ $js.Permalink }}"></script>
+  {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts }}
+  <script src="{{ $js.Permalink }}"></script>
   {{ else }}
-    {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts | minify | fingerprint }}
-    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts | minify | fingerprint }}
+  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   {{ end }}
 </head>
 
 <body id="top">
 
   <header>
-    <a href="/" title="Home" class="fa-solid fa-house"></a><a href="/" class="hidden-when-shrunk">nathany.com</a>
+    <a href="/" title="Home" class="fa-solid fa-house"></a><a href="/" class="full-header">nathany.com</a>
     <i class="fa-solid fa-chevron-right"></i>
-    {{ .Title }}
+    <span class="shrunk-header">{{ .Title }}</span>
   </header>
 
   <div id="page">

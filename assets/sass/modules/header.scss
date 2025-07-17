@@ -5,8 +5,10 @@
 $border-width: 8px;
 
 :root {
-  --header-full-height: calc(1.4rem * 1.2 + 8rem + 8px); /* font height + padding + border */
-  --header-shrunk-height: calc(1.4rem * 1.2 + 2rem + 8px); /* font height + padding + border */
+  --header-full-height: calc(1.4rem * 1.2 + 8rem + 8px);
+  /* font height + padding + border */
+  --header-shrunk-height: calc(1.4rem * 1.2 + 2rem + 8px);
+  /* font height + padding + border */
 }
 
 header {
@@ -49,7 +51,7 @@ header {
     padding-bottom: 0.3rem;
   }
 
-  .hidden-when-shrunk {
+  .full-header {
     display: inline-block;
     opacity: 1;
     transform: translateX(0);
@@ -60,7 +62,7 @@ header {
 header.shrunk {
   padding: 1rem 1rem;
 
-  .hidden-when-shrunk {
+  .full-header {
     opacity: 0;
     transform: translateX(-20px);
   }
