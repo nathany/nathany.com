@@ -13,13 +13,13 @@ h4 {
 }
 
 h1 {
-  color: $blue;
+  color: $base02;
 }
 
 .meta {
-  font-style: italic;
+  // font-style: italic;
   color: $yellow;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 p,
@@ -27,8 +27,14 @@ li {
   line-height: 1.5;
 }
 
-h2 + p,
-h1 + p.meta {
+h2.subtitle {
+  margin-top: 0;
+  font-weight: normal;
+  color: $base02;
+}
+
+h2+p,
+h1+p.meta {
   margin-top: 0;
 }
 

@@ -7,16 +7,16 @@
     {{ range where (where .Site.RegularPages "Section" "post") ".Params.legacy" "!=" "true" }}
     <li>
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ if .Description }}
+        <p>{{ .Description | markdownify }}</p>
+      {{ end }}
       <p class="meta">
         {{/* {{ if .Params.revised }}
         Last revised on {{ .Params.revised | time.Format "2006/01/02" }}.
         {{ else }} */}}
-        Published on {{ .Date | time.Format "2006/01/02" }}.
+        Published on {{ .Date | time.Format "January 2, 2006" }}.
         {{/* {{ end }} */}}
       </p>
-      {{ if .Description }}
-      <p>{{ .Description | markdownify }}</p>
-      {{ end }}
     </li>
     {{ end }}
     </ol>
