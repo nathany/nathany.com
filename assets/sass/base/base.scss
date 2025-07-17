@@ -6,6 +6,10 @@
 @import "colors";
 @import "typography";
 
+:root {
+  --header-height: 6rem;
+}
+
 html {
   scroll-behavior: smooth;
 }

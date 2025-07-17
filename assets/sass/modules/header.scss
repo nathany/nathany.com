@@ -5,6 +5,8 @@
 $border-width: 8px;
 
 header {
+  height: var(--header-height);
+
   background-color: $color5;
   border-bottom: $border-width solid $color3;
   font-family: sans-serif;
@@ -21,7 +23,7 @@ header {
   width: 100%; /* Full width */
 
   /* transition effect when scrolling */
-  transition: padding 0.3s ease;
+  transition: padding 0.5s ease;
 
   a {
     text-decoration: none;
@@ -46,6 +48,7 @@ header {
 }
 
 header.shrunk {
+  height: auto;
   padding: 1rem 1rem;
 
   .hidden-when-shrunk {
