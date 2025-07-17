@@ -1,37 +1,39 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 
+{{ $pageTitle := cond .IsHome .Site.Params.home_title .Title }}
+
 <head>
   <meta charset="UTF-8">
   {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
+    <meta name="description" content="{{ .Description }}">
   {{ end }}
   {{ if .Keywords }}
-  <meta name="keywords" content="{{ delimit .Keywords " ," }}">
+    <meta name="keywords" content="{{ delimit .Keywords " ," }}">
   {{ end }}
-  <title>{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end }}</title>
+  <title>{{ $pageTitle }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
   {{ $cssOpts := (dict "targetPath" "main.css" ) }}
   {{ if hugo.IsServer }}
-  {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+    {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
   {{ else }}
-  {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+    {{ $styles := resources.Get "sass/all.scss" | toCSS $cssOpts | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
   {{ end }}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
   {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
   {{ end }}
 
   {{ $jsOpts := (dict "targetPath" "all.js" ) }}
   {{ if hugo.IsServer }}
-  {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts }}
-  <script src="{{ $js.Permalink }}"></script>
+    {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts }}
+    <script src="{{ $js.Permalink }}"></script>
   {{ else }}
-  {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts | minify | fingerprint }}
-  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts | minify | fingerprint }}
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   {{ end }}
 </head>
 
@@ -39,16 +41,18 @@
 
   {{ $currentPath := .RelPermalink }}
   {{ $navItems := slice
-  (dict "url" "/" "icon" "fa-pen" "title" "Blog")
-  (dict "url" "/books/" "icon" "fa-book" "title" "Books")
-  (dict "url" "/id/" "icon" "fa-fingerprint" "title" "Identity")
+    (dict "url" "/" "icon" "fa-pen" "title" "Blog")
+    (dict "url" "/books/" "icon" "fa-book" "title" "Books" "paths" (slice "/books/"))
+    (dict "url" "/id/" "icon" "fa-fingerprint" "title" "Identity" "paths" (slice "/id/" "/resume/"))
   }}
 
   {{ $currentNavItem := index $navItems 0 }}
-  {{ if eq $currentPath "/books/" }}
-  {{ $currentNavItem = index $navItems 1 }}
-  {{ else if or (eq $currentPath "/id/") (eq $currentPath "/resume/") }}
-  {{ $currentNavItem = index $navItems 2 }}
+  {{ range $navItems }}
+    {{ if .paths }}
+      {{ if in .paths $currentPath }}
+        {{ $currentNavItem = . }}
+      {{ end }}
+    {{ end }}
   {{ end }}
 
   <header>
@@ -58,22 +62,22 @@
           <nav class="full-header">
             <ul>
               {{ range $navItems }}
-              <li{{ if eq .url $currentNavItem.url }} class="selected" {{ end }}>
-                <a href="{{ .url }}">
-                  <i class="fa-solid {{ .icon }}"></i> {{ .title }}
-                </a>
+                <li{{ if eq .url $currentNavItem.url }} class="selected"{{ end }}>
+                  <a href="{{ .url }}">
+                    <i class="fa-solid {{ .icon }}"></i> {{ .title }}
+                  </a>
                 </li>
-                {{ end }}
+              {{ end }}
             </ul>
           </nav>
           <div class="shrunk-header">
             <a href="{{ $currentNavItem.url }}" class="fa-solid {{ $currentNavItem.icon }}"></a>
-            <a href="#top">{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end }}</a>
+            <a href="#top" class="title">{{ $pageTitle }}</a>
           </div>
         </div>
         <div class="header-right">
           {{ with .Site.Home.OutputFormats.Get "RSS" }}
-          <a href="{{ .Permalink }}" type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
+            <a href="{{ .Permalink }}" type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
           {{ end }}
         </div>
       </div>
