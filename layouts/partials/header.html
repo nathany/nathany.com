@@ -24,12 +24,21 @@
   {{ with .OutputFormats.Get "RSS" }}
     <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
   {{ end }}
+
+  {{ $jsOpts := (dict "targetPath" "all.js" ) }}
+  {{ if hugo.IsServer }}
+    {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts }}
+    <script src="{{ $js.Permalink }}"></script>
+  {{ else }}
+    {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts | minify | fingerprint }}
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  {{ end }}
 </head>
 
 <body id="top">
 
   <header>
-    <a href="/" title="Home" class="fa-solid fa-house"></a><a href="/">nathany.com</a>
+    <a href="/" title="Home" class="fa-solid fa-house"></a><a href="/" class="hidden-when-shrunk">nathany.com</a>
   </header>
 
   <div id="page">

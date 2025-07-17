@@ -16,11 +16,12 @@ header {
   font-weight: bold;
 
   z-index: 1000;
-  position: fixed; /* Fixed position - sit on top of the page */
+  position: fixed; /* Fixed on top of the page */
   top: 0;
   width: 100%; /* Full width */
-  /* transition: 0.4s;  */
-  /* Add a transition effect (when scrolling - and font size is decreased) */
+
+  /* transition effect when scrolling */
+  transition: padding 0.3s ease;
 
   a {
     text-decoration: none;
@@ -39,5 +40,15 @@ header {
   .fa-house {
     padding-right: 0.4rem;
     padding-bottom: 0.3rem;
+  }
+
+  padding: 4rem 1rem;
+}
+
+header.shrunk {
+  padding: 1rem 1rem;
+
+  .hidden-when-shrunk {
+    display: none;
   }
 }
