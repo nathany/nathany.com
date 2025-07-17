@@ -39,31 +39,34 @@
 
   <header>
     <div class="header-container">
-      <div class="header-left">
-        <nav class="full-header">
-          <ul>
-            <li><a href="/"><i class="fa-solid fa-pen"></i> Blog</a></li>
-            <li><a href="/books"><i class="fa-solid fa-book"></i> Books</a></li>
-            <li><a href="/id"><i class="fa-solid fa-fingerprint"></i> About</a></li>
-          </ul>
-        </nav>
-        <div class="shrunk-header">
-          {{ if eq .RelPermalink "/books/" }}
-          <a href="/books" class="fa-solid fa-book"></a>
-          {{ else if or (eq .RelPermalink "/id/") (eq .RelPermalink "/resume/") }}
-          <a href="/id" class="fa-solid fa-fingerprint"></a>
-          {{ else }}
-          <a href="/" class="fa-solid fa-pen"></a>
+      <div class="header-flex">
+        <div class="header-left">
+          <nav class="full-header">
+            <ul>
+              <li><a href="/"><i class="fa-solid fa-pen"></i> Blog</a></li>
+              <li><a href="/books"><i class="fa-solid fa-book"></i> Books</a></li>
+              <li><a href="/id"><i class="fa-solid fa-fingerprint"></i> About</a></li>
+            </ul>
+          </nav>
+          <div class="shrunk-header">
+            {{ if eq .RelPermalink "/books/" }}
+            <a href="/books" class="fa-solid fa-book"></a>
+            {{ else if or (eq .RelPermalink "/id/") (eq .RelPermalink "/resume/") }}
+            <a href="/id" class="fa-solid fa-fingerprint"></a>
+            {{ else }}
+            <a href="/" class="fa-solid fa-pen"></a>
+            {{ end }}
+          </div>
+        </div>
+        <div class="header-center">
+          <span class="shrunk-header">{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end
+            }}</span>
+        </div>
+        <div class="header-right">
+          {{ with .Site.Home.OutputFormats.Get "RSS" }}
+          <a href="{{ .Permalink }}" type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
           {{ end }}
         </div>
-      </div>
-      <div class="header-center">
-        <span class="shrunk-header">{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end }}</span>
-      </div>
-      <div class="header-right">
-        {{ with .Site.Home.OutputFormats.Get "RSS" }}
-        <a href="{{ .Permalink }}" type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
-        {{ end }}
       </div>
     </div>
   </header>
