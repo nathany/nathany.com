@@ -3,7 +3,7 @@
 
 // Webfonts
 @import "font-awesome/fontawesome", "font-awesome/solid.scss",
-  "font-awesome/brands.scss", "font-awesome/regular.scss";
+"font-awesome/brands.scss", "font-awesome/regular.scss";
 
 // Mixins
 @import "mixins";
@@ -11,5 +11,5 @@
 // SMACSS
 @import "base/base", "layout";
 
-@import "modules/code", "modules/bio";
+@import "modules/code", "modules/bio", "modules/books";
 @import "modules/header", "modules/figure", "modules/tooltip", "modules/footer";

@@ -1,0 +1,95 @@
+.books-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.book-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: end;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.book-cover {
+  flex-shrink: 0;
+
+  img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.book-content {
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: #666;
+  }
+}
+
+.book-actions {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+
+.book-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: $base01;
+  color: white !important;
+  text-decoration: none;
+  border: 1px solid $color3;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background: darken($base01, 10%);
+    text-decoration: none;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .book-item {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .book-cover img {
+    max-width: 150px;
+  }
+
+  .book-actions {
+    justify-content: flex-start;
+  }
+}
