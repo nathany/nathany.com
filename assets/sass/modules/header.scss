@@ -65,15 +65,13 @@ header {
   .full-header {
     display: inline-block;
     opacity: 1;
-    transform: translateY(0);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .shrunk-header {
     display: inline-block;
     opacity: 0;
-    transform: translateY(20px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Header sections for 3-column layout */
@@ -125,7 +123,6 @@ header.shrunk {
 
   .shrunk-header {
     opacity: 1;
-    transform: translateY(0);
   }
 
   nav ul {
