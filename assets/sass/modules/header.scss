@@ -86,10 +86,10 @@ header {
     display: flex;
     align-items: center;
 
-    margin-right: 0.5rem;
+    padding-right: 1rem;
 
     @media (min-width: $max-width) {
-      margin-right: 0;
+      padding-right: 0;
     }
   }
 
@@ -173,28 +173,12 @@ header.shrunk {
   }
 
   .header-left {
-    padding-left: 0.5rem;
+    padding-left: 1rem;
 
     /* On larger screens, pull icon into left margin */
     @media (min-width: $max-width) {
       padding-left: 0;
-      position: relative;
-
-      .shrunk-header {
-        position: absolute;
-        left: -2rem;
-        /* Adjust this value based on your layout */
-        top: 50%;
-        transform: translateY(-50%);
-      }
     }
   }
 
-  .header-right {
-    padding-right: 0.5rem;
-
-    @media (min-width: $max-width) {
-      padding-right: 0;
-    }
-  }
 }
