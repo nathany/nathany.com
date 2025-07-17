@@ -3,7 +3,13 @@
    ========================================================================== */
 
 footer {
-  margin: 1rem 0;
+  margin: 1rem;
+
+  @media (min-width: $max-width) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   font-size: 1.4rem;
   color: $base01;
 
