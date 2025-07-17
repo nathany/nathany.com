@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Identity Page Layout
+   ========================================================================== */
+
+.identity-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.identity-bio {
+  /* Bio container in left column */
+  flex-shrink: 0;
+}
+
+.identity-content {
+  /* Content in right column */
+  min-width: 0;
+
+  p {
+    margin-top: 0;
+  }
+
+  /* Prevents grid overflow */
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 768px) {
+  .identity-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Ensure bio doesn't get too wide on larger screens */
+@media (min-width: 1200px) {
+  .identity-layout {
+    grid-template-columns: 300px 1fr;
+  }
+}
