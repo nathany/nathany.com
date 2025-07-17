@@ -57,6 +57,13 @@ header {
     transform: translateX(0);
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
+
+  .shrunk-header {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
 }
 
 header.shrunk {
@@ -65,5 +72,10 @@ header.shrunk {
   .full-header {
     opacity: 0;
     transform: translateX(-20px);
+  }
+
+  .shrunk-header {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
