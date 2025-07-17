@@ -9,7 +9,7 @@
   {{ if .Keywords }}
   <meta name="keywords" content="{{ delimit .Keywords " ," }}">
   {{ end }}
-  <title>{{ .Title }}</title>
+  <title>{{ if .IsHome }}Nathan's Articles{{ else }}{{ .Title }}{{ end }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
   {{ $cssOpts := (dict "targetPath" "main.css" ) }}
@@ -44,7 +44,7 @@
       </div>
       <div class="header-center">
         <!-- <a href="/" class="full-header">nathany.com</a> -->
-        <span class="shrunk-header">{{ .Title }}</span>
+        <span class="shrunk-header">{{ if .IsHome }}Nathan's Articles{{ else }}{{ .Title }}{{ end }}</span>
       </div>
       <div class="header-right">
         {{ with .Site.Home.OutputFormats.Get "RSS" }}
