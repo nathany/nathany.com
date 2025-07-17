@@ -1,5 +1,5 @@
 +++
-title = "Books"
+title = "Book"
 description = ""
 aliases = [
     "/books"
