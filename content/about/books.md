@@ -13,10 +13,12 @@ aliases = [
     </a>
   </div>
   <div class="book-content">
-    <h2>Get Programming with Go (2018)</h2>
+    <h2>
+      Get Programming with Go (2018)
+      <a href="https://bit.ly/getprogrammingwithgo" class="book-link">Go</a>
+    </h2>
     <p>Hobbyists, newcomers, and professionals alike can benefit from a fast, modern language; all you need is the right resource! <em>Get Programming with Go</em> provides a hands-on introduction to Go language fundamentals, serving as a solid foundation for your future programming projects.</p>
-  </div>
-  <div class="book-actions">
-    <a href="https://bit.ly/getprogrammingwithgo" class="book-link">Go <i class="fa-solid fa-chevron-right"></i></a>
+  <!-- </div>
+  <div class="book-actions"> -->
   </div>
 </div>
