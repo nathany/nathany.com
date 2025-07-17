@@ -71,7 +71,6 @@ header {
   .shrunk-header {
     display: inline-block;
     opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Header sections for 3-column layout */
@@ -123,6 +122,31 @@ header.shrunk {
 
   .shrunk-header {
     opacity: 1;
+  }
+
+  .header-left {
+
+    /* On mobile, keep the icon inline */
+    @media (min-width: 768px) {
+      /* On larger screens, pull icon into left margin */
+      position: relative;
+
+      .shrunk-header {
+        position: absolute;
+        left: -3rem;
+        /* Adjust this value based on your layout */
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .header-center {
+    @media (min-width: 768px) {
+      /* On larger screens, allow title to be left-aligned */
+      text-align: left;
+      margin-left: 0;
+    }
   }
 
   nav ul {
