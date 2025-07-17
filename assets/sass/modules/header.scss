@@ -27,12 +27,17 @@ header {
   z-index: 1000;
 
   /* Dynamic padding based on content */
-  padding: 4rem 1rem;
+  padding: 4rem 0;
 
-  /* Flexbox layout for 3-column header */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .header-container {
+    /* Flexbox layout for 3-column header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 
   /* Smooth transitions */
   transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -78,11 +83,6 @@ header {
   }
 
   .header-center {
-    max-width: $max-width;
-    margin-left: auto;
-    margin-right: auto;
-    // padding: 0 1rem;
-
     flex: 1;
     /* Take up remaining space */
     text-align: left;
@@ -95,7 +95,7 @@ header {
 }
 
 header.shrunk {
-  padding: 1rem 1rem;
+  padding: 1rem 0;
 
   .full-header {
     opacity: 0;

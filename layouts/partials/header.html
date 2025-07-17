@@ -38,17 +38,19 @@
 <body id="top">
 
   <header>
-    <div class="header-left">
-      <a href="/" title="Home" class="fa-solid fa-house"></a>
-    </div>
-    <div class="header-center">
-      <!-- <a href="/" class="full-header">nathany.com</a> -->
-      <span class="shrunk-header">{{ .Title }}</span>
-    </div>
-    <div class="header-right">
-      {{ with .Site.Home.OutputFormats.Get "RSS" }}
-      <a href="{{ .Permalink }}" type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
-      {{ end }}
+    <div class="header-container">
+      <div class="header-left">
+        <a href="/" title="Home" class="fa-solid fa-house"></a>
+      </div>
+      <div class="header-center">
+        <!-- <a href="/" class="full-header">nathany.com</a> -->
+        <span class="shrunk-header">{{ .Title }}</span>
+      </div>
+      <div class="header-right">
+        {{ with .Site.Home.OutputFormats.Get "RSS" }}
+        <a href="{{ .Permalink }}" type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
+        {{ end }}
+      </div>
     </div>
   </header>
 
