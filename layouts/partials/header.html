@@ -56,11 +56,9 @@
             {{ else }}
             <a href="/" class="fa-solid fa-pen"></a>
             {{ end }}
+            {{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end
+            }}
           </div>
-        </div>
-        <div class="header-center">
-          <span class="shrunk-header">{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end
-            }}</span>
         </div>
         <div class="header-right">
           {{ with .Site.Home.OutputFormats.Get "RSS" }}

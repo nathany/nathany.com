@@ -33,7 +33,6 @@ header {
     /* Outer container for centering and max-width */
     max-width: $max-width;
     margin: 0 auto;
-    // padding: 0 1rem;
   }
 
   .header-flex {
@@ -76,12 +75,7 @@ header {
   .header-left {
     display: flex;
     align-items: center;
-  }
-
-  .header-center {
     flex: 1;
-    display: flex;
-    align-items: center;
     text-align: left;
   }
 
@@ -160,17 +154,5 @@ header.shrunk {
         /* Remove margin when positioned absolutely */
       }
     }
-  }
-
-  .header-center {
-    @media (min-width: $max-width) {
-      /* On larger screens, allow title to be left-aligned */
-      text-align: left;
-      margin-left: 0;
-    }
-  }
-
-  nav ul {
-    gap: 0.75rem; // Reduced gap between icons in shrunk state
   }
 }
