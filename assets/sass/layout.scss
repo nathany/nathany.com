@@ -5,8 +5,19 @@
 $max-width: 64rem;
 $visual-grid: false;
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #page {
-  margin-top: 5rem;
+  /* Add top margin to account for fixed header */
+  margin-top: calc(var(--header-shrunk-height) + 1rem);
+
+  @media (min-width: $max-width) {
+    margin-top: calc(var(--header-full-height) + 1rem);
+  }
+
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
@@ -20,5 +31,9 @@ $visual-grid: false;
 
   article {
     padding: 0 1rem;
+
+    @media (min-width: $max-width) {
+      padding: 0;
+    }
   }
 }

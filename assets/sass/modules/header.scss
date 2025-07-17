@@ -2,25 +2,52 @@
     Header
    ========================================================================== */
 
-$border-width: 8px;
+$border-width: 6px;
+
+:root {
+  --header-full-height: calc(2.4rem * 1.2 + 2rem + 8px);
+  /* font height + nav padding + border */
+  --header-shrunk-height: calc(1.4rem * 1.2 + 2rem + 8px);
+  /* font height + padding + border */
+}
 
 header {
   background-color: $color5;
-  border-bottom: $border-width solid $color3;
   font-family: sans-serif;
   color: $color1;
-
-  padding: 1rem 1rem;
 
   font-size: 1.4rem;
   font-weight: bold;
 
-  z-index: 1000;
-  position: fixed; /* Fixed position - sit on top of the page */
+  /* Fixed positioning to always stay on screen */
+  position: fixed;
   top: 0;
-  width: 100%; /* Full width */
-  /* transition: 0.4s;  */
-  /* Add a transition effect (when scrolling - and font size is decreased) */
+  width: 100%;
+  z-index: 1000;
+
+  /* Dynamic padding based on content */
+  padding: 0 0;
+
+  .header-container {
+    /* Outer container for centering and max-width */
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  .header-flex {
+    /* Simplified flexbox layout with explicit height */
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: calc(1.4rem * 1.2 + 2rem);
+
+    @media (min-width: $max-width) {
+      height: calc(2.4rem * 1.2 + 2rem);
+    }
+  }
+
+  /* Smooth transitions */
+  // transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   a {
     text-decoration: none;
@@ -31,13 +58,127 @@ header {
     }
 
     &:hover {
-      color: $base1;
-      transition: color 0.3s ease-in-out;
+      color: $base3;
+      // transition: color 0.3s ease-in-out;
     }
   }
 
-  .fa-house {
-    padding-right: 0.4rem;
-    padding-bottom: 0.3rem;
+  .full-header {
+    display: inline-block;
+    opacity: 1;
+    // transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  .shrunk-header {
+    opacity: 0;
+    display: none;
+  }
+
+  /* Header sections with simple flexbox layout */
+  .header-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    text-align: left;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    padding-right: 1rem;
+
+    @media (min-width: $max-width) {
+      padding-right: 0;
+    }
+  }
+
+  /* Navigation styles */
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+
+      li {
+        font-size: 1.4rem;
+        line-height: 1.2;
+
+        // &:not(:last-child) {
+        //   border-right: $border-width solid $color4;
+        // }
+
+        &.selected a {
+          color: $base3;
+          background-color: lighten($color5, 5%);
+        }
+
+        .fa-solid {
+          padding-right: 0.5rem;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+          padding: 1rem 1rem;
+          height: 100%;
+          box-sizing: border-box;
+
+          &:hover {
+            color: $base3;
+            background-color: $base0;
+          }
+        }
+
+        @media (min-width: $max-width) {
+          font-size: 2.4rem;
+          line-height: 1.2;
+
+          a {
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+header.shrunk {
+  padding: 0;
+  font-size: 1.4rem;
+
+  .header-flex {
+    height: calc(1.4rem * 1.2 + 2rem);
+  }
+
+  .full-header {
+    display: none;
+  }
+
+  .shrunk-header {
+    display: inline-block;
+    opacity: 1;
+
+    a.title {
+      color: $base3;
+
+      &:hover {
+        color: $base3;
+      }
+    }
+  }
+
+  .header-left {
+    padding-left: 1rem;
+
+    /* On larger screens, pull icon into left margin */
+    @media (min-width: $max-width) {
+      padding-left: 0;
+    }
+  }
+
 }

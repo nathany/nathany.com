@@ -1,20 +1,15 @@
-  <footer>
+<footer>
 
-    <p>
-      <span class="copyright" data-tooltip="Copyright &copy; {{ .Site.Copyright }}">&copy; 2025</span>
+  <div class="footer-content">
+    <span class="copyright" data-tooltip="Copyright &copy; {{ .Site.Copyright }}">&copy; 2025</span>
 
-      <a href="#top" class="top">&#8679; Top</a>
+    <a href="#top" class="top">Top &#8679;</a>
+  </div>
 
-      <span class="right-icons">
-        {{ with .OutputFormats.Get "RSS" }}
-          <a href="{{ .Permalink }}"  type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
-        {{ end }}
-      </span>
-    </p>
-
-  </footer>
+</footer>
 
 </div> <!-- end page -->
 
 </body>
+
 </html>

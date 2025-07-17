@@ -1,15 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 
+{{ $pageTitle := cond .IsHome .Site.Params.home_title .Title }}
+
 <head>
   <meta charset="UTF-8">
   {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
+    <meta name="description" content="{{ .Description }}">
   {{ end }}
   {{ if .Keywords }}
     <meta name="keywords" content="{{ delimit .Keywords " ," }}">
   {{ end }}
-  <title>{{ .Title }}</title>
+  <title>{{ $pageTitle }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
   {{ $cssOpts := (dict "targetPath" "main.css" ) }}
@@ -24,12 +26,62 @@
   {{ with .OutputFormats.Get "RSS" }}
     <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
   {{ end }}
+
+  {{ $jsOpts := (dict "targetPath" "all.js" ) }}
+  {{ if hugo.IsServer }}
+    {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts }}
+    <script src="{{ $js.Permalink }}"></script>
+  {{ else }}
+    {{ $js := resources.Get "javascript/all.js" | js.Build $jsOpts | minify | fingerprint }}
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  {{ end }}
 </head>
 
 <body id="top">
 
+  {{ $currentPath := .RelPermalink }}
+  {{ $navItems := slice
+    (dict "url" "/" "icon" "fa-pen" "title" "Blog")
+    (dict "url" "/books/" "icon" "fa-book" "title" "Books" "paths" (slice "/books/"))
+    (dict "url" "/id/" "icon" "fa-fingerprint" "title" "Identity" "paths" (slice "/id/" "/resume/"))
+  }}
+
+  {{ $currentNavItem := index $navItems 0 }}
+  {{ range $navItems }}
+    {{ if .paths }}
+      {{ if in .paths $currentPath }}
+        {{ $currentNavItem = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
   <header>
-    <a href="/" title="Home" class="fa-solid fa-house"></a><a href="/">nathany.com</a>
+    <div class="header-container">
+      <div class="header-flex">
+        <div class="header-left">
+          <nav class="full-header">
+            <ul>
+              {{ range $navItems }}
+                <li{{ if eq .url $currentNavItem.url }} class="selected"{{ end }}>
+                  <a href="{{ .url }}">
+                    <i class="fa-solid {{ .icon }}"></i> {{ .title }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </nav>
+          <div class="shrunk-header">
+            <a href="{{ $currentNavItem.url }}" class="fa-solid {{ $currentNavItem.icon }}"></a>
+            <a href="#top" class="title">{{ $pageTitle }}</a>
+          </div>
+        </div>
+        <div class="header-right">
+          {{ with .Site.Home.OutputFormats.Get "RSS" }}
+            <a href="{{ .Permalink }}" type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
   </header>
 
   <div id="page">

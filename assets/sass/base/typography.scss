@@ -13,13 +13,13 @@ h4 {
 }
 
 h1 {
-  color: $blue;
+  color: $base02;
 }
 
 .meta {
-  font-style: italic;
+  // font-style: italic;
   color: $yellow;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 p,
@@ -27,8 +27,15 @@ li {
   line-height: 1.5;
 }
 
-h2 + p,
-h1 + p.meta {
+h2.subtitle {
+  margin-top: 0;
+  font-weight: normal;
+  color: $base02;
+  font-size: 1.8rem;
+}
+
+h2+p,
+h1+p.meta {
   margin-top: 0;
 }
 
@@ -91,6 +98,7 @@ blockquote {
 }
 
 .highlight {
+  font-size: 1.2rem;
   background-color: mix(white, $base1, 30%);
   border-top: 4px solid $base1;
   border-bottom: 4px solid $base1;
