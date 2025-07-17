@@ -112,6 +112,10 @@ header {
 
         border-right: $border-width solid $color3;
 
+        &.selected a {
+          color: $base3;
+        }
+
         .fa-solid {
           padding-right: 0.5rem;
         }
