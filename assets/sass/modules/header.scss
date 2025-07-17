@@ -4,25 +4,31 @@
 
 $border-width: 8px;
 
+:root {
+  --header-full-height: calc(1.4rem * 1.2 + 8rem + 8px); /* font height + padding + border */
+  --header-shrunk-height: calc(1.4rem * 1.2 + 2rem + 8px); /* font height + padding + border */
+}
+
 header {
   background-color: $color5;
   border-bottom: $border-width solid $color3;
   font-family: sans-serif;
   color: $color1;
 
-  padding: 1rem 1rem;
-
   font-size: 1.4rem;
   font-weight: bold;
 
-  /* Fixed on top of the page */
-  position: sticky;
+  /* Fixed positioning to always stay on screen */
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 
-  /* transition effect when scrolling */
-  transition: padding 0.5s ease;
+  /* Dynamic padding based on content */
+  padding: 4rem 1rem;
+
+  /* Smooth transitions */
+  transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   a {
     text-decoration: none;
@@ -43,14 +49,19 @@ header {
     padding-bottom: 0.3rem;
   }
 
-  padding: 4rem 1rem;
+  .hidden-when-shrunk {
+    display: inline-block;
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
 }
 
 header.shrunk {
-  height: auto;
   padding: 1rem 1rem;
 
   .hidden-when-shrunk {
-    display: none;
+    opacity: 0;
+    transform: translateX(-20px);
   }
 }

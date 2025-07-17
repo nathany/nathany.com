@@ -5,6 +5,13 @@
 $max-width: 64rem;
 $visual-grid: false;
 
+body {
+  margin: 0;
+  padding: 0;
+  /* Add top margin to account for fixed header */
+  margin-top: var(--header-full-height);
+}
+
 #page {
   max-width: $max-width;
   margin-left: auto;
