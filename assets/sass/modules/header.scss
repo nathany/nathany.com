@@ -51,8 +51,8 @@ header {
     }
 
     &:hover {
-      color: $base1;
-      transition: color 0.3s ease-in-out;
+      color: $base3;
+      // transition: color 0.3s ease-in-out;
     }
   }
 
@@ -94,14 +94,20 @@ header {
       border-left: $border-width solid $color3;
 
       li {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
         border-right: $border-width solid $color3;
-        padding: 1rem 1rem;
 
         a {
-          display: inline-block;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 1rem 2rem;
+          width: 100%;
+          height: 100%;
+
+          &:hover {
+            color: $base3;
+            background-color: $base1;
+          }
         }
       }
     }
