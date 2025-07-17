@@ -8,8 +8,12 @@ $visual-grid: false;
 body {
   margin: 0;
   padding: 0;
-  /* Add top margin to account for fixed header */
-  margin-top: var(--header-full-height);
+  margin-top: var(--header-shrunk-height);
+
+  @media (min-width: $max-width) {
+    /* Add top margin to account for fixed header */
+    margin-top: var(--header-full-height);
+  }
 }
 
 #page {
@@ -24,7 +28,11 @@ body {
     clear: both;
   }
 
-  // article {
-  //   padding: 0 1rem;
-  // }
+  article {
+    padding: 0 1rem;
+
+    @media (min-width: $max-width) {
+      padding: 0;
+    }
+  }
 }
