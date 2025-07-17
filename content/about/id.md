@@ -1,6 +1,6 @@
 +++
 title = "Identity"
-description = "whoami"
+# description = "whoami"
 layout = "id"
 aliases = [
     "/about"

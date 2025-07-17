@@ -2,7 +2,7 @@
     Header
    ========================================================================== */
 
-$border-width: 8px;
+$border-width: 6px;
 
 :root {
   --header-full-height: calc(2.4rem * 1.2 + 2rem + 8px);
@@ -101,18 +101,18 @@ header {
       padding: 0;
       display: flex;
 
-      @media (min-width: $max-width) {
-        border-left: $border-width solid $color4;
-      }
 
       li {
         font-size: 1.4rem;
         line-height: 1.2;
 
-        border-right: $border-width solid $color4;
+        // &:not(:last-child) {
+        //   border-right: $border-width solid $color4;
+        // }
 
         &.selected a {
           color: $base3;
+          background-color: lighten($color5, 5%);
         }
 
         .fa-solid {
@@ -129,7 +129,7 @@ header {
 
           &:hover {
             color: $base3;
-            background-color: $base1;
+            background-color: $base0;
           }
         }
 
