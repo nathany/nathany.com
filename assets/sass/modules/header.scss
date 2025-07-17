@@ -29,6 +29,11 @@ header {
   /* Dynamic padding based on content */
   padding: 4rem 1rem;
 
+  /* Flexbox layout for 3-column header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   /* Smooth transitions */
   transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -46,7 +51,8 @@ header {
     }
   }
 
-  .fa-house {
+  .fa-house,
+  .fas {
     padding-right: 0.4rem;
     padding-bottom: 0.3rem;
   }
@@ -63,6 +69,23 @@ header {
     opacity: 0;
     transform: translateX(20px);
     transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Header sections for 3-column layout */
+  .header-left {
+    flex: 0 0 auto;
+    /* Don't grow or shrink */
+  }
+
+  .header-center {
+    flex: 1;
+    /* Take up remaining space */
+    text-align: left;
+  }
+
+  .header-right {
+    flex: 0 0 auto;
+    /* Don't grow or shrink */
   }
 }
 
