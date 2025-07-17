@@ -27,7 +27,7 @@ header {
   z-index: 1000;
 
   /* Dynamic padding based on content */
-  padding: 2rem 0;
+  padding: 0 0;
 
   .header-container {
     /* Flexbox layout for 3-column header */
@@ -40,7 +40,7 @@ header {
   }
 
   /* Smooth transitions */
-  transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  // transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   a {
     text-decoration: none;
@@ -56,16 +56,10 @@ header {
     }
   }
 
-  .fa-house,
-  .fas {
-    padding-right: 0.4rem;
-    padding-bottom: 0.3rem;
-  }
-
   .full-header {
     display: inline-block;
     opacity: 1;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    // transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .shrunk-header {
@@ -97,12 +91,14 @@ header {
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 1.5rem;
+      border-left: $border-width solid $color3;
 
       li {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        border-right: $border-width solid $color3;
+        padding: 1rem 1rem;
 
         a {
           display: inline-block;

@@ -1,18 +1,18 @@
 {{ partial "header.html" . }}
 
-<article>
+<article class="page">
   <section class="title">
     <h1>{{ .Title }}</h1>
     <div class="meta">
       {{ if .Description }}
-        <p>{{ .Description | markdownify }}</p>
+      <p>{{ .Description | markdownify }}</p>
       {{ end }}
       <p>
         {{ if .Params.revised }}
-          First published on {{ .Date | time.Format ":date_long" }}.
-          Last revised on {{ .Params.revised | time.Format ":date_long" }}.
+        First published on {{ .Date | time.Format ":date_long" }}.
+        Last revised on {{ .Params.revised | time.Format ":date_long" }}.
         {{ else }}
-          Published on {{ .Date | time.Format ":date_long" }}.
+        Published on {{ .Date | time.Format ":date_long" }}.
         {{ end }}
       </p>
     </div>

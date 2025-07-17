@@ -1,12 +1,11 @@
 {{ partial "header.html" . }}
 
 <article class="page">
-
   <section class="title">
     <h1>{{ .Title }}</h1>
     <div class="meta">
       {{ if .Description }}
-        <p>{{ .Description | markdownify }}</p>
+      <p>{{ .Description | markdownify }}</p>
       {{ end }}
     </div>
   </section>
