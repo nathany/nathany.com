@@ -27,8 +27,8 @@ li {
   line-height: 1.5;
 }
 
-h2+p,
-h1+p.meta {
+h2 + p,
+h1 + p.meta {
   margin-top: 0;
 }
 
@@ -91,13 +91,13 @@ blockquote {
 }
 
 .highlight {
-  background-color: tint($base1, 30%);
+  background-color: mix(white, $base1, 30%);
   border-top: 4px solid $base1;
   border-bottom: 4px solid $base1;
 
   &:before,
   &:after {
-    background: tint($base1, 30%);
+    background: mix(white, $base1, 30%);
     border-top: 4px solid $base1;
     border-bottom: 4px solid $base1;
   }

@@ -35,7 +35,7 @@
 
   // Keyword.Constant
   .kc {
-    color: shade($yellow,30%);
+    color: mix(black, $yellow, 30%);
     font-weight: bold;
   }
 
@@ -181,7 +181,7 @@
 
   // Literal.String.Backtick
   .sb {
-    color: shade($cyan, 10%);
+    color: mix(black, $cyan, 10%);
   }
 
   // Literal.String.Char
@@ -232,7 +232,7 @@
 
   // Literal.String.Symbol
   .ss {
-    color: shade($cyan,30%);
+    color: mix(black, $cyan, 30%);
   }
 
   // Literal.Number
@@ -267,7 +267,7 @@
 
   // Operator
   .o {
-    color: shade($blue, 30%);
+    color: mix(black, $blue, 30%);
   }
 
   // Operator.Word
@@ -277,7 +277,7 @@
 
   // Punctuation
   .p {
-    color: shade($blue, 30%);
+    color: mix(black, $blue, 30%);
   }
 
   // Comment
@@ -350,7 +350,7 @@
 
   // Generic.Prompt
   .gp {
-    color: shade($green,30%);
+    color: mix(black, $green, 30%);
   }
 
   // Generic.Strong
