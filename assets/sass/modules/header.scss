@@ -96,6 +96,10 @@ header {
       li {
         border-right: $border-width solid $color3;
 
+        .fa-solid {
+          padding-right: 0.5rem;
+        }
+
         a {
           display: flex;
           align-items: center;
