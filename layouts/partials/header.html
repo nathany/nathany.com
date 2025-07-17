@@ -37,30 +37,38 @@
 
 <body id="top">
 
+  {{ $currentPath := .RelPermalink }}
+  {{ $navItems := slice
+  (dict "url" "/" "icon" "fa-pen" "title" "Blog")
+  (dict "url" "/books/" "icon" "fa-book" "title" "Books")
+  (dict "url" "/id/" "icon" "fa-fingerprint" "title" "Identity")
+  }}
+
+  {{ $currentNavItem := index $navItems 0 }}
+  {{ if eq $currentPath "/books/" }}
+  {{ $currentNavItem = index $navItems 1 }}
+  {{ else if or (eq $currentPath "/id/") (eq $currentPath "/resume/") }}
+  {{ $currentNavItem = index $navItems 2 }}
+  {{ end }}
+
   <header>
     <div class="header-container">
       <div class="header-flex">
         <div class="header-left">
           <nav class="full-header">
             <ul>
-              <li{{ if not (or (eq .RelPermalink "/books/" ) (eq .RelPermalink "/id/" ) (eq .RelPermalink "/resume/" ))
-                }} class="selected" {{ end }}><a href="/"><i class="fa-solid fa-pen"></i> Blog</a></li>
-                <li{{ if eq .RelPermalink "/books/" }} class="selected" {{ end }}><a href="/books"><i
-                      class="fa-solid fa-book"></i> Books</a></li>
-                  <li{{ if or (eq .RelPermalink "/id/" ) (eq .RelPermalink "/resume/" ) }} class="selected" {{ end }}><a
-                      href="/id"><i class="fa-solid fa-fingerprint"></i> Identity</a></li>
+              {{ range $navItems }}
+              <li{{ if eq .url $currentNavItem.url }} class="selected" {{ end }}>
+                <a href="{{ .url }}">
+                  <i class="fa-solid {{ .icon }}"></i> {{ .title }}
+                </a>
+                </li>
+                {{ end }}
             </ul>
           </nav>
           <div class="shrunk-header">
-            {{ if eq .RelPermalink "/books/" }}
-            <a href="/books" class="fa-solid fa-book"></a>
-            {{ else if or (eq .RelPermalink "/id/") (eq .RelPermalink "/resume/") }}
-            <a href="/id" class="fa-solid fa-fingerprint"></a>
-            {{ else }}
-            <a href="/" class="fa-solid fa-pen"></a>
-            {{ end }}
-            <a href="#top" class="title">{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end
-              }}</a>
+            <a href="{{ $currentNavItem.url }}" class="fa-solid {{ $currentNavItem.icon }}"></a>
+            <a href="#top">{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end }}</a>
           </div>
         </div>
         <div class="header-right">
