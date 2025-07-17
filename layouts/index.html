@@ -8,11 +8,11 @@
     <li>
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <p class="meta">
-        {{ if .Params.revised }}
+        {{/* {{ if .Params.revised }}
         Last revised on {{ .Params.revised | time.Format "2006/01/02" }}.
-        {{ else }}
+        {{ else }} */}}
         Published on {{ .Date | time.Format "2006/01/02" }}.
-        {{ end }}
+        {{/* {{ end }} */}}
       </p>
       {{ if .Description }}
       <p>{{ .Description | markdownify }}</p>
