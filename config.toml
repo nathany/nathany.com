@@ -23,6 +23,7 @@ name = "Nathan Youngman"
 [permalinks]
 post = "/:contentbasename/"
 about = "/:contentbasename/"
+books = "/:contentbasename/"
 
 [deployment]
 order = [".png$", ".jpg$", ".gif$", ".svg$"]
