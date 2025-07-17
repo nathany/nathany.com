@@ -165,26 +165,34 @@ header.shrunk {
     opacity: 1;
     margin-right: 1rem;
     /* Add space between icon and title */
-  }
 
-  .header-left {
-    margin-left: 0.5rem;
+    a.title {
+      color: $blue;
 
-    /* On mobile, keep the icon inline */
-    @media (min-width: $max-width) {
-      margin-left: 0;
+      &:hover {
+        color: $base3;
+      }
+    }
 
-      /* On larger screens, pull icon into left margin */
-      position: relative;
+    .header-left {
+      margin-left: 0.5rem;
 
-      .shrunk-header {
-        position: absolute;
-        left: -2rem;
-        /* Adjust this value based on your layout */
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 0;
-        /* Remove margin when positioned absolutely */
+      /* On mobile, keep the icon inline */
+      @media (min-width: $max-width) {
+        margin-left: 0;
+
+        /* On larger screens, pull icon into left margin */
+        position: relative;
+
+        .shrunk-header {
+          position: absolute;
+          left: -2rem;
+          /* Adjust this value based on your layout */
+          top: 50%;
+          transform: translateY(-50%);
+          margin-right: 0;
+          /* Remove margin when positioned absolutely */
+        }
       }
     }
   }
