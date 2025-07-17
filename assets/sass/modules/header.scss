@@ -68,9 +68,8 @@ header {
   }
 
   .shrunk-header {
-    display: inline-block;
     opacity: 0;
-    // display: none;
+    display: none;
   }
 
   /* Header sections with absolute positioning for predictable height */
@@ -126,7 +125,7 @@ header {
 }
 
 header.shrunk {
-  padding: 1rem 0;
+  padding: 0;
   font-size: 1.4rem;
 
   .header-flex {
@@ -138,6 +137,7 @@ header.shrunk {
   }
 
   .shrunk-header {
+    display: inline-block;
     opacity: 1;
     margin-right: 1rem;
     /* Add space between icon and title */
