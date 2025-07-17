@@ -46,7 +46,7 @@
       <span class="shrunk-header">{{ .Title }}</span>
     </div>
     <div class="header-right">
-      {{ with .OutputFormats.Get "RSS" }}
+      {{ with .Site.Home.OutputFormats.Get "RSS" }}
       <a href="{{ .Permalink }}" type="application/rss+xml" title="Atom feed" class="fas fa-rss-square"></a>
       {{ end }}
     </div>
