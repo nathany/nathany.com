@@ -3,7 +3,6 @@ $horizontal: 528px;
 $border-width: 8px;
 
 .bio {
-    margin: 1rem;
     width: 256px + ($border-width * 2);
 
     font-family: sans-serif;
@@ -20,25 +19,17 @@ $border-width: 8px;
         }
 
         .name {
+            font-size: 1.4rem;
             font-weight: bold;
             margin: 0;
             line-height: 1.2;
-
-            a:visited,
-            a:link {
-                color: $color2;
-            }
-
-            a:hover {
-                color: white;
-            }
         }
 
         .description {
             margin-top: 0;
             margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            line-height: 1;
+            font-size: 1rem;
+            line-height: 1.2;
 
             a:visited,
             a:link {
@@ -54,41 +45,8 @@ $border-width: 8px;
     .portrait {
         @include retina-image(images/portrait, 256px 256px, jpg);
         width: 256px;
-        height: 128px;
+        height: 200px;
         background-position: center left;
-    }
-
-    .book-cover {
-        @include retina-image(images/book-cover, 256px 320px, png);
-        width: 256px;
-        height: 320px;
-        background-position: center left;
-    }
-
-    @media (min-width: $horizontal) {
-        width: 512px + 160px + ($border-width * 2);
-        height: 200px + ($border-width * 2);
-        display: grid;
-        grid-template-columns: 256px 160px 1fr;
-        grid-template-rows: 200px;
-        gap: 1rem;
-
-        .portrait {
-            grid-column: 1;
-            height: 200px;
-        }
-
-        .book-cover {
-            @include retina-image(images/book-cover-wide, 160px 200px, png);
-            grid-column: 2;
-            width: 160px;
-            height: 200px;
-        }
-
-        .text {
-            grid-column: 3;
-            padding: 0 1rem 0.5rem 0;
-        }
     }
 
     .fab,
@@ -107,6 +65,7 @@ $border-width: 8px;
     }
 
     .far.fa-heart {
+
         &:hover,
         &:active {
             color: #db61a2;
@@ -114,6 +73,7 @@ $border-width: 8px;
     }
 
     .fab.fa-amazon {
+
         &:hover,
         &:active {
             color: #ff7800;
@@ -121,6 +81,7 @@ $border-width: 8px;
     }
 
     .fab.fa-youtube {
+
         &:hover,
         &:active {
             color: #ff2841;
@@ -128,6 +89,7 @@ $border-width: 8px;
     }
 
     .fab.fa-github-alt {
+
         &:hover,
         &:active {
             color: white;
