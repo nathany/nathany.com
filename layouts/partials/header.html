@@ -56,8 +56,8 @@
             {{ else }}
             <a href="/" class="fa-solid fa-pen"></a>
             {{ end }}
-            {{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end
-            }}
+            <a href="#top">{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end
+              }}</a>
           </div>
         </div>
         <div class="header-right">
