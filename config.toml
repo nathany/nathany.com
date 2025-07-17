@@ -12,6 +12,7 @@ baseName = "articles"
 
 [params]
 copyright-year = '2025'
+home_title = "Nathan's Articles"
 [params.author]
 name = "Nathan Youngman"
 email = "git@nathany.com"
@@ -40,6 +41,6 @@ pattern = "^.+\\.(html|xml|json)$"
 gzip = true
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true

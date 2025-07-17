@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <article>
-  <h1>Nathan's Articles</h1>
+  <h1>{{ .Site.Params.home_title }}</h1>
 
   <ul class="posts">
       {{ range where (where .Site.RegularPages "Section" "post") ".Params.legacy" "!=" "true" }}
