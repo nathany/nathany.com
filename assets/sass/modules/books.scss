@@ -1,20 +1,12 @@
-.books-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 .book-item {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 2rem;
   align-items: end;
   padding: 1.5rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background: #fafafa;
+  border: 2px solid $color1;
+  // border-radius: 8px;
+  // background: #fafafa;
   transition: box-shadow 0.2s ease;
 
   &:hover {

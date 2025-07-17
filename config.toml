@@ -12,7 +12,7 @@ baseName = "articles"
 
 [params]
 copyright-year = '2025'
-home_title = "Nathan's Articles"
+home_title = "Nathan's Blog"
 [params.author]
 name = "Nathan Youngman"
 email = "git@nathany.com"
