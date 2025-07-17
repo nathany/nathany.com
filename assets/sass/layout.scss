@@ -8,15 +8,16 @@ $visual-grid: false;
 body {
   margin: 0;
   padding: 0;
-  margin-top: var(--header-shrunk-height);
-
-  @media (min-width: $max-width) {
-    /* Add top margin to account for fixed header */
-    margin-top: var(--header-full-height);
-  }
 }
 
 #page {
+  /* Add top margin to account for fixed header */
+  margin-top: calc(var(--header-shrunk-height) + 1rem);
+
+  @media (min-width: $max-width) {
+    margin-top: calc(var(--header-full-height) + 1rem);
+  }
+
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
