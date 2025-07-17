@@ -40,9 +40,16 @@
   <header>
     <div class="header-container">
       <div class="header-left">
-        <a href="/" title="Home" class="fa-solid fa-house"></a>
+        <nav>
+          <ul>
+            <li><a href="/" class="fa-solid fa-pen"></a> <a href="/" class="full-header">Blog</a></li>
+            <li><a href="/books" class="fa-solid fa-book"></a> <a href="/books" class="full-header">Books</a></li>
+            <li><a href="/id" class="fa-solid fa-fingerprint"></a> <a href="/id" class="full-header">About</a></li>
+          </ul>
+        </nav>
       </div>
       <div class="header-center">
+
         <!-- <a href="/" class="full-header">nathany.com</a> -->
         <span class="shrunk-header">{{ if .IsHome }}{{ .Site.Params.home_title }}{{ else }}{{ .Title }}{{ end }}</span>
       </div>
