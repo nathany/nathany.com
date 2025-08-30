@@ -2,7 +2,6 @@
 title = "😎 Summer Break"
 description = "Two months into my career break."
 date = "2025-08-29"
-revised = "2025-07-14"
 keywords = ["summer", "career break", "sabbatical", "health", "well-being"]
 +++
 
