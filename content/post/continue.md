@@ -51,7 +51,7 @@ Beyond working towards the big goals, I plan to invest some time into these habi
 * Practicing traditional art 🖌️
 * Reading more and sharing book summaries 📕
 
-My career break begins on July 1, 2025. 🇨🇦 I have a number of ambitious goals -- probably *too many.* I plan to do a follow-up in a year, and I fully intend to write more posts along the way.
+My career break begins on July 1, 2025. 🇨🇦 I have a number of ambitious goals -- probably *too many.* I plan to do a follow-up in a year, and I fully intend to [write more posts](/summer-break) along the way.
 
 Thanks for reading! 👋🏼
 

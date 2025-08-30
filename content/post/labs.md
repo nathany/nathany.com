@@ -4,6 +4,7 @@ description = "Foot guns at the labs."
 date = "2025-07-12"
 revised = "2025-07-14"
 keywords = ["c", "cpp", "rust", "ffi", "foreign function interface", "long", "cross-platform"]
+legacy = true
 +++
 
 This post is an exploration of the foreign function interface (FFI) between C and Rust, and one of the many foot guns that await those brave enough to straddle the boundary.
