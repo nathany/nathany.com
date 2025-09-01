@@ -102,7 +102,7 @@ What happened in 2023 was traumatic. There was a stationary shape in my backyard
 
 > "Oh my God..."
 
-My voice trembled and so did my hands.
+My voice trembled and so did my body.
 
 There was a dead cat in my backyard.
 
@@ -110,7 +110,7 @@ There was a dead cat in my backyard.
 
 As with the pigeon before, I found out what I should do, made a plan, and got it done.
 
-But this left a scar on my soul. It haunted me. Every missing cat sign, every unrecognizable shape in the backyard. My grass grew longer and longer. I avoided the backyard entirely for weeks, afraid of what else I may find. Whenever I walked past the meat aisle at the supermarket, I would flinch.
+But it left a scar on my soul. It haunted me. Every missing cat sign, every unrecognizable shape in the backyard. My grass grew longer and longer. I avoided the backyard entirely for weeks, afraid of what else I may find. Whenever I walked past the meat aisle at the supermarket, I would flinch.
 
 Yet that day, in the midst of it all, I found two reasons to be grateful.
 
