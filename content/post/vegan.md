@@ -41,7 +41,7 @@ After a few months I gave up and transitioned back to an omnivore diet.
 
 ## Unsweetened
 
-It was January 2016, and I was eating the many homemade sweets that I received for Christmas. I also happened to be tracking my weight every day. My weight went up and up. This made sense to me, as many years earlier (2001), I had cut out soda pop and lost weight. Maybe sugar was the culprit?
+It was January 2016, and I was eating the many homemade sweets that I received for Christmas. I also happened to be tracking my weight every day, which went up and up. This made sense to me, as many years earlier (2001), I had cut out soda pop and lost weight. Maybe sugar was the culprit?
 
 I learned a lot that year. Watching lectures, reading books (e.g. FAT Chance), paying attention to the nutrition labels on food. I cut free sugars from my diet and lost 70 lbs.
 
@@ -62,7 +62,7 @@ But there was a wrinkle. There was one food that didn't contain sugar but still 
 
 That same year I went to California for a business trip with several colleagues, some whom I had never met in person (remote work). Every morning we had breakfast together before getting to work. One colleague ordered avocado toast with his meal, whereas I had the standard whipped butter.
 
-We got to talking about food over the course of the trip. He introduced me to the Whole Food Plant-Based Diet (WFPBD).
+We got to talking about food over the course of the trip and he introduced me to the Whole Food Plant-Based Diet (WFPBD).
 
 I had reached a healthy weight and was trying to determine what to do next. I certainly didn't want to reintroduce loads of sugar or cheese and regain that weight. Whole food meant cutting out ultra-processed foods, which aligned well with cutting out sugar. Plant-based aligned with my vegetarian experiments and leaving out cheese.
 
@@ -82,7 +82,7 @@ It's a documentary about the slaughter. While the entire film was difficult to w
 
 Due to their graphic nature, I am marking some paragraphs as ⚠️ <abbr title="Not Safe For Life">NSFL</abbr>. Skip past them if you need to.
 
-Egg laying hens are a different breed than the chickens bred for meat. Hens are replaced as needed, which means some eggs are hatched. But what if the hatched chick is male? 🐣 Very few males are needed by the egg industry. The rest are *disposable*. I find this disturbing in itself. I wouldn't be too happy if I were killed for being male.
+Egg laying hens are a different breed than the chickens bred for meat. Hens are replaced as needed, which means some eggs are hatched. But what about the hatched chicks that are male? 🐣 Very few males are needed by the egg industry. The rest are *disposable*. I find this disturbing in itself. I wouldn't be too happy if I were killed for being male.
 
 ⚠️ NSFL: The documentary showed a macerator -- think giant blender -- that grinds the fluffy little guys to bits. Though filmed predominantly in Australia, a person at the screening told me of students studying agriculture in Alberta seeing the same thing, and even rescuing some baby chicks. 🐥
 
@@ -106,9 +106,9 @@ My voice trembled and so did my hands.
 
 There was a dead cat in my backyard.
 
-⚠️ <abbr title="Not Safe For Life">NSFL</abbr>: It wasn't just dead. It was lunch for something. Ribcage in full view, intestines scattered about, bugs buzzing around. The poor thing. How long had it been there? How did this happen in my fenced backyard? Did a coyote get under my gate or maybe it was a large bird?
+⚠️ <abbr title="Not Safe For Life">NSFL</abbr>: It wasn't just dead. It was lunch for something. Ribcage in full view, intestines scattered about, bugs buzzing around. The poor thing. How long had it been there? How did this happen in my fenced backyard? Did a coyote get under my gate or maybe it was attacked by a large bird?
 
-As with the bird before, I found out what I should do, made a plan, and got it done.
+As with the pigeon before, I found out what I should do, made a plan, and got it done.
 
 But this left a scar on my soul. It haunted me. Every missing cat sign, every unrecognizable shape in the backyard. My grass grew longer and longer. I avoided the backyard entirely for weeks, afraid of what else I may find. Whenever I walked past the meat aisle at the supermarket, I would flinch.
 
