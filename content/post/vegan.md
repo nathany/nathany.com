@@ -2,8 +2,7 @@
 title = "🌱 My Vegan Journey"
 description = "From omnivore to vegan. The people and events that shaped my convictions."
 date = "2025-08-31"
-keywords = ["vegan", "vegetarian", "plant-based", "herbivore", "diet", "lifestyle", "creation care"]
-draft = true
+keywords = ["vegan", "vegetarian", "plant-based", "herbivore", "diet", "lifestyle", "creation care", "wfpbd"]
 +++
 
 It all began with a potluck.
@@ -24,7 +23,7 @@ One of my colleagues was also vegetarian. Her reasons were for the animals, for 
 
 At the time I didn't know much of anything about nutrition, much less climate change, deforestation, and the like. Late into the experiment, I learned that canned vegetable soup contains chicken stock! 🤦🏼‍♂️ That's how naive I was -- not even reading the ingredients.
 
-After the month was up, I switched back to my previous omnivore diet. I wasn't yet ready to commit to being vegetarian long-term. My misconceptions around protein were part of that decision. It was positive experience though -- the food and the savings.
+After the month was up, I switched back to my previous omnivore diet. I wasn't yet ready to commit to being vegetarian long-term. My misconceptions around protein were part of that decision. But it was a positive experience -- the food and the savings.
 
 ## Vegetarian Experiment #2
 
@@ -42,7 +41,7 @@ After a few months I gave up and transitioned back to an omnivore diet.
 
 ## Unsweetened
 
-It was January 2016, and I was eating the many homemade sweets that I received for Christmas. I also happened to be tracking my weight every day and paying attention. My weight went up and up. This made sense to me, as many years earlier (2001), I had cut out soda pop and lost weight. Maybe sugar was the culprit?
+It was January 2016, and I was eating the many homemade sweets that I received for Christmas. I also happened to be tracking my weight every day. My weight went up and up. This made sense to me, as many years earlier (2001), I had cut out soda pop and lost weight. Maybe sugar was the culprit?
 
 I learned a lot that year. Watching lectures, reading books (e.g. FAT Chance), paying attention to the nutrition labels on food. I cut free sugars from my diet and lost 70 lbs.
 
@@ -61,7 +60,7 @@ But there was a wrinkle. There was one food that didn't contain sugar but still 
 
 ## Whole Food Plant-Based
 
-That same year I went to California for a business trip with several colleagues, some whom I had never met in person (remote work). We all had breakfast together before getting to work. One colleague ordered avocado toast whereas I had the standard whipped butter.
+That same year I went to California for a business trip with several colleagues, some whom I had never met in person (remote work). Every morning we had breakfast together before getting to work. One colleague ordered avocado toast with his meal, whereas I had the standard whipped butter.
 
 We got to talking about food over the course of the trip. He introduced me to the Whole Food Plant-Based Diet (WFPBD).
 
@@ -71,7 +70,7 @@ It's essentially the restrictions of a vegan diet, but with an emphasis on healt
 
 It resonated with me, so I asked for recipe and cookbook recommendations. We returned to our respective cities, and that Christmas I invited some family over for a plant-based meal. That experiment was a success.
 
-Over the following months, I fully adopted this diet. I began to consume documentaries, lectures, and books written by doctors. I enjoyed learning new recipes and never looked back.
+Over the following months I fully adopted this diet. I began to consume documentaries, lectures, and books written by doctors. I enjoyed learning new recipes and never looked back.
 
 When asked how long I've been vegan, I base it on early 2017, but that's not the end of the story.
 
@@ -107,7 +106,11 @@ My voice trembled and so did my hands.
 
 There was a dead cat in my backyard.
 
-⚠️ <abbr title="Not Safe For Life">NSFL</abbr>: It wasn't just dead. It was lunch for something. Ribcage in full view, intestines scattered about, bugs buzzing around. The poor thing. How long had it been there? How did this happen in my fenced backyard? Did a coyote get under my gate or maybe it was a large bird? Whenever I walked past the meat isle at the supermarket, I would flinch.
+⚠️ <abbr title="Not Safe For Life">NSFL</abbr>: It wasn't just dead. It was lunch for something. Ribcage in full view, intestines scattered about, bugs buzzing around. The poor thing. How long had it been there? How did this happen in my fenced backyard? Did a coyote get under my gate or maybe it was a large bird?
+
+As with the bird before, I found out what I should do, made a plan, and got it done.
+
+But this left a scar on my soul. It haunted me. Every missing cat sign, every unrecognizable shape in the backyard. My grass grew longer and longer. I avoided the backyard entirely for weeks, afraid of what else I may find. Whenever I walked past the meat aisle at the supermarket, I would flinch.
 
 Yet that day, in the midst of it all, I found two reasons to be grateful.
 
@@ -120,7 +123,7 @@ There are far worse things happening in the world all the time, I know. I'm not 
 
 I didn't become vegan overnight. It took me several experiments over many years. I changed my diet for my own benefit. First financially and later for health.
 
-Whether or not I was fond of animals or aware of their plight, my decision decreased the demand for animal flesh and secretions. Less artificial insemination. Less suffering. Less death. Fewer slaughterhouse workers with <abbr title="Post-traumatic stress disorder">PSTD</abbr>, and more workers in greenhouses and gardens.
+Whether or not I was fond of animals or aware of their plight, my decision decreased the demand for animal flesh and secretions. Less artificial insemination. Less suffering. Less death. Fewer slaughterhouse workers with <abbr title="Post-traumatic stress disorder">PTSD</abbr>, and more workers in greenhouses and gardens.
 
 Animals are full of personality and wonder, but they are inefficient as a source of food. They consume far more calories and protein than produced. Every new vegan lowers the demand for grazing land and animal feed. Less deforestation, less biodiversity loss, less climate change.
 
@@ -132,8 +135,12 @@ Are you vegan, vegetarian, veg-curious, or omnivore? No matter where you're at o
 
 If you would like to learn more about plant-based diets or try out some recipes, there are many documentaries, books, and cookbooks available. Here are some of my favorites:
 
-* The Game Changers
-* Prevent and Reverse Heart Disease by Caldwell B. Esselstyn, Jr., M.D.
-* The Engine 2 Cookbook
+* [The Game Changers][gamechangers]
+* [Prevent and Reverse Heart Disease][caldwell]
+* [The Engine 2 Cookbook][engine2]
 
 Until next time.
+
+[gamechangers]: https://gamechangersmovie.com/
+[caldwell]: https://www.amazon.ca/Prevent-Reverse-Heart-Disease-Nutrition-Based/dp/1583332723
+[engine2]: https://www.amazon.ca/Engine-Cookbook-Lip-Smacking-Rib-Sticking-Body-Slimming/dp/1455591181
