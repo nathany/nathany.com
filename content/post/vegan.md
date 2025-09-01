@@ -7,11 +7,11 @@ keywords = ["vegan", "vegetarian", "plant-based", "herbivore", "diet", "lifestyl
 
 It all began with a potluck.
 
-In 2007 I accepted a summer job to write software for the Human Resources department at Power to Change (then Campus Crusade for Christ). This required moving to British Columbia. For accommodations I rented a room in a big house with several other young men as flat mates.
+In 2007 I accepted a summer job to build an application for the Human Resources department at Power to Change (then Campus Crusade for Christ). This required moving to British Columbia. For accommodations, I rented a room in a big house with several other young men as flat mates.
 
-One of the guys (I'll be leaving out names) was *mostly* vegetarian. He was against factory farming, but wasn't against hunting and fishing. One day we all had a potluck. I decided to make a pasta dish that I had made before, but I left out the meat so everyone could try it.
+One of the guys was *mostly* vegetarian. He was against factory farming, but wasn't against hunting and fishing. One day we all had a potluck. I decided to make a pasta dish that I had made before, but I left out the meat so everyone could try it.
 
-What I found is that I really didn't miss the meat. I had my own homemade sauce, which tasted great regardless (<abbr title="In My Humble Opinion">IMHO</abbr>).
+I found out that I really didn't miss the meat. I had my own homemade sauce, which tasted great regardless (<abbr title="In My Humble Opinion">IMHO</abbr>).
 
 So began my first experiment with a vegetarian diet.
 
@@ -19,7 +19,7 @@ So began my first experiment with a vegetarian diet.
 
 I wasn't earning a lot of money while working at a non-profit. In fact, it was half as much as I had earned the previous year. So I decided to try eating vegetarian meals for a month in order to save some money. 💸
 
-One of my colleagues was also vegetarian. Her reasons were for the animals, for her health, for the environment and climate change. Yes, back in 2007. It's not that she was ahead of her time, everyone else was just behind.
+One of my colleagues was also vegetarian. Her reasons were for the animals, for her health, for the environment and climate change. Yes, back in 2007. It's not that she was ahead of her time, everyone else was just behind. 😅
 
 At the time I didn't know much of anything about nutrition, much less climate change, deforestation, and the like. Late into the experiment, I learned that canned vegetable soup contains chicken stock! 🤦🏼‍♂️ That's how naive I was -- not even reading the ingredients.
 
@@ -27,7 +27,7 @@ After the month was up, I switched back to my previous omnivore diet. I wasn't y
 
 ## Vegetarian Experiment #2
 
-It took 7 years (2014) before I switched to vegetarian again.
+It was 7 years (2014) before I switched to vegetarian again.
 
 One of my colleagues was Jewish, and due to the lack of Kosher options, he would eat vegetarian whenever we grabbed lunch.
 
@@ -56,7 +56,7 @@ It was a year when I developed some social fortitude. Sitting around a table whi
 
 So there I was. I felt like I finally cracked the code to a healthy weight, and without being vegetarian at all.
 
-But there was a wrinkle. There was one food that didn't contain sugar but still had a dramatic impact on my weight. If I bought a block of cheese, I would gain weight that week. If I didn't have cheese, my weight would continue down. So to reach my target weight, I had to cut cheese out too.
+But there was a wrinkle. There was one food that didn't contain sugar but still had a dramatic impact on my weight. If I bought a block of cheese, I would gain weight that week. If I didn't have cheese, my weight would continue down. So to reach my target weight, I had to cut out cheese too.
 
 ## Whole Food Plant-Based
 
@@ -76,7 +76,7 @@ When asked how long I've been vegan, I base it on early 2017, but that's not the
 
 ## Dominion
 
-In 2018 I attended a screening of the documentary Dominion. Whether an animal is raised on  pristine pastures, in confinement, or a combination of both, the last few minutes are much the same.
+In 2018 I attended a screening of the documentary Dominion. Whether an animal is raised on  pristine pastures, in confinement, or a mix of both, the last few minutes are much the same.
 
 It's a documentary about the slaughter. While the entire film was difficult to watch, there are two scenes that stuck with me, even 7 years later.
 
@@ -96,7 +96,7 @@ This film left a mark. It's what shifted my identity from plant-based to vegan. 
 
 When I bought my first house, I didn't consider all of the downsides of having a yard. Cleaning up cigarette butts and litter that people leave, but also the unfortunate dead animal.
 
-Occasionally there's a thump on a window as a bird flies right into it. Sometimes they get back up and fly off. I had only lived here for 3 months when I woke up to a dead pigeon on my lawn. I didn't know what to do. So I asked the Internet, bought some disposable gloves and figured it out. No proper respectful burial, unfortunately, but I managed.
+Occasionally there's a thump on a window as a bird flies right into it. Sometimes they get back up and fly off. 🙏🏻 I had only lived here for 3 months when I woke up to a dead pigeon on my lawn. I didn't know what to do. So I asked the Internet, bought some disposable gloves and figured it out. No proper respectful burial, unfortunately, but I managed.
 
 What happened in 2023 was traumatic. There was a stationary shape in my backyard that I couldn't make out from my window. So I went out to look.
 
