@@ -133,7 +133,7 @@ It makes a difference.
 
 Are you vegan, vegetarian, veg-curious, or omnivore? No matter where you're at or where you're going, I want to thank you for reading about my vegan journey.
 
-If you would like to learn more about plant-based diets or try out some recipes, there are many documentaries, books, and cookbooks available. Here are some of my favorites:
+If you'd like to learn more about plant-based diets or try out some recipes, there are many documentaries, books, and cookbooks available. Here are some of my favorites:
 
 * [The Game Changers][gamechangers]
 * [Prevent and Reverse Heart Disease][caldwell]
