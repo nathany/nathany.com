@@ -43,7 +43,7 @@ After a few months I gave up and transitioned back to an omnivore diet.
 
 It was January 2016, and I was eating the many homemade sweets that I received for Christmas. I also happened to be tracking my weight every day, which went up and up. This made sense to me, as many years earlier (2001), I had cut out soda pop and lost weight. Maybe sugar was the culprit?
 
-I learned a lot that year. Watching lectures, reading books (e.g. FAT Chance), paying attention to the nutrition labels on food. I cut free sugars from my diet and lost 70 lbs.
+I learned a lot that year. Watching lectures, reading books (e.g. FAT Chance), paying attention to the nutrition labels on food. I cut free sugars from my diet and lost 70 lbs in a year.
 
 <figure data-tooltip="Photographs &copy; 2016 Nathan Youngman">
     <img alt="Before and after." class="full" src="/images/one-year.jpg">
