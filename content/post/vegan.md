@@ -7,7 +7,7 @@ keywords = ["vegan", "vegetarian", "plant-based", "herbivore", "diet", "lifestyl
 
 It all began with a potluck.
 
-In 2007 I accepted a summer job to build an application for the Human Resources department at Power to Change (then Campus Crusade for Christ). This required moving to British Columbia. For accommodations, I rented a room in a big house with several other young men as flat mates.
+In 2007 I accepted a summer job with the Human Resources department at Power to Change (then Campus Crusade for Christ). This required moving to British Columbia. For accommodations, I rented a room in a big house with several other young men as flat mates.
 
 One of the guys was *mostly* vegetarian. He was against factory farming, but wasn't against hunting and fishing. One day we all had a potluck. I decided to make a pasta dish that I had made before, but I left out the meat so everyone could try it.
 
@@ -17,7 +17,7 @@ So began my first experiment with a vegetarian diet.
 
 ## Vegetarian Experiment #1
 
-I wasn't earning a lot of money while working at a non-profit. In fact, it was half as much as I had earned the previous year. So I decided to try eating vegetarian meals for a month in order to save some money. 💸
+I wasn't earning a lot of money while working at a non-profit. So I decided to try eating vegetarian meals for a month in order to save some money. 💸
 
 One of my colleagues was also vegetarian. Her reasons were for the animals, for her health, for the environment and climate change. Yes, back in 2007. It's not that she was ahead of her time, everyone else was just behind. 😅
 
