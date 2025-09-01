@@ -8,7 +8,7 @@ draft = true
 
 It all began with a potluck.
 
-In 2007 I accepted a summer job to write software for the Human Resources department at Power to Change (then Campus Crusade for Christ). This required moving to British Columbia. For accommodations, I rented a room in a big house with several other young men as flat mates.
+In 2007 I accepted a summer job to write software for the Human Resources department at Power to Change (then Campus Crusade for Christ). This required moving to British Columbia. For accommodations I rented a room in a big house with several other young men as flat mates.
 
 One of the guys (I'll be leaving out names) was *mostly* vegetarian. He was against factory farming, but wasn't against hunting and fishing. One day we all had a potluck. I decided to make a pasta dish that I had made before, but I left out the meat so everyone could try it.
 
@@ -36,7 +36,7 @@ Another colleague had previously worked in refrigeration before going into compu
 
 So again there were some vegetarians in my life, and if they can do it, so can I.
 
-This time my reason was weight loss. I figured if I was vegetarian and ate a lot more salad, 🥗 I would loose some weight. The idea has some merit, but it was ultimately ineffective because of all the other foods I left in.
+This time my reason was weight loss. I figured if I was vegetarian and ate a lot more salad, 🥗 I would lose some weight. The idea has some merit, but it was ultimately ineffective because of all the other foods I left in.
 
 After a few months I gave up and transitioned back to an omnivore diet.
 
@@ -71,7 +71,7 @@ It's essentially the restrictions of a vegan diet, but with an emphasis on healt
 
 It resonated with me, so I asked for recipe and cookbook recommendations. We returned to our respective cities, and that Christmas I invited some family over for a plant-based meal. That experiment was a success.
 
-Over the next few months, I fully adopted this diet. I began to consume documentaries, lectures, and books written by doctors. I enjoyed learning new recipes and never looked back.
+Over the following months, I fully adopted this diet. I began to consume documentaries, lectures, and books written by doctors. I enjoyed learning new recipes and never looked back.
 
 When asked how long I've been vegan, I base it on early 2017, but that's not the end of the story.
 
@@ -79,19 +79,17 @@ When asked how long I've been vegan, I base it on early 2017, but that's not the
 
 In 2018 I attended a screening of the documentary Dominion. Whether an animal is raised on  pristine pastures, in confinement, or a combination of both, the last few minutes are much the same.
 
-It's a documentary about the slaughter. And yes, it was difficult to watch.
+It's a documentary about the slaughter. While the entire film was difficult to watch, there are two scenes that stuck with me, even 7 years later.
 
-There are two scenes in particular that stuck with me.
+Due to their graphic nature, I am marking some paragraphs as ⚠️ <abbr title="Not Safe For Life">NSFL</abbr>. Skip past them if you need to.
 
-Due to the nature of the documentary, I am marking some paragraphs as <abbr title="Not Safe For Life">NSFL</abbr>. Skip past them if you need to.
+Egg laying hens are a different breed than the chickens bred for meat. Hens are replaced as needed, which means some eggs are hatched. But what if the hatched chick is male? 🐣 Very few males are needed by the egg industry. The rest are *disposable*. I find this disturbing in itself. I wouldn't be too happy if I were killed for being male.
 
-Egg laying hens are a different breed than the chickens bred for meat. Hens are replaced as needed, which means some eggs are hatched. But what if the hatched chic is male? 🐣 Very few males are needed by the egg industry. The rest are *disposable*. I find this disturbing in itself.
-
-NSFL: The documentary showed a macerator -- think giant blender -- that grinds the fluffy little guys to bits. Though filmed predominately in Australia, a person at the screening told me of students studying agriculture in Alberta seeing the same thing, and even rescuing some baby chics. 🐥
+⚠️ NSFL: The documentary showed a macerator -- think giant blender -- that grinds the fluffy little guys to bits. Though filmed predominantly in Australia, a person at the screening told me of students studying agriculture in Alberta seeing the same thing, and even rescuing some baby chicks. 🐥
 
 Animal agriculture and industrial fishing are the largest causes of animal suffering, but by no means the only source.
 
-NSFL: For me, the most haunting scene was of a little fox having the worst day of his/her life. Skinned alive because it was "more efficient". Presumably so someone can have fancy trim on a jacket. 😫
+⚠️ NSFL: For me, the most haunting scene was of a little fox having the worst day of his/her life. Skinned alive because it was "more efficient". Presumably so someone can have fancy trim on a jacket. 😫
 
 This film left a mark. It's what shifted my identity from plant-based to vegan. Extending beyond diet to other areas. I began to consider the materials used for my clothing, whether personal care products used animal testing, and so on. Minimizing harm more broadly and as much as reasonably possible.
 
@@ -109,7 +107,7 @@ My voice trembled and so did my hands.
 
 There was a dead cat in my backyard.
 
-<abbr title="Not Safe For Life">NSFL</abbr>: It wasn't just dead. It was lunch for something. Ribcage in full view, intestines scattered about, bugs buzzing around. The poor thing. How long had it been there? How did this happen in my fenced backyard? Did a coyote get under my gate or maybe it was a large bird? Whenever I walked past the meat isle at the supermarket, I would flinch.
+⚠️ <abbr title="Not Safe For Life">NSFL</abbr>: It wasn't just dead. It was lunch for something. Ribcage in full view, intestines scattered about, bugs buzzing around. The poor thing. How long had it been there? How did this happen in my fenced backyard? Did a coyote get under my gate or maybe it was a large bird? Whenever I walked past the meat isle at the supermarket, I would flinch.
 
 Yet that day, in the midst of it all, I found two reasons to be grateful.
 
@@ -130,10 +128,12 @@ It makes a difference.
 
 ## Resources
 
-There are many documentaries, books, and cookbooks on plant-based diets. If you're interested, here are some of my favorites:
+Are you vegan, vegetarian, veg-curious, or omnivore? No matter where you're at or where you're going, I want to thank you for reading about my vegan journey.
+
+If you would like to learn more about plant-based diets or try out some recipes, there are many documentaries, books, and cookbooks available. Here are some of my favorites:
 
 * The Game Changers
 * Prevent and Reverse Heart Disease by Caldwell B. Esselstyn, Jr., M.D.
 * The Engine 2 Cookbook
 
-Thanks for reading my story.
+Until next time.
