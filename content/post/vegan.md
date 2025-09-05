@@ -76,7 +76,7 @@ When asked how long I've been vegan, I base it on early 2017, but that's not the
 
 ## Dominion
 
-In 2018 I attended a screening of the documentary Dominion. Whether an animal is raised on  pristine pastures, in confinement, or a mix of both, the last few minutes are much the same.
+In 2018 I attended a screening of the documentary [Dominion][dominion]. Whether an animal is raised on  pristine pastures, in confinement, or a mix of both, the last few minutes are much the same.
 
 It's a documentary about the slaughter. While the entire film was difficult to watch, there are two scenes that stuck with me, even 7 years later.
 
@@ -98,11 +98,9 @@ When I bought my first house, I didn't consider all of the downsides of having a
 
 Occasionally there's a thump on a window as a bird flies right into it. Sometimes they get back up and fly off. 🙏🏻 I had only lived here for 3 months when I woke up to a dead pigeon on my lawn. I didn't know what to do. So I asked the Internet, bought some disposable gloves and figured it out. No proper respectful burial, unfortunately, but I managed.
 
-What happened in 2023 was traumatic. There was a stationary shape in my backyard that I couldn't make out from my window. So I went out to look.
+What happened in 2023 was traumatic. There was a stationary shape in my backyard that I couldn't identify from my window. So I went out to look.
 
-> "Oh my God..."
-
-My voice trembled and so did my body.
+"Oh my God," my voice trembled.
 
 There was a dead cat in my backyard.
 
@@ -127,7 +125,7 @@ Whether or not I was fond of animals or aware of their plight, my decision decre
 
 Animals are full of personality and wonder, but they are inefficient as a source of food. They consume far more calories and protein than produced. Every new vegan lowers the demand for grazing land and animal feed. Less deforestation, less biodiversity loss, less climate change.
 
-It makes a difference.
+It makes a difference. We make a difference.
 
 ## Resources
 
@@ -141,6 +139,7 @@ If you'd like to learn more about plant-based diets or try out some recipes, the
 
 Until next time.
 
+[dominion]: https://www.dominionmovement.com/
 [gamechangers]: https://gamechangersmovie.com/
 [caldwell]: https://www.amazon.ca/Prevent-Reverse-Heart-Disease-Nutrition-Based/dp/1583332723
 [engine2]: https://www.amazon.ca/Engine-Cookbook-Lip-Smacking-Rib-Sticking-Body-Slimming/dp/1455591181
