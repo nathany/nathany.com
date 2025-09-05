@@ -19,9 +19,9 @@ So began my first experiment with a vegetarian diet.
 
 I wasn't earning a lot of money while working at a non-profit. So I decided to try eating vegetarian meals for a month in order to save some money. 💸
 
-One of my colleagues was also vegetarian. Her reasons were for the animals, for her health, for the environment and climate change. Yes, back in 2007. It's not that she was ahead of her time, everyone else was just behind. 😅
+One of my colleagues was also vegetarian. Her reasons were for the animals, for her health, for the environment and climate change. Yes, back in 2007. I don't think she was ahead of her time. Everyone else was behind. 😅
 
-At the time I didn't know much of anything about nutrition, much less climate change, deforestation, and the like. Late into the experiment, I learned that canned vegetable soup contains chicken stock! 🤦🏼‍♂️ That's how naive I was -- not even reading the ingredients.
+At the time I didn't know much of anything about nutrition, much less climate change, deforestation, factory farming, and the like. Late into the experiment, I learned that canned vegetable soup contains chicken stock! 🤦🏼‍♂️ That's how naive I was -- not even reading the ingredients.
 
 After the month was up, I switched back to my previous omnivore diet. I wasn't yet ready to commit to being vegetarian long-term. My misconceptions around protein were part of that decision. But it was a positive experience -- the food and the savings.
 
@@ -43,7 +43,7 @@ After a few months I gave up and transitioned back to an omnivore diet.
 
 It was January 2016, and I was eating the many homemade sweets that I received for Christmas. I also happened to be tracking my weight every day, which went up and up. This made sense to me, as many years earlier (2001), I had cut out soda pop and lost weight. Maybe sugar was the culprit?
 
-I learned a lot that year. Watching lectures, reading books (e.g. [FAT Chance][fatchance]), paying attention to the nutrition labels on food. I cut free sugars from my diet and lost 70 lbs in a year.
+I learned a lot that year. Watching lectures, reading books (e.g. [FAT Chance][fatchance]), and paying attention to the nutrition labels on food. I cut free sugars from my diet and lost 70 lbs in a year.
 
 <figure data-tooltip="Photographs &copy; 2016 Nathan Youngman">
     <img alt="Before and after." class="full" src="/images/one-year.jpg">
@@ -84,13 +84,13 @@ Due to their graphic nature, I am marking some paragraphs as ⚠️ <abbr title=
 
 Egg laying hens are a different breed than the chickens bred for meat. Hens are replaced as needed, which means some eggs are hatched. But what about the hatched chicks that are male? 🐣 Very few males are needed by the egg industry. The rest are *disposable*. I find this disturbing in itself. I wouldn't be too happy if I were killed for being male.
 
-⚠️ NSFL: The documentary showed a macerator -- think giant blender -- that grinds the fluffy little guys to bits. Though filmed predominantly in Australia, a person at the screening told me of students studying agriculture in Alberta seeing the same thing, and even rescuing some baby chicks. 🐥
+⚠️ NSFL: The documentary showed a macerator -- think giant blender -- that grinds the fluffy little guys to bits. They flapped their wings wildly in an attempt to escape, but it was no use. Though filmed predominantly in Australia, a person at the screening informed me of students seeing a macerator while studying agriculture in Alberta -- a student even rescued some baby chicks. 🐥
 
 Animal agriculture and industrial fishing are the largest causes of animal suffering, but by no means the only source.
 
 ⚠️ NSFL: For me, the most haunting scene was of a little fox having the worst day of their life. Skinned alive because it was "more efficient". Presumably so someone can have fancy trim on a jacket. 😫
 
-This film left a mark. It's what shifted my identity from plant-based to vegan. Extending beyond diet to other areas. I began to consider the materials used for my clothing, whether personal care products used animal testing, and so on. Minimizing harm more broadly and as much as reasonably possible.
+This film left a mark. It shifted my identity from plant-based to vegan. Extending beyond diet to other areas. I began to consider the materials used for my clothing, whether personal care products used animal testing, and so on. Minimizing harm more broadly and as much as reasonably possible.
 
 ## The Yard
 
@@ -123,13 +123,13 @@ I didn't become vegan overnight. It took me several experiments over many years.
 
 Whether or not I was fond of animals or aware of their plight, my decision decreased the demand for animal flesh and secretions. Less artificial insemination. Less suffering. Less death. Fewer slaughterhouse workers with <abbr title="Post-traumatic stress disorder">PTSD</abbr>, and more workers in greenhouses and gardens.
 
-Animals are full of personality and wonder, but they are inefficient as a source of food. They consume far more calories and protein than produced. Every new vegan lowers the demand for grazing land and animal feed. Less deforestation, less biodiversity loss, less climate change.
+Animals are full of personality and wonder, but they are inefficient as a food source. They consume far more calories and protein than produced. Every new vegan lowers the demand for grazing land and animal feed. Less deforestation, less biodiversity loss, less climate change.
 
 It makes a difference. We make a difference.
 
 ## Resources
 
-Are you vegan, vegetarian, veg-curious, or omnivore? No matter where you're at or where you're going, I want to thank you for reading about my vegan journey.
+Are you vegan, vegetarian, veg-curious, or omnivore? No matter where you're at or where you're going, I want to thank you for reading my vegan journey.
 
 If you'd like to learn more about plant-based diets or try out some recipes, there are many documentaries, books, and cookbooks available. Here are some of my favorites:
 
