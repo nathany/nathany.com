@@ -76,7 +76,7 @@ When asked how long I've been vegan, I base it on early 2017, but that's not the
 
 ## Dominion
 
-In 2018 I attended a screening of the documentary [Dominion][dominion]. Whether an animal is raised on  pristine pastures, in confinement, or a mix of both, the last few minutes are much the same.
+In 2018 I attended a screening of the documentary [Dominion][dominion]. Whether an animal is raised on  pristine pastures, in confinement (<abbr title="Concentrated Animal Feeding Operation">CAFO</abbr>), or a mix of both, the last few minutes are much the same.
 
 It's a documentary about the slaughter. While the entire film was difficult to watch, there are two scenes that stuck with me, even 7 years later.
 
