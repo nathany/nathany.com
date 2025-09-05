@@ -43,7 +43,7 @@ After a few months I gave up and transitioned back to an omnivore diet.
 
 It was January 2016, and I was eating the many homemade sweets that I received for Christmas. I also happened to be tracking my weight every day, which went up and up. This made sense to me, as many years earlier (2001), I had cut out soda pop and lost weight. Maybe sugar was the culprit?
 
-I learned a lot that year. Watching lectures, reading books (e.g. FAT Chance), paying attention to the nutrition labels on food. I cut free sugars from my diet and lost 70 lbs in a year.
+I learned a lot that year. Watching lectures, reading books (e.g. [FAT Chance][fatchance]), paying attention to the nutrition labels on food. I cut free sugars from my diet and lost 70 lbs in a year.
 
 <figure data-tooltip="Photographs &copy; 2016 Nathan Youngman">
     <img alt="Before and after." class="full" src="/images/one-year.jpg">
@@ -60,7 +60,7 @@ But there was a wrinkle. There was one food that didn't contain sugar but still 
 
 ## Whole Food Plant-Based
 
-That same year I went to California for a business trip with several colleagues, some whom I had never met in person (remote work). Every morning we had breakfast together before getting to work. One colleague ordered avocado toast with his meal, whereas I had the standard whipped butter.
+Later that same year, I went to California on a business trip with several colleagues, some whom I had never met in person (remote work). Every morning we had breakfast together before getting to work. One colleague ordered avocado toast with his meal, whereas I had the standard whipped butter.
 
 We got to talking about food over the course of the trip and he introduced me to the Whole Food Plant-Based Diet (WFPBD).
 
@@ -88,7 +88,7 @@ Egg laying hens are a different breed than the chickens bred for meat. Hens are 
 
 Animal agriculture and industrial fishing are the largest causes of animal suffering, but by no means the only source.
 
-⚠️ NSFL: For me, the most haunting scene was of a little fox having the worst day of his/her life. Skinned alive because it was "more efficient". Presumably so someone can have fancy trim on a jacket. 😫
+⚠️ NSFL: For me, the most haunting scene was of a little fox having the worst day of their life. Skinned alive because it was "more efficient". Presumably so someone can have fancy trim on a jacket. 😫
 
 This film left a mark. It's what shifted my identity from plant-based to vegan. Extending beyond diet to other areas. I began to consider the materials used for my clothing, whether personal care products used animal testing, and so on. Minimizing harm more broadly and as much as reasonably possible.
 
@@ -139,6 +139,7 @@ If you'd like to learn more about plant-based diets or try out some recipes, the
 
 Until next time.
 
+[fatchance]: https://www.amazon.ca/Fat-Chance-Beating-Against-Processed/dp/0142180432?crid=MER1P272Y7JH
 [dominion]: https://www.dominionmovement.com/
 [gamechangers]: https://gamechangersmovie.com/
 [caldwell]: https://www.amazon.ca/Prevent-Reverse-Heart-Disease-Nutrition-Based/dp/1583332723
