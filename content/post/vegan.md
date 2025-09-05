@@ -19,7 +19,7 @@ So began my first experiment with a vegetarian diet.
 
 I wasn't earning a lot of money while working at a non-profit. So I decided to try eating vegetarian meals for a month in order to save some money. 💸
 
-One of my colleagues was also vegetarian. Her reasons were for the animals, for her health, for the environment and climate change. Yes, back in 2007. I don't think she was ahead of her time. Everyone else was behind. 😅
+One of my colleagues was also vegetarian. Her reasons were for the animals, for her health, for the environment and climate change. Yes, back in 2007. I don't think she was ahead of her time. It's just that everyone else was behind. 😅
 
 At the time I didn't know much of anything about nutrition, much less climate change, deforestation, factory farming, and the like. Late into the experiment, I learned that canned vegetable soup contains chicken stock! 🤦🏼‍♂️ That's how naive I was -- not even reading the ingredients.
 
