@@ -84,7 +84,7 @@ Due to their graphic nature, I am marking some paragraphs as ⚠️ <abbr title=
 
 Egg laying hens are a different breed than the chickens bred for meat. Hens are replaced as needed, which means some eggs are hatched. But what about the hatched chicks that are male? 🐣 Very few males are needed by the egg industry. The rest are *disposable*. I find this disturbing in itself. I wouldn't be too happy if I were killed for being male.
 
-⚠️ NSFL: The documentary showed a macerator -- think giant blender -- that grinds the fluffy little guys to bits. They flapped their wings wildly in an attempt to escape, but it was no use. Though filmed predominantly in Australia, a person at the screening informed me of students seeing a macerator while studying agriculture in Alberta -- a student even rescued some baby chicks. 🐥
+⚠️ NSFL: The documentary showed a macerator -- think giant blender -- that grinds the fluffy little guys to bits. They flapped their wings furiously in an attempt to escape, but it was no use. Though filmed predominantly in Australia, a person at the screening informed me of students seeing a macerator while studying agriculture in Alberta -- a student even rescued some baby chicks. 🐥
 
 Animal agriculture and industrial fishing are the largest causes of animal suffering, but by no means the only source.
 
