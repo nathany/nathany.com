@@ -60,7 +60,7 @@ But there was a wrinkle. There was one food that didn't contain sugar but still 
 
 ## Whole Food Plant-Based
 
-Later that same year, I went to California on a business trip with several colleagues, some whom I had never met in person (remote work). Every morning we had breakfast together before getting to work. One colleague ordered avocado toast with his meal, whereas I had the standard whipped butter.
+Later that same year, I went to California on a business trip with several colleagues, some whom I had never met in person (remote work). Every morning we had breakfast together before getting to work. One colleague ordered avocado toast with his meal, whereas I had the standard whipped butter. It felt like I was missing out.
 
 We got to talking about food over the course of the trip and he introduced me to the Whole Food Plant-Based Diet (WFPBD).
 
