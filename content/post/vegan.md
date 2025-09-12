@@ -123,7 +123,7 @@ I didn't become vegan overnight. It took me several experiments over many years.
 
 Whether or not I was fond of animals or aware of their plight, my decision decreased the demand for animal flesh and secretions. Less artificial insemination. Less suffering. Less death. Fewer slaughterhouse workers with <abbr title="Post-traumatic stress disorder">PTSD</abbr>, and more workers in greenhouses and gardens.
 
-Animals are full of personality and wonder, but they are inefficient as a food source. They consume far more calories and protein than produced. Every new vegan lowers the demand for grazing land and animal feed. Less deforestation, less biodiversity loss, less climate change.
+Animals are full of personality and wonder, but they are inefficient as a food source. They consume far more calories and protein than produced. Every step towards a vegan lifestyle lowers the demand for grazing land and animal feed. Less deforestation, less biodiversity loss, less climate change.
 
 It makes a difference. We make a difference.
 
