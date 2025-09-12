@@ -35,7 +35,7 @@ Another colleague had previously worked in refrigeration before going into compu
 
 So again there were some vegetarians in my life, and if they can do it, so can I.
 
-This time my reason was weight loss. I figured if I was vegetarian and ate a lot more salad, 🥗 I would lose some weight. The idea has some merit, but it was ultimately ineffective because of all the other foods I left in.
+This time my reason was weight loss. I figured if I was vegetarian and ate a lot more salad, 🥗 I would lose some weight. The idea has some merit, but it was ultimately ineffective because of all the other sweets and junk food I still ate.
 
 After a few months I gave up and transitioned back to an omnivore diet.
 

@@ -49,6 +49,10 @@ img.right {
     max-width: 320px;
 }
 
+img.right-narrow {
+    max-width: 320px;
+}
+
 @media (min-width: $max-width) {
     img.right-narrow {
         float: right;
