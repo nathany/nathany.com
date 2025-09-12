@@ -43,11 +43,18 @@ article {
     }
 }
 
-// about page
 img.right {
     float: right;
     margin-left: 2rem;
     max-width: 320px;
+}
+
+@media (min-width: $max-width) {
+    img.right-narrow {
+        float: right;
+        margin-left: 2rem;
+        max-width: 160px;
+    }
 }
 
 img.left {

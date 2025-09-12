@@ -33,11 +33,11 @@ There are several problems:
 * Horses are being slaughtered in Canada, regardless of how they are raised
 * The export of live horses for slaughter
 
-Surveys indicate that the majority of Canadians are against the slaughter of horses for human consumption, but also that the majority of Canadians are unaware of it happening.
+Surveys indicate that the majority of Canadians, when asked, are against the slaughter of horses for human consumption. But the majority of Canadians are unaware that it's happening.
 
 ## Activism
 
-<img src="/images/horses-ban.jpg" alt="Protect Canada's Horses. Ban Live Export for Slaughter" class="right">
+<img src="/images/horses-ban.jpg" alt="Protect Canada's Horses. Ban Live Export for Slaughter" class="right-narrow">
 
 This past week I participated in a rally alongside [Animal Justice][], [Humane World for Animals][], [Canadian Horse Defence Coalition][] and other concerned citizens.[^1]
 
