@@ -1,6 +1,6 @@
 +++
 title = "🤖 Sudo Make Me A Triangle"
-description = "Graphics Programming with Claude Sonnet 4."
+description = "Graphics programming with Claude Sonnet 4."
 date = "2025-07-15"
 revised = "2025-07-16"
 keywords = ["Claude", "agentic", "Zed", "Rust", "Vulkan", "DirectX", "Direct3D", "Bunny Mark"]

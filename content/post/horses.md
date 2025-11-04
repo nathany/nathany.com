@@ -3,6 +3,7 @@ title = "🐴 Save The Horses"
 description = "It's not all idyllic pastures in Canada."
 date = "2025-09-12"
 keywords = ["vegan", "activism", "horses", "equestrian", "animal welfare", "creation care"]
+legacy = true
 +++
 
 ## Pasture
