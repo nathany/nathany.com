@@ -49,7 +49,7 @@ In anticipation of spring, I painted this wild rose with some critters. It was j
 Not only was it a joy to watch the watercolour react, I was also impressed by the user interface:
 
 * Brushes are nicely grouped, rather than one overwhelming list
-* Many hot keys can tapped to switch or held to switch temporarily, such as E for eraser
+* Many hot keys can be tapped to switch or held to switch temporarily, such as E for eraser
 * The reference guides feature could be really handy while learning proper proportions
 
 ### Desktop
