@@ -9,7 +9,7 @@ Two months ago I took a career break with many [ambitious plans](/continue). Ini
 
 But I quickly realized that I would rather spend my summer out and about, rather than in front of a computer. I've often longed for a summer holiday like I had back in High School, even a staycation. Sitting at home can wait for winter. ❄️
 
-Honestly, I was also feeling demotivated. I would like to learn art and music, and gain experience with other programming languages and technologies. But maybe AI will advance faster than I can over the next few years. I also hope to write another technical [book](/books), but I wonder what effect AI will have on the market for programming books? Maybe none of that matters -- I shouldn't halt my own personal development just because of a little 🤖 competition. I'm sure I'll get back at it in time.
+Honestly, I was also feeling demotivated. I would like to learn art and music, and gain experience with other programming languages like Rust. But maybe AI will advance faster than I can over the next few years? I also hope to write another technical [book](/books), but I wonder what effect AI will have on the market for programming books? Maybe none of that matters -- I shouldn't halt my own personal development just because of a little 🤖 competition. I'm sure I'll get back at it in time.
 
 What have I been doing instead?
 
@@ -32,7 +32,7 @@ I also did a fair amount of reading to learn more about gardening, but I have a 
 
 ## Cooking
 
-Instead of going to Heritage Festival this year (it was rainy), I decided to learn how to make one of the ethnic dishes I would've bought.
+Instead of going to [Heritage Festival](https://www.heritagefest.ca/) this year (it was rainy), I decided to learn how to make one of the ethnic dishes I would've bought.
 
 I found a herbed falafel recipe in the cookbook *Tahini & Tumeric* and combined them with a store bought pita. At this point I've made hummus, pitas, and falafel from scratch, but not all at the same time.
 
