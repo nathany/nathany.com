@@ -27,7 +27,7 @@ When I studied art in high school, I convinced my teacher to let me create a lit
 
 Pixel art remains popular. Of the games I've played recently, Octopath Traveler II, Loco Motive, and The Drifter all have a pixel art aesthetic. As much as I enjoyed playing the pixel art games, I prefer the art style of Trails in the Sky 1st Chapter, Foolish Mortals, and Dragon Quest VII Reimagined.
 
-Still, I tried out [Aseprite](https://www.aseprite.org/). My first impression is that it's well designed and intuitive, and the program I'd likely use if I decide to make a game that calls for pixel art in the future.
+Still, I tried out [Aseprite](https://www.aseprite.org/). My first impression is that it's well designed and intuitive, and the program I'd likely use if I decide to make a game that calls for pixel art in the future. It can be used with a pen tablet for broad strokes, but it's designed to be used with a mouse.
 
 I've read that pixel art is easier to learn than digital painting, but I don't think that's true. While each medium has its specific considerations, pixel art still benefits from all the same art fundamentals.
 
