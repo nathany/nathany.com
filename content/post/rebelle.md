@@ -8,11 +8,11 @@ aliases = [
 ]
 +++
 
-Art is an interest that I've long held but never truly pursued. For the longest time, I didn't believe I had *the talent*. Then a few years ago, I surprised myself with an acrylic painting that didn't suck. It was at a paint party, with the initial sketch, reference image, paint supplies, and instructor all provided.
+Art is an interest that I've long held but never truly pursued. For the longest time, I didn't believe I had *the talent*. Then a few years ago, I surprised myself with a painting that didn't suck. It was at a paint party, with the initial sketch, reference image, paint supplies, and instructor all provided.
 
 <figure data-tooltip="Painting &copy; 2022 Nathan Youngman">
     <img alt="Boe, a steer from the animal sanctuary FARRM." class="full" src="/images/farrm.jpg">
-    <figcaption>Boe, a steer from the animal sanctuary FARRM</figcaption>
+    <figcaption>Boe, a steer from the animal sanctuary FARRM (traditional acrylic on canvas)</figcaption>
 </figure>
 
 I walked away from that event thinking, "Hey, maybe I can create art afterall."
