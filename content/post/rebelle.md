@@ -25,9 +25,9 @@ One question I've been asking myself lately is, "What kind of art do I want to m
 
 When I studied art in high school, I convinced my teacher to let me create a little game for a main project. That was so long ago that the school computers only displayed 4 colors (black, white, cyan, and magenta). Pixel art was the only option.
 
-Pixel art remains popular. Of the games I've played recently, Octopath Traveler II, Loco Motive, and The Drifter all have a pixel art aesthetic. As much as I enjoyed playing the pixel art games, I prefer the art style of Trails in the Sky 1st Chapter, Foolish Mortals, and Dragon Quest VII Reimagined.
+Pixel art remains popular today. Of the games I've played recently, Octopath Traveler II, Loco Motive, and The Drifter all have pixel art. As much as I enjoyed playing the pixel art games, I prefer the art styles of Trails in the Sky 1st Chapter, Foolish Mortals, and Dragon Quest VII Reimagined.
 
-Still, I tried out [Aseprite](https://www.aseprite.org/). My first impression is that it's well designed and intuitive, and the program I'd likely use if I decide to make a game that calls for pixel art in the future. It can be used with a pen tablet for broad strokes, but it's designed to be used with a mouse.
+Still, I tried out [Aseprite](https://www.aseprite.org/). My first impression is that it's well designed and intuitive, and the program I'd likely use if I decide to make any games that call for pixel art in the future. It can be used with a pen tablet for broad strokes, but it's really designed to be used with a mouse.
 
 I've read that pixel art is easier to learn than digital painting, but I don't think that's true. While each medium has its specific considerations, pixel art still benefits from all the same art fundamentals.
 
