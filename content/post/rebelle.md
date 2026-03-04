@@ -39,13 +39,13 @@ I think I found the *perfect tool* to use while learning. [Rebelle 8 Pro](https:
 
 * Watercolour and ink flow according to the tilt and texture of the canvas
 * Cobalt Blue and Cadmium Yellow blend like traditional pigments (instead of like light)
-* Oils and acrylics can build up thick layers of impasto
+* Oil and acrylic paint can build up as thick layers of impasto
 
 <img src="/images/wild-rose.jpg" alt="Wild Rose" class="right" />
 
 It allows me to learn and experiment without feeling like I'm *wasting* materials. No need to take over the kitchen table and no cleanup. I can work through books and courses on traditional watercolour, gouache, pencil crayons, and charcoal without needing all those supplies. Then I can take what I've learned back to traditional art if I want.
 
-In anticipation of spring, I painted this wild rose with some critters. It was just for fun, so I didn't really pay attention to lighting or scale.
+In anticipation of spring, I painted this wild rose with some critters. I didn't really pay attention to lighting or scale.
 
 Not only was it a joy to watch the watercolour react, I was also impressed by the user interface:
 
