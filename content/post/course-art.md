@@ -3,7 +3,6 @@ title = "⛵️ Setting A Course: Art"
 description = "Rebelle 8 Pro first impressions as a tool for self-study and game art."
 date = "2026-03-04"
 keywords = ["Rebelle", "Aseprite", "Krita", "art", "watercolour", "painting", "pigments"]
-draft = true
 +++
 
 Art is an interest that I've long held but never truly pursued. For the longest time, I didn't believe I had *the talent*. Then a few years ago, I surprised myself with an acrylic painting that didn't suck. It was at a paint party, with the initial sketch, reference image, paint supplies, and instructor all provided.
