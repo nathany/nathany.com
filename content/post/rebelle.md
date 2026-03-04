@@ -1,7 +1,7 @@
 +++
 title = "⛵️ Rebelle 8 Pro"
 description = "First impressions as a tool for self-study and game art."
-date = "2026-03-04"
+date = "2026-03-03"
 keywords = ["Rebelle", "Aseprite", "Krita", "art", "watercolour", "painting", "pigments"]
 aliases = [
     "/course-art"
