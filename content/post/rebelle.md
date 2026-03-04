@@ -43,7 +43,7 @@ I think I found the *perfect tool* to use while learning. [Rebelle 8 Pro](https:
 
 <img src="/images/wild-rose.jpg" alt="Wild Rose" class="right" />
 
-It allows me to learn and experiment without feeling like I'm *wasting* materials. No need to take over the kitchen table and no cleanup. I can work through books and courses on traditional watercolour, gouache, pencil crayons, and charcoal without needing all those supplies. Then I can take what I've learned back to traditional art if I want.
+It allows me to learn and experiment without feeling like I'm *wasting* materials. No need to take over the kitchen table and no cleanup. I can work through books and courses on traditional watercolour, gouache, pencil crayons, and charcoal without needing all those supplies. Then take what I've learned back to traditional art if I want.
 
 In anticipation of spring, I painted this wild rose with some critters. I didn't really pay attention to lighting or scale, but it was fun.
 
