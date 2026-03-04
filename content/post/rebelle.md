@@ -51,7 +51,7 @@ Not only was it a joy to watch the watercolour react, I was also impressed by th
 
 * Brushes are nicely grouped, rather than one overwhelming list
 * Hot keys to switch tools can be held to switch temporarily, such as E for eraser
-* The reference guides feature looks really handy for learning proper proportions
+* The reference guides feature looks really handy for studying proper proportions
 
 ### Desktop
 
