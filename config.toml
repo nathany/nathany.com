@@ -1,7 +1,7 @@
 baseURL = "https://nathany.com"
 languageCode = "en-us"
 title = "Nathan Youngman"
-copyright = "2025 Nathan Youngman"
+copyright = "2026 Nathan Youngman"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "section"]
 baseName = "articles"
 
 [params]
-copyright-year = '2025'
+copyright-year = '2026'
 home_title = "Nathan's Blog"
 [params.author]
 name = "Nathan Youngman"
