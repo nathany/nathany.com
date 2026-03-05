@@ -65,7 +65,7 @@ Rebelle looks like a great tool to use while learning art, but what about as a t
 
 It has a stencils feature for drawing patterns from stencils, but I couldn't find a [Krita](https://krita.org/en/)-style *wrap-around mode* (or tiled mode) for creating repeating patterns and textures. That could be useful for creating stencils and for game textures.
 
-Games are not static, so the biggest limitation is that Rebelle has no timeline or onion skinning. But animation is a separate topic for another day.
+Games are not static, so the biggest limitation is that Rebelle has no timeline or onion skinning. But animation is a [separate topic](/moho) for another day.
 
 ### Visual Variety
 
@@ -83,4 +83,4 @@ Now that I have the time and capacity to really dive in, the big question is, wh
 
 I think [Drawing Basics](https://www.proko.com/course/drawing-basics) is the most obvious place. Sitting through 80+ hours of lecture doesn't sound very appealing, but that's just part of being a student, even if I'm taking the self-study approach.
 
-Art isn't the only thing I'm learning though. So expect posts on animation and music to follow soon.
+Art isn't the only thing I'm learning though. See my posts on [animation](/moho) and music (coming soon).
