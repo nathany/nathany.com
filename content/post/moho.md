@@ -103,7 +103,7 @@ I learned that Anime has a well-defined process:
 
 I can see the appeal of getting in the zone and just drawing. But it is labour intensive, and I don't have an inbetweener to draw some of the frames for me.
 
-[Krita](https://krita.org/en/) is a digital painting tool that has these animation features built-in. For pixel art, [Aseprite](https://www.aseprite.org/) also has onion skinning.
+[Krita](https://krita.org/en/) is a free digital painting tool that has these animation features built-in. For pixel art, [Aseprite](https://www.aseprite.org/) also has onion skinning.
 
 What about using [Rebelle](/rebelle)'s fabulous paint engine to create animated sprites? Rebelle doesn't have a timeline or onion skinning, but it might be possible. The roughs and tie-down phase could be done in Krita and then exported for use as reference images for the final paintings in Rebelle. Creative use of filter layers and keyboard shortcuts may even be able to simulate onion skinning in Rebelle, though in a far less reliable way. All the extra complexity wouldn't make much sense for cel-shaded characters, but perhaps for animating portions of a watercolour background and the like.
 
