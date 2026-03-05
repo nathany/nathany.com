@@ -45,7 +45,7 @@ The tutorials also went over *meshes* to deform the bitmaps. The curver mesh was
 
 *Actions* provide a way to reuse little animations in the mainline animation.
 
-Sometimes the tutorials skipped steps. Lesson 9 covers adding some jiggle to the fox's ears when he moves, but it started with a jump animation that was made off camera. But overall the tutorials were pretty good.
+Sometimes the tutorials skipped steps. Lesson 9 covers adding some secondary animation to the fox's ears when he moves, but it started with a jump animation that was made off camera. But overall the tutorials were pretty good.
 
 ### Problems Ensue
 
@@ -55,15 +55,17 @@ As I was wrapping those up, I ran into an odd problem where moving Copper's left
 
 I think it brings up a larger issue with Moho though, and that is debugging user errors.
 
-Moho uses progressive disclosure on the timeline. The timeline indicates that *something* changed in white, and gets more specific in red when you click on one or more bones, meshes, or switch layers. Focusing like this is probably a good idea, because there can be a lot going on.
+Moho uses *progressive disclosure* on the timeline. The timeline indicates that *something* changed in white, and gets more specific in red when you click on one or more bones, meshes, or switch layers. Focusing like this is probably a good idea, because there can be a lot going on.
 
-But when something strange is happening, due to a mistake or otherwise, it can be bit difficult to figure out the source. Trying to understand a bunch of tiny red icons while clicking around on different bones just isn't a great experience.
+But when something strange is happening, due to a mistake or otherwise, it can be difficult to figure out the source. Trying to understand a bunch of tiny red icons while clicking around on different bones just isn't a great experience.
 
-I'm not sure what the solution is. The closest thing I've seen to a *debugging* tool is clicking on reparent bone. That adds some arrows to the entire skeleton, indicating how the bones are connected. Even those can be hard to read though, because the arrows use the same color as the actual bones.
+I'm not sure what the solution is. The closest thing I've seen to a *debugging* tool is clicking on reparent bone. That adds some arrows to the entire skeleton, indicating how the bones are connected. Even those can be hard to read though, because the arrows use the same color as the bones. 🤦
+
+### Vector Drawing
 
 I decided not to worry about my slightly broken fox and just move on to vector drawing. That went reasonably well, and I was starting to understand the tools, but then I came to lesson 20.
 
-The plan was to make a flame 🔥 by starting with a circle, modify its points a little, and then draw some star shapes with subtract shape to further modify the original circle. But at least for me, subtract shape wasn't working at all. The subtracted shape would just disappear, without cutting anything out of the circle.
+The plan was to make a flame 🔥 by starting with a circle, modify its points a little, and then draw some star shapes with *subtract shape* to further modify the original circle. But at least for me, subtract shape wasn't working at all. The subtracted shape would just disappear, without cutting anything out of the circle.
 
 Maybe I was doing something wrong or maybe the software is just buggy. Just before this, I was having trouble drawing a red circle. I'd pick red, but it kept reverting back to a blue color I used previously.
 
@@ -85,7 +87,7 @@ It doesn't have the vector animation features that I got all excited about with 
 
 Using 3D tools for prerendered 2D assets is nothing new, though often with 3DS Max. Heroes of Might and Magic III, Dead Cells, Ori and the Blind Forest, to name a few. In an old [GDC talk](https://www.youtube.com/watch?v=m8lOwrWNbEY), James Benson shows how the 3D models for Ori were designed to only be viewed from the camera angles they needed.
 
-Of course, all this does beg the question, why not just use 3D? I mean, if we're already rigging characters in the same way 3D characters are, and if we're leaning on a game engine that can do 3D, would it make more sense to go all-in with 3D (possibly low-poly)? Maybe.
+Of course, all this does beg the question, why not just use 3D? I mean, if we're already rigging characters in the same way 3D characters are, and if we're leaning on a game engine that can do 3D, would it make more sense to go all-in with 3D?
 
 ### Onion Skinning
 
@@ -98,7 +100,7 @@ Going in the other direction, animating without bones and rigging can be accompl
 I learned that Anime has a well-defined process:
 
 * Roughs to establish weight and movement
-* Tie-down to ensure volumes and proportions are correct, while also determining areas requiring shading
+* Tie-down to ensure volumes and proportions are correct, while also marking areas that require shading
 * Clean up for the final line work and colouring
 
 I can see the appeal of getting in the zone and just drawing. But it is labour intensive, and I don't have an inbetweener to draw some of the frames for me.
@@ -117,7 +119,7 @@ In an [old GDC talk](https://www.youtube.com/watch?v=8_KBjd0iaCU) from Klei, you
 
 Back in the day they were using Flash. Symbols allowed a part to be modified later without redoing the entire animation. The same thing should be possible in Krita with File Layers and Transform Masks, but if later modification isn't necessary, any program with layers should work.
 
-During the Q&A of that talk, someone asked how they handle wonky joints. The response was that they hide them with long clothing.
+During the Q&A of that talk, someone asked how they handle wonky joints. The response was that they hide them with long clothing. 😅
 
 ### That's All For Now 
 
