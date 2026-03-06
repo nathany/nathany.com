@@ -25,7 +25,7 @@ One question I've been asking myself lately is, "What kind of art do I want to m
 
 When I studied art in high school, I convinced my teacher to let me create a little game for a main project. That was so long ago that the school computers only displayed 4 colors (black, white, cyan, and magenta). Pixel art was the only option.
 
-Pixel art remains popular today. Of the games I've played recently, Octopath Traveler II, Loco Motive, and The Drifter all have pixel art. As much as I enjoyed playing the pixel art games, I prefer the art styles of Trails in the Sky 1st Chapter, Foolish Mortals, and Dragon Quest VII Reimagined.
+Pixel art remains popular today. Of the games I've played recently, Octopath Traveler II, Loco Motive, and The Drifter all have pixel art. As much as I enjoyed playing those games, I prefer the art styles of Trails in the Sky 1st Chapter, Foolish Mortals, and Dragon Quest VII Reimagined.
 
 Still, I tried out [Aseprite](https://www.aseprite.org/). My first impression is that it's well designed and intuitive, and the program I'd likely use if I decide to make any games that call for pixel art in the future. It can be used with a pen tablet for broad strokes, but it's really designed to be used with a mouse.
 
@@ -33,7 +33,7 @@ I've read that pixel art is easier to learn than digital painting, but I don't t
 
 ## Rebelle
 
-There is a long list of art fundamentals I want to learn and put into practice: composition, perspective, value, color theory, light and shadow, gesture, anatomy, etc. Beyond the fundamentals, there is so much more to learn: character design, clothing, animals, landscapes, and architecture.
+There is a long list of art fundamentals I want to learn and put into practice: composition, perspective, value, color theory, light and shadow, gesture, anatomy, etc. Beyond the fundamentals, there is so much more to learn: character design, clothing, animals, landscapes, architecture, and so on.
 
 I think I found the *perfect tool* to use while learning. [Rebelle 8 Pro](https://www.escapemotions.com/products/rebelle/about) is painting software with an emphasis on natural media. Everything is simulated:
 
@@ -63,7 +63,7 @@ Three years ago I purchased a Huion Kamvas Pro 24" (4K). Now there are newer gen
 
 Rebelle looks like a great tool to use while learning art, but what about as a tool for game art? I did run into some limitations.
 
-It has a stencils feature for drawing patterns from stencils, but I couldn't find a [Krita](https://krita.org/en/)-style *wrap-around mode* (or tiled mode) for creating repeating patterns and textures. That could be useful for creating stencils and for game textures.
+It has a stencils feature for drawing patterns from stencils and a symmetry mode, but I couldn't find a [Krita](https://krita.org/en/)-style *wrap-around mode* (or tiled mode) for creating repeating patterns and textures. That could be useful for creating stencils and for game textures.
 
 Games are not static, so the biggest limitation is that Rebelle has no timeline or onion skinning. But animation is a [separate topic](/moho) for another day.
 
@@ -71,16 +71,16 @@ Games are not static, so the biggest limitation is that Rebelle has no timeline 
 
 Steam is flooded with indie games that look like all the other indie games: pixel art, low-poly, etc. I think Rebelle could be used to bring a little more visual variety to games.
 
-Watercolour has found its way into more than a few games. The towns in Bravely Default II, the [backgrounds of Cuphead](https://caitrussell.com/ch-bgs.html), or the entirety of Dordogne. With Rebelle, it may be possible to acheive similar quality without the arduous process of scanning traditional watercolour. A few more games in that style wouldn't hurt.
+Watercolour has found its way into a few games. The towns in [Bravely Default II](https://store.steampowered.com/app/1446650/BRAVELY_DEFAULT_II/), the [backgrounds of Cuphead](https://caitrussell.com/ch-bgs.html), or the entirety of [Dordogne](https://store.steampowered.com/app/1272840/Dordogne/). With Rebelle, it may be possible to acheive similar quality without the arduous process of scanning traditional watercolour. A few more games in that style wouldn't hurt.
 
 Watercolour isn't the only option though. Why not craft interactive worlds with oil, acryllic, pastel, charcoal, or ink? I'm excited for the possibilities!
 
 ## Setting A Course
 
-At this point I've accumulated quite a few learning resourses. Some courses on [Proko](https://www.proko.com/), [Domestika](https://www.domestika.org/en/home), and Udemy. Shelves lined with literally hundreds of art books to study and inspire. 
+At this point I've accumulated quite a few learning resourses. Some courses from [Proko](https://www.proko.com/), [Domestika](https://www.domestika.org/en/home), and Udemy. Shelves lined with literally hundreds of art books to study and inspire. 
 
 Now that I have the time and capacity to really dive in, the big question is, where to start?
 
 I think [Drawing Basics](https://www.proko.com/course/drawing-basics) is the most obvious place. Sitting through 80+ hours of lecture doesn't sound very appealing, but that's just part of being a student, even if I'm taking the self-study approach.
 
-Art isn't the only thing I'm learning though. See my posts on [animation](/moho) and music (coming soon).
+Art isn't the only thing I'm learning though. See my posts on [animation](/moho) and [music](/play).
