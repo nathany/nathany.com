@@ -132,7 +132,7 @@ So naturally, Michael Miller's most recent music theory book, [Music Theory: Not
 
 * [Adult Piano Adventures](https://www.amazon.ca/dp/1616773022) book 1 and 2
 * [Ableton Live 12 by Simon Stokes](https://www.udemy.com/course/electronic-music-production-with-ableton-live-subsine/) on Udemy (started)
-* [Learn Music Theory](https://thinkspace.ac.uk/courses/learn-music-theory/) and [How to Write Music](https://thinkspace.ac.uk/courses/how-to-write-music/) by ThinkSpace Education
+* [How to Write Music](https://thinkspace.ac.uk/courses/how-to-write-music/) and [Learn Music Theory](https://thinkspace.ac.uk/courses/learn-music-theory/) by ThinkSpace Education
 * [Music Theory: Note by Note](https://www.amazon.ca/dp/0744092531) by Michael Miller
 * [Introduction To Writing For Orchestra With SSO Discover](https://thinkspace.ac.uk/free/spitfire-discover-free-course/) by ThinkSpace Education (free)
 
