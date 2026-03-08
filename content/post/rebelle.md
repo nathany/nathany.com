@@ -75,7 +75,7 @@ Watercolour has found its way into a few games. The towns in [Bravely Default II
 
 Watercolour isn't the only option though. Why not craft interactive worlds with oil, acryllic, pastel, charcoal, or ink? I'm excited for the possibilities!
 
-## Setting A Course
+## Setting a Course
 
 At this point I've accumulated quite a few learning resourses. Some courses from [Proko](https://www.proko.com/), [Domestika](https://www.domestika.org/en/home), and Udemy. Shelves lined with literally hundreds of art books to study and inspire. 
 

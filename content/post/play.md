@@ -103,9 +103,9 @@ Perhaps it's fortunate that performance isn't my goal. I'd like to play piano we
 
 ## How Music Works
 
-If you have an interest in music, and I assume you do, I highly recommend the audiobook [How Music Works](https://www.amazon.ca/How-Music-Works-Psychology-Beautiful/dp/B072HSJCFG) by John Powell. It's both entertaining and educational.
+If you have any interest in music, I highly recommend the audiobook [How Music Works](https://www.amazon.ca/How-Music-Works-Psychology-Beautiful/dp/B072HSJCFG) by John Powell. It's both entertaining and educational.
 
-Near the beginning, he talks about how music differs from noise, and the frequencies of notes, but without requiring a physics degree.
+Near the beginning, he talks about how music differs from noise and the frequencies of notes, but without requiring a physics degree.
 
 This helped me later on when I was learning suspended chords like Csus4 (C F G) in *Adult Piano Adventures.* As described, C F G builds *tension* that *resolves* down to C Major (C E G). I played the chords and heard the difference in sound, but I didn't *feel* tension from C F G, and C E G didn't *feel* resolved to me. But I could at least understand why that terminology was used due to how the frequencies of notes relate to one another. After some experimentation, I did find that ending a song with C Major certainly sounds *better.*
 
