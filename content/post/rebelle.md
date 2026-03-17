@@ -69,7 +69,7 @@ Games are not static, so the biggest limitation is that Rebelle has no timeline 
 
 ### Visual Variety
 
-Steam is flooded with indie games that look like all the other indie games: pixel art, low-poly, etc. I think Rebelle could be used to bring a little more visual variety to games.
+Steam is flooded with indie games that look like all the other indie games. I think Rebelle could be used to bring a little more visual variety to games.
 
 Watercolour has found its way into a few games. The towns in [Bravely Default II](https://store.steampowered.com/app/1446650/BRAVELY_DEFAULT_II/), the [backgrounds of Cuphead](https://caitrussell.com/ch-bgs.html), or the entirety of [Dordogne](https://store.steampowered.com/app/1272840/Dordogne/). With Rebelle, it may be possible to acheive similar quality without the arduous process of scanning traditional watercolour. A few more games in that style wouldn't hurt.
 
