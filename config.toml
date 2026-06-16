@@ -1,5 +1,5 @@
 baseURL = "https://nathany.com"
-languageCode = "en-us"
+locale = "en-US"
 title = "Nathan Youngman"
 copyright = "2026 Nathan Youngman"
 
