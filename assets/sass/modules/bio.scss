@@ -50,13 +50,14 @@ $border-width: 8px;
     }
 
     .fab,
-    .far {
-        padding-right: 0.4rem;
-        padding-bottom: 0.3rem;
+    .far,
+    .codeberg {
+        margin-right: 0.5rem;
+        margin-bottom: 0.3rem;
 
         &:visited,
         &:link {
-            color: $base01;
+            color: white; // $base01;
         }
 
         &:hover {
@@ -64,8 +65,28 @@ $border-width: 8px;
         }
     }
 
-    .far.fa-heart {
+    .codeberg {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-image: url('/images/codeberg-logo_icon_white-64x64.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
 
+      &:hover {
+        background-image: url('/images/codeberg-logo_icon_blue-64x64.png');
+      }
+    }
+
+    .fab.fa-github-alt {
+        &:hover,
+        &:active {
+            color: #0fbf3e;
+        }
+    }
+
+    .far.fa-heart {
         &:hover,
         &:active {
             color: #db61a2;
@@ -73,7 +94,6 @@ $border-width: 8px;
     }
 
     .fab.fa-amazon {
-
         &:hover,
         &:active {
             color: #ff7800;
@@ -81,18 +101,9 @@ $border-width: 8px;
     }
 
     .fab.fa-youtube {
-
         &:hover,
         &:active {
             color: #ff2841;
-        }
-    }
-
-    .fab.fa-github-alt {
-
-        &:hover,
-        &:active {
-            color: white;
         }
     }
 }
