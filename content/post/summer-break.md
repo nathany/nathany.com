@@ -75,5 +75,4 @@ I'll continue to make an effort to reign in my discretionary spending. Consider 
 
 Otherwise it'll likely be more of the same for the next month or two. Improving my health, weight, and fitness would be great accomplishments from a career break, even if I don't make progress on all my other ambitions.
 
-
-See you in the next update.
+See you in the [next update](/fire).

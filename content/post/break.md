@@ -5,7 +5,7 @@ date = "2025-06-13"
 keywords = ["personal finance", "index funds", "career break", "sabbatical", "Canada"]
 +++
 
-For the past 5½ years, I've been saving towards retirement, but I recently decided to take a career break. This is the first post in a two-part series:
+For the past 5½ years, I've been saving aggressively towards retirement, but I recently decided to take a career break. This is the first post in a two-part series:
 
 * **Career Break: How I Got Here**
 * [Career Break: What Will I Do][continue]
@@ -20,7 +20,7 @@ For the purposes of this post, I'm using the broader term career break.
 
 ## How I got here
 
-In late 2019, I happened upon [<span class="fab fa-youtube fa"></span>The Simple Path to Wealth](https://www.youtube.com/watch?v=T71ibcZAX3I) by JL Collins (Talks at Google). I subsequently binge-read several personal finance books, starting with The Simple Path to Wealth 🇺🇸, followed by Wealthing Like Rabbits, Millionaire Teacher, and Quit Like A Millionaire.
+In late 2019, I happened upon [<span class="fab fa-youtube fa"></span>The Simple Path to Wealth](https://www.youtube.com/watch?v=T71ibcZAX3I) by JL Collins (Talks at Google). I subsequently binge-read several personal finance books, starting with *The Simple Path to Wealth* 🇺🇸, followed by *Wealthing Like Rabbits, Millionaire Teacher,* and *Quit Like A Millionaire.*
 
 I was working part-time and enjoying an extra free day every week. But I was starting to think about retirement, maybe early retirement, or even just "F-you money". I decided to go full-time at the beginning of 2020, but rather than inflate my lifestyle, I would invest the difference in low-cost index funds (ETFs).
 
