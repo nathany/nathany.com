@@ -5,7 +5,7 @@ date = "2026-07-04"
 keywords = ["Lean FIRE", "Financially Independent, Retire Early", "career break"]
 +++
 
-Last year I took a [career break][break] after [28 years of web development][web]. My goal was to study a variety of topics, and pursue hobbies like game development and technical writing.
+A year ago I took a [career break][break] after [28 years of web development][web]. My goal was to study a variety of topics, and pursue hobbies like game development and technical writing.
 
 ## Runway 🛫
 
@@ -48,7 +48,7 @@ I still have much to learn -- music theory, writing music, mixing. And to be hon
 
 ## Slowdown 🚥
 
-Living life in the slow lane is the rest I need right now. But how long can all this really last?
+Living life in the slow lane is the rest I need right now. But how long can this really last?
 
 I have some things going for me. I don't own a vehicle 🚘 and my other costs are low. But I broke the 4% "rule"  -- not saving 25x my living expenses. To top it off, reigning in my discretionary spending has been a challenge -- so far my love for <dfn data-tooltip="piling up books to read later">[tsundoku][]</dfn> 📚  has gone unabated.
 
