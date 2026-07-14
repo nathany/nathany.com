@@ -190,8 +190,8 @@ Presenting the `-show-timings` data provided by the Odin compiler (dev-2026-07a)
 ### Default build
 Default optimization level of `-o:minimal`, no debug info, and `-linker:radlink` on Windows. 
 
-| Platform | Project                   | LoC  | Parsed Lines | LLVM   | Link   | Total Time |
-| -------- | ------------------------- | ---- | ------------ | ------ | ------ | ---------- |
+| Platform | Project                   | LoC  | Parsed       | LLVM   | Link   | Total      |
+| -------- | ------------------------- | ---- | -----------: | -----: | -----: | ---------: |
 | Zen 5 8c | Karl2D Snake              | 14K  | 141K         | ~90ms  | ~32ms  | ~230ms     |
 | Zen 5 8c | Cat & Onion               | 21K  | 141K         | ~445ms | ~32ms  | ~575ms     |
 | Zen 5 8c | Odin Core Library + Tests | 270K | 282K         | ~1s    | ~65ms  | ~1.3s      |
@@ -200,14 +200,14 @@ Default optimization level of `-o:minimal`, no debug info, and `-linker:radlink`
 | M1 Max   | Odin Core Library + Tests | 270K | 278K         | ~1.6s  | ~200ms | ~2.1s      |
 
 * LoC: Lines of code reported by `cloc`, excluding blanks/comments.
-* Parsed Lines: lines parsed by the front-end. Includes core packages/libraries and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
+* Parsed: lines parsed by the front-end. Includes core packages/libraries and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
 * Odin Core Library + Tests is a *build* of Core and its tests (`-build-mode:test`), but we're not evaluating test execution time.
 
 ### Debug build
 The `-debug` flag for PDB/DWARF debug info, defaults to `-o:none` optimization. With `-linker:radlink` on Windows.
 
-| Platform | Project                   | LoC  | Parsed Lines | LLVM   | Link   | Total Time |
-| -------- | ------------------------- | ---- | ------------ | ------ | ------ | ---------- |
+| Platform | Project                   | LoC  | Parsed       | LLVM   | Link   | Total      |
+| -------- | ------------------------- | ---- | -----------: | -----: | -----: | ---------: |
 | Zen 5 8c | Karl2D Snake              | 14K  | 141K         | ~145ms | ~65ms  | ~320ms     |
 | Zen 5 8c | Cat & Onion               | 21K  | 141K         | ~515ms | ~65ms  | ~680ms     |
 | Zen 5 8c | Odin Core Library + Tests | 270K | 282K         | ~1.6s  | ~105ms | ~1.9s      |
