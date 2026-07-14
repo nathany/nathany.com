@@ -3,7 +3,6 @@ title = "🔱 Why Odin?"
 description = "First impressions of the Odin programming language."
 date = "2026-07-14"
 keywords = ["Odin", "code", "programming", "C alternative", "data oriented design", "Joy of Programming"]
-draft = true
 +++
 
 When I wrote [Why Go?](/why-go) in 2012, I was struggling to get a Ruby on Rails web app to handle more than 3 concurrent requests. 😅 Go was a revelation! And it continues to be one of the top choices in that space.
