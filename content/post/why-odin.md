@@ -13,7 +13,7 @@ Today I'm [retired](/fire) from web development, and pursuing a childhood dream 
 
 The Odin language feels familiar, borrowing liberally from Go's syntax and design[^1].
 
-* Pascal-style declaration syntax: `x := 10`
+* Pascal-style declaration syntax with type inference: `x := 10`
 * Zero is initialization (ZII)
 * Multiple return values, named return values, and even naked `return`
 * Built in dynamic arrays, slices, strings and runes
@@ -200,7 +200,7 @@ Default optimization level of `-o:minimal`, no debug info, and `-linker:radlink`
 | M1 Max   | Odin Core Library + Tests | 270K | 278K         | ~1.6s  | ~200ms | ~2.1s      |
 
 * LoC: Lines of code reported by `cloc`, excluding blanks/comments.
-* Parsed: lines parsed by the front-end. Includes core packages/libraries and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
+* Parsed: lines parsed by the front-end. Includes imported core packages/libraries and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
 * Odin Core Library + Tests is a *build* of Core and its tests (`-build-mode:test`), but we're not evaluating test execution time.
 
 ### Debug build
@@ -273,7 +273,7 @@ The later could be considered a potential downside of bundling vendor bindings w
 
 ## Conclusion
 
-There are a number of other features and that I didn't cover. Enums (tagged unions), the context system (which is unrelated to Go's context), `or_return` for error handling, conditional compilation (`when`) and more.
+There are a number of other features and that I didn't cover. Enums, tagged unions, the context system (which is unrelated to Go's context), `or_return` for error handling, conditional compilation (`when`) and more.
 
 So far, I've found Odin _pleasant to read and write_ and the compile times are quite reasonable. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Hot code reloading is straightforward. Manual memory management and the bog-standard threading model make <abbr title="Foreign Function Interface">FFI</abbr> simpler. While not everyone's cup of tea, it's a good fit for my use case.
 
