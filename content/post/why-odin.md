@@ -15,54 +15,57 @@ To top it off:
 
 * The `#soa` directive makes optimizing memory layouts ergonomic -- for when its _gotta go fast._ 
 * <abbr title="Foreign Function Interface">FFI</abbr> to C libraries is a breeze, and it comes fully equipped with bindings to DirectX, Metal and more.
-* Vectors, matrices and quaternions are built into the language.
+* Vectors, matrices and quaternions are baked into the language.
 * A focus on plain old data and manual memory management make hot code reloading _almost_ trivial.
 
-All things I like. Well, except manual memory management! Even if it does make FFI and hot code reloading easier. We'll get into all that, and strategies to mitigate the downsides.
+All things I like. Well, except manual memory management! We'll get into all that, and strategies to mitigate the downsides.
 
 [2027]: https://www.youtube.com/watch?v=dLPAqXi9In0
 
 ## A familiar face
+_It looks like a duck, it quacks like a duck, but it's a different breed entirely._ 🦆
 
 The Odin language feels familiar, borrowing liberally from Go's syntax and design[^1].
 
 * Pascal-style declaration syntax with type inference: `x := 10`
 * Zero is initialization (ZII)
-* Multiple return values, named return values, and even naked `return`
+* Multiple return values, named return values, and even naked `return` 😳
 * Built in dynamic arrays, slices, strings and runes
 * Built in maps with the familiar `make(map[string]int)` and `elem, ok := m[key]` syntax
 * Struct fields tags: ``struct {name: string `json:"username"`}``
-* Nil pointers and the `new(int)` builtin
+* The `new(int)` builtin and nil pointers 💰
 * Defer keyword -- but Odin defers to the end of a scope
 * Packages are directories
-* Conditional compilation with build tags, file suffixes -- but also a `when` statement
+* Conditional compilation with build tags, file suffixes -- and also a `when` statement
 
-The similarities are bound to draw comparison, but while Go strived for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built in green threads (channels, select, goroutines). Odin doesn't have duck typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an _imperative language through and through._ 
+The similarities are bound to draw comparison, but while Go strived for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built in green threads (channels, select, goroutines). Odin doesn't have duck typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an _imperative language_ through and through. 
 
 These are not things I _need._ There is, however, one thing Odin sorely lacks.
 
 It doesn't have a cute mascot! 😜 
 
-If it's any consolation, Odin does have some features that gophers have wanted for a long time:
+If it's any consolation, Odin does have a few features that gophers have wanted for a long time:
 
 * Enums and tagged unions with exhaustive switch statements
 * The `or_return` operator for more ergonomic error handling
 
 ## Manual memory management
+_We better `&address` the elephant in the room._ 🐘 
 
-We better `&address` the 🐘 elephant in the room.
+Memory safety. It isn't critical for my use case -- single player entertainment. I do want fewer bugs, 🐜 but I also want fast iteration, and a language well-suited for game development.
 
-I didn't go looking for manual memory management.
+I'll be the first to admit that garbage collection didn't make Minecraft (Java), Stardew Valley (C#), CrossCode (JavaScript) or Meg's Monster (Go) unplayable. And the borrow checker didn't stop Tiny Glade or (the) Gnorp Apologue from compiling. ⚔️
 
-Garbage collection didn't prevent games like Minecraft (Java), Stardew Valley (C#), CrossCode (JavaScript) or Meg's Monster (Go) from being successful. Tiny Glade and (the) Gnorp Apologue are two of several games written in Rust. They fought the borrow checker and won. ⚔️
+I've been attempting to _Learn Me Some Rust_ [for years](/4000). In the right hands, all that expressive power has produced some [truly inspiring work][deadlock]. But it's not for me. I _value simplicity_ more than power.
 
-That said, memory safety isn't the most critical factor for my use case -- small scope, single player entertainment (games).
+[deadlock]: https://www.youtube.com/watch?v=Ba7fajt4l1M
+
+If the tradeoff is, accept manual memory management to get the other things I want, how can we make this more palatable?
 
 ### Mutation xor sharing
+_In Odin, you are the borrow checker._ 🦀 😅
 
-In Odin, _you are the borrow checker._ 😅
-
-I say that jokingly, but it's also true. Mutate the world under your feet at your own peril.
+I say that jokingly, but it's also true. Mutate the world under your feet at your own peril. 
 
 Let's write an update function that runs on every entity, updating its position and state. It can also inspect the state of the world, including all the entities contained within it.
 
@@ -72,11 +75,11 @@ update :: proc(entity: ^Entity, world: World) {
 }
 ```
 
-In Rust there are more decisions to make for every function parameter. Should a parameter be a mutable borrow, a shared reference, or move ownership? What about aliasing? The compiler will outright reject some combinations. For some, this feedback is an opportunity to take a step back and [find a better design](https://www.youtube.com/watch?v=aKLntZcp27M). Others [value iteration](https://loglog.games/blog/leaving-rust-gamedev/) over all else, quickly prototyping a rough implementation without fighting the compiler. Rust's borrow checker, for all its worth, can't distinguish between a multi-threaded production server susceptible to adversarial attacks, and a single-threaded throw-away prototype.
+Rust imposes many decisions for every function parameter. Should it be a mutable borrow, a shared reference, or move ownership? What about aliasing? The compiler will outright reject some combinations. For some, feedback like this is an opportunity to take a step back and [find a better design](https://www.youtube.com/watch?v=aKLntZcp27M). Others [value iteration](https://loglog.games/blog/leaving-rust-gamedev/) over all else, quickly prototyping a rough implementation without fighting the compiler. Rust's borrow checker, for all its worth, can't distinguish between a multi-threaded production server susceptible to adversarial attacks, and a single-threaded throw-away prototype.
 
 Leaving the borrow checker behind, we're left to ourselves to consider ownership, aliasing and the like. 
 
-Procedure parameters in Odin _are immutable_, but only in a shallow sense. The `update` could mutate data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so everything is inline. Then the `world` parameter can be completely immutable:
+Procedure parameters in Odin _are immutable_, but only in a shallow sense. The `update` procedure could mutate data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so that everything is inline. Then the `world` parameter can be completely immutable:
 
 ```odin
 World :: struct {
@@ -92,29 +95,49 @@ game_tick :: proc(world: ^World) {
 }
 ```
 
-Odin automatically passes large arguments by reference, so passing `world` doesn't tank our performance. However, that does mean that changes to `entity` will be reflected in the `world` _immediately_, since `world` isn't a copy.
+Odin automatically passes large arguments by reference, so passing `world` around doesn't tank our performance. However, changes to `entity` will be reflected in the `world` _immediately_, since `world` isn't a copy.
 
 Which brings up another problem with this design. If the entities interact, those interactions are order dependent. For example, does a monster dodge the bullet by being the first to move, or does the bullet move first?
 
-Maybe a better design would double buffer the world data (previous and current frame) or store up the writes to apply at the end. Or maybe entities should be split up (monsters, bullets) and resolved in a defined order. Or maybe there's an entirely different design that's even better. But those design decisions are all language agnostic.
+Maybe a better design would double buffer the world data (previous and current frame) or store up the writes to apply at the end. Or maybe entities should be split up (monsters, bullets) and resolved in a defined order. Maybe there's an entirely different design that's even better. But those design decisions are all language agnostic.
 
 Even though Odin doesn't "check your borrows," it doesn't mean your data is a mutable ball of mud with pointers flying everywhere. How you architect your data and your code is still up to you.
 
 ### The low hanging fruit
+_Safety at hand._ 🍓
 
-Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking, which Odin provides by default. Bounds check elimination appears to be manual right now (`#no_bounds_check`), but it's starting from the right defaults. Odin also initializes memory to zero. These are easy wins for a new language.[^2]
+Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking, which Odin provides by default. Bounds check elimination appears to be manual right now (`#no_bounds_check`), but it's starting from the right defaults. Odin also initializes memory to zero. 
+
+Odin supports the sanitizers that C developers are all-too-familiar with. The `-sanitize:address` flag enables <abbr title="AddressSanitizer">ASan</abbr>, which can catch temporal memory bugs (e.g. use after free). Odin also has its own tracking allocator, which doesn't catch everything ASan can, but it has much lower overhead. Both of these are runtime checks, and thus depend on test coverage or manual <abbr title="Quality Assurance">QA</abbr>.
+
+These are easy wins for a new language.[^2]
 
 ### Enter the arena
+_How barley men manage lifetimes._ 🏟️
 
-<!-- the context system (unrelated to Go's context) -->
+Why free one gladiator at a time, when you can `free_all` at once? Games have some big obvious lifetimes:
 
-Temporal memory bugs (e.g. use after free) are more difficult, and do require some discipline. Arena allocators can help. 
+* The beginning of the game until the very end
+* When a level loads until it unloads
+* From the beginning of a frame until the end of the frame
 
-For example, in a game loop, a `temp_allocator` can be used for any allocations that happen during the frame. At the end of the frame, that arena is cleared for reuse. This reduces calls to the kernel for heap allocations, improving performance. Perhaps more importantly, it groups together all the values with the same lifetime (a single frame). When applied broadly (the lifetime of a level, a frame, etc.), this approach can help reduce the likelihood of temporal memory bugs.
+A simple arena allocator operates like the stack you already use every time you call a function, except the arena can have any lifetime you choose. It can use preallocated memory and then reuse that memory again and again. Freeing and allocating memory within an arena are a matter of moving a pointer, making it very inexpensive to operate.
+
+Instead of just a single global allocator (e.g. `malloc`), Odin has an [implicit context system][context] (no relation to Go's context). By default, the context provides a default heap allocator and a temporary arena allocator. These can be customized with other allocators, and you can pass allocators explicitly when desired.
+
+In a game loop, the `temp_allocator` can be used for any allocations that should only live for a single frame. At the end of the frame, clear the arena for reuse: 
+
+```odin
+free_all(context.temp_allocator)
+```
+
+Grouping together values with the same lifetime reduces the cognitive burden of keeping track of every independent value. "Did I remember to free everything?" becomes a matter of use the right allocator/arena.
 
 If you want a deep dive, check out Ryan Fleury's [talk][arena-talk] and [article][arena] on arena allocators.
 
-One idea Fleury describes is to reserve a large contiguous block of virtual address space, but without requiring all the physical memory until committed. The [mem/virtual](https://pkg.odin-lang.org/core/mem/virtual/) package in Odin can be used for exactly that purpose.
+One idea Fleury describes is reserving a large contiguous block of virtual address space upfront. The [mem/virtual](https://pkg.odin-lang.org/core/mem/virtual/) package in Odin can be used for that purpose.
+
+[context]: https://www.gingerbill.org/article/2025/12/15/odins-most-misunderstood-feature-context/
 
 ### Relocation
 
@@ -132,9 +155,7 @@ Imagine a monster in a game that is chasing another entity. Instead of an `^Enti
 
 So there are many ways to reduce the risk of dangling pointers and the like.
 
-### Sanitizers
-
-In addition to arena allocators, there are runtime tools. Odin's tracking allocator and ASAN (`-sanitize:address`) can help find memory bugs. But even with these tools, some memory bugs may slip through. Will good technique and test coverage save me? Time will tell.
+<!--Even if it makes FFI and hot code reloading easier.-->
 
 ## Data-oriented design
 
