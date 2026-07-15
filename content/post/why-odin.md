@@ -49,6 +49,8 @@ If it's any consolation, Odin does have a few features that gophers have wanted 
 * Enums and tagged unions with exhaustive switch statements
 * The `or_return` operator for more ergonomic error handling
 
+[^1]: Just like Go takes inspiration from previous languages.
+
 ## Manual memory management
 _We better `&address` the elephant in the room._ 🐘 
 
@@ -79,7 +81,7 @@ Rust imposes many decisions on every function parameter. Should it be a mutable 
 
 Leaving the borrow checker behind, we're left to ourselves to consider ownership, aliasing and the like. 
 
-Procedure parameters in Odin _are immutable_, but only in a shallow sense. The `update` procedure could mutate data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so that everything is inline. Then the `world` parameter can be completely immutable:
+Procedure parameters in Odin _are immutable_, but only in a shallow sense. The `update` procedure could mutate data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so that everything is inline.[^2] Then the `world` parameter can be completely immutable:
 
 ```odin
 World :: struct {
@@ -103,6 +105,8 @@ Maybe a better design would double buffer the world data (previous and current f
 
 Even though Odin doesn't check your borrows, it doesn't mean your data is a mutable ball of mud with pointers flying everywhere. How you architect your data and code is still up to you.
 
+[^2]: I'm not necessarily recommending this approach, but it serves as an interesting example.
+
 ### The low hanging fruit
 _Safety at hand._ 🍓
 
@@ -110,7 +114,9 @@ Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking,
 
 Odin supports the sanitizers that C developers are all-too-familiar with. The `-sanitize:address` flag enables <abbr title="AddressSanitizer">ASan</abbr>, which can catch temporal memory bugs (e.g. use after free). Odin also has its own tracking allocator, which doesn't catch everything ASan can, but it has much lower overhead. Both of these are runtime checks, and thus depend on test coverage or manual <abbr title="Quality Assurance">QA</abbr>.
 
-These are easy wins for a new language.[^2]
+These are easy wins for a new language.[^3]
+
+[^3]: A newish language. Odin is only 10 years old.
 
 ### Enter the arena
 _How barley men manage lifetimes._ 🏟️
@@ -157,9 +163,7 @@ Though not a feature of Odin, _generational indexes_ provide an alternative to l
 
 Imagine a monster 🧟‍♀️ that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter used to verify that the referenced entity is still the same one.
 
-So there are many techniques to reduce the risk of dangling pointers and the like. Maybe manual memory management doesn't need to be a pointer jungle full of foot guns and spooky action at a distance.
-
-<!--Even if it makes FFI and hot code reloading easier.-->
+So there are many techniques to reduce the risk of dangling pointers and the like. Maybe manual memory management doesn't _need_ to be a pointer jungle full of foot guns and spooky action at a distance.
 
 ## Data-oriented design
 _Hardware is the platform._ 🌺
@@ -257,7 +261,7 @@ Presenting the `-show-timings` data for Odin compiler (dev-2026-07a). Default op
 * macOS Tahoe with an M1 Max (8P+2E) with the default linker.
 
 
-| Platform | Project                   | LoC[^3]  | Parsed[^4]       | LLVM   | Link   | Total      |
+| Platform | Project                   | LoC[^4]  | Parsed[^5]       | LLVM   | Link   | Total      |
 | -------- | ------------------------- | ---- | -----------: | -----: | -----: | ---------: |
 | Zen 5 8c | Karl2D Snake              | 14K  | 141K         | ~90ms  | ~32ms  | ~230ms     |
 | Zen 5 8c | Cat & Onion               | 21K  | 141K         | ~445ms | ~32ms  | ~575ms     |
@@ -266,8 +270,8 @@ Presenting the `-show-timings` data for Odin compiler (dev-2026-07a). Default op
 | M1 Max   | Cat & Onion               | 21K  | 134K         | ~615ms | ~180ms | ~900ms     |
 | M1 Max   | Odin Core Library + Tests | 270K | 278K         | ~1.6s  | ~200ms | ~2.1s      |
 
-[^3]: Lines of code reported by `cloc`, excluding blanks/comments.
-[^4]: Lines parsed by the front-end. Includes imported core packages and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
+[^4]: Lines of code reported by `cloc`, excluding blanks/comments.
+[^5]: Lines parsed by the front-end. Includes imported core packages and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
 
 Odin Core Library + Tests is a *build* of Core and its tests -- we're not evaluating test execution time:
 
@@ -284,8 +288,8 @@ Odin build times are dominated by the LLVM backend (~80%) on larger projects.
 
 * The Odin front-end scales near-linearly with lines parsed. 
 * For debug and development builds (`-o:none` or `-o:minimal`), Odin emits LLVM IR for each package in parallel. LLVM scales according to the largest package, measured in terms of IR emitted.
-* The largest package in Cat & Onion (game) emits 5x the LLVM IR of the largest package in Snake (karl2d). This explains the gap in compile times despite parsing a similar number of lines.
-* Core Library + Tests emit 69 MiB of LLVM IR, but spread across 213 packages. The package emitting the largest amount of LLVM IR (14.5 MiB) was the biggest determinant of build time, with the majority of packages emitting far less.
+* The largest package in Cat & Onion (game) emits 5x the LLVM IR of the largest package in Snake (karl2d). This explains the gap in compile times, despite parsing a similar number of lines.
+* Core Library + Tests emit 69 MiB of LLVM IR, but spread across 213 modules. The package emitting the largest amount of LLVM IR (14.5 MiB) was the biggest determinant of build time, with the majority of packages emitting far less.
 
 In addition to pure lines of code, <abbr title="parametric polymorphism">parapoly</abbr> is a factor. In Odin, monomorphized IR concentrates in the defining package's module. This avoids duplication, 👍🏻 but it also increases the likelihood of a few modules dominating compile time. This seems more likely to impact test builds (e.g., the flags package tests 60 variations). Moderately slower test builds may be negligible vs. the time running the test suite.
 
@@ -334,9 +338,6 @@ So far I've found Odin _pleasant to read and write_. The compile times are entir
 If you're at all intrigued, take a gander at the Odin [overview][]. After that, I highly recommend Karl Zylinski's book, [Understanding the Odin Programming Language][odinbook]. Not only is it a good read, he has kept the content in step with the language over the years. I'm currently making my way through it.
 
 Until next time.
-
-[^1]: Just like Go takes inspiration from previous languages.
-[^2]: A newish language. Odin is 10 years old.
 
 [arena-talk]: https://www.youtube.com/watch?v=TZ5a3gCCZYo
 [arena]: https://www.dgtlgrove.com/p/untangling-lifetimes-the-arena-allocator
