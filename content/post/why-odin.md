@@ -121,7 +121,7 @@ Why free one gladiator at a time, when you can `free_all` at once? Games have so
 * When a level loads until it unloads
 * From the beginning of a frame until the end of the frame
 
-A simple arena allocator operates like the stack you already use every time you call a function, except the arena can have any lifetime you choose. It can use preallocated memory and then reuse that memory again and again. Freeing and allocating memory within an arena are a matter of moving a pointer, making it very inexpensive to operate.
+A simple arena allocator operates like the stack you already use every time you call a function, except the arena can have any lifetime you choose. It can use preallocated memory and then reuse that memory again and again. Freeing and allocating memory within an arena is a matter of moving a pointer -- making it very inexpensive to operate.
 
 Instead of just a single global allocator (e.g. `malloc`), Odin has an [implicit context system][context] (no relation to Go's context). By default, the context provides a default heap allocator and a temporary arena allocator. These can be customized with other allocators, and you can pass allocators explicitly when desired.
 
@@ -139,27 +139,30 @@ One idea Fleury describes is reserving a large contiguous block of virtual addre
 
 [context]: https://www.gingerbill.org/article/2025/12/15/odins-most-misunderstood-feature-context/
 
-### Relocation
+### Avoiding relocation
+_Please don't go._ 🚚
+
+If a dynamic array is full, appending to the end causes all the data in the array to be copied to a new, larger location. This is fine, unless there are pointers to elements at the old location. Now those pointers are invalid (dangling pointer).
 
 Odin includes some specialized data structures that don't relocate their data, making it safer to hold pointers into them. 
 
-Fixed capacity dynamic arrays (`[dynamic; 100]int`) are a recent addition. They behave like a dynamic array (`append(&x, 123)`, etc.), but they can't grow beyond their initial capacity.
+Fixed capacity dynamic arrays (`[dynamic; 100]int`) are a recent addition. They behave much like a dynamic array, but they can't grow beyond their initial capacity, and thus never reallocate.
 
 The [xar](https://pkg.odin-lang.org/core/container/xar/) package is like a dynamic array, but it grows in chunks instead of relocating the data. And other containers like [handle_map](https://pkg.odin-lang.org/core/container/handle_map/) can be layered on top when needed.
 
 ### Generation
+_Exit the pointer jungle._ 🐒
 
-Though not provided directly by Odin, generational indexes can be used instead of long-lived pointers. As an added benefit, they are easy to serialize to disk (save game) or the network. 
+Though not provided directly by Odin, _generational indexes_ can be used instead of long-lived pointers. As an added benefit, they are easy to serialize to disk (save game) or the network. 
 
-Imagine a monster in a game that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter that is used to verify that the referenced entity is still the same one.
+Imagine a monster in a game that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter that is used to verify that the referenced entity is still the same one.
 
 So there are many ways to reduce the risk of dangling pointers and the like.
 
 <!--Even if it makes FFI and hot code reloading easier.-->
 
 ## Data-oriented design
-
-Odin calls itself "the Data-Oriented Language for Sane Software Development" -- so what is data-oriented?
+_Hardware is the platform._ 🌺
 
 Programs are made up of data and transformations to that data. If you know the data and how it's accessed, and you understand the target hardware, then it's possible to write software that runs better on that hardware.
 
@@ -168,11 +171,12 @@ When I was a teenager, using a lookup table to avoid mathematical operations (li
 Since memory is relatively slow, CPUs have levels of progressively larger and slower caches (e.g., <abbr title="level 1">L1</abbr>, L2, L3). When data isn't in a cache (a cache miss), the CPU looks at the next one, and eventually main memory.
 
 Today data-oriented design centres on economical use of memory (the fastest caches are small), and organizing data based on how it's accessed. 
-There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https://www.youtube.com/watch?v=IroPQ150F6c) that are worth knowing, but the feature unique to Odin and some other C alternatives is called structure of arrays.
+There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https://www.youtube.com/watch?v=IroPQ150F6c) that are worth knowing, but the technique I'm going to highlight is called structure of arrays.
 
 ### Structure of arrays
+_Gotta go fast._ 💨
 
-For this example, we have a game with an array of entities:
+For this example, we have an array of entities in a game:
 
 ```odin
 Vector2 :: struct {x, y: int}
@@ -221,20 +225,20 @@ EntitySoA :: struct {
 All with no other code changes! By grouping together all the data that our physics system needs, we can take better advantage of the CPU cache.
 
 ## Vendor
+_In Odin, you are the package manager._ 📦 😅
 
 Odin ships with bindings for DirectX 12, DirectX 11, Metal, Vulkan and more. Windows COM and Objective-C APIs feel like part of the language and are fairly pleasant to use. Defer helps with manual cleanup, as there's no <abbr title="Resource Acquisition Is Initialization">RAII</abbr> like C++ or Rust.
 
-Other C bindings are included as well, such as [Box2D](https://box2d.org/) and [raylib](https://www.raylib.com/). There can be value in depending on mature libraries, with stable APIs and logic bugs fixed over many years. 
+Other C bindings are included as well, such as [Box2D](https://box2d.org/) and [raylib](https://www.raylib.com/). There is value in depending on mature libraries, with stable APIs and logic bugs fixed over many years. 
 
-Having all these libraries bundled makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. 
-
-While porting a _Metal by Tutorials_ demo from Swift to Odin, we uncovered a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). It was promptly resolved by a member of the Odin community. 👍🏻
+Having all these libraries bundled makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. While porting a _Metal by Tutorials_ demo from Swift to Odin, we uncovered a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). It was promptly resolved by an Odin community member. 👍🏻
 
 If there's a C library not provided in vendor, there are tools to [generate bindings](https://github.com/karl-zylinski/odin-c-bindgen). Odin can link in foreign libraries, but those libraries may require CMake or similar to build. Odin doesn't call out to C compilers. This is fine by me, as I have no desire to port and maintain third-party build scripts in Odin.
 
-In Odin, _you are the package manager._ 😅 There's no official tool that pulls in dozens of transitive dependencies with a single line. It's part of the ethos to vet external packages more carefully. For my needs, this too is fine.
+There's no official tool that pulls in dozens of transitive dependencies with a single line. It's part of the ethos to vet external packages more carefully. For my needs, this too is fine.
 
 ## Compile times
+🔱
 
 In terms of developer experience, one thing Go got right is compile times. Odin doesn't have incremental compilation and its backend is [LLVM][], so it must be slow, right? We won't know for sure until _we put it to the test!_
 
@@ -305,6 +309,7 @@ odin build "$HOME/src/github.com/odin-lang/Odin/tests/core" \
 [RAD]: https://github.com/EpicGames/raddebugger#the-rad-linker
 
 ## Hot code reloading
+♻️
 
 Once we have quick build times, hot code reloading provides the ultimate in fast iteration. The goal is to apply code changes without restarting the running app or game.
 
@@ -317,6 +322,7 @@ There are of course some caveats and gotchas to look out for. To get started, ta
 [hot-reload]: https://zylinski.se/posts/hot-reload-gameplay-code/
 
 ## Stability
+🛘
 
 The recent [Odin 2027](https://www.youtube.com/watch?v=dLPAqXi9In0) announcement is Odin's 1.0 moment. That said, Odin has been fairly stable for a while now.
 
@@ -327,6 +333,7 @@ The later could be considered a potential downside of bundling vendor bindings w
 [Itch]: https://zylinski.itch.io/cat-and-onion
 
 ## What's not to love?
+💔
 
 Is it perfect? If I wanted to spend 10 years making my own language, I'm sure I would add or remove a few things. But there are no deal breakers for me.
 
@@ -337,6 +344,7 @@ The tooling is good, but could always be a bit better. Daniel Gavin's [ols][] la
 The compiler could always optimize a little better or be a little faster. But isn't that always the case?
 
 ## Conclusion
+✌🏻
 
 So far, I've found Odin _pleasant to read and write_ and the compile times are quite reasonable. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Hot code reloading is straightforward. Manual memory management and the bog-standard threading model make <abbr title="Foreign Function Interface">FFI</abbr> simpler. While not everyone's cup of tea, it's a good fit for my use case.
 
