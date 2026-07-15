@@ -38,7 +38,7 @@ The Odin language feels familiar, borrowing liberally from Go's syntax and desig
 * Packages are directories
 * Conditional compilation with build tags, file suffixes -- and also a `when` statement
 
-The similarities are bound to draw comparison, but while Go strived for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built in green threads (channels, select, goroutines). Odin doesn't have duck typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an _imperative language_ through and through. 
+The similarities are bound to draw comparison, but while Go strived for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built in green threads (channels, select, goroutines). Odin doesn't have duck 🦆 typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an _imperative language_ through and through. 
 
 These are not things I _need._ There is, however, one thing Odin sorely lacks.
 
@@ -52,7 +52,7 @@ If it's any consolation, Odin does have a few features that gophers have wanted 
 ## Manual memory management
 _We better `&address` the elephant in the room._ 🐘 
 
-Memory safety. It isn't critical for my use case -- single player entertainment. I do want fewer bugs, 🐜 but I also want fast iteration, and a language well-suited for game development.
+Memory safety. It isn't critical for my use case -- single player or non-competitive multiplayer entertainment. I do want fewer bugs, 🐜 but I also want fast iteration, painless hot code reloading, and a language well-suited for game development.
 
 I'll be the first to admit that garbage collection didn't make Minecraft (Java), Stardew Valley (C#), CrossCode (JavaScript) or Meg's Monster (Go) unplayable. And the borrow checker didn't stop Tiny Glade or (the) Gnorp Apologue from compiling. ⚔️
 
@@ -60,12 +60,12 @@ I've been attempting to _Learn Me Some Rust_ [for years](/4000). In the right ha
 
 [deadlock]: https://www.youtube.com/watch?v=Ba7fajt4l1M
 
-If the tradeoff is, accept manual memory management to get the other things I want, how can we make this more palatable?
+If the tradeoff is, accept manual memory management to get the other things I want, how can we make it more palatable?
 
 ### Mutation xor sharing
-_In Odin, you are the borrow checker._ 🦀 😅
+_In Odin, you are the borrow checker._ 🦀
 
-I say that jokingly, but it's also true. Mutate the world under your feet at your own peril. 
+I say that jokingly, 😅 but it's true. Mutate the world under your feet at your own peril. 
 
 Let's write an update function that runs on every entity, updating its position and state. It can also inspect the state of the world, including all the entities contained within it.
 
@@ -123,15 +123,15 @@ Why free one gladiator at a time, when you can `free_all` at once? Games have so
 
 A simple arena allocator operates like the stack you already use every time you call a function, except the arena can have any lifetime you choose. It can use preallocated memory and then reuse that memory again and again. Freeing and allocating memory within an arena is a matter of moving a pointer -- making it very inexpensive to operate.
 
-Instead of just a single global allocator (e.g. `malloc`), Odin has an [implicit context system][context] (no relation to Go's context). By default, the context provides a default heap allocator and a temporary arena allocator. These can be customized with other allocators, and you can pass allocators explicitly when desired.
+Instead of just a single global allocator (e.g. `malloc`), Odin has an [implicit context system][context] (no relation to Go's context). By default, the context provides a default heap allocator and a temporary arena allocator. These can be customized with other allocators, or you can pass allocators around explicitly when desired.
 
-In a game loop, the `temp_allocator` can be used for any allocations that should only live for a single frame. At the end of the frame, clear the arena for reuse: 
+In a game loop, the `temp_allocator` can be used for any allocations that should live for a single frame. At the end of the frame, clear the arena for reuse: 
 
 ```odin
 free_all(context.temp_allocator)
 ```
 
-Grouping together values with the same lifetime reduces the cognitive burden of keeping track of every independent value. "Did I remember to free everything?" becomes a matter of use the right allocator/arena.
+Grouping together values with the same lifetime reduces the cognitive burden of keeping track of every independent value. "Did I remember to free everything?" becomes a matter of allocating things in the arena with the appropriate lifetime.
 
 If you want a deep dive, check out Ryan Fleury's [talk][arena-talk] and [article][arena] on arena allocators.
 
@@ -142,7 +142,7 @@ One idea Fleury describes is reserving a large contiguous block of virtual addre
 ### Avoiding relocation
 _Please don't go._ 🚚
 
-If a dynamic array is full, appending to the end causes all the data in the array to be copied to a new, larger location. This is fine, unless there are pointers to elements at the old location. Now those pointers are invalid (dangling pointer).
+When a dynamic array is full, appending to the end causes all the data in the array to be copied to a new, larger location. This is fine, unless there are pointers to elements at the old location. Now those pointers are invalid (dangling pointer).
 
 Odin includes some specialized data structures that don't relocate their data, making it safer to hold pointers into them. 
 
@@ -153,11 +153,11 @@ The [xar](https://pkg.odin-lang.org/core/container/xar/) package is like a dynam
 ### Generation
 _Exit the pointer jungle._ 🐒
 
-Though not provided directly by Odin, _generational indexes_ can be used instead of long-lived pointers. As an added benefit, they are easy to serialize to disk (save game) or the network. 
+Though not a feature of Odin, _generational indexes_ provide an alternative to long-lived pointers. As an added benefit, they are easy to serialize to disk (save game) or the network. 
 
-Imagine a monster in a game that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter that is used to verify that the referenced entity is still the same one.
+Imagine a monster 🧟‍♀️ that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter used to verify that the referenced entity is still the same one.
 
-So there are many ways to reduce the risk of dangling pointers and the like.
+So there are many ways to reduce the risk of dangling pointers and the like. Maybe manual memory management doesn't have to be a pointer jungle full of foot guns and spooky action at a distance.
 
 <!--Even if it makes FFI and hot code reloading easier.-->
 
@@ -168,7 +168,7 @@ Programs are made up of data and transformations to that data. If you know the d
 
 When I was a teenager, using a lookup table to avoid mathematical operations (like trigonometry) was a good idea. Today we have a lot more <abbr title="Random Access Memory">RAM</abbr> and it's somewhat faster. But CPUs are much, much faster. CPUs are so fast at math, that reading from main memory could take an order of magnitude longer than just recalculating the math. 
 
-Since memory is relatively slow, CPUs have levels of progressively larger and slower caches (e.g., <abbr title="level 1">L1</abbr>, L2, L3). When data isn't in a cache (a cache miss), the CPU looks at the next one, and eventually main memory.
+Since memory is relatively slow, CPUs have levels of progressively larger, further away and slower caches (e.g., <abbr title="level 1">L1</abbr>, L2, L3). When data isn't in a cache (a cache miss), the CPU looks at the next one, and eventually main memory.
 
 Today data-oriented design centres on economical use of memory (the fastest caches are small), and organizing data based on how it's accessed. 
 There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https://www.youtube.com/watch?v=IroPQ150F6c) that are worth knowing, but the technique I'm going to highlight is called structure of arrays.
@@ -176,7 +176,7 @@ There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https:
 ### Structure of arrays
 _Gotta go fast._ 💨
 
-For this example, we have an array of entities in a game:
+Let's flesh out our array of entities a little:
 
 ```odin
 Vector2 :: struct {x, y: int}
@@ -195,7 +195,7 @@ Entity :: struct {
 entities: [10000]Entity
 ```
 
-We know that our physics system only needs a subset of all the entity data, so we collected it into a `Location` struct. That way we can just pass `do_physics(&e.location)`.
+We know that our physics system only needs a subset of all the entity data, so we collected it into a `Location` struct. Maybe not the _best name,_ but let's go with it. Now we can pass our physics subsystem the subset of data it needs:
 
 ```odin
 for &e, i in entities {
@@ -225,7 +225,7 @@ EntitySoA :: struct {
 All with no other code changes! By grouping together all the data that our physics system needs, we can take better advantage of the CPU cache.
 
 ## Vendor
-_In Odin, you are the package manager._ 📦 😅
+_In Odin, you are the package manager._ 📦
 
 Odin ships with bindings for DirectX 12, DirectX 11, Metal, Vulkan and more. Windows COM and Objective-C APIs feel like part of the language and are fairly pleasant to use. Defer helps with manual cleanup, as there's no <abbr title="Resource Acquisition Is Initialization">RAII</abbr> like C++ or Rust.
 
@@ -233,12 +233,14 @@ Other C bindings are included as well, such as [Box2D](https://box2d.org/) and [
 
 Having all these libraries bundled makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. While porting a _Metal by Tutorials_ demo from Swift to Odin, we uncovered a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). It was promptly resolved by an Odin community member. 👍🏻
 
-If there's a C library not provided in vendor, there are tools to [generate bindings](https://github.com/karl-zylinski/odin-c-bindgen). Odin can link in foreign libraries, but those libraries may require CMake or similar to build. Odin doesn't call out to C compilers. This is fine by me, as I have no desire to port and maintain third-party build scripts in Odin.
+If there's a C library not provided in vendor, there are tools to [generate bindings](https://github.com/karl-zylinski/odin-c-bindgen). Odin can link in foreign libraries, but those libraries may require CMake or similar to build. Odin doesn't call out to C compilers. This is fine by me, as I have no desire to port and maintain third-party build scripts in Odin. I'd rather [just][] tie everything together with a [command runner][just].
 
 There's no official tool that pulls in dozens of transitive dependencies with a single line. It's part of the ethos to vet external packages more carefully. For my needs, this too is fine.
 
+[just]: https://just.systems/
+
 ## Compile times
-🔱
+_Carry on._ ⚔️
 
 In terms of developer experience, one thing Go got right is compile times. Odin doesn't have incremental compilation and its backend is [LLVM][], so it must be slow, right? We won't know for sure until _we put it to the test!_
 
@@ -309,7 +311,7 @@ odin build "$HOME/src/github.com/odin-lang/Odin/tests/core" \
 [RAD]: https://github.com/EpicGames/raddebugger#the-rad-linker
 
 ## Hot code reloading
-♻️
+_Instant gratification._ ♻️
 
 Once we have quick build times, hot code reloading provides the ultimate in fast iteration. The goal is to apply code changes without restarting the running app or game.
 
@@ -322,7 +324,7 @@ There are of course some caveats and gotchas to look out for. To get started, ta
 [hot-reload]: https://zylinski.se/posts/hot-reload-gameplay-code/
 
 ## Stability
-🛘
+_Breaking changes._ 🛘
 
 The recent [Odin 2027](https://www.youtube.com/watch?v=dLPAqXi9In0) announcement is Odin's 1.0 moment. That said, Odin has been fairly stable for a while now.
 
@@ -333,7 +335,7 @@ The later could be considered a potential downside of bundling vendor bindings w
 [Itch]: https://zylinski.itch.io/cat-and-onion
 
 ## What's not to love?
-💔
+_Baby, don't hurt me._ 💔
 
 Is it perfect? If I wanted to spend 10 years making my own language, I'm sure I would add or remove a few things. But there are no deal breakers for me.
 
@@ -344,7 +346,7 @@ The tooling is good, but could always be a bit better. Daniel Gavin's [ols][] la
 The compiler could always optimize a little better or be a little faster. But isn't that always the case?
 
 ## Conclusion
-✌🏻
+_Most outstanding._ ✌🏻
 
 So far, I've found Odin _pleasant to read and write_ and the compile times are quite reasonable. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Hot code reloading is straightforward. Manual memory management and the bog-standard threading model make <abbr title="Foreign Function Interface">FFI</abbr> simpler. While not everyone's cup of tea, it's a good fit for my use case.
 
