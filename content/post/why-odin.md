@@ -45,7 +45,9 @@ That said, memory safety isn't the most critical factor for my use case -- small
 
 In Odin, _you are the borrow checker._ 😅
 
-I say that jokingly, but it's also true. The compiler won't stop you from mutating the world under your feet. Imagine an update function that runs on every entity, updating its position and state. It can also look at the state of the world, including all the entities contained within it.
+I say that jokingly, but it's also true. Mutate the world under your feet at your own peril.
+
+Let's write an update function that runs on every entity, updating its position and state. It can also inspect the state of the world, including all the entities contained within it.
 
 ```odin
 update :: proc(entity: ^Entity, world: World) {
@@ -53,13 +55,33 @@ update :: proc(entity: ^Entity, world: World) {
 }
 ```
 
-See any problem with this design? Okay, what if we _know_ this game play logic is single-threaded, any problems now?
+In Rust there are more decisions to make for every function parameter. Should a parameter be a mutable borrow, a shared reference, or move ownership? What about aliasing? The compiler will outright reject some combinations. For some, this feedback is an opportunity to take a step back and [find a better design](https://www.youtube.com/watch?v=aKLntZcp27M). Others [value iteration](https://loglog.games/blog/leaving-rust-gamedev/) over all else, quickly prototyping a rough implementation without fighting the compiler. Rust's borrow checker, for all its worth, can't distinguish between a multi-threaded production server susceptible to adversarial attacks, and a single-threaded throw-away prototype.
 
-If the entities interact, those interactions are order dependent. For example, does a monster dodge the bullet by being the first to move, or does the bullet move first?
+Leaving the borrow checker behind, we're left to ourselves to consider ownership, aliasing and the like. 
 
-A borrow checker would see the mutable and shared reference to the same world state and reject it. Maybe a better design would be to double buffer the world data (previous and current frame) or store up the writes to apply at the end. Or maybe entities should be split up (monsters, bullets) and resolved in a defined order. For some, being forced to find a better design [is a good thing](https://www.youtube.com/watch?v=aKLntZcp27M). Others [value iteration](https://loglog.games/blog/leaving-rust-gamedev/) over all else, quickly prototyping a rough implementation without fighting the compiler.
+Procedure parameters in Odin _are immutable_, but only in a shallow sense. The `update` could mutate data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so everything is inline. Then the `world` parameter can be completely immutable:
 
-Rust's borrow checker, for all its worth, can't distinguish between a multi-threaded production server susceptible to adversarial attacks and a single-threaded throw-away prototype.
+```odin
+World :: struct {
+	entities: [10000]Entity
+	// etc.
+}
+
+game_tick :: proc(world: ^World) {
+	for &e in world.entities {
+		// update can modify entity, but world is read-only
+		update(&e, world)
+	}
+}
+```
+
+Odin automatically passes large arguments by reference, so passing `world` doesn't tank our performance. However, that does mean that changes to `entity` will be reflected in the `world` _immediately_, since `world` isn't a copy.
+
+Which brings up another problem with this design. If the entities interact, those interactions are order dependent. For example, does a monster dodge the bullet by being the first to move, or does the bullet move first?
+
+Maybe a better design would double buffer the world data (previous and current frame) or store up the writes to apply at the end. Or maybe entities should be split up (monsters, bullets) and resolved in a defined order. Or maybe there's an entirely different design that's even better. But those design decisions are all language agnostic.
+
+Even though Odin doesn't "check your borrows," it doesn't mean your data is a mutable ball of mud with pointers flying everywhere. How you architect your data and your code is still up to you.
 
 ### The low hanging fruit
 
