@@ -7,9 +7,22 @@ keywords = ["Odin", "code", "programming", "C alternative", "data oriented desig
 
 When I wrote [Why Go?](/why-go) in 2012, I was struggling to get a Ruby on Rails web app to handle more than 3 concurrent requests. 😅 Go was a revelation! And it continues to be one of the top choices in that space.
 
-Today I'm [retired](/fire) from web development, and pursuing a childhood dream to make video games. I want to get back to the low-level programming I did in my teens, and [Odin][] is one of several languages I've been considering.
+Today I'm [retired](/fire) from web development, and pursuing a childhood dream to make video games. I want to get back to the low-level programming I did in my teens. 
 
-## A worse Go?
+[Odin][] is the only language that I'm not _waiting around for._ It has good ergonomics and allocator APIs today. The compiler has a parallel frontend, and it's fast on the hardware and platforms I use: Windows and macOS. Plus, as of the [Odin 2027 announcement][2027], it has stability.
+
+To top it off:
+
+* The `#soa` directive makes optimizing memory layouts ergonomic -- for when its _gotta go fast._ 
+* <abbr title="Foreign Function Interface">FFI</abbr> to C libraries is a breeze, and it comes fully equipped with bindings to DirectX, Metal and more.
+* Vectors, matrices and quaternions are built into the language.
+* A focus on plain old data and manual memory management make hot code reloading _almost_ trivial.
+
+All things I like. Well, except manual memory management! Even if it does make FFI and hot code reloading easier. We'll get into all that, and strategies to mitigate the downsides.
+
+[2027]: https://www.youtube.com/watch?v=dLPAqXi9In0
+
+## A familiar face
 
 The Odin language feels familiar, borrowing liberally from Go's syntax and design[^1].
 
@@ -20,20 +33,24 @@ The Odin language feels familiar, borrowing liberally from Go's syntax and desig
 * Built in maps with the familiar `make(map[string]int)` and `elem, ok := m[key]` syntax
 * Struct fields tags: ``struct {name: string `json:"username"`}``
 * Nil pointers and the `new(int)` builtin
-* Defer keyword (but Odin defers to the end of a scope)
-* Directories are packages
+* Defer keyword -- but Odin defers to the end of a scope
+* Packages are directories
+* Conditional compilation with build tags, file suffixes -- but also a `when` statement
 
-The similarities are bound to draw comparison, but while Go strived for simplicity, Odin is _even simpler._ The things I found most intriguing in Go simply aren't in Odin, and there are _no plans_ to add them. There are no language primitives for concurrency and no built in green threads (channels, select, goroutines). Odin doesn't have duck typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an imperative language through and through. 
+The similarities are bound to draw comparison, but while Go strived for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built in green threads (channels, select, goroutines). Odin doesn't have duck typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an _imperative language through and through._ 
 
-Worst of all, Odin doesn't even have a cute mascot! 😜 
+These are not things I _need._ There is, however, one thing Odin sorely lacks.
 
-But I think comparing Odin to Go is the wrong framing. Besides, each of those features has tradeoffs. It isn't strictly better or worse.
+It doesn't have a cute mascot! 😜 
 
-## C alternative
+If it's any consolation, Odin does have some features that gophers have wanted for a long time:
 
-Odin bills itself as a _C alternative for the Joy of Programming_. It's one of [many](https://c3-lang.org/) [languages](https://ziglang.org/) that sand down C's rough edges, while avoiding the complexity of C++, Rust and Swift. Each language will appeal to different people, but all these C alternatives have manual memory management with custom allocators.
+* Enums and tagged unions with exhaustive switch statements
+* The `or_return` operator for more ergonomic error handling
 
 ## Manual memory management
+
+We better `&address` the 🐘 elephant in the room.
 
 I didn't go looking for manual memory management.
 
@@ -88,6 +105,8 @@ Even though Odin doesn't "check your borrows," it doesn't mean your data is a mu
 Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking, which Odin provides by default. Bounds check elimination appears to be manual right now (`#no_bounds_check`), but it's starting from the right defaults. Odin also initializes memory to zero. These are easy wins for a new language.[^2]
 
 ### Enter the arena
+
+<!-- the context system (unrelated to Go's context) -->
 
 Temporal memory bugs (e.g. use after free) are more difficult, and do require some discipline. Arena allocators can help. 
 
@@ -180,14 +199,6 @@ EntitySoA :: struct {
 
 All with no other code changes! By grouping together all the data that our physics system needs, we can take better advantage of the CPU cache.
 
-## Linear algebra
-
-Odin doesn't support operator overloading, but it has built-in vectors, matrices, and quaternions. Impressive! It supports both column major and `#row_major` matrices. 
-
-I need a math refresher before I dig into it myself. In the meantime, I asked Claude Fable 5 to scout ahead of me by porting over source code from books on DirectX 11, [DirectX 12](https://github.com/nathany/d3d12book_2ed/tree/odin/odin_port), Metal and Vulkan. There may be a few small gaps in Odin's `math/linalg` vs. DirectXMath and GLM, but overall it seemed comparable to popular math libraries in other languages.
-
-Aside: While porting _Metal by Tutorials_ from Swift to Odin, Claude Fable 5 uncovered a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010), which I reported. It was promptly resolved by a member of the Odin community.
-
 ## Vendor
 
 Odin ships with bindings for DirectX 12, DirectX 11, Metal, Vulkan and more. Windows COM and Objective-C APIs feel like part of the language and are fairly pleasant to use. Defer helps with manual cleanup, as there's no <abbr title="Resource Acquisition Is Initialization">RAII</abbr> like C++ or Rust.
@@ -196,6 +207,7 @@ Other C bindings are included as well, such as [Box2D](https://box2d.org/) and [
 
 Having all these libraries bundled makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. 
 
+While porting a _Metal by Tutorials_ demo from Swift to Odin, we uncovered a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). It was promptly resolved by a member of the Odin community. 👍🏻
 
 If there's a C library not provided in vendor, there are tools to [generate bindings](https://github.com/karl-zylinski/odin-c-bindgen). Odin can link in foreign libraries, but those libraries may require CMake or similar to build. Odin doesn't call out to C compilers. This is fine by me, as I have no desire to port and maintain third-party build scripts in Odin.
 
@@ -293,11 +305,7 @@ The later could be considered a potential downside of bundling vendor bindings w
 
 [Itch]: https://zylinski.itch.io/cat-and-onion
 
-## Conclusion
-
-There are a number of other features and that I didn't cover. Enums, tagged unions, the context system (which is unrelated to Go's context), `or_return` for error handling, conditional compilation (`when`) and more.
-
-So far, I've found Odin _pleasant to read and write_ and the compile times are quite reasonable. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Hot code reloading is straightforward. Manual memory management and the bog-standard threading model make <abbr title="Foreign Function Interface">FFI</abbr> simpler. While not everyone's cup of tea, it's a good fit for my use case.
+## What's not to love?
 
 Is it perfect? If I wanted to spend 10 years making my own language, I'm sure I would add or remove a few things. But there are no deal breakers for me.
 
@@ -307,9 +315,13 @@ The tooling is good, but could always be a bit better. Daniel Gavin's [ols][] la
 
 The compiler could always optimize a little better or be a little faster. But isn't that always the case?
 
+## Conclusion
+
+So far, I've found Odin _pleasant to read and write_ and the compile times are quite reasonable. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Hot code reloading is straightforward. Manual memory management and the bog-standard threading model make <abbr title="Foreign Function Interface">FFI</abbr> simpler. While not everyone's cup of tea, it's a good fit for my use case.
+
 Overall, Odin feels well suited for the kind of code I want to write. If you're intrigued, take a gander at the Odin [overview][]. After that, I highly recommend Karl Zylinski's book, [Understanding the Odin Programming Language][odinbook]. Not only is it a good book, he has kept the content in step with the language. I'm currently making my way through it.
 
-This has been my first impression. Why I think Odin is worth my time, and may be of interest to you. More to come.
+Until next time.
 
 [^1]: Just as Go takes inspiration from previous languages.
 [^2]: A newish language. Odin is 10 years old.
