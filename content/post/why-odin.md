@@ -249,16 +249,15 @@ There's no official tool that pulls in dozens of transitive dependencies with a 
 ## Compile times
 _Carry on._ ⚔️
 
-In terms of developer experience, one thing Go got right is compile times. Odin doesn't have incremental compilation and its backend is [LLVM][], so it must be slow, right? We won't know for sure until _we put it to the test!_
+Compile times are one thing Go definitely got right from the start. Odin doesn't have incremental compilation and its backend is [LLVM][], so it must be slow, right? We won't know for sure until _we put it to the test!_
 
-Presenting the `-show-timings` data provided by the Odin compiler (dev-2026-07a), based on multiple runs with the initial warm-up discarded.
-* Windows 11 with an AMD Ryzen 9700X (8c/16t). Odin bundles [RAD Linker][RAD] (0.9.24 ALPHA), which was 20-50ms faster than MSVC.
+Presenting the `-show-timings` data for Odin compiler (dev-2026-07a). Default optimization level of `-o:minimal` and no debug info. Based on multiple runs with the initial warm-up discarded.
+
+* Windows 11 with an AMD Ryzen 9700X (8c/16t) and [RAD Linker][RAD] (0.9.24 ALPHA).
 * macOS Tahoe with an M1 Max (8P+2E) with the default linker.
 
-### Default build
-Default optimization level of `-o:minimal`, no debug info, and `-linker:radlink` on Windows. 
 
-| Platform | Project                   | LoC  | Parsed       | LLVM   | Link   | Total      |
+| Platform | Project                   | LoC[^3]  | Parsed[^4]       | LLVM   | Link   | Total      |
 | -------- | ------------------------- | ---- | -----------: | -----: | -----: | ---------: |
 | Zen 5 8c | Karl2D Snake              | 14K  | 141K         | ~90ms  | ~32ms  | ~230ms     |
 | Zen 5 8c | Cat & Onion               | 21K  | 141K         | ~445ms | ~32ms  | ~575ms     |
@@ -267,62 +266,44 @@ Default optimization level of `-o:minimal`, no debug info, and `-linker:radlink`
 | M1 Max   | Cat & Onion               | 21K  | 134K         | ~615ms | ~180ms | ~900ms     |
 | M1 Max   | Odin Core Library + Tests | 270K | 278K         | ~1.6s  | ~200ms | ~2.1s      |
 
-* LoC: Lines of code reported by `cloc`, excluding blanks/comments.
-* Parsed: lines parsed by the front-end. Includes imported core packages/libraries and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
-* Odin Core Library + Tests is a *build* of Core and its tests (`-build-mode:test`), but we're not evaluating test execution time.
+[^3]: Lines of code reported by `cloc`, excluding blanks/comments.
+[^4]: Lines parsed by the front-end. Includes imported core packages and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
 
-### Debug build
-The `-debug` flag for PDB/DWARF debug info, defaults to `-o:none` optimization. With `-linker:radlink` on Windows.
+Odin Core Library + Tests is a *build* of Core and its tests -- we're not evaluating test execution time:
 
-| Platform | Project                   | LoC  | Parsed       | LLVM   | Link   | Total      |
-| -------- | ------------------------- | ---- | -----------: | -----: | -----: | ---------: |
-| Zen 5 8c | Karl2D Snake              | 14K  | 141K         | ~145ms | ~65ms  | ~320ms     |
-| Zen 5 8c | Cat & Onion               | 21K  | 141K         | ~515ms | ~65ms  | ~680ms     |
-| Zen 5 8c | Odin Core Library + Tests | 270K | 282K         | ~1.6s  | ~105ms | ~1.9s      |
-| M1 Max   | Karl2D Snake              | 14K  | 132K         | ~190ms | ~235ms | ~540ms     |
-| M1 Max   | Cat & Onion               | 21K  | 134K         | ~790ms | ~235ms | ~1.1s      |
-| M1 Max   | Odin Core Library + Tests | 270K | 278K         | ~2.4s  | ~400ms | ~3.2s      |
+```sh
+odin build tests/core -all-packages -build-mode:test -show-timings -out:core-tests
+```
 
-### Findings
+For my hardware setup, Windows was noticeably faster.
 
-* As suspected, LLVM <abbr title="Intermediate Representation">IR</abbr> emit dominates the time in larger projects (~80%).
-* Odin build times scale with your largest package, not just your total line count. For development builds (`-o:none` or `-o:minimal`), Odin defaults to `-use-separate-modules`, which emits LLVM IR for each package in parallel.
-* The largest package in Cat & Onion (game) emits 5x the LLVM IR of the largest package in Snake (karl2d), as determined with `-keep-temp-files`. This explains the gap in compile times in terms of intermediate output. Keeping packages below 30K LoC should help ensure subsecond build times (on my hardware), with some caveats (below). 
-* Core Library + Tests emit 69 MiB of LLVM IR, but spread across 213 packages. The package emitting the largest amount of LLVM IR (14.5 MiB) is the biggest determinant for build time, with the majority of packages emitting far less.
-* Monomorphized IR concentrates in the defining package's module, which avoids duplication, but increases the likelihood of a few modules dominating compile time. This is more likely to impact test builds (the flags package tests 60 variations). Moderately slower test builds may be negligible vs. the time running the actual tests.
-* Heavy use of <abbr title="parametric polymorphism">parapoly</abbr>, `#load` and reflection (e.g. fmt, json) are things to keep an eye on (with `-build-diagnostics`).
-* As Jakub Tomsu [notes](https://jakubtomsu.github.io/posts/odin_comp_speed/), keeping procedure bodies small when using parapoly can help.
-* Debug builds add ~100ms to ~600ms on Windows and up to ~1.1s on macOS, despite doing less optimization.
-* Overall the Odin compiler scales near-linearly. The front-end roughly tracks lines parsed, while the backend tracks the IR of the largest package in unoptimized (or `-o:minimal`) builds.
+* The default Windows linker (MSVC) was 20-50ms slower than the bundled version of [RAD Linker][RAD].
+* With debug info, builds were ~100ms to ~600ms slower on Windows and up to ~1.1s slower on macOS.
 
-I'm happy with these results, especially with my Zen 5 system.
+Odin build times are dominated by the LLVM backend (~80%) on larger projects.
+
+* The Odin front-end scales near-linearly with lines parsed. 
+* For debug and development builds (`-o:none` or `-o:minimal`), Odin emits LLVM IR for each package in parallel. LLVM scales according to the largest package, measured in terms of IR emitted.
+* The largest package in Cat & Onion (game) emits 5x the LLVM IR of the largest package in Snake (karl2d). This explains the gap in compile times despite parsing a similar number of lines.
+* Core Library + Tests emit 69 MiB of LLVM IR, but spread across 213 packages. The package emitting the largest amount of LLVM IR (14.5 MiB) was the biggest determinant of build time, with the majority of packages emitting far less.
+
+In addition to pure lines of code, <abbr title="parametric polymorphism">parapoly</abbr> is a factor. In Odin, monomorphized IR concentrates in the defining package's module. This avoids duplication, 👍🏻 but it also increases the likelihood of a few modules dominating compile time. This seems more likely to impact test builds (e.g., the flags package tests 60 variations). Moderately slower test builds may be negligible vs. the time running the test suite.
+
+As Jakub Tomsu [writes](https://jakubtomsu.github.io/posts/odin_comp_speed/), keeping procedure bodies small when using parapoly can help. 
+
+Reasonable package sizes and not overusing generics are common recommendations in many languages. Heavy use of `#load` and reflection (e.g. fmt, json) may also be worth keeping an eye on. Odin's `-show-timings` and `-build-diagnostics` are helpful tools if builds ever start feeling slow.
+
+Overall I'm happy with these results, especially on my Zen 5 system.
 
 [LLVM]: https://llvm.org/
-
-### Commands
-
-This is the basic command I used to arrive at these numbers (tested in Git Bash on Windows).
-
-```sh
-odin build "$HOME/src/github.com/karl-zylinski/karl2d/examples/snake" \
-  -linker:radlink -show-timings -out:snake.exe
-```
-
-Odin Core + tests provided a large open source codebase as another datapoint.
-
-```sh
-odin build "$HOME/src/github.com/odin-lang/Odin/tests/core" \
-  -all-packages -build-mode:test -linker:radlink -show-timings -out:core-tests.exe
-```
-
 [RAD]: https://github.com/EpicGames/raddebugger#the-rad-linker
 
 ## Hot code reloading
 _Instant gratification._ ♻️
 
-Once we have quick build times, hot code reloading provides the ultimate in fast iteration. The goal is to apply code changes without restarting the running app or game.
+Once we have reasonably quick build times, hot code reloading provides the ultimate in fast iteration. The goal is to apply code changes without restarting the running app or game.
 
-There are three approaches that I'm aware of. The best option for hot reloading Odin code today is to split a game into two parts: an executable and a shared library (dll/dynlib/so). Launch the game, tweak game play logic or user interface code, then recompile the shared library. Have the main executable reload the shared library so code changes are reflected instantly.
+There are three approaches that I'm aware of. The best option for hot reloading Odin code is to split a game into two parts: an executable and a shared library (dll/dynlib/so). Launch the game, tweak game play logic or user interface code, then recompile the shared library. Have the main executable reload the shared library so code changes are reflected instantly.
 
 For this to work, the memory that the game play code is using must be handed off to the new shared library. The game continues on from where it left off. Odin doesn't provide hot code reloading out of the box, but its focus on plain old data and procedures, along with manual memory management make Odin a natural fit. It keeps the entire solution relatively simple.
 
@@ -340,7 +321,7 @@ The reference documentation is incomplete in places, and there are gaps in the c
 
 The tooling is good, but could always be better. Daniel Gavin's [ols][] language server includes a code formatter, but it allows configuration and [another formatter exists][lucyfmt]. Not the single standard that benefited humans and tooling alike in the Go community. There is `odin test`, but I'm not aware of a test coverage tool, built-in fuzzing or integrated benchmarks and profiling. Fortunately it's feasible to use existing C/C++ debuggers and profilers, and I can get by without code coverage.
 
-The compiler could optimize a little better or be a little faster. But isn't that always the case?
+Maybe the compiler could optimize a little better or be a little faster. But isn't that always the case?
 
 [ols]: https://github.com/DanielGavin/ols
 [lucyfmt]: https://lucypero.com/blog/lucyfmt.html
