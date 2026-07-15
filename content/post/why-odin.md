@@ -52,7 +52,7 @@ If it's any consolation, Odin does have a few features that gophers have wanted 
 ## Manual memory management
 _We better `&address` the elephant in the room._ 🐘 
 
-Memory safety. It isn't critical for my use case -- single player or non-competitive multiplayer entertainment. I do want fewer bugs, 🐜 but I also want fast iteration, painless hot code reloading, and a language well-suited for game development.
+Memory safety. It isn't critical for my use case -- single player entertainment. I do want fewer bugs, 🐜 but I also want fast iteration, painless hot code reloading, and a language well-suited for game development.
 
 I'll be the first to admit that garbage collection didn't make Minecraft (Java), Stardew Valley (C#), CrossCode (JavaScript) or Meg's Monster (Go) unplayable. And the borrow checker didn't stop Tiny Glade or (the) Gnorp Apologue from compiling. ⚔️
 
@@ -75,7 +75,7 @@ update :: proc(entity: ^Entity, world: World) {
 }
 ```
 
-Rust imposes many decisions for every function parameter. Should it be a mutable borrow, a shared reference, or move ownership? What about aliasing? The compiler will outright reject some combinations. For some, feedback like this is an opportunity to take a step back and [find a better design](https://www.youtube.com/watch?v=aKLntZcp27M). Others [value iteration](https://loglog.games/blog/leaving-rust-gamedev/) over all else, quickly prototyping a rough implementation without fighting the compiler. Rust's borrow checker, for all its worth, can't distinguish between a multi-threaded production server susceptible to adversarial attacks, and a single-threaded throw-away prototype.
+Rust imposes many decisions on every function parameter. Should it be a mutable borrow, a shared reference, or move ownership? What about aliasing? The compiler will outright reject some combinations. For some, feedback like this is an opportunity to take a step back and [find a better design](https://www.youtube.com/watch?v=aKLntZcp27M). Others [value iteration](https://loglog.games/blog/leaving-rust-gamedev/) over all else, quickly prototyping a rough implementation without fighting the compiler. Rust's borrow checker, for all its worth, can't distinguish between a multi-threaded production server susceptible to adversarial attacks, and a single-threaded throw-away prototype.
 
 Leaving the borrow checker behind, we're left to ourselves to consider ownership, aliasing and the like. 
 
@@ -101,7 +101,7 @@ Which brings up another problem with this design. If the entities interact, thos
 
 Maybe a better design would double buffer the world data (previous and current frame) or store up the writes to apply at the end. Or maybe entities should be split up (monsters, bullets) and resolved in a defined order. Maybe there's an entirely different design that's even better. But those design decisions are all language agnostic.
 
-Even though Odin doesn't "check your borrows," it doesn't mean your data is a mutable ball of mud with pointers flying everywhere. How you architect your data and your code is still up to you.
+Even though Odin doesn't check your borrows, it doesn't mean your data is a mutable ball of mud with pointers flying everywhere. How you architect your data and code is still up to you.
 
 ### The low hanging fruit
 _Safety at hand._ 🍓
@@ -142,7 +142,7 @@ One idea Fleury describes is reserving a large contiguous block of virtual addre
 ### Avoiding relocation
 _Please don't go._ 🚚
 
-When a dynamic array is full, appending to the end causes all the data in the array to be copied to a new, larger location. This is fine, unless there are pointers to elements at the old location. Now those pointers are invalid (dangling pointer).
+When a dynamic array is full, appending to the end causes the data in the array to be copied to a new, larger location. This is fine, unless there are pointers to elements at the old location. Now those pointers are invalid (dangling pointer).
 
 Odin includes some specialized data structures that don't relocate their data, making it safer to hold pointers into them. 
 
@@ -157,7 +157,7 @@ Though not a feature of Odin, _generational indexes_ provide an alternative to l
 
 Imagine a monster 🧟‍♀️ that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter used to verify that the referenced entity is still the same one.
 
-So there are many ways to reduce the risk of dangling pointers and the like. Maybe manual memory management doesn't have to be a pointer jungle full of foot guns and spooky action at a distance.
+So there are many techniques to reduce the risk of dangling pointers and the like. Maybe manual memory management doesn't need to be a pointer jungle full of foot guns and spooky action at a distance.
 
 <!--Even if it makes FFI and hot code reloading easier.-->
 
@@ -171,12 +171,12 @@ When I was a teenager, using a lookup table to avoid mathematical operations (li
 Since memory is relatively slow, CPUs have levels of progressively larger, further away and slower caches (e.g., <abbr title="level 1">L1</abbr>, L2, L3). When data isn't in a cache (a cache miss), the CPU looks at the next one, and eventually main memory.
 
 Today data-oriented design centres on economical use of memory (the fastest caches are small), and organizing data based on how it's accessed. 
-There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https://www.youtube.com/watch?v=IroPQ150F6c) that are worth knowing, but the technique I'm going to highlight is called structure of arrays.
+There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https://www.youtube.com/watch?v=IroPQ150F6c) that are worth knowing, but the technique I'll highlight is called structure of arrays.
 
 ### Structure of arrays
 _Gotta go fast._ 💨
 
-Let's flesh out our array of entities a little:
+Let's flesh out our array of entities.
 
 ```odin
 Vector2 :: struct {x, y: int}
@@ -224,20 +224,27 @@ EntitySoA :: struct {
 
 All with no other code changes! By grouping together all the data that our physics system needs, we can take better advantage of the CPU cache.
 
+## Stability
+_Break all the things._ 🛘
+
+Speaking of "no other code changes", we need to talk about stability. The recent [Odin 2027 announcement][2027] is Odin's 1.0 moment.
+
+That said, Odin has been fairly stable for a while now. As a smoke test, I upgraded the 2024 source code from Cat & Onion (available on [Itch][] 💸) to the latest Odin dev-2026-07a compiler and [raylib](https://www.raylib.com/) 6.0. The most significant changes were to `core:os`, which were [telegraphed](https://odin-lang.org/news/moving-towards-a-new-core-os/) well-ahead of time. The other big changes related to raylib, particularly HiDPI.
+
+[Itch]: https://zylinski.itch.io/cat-and-onion
+
 ## Vendor
 _In Odin, you are the package manager._ 📦
 
-Odin ships with bindings for DirectX 12, DirectX 11, Metal, Vulkan and more. Windows COM and Objective-C APIs feel like part of the language and are fairly pleasant to use. Defer helps with manual cleanup, as there's no <abbr title="Resource Acquisition Is Initialization">RAII</abbr> like C++ or Rust.
+Did I mention that raylib bindings are bundled with Odin? And Odin ships with bindings for DirectX 12, DirectX 11, Metal, OpenGL and Vulkan. Windows COM and Objective-C APIs feel like part of the language. Defer helps with cleanup, as there's no <abbr title="Resource Acquisition Is Initialization">RAII</abbr> like C++ or Rust.
 
-Other C bindings are included as well, such as [Box2D](https://box2d.org/) and [raylib](https://www.raylib.com/). There is value in depending on mature libraries, with stable APIs and logic bugs fixed over many years. 
+Having all these bindings baked in makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. While porting a _Metal by Tutorials_ demo from Swift to Odin, we uncovered a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). It was promptly resolved by an Odin community member. 👍🏻
 
-Having all these libraries bundled makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. While porting a _Metal by Tutorials_ demo from Swift to Odin, we uncovered a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). It was promptly resolved by an Odin community member. 👍🏻
+Other C bindings are included as well, such as [Box2D](https://box2d.org/). There is value in depending on mature libraries, with stable APIs and logic bugs fixed over many years.
 
-If there's a C library not provided in vendor, there are tools to [generate bindings](https://github.com/karl-zylinski/odin-c-bindgen). Odin can link in foreign libraries, but those libraries may require CMake or similar to build. Odin doesn't call out to C compilers. This is fine by me, as I have no desire to port and maintain third-party build scripts in Odin. I'd rather [just][] tie everything together with a [command runner][just].
+If there's a C library not provided in vendor, there are tools to [generate bindings](https://github.com/karl-zylinski/odin-c-bindgen). Odin can link in foreign libraries, but those libraries may require CMake or similar to build. Odin doesn't call out to C compilers. This is fine by me, as I have no desire to port and maintain third-party build scripts in Odin.
 
 There's no official tool that pulls in dozens of transitive dependencies with a single line. It's part of the ethos to vet external packages more carefully. For my needs, this too is fine.
-
-[just]: https://just.systems/
 
 ## Compile times
 _Carry on._ ⚔️
@@ -315,46 +322,39 @@ _Instant gratification._ ♻️
 
 Once we have quick build times, hot code reloading provides the ultimate in fast iteration. The goal is to apply code changes without restarting the running app or game.
 
-One common approach is to split a game into two parts: an executable and a shared library (dll/dynlib/so). Launch the game, tweak game play logic or user interface code, then recompile the shared library. Have the main executable reload the shared library so code changes are reflected instantly.
+There are three approaches that I'm aware of. The best option for hot reloading Odin code today is to split a game into two parts: an executable and a shared library (dll/dynlib/so). Launch the game, tweak game play logic or user interface code, then recompile the shared library. Have the main executable reload the shared library so code changes are reflected instantly.
 
-For this to work, the memory the game play code is using must be handed off to the new shared library. The game continues on from where it left off. Odin doesn't provide hot code reloading out of the box, but the focus on plain old data and procedures, along with manual memory management make Odin a natural fit. It keeps the entire solution relatively simple.
+For this to work, the memory that the game play code is using must be handed off to the new shared library. The game continues on from where it left off. Odin doesn't provide hot code reloading out of the box, but its focus on plain old data and procedures, along with manual memory management make Odin a natural fit. It keeps the entire solution relatively simple.
 
-There are of course some caveats and gotchas to look out for. To get started, take a look at Karl Zylinski's [article on hot reloading][hot-reload].
+There are still some gotchas to look out for. To get started, take a look at Karl Zylinski's [article][hot-reload] and [templates][karl-git] for hot reloading.
 
 [hot-reload]: https://zylinski.se/posts/hot-reload-gameplay-code/
-
-## Stability
-_Breaking changes._ 🛘
-
-The recent [Odin 2027](https://www.youtube.com/watch?v=dLPAqXi9In0) announcement is Odin's 1.0 moment. That said, Odin has been fairly stable for a while now.
-
-As a smoke test, I upgraded the 2024 source code from Cat & Onion (available on [Itch][] 🤑) to the latest Odin dev-2026-07a compiler and Raylib 6.0. The most significant changes were to `core:os`, which were [telegraphed](https://odin-lang.org/news/moving-towards-a-new-core-os/) well-ahead of time. The other big changes related to Raylib, particularly HiDPI.
-
-The later could be considered a potential downside of bundling vendor bindings with the compiler. They move in lockstep with compiler releases. But it's easy enough to copy the files from vendor to lock in an old library, or if modifications are necessary to jump to a newer version than Odin provides.
-
-[Itch]: https://zylinski.itch.io/cat-and-onion
+[karl-git]: https://github.com/karl-zylinski/
 
 ## What's not to love?
 _Baby, don't hurt me._ 💔
 
-Is it perfect? If I wanted to spend 10 years making my own language, I'm sure I would add or remove a few things. But there are no deal breakers for me.
+If I wanted to spend 10 years making my own language, I'm sure I would add or remove a few things. But there are no deal breakers for me.
 
-The reference documentation is incomplete in places, and there are gaps in the core library (e.g. saving PNGs). These are things being worked on for Odin 2027, which isn't that far off.
+The reference documentation is incomplete in places, and there are gaps in the core library (e.g. saving PNGs). These are things being worked on for [Odin 2027][2027], which isn't that far off.
 
-The tooling is good, but could always be a bit better. Daniel Gavin's [ols][] language server includes a code formatter, but it allows configuration and another formatter exists. Not the single standard that benefited humans and tooling alike in the Go community. There is `odin test` but I'm not aware of a test coverage tool, built-in fuzzing or integrated profiling. Fortunately it's feasible to use existing C/C++ debuggers and profilers, and I can get by without code coverage.
+The tooling is good, but could always be better. Daniel Gavin's [ols][] language server includes a code formatter, but it allows configuration and [another formatter exists][lucyfmt]. Not the single standard that benefited humans and tooling alike in the Go community. There is `odin test`, but I'm not aware of a test coverage tool, built-in fuzzing or integrated benchmarks and profiling. Fortunately it's feasible to use existing C/C++ debuggers and profilers, and I can get by without code coverage.
 
-The compiler could always optimize a little better or be a little faster. But isn't that always the case?
+The compiler could optimize a little better or be a little faster. But isn't that always the case?
+
+[ols]: https://github.com/DanielGavin/ols
+[lucyfmt]: https://lucypero.com/blog/lucyfmt.html
 
 ## Conclusion
 _Most outstanding._ ✌🏻
 
-So far, I've found Odin _pleasant to read and write_ and the compile times are quite reasonable. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Hot code reloading is straightforward. Manual memory management and the bog-standard threading model make <abbr title="Foreign Function Interface">FFI</abbr> simpler. While not everyone's cup of tea, it's a good fit for my use case.
+So far I've found Odin _pleasant to read and write_. The compile times are entirely reasonable. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Manual memory management and the bog-standard threading model make FFI simpler. While not everyone's 🍵 cup of tea, it's a good fit for my use case.
 
-Overall, Odin feels well suited for the kind of code I want to write. If you're intrigued, take a gander at the Odin [overview][]. After that, I highly recommend Karl Zylinski's book, [Understanding the Odin Programming Language][odinbook]. Not only is it a good book, he has kept the content in step with the language. I'm currently making my way through it.
+If you're at all intrigued, take a gander at the Odin [overview][]. After that, I highly recommend Karl Zylinski's book, [Understanding the Odin Programming Language][odinbook]. Not only is it a good read, he has kept the content in step with the language over the years. I'm currently making my way through it.
 
 Until next time.
 
-[^1]: Just as Go takes inspiration from previous languages.
+[^1]: Just like Go takes inspiration from previous languages.
 [^2]: A newish language. Odin is 10 years old.
 
 [arena-talk]: https://www.youtube.com/watch?v=TZ5a3gCCZYo
@@ -362,5 +362,4 @@ Until next time.
 
 [overview]: https://odin-lang.org/docs/overview/
 [odinbook]: https://odinbook.com/
-[ols]: https://github.com/DanielGavin/ols
 [Odin]: https://odin-lang.org/
