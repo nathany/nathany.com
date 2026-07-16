@@ -336,7 +336,9 @@ There are still some gotchas to look out for. To get started, take a look at Kar
 ## What's not to love?
 _Baby, don't hurt me._ 💔
 
-If it were my language, there are a few things I'd change, sure. But unless I want to spend the next 10 years making a new language, my options are limited to one language or another. Odin is a real language that exists today, which is far more valuable than method sugar. 🍭
+Packages are the narrowest namespace and a package is a whole directory. I wonder if I'll miss having modules or method sugar. 🍭 But I need to spend more time using the language to know.
+
+And in any case, unless I want to spend the next 10 years making a new language, I can only choose between the available languages. Odin is a real language that exists today, which is far more valuable than any hypothetical languages I can imagine.
 
 What's actually missing? The reference documentation is incomplete and there are gaps in the core library (e.g. saving PNGs). These are things being worked on for [Odin 2027][2027], which isn't that far off.
 
