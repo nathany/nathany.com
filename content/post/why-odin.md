@@ -9,7 +9,7 @@ When I wrote [Why Go?](/why-go) in 2012, I was struggling to get a Ruby on Rails
 
 Today I'm [retired](/fire) from web development, and pursuing a childhood dream to make video games. I want to get back to the low-level programming I did in my teens. 
 
-[Odin][] is the only language that I'm not _waiting around for._ It has good ergonomics and allocator APIs today. The compiler has a parallel frontend, and it's fast on the hardware and platforms I use: Windows and macOS. Plus, as of the [Odin 2027 announcement][2027], it has stability.
+[Odin][] is the only language that I'm not _waiting around for._ The language itself is effectively done, reinforced by the [Odin 2027 announcement][2027]. It has allocator APIs today. The compiler has a parallel frontend, and build times are entirely reasonable on the hardware and platforms I use: Windows and macOS.
 
 To top it off:
 
@@ -38,7 +38,7 @@ The Odin language feels familiar, borrowing liberally from Go's syntax and desig
 * Packages are directories
 * Conditional compilation with build tags, file suffixes -- and also a `when` statement
 
-The similarities are bound to draw comparison, but while Go strived for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built in green threads (channels, select, goroutines). Odin doesn't have duck 🦆 typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an _imperative language_ through and through. 
+The similarities are bound to draw comparison, but while Go strived for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built in green threads. Odin doesn't have duck 🦆 typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an _imperative language_ through and through. 
 
 These are not things I _need._ There is, however, one thing Odin sorely lacks.
 
@@ -48,6 +48,8 @@ If it's any consolation, Odin does have a few features that gophers have wanted 
 
 * Enums and tagged unions with exhaustive switch statements
 * The `or_return` operator for more ergonomic error handling
+
+So far I've found Odin quite _pleasant to read and write_ -- familiarity is sure to be playing a role.
 
 [^1]: Just like Go takes inspiration from previous languages.
 
@@ -62,7 +64,18 @@ I've been attempting to _Learn Me Some Rust_ [for years](/4000). In the right ha
 
 [deadlock]: https://www.youtube.com/watch?v=Ba7fajt4l1M
 
-If the tradeoff is, accept manual memory management to get the other things I want, how can we make it more palatable?
+### The low hanging fruit
+_Safety close at hand._ 🍓
+
+Even a simple language can make moderate improvements to memory safety, helping to reduce bugs.
+
+Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking, which Odin provides by default. You can disable bounds checking in tight loops with `#no_bounds_check`. Odin also initializes memory to zero, but you can opt out with `---`. Odin starts from the right defaults, but trusts you to know what you're doing.
+
+The sanitizers that C developers are all-too-familiar with are there. The `-sanitize:address` flag enables <abbr title="AddressSanitizer">ASan</abbr>, which can catch temporal memory bugs (e.g. use after free). Odin also has its own tracking allocator, which doesn't catch everything ASan can, but it has much lower overhead. Both of these are runtime checks, and thus depend on test coverage or manual <abbr title="Quality Assurance">QA</abbr>.
+
+These are easy wins for a new language.[^2]
+
+[^2]: A newish language. Odin is only 10 years old.
 
 ### Mutation xor sharing
 _In Odin, you are the borrow checker._ 🦀
@@ -81,7 +94,7 @@ Rust imposes many decisions on every function parameter. Should it be a mutable 
 
 Leaving the borrow checker behind, we're left to ourselves to consider ownership, aliasing and the like. 
 
-Procedure parameters in Odin _are immutable_, but only in a shallow sense. The `update` procedure could mutate data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so that everything is inline.[^2] Then the `world` parameter can be completely immutable:
+Procedure parameters in Odin are _immutable_, but only in a shallow sense. The `update` procedure could mutate any data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so that everything is inline.[^3] Then the `world` parameter can be completely immutable:
 
 ```odin
 World :: struct {
@@ -105,18 +118,7 @@ Maybe a better design would double buffer the world data (previous and current f
 
 Even though Odin doesn't check your borrows, it doesn't mean your data is a mutable ball of mud with pointers flying everywhere. How you architect your data and code is still up to you.
 
-[^2]: I'm not necessarily recommending this approach, but it serves as an interesting example.
-
-### The low hanging fruit
-_Safety at hand._ 🍓
-
-Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking, which Odin provides by default. Bounds check elimination appears to be manual right now (`#no_bounds_check`), but it's starting from the right defaults. Odin also initializes memory to zero. 
-
-Odin supports the sanitizers that C developers are all-too-familiar with. The `-sanitize:address` flag enables <abbr title="AddressSanitizer">ASan</abbr>, which can catch temporal memory bugs (e.g. use after free). Odin also has its own tracking allocator, which doesn't catch everything ASan can, but it has much lower overhead. Both of these are runtime checks, and thus depend on test coverage or manual <abbr title="Quality Assurance">QA</abbr>.
-
-These are easy wins for a new language.[^3]
-
-[^3]: A newish language. Odin is only 10 years old.
+[^3]: I'm not necessarily recommending this approach, but it serves as an interesting example.
 
 ### Enter the arena
 _How barley men manage lifetimes._ 🏟️
@@ -163,19 +165,34 @@ Though not a feature of Odin, _generational indexes_ provide an alternative to l
 
 Imagine a monster 🧟‍♀️ that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter used to verify that the referenced entity is still the same one.
 
+```odin
+Handle :: distinct u32
+Generation :: distinct u32
+
+GenerationalIndex :: struct {
+	id: Handle,
+	gen: Generation,
+}
+```
+
 So there are many techniques to reduce the risk of dangling pointers and the like. Maybe manual memory management doesn't _need_ to be a pointer jungle full of foot guns and spooky action at a distance.
+
+All that pointer chasing isn't just bad for developer sanity. It can also harm data locality and performance. But to understand why, we need a cursory understanding of how CPUs work.
 
 ## Data-oriented design
 _Hardware is the platform._ 🌺
 
-Programs are made up of data and transformations to that data. If you know the data and how it's accessed, and you understand the target hardware, then it's possible to write software that runs better on that hardware.
+Programs are made up of data and transformations to that data. If you know the data and how it's accessed, and you understand the target hardware, then it's possible to write software that runs better on that hardware. This is the thesis of data-oriented design.
 
 When I was a teenager, using a lookup table to avoid mathematical operations (like trigonometry) was a good idea. Today we have a lot more <abbr title="Random Access Memory">RAM</abbr> and it's somewhat faster. But CPUs are much, much faster. CPUs are so fast at math, that reading from main memory could take an order of magnitude longer than just recalculating the math. 
 
 Since memory is relatively slow, CPUs have levels of progressively larger, further away and slower caches (e.g., <abbr title="level 1">L1</abbr>, L2, L3). When data isn't in a cache (a cache miss), the CPU looks at the next one, and eventually main memory.
 
-Today data-oriented design centres on economical use of memory (the fastest caches are small), and organizing data based on how it's accessed. 
-There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https://www.youtube.com/watch?v=IroPQ150F6c) that are worth knowing, but the technique I'll highlight is called structure of arrays.
+Today, data-oriented design centres on economical use of memory (the fastest caches are small), and organizing data based on how it's accessed. When iterating a data structure, an array places the next value nearby. Whereas a linked list use pointers, potentially placing each node anywhere on the heap, and therefore increasing the likelihood of a cache miss for each iteration. 
+
+I'm not saying to never use pointers or even linked lists. Rather, it's worth thinking about how our data and code map to the underlying hardware.
+
+There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https://www.youtube.com/watch?v=IroPQ150F6c) that are worth knowing, but the technique that's most relevant here is called structure of arrays.
 
 ### Structure of arrays
 _Gotta go fast._ 💨
@@ -226,14 +243,14 @@ EntitySoA :: struct {
 }
 ```
 
-All with no other code changes! By grouping together all the data that our physics system needs, we can take better advantage of the CPU cache.
+All with _no other code changes!_ By grouping together all the data that our physics system needs, we can take better advantage of the CPU cache.
 
 ## Stability
-_Break all the things._ 🛘
+_A solid foundation._ 🪨
 
-Speaking of "no other code changes", we need to talk about stability. The recent [Odin 2027 announcement][2027] is Odin's 1.0 moment.
+Speaking of _no other code changes,_ we need to talk about stability. [JangaFX](https://jangafx.com/) and others rely on Odin to remain stable and well-maintained, and the recent [Odin 2027 announcement][2027] is Odin's 1.0 moment.
 
-That said, Odin has been fairly stable for a while now. As a smoke test, I upgraded the 2024 source code from Cat & Onion (available on [Itch][] 💸) to the latest Odin dev-2026-07a compiler and [raylib](https://www.raylib.com/) 6.0. The most significant changes were to `core:os`, which were [telegraphed](https://odin-lang.org/news/moving-towards-a-new-core-os/) well-ahead of time. The other big changes related to raylib, particularly HiDPI.
+As a smoke test, I upgraded the 2024 source code from Cat & Onion (available on [Itch][] 💸) to the latest Odin dev-2026-07a compiler and [raylib](https://www.raylib.com/) 6.0. The most significant changes were to `core:os`, which were [telegraphed](https://odin-lang.org/news/moving-towards-a-new-core-os/) well-ahead of time. The other big changes were for raylib, particularly HiDPI.
 
 [Itch]: https://zylinski.itch.io/cat-and-onion
 
@@ -248,10 +265,10 @@ Other C bindings are included as well, such as [Box2D](https://box2d.org/). Ther
 
 If there's a C library not provided in vendor, there are tools to [generate bindings](https://github.com/karl-zylinski/odin-c-bindgen). Odin can link in foreign libraries, but those libraries may require CMake or similar to build. Odin doesn't call out to C compilers. This is fine by me, as I have no desire to port and maintain third-party build scripts in Odin.
 
-There's no official tool that pulls in dozens of transitive dependencies with a single line. It's part of the ethos to vet external packages more carefully. For my needs, this too is fine.
+There's no official tool that pulls in dozens of transitive dependencies with a single line. It's part of the ethos to vet external packages more carefully. Very deliberate dependency choices also keep compile times snappy. For my needs, this too is fine.
 
 ## Compile times
-_Carry on._ ⚔️
+_Oh. Carry on._ ⚔️
 
 Compile times are one thing Go definitely got right from the start. Odin doesn't have incremental compilation and its backend is [LLVM][], so it must be slow, right? We won't know for sure until _we put it to the test!_
 
@@ -319,13 +336,13 @@ There are still some gotchas to look out for. To get started, take a look at Kar
 ## What's not to love?
 _Baby, don't hurt me._ 💔
 
-If I wanted to spend 10 years making my own language, I'm sure I would add or remove a few things. But there are no deal breakers for me.
+If it were my language, there are a few things I'd change, sure. But unless I want to spend the next 10 years making a new language, my options are limited to one language or another. Odin is a real language that exists today, which is far more valuable than method sugar. 🍭
 
-The reference documentation is incomplete in places, and there are gaps in the core library (e.g. saving PNGs). These are things being worked on for [Odin 2027][2027], which isn't that far off.
+What's actually missing? The reference documentation is incomplete and there are gaps in the core library (e.g. saving PNGs). These are things being worked on for [Odin 2027][2027], which isn't that far off.
 
-The tooling is good, but could always be better. Daniel Gavin's [ols][] language server includes a code formatter, but it allows configuration and [another formatter exists][lucyfmt]. Not the single standard that benefited humans and tooling alike in the Go community. There is `odin test`, but I'm not aware of a test coverage tool, built-in fuzzing or integrated benchmarks and profiling. Fortunately it's feasible to use existing C/C++ debuggers and profilers, and I can get by without code coverage.
+The tooling is good, but could always be better. Daniel Gavin's [ols][] language server includes a code formatter, but it allows configuration and [another formatter exists][lucyfmt]. Not the single standard that benefited humans and tooling alike in the Go community. There is `odin test`, but I'm not aware of a test coverage tool, built-in fuzzing or integrated benchmarks and profiling. Fortunately it's feasible to use existing C/C++ debuggers and profilers.
 
-Maybe the compiler could optimize a little better or be a little faster. But isn't that always the case?
+Maybe the compiler could optimize a little better or be a little faster. That's always the case.
 
 [ols]: https://github.com/DanielGavin/ols
 [lucyfmt]: https://lucypero.com/blog/lucyfmt.html
@@ -333,7 +350,7 @@ Maybe the compiler could optimize a little better or be a little faster. But isn
 ## Conclusion
 _Most outstanding._ ✌🏻
 
-So far I've found Odin _pleasant to read and write_. The compile times are entirely reasonable. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Manual memory management and the bog-standard threading model make FFI simpler. While not everyone's 🍵 cup of tea, it's a good fit for my use case.
+I've enjoyed my time with Odin so far. The ergonomics and the compile times. The vendor libraries, built-in linear algebra, `#soa` and allocators are all nice to have. Manual memory management, plain old data and the bog-standard threading model make FFI and hot-code reloading simpler. While not everyone's 🍵 cup of tea, it's a good fit for my use case.
 
 If you're at all intrigued, take a gander at the Odin [overview][]. After that, I highly recommend Karl Zylinski's book, [Understanding the Odin Programming Language][odinbook]. Not only is it a good read, he has kept the content in step with the language over the years. I'm currently making my way through it.
 
