@@ -160,7 +160,7 @@ Odin includes some specialized data structures that don't relocate their data, m
 
 Fixed-capacity dynamic arrays (`[dynamic; 100]int`) are a recent addition. They behave much like a dynamic array, but they can't grow beyond their initial capacity, and thus never reallocate.
 
-The [xar](https://pkg.odin-lang.org/core/container/xar/) package is like a dynamic array, but it grows in chunks instead of relocating the data. And other containers like [handle_map](https://pkg.odin-lang.org/core/container/handle_map/) can be layered on top.
+The [xar](https://pkg.odin-lang.org/core/container/xar/) package is like a dynamic array, but it grows in chunks instead of relocating the data. <!--And other containers like [handle_map](https://pkg.odin-lang.org/core/container/handle_map/) can be layered on top.-->
 
 ### Generation
 _Exit the pointer jungle._ 🐒
