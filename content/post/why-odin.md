@@ -23,7 +23,7 @@ All things I like. Well, except manual memory management! We'll get into all tha
 [2027]: https://www.youtube.com/watch?v=dLPAqXi9In0
 
 ## A familiar face
-_It looks like a duck, it quacks like a duck, but it's a different breed entirely._ 🦆
+_It looks like a duck, it quacks like a duck, but it's an entirely different breed._ 🦆
 
 The Odin language feels familiar, borrowing liberally from Go's syntax and design.[^1]
 
