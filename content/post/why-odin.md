@@ -256,12 +256,14 @@ Speaking of _no other code changes,_ we need to talk about stability. [JangaFX](
 
 As a smoke test, I upgraded the 2024 source code from Cat & Onion (available on [Itch][] 💸) to the latest Odin dev-2026-07a compiler and [raylib](https://www.raylib.com/) 6.0. The most significant changes were to `core:os`, which were [telegraphed](https://odin-lang.org/news/moving-towards-a-new-core-os/) well ahead of time. The other big changes were for raylib, particularly HiDPI.
 
+Did I mention that raylib bindings are bundled with Odin? 
+
 [Itch]: https://zylinski.itch.io/cat-and-onion
 
 ## Vendor
 _In Odin, you are the package manager._ 📦
 
-Did I mention that raylib bindings are bundled with Odin? And Odin ships with bindings for DirectX 12, DirectX 11, Metal, OpenGL and Vulkan. Windows COM and Objective-C APIs feel like part of the language. Defer helps with cleanup, as there's no <abbr title="Resource Acquisition Is Initialization">RAII</abbr> like in C++ or Rust.
+Odin ships with bindings for DirectX 12, DirectX 11, Metal, OpenGL and Vulkan. Windows COM and Objective-C APIs feel like part of the language. Defer helps with cleanup, as there's no <abbr title="Resource Acquisition Is Initialization">RAII</abbr> like in C++ or Rust.
 
 Having all these bindings baked in makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. While porting a _Metal by Tutorials_ demo from Swift to Odin, I hit a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). 🐜 It was promptly resolved by an Odin community member. 👍🏻
 
@@ -310,7 +312,7 @@ Odin build times are dominated by the LLVM backend (~80%) on larger projects.
 * The Odin front-end scales near-linearly with lines parsed. 
 * For debug and development builds (`-o:none` or `-o:minimal`), Odin emits LLVM IR for each package in parallel. LLVM scales according to the largest package, measured in terms of IR emitted.
 * The largest package in Cat & Onion (game) emits 5x the LLVM IR of the largest package in Snake (karl2d). This explains the gap in compile times, despite parsing a similar number of lines.
-* Core Library + Tests emits 69 MiB of LLVM IR, but spread across 213 modules. The package emitting the largest amount of LLVM IR (14.5 MiB) was the biggest determinant of build time, with the majority of packages emitting far less.
+* Core Library + Tests emits 69 MiB of LLVM IR spread across 213 modules. The package emitting the largest amount of LLVM IR (14.5 MiB) was the biggest determinant of build time, with the majority of packages emitting far less.
 
 In addition to pure lines of code, <abbr title="parametric polymorphism">parapoly</abbr> is a factor. In Odin, monomorphized IR concentrates in the defining package's module. This avoids duplication, 👍🏻 but it also increases the likelihood of a few modules dominating compile time. This seems more likely to impact test builds (e.g. the flags package tests 60 variations). Moderately slower test builds may be negligible vs. the time running the test suite.
 
