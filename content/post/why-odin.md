@@ -349,7 +349,7 @@ The reference documentation is incomplete and there are gaps in the core library
 
 The tooling is good, but could always be better. Daniel Gavin's [ols][] language server includes a code formatter, but it allows configuration and [another formatter][lucyfmt] exists. I'm grateful that these tools exist, but a single standard would benefit humans and tooling alike.
 
-There is `odin test`, but I'm not aware of a built-in test coverage tool, fuzzing or benchmarks. Fortunately it's feasible to use existing C/C++ debuggers and profilers.
+There is `odin test`, but I'm not aware of a built-in test coverage or fuzzing tool. Fortunately it's feasible to use existing C/C++ debuggers and profilers.
 
 Maybe the compiler could optimize a little better or be a little faster. That's always the case.
 
