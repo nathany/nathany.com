@@ -70,7 +70,7 @@ I've been attempting to _Learn Me Some Rust_ [for years](/4000). In the right ha
 ### The low-hanging fruit
 _Safety close at hand._ 🍓
 
-Even a simple language can make moderate improvements to memory safety, helping to reduce bugs.
+Even a simple language can make moderate improvements to memory safety.
 
 Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking, which Odin provides by default. You can disable bounds checking in tight loops with `#no_bounds_check`. Odin also initializes memory to zero, but you can opt out with `---`. Odin starts from the right defaults, but trusts you to know what you're doing.
 
