@@ -165,7 +165,7 @@ The [xar](https://pkg.odin-lang.org/core/container/xar/) package is like a dynam
 ### Generation
 _Exit the pointer jungle._ 🐒
 
-Though not a feature of Odin, _generational indexes_ provide an alternative to long-lived pointers. As an added benefit, they are easy to serialize to disk (save game) or the network. 
+_Generational indexes_ provide an alternative to long-lived pointers. As an added benefit, they are easy to serialize to disk (save game) or the network. 
 
 Imagine a monster 🧟‍♀️ that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter used to verify that the referenced entity is still the same one.
 
