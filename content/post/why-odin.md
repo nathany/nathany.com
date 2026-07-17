@@ -171,11 +171,11 @@ _Generational indexes_ provide an alternative to long-lived pointers. As an adde
 Imagine a monster 🧟‍♀️ that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter used to verify that the referenced entity is still the same one.
 
 ```odin
-Handle :: distinct u32
+Index :: distinct u32
 Generation :: distinct u32
 
 GenerationalIndex :: struct {
-	id: Handle,
+	idx: Index,
 	gen: Generation,
 }
 ```
