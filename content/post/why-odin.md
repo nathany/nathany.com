@@ -167,7 +167,6 @@ _Exit the pointer jungle._ 🐒
 
 _Generational indexes_ provide an alternative to long-lived pointers. As an added benefit, they are easy to serialize to disk (save game) or the network. 
 
-<!--[handle_map](https://pkg.odin-lang.org/core/container/handle_map/)-->
 
 Imagine a monster 🧟‍♀️ that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter used to verify that the referenced entity is still the same one.
 
@@ -180,6 +179,8 @@ GenerationalIndex :: struct {
 	gen: Generation,
 }
 ```
+
+Odin provides a generational index implementation in the core library: [handle_map](https://pkg.odin-lang.org/core/container/handle_map/).
 
 So there are many techniques to reduce the risk of dangling pointers and the like. Maybe manual memory management doesn't _need_ to be a pointer jungle full of foot guns and spooky action at a distance.
 
