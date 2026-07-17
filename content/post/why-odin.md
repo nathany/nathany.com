@@ -237,7 +237,7 @@ We could reorganize our code by hand, but Odin provides a `#soa` directive, whic
 entities: #soa[10000]Entity
 ```
 
-Effectively, those four characters changed our memory layout to a struct of arrays, like this:
+Effectively, those four characters change our memory layout to a struct of arrays, like this:
 
 ```odin
 EntitySoA :: struct {
@@ -263,9 +263,9 @@ _In Odin, you are the package manager._ 📦
 
 Did I mention that raylib bindings are bundled with Odin? And Odin ships with bindings for DirectX 12, DirectX 11, Metal, OpenGL and Vulkan. Windows COM and Objective-C APIs feel like part of the language. Defer helps with cleanup, as there's no <abbr title="Resource Acquisition Is Initialization">RAII</abbr> like in C++ or Rust.
 
-Having all these bindings baked in makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. While porting a _Metal by Tutorials_ demo from Swift to Odin, we uncovered a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). It was promptly resolved by an Odin community member. 👍🏻
+Having all these bindings baked in makes it quick to get up and running, say, to learn a graphics API from a book or tutorial. While porting a _Metal by Tutorials_ demo from Swift to Odin, I hit a bug with [passing SIMD types over FFI](https://github.com/odin-lang/Odin/issues/7010). 🐜 It was promptly resolved by an Odin community member. 👍🏻
 
-Other C bindings are included as well, such as [Box2D](https://box2d.org/). There is value in depending on mature libraries, with stable APIs and logic bugs fixed over many years.
+Other C bindings are included as well, such as [Box2D](https://box2d.org/). There is value in depending on mature libraries, with logic bugs fixed over many years.
 
 If there's a C library not provided in vendor, there are tools to [generate bindings](https://github.com/karl-zylinski/odin-c-bindgen). Odin can link in foreign libraries, but those libraries may require CMake or similar to build. Odin doesn't call out to C compilers. This is fine by me, as I have no desire to port and maintain third-party build scripts in Odin.
 
