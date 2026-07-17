@@ -180,7 +180,9 @@ GenerationalIndex :: struct {
 }
 ```
 
-Odin provides a generational index implementation in the core library: [handle_map](https://pkg.odin-lang.org/core/container/handle_map/).
+Odin provides a [generational index implementation][handle_map] in the core library.
+
+[handle_map]: https://pkg.odin-lang.org/core/container/handle_map/
 
 So there are many techniques to reduce the risk of dangling pointers and the like. Maybe manual memory management doesn't _need_ to be a pointer jungle full of foot guns and spooky action at a distance.
 
