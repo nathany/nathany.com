@@ -73,7 +73,7 @@ Even a simple language can make moderate improvements to memory safety, helping 
 
 Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking, which Odin provides by default. You can disable bounds checking in tight loops with `#no_bounds_check`. Odin also initializes memory to zero, but you can opt out with `---`. Odin starts from the right defaults, but trusts you to know what you're doing.
 
-The sanitizers that C developers are all-too-familiar with are there. The `-sanitize:address` flag enables <abbr title="AddressSanitizer">ASan</abbr>, which can catch temporal memory bugs (e.g. use after free). Odin also has its own tracking allocator, which doesn't catch everything ASan can, but it has much lower overhead. Both of these are runtime checks, and thus depend on test coverage or manual <abbr title="Quality Assurance">QA</abbr>.
+The sanitizers that C developers are all-too-familiar with are here. The `-sanitize:address` flag enables <abbr title="AddressSanitizer">ASan</abbr>, which can catch temporal memory bugs (e.g. use after free). Odin also has its own tracking allocator, which doesn't catch everything ASan can, but it has much lower overhead. Both of these are runtime checks, and thus depend on test coverage or manual <abbr title="Quality Assurance">QA</abbr>.
 
 These are easy wins for a new language.[^2]
 
