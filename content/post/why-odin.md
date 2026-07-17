@@ -42,7 +42,7 @@ The similarities are bound to draw comparison, but while Go strove for simplicit
 
 These are not things I _need._ There is, however, one thing Odin sorely lacks.
 
-It doesn't have a cute mascot! 😜 
+It doesn't have a cute mascot![^2] 😜 
 
 If it's any consolation, Odin does have a few features that gophers have wanted for a long time:
 
@@ -54,6 +54,7 @@ So far I've found Odin quite _pleasant to read and write_ -- familiarity is sure
 [OOP]: https://www.youtube.com/watch?v=wo84LFzx5nI
 
 [^1]: Just like Go takes inspiration from previous languages.
+[^2]: I stand corrected, but boy is it [buried](https://github.com/odin-lang/odin-lang.org/tree/master/static/images/mascot).
 
 ## Manual memory management
 _We better `&address` the elephant in the room._ 🐘 
@@ -75,9 +76,9 @@ Spatial memory bugs (e.g. buffer overflows) can be avoided with bounds checking,
 
 The sanitizers that C developers are all-too-familiar with are here. The `-sanitize:address` flag enables <abbr title="AddressSanitizer">ASan</abbr>, which can catch temporal memory bugs (e.g. use after free). Odin also has its own tracking allocator, which doesn't catch everything ASan can, but it has much lower overhead. Both of these are runtime checks, and thus depend on test coverage or manual <abbr title="Quality Assurance">QA</abbr>.
 
-These are easy wins for a new language.[^2]
+These are easy wins for a new language.[^3]
 
-[^2]: A newish language. Odin is only 10 years old.
+[^3]: A newish language. Odin is only 10 years old.
 
 ### Mutation xor sharing
 _In Odin, you are the borrow checker._ 🦀
@@ -96,7 +97,7 @@ Rust imposes many decisions on every function parameter. Should it be a mutable 
 
 Leaving the borrow checker behind, we're left to ourselves to consider ownership, aliasing and the like. 
 
-Procedure parameters in Odin are _immutable_, but only in a shallow sense. The `update` procedure could mutate any data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so that everything is inline.[^3] Then the `world` parameter can be completely immutable:
+Procedure parameters in Odin are _immutable_, but only in a shallow sense. The `update` procedure could mutate any data that `world` holds a _reference_ to, which may not be what we want. Rather than avoid mutation by convention, we could define `World` and `Entity` so that everything is inline.[^4] Then the `world` parameter can be completely immutable:
 
 ```odin
 World :: struct {
@@ -120,7 +121,7 @@ Maybe a better design would double buffer the world data (previous and current f
 
 Even though Odin doesn't check your borrows, it doesn't mean your data is a mutable ball of mud with pointers flying everywhere. How you architect your data and code is still up to you.
 
-[^3]: I'm not necessarily recommending this approach, but it serves as an interesting example.
+[^4]: I'm not necessarily recommending this approach, but it serves as an interesting example.
 
 ### Enter the arena
 _How barley men manage lifetimes._ 🏟️
@@ -133,7 +134,7 @@ Why free one gladiator at a time when you can `free_all` at once? Games have som
 
 A simple arena allocator operates like the stack you already use every time you call a function, except the arena can have any lifetime you choose. It can use preallocated memory and then reuse that memory again and again. Freeing and allocating memory within an arena is a matter of moving a pointer -- making it very inexpensive to operate.
 
-Instead of just a single global allocator (e.g. `malloc`), Odin has an [implicit context system][context][^4] that provides a default heap allocator and a temporary arena allocator. These can be customized with other allocators, or you can pass allocators around explicitly when desired.
+Instead of just a single global allocator (e.g. `malloc`), Odin has an [implicit context system][context][^5] that provides a default heap allocator and a temporary arena allocator. These can be customized with other allocators, or you can pass allocators around explicitly when desired.
 
 In a game loop, the `temp_allocator` can be used for any allocations that should live for a single frame. At the end of the frame, clear the arena for reuse: 
 
@@ -149,7 +150,7 @@ One idea Fleury describes is reserving a large contiguous block of virtual addre
 
 [context]: https://www.gingerbill.org/article/2025/12/15/odins-most-misunderstood-feature-context/
 
-[^4]: Odin's context system has no relation to Go's context.
+[^5]: Odin's context system has no relation to Go's context.
 
 ### Avoiding relocation
 _Please don't go._ 🚚
@@ -289,7 +290,7 @@ Presenting the `-show-timings` data for the Odin compiler (dev-2026-07a). Defaul
 * macOS Tahoe with an M1 Max (8P+2E) with the default linker.
 
 
-| Platform | Project                   | LoC[^5]  | Parsed[^6]       | LLVM   | Link   | Total      |
+| Platform | Project                   | LoC[^6]  | Parsed[^7]       | LLVM   | Link   | Total      |
 | -------- | ------------------------- | ---- | -----------: | -----: | -----: | ---------: |
 | Zen 5 8c | Karl2D Snake              | 14K  | 141K         | ~90ms  | ~32ms  | ~230ms     |
 | Zen 5 8c | Cat & Onion               | 21K  | 141K         | ~445ms | ~32ms  | ~575ms     |
@@ -298,8 +299,8 @@ Presenting the `-show-timings` data for the Odin compiler (dev-2026-07a). Defaul
 | M1 Max   | Cat & Onion               | 21K  | 134K         | ~615ms | ~180ms | ~900ms     |
 | M1 Max   | Odin Core Library + Tests | 270K | 278K         | ~1.6s  | ~200ms | ~2.1s      |
 
-[^5]: Lines of code reported by `cloc`, excluding blanks/comments.
-[^6]: Lines parsed by the front-end. Includes imported core packages and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
+[^6]: Lines of code reported by `cloc`, excluding blanks/comments.
+[^7]: Lines parsed by the front-end. Includes imported core packages and blanks/comments, but excludes files tagged for other platforms. Reported by `-show-more-timings -show-debug-messages`.
 
 Odin Core Library + Tests is a *build* -- we're not evaluating test execution time.
 
