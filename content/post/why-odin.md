@@ -196,7 +196,7 @@ Today, data-oriented design centres on economical use of memory (the fastest cac
 
 I'm not saying to never use pointers or even linked lists. Rather, it's worth thinking about how our data and code map to the underlying hardware.
 
-There are [several](https://www.youtube.com/watch?v=WwkuAqObplU) [tricks](https://www.youtube.com/watch?v=IroPQ150F6c) that are worth knowing, but the technique that's most relevant here is called structure of arrays.
+There are several [tricks](https://www.youtube.com/watch?v=WwkuAqObplU) that are worth knowing, but the technique that's most relevant here is called structure of arrays.
 
 ### Structure of arrays
 _Gotta go fast._ 💨
