@@ -25,7 +25,7 @@ All things I like. Well, except manual memory management! We'll get into all tha
 ## A familiar face
 _It looks like a duck, it quacks like a duck, but it's a different breed entirely._ 🦆
 
-The Odin language feels familiar, borrowing liberally from Go's syntax and design[^1].
+The Odin language feels familiar, borrowing liberally from Go's syntax and design.[^1]
 
 * Pascal-style declaration syntax with type inference: `x := 10`
 * Zero is initialization (ZII)
