@@ -160,12 +160,14 @@ Odin includes some specialized data structures that don't relocate their data, m
 
 Fixed-capacity dynamic arrays (`[dynamic; 100]int`) are a recent addition. They behave much like a dynamic array, but they can't grow beyond their initial capacity, and thus never reallocate.
 
-The [xar](https://pkg.odin-lang.org/core/container/xar/) package is like a dynamic array, but it grows in chunks instead of relocating the data. And other containers like [handle_map](https://pkg.odin-lang.org/core/container/handle_map/) can be layered on top when needed.
+The [xar](https://pkg.odin-lang.org/core/container/xar/) package is like a dynamic array, but it grows in chunks instead of relocating the data. And other containers like [handle_map](https://pkg.odin-lang.org/core/container/handle_map/) can be layered on top.
 
 ### Generation
 _Exit the pointer jungle._ 🐒
 
 _Generational indexes_ provide an alternative to long-lived pointers. As an added benefit, they are easy to serialize to disk (save game) or the network. 
+
+<!--[handle_map](https://pkg.odin-lang.org/core/container/handle_map/)-->
 
 Imagine a monster 🧟‍♀️ that is chasing another entity. Instead of an `^Entity` pointer, store an index (often called an ID or handle) into the world's entity array. If the entity being chased is destroyed, the slot in the array could be repurposed for a new entity. A generation is a simple counter used to verify that the referenced entity is still the same one.
 
