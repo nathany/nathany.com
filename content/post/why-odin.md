@@ -9,7 +9,7 @@ When I wrote [Why Go?](/why-go) in 2012, I was struggling to get a Ruby on Rails
 
 Today I'm [retired](/fire) from web development, and pursuing a childhood dream to make video games. I want to get back to the low-level programming I did in my teens. 
 
-[Odin][] is the only language that I'm not _waiting around for._ The language itself is effectively done, reinforced by the [Odin 2027 announcement][2027]. It has allocator APIs today. The compiler has a parallel frontend, and build times are entirely reasonable on the hardware and platforms I use: Windows and macOS.
+[Odin][] is the only language that I'm not _waiting around for._ The language itself is effectively done, reinforced by the [Odin 2027 announcement][2027]. It has allocator APIs today. The compiler has a parallel frontend, and build times are entirely reasonable on the hardware and platforms I use.
 
 To top it off:
 
