@@ -38,7 +38,7 @@ The Odin language feels familiar, borrowing liberally from Go's syntax and desig
 * Packages are directories
 * Conditional compilation with build tags, file suffixes -- and also a `when` statement
 
-The similarities are bound to draw comparison, but while Go strove for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built-in green threads. Odin doesn't have duck 🦆 typed interfaces, nor methods on any type. There are lambdas, but no closures. It's an _imperative language_ through and through. 
+The similarities are bound to draw comparison, but while Go strove for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built-in green threads. Odin doesn't have duck-typed 🦆 interfaces or methods on any type. No <abbr title="Object Oriented Programming">[OOP][]</abbr>. No closures. It's an _imperative language_ through and through. 
 
 These are not things I _need._ There is, however, one thing Odin sorely lacks.
 
@@ -50,6 +50,8 @@ If it's any consolation, Odin does have a few features that gophers have wanted 
 * The `or_return` operator for more ergonomic error handling
 
 So far I've found Odin quite _pleasant to read and write_ -- familiarity is sure to be playing a role.
+
+[OOP]: https://www.youtube.com/watch?v=wo84LFzx5nI
 
 [^1]: Just like Go takes inspiration from previous languages.
 
