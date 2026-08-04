@@ -56,7 +56,7 @@ Quitting with "insufficient funds" is oddly part of my strategy. It's extra moti
 
 Rather, I'm opting to become a solopreneur. Eventually.
 
-I'm not suggesting that anyone follow in my footsteps. I don't know how this will end. Fortunately the robots 🤖 haven't come for all the jobs yet. Until then, there's always Plan B -- if it's not working out, go find a job.
+I'm not suggesting that anyone follow in my footsteps. I don't know how this will end. Fortunately the robots 🤖 haven't come for all the jobs yet. Until then, there's always Plan B -- if it's not working out, I can go find a job.
 
 Thanks for following along with my journey.
 
