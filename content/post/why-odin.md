@@ -36,7 +36,7 @@ The Odin language feels familiar, borrowing liberally from Go's syntax and desig
 * The `new(int)` builtin and nil pointers 💰
 * Defer keyword -- but Odin defers to the end of a scope
 * Packages are directories
-* Conditional compilation with build tags, file suffixes -- and also a `when` statement
+* Conditional compilation with build tags, file suffixes -- but also a `when` statement
 
 The similarities are bound to draw comparison, but while Go strove for simplicity, Odin is _even simpler._ There are no language primitives for concurrency and no built-in green threads. Odin doesn't have duck-typed 🦆 interfaces or methods on any type. No <abbr title="Object Oriented Programming">[OOP][]</abbr>. No closures. It's an _imperative language_ through and through. 
 
@@ -226,7 +226,7 @@ Entity :: struct {
 entities: [10000]Entity
 ```
 
-We know that our physics system only needs a subset of all the entity data, so we collected it into a `Location` struct. Maybe not the _best name,_ but let's go with it. Now we can pass our physics subsystem the subset of data it needs:
+We know that our physics system only needs a subset of all the entity data, so we collect it into a `Location` struct. Maybe not the _best name,_ but let's go with it. Now we can pass our physics subsystem the subset of data it needs:
 
 ```odin
 for &e, i in entities {
