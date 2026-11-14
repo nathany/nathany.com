@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - name: Create a local tools directory
+        run: |
+          mkdir -p "${HOME}/.local"
       - name: Install Dart Sass
         run: |
           echo "Installing Dart Sass ${DART_SASS_VERSION}..."
@@ -24,6 +27,13 @@ jobs:
           mv hugo $HOME/hugo
         env:
           HUGO_VERSION: 0.170.0
+      - name: Log tool versions
+        run: |
+          echo "Logging tool versions..."
+          command -v sass &> /dev/null && echo "Dart Sass: $(sass --version)" || echo "Dart Sass: not installed"
+          command -v go &> /dev/null && echo "Go: $(go version)" || echo "Go: not installed"
+          command -v hugo &> /dev/null && echo "Hugo: $(hugo version)" || echo "Hugo: not installed"
+          command -v node &> /dev/null && echo "Node.js: $(node --version)" || echo "Node.js: not installed"
       - name: Hugo Build
         run: $HOME/hugo
       - name: Deploy to S3
