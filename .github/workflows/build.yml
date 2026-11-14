@@ -37,10 +37,10 @@ jobs:
           command -v hugo &> /dev/null && echo "Hugo: $(hugo version)" || echo "Hugo: not installed"
           command -v node &> /dev/null && echo "Node.js: $(node --version)" || echo "Node.js: not installed"
       - name: Hugo Build
-        run: $HOME/hugo
+        run: hugo
       - name: Deploy to S3
         if: github.ref == 'refs/heads/main'
-        run: $HOME/hugo deploy --maxDeletes -1
+        run: hugo deploy --maxDeletes -1
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
