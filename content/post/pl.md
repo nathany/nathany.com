@@ -115,6 +115,6 @@ At some point I need to move past kicking the tires with tiny code snippets and 
 
 I was somewhat dismayed by the regressions that shipped in Odin's October release, but it has since improved. The December release of Odin is shaping up to be solid. Massive shout out to Jeroen van Rijn for all the hard work auditing the standard library to fix bugs and add more test cases.
 
-Next up on my roadmap is learning some Win32 basics and then Direct3D.
+Next up [on my roadmap](/handmade) is learning some Win32 basics and then Direct3D.
 
 Until next time.
