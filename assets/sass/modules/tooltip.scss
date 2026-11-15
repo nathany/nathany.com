@@ -1,8 +1,10 @@
+@use "../base/colors";
+
 /* ==========================================================================
    Tooltip
    ========================================================================== */
 
-$tip-background-color: $base3;
+$tip-background-color: colors.$base3;
 
 $tip-horizontal-padding: 8px;
 $tip-arrow-size: 6px;
@@ -40,7 +42,7 @@ $tip-bottom: 40px;
     // width: 300px;
 
     background: $tip-background-color;
-    color: $color1;
+    color: colors.$color1;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.28);
 
     font-family: sans-serif;

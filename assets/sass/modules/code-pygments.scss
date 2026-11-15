@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../base/colors";
+
 /* ==========================================================================
    Pygments
    ========================================================================== */
@@ -9,7 +12,7 @@
   }
 
   // Token & Text
-  color: $base02;
+  color: colors.$base02;
 
   // Text.Whitespace
   .w {
@@ -18,105 +21,105 @@
 
   // Error
   .err {
-    color: $magenta;
+    color: colors.$magenta;
     border: 1px solid #ef2929;
   }
 
   // Other
   .x {
-    color: $orange;
+    color: colors.$orange;
   }
 
   // Keyword
   .k {
-    color: $blue;
+    color: colors.$blue;
     font-weight: bold;
   }
 
   // Keyword.Constant
   .kc {
-    color: mix(black, $yellow, 30%);
+    color: color.mix(black, colors.$yellow, 30%);
     font-weight: bold;
   }
 
   // Keyword.Declaration
   .kd {
-    color: $blue;
+    color: colors.$blue;
     font-weight: bold;
   }
 
   // Keyword.Namespace
   .kn {
-    color: $blue;
+    color: colors.$blue;
     font-weight: bold;
   }
 
   // Keyword.Pseudo
   .kp {
-    color: $blue;
+    color: colors.$blue;
     font-weight: bold;
   }
 
   // Keyword.Reserved
   .kr {
-    color: $blue;
+    color: colors.$blue;
     font-weight: bold;
   }
 
   // Keyword.Type
   .kt {
-    color: $yellow;
+    color: colors.$yellow;
     // font-weight: bold;
   }
 
   // Name
   .n {
-    color: $base02;
+    color: colors.$base02;
   }
 
   // Name.Attribute
   .na {
-    color: $base02;
+    color: colors.$base02;
   }
 
   // Name.Builtin
   .nb {
-    color: $green;
+    color: colors.$green;
   }
 
   // Name.Builtin.Pseudo
   .bp {
-    color: $blue;
+    color: colors.$blue;
   }
 
   // Name.Class
   .nc {
-    color: $base01;
+    color: colors.$base01;
   }
 
   // Name.Constant
   .no {
-    color: $base01;
+    color: colors.$base01;
   }
 
   // Name.Decorator
   .nd {
-    color: $blue;
+    color: colors.$blue;
   }
 
   // Name.Entity
   .ni {
-    color: $orange;
+    color: colors.$orange;
   }
 
   // Name.Exception
   .ne {
-    color: $yellow;
+    color: colors.$yellow;
   }
 
   // Name.Function
   .nf {
-    color: $base02;
+    color: colors.$base02;
   }
 
   // Name.Label
@@ -136,37 +139,37 @@
 
   // Name.Property
   .py {
-    color: $orange;
+    color: colors.$orange;
   }
 
   // Name.Tag
   .nt {
-    color: $blue;
+    color: colors.$blue;
   }
 
   // Name.Variable
   .nv {
-    color: $blue;
+    color: colors.$blue;
   }
 
   // Name.Variable.Class
   .vc {
-    color: $yellow;
+    color: colors.$yellow;
   }
 
   // Name.Variable.Global
   .vg {
-    color: $blue;
+    color: colors.$blue;
   }
 
   // Name.Variable.Instance
   .vi {
-    color: $blue;
+    color: colors.$blue;
   }
 
   // Literal
   .l {
-    color: $base02;
+    color: colors.$base02;
   }
 
   // Literal.Date
@@ -176,137 +179,137 @@
 
   // Literal.String
   .s {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.String.Backtick
   .sb {
-    color: mix(black, $cyan, 10%);
+    color: color.mix(black, colors.$cyan, 10%);
   }
 
   // Literal.String.Char
   .sc {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.String.Doc
   .sd {
-    color: $base01;
+    color: colors.$base01;
     font-style: italic;
   }
 
   // Literal.String.Double
   .s2 {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.String.Escape
   .se {
-    color: $red;
+    color: colors.$red;
   }
 
   // Literal.String.Heredoc
   .sh {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.String.Interpol
   .si {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.String.Other
   .sx {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.String.Regex
   .sr {
-    color: $red;
+    color: colors.$red;
   }
 
   // Literal.String.Single
   .s1 {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.String.Symbol
   .ss {
-    color: mix(black, $cyan, 30%);
+    color: color.mix(black, colors.$cyan, 30%);
   }
 
   // Literal.Number
   .m {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.Number.Float
   .mf {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.Number.Hex
   .mh {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.Number.Integer
   .mi {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.Number.Integer.Long
   .il {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Literal.Number.Oct
   .mo {
-    color: $cyan;
+    color: colors.$cyan;
   }
 
   // Operator
   .o {
-    color: mix(black, $blue, 30%);
+    color: color.mix(black, colors.$blue, 30%);
   }
 
   // Operator.Word
   .ow {
-    color: $green;
+    color: colors.$green;
   }
 
   // Punctuation
   .p {
-    color: mix(black, $blue, 30%);
+    color: color.mix(black, colors.$blue, 30%);
   }
 
   // Comment
   .c {
-    color: $base01;
+    color: colors.$base01;
     font-style: italic;
   }
 
   // Comment.Multiline
   .cm {
-    color: $base01;
+    color: colors.$base01;
     font-style: italic;
   }
 
   // Comment.Preproc
   .cp {
-    color: $base01;
+    color: colors.$base01;
     font-style: italic;
   }
 
   // Comment.Single
   .c1 {
-    color: $base01;
+    color: colors.$base01;
     font-style: italic;
   }
 
   // Comment.Special
   .cs {
-    color: $base01;
+    color: colors.$base01;
     font-style: italic;
   }
 
@@ -317,7 +320,7 @@
 
   // Generic.Deleted
   .gd {
-    color: $red;
+    color: colors.$red;
   }
 
   // Generic.Emph
@@ -328,18 +331,18 @@
 
   // Generic.Error
   .gr {
-    color: $red;
+    color: colors.$red;
   }
 
   // Generic.Heading
   .gh {
-    color: $orange;
+    color: colors.$orange;
     font-weight: bold;
   }
 
   // Generic.Inserted
   .gi {
-    color: $green;
+    color: colors.$green;
   }
 
   // Generic.Output https://github.com/mojombo/jekyll/issues/1153
@@ -350,7 +353,7 @@
 
   // Generic.Prompt
   .gp {
-    color: mix(black, $green, 30%);
+    color: color.mix(black, colors.$green, 30%);
   }
 
   // Generic.Strong
@@ -361,13 +364,13 @@
 
   // Generic.Subheading
   .gu {
-    color: $orange;
+    color: colors.$orange;
     font-weight: bold;
   }
 
   // Generic.Traceback
   .gt {
-    color: $magenta;
+    color: colors.$magenta;
     font-weight: bold;
   }
 }

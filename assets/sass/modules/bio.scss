@@ -1,3 +1,6 @@
+@use "../base/colors";
+@use "../mixins";
+
 $horizontal: 528px;
 
 $border-width: 8px;
@@ -6,9 +9,9 @@ $border-width: 8px;
     width: 256px + ($border-width * 2);
 
     font-family: sans-serif;
-    color: $color1;
-    background-color: $color5;
-    border: $border-width solid $color3;
+    color: colors.$color1;
+    background-color: colors.$color5;
+    border: $border-width solid colors.$color3;
 
     .text {
         padding: 1rem 1rem 0.5rem 1rem;
@@ -33,7 +36,7 @@ $border-width: 8px;
 
             a:visited,
             a:link {
-                color: $color1;
+                color: colors.$color1;
             }
 
             a:hover {
@@ -43,7 +46,7 @@ $border-width: 8px;
     }
 
     .portrait {
-        @include retina-image(images/portrait, 256px 256px, jpg);
+        @include mixins.retina-image(images/portrait, 256px 256px, jpg);
         width: 256px;
         height: 200px;
         background-position: center left;

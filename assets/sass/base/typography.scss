@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "colors";
+
 body {
   font-family: Georgia;
   font-size: 1.4rem;
@@ -13,12 +16,12 @@ h4 {
 }
 
 h1 {
-  color: $base02;
+  color: colors.$base02;
 }
 
 .meta {
   // font-style: italic;
-  color: $yellow;
+  color: colors.$yellow;
   font-size: 1rem;
 }
 
@@ -30,7 +33,7 @@ li {
 h2.subtitle {
   margin-top: 0;
   font-weight: normal;
-  color: $base02;
+  color: colors.$base02;
   font-size: 1.8rem;
 }
 
@@ -47,7 +50,7 @@ div.meta p {
 
 mark {
   background-color: inherit;
-  color: $yellow;
+  color: colors.$yellow;
   font-style: italic;
 }
 
@@ -64,8 +67,8 @@ blockquote {
 blockquote,
 .highlight {
   position: relative;
-  border-top: 4px solid $base2;
-  border-bottom: 4px solid $base2;
+  border-top: 4px solid colors.$base2;
+  border-bottom: 4px solid colors.$base2;
 
   /* make background full width */
   &:before,
@@ -76,8 +79,8 @@ blockquote,
     top: -4px;
     bottom: -4px;
     width: 9999px;
-    border-top: 4px solid $base2;
-    border-bottom: 4px solid $base2;
+    border-top: 4px solid colors.$base2;
+    border-bottom: 4px solid colors.$base2;
   }
 
   &:before {
@@ -90,25 +93,25 @@ blockquote,
 }
 
 blockquote {
-  background-color: $base3;
+  background-color: colors.$base3;
 
   &:before,
   &:after {
-    background: $base3;
+    background: colors.$base3;
   }
 }
 
 .highlight {
   font-size: 1.2rem;
-  background-color: mix(white, $base1, 30%);
-  border-top: 4px solid $base1;
-  border-bottom: 4px solid $base1;
+  background-color: color.mix(white, colors.$base1, 30%);
+  border-top: 4px solid colors.$base1;
+  border-bottom: 4px solid colors.$base1;
 
   &:before,
   &:after {
-    background: mix(white, $base1, 30%);
-    border-top: 4px solid $base1;
-    border-bottom: 4px solid $base1;
+    background: color.mix(white, colors.$base1, 30%);
+    border-top: 4px solid colors.$base1;
+    border-bottom: 4px solid colors.$base1;
   }
 }
 

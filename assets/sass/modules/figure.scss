@@ -1,3 +1,6 @@
+@use "../base/colors";
+@use "../layout";
+
 /* ==========================================================================
    Figure
    ========================================================================== */
@@ -14,7 +17,7 @@ img.full {
 article {
     figure {
         // border: 4px solid #ccc;
-        background-color: $color5;
+        background-color: colors.$color5;
         position: relative;
 
         // a border over the figure instead of around it
@@ -32,7 +35,7 @@ article {
         figcaption {
             // width: 100%;
             // background-color: $color5;
-            color: $color1;
+            color: colors.$color1;
             font-family: sans-serif;
             line-height: 1.2;
             padding: 6px 1rem;
@@ -53,7 +56,7 @@ img.right-narrow {
     max-width: 320px;
 }
 
-@media (min-width: $max-width) {
+@media (min-width: layout.$max-width) {
     img.right-narrow {
         float: right;
         margin-left: 2rem;

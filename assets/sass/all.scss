@@ -1,15 +1,25 @@
 // Vendor
-@import "modern-normalize";
+@use "modern-normalize";
 
 // Webfonts
-@import "font-awesome/fontawesome", "font-awesome/solid.scss",
-"font-awesome/brands.scss", "font-awesome/regular.scss";
+@use "font-awesome/fontawesome";
+@use "font-awesome/solid.scss";
+@use "font-awesome/brands.scss";
+@use "font-awesome/regular.scss";
 
 // Mixins
-@import "mixins";
+@use "mixins";
 
 // SMACSS
-@import "base/base", "layout";
+@use "base/base";
+@use "layout";
 
-@import "modules/code", "modules/bio", "modules/books", "modules/identity";
-@import "modules/header", "modules/figure", "modules/table", "modules/tooltip", "modules/footer";
+@use "modules/code";
+@use "modules/bio";
+@use "modules/books";
+@use "modules/identity";
+@use "modules/header";
+@use "modules/figure";
+@use "modules/table";
+@use "modules/tooltip";
+@use "modules/footer";

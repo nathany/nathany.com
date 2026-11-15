@@ -1,3 +1,6 @@
+@use "../base/colors";
+@use "../layout";
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -5,13 +8,13 @@
 footer {
   margin: 1rem;
 
-  @media (min-width: $max-width) {
+  @media (min-width: layout.$max-width) {
     margin-left: 0;
     margin-right: 0;
   }
 
   font-size: 1.4rem;
-  color: $base01;
+  color: colors.$base01;
 
   .footer-content {
     display: flex;
@@ -25,11 +28,11 @@ footer {
 
     &:visited,
     &:link {
-      color: $base01;
+      color: colors.$base01;
     }
 
     &:hover {
-      color: $base1;
+      color: colors.$base1;
     }
   }
 

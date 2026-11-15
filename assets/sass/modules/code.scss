@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "sass:meta";
+@use "../base/colors";
+
 /* ==============================================
    Code
    ============================================== */
@@ -22,8 +26,8 @@
     text-transform: capitalize;
     font-family: "Inconsolata", monospace;
     font-weight: bold;
-    color: $color5;
-    background: $base1;
+    color: colors.$color5;
+    background: colors.$base1;
     padding: 0.2rem 0.5rem;
 
     position: absolute;
@@ -37,7 +41,7 @@
   }
 }
 
-@import "code-pygments";
+@include meta.load-css("code-pygments");
 
 // code annotations
 ol {
@@ -57,14 +61,14 @@ ol li {
 }
 
 ol li:before {
-  color: $color5;
+  color: colors.$color5;
   font-family: "Inconsolata", monospace;
   content: counter(li);
   counter-increment: li;
   position: absolute;
   left: -2rem;
-  background: mix(white, $base1, 30%);
-  border: 2px solid $base1;
+  background: color.mix(white, colors.$base1, 30%);
+  border: 2px solid colors.$base1;
   height: 2rem;
   width: 2rem;
   line-height: 2rem;
