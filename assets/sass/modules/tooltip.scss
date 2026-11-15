@@ -1,10 +1,10 @@
-@use "../base/colors";
+@use "../base/colors" as *;
 
 /* ==========================================================================
    Tooltip
    ========================================================================== */
 
-$tip-background-color: colors.$base3;
+$tip-background-color: $base3;
 
 $tip-horizontal-padding: 8px;
 $tip-arrow-size: 6px;
@@ -14,76 +14,76 @@ $tip-bottom: 40px;
 
 /* CSS Styles (Copy this into the style.css file of your theme) */
 [data-tooltip] {
-    // display: inline;
-    position: relative;
-    cursor: help;
+  // display: inline;
+  position: relative;
+  cursor: help;
 
-    // showing the tooltip (with animation)
-    &:before,
-    &:after {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
-        transition: all 0.25s ease-out;
-    }
+  // showing the tooltip (with animation)
+  &:before,
+  &:after {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease-out;
+  }
 
-    &:hover:before,
-    &:hover:after {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0px);
-    }
+  &:hover:before,
+  &:hover:after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
 }
 
 // the actual tooltip
 [data-tooltip]:after {
-    content: attr(data-tooltip) "\A" attr(data-tooltip2);
-    white-space: pre-wrap;
-    // width: 300px;
+  content: attr(data-tooltip) "\A" attr(data-tooltip2);
+  white-space: pre-wrap;
+  // width: 300px;
 
-    background: $tip-background-color;
-    color: colors.$color1;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.28);
+  background: $tip-background-color;
+  color: $color1;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.28);
 
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 0.9rem;
-    line-height: 1.2;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.2;
 
-    padding: 4px $tip-horizontal-padding;
-    display: block;
+  padding: 4px $tip-horizontal-padding;
+  display: block;
 
-    position: absolute;
-    left: $tip-left;
-    bottom: $tip-bottom;
-    z-index: 8;
+  position: absolute;
+  left: $tip-left;
+  bottom: $tip-bottom;
+  z-index: 8;
 }
 
 // small arrow
 [data-tooltip]:before {
-    border: solid;
-    border-color: $tip-background-color transparent;
-    border-width: $tip-arrow-size $tip-arrow-size 0 $tip-arrow-size;
-    content: "";
-    display: block;
-    position: absolute;
-    left: $tip-left + $tip-horizontal-padding;
-    bottom: $tip-bottom - $tip-arrow-size;
-    z-index: 9;
+  border: solid;
+  border-color: $tip-background-color transparent;
+  border-width: $tip-arrow-size $tip-arrow-size 0 $tip-arrow-size;
+  content: "";
+  display: block;
+  position: absolute;
+  left: $tip-left + $tip-horizontal-padding;
+  bottom: $tip-bottom - $tip-arrow-size;
+  z-index: 9;
 }
 
 // adjust positioning on my portrait
 [data-tooltip].portrait {
-    &:after {
-        bottom: 6px;
-    }
+  &:after {
+    bottom: 6px;
+  }
 
-    &:before {
-        bottom: 6px - $tip-arrow-size;
-    }
+  &:before {
+    bottom: 6px - $tip-arrow-size;
+  }
 }
 
 // adjust width for copyright (to avoid wrapping)
 [data-tooltip].copyright:after {
-    width: 17rem;
+  width: 17rem;
 }

@@ -3,7 +3,7 @@
  No class or id selectors here.
  ========================================================================== */
 
-@use "colors";
+@use "colors" as *;
 @use "typography";
 
 html {
@@ -12,17 +12,17 @@ html {
 
 body {
   background-color: #f9f9f9;
-  color: colors.$color5;
+  color: $color5;
 }
 
 a:link {
-  color: colors.$base01;
+  color: $base01;
 }
 
 a:visited,
 a:hover,
 a:active {
-  color: colors.$base1;
+  color: $base1;
 }
 
 ul.posts {
@@ -52,11 +52,11 @@ a:link span.fab,
 a:link span.far {
   text-decoration: none;
   margin-right: 0.3rem;
-  color: colors.$color5;
+  color: $color5;
 
   &:visited,
   &:hover,
   &:active {
-    color: colors.$color5;
+    color: $color5;
   }
 }

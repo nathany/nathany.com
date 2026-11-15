@@ -1,16 +1,17 @@
-@use "../base/colors";
+@use "../base/colors" as *;
 
 article {
-    table {
-        border: 4px solid #ccc;
-        background-color: colors.$base3;
-        width: 100%;
-        border-spacing: 0;
-        thead {
-          background-color: #ccc;
-        }
-        th, td {
-          padding: 4px;
-        }
+  table {
+    border: 4px solid #ccc;
+    background-color: $base3;
+    width: 100%;
+    border-spacing: 0;
+    thead {
+      background-color: #ccc;
     }
+    th,
+    td {
+      padding: 4px;
+    }
+  }
 }

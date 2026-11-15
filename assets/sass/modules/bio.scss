@@ -1,4 +1,4 @@
-@use "../base/colors";
+@use "../base/colors" as *;
 @use "../mixins";
 
 $horizontal: 528px;
@@ -6,107 +6,107 @@ $horizontal: 528px;
 $border-width: 8px;
 
 .bio {
-    width: 256px + ($border-width * 2);
+  width: 256px + ($border-width * 2);
 
-    font-family: sans-serif;
-    color: colors.$color1;
-    background-color: colors.$color5;
-    border: $border-width solid colors.$color3;
+  font-family: sans-serif;
+  color: $color1;
+  background-color: $color5;
+  border: $border-width solid $color3;
 
-    .text {
-        padding: 1rem 1rem 0.5rem 1rem;
+  .text {
+    padding: 1rem 1rem 0.5rem 1rem;
 
-        a:visited,
-        a:link {
-            text-decoration: none;
-        }
-
-        .name {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .description {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-            line-height: 1.2;
-
-            a:visited,
-            a:link {
-                color: colors.$color1;
-            }
-
-            a:hover {
-                color: white;
-            }
-        }
+    a:visited,
+    a:link {
+      text-decoration: none;
     }
 
-    .portrait {
-        @include mixins.retina-image(images/portrait, 256px 256px, jpg);
-        width: 256px;
-        height: 200px;
-        background-position: center left;
+    .name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 0;
+      line-height: 1.2;
     }
 
-    .fab,
-    .far,
-    .codeberg {
-        margin-right: 0.5rem;
-        margin-bottom: 0.3rem;
+    .description {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.2;
 
-        &:visited,
-        &:link {
-            color: white; // $base01;
-        }
+      a:visited,
+      a:link {
+        color: $color1;
+      }
 
-        &:hover {
-            transition: color 0.3s ease-in-out;
-        }
-    }
-
-    .codeberg {
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      background-image: url('/images/codeberg-logo_icon_white-64x64.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: bottom;
-
-      &:hover {
-        background-image: url('/images/codeberg-logo_icon_blue-64x64.png');
+      a:hover {
+        color: white;
       }
     }
+  }
 
-    .fab.fa-github-alt {
-        &:hover,
-        &:active {
-            color: #0fbf3e;
-        }
+  .portrait {
+    @include mixins.retina-image(images/portrait, 256px 256px, jpg);
+    width: 256px;
+    height: 200px;
+    background-position: center left;
+  }
+
+  .fab,
+  .far,
+  .codeberg {
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+
+    &:visited,
+    &:link {
+      color: white; // $base01;
     }
 
-    .far.fa-heart {
-        &:hover,
-        &:active {
-            color: #db61a2;
-        }
+    &:hover {
+      transition: color 0.3s ease-in-out;
     }
+  }
 
-    .fab.fa-amazon {
-        &:hover,
-        &:active {
-            color: #ff7800;
-        }
-    }
+  .codeberg {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("/images/codeberg-logo_icon_white-64x64.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
-    .fab.fa-youtube {
-        &:hover,
-        &:active {
-            color: #ff2841;
-        }
+    &:hover {
+      background-image: url("/images/codeberg-logo_icon_blue-64x64.png");
     }
+  }
+
+  .fab.fa-github-alt {
+    &:hover,
+    &:active {
+      color: #0fbf3e;
+    }
+  }
+
+  .far.fa-heart {
+    &:hover,
+    &:active {
+      color: #db61a2;
+    }
+  }
+
+  .fab.fa-amazon {
+    &:hover,
+    &:active {
+      color: #ff7800;
+    }
+  }
+
+  .fab.fa-youtube {
+    &:hover,
+    &:active {
+      color: #ff2841;
+    }
+  }
 }

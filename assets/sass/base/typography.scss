@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "colors";
+@use "colors" as *;
 
 body {
   font-family: Georgia;
@@ -16,12 +16,12 @@ h4 {
 }
 
 h1 {
-  color: colors.$base02;
+  color: $base02;
 }
 
 .meta {
   // font-style: italic;
-  color: colors.$yellow;
+  color: $yellow;
   font-size: 1rem;
 }
 
@@ -33,13 +33,13 @@ li {
 h2.subtitle {
   margin-top: 0;
   font-weight: normal;
-  color: colors.$base02;
+  color: $base02;
   font-size: 1.8rem;
 }
 
-h3+p,
-h2+p,
-h1+p.meta {
+h3 + p,
+h2 + p,
+h1 + p.meta {
   margin-top: 0;
 }
 
@@ -50,7 +50,7 @@ div.meta p {
 
 mark {
   background-color: inherit;
-  color: colors.$yellow;
+  color: $yellow;
   font-style: italic;
 }
 
@@ -67,8 +67,8 @@ blockquote {
 blockquote,
 .highlight {
   position: relative;
-  border-top: 4px solid colors.$base2;
-  border-bottom: 4px solid colors.$base2;
+  border-top: 4px solid $base2;
+  border-bottom: 4px solid $base2;
 
   /* make background full width */
   &:before,
@@ -79,8 +79,8 @@ blockquote,
     top: -4px;
     bottom: -4px;
     width: 9999px;
-    border-top: 4px solid colors.$base2;
-    border-bottom: 4px solid colors.$base2;
+    border-top: 4px solid $base2;
+    border-bottom: 4px solid $base2;
   }
 
   &:before {
@@ -93,25 +93,25 @@ blockquote,
 }
 
 blockquote {
-  background-color: colors.$base3;
+  background-color: $base3;
 
   &:before,
   &:after {
-    background: colors.$base3;
+    background: $base3;
   }
 }
 
 .highlight {
   font-size: 1.2rem;
-  background-color: color.mix(white, colors.$base1, 30%);
-  border-top: 4px solid colors.$base1;
-  border-bottom: 4px solid colors.$base1;
+  background-color: color.mix(white, $base1, 30%);
+  border-top: 4px solid $base1;
+  border-bottom: 4px solid $base1;
 
   &:before,
   &:after {
-    background: color.mix(white, colors.$base1, 30%);
-    border-top: 4px solid colors.$base1;
-    border-bottom: 4px solid colors.$base1;
+    background: color.mix(white, $base1, 30%);
+    border-top: 4px solid $base1;
+    border-bottom: 4px solid $base1;
   }
 }
 

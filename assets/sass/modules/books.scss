@@ -1,4 +1,4 @@
-@use "../base/colors";
+@use "../base/colors" as *;
 
 .book-item {
   display: grid;
@@ -15,7 +15,7 @@
   img {
     max-width: 180px;
     height: auto;
-    border: 8px solid colors.$color3;
+    border: 8px solid $color3;
     // border-radius: 8px;
     // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     // transition: transform 0.2s ease;
@@ -51,9 +51,9 @@
   // margin-top: 1rem;
   display: inline-block;
   padding: 0.2rem 1rem 0 1rem;
-  background: colors.$base0;
+  background: $base0;
 
-  color: colors.$base3 !important;
+  color: $base3 !important;
   text-decoration: none;
   border: 3px solid transparent;
   border-radius: 20px;
@@ -65,7 +65,7 @@
   &:hover {
     // color: $base3;
     // background-color: $base01;
-    border: 3px solid colors.$color3;
+    border: 3px solid $color3;
 
     // transform: translateY(2px);
   }

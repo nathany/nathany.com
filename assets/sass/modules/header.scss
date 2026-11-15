@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "../base/colors";
+@use "../base/colors" as *;
 @use "../layout";
 @use "bio";
 
@@ -17,9 +17,9 @@ bio.$border-width: 6px;
 }
 
 header {
-  background-color: colors.$color5;
+  background-color: $color5;
   font-family: sans-serif;
-  color: colors.$color1;
+  color: $color1;
 
   font-size: 1.4rem;
   font-weight: bold;
@@ -59,11 +59,11 @@ header {
 
     &:visited,
     &:link {
-      color: colors.$base01;
+      color: $base01;
     }
 
     &:hover {
-      color: colors.$base3;
+      color: $base3;
       // transition: color 0.3s ease-in-out;
     }
   }
@@ -106,7 +106,6 @@ header {
       padding: 0;
       display: flex;
 
-
       li {
         font-size: 1.4rem;
         line-height: 1.2;
@@ -116,8 +115,8 @@ header {
         // }
 
         &.selected a {
-          color: colors.$base3;
-          background-color: color.adjust(colors.$color5, $lightness: 5%);
+          color: $base3;
+          background-color: color.adjust($color5, $lightness: 5%);
         }
 
         .fa-solid {
@@ -133,8 +132,8 @@ header {
           box-sizing: border-box;
 
           &:hover {
-            color: colors.$base3;
-            background-color: colors.$base0;
+            color: $base3;
+            background-color: $base0;
           }
         }
 
@@ -169,10 +168,10 @@ header.shrunk {
     opacity: 1;
 
     a.title {
-      color: colors.$base3;
+      color: $base3;
 
       &:hover {
-        color: colors.$base3;
+        color: $base3;
       }
     }
   }
@@ -185,5 +184,4 @@ header.shrunk {
       padding-left: 0;
     }
   }
-
 }

@@ -1,4 +1,4 @@
-@use "../base/colors";
+@use "../base/colors" as *;
 @use "../layout";
 
 /* ==========================================================================
@@ -14,7 +14,7 @@ footer {
   }
 
   font-size: 1.4rem;
-  color: colors.$base01;
+  color: $base01;
 
   .footer-content {
     display: flex;
@@ -28,11 +28,11 @@ footer {
 
     &:visited,
     &:link {
-      color: colors.$base01;
+      color: $base01;
     }
 
     &:hover {
-      color: colors.$base1;
+      color: $base1;
     }
   }
 
