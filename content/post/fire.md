@@ -36,7 +36,7 @@ It took me multiple days to finish, with lots of measuring and guidelines. I hav
  
 In June, I made a cover for Danny Boy by Fred Weatherly. 
 
-{{< audio src=audio/danny-boy.mp3 >}}
+{{< audio src=audio/danny-boy.mp3 >}} [^1]
 
 The piano is [Claire][] -- a Fazioli F308 grand piano. It's accompanied by a solo cello pulled from [Spitfire Symphony Orchestra][SSO]. I used [Ableton Live 12][Ableton] to stitch it all together, tweaking the timing and vibrato until I was happy with it. Hope you like it!
 
@@ -64,3 +64,5 @@ Thanks for following along with my journey.
 [web]: /28
 [tsundoku]: https://en.wikipedia.org/wiki/Tsundoku
 [piano]: /play
+
+[^1]: Performed by Nathan Youngman. Arrangement from Adult Piano Adventures Book 1 by Nancy and Randall Faber.

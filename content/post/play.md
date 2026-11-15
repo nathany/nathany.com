@@ -27,7 +27,7 @@ To transition to another song, a game could just fade out one track and fade in 
 
 Music can also be split **vertically**. For example, as a song plays, events in the game could toggle particular instruments on and off.
 
-If you'd like to learn more, [Guy Michelmore has a video](https://www.youtube.com/watch?v=f-Q8JC3VcS4) on the topic. To go even deeper, [A Composer's Guide to Game Music](https://www.indigo.ca/en-ca/a-composers-guide-to-game-music/9780262534499.html) by Winifred Phillips is on my reading list.
+If you'd like to learn more, [Guy Michelmore has a video](https://www.youtube.com/watch?v=f-Q8JC3VcS4) on the topic. To go even deeper, [A Composer's Guide to Game Music][] by Winifred Phillips is on my reading list.
 
 ## Ableton Live 12
 
@@ -62,13 +62,13 @@ Native Instruments is the company behind this keyboard and software popular in m
 
 ## Learning Piano
 
-There are a number of apps to learn piano. I tried a few, but being allergic to subscriptions, I decided to go with a book. Starting in January, I've been working through a page or two of [Adult Piano Adventures](https://www.indigo.ca/en-ca/adult-piano-adventures-all-in-one-piano-course-book-1---book%2Fonline-audio/9781616773021.html) each day. This always involves reading and playing music, taking a very gradual approach. There is the occasional short quiz as well.
+There are a number of apps to learn piano. I tried a few, but being allergic to subscriptions, I decided to go with a book. Starting in January, I've been working through a page or two of [Adult Piano Adventures][] each day. This always involves reading and playing music, taking a very gradual approach. There is the occasional short quiz as well.
 
 ### French Minuet
 
 My favourite song so far is this French Minuet by Jean-Philippe Rameau (arranged). I played quietly as instructed, but also very slowly (30 bpm).
 
-{{< audio src=audio/french-minuet.mp3 >}}
+{{< audio src=audio/french-minuet.mp3 >}} [^1]
 
 To record this song I used Ableton Live (pictured above). Choosing a specific tempo and making use of the metronome was helpful to work on my timing. After several takes, I was still a little off, so I made a few minor timing adjustments in Ableton. 
 
@@ -130,14 +130,19 @@ As for books, an [interview with Ben Prunty](https://www.pcgamer.com/ftl-faster-
 
 So naturally, Michael Miller's most recent music theory book, [Music Theory: Note by Note](https://www.amazon.ca/dp/0744092531), is on my reading list. I've already read a few chapters but the theory was getting ahead of what I could put into practice on piano. So I've decided to slow down and learn more or less in this order:
 
-* [Adult Piano Adventures](https://www.amazon.ca/dp/1616773022) book 1 and 2
+* [Adult Piano Adventures][] book 1 and 2
 * [Ableton Live 12 by Simon Stokes](https://www.udemy.com/course/electronic-music-production-with-ableton-live-subsine/) on Udemy (started)
 * [How to Write Music](https://thinkspace.ac.uk/courses/how-to-write-music/) and [Learn Music Theory](https://thinkspace.ac.uk/courses/learn-music-theory/) by ThinkSpace Education
 * [Music Theory: Note by Note](https://www.amazon.ca/dp/0744092531) by Michael Miller
 * [Introduction To Writing For Orchestra With SSO Discover](https://thinkspace.ac.uk/free/spitfire-discover-free-course/) by ThinkSpace Education (free)
 
-Beyond that, I have a few guitar books by [Barrett Tagliarino](https://www.amazon.ca/dp/0634049011) to learn instrumentation, even if I never buy a guitar (see the hand injury above). Also a book on [Mixing Audio](https://www.amazon.ca/dp/1032219440), and a few books specifically on game audio, including the aformentioned [A Composer's Guide to Game Music](https://www.indigo.ca/en-ca/a-composers-guide-to-game-music/9780262534499.html).
+Beyond that, I have a few guitar books by [Barrett Tagliarino](https://www.amazon.ca/dp/0634049011) to learn instrumentation, even if I never buy a guitar (see the hand injury above). Also a book on [Mixing Audio](https://www.amazon.ca/dp/1032219440), and a few books specifically on game audio, including the aforementioned [A Composer's Guide to Game Music][].
 
 [ThinkSpace Education](https://thinkspace.ac.uk/) has more courses on harmony and orchestration that I hope to buy down the road, but I already have my work cut out for me.
 
 Plus music isn't the only thing I'm learning. I'm also using [Rebelle](/rebelle) while studying art fundamentals.
+
+[^1]: Performed by Nathan Youngman. Arrangement from Adult Piano Adventures Book 1 by Nancy and Randall Faber.
+
+[A Composer's Guide to Game Music]: https://www.amazon.ca/dp/0262534495
+[Adult Piano Adventures]: https://www.amazon.ca/dp/1616773022
