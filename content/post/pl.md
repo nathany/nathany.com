@@ -5,7 +5,7 @@ date = "2026-11-14"
 keywords = ["Odin", "Zig", "Jai", "code", "programming"]
 +++
 
-Earlier this year, I posted my [preliminary thoughts on Odin](/why-odin). While I finished reading Karl Zylinski's [Odin book][], the Odin compiler [got noticeably faster][fastodin]. Odin isn't the only language I considered, and due to a bout of uncertainty, I continued evaluating the alternatives.
+Earlier this year, I posted my [preliminary thoughts on Odin](/why-odin). Since then, I finished reading Karl Zylinski's [Odin book][] and the Odin compiler [got noticeably faster][fastodin]. Odin isn't the only language I considered, and due to a bout of uncertainty, I continued evaluating the alternatives.
 
 [Odin book]: https://odinbook.com/
 [fastodin]: https://www.youtube.com/watch?v=fgSrcE8lmFs
