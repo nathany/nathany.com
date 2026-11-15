@@ -17,7 +17,7 @@ I'm also planning to stick with Direct3D on Windows. That's despite my [earlier 
 
 Steam and the Steamworks SDK are also part of the platform I'm targeting. Even if I appreciate the missions of Good Old Games and Humble Bundle, Steam is where it's at.
 
-If I'm building anything real, I will isolate platform code so that I can expand it later. But that expansion can come much, much later.
+I will isolate platform code so that I can expand it later. But that expansion can come much, much later.
 
 [Steam survey]: https://store.steampowered.com/hwsurvey/Steam-Hardware-Software-Survey-Welcome-to-Steam
 
