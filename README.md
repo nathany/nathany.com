@@ -15,4 +15,4 @@ Content is &copy; 2006-2026, Nathan Youngman. All rights reserved.
 All original artwork, photographs, written prose and audio recordings on this site may not be
 reproduced, distributed, or reposted without explicit written permission.
 
-All code snippets are licensed under the MIT No Attribution (MIT-0) license.
+All code snippets are licensed under the [MIT No Attribution](https://choosealicense.com/licenses/mit-0/) (MIT-0) license.
