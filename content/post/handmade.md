@@ -60,7 +60,7 @@ Now that I have established a direction, you should have a reasonable idea of wh
 
 To start, I'm planning to delve into some old school Win32 APIs. Yup, traveling back in time to the late 90s, and then wrapping that up in a [modern C alternative](/why-odin). I'm thinking about anything that could be useful for developing games and game tools on the platform.
 
-Interspersed with that, I'll be learning Direct3D 11 & 12 (bindless), and refreshing my linear algebra knowledge. I may also write a post on my toolchain and how to get setup. And if I make any progress in my quest to learn art and music, I'll be sure to share that too.
+Interspersed with that, I'll be learning Direct3D 11 & 12 (bindless), and refreshing my linear algebra knowledge. I may also write a [post on my toolchain](/win/init) and how to get setup. And if I make any progress in my quest to learn art and music, I'll be sure to share that too.
 
 You also know what I won't be covering. No web builds, no free-to-play mobile monetization schemes, no trying to support every platform and no more of [my AI ramblings](/claude-triangle).[^1]
 

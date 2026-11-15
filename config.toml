@@ -23,7 +23,7 @@ email = "git@nathany.com"
 name = "Nathan Youngman"
 
 [permalinks]
-post = "/:contentbasename/"
+post = "/:sections[1:]/:contentbasename/"
 about = "/:contentbasename/"
 books = "/:contentbasename/"
 
