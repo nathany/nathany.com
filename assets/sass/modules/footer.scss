@@ -1,5 +1,5 @@
 @use "../base/colors" as *;
-@use "../layout";
+@use "../layout" as *;
 
 /* ==========================================================================
    Footer
@@ -8,7 +8,7 @@
 footer {
   margin: 1rem;
 
-  @media (min-width: layout.$max-width) {
+  @media (min-width: $max-width) {
     margin-left: 0;
     margin-right: 0;
   }

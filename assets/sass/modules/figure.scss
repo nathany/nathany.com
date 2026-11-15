@@ -1,5 +1,5 @@
 @use "../base/colors" as *;
-@use "../layout";
+@use "../layout" as *;
 
 /* ==========================================================================
    Figure
@@ -56,7 +56,7 @@ img.right-narrow {
   max-width: 320px;
 }
 
-@media (min-width: layout.$max-width) {
+@media (min-width: $max-width) {
   img.right-narrow {
     float: right;
     margin-left: 2rem;
