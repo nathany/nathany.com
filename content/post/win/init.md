@@ -8,15 +8,15 @@ draft = true
 
 Having been a Mac user since 2001, it's taken some time to acclimate to working on Windows. This post covers my programming tools while learning [handmade game development](/handmade) with 🔱 [Odin][].
 
-All these tools are _free_ and most of them are _open source._ I decided to cover graphics programming tools separately, and this post doesn't cover any tools for art, music, etc.
+All these tools are _free_ and most of them are _open source._ I decided to cover graphics programming tools separately, and this post doesn't cover any tools for art, music production, etc.
 
-If you're new to system programming, this list may be a good place to start. If you're a veteran, maybe one or two of these tools will prove useful.
+If you're new to Windows system programming, this list may be a good place to start. If you're a veteran, maybe one or two of these tools will prove useful.
 
 [Odin]: https://odin-lang.org/
 
 ## WinGet
 
-[WinGet](https://learn.microsoft.com/en-us/windows/package-manager/) is a package manager that ships with Windows. It can `install`, `upgrade` and `uninstall` software from a command line interface (CLI).
+[WinGet](https://learn.microsoft.com/en-us/windows/package-manager/) is a package manager that ships with Windows. It can `install`, `upgrade` and `uninstall` software from the command line interface (CLI).
 
 Open the Terminal app to try it out. Windows PowerShell will likely work best.
 
@@ -46,9 +46,9 @@ winget install --exact --id Devolutions.UniGetUI --source winget
 
 Even though we'll be using the Odin, we still need to install the Windows <abbr title="Software Development Kit">SDK</abbr>, C runtime, etc.
 
-A C/C++ compiler will also come in handy. Many of Odin's vendor libraries are written in C/C++ and we'll likely encounter other C/C++ libraries (e.g. Dear ImGUI). At some point we may need to build the Odin compiler from source (C++) too, say for a debug build to report/fix an issue.
+A C/C++ compiler will also come in handy. Many of Odin's vendor libraries are written in C/C++ and we'll likely encounter other C/C++ libraries (e.g. Dear ImGUI). At some point we may need to build the Odin compiler from source (C++) too, perhaps for a debug build to report/fix an issue or contribute a feature/improvement.
 
-MSVC isn't the only C/C++ compiler in town, but it's the smoothest option.[^1]
+MSVC isn't the only C/C++ compiler in town,🤠 but it's the only option supported by Odin on Windows.[^1]
 
 > "when in Windows, do as the [PCs](https://www.youtube.com/watch?v=0eEG5LVXdKo) do" 🤨
 
@@ -68,9 +68,9 @@ Or you can try out Karl Zylinski's new [Odin installer](https://github.com/karl-
 
 During installation, look for **Desktop development with C++** and components like **MSVC** and the **Windows 11 SDK**. If you chose Visual Studio, there will be options for debuggers, profilers, etc. Most of the other options can be left unchecked (C#, .NET, etc.). You can always relaunch the installer later if you need to add/remove components.
 
-My present understanding is that even if you only install the Build Tools, you're still subject to the Community Edition license. It's only free if annual revenue is less than $1 Million US Dollars. Noted.
+My understanding is that even if you only install the Build Tools, you're still subject to the Community Edition license. It's free if annual revenue is <mark>less than $1 Million US Dollars.</mark>👌🏼 Noted.
 
-[^1]: If you absolutely want to avoid Visual Studio, you may be able to install Clang/GCC with MinGW or WinLibs. But all the static C/C++ libraries you link to will need to be recompiled with that toolchain. That includes all the vendor libraries that ship with Odin. I've not attempted this and it's not officially supported by Odin.
+[^1]: [Why does Odin require the MSVC toolchain on Windows?](https://odin-lang.org/docs/faq/#why-does-odin-require-the-msvc-toolchain-on-windows)
 
 To use the C/C++ compiler from the <abbr title="Command Line Interface">CLI</abbr> (`cl`), we need to launch one of the special ["Developer" command prompts][cl]. Awkward.😅
 
@@ -110,12 +110,13 @@ Configure your settings as desired: (Ctrl-,)
 
 Suggested extensions: (Ctrl-Shift-X)
 
-- [Odin](https://github.com/zed-extensions/odin) -- syntax highlighting, formatting, documentation
+- [Odin](https://github.com/zed-extensions/odin) -- syntax highlighting, formatting, tooltips
 - [Comments Highlighter](https://github.com/thedadams/zed-comment) -- colorizes NOTE, TODO, FIXME, etc.
 - [CSpell](https://github.com/mantou132/zed-cspell) -- code aware spell checker
 - [GLSL](https://github.com/zed-industries/zed) -- shader language for OpenGL/Vulkan
 - [HLSL](https://github.com/igordreher/zed-hlsl) -- shader language for Direct3D
 - [Justfile](https://github.com/jackTabsCode/zed-just) -- command runner (more below)
+- [Windows Batch](https://github.com/PleahMaCaka/zed-batch) -- syntax highlight .bat files
 
 The Odin extension will automatically install the [Odin Language Server](https://github.com/DanielGavin/ols) (OLS).
 
@@ -127,7 +128,7 @@ Install the Git <abbr title="Version Control System">VCS</abbr> to use it from t
 winget install -e --id Git.Git
 ```
 
-To disable screen flashes when backspacing and improve history traversal, create an .inputrc file. With Zed installed, just type `zed ~/.inputrc` in Terminal. The file should contain:
+To disable screen flashes (e.g. backspace) and improve history traversal, create an .inputrc file. With Zed installed, just type `zed ~/.inputrc` in Terminal. The file should contain:
 
 ```bash
 set bell-style none
@@ -192,11 +193,11 @@ Suggested community plugins:
 - [Auto Template Trigger](https://github.com/numeroflip/obsidian-auto-template-trigger) -- set folder-specific templates
 - [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) -- color schemes
 - [Outliner](https://github.com/vslinko/obsidian-outliner) -- improve list navigation
-- [Periodic Notes](https://github.com/liamcain/obsidian-periodic-notes) -- setting up daily templates
+- [Periodic Notes](https://github.com/liamcain/obsidian-periodic-notes) -- set up daily templates
 
 ## SumatraPDF
 
-[SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) is a fast, free and [open source](https://github.com/sumatrapdfreader/sumatrapdf) PDF reader. My library of ebooks can be used as reference material.
+[SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader) is a fast, free and [open source](https://github.com/sumatrapdfreader/sumatrapdf) PDF reader that I use to reference my library of ebooks.
 
 ```PowerShell
 winget install -e --id SumatraPDF.SumatraPDF
@@ -204,7 +205,7 @@ winget install -e --id SumatraPDF.SumatraPDF
 
 ## MusicBee
 
-[MusicBee](https://getmusicbee.com/) is a free music player to get in the zone.
+[MusicBee](https://getmusicbee.com/) is a free music player to get into the zone.
 
 ## GitHub Desktop & CLI
 
@@ -237,7 +238,7 @@ git clone https://github.com/odin-lang/Odin.git
 git clone https://github.com/odin-lang/examples
 ```
 
-If I want to clone a repository by Karl Zylinski, I would make a directory at `~/src/github.com/karl-zylinski` and then clone:
+To clone a repository by Karl Zylinski, I would make a directory at `~/src/github.com/karl-zylinski` and then clone:
 
 ```bash
 git clone https://github.com/karl-zylinski/odin-c-bindgen
@@ -249,12 +250,26 @@ And my own code follows the same pattern, falling under a `~/src/github.com/nath
 git clone https://github.com/nathany/odin-examples.git
 ```
 
-If everything is installed correctly,
+## Build from source (optional)
+
+If you ever run into a problem with any open source project (in this case the compiler or base/core/vendor libraries), it's a good idea to pull the latest to see if it has already been resolved. Then look for open/closed [issues][] and pull requests before opening a new issue.
+
+[issues]: https://github.com/odin-lang/Odin/issues
+
+That requires building from source. If everything is installed correctly, then building Odin from source should just work. Choose either the default debug build or an optimized release build.
 
 ```bash
+cd ~/src/github.com/odin-lang/Odin
+git pull origin master
+
 ./build.bat
 
 # or
 
+./build.bat release
 
+# run the latest compiler
+./odin report
 ```
+
+And with all that, we should be ready to get to work! 👷🏻‍♀️
