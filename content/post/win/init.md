@@ -166,7 +166,7 @@ Given an Odin executable named `hello.exe` compiled with `-debug` info, launchin
 winget install -e --id Casey.Just
 ```
 
-I'm planning to use `Justfile` as an alternative to Makefiles for any commands that I run often. Here's what a simple example looks like (`just check`), but it supports a lot more:
+I'm using `Justfile` as an alternative to Makefiles for any commands that I run often. This is a simple example (`just check`), but it can do a lot more:
 
 ```Justfile
 check:
