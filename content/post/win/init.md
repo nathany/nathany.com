@@ -1,9 +1,8 @@
 +++
 title = "🪟 Windows Developer Setup"
-description = "Tools for developing software with Odin."
+description = "Tools of the trade for developing Windows software with Odin."
 date = "2026-11-16T01:00:00"
-keywords = ["code", "programming","Windows"]
-draft = true
+keywords = ["code", "programming","Windows 11", "toolchain", "software developer", "Odin"]
 +++
 
 Having been a Mac user since 2001, it's taken some time to acclimate to working on Windows. This post covers my programming tools while learning [handmade game development](/handmade) with 🔱 [Odin][].
@@ -130,7 +129,7 @@ winget install -e --id Git.Git
 
 To disable screen flashes (e.g. backspace) and improve history traversal, create an .inputrc file. With Zed installed, just type `zed ~/.inputrc` in Terminal. The file should contain:
 
-```bash
+```plain
 set bell-style none
 
 # Use Up/Down arrows to search through history based on input
@@ -145,11 +144,11 @@ git config --global core.autocrlf false
 git config --global core.eol lf
 ```
 
-Configuring Git Bash to run `cl` or `clang-cl` (if installed) is left as an [exercise for the reader][cl].😅
+Configuring Git Bash to be able to run `cl` or `clang-cl` (if installed) is left as an [exercise for the reader][cl].😅
 
 ## RAD Debugger
 
-[RAD Debugger][] is a very nice [open source][RAD Debugger] graphical debugger. Not only is it faster than adding `printf` debugging or logging, it will help debug unrecoverable errors like segfaults.
+[RAD Debugger][] is a very nice [open source][RAD Debugger] graphical debugger. Not only is it faster than adding `printf` debugging or logging, it will help debug unrecoverable errors like <abbr title="segmentation faults">segfaults</abbr>.
 
 ```PowerShell
 winget install -e --id EpicGames.RADDebugger
@@ -176,7 +175,7 @@ check:
 
 ## Obsidian
 
-[Obsidian](https://obsidian.md/) is a digital notebook where I organize my day, list online resources and keep notes when reading books and articles.
+[Obsidian](https://obsidian.md/) is a digital notebook where I organize my day, list online resources and keep notes when reading books and articles. Themes and plugins can be installed from within Obsidian.
 
 ```PowerShell
 winget install -e --id Obsidian.Obsidian
@@ -238,7 +237,7 @@ git clone https://github.com/odin-lang/Odin.git
 git clone https://github.com/odin-lang/examples
 ```
 
-To clone a repository by Karl Zylinski, I would make a directory at `~/src/github.com/karl-zylinski` and then clone:
+To clone a repository by Karl Zylinski, I would make a directory at `~/src/github.com/karl-zylinski` and then clone into it:
 
 ```bash
 git clone https://github.com/karl-zylinski/odin-c-bindgen
@@ -252,7 +251,7 @@ git clone https://github.com/nathany/odin-examples.git
 
 ## Build from source (optional)
 
-If you ever run into a problem with any open source project (in this case the compiler or base/core/vendor libraries), it's a good idea to pull the latest to see if it has already been resolved. Then look for open/closed [issues][] and pull requests before opening a new issue.
+If you ever run into a problem with any open source project, it's a good idea to pull the latest to see if it has already been resolved. Then look for open/closed [issues][] and pull requests before opening a new issue.
 
 [issues]: https://github.com/odin-lang/Odin/issues
 
