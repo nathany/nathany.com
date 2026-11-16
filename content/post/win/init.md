@@ -7,7 +7,7 @@ keywords = ["code", "programming","Windows 11", "toolchain", "software developer
 
 Having been a Mac user since 2001, it's taken some time to acclimate to working on Windows. This post covers my programming tools while learning [handmade game development](/handmade) with 🔱 [Odin][].
 
-All these tools are _free_ and most of them are _open source._ I decided to cover graphics programming tools separately, and this post doesn't cover any tools for art, music production, etc.
+All these tools are _free_ and most of them are _open source._ I decided to cover graphics programming tools separately, and this post doesn't cover any tools for art, music production, etc. I may revise this post in the future as my list of tools changes and grows.
 
 If you're new to Windows system programming, this list may be a good place to start. If you're a veteran, maybe one or two of these tools will prove useful.
 
